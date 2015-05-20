@@ -3,10 +3,10 @@
   <channel>
     <title>OPTIMIZATIONS.ML</title>
     <description>A little blog collecting optimization methods in machine learning field</description>
-    <link>http://www.quxiaofeng.me/optimizations.ml/</link>
-    <atom:link href="http://www.quxiaofeng.me/optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 May 2015 10:18:33 -0400</pubDate>
-    <lastBuildDate>Wed, 20 May 2015 10:18:33 -0400</lastBuildDate>
+    <link>http://www.optimizations.ml/</link>
+    <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 20 May 2015 10:21:47 -0400</pubDate>
+    <lastBuildDate>Wed, 20 May 2015 10:21:47 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -82,8 +82,8 @@
 
 &lt;p&gt;Yields this:&lt;/p&gt;
 
-&lt;div&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;{{&quot; /&gt;&lt;/div&gt;
-&lt;p&gt;&lt;span class=&quot;marginnote&quot;&gt;/assets/img/figure2.png&lt;/span&gt;&lt;/p&gt;
+&lt;div&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/figure2.png&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span class=&quot;marginnote&quot;&gt;Full width figure&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;qplot(wt, mpg, data = mtcars, colour = factor(cyl) )&lt;/code&gt;&lt;/p&gt;
 
@@ -257,8 +257,8 @@ Liquid::Template.register_tag(&#39;fullwidth&#39;, Jekyll::RenderFullWidthTag)
 &lt;p&gt;For some reason, the &lt;em&gt;linenos&lt;/em&gt; tag modifier in the highlight tag totally screws up the code alignment, and I don’t feel like sorting it out at the moment. So either don’t use it, or figure it out and tell me what is going on so I can fix it.&lt;/p&gt;
 </description>
         <pubDate>Thu, 19 Feb 2015 16:46:04 -0500</pubDate>
-        <link>http://www.quxiaofeng.me/optimizations.ml/articles/15/tufte-style-jekyll-blog</link>
-        <guid isPermaLink="true">http://www.quxiaofeng.me/optimizations.ml/articles/15/tufte-style-jekyll-blog</guid>
+        <link>http://www.optimizations.ml/articles/15/tufte-style-jekyll-blog</link>
+        <guid isPermaLink="true">http://www.optimizations.ml/articles/15/tufte-style-jekyll-blog</guid>
         
         
         <category>jekyll</category>
@@ -284,8 +284,8 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 
 </description>
         <pubDate>Sun, 08 Feb 2015 08:06:04 -0500</pubDate>
-        <link>http://www.quxiaofeng.me/optimizations.ml/articles/15/welcome-to-jekyll</link>
-        <guid isPermaLink="true">http://www.quxiaofeng.me/optimizations.ml/articles/15/welcome-to-jekyll</guid>
+        <link>http://www.optimizations.ml/articles/15/welcome-to-jekyll</link>
+        <guid isPermaLink="true">http://www.optimizations.ml/articles/15/welcome-to-jekyll</guid>
         
         
         <category>jekyll</category>
