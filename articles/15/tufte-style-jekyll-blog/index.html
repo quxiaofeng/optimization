@@ -9,7 +9,7 @@
   <meta name="description" content="IntroductionThe Tufte Jekyll theme  is an attempt to create a website design with the look and feel of Edward Tufte’s books and handouts. Tufte’s style is kn...">
 
 
-  <link rel="stylesheet" href="/tufte-jekyll/css/tufte.css" | prepend: site.baseurl }}">	
+  <link rel="stylesheet" href="/tufte-jekyll/css/tufte.css">	
   
 
   <!-- Google Fonts loaded here -->
@@ -28,9 +28,9 @@
     <!--- Header and nav template site-wide -->
 <header>
     <nav class="group">
-		<a href="/tufte-jekyll/"><img class="badge" src="/tufte-jekyll/assets/img/badge_1.png" alt="CH"></a>
-		<a href="/tufte-jekyll/page">A Page</a>
-		<a href="/tufte-jekyll/about">About</a>
+		<a href="/"><img class="badge" src="/assets/img/badge_1.png" alt="CH"></a>
+		<a href="/page">A Page</a>
+		<a href="/about">About</a>
 	</nav>
 </header>
     <article>
@@ -40,17 +40,17 @@
 
 <h2 id="introduction">Introduction</h2>
 
-<p><span class="newthought">The Tufte Jekyll theme</span>  is an attempt to create a website design with the look and feel of Edward Tufte’s books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography. The idea for this project is essentially cribbed wholesale from Tufte and R Markdown’s Tufte Handout format<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> See <a href="https://code.google.com/p/tufte-latex">code.google.com/p/tufte-latex</a></span> This page is an adaptation of the <a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">Tufte Handout PDF</a>.</p>
+<p><span class="newthought">The Tufte Jekyll theme</span>  is an attempt to create a website design with the look and feel of Edward Tufte’s books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography.<!--more--> The idea for this project is essentially cribbed wholesale from Tufte and R Markdown’s Tufte Handout format<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> See <a href="https://code.google.com/p/tufte-latex">code.google.com/p/tufte-latex</a></span> This page is an adaptation of the <a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">Tufte Handout PDF</a>.</p>
 
 <h2 id="jekyll-customizations">Jekyll customizations</h2>
 
-<p>This Jekyll blog theme is based on a github repository by Dave Liepmann <a href="https://github.com/daveliepmann/tufte-css">here</a>, which in turn was based on the <a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">R Markdown Tufte Handout</a>. I borrowed freely from Dave’s repo and have transformed many of the typographic and page-structural features into a set of custom Liquid tags that make creating content using this style much easier than writing straight HTML. Essentially, if you know markdown, and mix in a few custom Liquid tags, you can be creating a website with this document style in short order. </p>
+<p>This Jekyll blog theme is based on a github repository by Dave Liepmann <a href="https://github.com/daveliepmann/tufte-css">here</a>, which in turn was based on the <a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">R Markdown Tufte Handout</a>. I borrowed freely from Dave’s repo and have transformed many of the typographic and page-structural features into a set of custom Liquid tags that make creating content using this style much easier than writing straight HTML. Essentially, if you know markdown, and mix in a few custom Liquid tags, you can be creating a website with this document style in short order.</p>
 
 <h2 id="basics">Basics</h2>
 
 <h3 id="color">Color</h3>
 
-<p>Although paper handouts obviously have a pure white background, the web is better served by the use of slightly off-white and off-black colors. I picked <code>#fffff8</code> and <code>#111111</code> because they are nearly indistinguishable from their ‘pure’ cousins, but dial down the harsh contrast. Tufte’s books are a study in spare, minimalist design. In his book <a href="http://www.edwardtufte.com/tufte/books_vdqi">The Visual Display of Quantitative Information</a>, he uses a red ink to add some visual punctuation to the buff colored paper and dark ink. In that spirit, links are styled using a similar red color. </p>
+<p>Although paper handouts obviously have a pure white background, the web is better served by the use of slightly off-white and off-black colors. I picked <code>#fffff8</code> and <code>#111111</code> because they are nearly indistinguishable from their ‘pure’ cousins, but dial down the harsh contrast. Tufte’s books are a study in spare, minimalist design. In his book <a href="http://www.edwardtufte.com/tufte/books_vdqi">The Visual Display of Quantitative Information</a>, he uses a red ink to add some visual punctuation to the buff colored paper and dark ink. In that spirit, links are styled using a similar red color.</p>
 
 <h3 id="headings">Headings</h3>
 
@@ -73,9 +73,9 @@
 
 <h3 id="margin-figures">Margin Figures</h3>
 
-<p><span class="marginnote"><img class="fullwidth" src="/tufte-jekyll/assets/img/figure1.png" />Figure 1: Sepal length vs. petal length, colored by species</span>Images and graphics play an integral role in Tufte’s work. To place figures in the margin, use the custom margin figure liquid tag included in the <code>_plugins</code> directory like so: </p>
+<p><span class="marginnote"><img class="fullwidth" src="/assets/img/figure1.png" />Figure 1: Sepal length vs. petal length, colored by species</span>Images and graphics play an integral role in Tufte’s work. To place figures in the margin, use the custom margin figure liquid tag included in the <code>_plugins</code> directory like so:</p>
 
-<p><code>{% marginfigure '../assets/img/figure1.png' 'Figure 1: Sepal length vs. petal length, colored by species'  %}</code>. </p>
+<p><code>{% marginfigure /assets/img/figure1.png 'Figure 1: Sepal length vs. petal length, colored by species'  %}</code>.</p>
 
 <p>Note that the caption <em>must</em> be enclosed in quotes for the simple liquid tag to work!</p>
 
@@ -83,11 +83,11 @@
 
 <p>The Markdown parser being used by this Jekyll theme is Kramdown, which contains some built-in <a href="//www.mathjax.org">Mathjax</a> support. Both inline and block-level mathematical figures can be added to the content.</p>
 
-<p>For instance, the following inline sequence: </p>
+<p>For instance, the following inline sequence:</p>
 
-<p><em>When <script type="math/tex">a \ne 0</script>, there are two solutions to <script type="math/tex">ax^2 + bx + c = 0</script></em> </p>
+<p><em>When <script type="math/tex">a \ne 0</script>, there are two solutions to <script type="math/tex">ax^2 + bx + c = 0</script></em></p>
 
-<p>is written by enclosing a Mathjax expression with a <em>Liquid inline tag pair</em> (‘m’ and ‘em’) like so: </p>
+<p>is written by enclosing a Mathjax expression with a <em>Liquid inline tag pair</em> (‘m’ and ‘em’) like so:</p>
 
 <p><code>When {% m %} a \ne 0{% em %}, there are two solutions to {% m %}ax^2 + bx + c = 0{% em %}</code></p>
 
@@ -99,17 +99,17 @@
 
 <p>You can get pretty fancy, for instance, the wave equation’s nabla is no big thing<script type="math/tex; mode=display">\frac{\partial^2 y}{\partial t^2}= c^2\nabla^2u</script></p>
 
-<p>All of the standard Latex equation markup is available to use inside these block tags. </p>
+<p>All of the standard Latex equation markup is available to use inside these block tags.</p>
 
 <h3 id="full-width-figures">Full Width Figures</h3>
 
 <p>If you need a full-width image or figure, another custom liquid tag is available to use. Oddly enough, it is named ‘fullwidth’, and this markup:</p>
 
-<p><code>{% fullwidth '../assets/img/figure2.png' 'Full width figure'  %}</code></p>
+<p><code>{% fullwidth /assets/img/figure2.png 'Full width figure'  %}</code></p>
 
 <p>Yields this:</p>
 
-<div><img class="fullwidth" src="/tufte-jekyll/assets/img/figure2.png" /></div>
+<div><img class="fullwidth" src="/assets/img/figure2.png" /></div>
 <p><span class="marginnote">Full width figure</span></p>
 
 <p><code>qplot(wt, mpg, data = mtcars, colour = factor(cyl) )</code></p>
@@ -118,17 +118,17 @@
 
 <p>Besides margin and full width figures, you can of course also include figures constrained to the main column. Yes, you guessed it, a custom liquid tag rides to the rescue once again:</p>
 
-<p><code>{% maincolumn '../assets/img/figure3.png' 'This is a caption for the image to the left'  %}</code></p>
+<p><code>{% maincolumn /assets/img/figure3.png 'This is a caption for the image to the left'  %}</code></p>
 
 <p>yields this:</p>
 
-<p><span class="marginnote">This is a caption for the image to the left</span><img class="fullwidth" src="/tufte-jekyll/assets/img/figure3.png" /></p>
+<p><span class="marginnote">This is a caption for the image to the left</span><img class="fullwidth" src="/assets/img/figure3.png" /></p>
 
 <h2 id="sidenotes-and-margin-notes">Sidenotes and Margin notes</h2>
 
 <p>One of the most prominent and distinctive features of Tufte’s style is the extensive use of sidenotes and margin notes. Perhaps you have noticed their use in this document already. You are very astute.</p>
 
-<p>There is a wide margin to provide ample room for sidenotes and small figures. I have preserved a slight semantic distinction between <em>sidenotes</em> and <em>marginnotes</em>. </p>
+<p>There is a wide margin to provide ample room for sidenotes and small figures. I have preserved a slight semantic distinction between <em>sidenotes</em> and <em>marginnotes</em>.</p>
 
 <h3 id="sidenotes">Sidenotes</h3>
 
@@ -144,11 +144,11 @@
 
 <h2 id="tables">Tables</h2>
 
-<p>Tabular data is presented with right-aligned text and minimal grid lines. Table captions are placed inside a <em>marginnote</em> Liquid Tag above the table. Be careful to leave a blank line between the marginnote and the beginning of the table to avoid goofy shit happening during the parsing step. </p>
+<p>Tabular data is presented with right-aligned text and minimal grid lines. Table captions are placed inside a <em>marginnote</em> Liquid Tag above the table. Be careful to leave a blank line between the marginnote and the beginning of the table to avoid goofy shit happening during the parsing step.</p>
 
 <p>Of course, a table can be created using the usual html markup (<code>&lt;table&gt;&lt;thead&gt;&lt;tbody&lt;tr&gt;&lt;td&gt; etc..</code>)</p>
 
-<p><span class="marginnote">Table 1: first row of metcars</span> </p>
+<p><span class="marginnote">Table 1: first row of metcars</span></p>
 
 <table>
   <thead><th></th><th>mpg</th><th>cyl</th><th>disp</th><th>hp</th><th>drat</th><th>wt</th></thead>
@@ -164,7 +164,7 @@
 
 <p><span class="newthought">Or</span>  you can avail yourself of the Markdown Extra features built into Kramdown, and use the Markdown Extra table syntax to make the very same thing:</p>
 
-<p><span class="marginnote">Table 2: same table with Markdown Extra markup and sane numerical precision</span> </p>
+<p><span class="marginnote">Table 2: same table with Markdown Extra markup and sane numerical precision</span></p>
 
 <table>
   <thead>
@@ -286,6 +286,7 @@ Liquid::Template.register_tag('fullwidth', Jekyll::RenderFullWidthTag)
 
 
     </article>
+    <span class="print-footer">Tufte-style Jekyll blog - February 19, 2015 - QU Xiaofeng</span>
     <footer>
   <ul class="footer-links group">
     <li><a href="mailto:hate@spam.net"><span class="icon-mail"></span></a></li>    
@@ -307,12 +308,12 @@ Liquid::Template.register_tag('fullwidth', Jekyll::RenderFullWidthTag)
       </li>
     
       <li>
-        <a href="/tufte-jekyll/feed"><span class="icon-feed"></span></a>
+        <a href="/feed"><span class="icon-feed"></span></a>
       </li>
       
   </ul>
 <div class="credits">
-<span>&copy; 2015 &nbsp;&nbsp;CLAY HARMON</span></br> 
+<span>&copy; 2015 &nbsp;&nbsp;QU XIAOFENG</span></br> 
 <span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for Content-centric blogging </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
 </div>  
 </footer>

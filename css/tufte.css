@@ -170,8 +170,13 @@ a {
 
 html {
   text-align: baseline;
-  font-size: 11px; }
+  font-size: 11px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
+@media screen {
+  .print-footer {
+    display: none; } }
 @media screen and (min-width: 800px) {
   html {
     font-size: 12px; } }
@@ -201,6 +206,9 @@ body {
   color: #111;
   max-width: 1400px; }
 
+@media screen and (min-width: 800px) {
+  body {
+    width: 95%; } }
 body > header {
   padding-top: 1rem;
   border-bottom: 1px #aaaaaa solid;
@@ -313,7 +321,7 @@ p, li {
   padding-right: 0px;
   vertical-align: baseline; }
 
-p, article ul li {
+p, article ul li, pre code, pre code p, code {
   width: 55%; }
 
 @media screen and (max-width: 600px) {
@@ -501,6 +509,20 @@ span.newthought {
     box-shadow: none !important;
     text-shadow: none !important; }
 
+  @page {
+    margin: 0.75in 0.5in 0.75in 0.5in;
+    orphans: 4;
+    widows: 2; }
+  body {
+    font-size: 12pt; }
+
+  html body span.print-footer {
+    font-family: "Gill Sans", "Gill Sans MT", "Lato", Calibri, sans-serif;
+    font-size: 9pt;
+    margin-top: 22.4pt;
+    padding-top: 4pt;
+    border-top: 1px solid #000; }
+
   thead {
     display: table-header-group; }
 
@@ -514,12 +536,14 @@ span.newthought {
   p,
   h2,
   h3 {
-    orphans: 3;
-    widows: 3; }
+    orphans: 4;
+    widows: 4; }
 
-  h2,
-  h3 {
-    page-break-after: avoid; } }
+  article h2, article h2 h3, article h3, article h3 h4, article h4, article h4 h5 {
+    page-break-after: avoid; }
+
+  body header, body footer {
+    display: none; } }
 /* --- Icomoon icon fonts CSS --*/
 @font-face {
   font-family: 'icomoon';
