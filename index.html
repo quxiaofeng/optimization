@@ -45,6 +45,49 @@
 
 <h3 id="alm-lp--irls-">可以用 ALM, LP 和 IRLS 求解的四种常见优化问题</h3>
 
+<h3 id="question-1">Question 1</h3>
+
+<script type="math/tex; mode=display">\arg\min \|x\|_1\|e\|_1</script>
+<p>subj. to <script type="math/tex; mode=display">y=Ax+e</script></p>
+
+<ul>
+  <li>least entropy &amp; error correction</li>
+  <li>标准 linear programming。</li>
+  <li>鲁棒的 SRC<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> 参见</span>。使用单位矩阵作为遮挡字典，用标准形式求解。</li>
+</ul>
+
+<h3 id="question-2">Question 2</h3>
+
+<script type="math/tex; mode=display">\arg\min \|x\|_2\|e\|_1</script>
+<p>subj. to <script type="math/tex; mode=display">y=Ax+e</script></p>
+
+<ul>
+  <li>least energy &amp; error correction</li>
+  <li>鲁棒的 CRC</li>
+</ul>
+
+<h3 id="question-3">Question 3</h3>
+
+<script type="math/tex; mode=display">\arg\min \|x\|_1\|e\|_2</script>
+<p>subj. to <script type="math/tex; mode=display">y=Ax+e</script></p>
+
+<ul>
+  <li>sparse regression with noise - lasso</li>
+  <li>标准 lasso 问题</li>
+  <li>标准的 SRC</li>
+</ul>
+
+<h3 id="question-4">Question 4</h3>
+
+<script type="math/tex; mode=display">$\arg\min \|x\|_2\|e\|_2</script>
+<p>subj. to <script type="math/tex; mode=display">y=Ax+e</script></p>
+
+<ul>
+  <li>least energy with noise</li>
+  <li>极小最小二乘解，可求广义逆。</li>
+  <li>CRC，用二范数约束表示系数，有解析解。</li>
+</ul>
+
 </div>
       </li>
     
