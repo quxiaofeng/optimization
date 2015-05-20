@@ -39,11 +39,37 @@
     
       <li class="listing">
       	<hr class="slender">
-      	<a href="/2015/05/20/optimization-problems/"><h4 class="contrast">优化问题</h4></a>
+      	<a href="/2015/05/20/solving-sparse/"><h4 class="contrast">稀疏编码的优化问题</h4></a>
       	<span class="smaller">May 20, 2015</span>  <br/>
-		<div><h2 id="section">优化问题</h2>
+		<div><p>稀疏编码问题：  <script type="math/tex"> \arg\min_x f(x)\left\|y-Ax\right\|^2+ \lambda\|x\|_1 </script></p>
 
-<h3 id="alm-lp--irls-">可以用 ALM, LP 和 IRLS 求解的四种常见优化问题</h3>
+<ul>
+  <li>用 alternating minimization (ADM)</li>
+  <li>Primal-dual 算法？？</li>
+  <li>Soft threshold ？？</li>
+</ul>
+
+</div>
+      </li>
+    
+      <li class="listing">
+      	<hr class="slender">
+      	<a href="/2015/05/20/optimization-problems/"><h4 class="contrast">几个基本优化问题</h4></a>
+      	<span class="smaller">May 20, 2015</span>  <br/>
+		<div><h2 id="alm-lp--irls-">可以用 ALM, LP 和 IRLS 求解的四种基本优化问题</h2>
+
+<h3 id="question-1">Question 1</h3>
+
+<ul>
+  <li>least entropy &amp; error correction</li>
+</ul>
+
+<p>Question 1: <script type="math/tex"> \arg \min \|x\|_1 + \|e\|_1 </script> subj. to <script type="math/tex"> y=Ax+e </script></p>
+
+<ul>
+  <li>标准 linear programming。</li>
+  <li>鲁棒的 SRC<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> 参见 <a href="http://research.microsoft.com/pubs/132810/PAMI-Face.pdf">http://research.microsoft.com/pubs/132810/PAMI-Face.pdf</a> and <a href="http://perception.csl.illinois.edu/recognition/Home.html">Face Recognition via Sparse Representation</a></span>。使用单位矩阵作为遮挡字典，用标准形式求解。</li>
+</ul>
 
 </div>
       </li>
