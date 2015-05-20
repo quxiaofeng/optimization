@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 May 2015 11:06:05 -0400</pubDate>
-    <lastBuildDate>Wed, 20 May 2015 11:06:05 -0400</lastBuildDate>
+    <pubDate>Wed, 20 May 2015 11:34:21 -0400</pubDate>
+    <lastBuildDate>Wed, 20 May 2015 11:34:21 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -22,7 +22,7 @@
 &lt;ul&gt;
   &lt;li&gt;least entropy &amp;amp; error correction&lt;/li&gt;
   &lt;li&gt;标准 linear programming。&lt;/li&gt;
-  &lt;li&gt;鲁棒的 SRC。使用单位矩阵作为遮挡字典，用标准形式求解。&lt;/li&gt;
+  &lt;li&gt;鲁棒的 SRC&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; 参见&lt;/span&gt;。使用单位矩阵作为遮挡字典，用标准形式求解。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;question-2&quot;&gt;Question 2&lt;/h3&gt;
