@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>几个基本优化问题 | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="可以用 ALM, LP 和 IRLS 求解的四种基本优化问题Question 1  least entropy &amp; error correctionQuestion 1:  subj. to   标准 linear programming。  鲁棒的 SRC11 参见 http://research.mi...">
+  <meta name="description" content="可以用 ALM11 Argumented Lagrange Multiplier 增广拉格朗日乘子法, LP22 Linear Programming 线性规划 和 IRLS 33 Iteratively Reweighted Least Squares 求解的四种基本优化问题Question 1  least ...">
 
 
   <link rel="stylesheet" href="/css/tufte.css">	
@@ -38,7 +38,7 @@
 <p>May 20, 2015</p>
 
 
-<h2 id="alm-lp--irls-">可以用 ALM, LP 和 IRLS 求解的四种基本优化问题</h2>
+<h2 id="almsup-classsidenote-number1supspan-classsidenotesup-classsidenote-number1sup-argumented-lagrange-multiplier-span-lpsup-classsidenote-number2supspan-classsidenotesup-classsidenote-number2sup-linear-programming-span--irls-sup-classsidenote-number3supspan-classsidenotesup-classsidenote-number3sup-iteratively-reweighted-least-squareshttpwwwroboticsstanfordeduangpapersaaai06-efficientl1logisticregressionpdfspan-">可以用 ALM<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> Argumented Lagrange Multiplier 增广拉格朗日乘子法</span>, LP<sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Linear Programming 线性规划</span> 和 IRLS <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://www.robotics.stanford.edu/~ang/papers/aaai06-efficientL1logisticregression.pdf">Iteratively Reweighted Least Squares</a></span> 求解的四种基本优化问题</h2>
 
 <h3 id="question-1">Question 1</h3>
 
@@ -50,7 +50,7 @@
 
 <ul>
   <li><span class="newthought">标准 linear programming。</span></li>
-  <li>鲁棒的 <em>SRC</em><sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> 参见 <a href="http://research.microsoft.com/pubs/132810/PAMI-Face.pdf">http://research.microsoft.com/pubs/132810/PAMI-Face.pdf</a> and <a href="http://perception.csl.illinois.edu/recognition/Home.html">Face Recognition via Sparse Representation</a></span>。使用单位矩阵作为遮挡字典，用标准形式求解。</li>
+  <li>鲁棒的 <em>SRC</em><sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> 参见 <a href="http://research.microsoft.com/pubs/132810/PAMI-Face.pdf">http://research.microsoft.com/pubs/132810/PAMI-Face.pdf</a> and <a href="http://perception.csl.illinois.edu/recognition/Home.html">Face Recognition via Sparse Representation</a></span>。使用单位矩阵作为遮挡字典，用标准形式求解。</li>
 </ul>
 
 <!--more-->
