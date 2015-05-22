@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 May 2015 06:57:25 -0400</pubDate>
-    <lastBuildDate>Fri, 22 May 2015 06:57:25 -0400</lastBuildDate>
+    <pubDate>Fri, 22 May 2015 10:28:16 -0400</pubDate>
+    <lastBuildDate>Fri, 22 May 2015 10:28:16 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -60,8 +60,8 @@
 &lt;p&gt;Question 1: &lt;script type=&quot;math/tex&quot;&gt; \arg \min \|x\|_1 + \|e\|_1 &lt;/script&gt; subj. to &lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;标准 linear programming。&lt;/li&gt;
-  &lt;li&gt;鲁棒的 SRC&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; 参见 &lt;a href=&quot;http://research.microsoft.com/pubs/132810/PAMI-Face.pdf&quot;&gt;http://research.microsoft.com/pubs/132810/PAMI-Face.pdf&lt;/a&gt; and &lt;a href=&quot;http://perception.csl.illinois.edu/recognition/Home.html&quot;&gt;Face Recognition via Sparse Representation&lt;/a&gt;&lt;/span&gt;。使用单位矩阵作为遮挡字典，用标准形式求解。&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;newthought&quot;&gt;标准 linear programming。&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;鲁棒的 &lt;em&gt;SRC&lt;/em&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; 参见 &lt;a href=&quot;http://research.microsoft.com/pubs/132810/PAMI-Face.pdf&quot;&gt;http://research.microsoft.com/pubs/132810/PAMI-Face.pdf&lt;/a&gt; and &lt;a href=&quot;http://perception.csl.illinois.edu/recognition/Home.html&quot;&gt;Face Recognition via Sparse Representation&lt;/a&gt;&lt;/span&gt;。使用单位矩阵作为遮挡字典，用标准形式求解。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;!--more--&gt;
