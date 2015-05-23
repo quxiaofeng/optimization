@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>几个基本优化问题 | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="可以用 ALM11 Argumented Lagrange Multiplier 增广拉格朗日乘子法, LP22 Linear Programming 线性规划 和 IRLS 33 Iteratively Reweighted Least Squares 求解的四种基本优化问题Question 1  least ...">
+  <meta name="description" content="可以用 ALM11 Argumented Lagrange Multiplier 增广拉格朗日乘子法, LP22 Linear Programming 线性规划 和 IRLS 33 Iteratively Reweighted Least Squares 求解的四种基本优化问题Question 1least en...">
 
 
   <link rel="stylesheet" href="/css/tufte.css">	
@@ -42,16 +42,13 @@
 
 <h3 id="question-1">Question 1</h3>
 
-<ul>
-  <li>least entropy &amp; error correction</li>
-</ul>
+<p><span class="newthought">least entropy &amp; error correction</span></p>
 
 <p>Question 1: <script type="math/tex"> \arg \min \|x\|_1 + \|e\|_1 </script> subj. to <script type="math/tex"> y=Ax+e </script></p>
 
-<ul>
-  <li><span class="newthought">标准 linear programming。</span></li>
-  <li>鲁棒的 <em>SRC</em><sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> 参见 <a href="http://research.microsoft.com/pubs/132810/PAMI-Face.pdf">http://research.microsoft.com/pubs/132810/PAMI-Face.pdf</a> and <a href="http://perception.csl.illinois.edu/recognition/Home.html">Face Recognition via Sparse Representation</a></span>。使用单位矩阵作为遮挡字典，用标准形式求解。</li>
-</ul>
+<p>newthought ‘标准 linear programming</p>
+
+<p>鲁棒的 <em>SRC</em><sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> 参见 <a href="http://research.microsoft.com/pubs/132810/PAMI-Face.pdf">http://research.microsoft.com/pubs/132810/PAMI-Face.pdf</a> and <a href="http://perception.csl.illinois.edu/recognition/Home.html">Face Recognition via Sparse Representation</a></span>。使用单位矩阵作为遮挡字典，用标准形式求解。</p>
 
 <!--more-->
 
