@@ -5,7 +5,7 @@ date:   2015-05-20 22:53:20
 categories:
 ---
 
-##  可以用 ALM{% sidenote 1 'Argumented Lagrange Multiplier 增广拉格朗日乘子法' %}, LP{% sidenote 2 'Linear Programming 线性规划' %} 和 IRLS {% sidenote 3 '[Iteratively Reweighted Least Squares](http://www.robotics.stanford.edu/~ang/papers/aaai06-efficientL1logisticregression.pdf)' %} 求解的四种基本优化问题
+可以用 ALM{% sidenote 1 'Argumented Lagrange Multiplier 增广拉格朗日乘子法' %}, LP{% sidenote 2 'Linear Programming 线性规划' %} 和 IRLS {% sidenote 3 '[Iteratively Reweighted Least Squares](http://www.robotics.stanford.edu/~ang/papers/aaai06-efficientL1logisticregression.pdf)' %} 求解的四种基本优化问题
 
 ### Question 1
 
