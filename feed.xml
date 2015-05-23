@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 May 2015 20:38:10 -0400</pubDate>
-    <lastBuildDate>Fri, 22 May 2015 20:38:10 -0400</lastBuildDate>
+    <pubDate>Fri, 22 May 2015 20:41:58 -0400</pubDate>
+    <lastBuildDate>Fri, 22 May 2015 20:41:58 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -49,7 +49,7 @@
     
       <item>
         <title>几个基本优化问题</title>
-        <description>&lt;h2 id=&quot;almsup-classsidenote-number1supspan-classsidenotesup-classsidenote-number1sup-argumented-lagrange-multiplier-span-lpsup-classsidenote-number2supspan-classsidenotesup-classsidenote-number2sup-linear-programming-span--irls-sup-classsidenote-number3supspan-classsidenotesup-classsidenote-number3sup-iteratively-reweighted-least-squareshttpwwwroboticsstanfordeduangpapersaaai06-efficientl1logisticregressionpdfspan-&quot;&gt;可以用 ALM&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; Argumented Lagrange Multiplier 增广拉格朗日乘子法&lt;/span&gt;, LP&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Linear Programming 线性规划&lt;/span&gt; 和 IRLS &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; &lt;a href=&quot;http://www.robotics.stanford.edu/~ang/papers/aaai06-efficientL1logisticregression.pdf&quot;&gt;Iteratively Reweighted Least Squares&lt;/a&gt;&lt;/span&gt; 求解的四种基本优化问题&lt;/h2&gt;
+        <description>&lt;p&gt;可以用 ALM&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; Argumented Lagrange Multiplier 增广拉格朗日乘子法&lt;/span&gt;, LP&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Linear Programming 线性规划&lt;/span&gt; 和 IRLS &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; &lt;a href=&quot;http://www.robotics.stanford.edu/~ang/papers/aaai06-efficientL1logisticregression.pdf&quot;&gt;Iteratively Reweighted Least Squares&lt;/a&gt;&lt;/span&gt; 求解的四种基本优化问题&lt;/p&gt;
 
 &lt;h3 id=&quot;question-1&quot;&gt;Question 1&lt;/h3&gt;
 
