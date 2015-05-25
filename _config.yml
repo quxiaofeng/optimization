@@ -1,11 +1,11 @@
-url: http://www.optimizations.ml
-baseurl:
+url: http://www.quxiaofeng.me
+baseurl: /optimization
 title: OPTIMIZATIONS for Machine Learning
 subtitle: Optimization Methods for Machine Learning
 logo: badge_op_ml.png
 author: QU Xiaofeng
 email: xiaofeng.qu.hk@ieee.org
-simple_search: http://google.com/search
+simple_search: http://bing.com/search
 description: A little blog collecting optimization methods in machine learning field
 name: OPTIMIZATIONS.ML
 markdown: Kramdown
@@ -14,7 +14,7 @@ kramdown:
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 highlighter: rouge
 permalink: pretty
-timezone: America/New_York
+timezone: Asia/Hong_Kong
 excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 exclude: ['.gitignore','UploadToGithub.Rakefile','LICENSE','Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
 post:
