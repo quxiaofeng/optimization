@@ -4,5 +4,5 @@
   icon: icon-twitter
 - link: //github.com/quxiaofeng
   icon: icon-github
-- link: /feed
+- link: ./feed
   icon: icon-feed
