@@ -29,6 +29,6 @@ categories:
 1.1 内积 inner product
 
 {% m %}
-\< \cdot, \cdot \> : \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R}
+< \cdot, \cdot > : \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R}
 {% em %}
 
