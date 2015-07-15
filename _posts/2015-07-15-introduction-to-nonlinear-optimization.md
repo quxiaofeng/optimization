@@ -26,11 +26,7 @@ categories:
 
 ## 第一章 数学基础
 
-Definition 1.1 内积 inner product
-
-{% m %}
-< \cdot, \cdot > : \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R}
-{% em %}
+Definition 1.1 内积 inner product {% m %} < \cdot, \cdot > : \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R} {% em %}
 
 1. symmetry {% m %} <\bm{x}, \bm{y}> = <\bm{y}, \bm{x}> for any \bm{x}, \bm{y} \in \mathbb{R}^n {% em %}
 2. additivity
