@@ -26,9 +26,11 @@ categories:
 
 ## 第一章 数学基础
 
-Definition 1.1 内积 inner product {% m %} \langle\cdot,\cdot\rangle : \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R} {% em %}
+Definition 1.1 内积 inner product
 
-1. symmetry {% m %} \langle\bm{x},\bm{y}\rangle=\langle\bm{y},\bm{x}\rangle for any \bm{x}, \bm{y} \in \mathbb{R}^n {% em %}
+{% m %} \langle\cdot,\cdot\rangle := \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R} {% em %}
+
+1. symmetry {% m %} \langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle for any {\bf x},{\bf y} \in \mathbb{R}^n {% em %}
 2. additivity
 3. homogeneity
 4. positive definiteness
