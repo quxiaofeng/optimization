@@ -26,9 +26,13 @@ categories:
 
 ## 第一章 数学基础
 
-1.1 内积 inner product
+### 1.1 内积 inner product
 
 {% m %}
 < \cdot, \cdot > : \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R}
 {% em %}
 
+1. symmetry <\bm{x}, \bm{y}> = <\bm{y}, \bm{x}> for any \bm{x}, \bm{y} \in \mathbb{R}^n
+2. additivity
+3. homogeneity
+4. positive definiteness
