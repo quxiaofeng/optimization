@@ -5,7 +5,7 @@ date:   2015-07-15 21:22:17
 categories:
 ---
 
-昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》{% sidenote 1 '《Introduction to Nonlinear Optimization》：[[豆瓣链接]](http://book.douban.com/subject/26551626/) [[Amazon Page]](http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/)' %} by Amir Beck {% sidenote 2 'Amir Beck is an associate professor at The Technion—Israel Institute of Technology： http://iew3.technion.ac.il/Home/Users/becka.html' %}。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉习题也都挺有用的。
+昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》{% sidenote 1 '《Introduction to Nonlinear Optimization》 at 豆瓣: [http://book.douban.com/subject/26551626/](http://book.douban.com/subject/26551626/) and at Amazon: [http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/](http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/)' %} by Amir Beck {% sidenote 2 'Amir Beck is an associate professor at The Technion—Israel Institute of Technology： [http://iew3.technion.ac.il/Home/Users/becka.html](http://iew3.technion.ac.il/Home/Users/becka.html)' %}。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉习题也都挺有用的。
 
 <!--more-->
 
