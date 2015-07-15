@@ -5,7 +5,7 @@ date:   2015-07-15 21:22:17
 categories:
 ---
 
-昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》 by Amir Beck [[豆瓣]](http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/)。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉也都不错。
+昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》 by Amir Beck [[豆瓣]](http://book.douban.com/subject/26551626/) [[Amazon]](http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/)。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉习题也都挺有用的。
 
 <!--more-->
 
