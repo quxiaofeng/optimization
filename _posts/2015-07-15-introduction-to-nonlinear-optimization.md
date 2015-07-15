@@ -9,7 +9,7 @@ categories:
 
 <!--more-->
 
-## 章节
+## Table of Content 目录
 
 1. Mathematical Preliminaries 数学基础
 2. Optimality Conditions for Unconstrained Optimization 无约束优化的最优化
