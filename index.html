@@ -7,7 +7,7 @@ title: Home
     {% for post in site.posts %}
       <li class="listing">
       	<hr class="slender">
-      	<a href="{{ post.url | prepend: site.baseurl }}"><h4 class="contrast">{{ post.title }}</h4></a>
+      	<a href="{% if site.sourceurl %}{{ post.url | prepend: site.sourceurl }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}"><h4 class="contrast">{{ post.title }}</h4></a>
       	<span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span>  <br/>
 		<div>{{ post.excerpt }}</div>
       </li>

@@ -1,8 +1,8 @@
 - link: //www.twitter.com/quxiaofeng
-  icon: icon-facebook
-- link: //www.facebook.com/quxiaofeng
   icon: icon-twitter
+- link: //www.facebook.com/quxiaofeng
+  icon: icon-facebook
 - link: //github.com/quxiaofeng
   icon: icon-github
-- link: /feed
+- link: //www.quxiaofeng.me/optimization/feed
   icon: icon-feed
