@@ -32,7 +32,7 @@ categories:
 < \cdot, \cdot > : \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R}
 {% em %}
 
-1. symmetry <\bm{x}, \bm{y}> = <\bm{y}, \bm{x}> for any \bm{x}, \bm{y} \in \mathbb{R}^n
+1. symmetry {%m%}<\bm{x}, \bm{y}> = <\bm{y}, \bm{x}> for any \bm{x}, \bm{y} \in \mathbb{R}^n {%em%}
 2. additivity
 3. homogeneity
 4. positive definiteness
