@@ -12,7 +12,7 @@ categories:
 ## Table of Content 目录
 
 1. Mathematical Preliminaries 数学基础
-2. Optimality Conditions for Unconstrained Optimization 无约束优化的最优化
+2. Optimality Conditions for Unconstrained Optimization 无约束优化问题的优化条件
 3. Least Squares 最小二乘问题
 4. The Gradient Method 梯度下降法
 5. Newton's Method 牛顿法
@@ -20,7 +20,7 @@ categories:
 7. Convex Functions 凸函数
 8. Convex Optimization 凸优化
 9. Optimization over a Convex Set 凸集上的优化问题
-10. Optimality Conditions for Linearly Constrained Problems 线性约束问题的最优化
+10. Optimality Conditions for Linearly Constrained Problems 线性约束问题的优化条件
 11. The KKT Conditions 库恩塔克条件
 12. Duality 对偶问题
 
