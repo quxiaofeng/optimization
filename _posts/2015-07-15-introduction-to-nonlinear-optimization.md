@@ -30,7 +30,7 @@ Definition 1.1 内积 inner product
 
 {% m %} \langle\cdot,\cdot\rangle := \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R} {% em %}
 
-1. symmetry {% m %} \langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle for any {\bf x},{\bf y} \in \mathbb{R}^n {% em %}
+1. symmetry {% m %}\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle{% em %} for any {% m %}{\bf x},{\bf y} \in \mathbb{R}^n {% em %}
 2. additivity
 3. homogeneity
 4. positive definiteness
