@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Introduction to Nonlinear Optimization | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》 by Amir Beck [豆瓣] [Amazon]。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization 一系列优化的书都不错。连着借了三本，希...">
+  <meta name="description" content="昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》11 《Introduction to Nonlinear Optimization》：[豆瓣链接] [Amazon Page] by Amir Beck 22 Amir Beck’s H...">
 
 
   <link rel="stylesheet" href="//www.quxiaofeng.me/optimization/css/tufte.css">	
@@ -39,15 +39,15 @@
 <p>July 16, 2015</p>
 
 
-<p>昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》 by Amir Beck <a href="http://book.douban.com/subject/26551626/">[豆瓣]</a> <a href="http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/">[Amazon]</a>。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉习题也都挺有用的。</p>
+<p>昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> 《Introduction to Nonlinear Optimization》：<a href="http://book.douban.com/subject/26551626/">[豆瓣链接]</a> <a href="http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/">[Amazon Page]</a></span> by Amir Beck <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Amir Beck’s Homepage in at The Technion—Israel Institute of Technology： http://iew3.technion.ac.il/Home/Users/becka.html</span>。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉习题也都挺有用的。</p>
 
 <!--more-->
 
-<h2 id="section">章节</h2>
+<h2 id="table-of-content-">Table of Content 目录</h2>
 
 <ol>
   <li>Mathematical Preliminaries 数学基础</li>
-  <li>Optimality Conditions for Unconstrained Optimization 无约束优化的最优化</li>
+  <li>Optimality Conditions for Unconstrained Optimization 无约束优化问题的优化条件</li>
   <li>Least Squares 最小二乘问题</li>
   <li>The Gradient Method 梯度下降法</li>
   <li>Newton’s Method 牛顿法</li>
@@ -55,19 +55,25 @@
   <li>Convex Functions 凸函数</li>
   <li>Convex Optimization 凸优化</li>
   <li>Optimization over a Convex Set 凸集上的优化问题</li>
-  <li>Optimality Conditions for Linearly Constrained Problems 线性约束问题的最优化</li>
+  <li>Optimality Conditions for Linearly Constrained Problems 线性约束问题的优化条件</li>
   <li>The KKT Conditions 库恩塔克条件</li>
   <li>Duality 对偶问题</li>
 </ol>
 
-<h2 id="section-1">第一章 数学基础</h2>
+<h2 id="section">第一章 数学基础</h2>
 
-<p>1.1 内积 inner product</p>
+<h3 id="inner-product">1.1 内积 inner product</h3>
 
 <script type="math/tex">
-\< \cdot, \cdot \> : \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R}
+< \cdot, \cdot > : \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R}
 </script>
 
+<ol>
+  <li>symmetry &lt;\bm{x}, \bm{y}&gt; = &lt;\bm{y}, \bm{x}&gt; for any \bm{x}, \bm{y} \in \mathbb{R}^n</li>
+  <li>additivity</li>
+  <li>homogeneity</li>
+  <li>positive definiteness</li>
+</ol>
 
 
 

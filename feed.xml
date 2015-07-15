@@ -5,21 +5,21 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Jul 2015 22:26:42 +0800</pubDate>
-    <lastBuildDate>Wed, 15 Jul 2015 22:26:42 +0800</lastBuildDate>
+    <pubDate>Wed, 15 Jul 2015 23:08:26 +0800</pubDate>
+    <lastBuildDate>Wed, 15 Jul 2015 23:08:26 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Introduction to Nonlinear Optimization</title>
-        <description>&lt;p&gt;昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》 by Amir Beck &lt;a href=&quot;http://book.douban.com/subject/26551626/&quot;&gt;[豆瓣]&lt;/a&gt; &lt;a href=&quot;http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/&quot;&gt;[Amazon]&lt;/a&gt;。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉习题也都挺有用的。&lt;/p&gt;
+        <description>&lt;p&gt;昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; 《Introduction to Nonlinear Optimization》：&lt;a href=&quot;http://book.douban.com/subject/26551626/&quot;&gt;[豆瓣链接]&lt;/a&gt; &lt;a href=&quot;http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/&quot;&gt;[Amazon Page]&lt;/a&gt;&lt;/span&gt; by Amir Beck &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Amir Beck’s Homepage in at The Technion—Israel Institute of Technology： http://iew3.technion.ac.il/Home/Users/becka.html&lt;/span&gt;。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉习题也都挺有用的。&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;章节&lt;/h2&gt;
+&lt;h2 id=&quot;table-of-content-&quot;&gt;Table of Content 目录&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Mathematical Preliminaries 数学基础&lt;/li&gt;
-  &lt;li&gt;Optimality Conditions for Unconstrained Optimization 无约束优化的最优化&lt;/li&gt;
+  &lt;li&gt;Optimality Conditions for Unconstrained Optimization 无约束优化问题的优化条件&lt;/li&gt;
   &lt;li&gt;Least Squares 最小二乘问题&lt;/li&gt;
   &lt;li&gt;The Gradient Method 梯度下降法&lt;/li&gt;
   &lt;li&gt;Newton’s Method 牛顿法&lt;/li&gt;
@@ -27,19 +27,25 @@
   &lt;li&gt;Convex Functions 凸函数&lt;/li&gt;
   &lt;li&gt;Convex Optimization 凸优化&lt;/li&gt;
   &lt;li&gt;Optimization over a Convex Set 凸集上的优化问题&lt;/li&gt;
-  &lt;li&gt;Optimality Conditions for Linearly Constrained Problems 线性约束问题的最优化&lt;/li&gt;
+  &lt;li&gt;Optimality Conditions for Linearly Constrained Problems 线性约束问题的优化条件&lt;/li&gt;
   &lt;li&gt;The KKT Conditions 库恩塔克条件&lt;/li&gt;
   &lt;li&gt;Duality 对偶问题&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;第一章 数学基础&lt;/h2&gt;
+&lt;h2 id=&quot;section&quot;&gt;第一章 数学基础&lt;/h2&gt;
 
-&lt;p&gt;1.1 内积 inner product&lt;/p&gt;
+&lt;h3 id=&quot;inner-product&quot;&gt;1.1 内积 inner product&lt;/h3&gt;
 
 &lt;script type=&quot;math/tex&quot;&gt;
-\&lt; \cdot, \cdot \&gt; : \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R}
+&lt; \cdot, \cdot &gt; : \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R}
 &lt;/script&gt;
 
+&lt;ol&gt;
+  &lt;li&gt;symmetry &amp;lt;\bm{x}, \bm{y}&amp;gt; = &amp;lt;\bm{y}, \bm{x}&amp;gt; for any \bm{x}, \bm{y} \in \mathbb{R}^n&lt;/li&gt;
+  &lt;li&gt;additivity&lt;/li&gt;
+  &lt;li&gt;homogeneity&lt;/li&gt;
+  &lt;li&gt;positive definiteness&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         <pubDate>Thu, 16 Jul 2015 05:22:17 +0800</pubDate>
         <link>http://www.quxiaofeng.me/optimization/2015/07/16/introduction-to-nonlinear-optimization/</link>
