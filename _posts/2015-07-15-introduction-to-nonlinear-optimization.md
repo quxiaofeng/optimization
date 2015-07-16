@@ -31,7 +31,7 @@ Definition 1.1 内积 inner product {%m%}\langle\cdot,\cdot\rangle:=\mathbb{R}^n
 1. 交换率 symmetry {% m %}\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle{% em %} for any {% m %}{\bf x},{\bf y} \in \mathbb{R}^n {% em %}
 2. 分配率 additivity {%m%}\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle{%em%} for any {% m %}{\bf x},{\bf y},{\bf z} \in \mathbb{R}^n {% em %}
 3. 线性 homogeneity {%m%}\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle{%em%} for any {%m%}\lambda\in\mathbb{R}{%em%} and {%m%}{\bf x},{\bf y}\in\mathbb{R}^n{%em%}
-4. 正定 positive definiteness {%m%}\langle{\bf x},{\bf x}\rangle\ge0{%em%} for any {%m%}{\bf x}\in\mathbb{R}^n{%em%} and {%m%}\langle{\bf x},{\bf x}\rangle=0{%em%} if and only if {%m%}{\bf x}={\bf 0}\;\;\;\blacksquare{%em%}
+4. 正定 positive definiteness {%m%}\langle{\bf x},{\bf x}\rangle\ge0{%em%} for any {%m%}{\bf x}\in\mathbb{R}^n{%em%} and {%m%}\langle{\bf x},{\bf x}\rangle=0{%em%} if and only if {%m%}{\bf x}={\bf 0} \;\;\; \blacksquare{%em%}
 
 {%m%}{%em%}
 
