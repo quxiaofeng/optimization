@@ -39,7 +39,7 @@
 <p>July 16, 2015</p>
 
 
-<p>昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> 《Introduction to Nonlinear Optimization》 at 豆瓣: <a href="http://book.douban.com/subject/26551626/">http://book.douban.com/subject/26551626/</a> and at Amazon: <a href="http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/">http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/</a></span> by Amir Beck <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Amir Beck is an associate professor at The Technion—Israel Institute of Technology： <a href="http://iew3.technion.ac.il/Home/Users/becka.html">http://iew3.technion.ac.il/Home/Users/becka.html</a></span>。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉习题也都挺有用的。</p>
+<p>昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> 《Introduction to Nonlinear Optimization》 at 豆瓣: <a href="http://book.douban.com/subject/26551626/">http://book.douban.com/subject/26551626/</a> and at Amazon: <a href="http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/">http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/</a></span> by Amir Beck <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Amir Beck is an associate professor at The Technion—Israel Institute of Technology： <a href="http://iew3.technion.ac.il/Home/Users/becka.html">http://iew3.technion.ac.il/Home/Users/becka.html</a></span>。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization<sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> MOS-SIAM Series on Optimization: <a href="http://bookstore.siam.org/mos-siam-series-on-optimization/">http://bookstore.siam.org/mos-siam-series-on-optimization/</a></span> 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉习题也都挺有用的。</p>
 
 <!--more-->
 
@@ -65,10 +65,10 @@
 <p>Definition 1.1 内积 inner product <script type="math/tex">\langle\cdot,\cdot\rangle:=\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}</script></p>
 
 <ol>
-  <li>symmetry <script type="math/tex">\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle</script> for any <script type="math/tex">{\bf x},{\bf y} \in \mathbb{R}^n </script></li>
-  <li>additivity <script type="math/tex">\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle</script> for any <script type="math/tex">{\bf x},{\bf y},{\bf z} \in \mathbb{R}^n </script></li>
-  <li>homogeneity <script type="math/tex">\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle</script> for any <script type="math/tex">\lambda\in\mathbb{R}</script> and <script type="math/tex">{\bf x},{\bf y}\in\mathbb{R}^n</script></li>
-  <li>positive definiteness <script type="math/tex">\langle{\bf x},{\bf x}\rangle\ge0</script> for any <script type="math/tex">{\bf x}\in\mathbb{R}^n</script> and <script type="math/tex">\langle{\bf x},{\bf x}\rangle=0</script> if and only if <script type="math/tex">{\bf x}={\bf 0}</script></li>
+  <li>交换率 symmetry <script type="math/tex">\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle</script> for any <script type="math/tex">{\bf x},{\bf y} \in \mathbb{R}^n </script></li>
+  <li>分配率 additivity <script type="math/tex">\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle</script> for any <script type="math/tex">{\bf x},{\bf y},{\bf z} \in \mathbb{R}^n </script></li>
+  <li>线性 homogeneity <script type="math/tex">\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle</script> for any <script type="math/tex">\lambda\in\mathbb{R}</script> and <script type="math/tex">{\bf x},{\bf y}\in\mathbb{R}^n</script></li>
+  <li>正定 positive definiteness <script type="math/tex">\langle{\bf x},{\bf x}\rangle\ge0</script> for any <script type="math/tex">{\bf x}\in\mathbb{R}^n</script> and <script type="math/tex">\langle{\bf x},{\bf x}\rangle=0</script> if and only if <script type="math/tex">{\bf x}={\bf 0}</script></li>
 </ol>
 
 <script type="math/tex"></script>
