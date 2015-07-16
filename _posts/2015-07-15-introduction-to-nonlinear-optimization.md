@@ -37,8 +37,8 @@ Definition 1.1 内积 inner product {%m%}\langle\cdot,\cdot\rangle:=\mathbb{R}^n
 
 Example 1.2 最常见的内积就是点积 dot product
 {%m%}\langle{\bf x},{\bf y}\rangle={\bf x}^T,{\bf y}=\sum^n_{i=1}x_iy_i{%em%} for any {% m %}{\bf x},{\bf y} \in \mathbb{R}^n {% em %}
-点积是标准内积，当不明确说明时，默认内积就是点积。
+点积是标准内积，当不明确说明时，默认内积就是点积。{%m%}\blacksquare{%em%}
 
 Example 1.3 加权点积是 {%m%}\mathbb{R}^n {%em%} 空间中另一个内积的例子，其中{%m%}{\bf w}\in\mathbb{R}^n_{++}{%em%}
 
-{%m%}\langle{\bf x},{\bf y}\rangle_{\bf w}=\sum^n_{i=1}w_ix_iy_i \qed{%em%}
+{%m%}\langle{\bf x},{\bf y}\rangle_{\bf w}=\sum^n_{i=1}w_ix_iy_i{%em%} {%m%}\blacksquare{%em%}
