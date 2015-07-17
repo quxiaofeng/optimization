@@ -6,17 +6,22 @@ categories:
 ---
 
 Consider minimizing {%m%} f({\bf x}) {%em%} subject to equality constraints {%m%} g_i({\bf x}) = 0 {%em%} for {%m%}i=1, \ldots ,q{%em%}
+
 + Inequality constraints are ignored for simplicity
+
 + Assume {%m%}f{%em%} and {%m%}g_i{%em%} are smooth for simplicity
+
 + At a constrained minimum, the Lagrange multiplier condition
 
-{%math%}  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  {%endmath%} holds provided {%m%}\nabla g_i({\bf x}){%em%} are linearly independent
+<p> {%math%}  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  {%endmath%} <\p>
+
+holds provided {%m%}\nabla g_i({\bf x}){%em%} are linearly independent
 
 <!--more-->
 
 **Augmented lagrangian**
 
-{%math%}\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2{%endmath%}
+<p> {%math%}\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2{%endmath%} </p>
 
 + The penalty term {%m%}\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2{%em%} punishes violations of the equality constraints {%m%}g_i({\bf \theta}){%em%}
 
@@ -32,22 +37,24 @@ Take {%m%}\rho{%em%} initially large or gradually increase it; iterate
 
 + Find the unconstrained minimum
 
-{%math%}{\bf x}^{(t+1)}\leftarrow \min_x\mathcal{L}_\rho ({\bf x},{\bf \lambda}^{(t)}){%endmath%}
+<p> {%math%}{\bf x}^{(t+1)}\leftarrow \min_x\mathcal{L}_\rho ({\bf x},{\bf \lambda}^{(t)}){%endmath%} </p>
 
 + Update the multiplier vector {%m%}{\bf \lambda}{%em%}
 
-{%math%}\lambda^{(t+1)}_i \leftarrow \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}), \; i = 1, \ldots , q{%endmath%}
+<p> {%math%}\lambda^{(t+1)}_i \leftarrow \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}), \; i = 1, \ldots , q{%endmath%} </p>
 
 ### Intuition for updating {%m%}{\bf \lambda}{%em%}
 
 If {%m%}{\bf x}^{(t)}{%em%} is the unconstrained minimum of {%m%}\mathcal{L}({\bf x},{\bf \lambda}){%em%}, then the stationary condition says
 
+<p>
 {%math%}
 \begin{align}
 {\bf 0} & = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \lambda^{(t)}_i \nabla g_i({\bf x}^{(t)}) + \rho \sum^q_{i=1} g_i({\bf x}^{(t)}) \nabla g_i({\bf x}^{(t)}) \\
 & = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \left[ \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}) \right] \nabla g_i({\bf x}^{(t)})
 \end{align}
 {%endmath%}
+</p>
 
 ### For non-smooth {%m%}f{%em%}, replace gradient {%m%}\nabla f{%em%} by sub-differential {%m%}\partial f{%em%}
 
@@ -55,20 +62,24 @@ If {%m%}{\bf x}^{(t)}{%em%} is the unconstrained minimum of {%m%}\mathcal{L}({\b
 
 Basis pursuit problem seeks the sparsest solution subject to linear constraints
 
+<p>
 {%math%}
 \begin{align}
 \text{minimize} & \|{\bf x}\|_1 \\
 \text{subject to} & {\bf Ax} = {\bf b}
 \end{align}
 {%endmath%}
+</p>
 
 Take {%m%}\rho{%em%} initially large or gradually increase it; iterate according to
 
+<p>
 {%math%}
 \begin{align}
 {\bf x}^{(t+1)}                 & \|{\bf x}\|_1 \\
 {\bf \lambda}^{(t+1)} & {\bf Ax} = {\bf b}
 \end{align}
 {%endmath%}
+</p>
 
 Converges in a finite (small) number of steps {% sidenote 1 'Bregman Iterative Algorithms for l1-Minimization with Applications to Compressed Sensing∗: [http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF](http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF)' %}
