@@ -40,6 +40,25 @@
     
       <li class="listing">
       	<hr class="slender">
+      	<a href="//www.quxiaofeng.me/optimization/2015/07/17/augmented-lagrangian-method/"><h4 class="contrast">Augmented Lagrangian Method</h4></a>
+      	<span class="smaller">July 17, 2015</span>  <br/>
+		<div><p>Consider minimizing <script type="math/tex">f({\bf x})</script> subject to equality constraints <script type="math/tex">g_i({\bf x})</script> for <script type="math/tex">i=1,\ldots,q</script></p>
+
+<ul>
+  <li>Inequality constraints are ignored for simplicity</li>
+  <li>Assume <script type="math/tex">f</script> and <script type="math/tex">g_i</script> are smooth for simplicity</li>
+  <li>At a constrained minimum, the Lagrange multiplier condition</li>
+</ul>
+
+<script type="math/tex; mode=display"> {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nablag_i({\bf x})</script>
+
+<p>holds provided <script type="math/tex">\nabla g_i({\bf x})</script> are linearly independent</p>
+
+</div>
+      </li>
+    
+      <li class="listing">
+      	<hr class="slender">
       	<a href="//www.quxiaofeng.me/optimization/2015/07/16/introduction-to-nonlinear-optimization/"><h4 class="contrast">Introduction to Nonlinear Optimization</h4></a>
       	<span class="smaller">July 16, 2015</span>  <br/>
 		<div><p>昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> 《Introduction to Nonlinear Optimization》 at 豆瓣: <a href="http://book.douban.com/subject/26551626/">http://book.douban.com/subject/26551626/</a> and at Amazon: <a href="http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/">http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/</a></span> by Amir Beck <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Amir Beck is an associate professor at The Technion—Israel Institute of Technology： <a href="http://iew3.technion.ac.il/Home/Users/becka.html">http://iew3.technion.ac.il/Home/Users/becka.html</a></span>。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization<sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> MOS-SIAM Series on Optimization: <a href="http://bookstore.siam.org/mos-siam-series-on-optimization/">http://bookstore.siam.org/mos-siam-series-on-optimization/</a></span> 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉习题也都挺有用的。</p>
@@ -66,7 +85,7 @@
       	<hr class="slender">
       	<a href="//www.quxiaofeng.me/optimization/2015/05/21/optimization-problems/"><h4 class="contrast">几个基本优化问题</h4></a>
       	<span class="smaller">May 21, 2015</span>  <br/>
-		<div><p>可以用 ALM<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> Argumented Lagrange Multiplier 增广拉格朗日乘子法</span>, LP<sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Linear Programming 线性规划</span> 和 IRLS <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://www.robotics.stanford.edu/~ang/papers/aaai06-efficientL1logisticregression.pdf">Iteratively Reweighted Least Squares</a></span> 求解的四种基本优化问题</p>
+		<div><p>可以用 ALM<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> Augmented Lagrange Multiplier 增广拉格朗日乘子法</span>, LP<sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Linear Programming 线性规划</span> 和 IRLS <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://www.robotics.stanford.edu/~ang/papers/aaai06-efficientL1logisticregression.pdf">Iteratively Reweighted Least Squares</a></span> 求解的四种基本优化问题</p>
 
 <h3 id="question-1">Question 1</h3>
 

@@ -5,9 +5,32 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 16 Jul 2015 22:37:08 +0800</pubDate>
-    <lastBuildDate>Thu, 16 Jul 2015 22:37:08 +0800</lastBuildDate>
+    <pubDate>Fri, 17 Jul 2015 12:45:37 +0800</pubDate>
+    <lastBuildDate>Fri, 17 Jul 2015 12:45:37 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Augmented Lagrangian Method</title>
+        <description>&lt;p&gt;Consider minimizing &lt;script type=&quot;math/tex&quot;&gt;f({\bf x})&lt;/script&gt; subject to equality constraints &lt;script type=&quot;math/tex&quot;&gt;g_i({\bf x})&lt;/script&gt; for &lt;script type=&quot;math/tex&quot;&gt;i=1,\ldots,q&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Inequality constraints are ignored for simplicity&lt;/li&gt;
+  &lt;li&gt;Assume &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;g_i&lt;/script&gt; are smooth for simplicity&lt;/li&gt;
+  &lt;li&gt;At a constrained minimum, the Lagrange multiplier condition&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nablag_i({\bf x})&lt;/script&gt;
+
+&lt;p&gt;holds provided &lt;script type=&quot;math/tex&quot;&gt;\nabla g_i({\bf x})&lt;/script&gt; are linearly independent&lt;/p&gt;
+
+&lt;!--more--&gt;
+</description>
+        <pubDate>Fri, 17 Jul 2015 19:04:01 +0800</pubDate>
+        <link>http://www.quxiaofeng.me/optimization/2015/07/17/augmented-lagrangian-method/</link>
+        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/2015/07/17/augmented-lagrangian-method/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Introduction to Nonlinear Optimization</title>
@@ -97,7 +120,7 @@
     
       <item>
         <title>几个基本优化问题</title>
-        <description>&lt;p&gt;可以用 ALM&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; Argumented Lagrange Multiplier 增广拉格朗日乘子法&lt;/span&gt;, LP&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Linear Programming 线性规划&lt;/span&gt; 和 IRLS &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; &lt;a href=&quot;http://www.robotics.stanford.edu/~ang/papers/aaai06-efficientL1logisticregression.pdf&quot;&gt;Iteratively Reweighted Least Squares&lt;/a&gt;&lt;/span&gt; 求解的四种基本优化问题&lt;/p&gt;
+        <description>&lt;p&gt;可以用 ALM&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; Augmented Lagrange Multiplier 增广拉格朗日乘子法&lt;/span&gt;, LP&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Linear Programming 线性规划&lt;/span&gt; 和 IRLS &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; &lt;a href=&quot;http://www.robotics.stanford.edu/~ang/papers/aaai06-efficientL1logisticregression.pdf&quot;&gt;Iteratively Reweighted Least Squares&lt;/a&gt;&lt;/span&gt; 求解的四种基本优化问题&lt;/p&gt;
 
 &lt;h3 id=&quot;question-1&quot;&gt;Question 1&lt;/h3&gt;
 

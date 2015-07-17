@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Augmented Lagrangian Method | OPTIMIZATIONS for Machine Learning</title>
+  <meta name="description" content="Consider minimizing  subject to equality constraints  for   Inequality constraints are ignored for simplicity  Assume  and  are smooth for simplicity  At a c...">
+
+
+  <link rel="stylesheet" href="//www.quxiaofeng.me/optimization/css/tufte.css">	
+  
+
+  <!-- Google Fonts loaded here -->
+  <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+  <link rel="canonical" href="http://www.quxiaofeng.me/optimization/2015/07/17/augmented-lagrangian-method/">
+  <link rel="alternate" type="application/rss+xml" title="OPTIMIZATIONS for Machine Learning" href="http://www.quxiaofeng.me/optimization/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="//www.quxiaofeng.me/optimization/"><img class="badge" src="//www.quxiaofeng.me/optimization/assets/img/badge_op_ml.png" alt="OP"></a>
+		<a href="//www.quxiaofeng.me/optimization/">Home</a>
+		<a href="//www.quxiaofeng.me/optimization/about">About</a>
+	</nav>
+</header>
+
+    <article>
+      <h1>Augmented lagrangian method</h1>
+<p>July 17, 2015</p>
+
+
+<p>Consider minimizing <script type="math/tex">f({\bf x})</script> subject to equality constraints <script type="math/tex">g_i({\bf x})</script> for <script type="math/tex">i=1,\ldots,q</script></p>
+
+<ul>
+  <li>Inequality constraints are ignored for simplicity</li>
+  <li>Assume <script type="math/tex">f</script> and <script type="math/tex">g_i</script> are smooth for simplicity</li>
+  <li>At a constrained minimum, the Lagrange multiplier condition</li>
+</ul>
+
+<script type="math/tex; mode=display"> {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nablag_i({\bf x})</script>
+
+<p>holds provided <script type="math/tex">\nabla g_i({\bf x})</script> are linearly independent</p>
+
+<!--more-->
+
+
+
+    </article>
+    <span class="print-footer">Augmented Lagrangian Method - July 17, 2015 - QU Xiaofeng</span>
+    <footer>
+  <ul class="footer-links group">
+    <li><a href="mailto:xiaofeng.qu.hk@ieee.org"><span class="icon-mail"></span></a></li>
+    
+      <li>
+        <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
+      </li>
+    
+  </ul>
+<div class="credits">
+<span>&copy; 2015 &nbsp;&nbsp;QU XIAOFENG</span></br>
+<span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
+</div>
+</footer>
+  </body>
+</html>
