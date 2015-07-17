@@ -14,7 +14,6 @@ Consider minimizing {%m%} f({\bf x}) {%em%} subject to equality constraints {%m%
 + At a constrained minimum, the Lagrange multiplier condition
 
 {%math%}  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  {%endmath%}
-
 holds provided {%m%}\nabla g_i({\bf x}){%em%} are linearly independent
 
 <!--more-->
