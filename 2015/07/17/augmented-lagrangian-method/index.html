@@ -39,7 +39,7 @@
 <p>July 17, 2015</p>
 
 
-<p>Consider minimizing <script type="math/tex"> f({\bf x}) </script> subject to equality constraints <script type="math/tex"> g_i({\bf x}) </script> for <script type="math/tex">i=1, \ldots ,q</script></p>
+<p>Consider minimizing <script type="math/tex"> f({\bf x}) </script> subject to equality constraints <script type="math/tex"> g_i({\bf x}) = 0 </script> for <script type="math/tex">i=1, \ldots ,q</script></p>
 
 <ul>
   <li>
@@ -61,7 +61,7 @@
 
 <p><strong>Augmented lagrangian</strong></p>
 
-<script type="math/tex; mode=display">\mathcal{L}({\bf x},{\bf lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2</script>
+<script type="math/tex; mode=display">\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2</script>
 
 <ul>
   <li>
