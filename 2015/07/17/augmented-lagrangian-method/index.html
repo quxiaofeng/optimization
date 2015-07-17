@@ -61,7 +61,7 @@
   <li>The penalty term <script type="math/tex">\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2</script> punishes violations of the equality constraints <script type="math/tex">g_i({\bf \theta})</script></li>
   <li>Optimize the Augmented Lagrangian and adjust <script type="math/tex">{\bf \lambda}</script> in the hope of matching the true Lagrange multipliers</li>
   <li>For <script type="math/tex">\rho</script> large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem</li>
-  <li>At convergence, the gradient <script type="math/tex">\rho g_i({\bf x})\nablagi({\bf x})</script> vanishes and we recover the standard multiplier rule</li>
+  <li>At convergence, the gradient <script type="math/tex">\rho g_i({\bf x})\nabla g_i({\bf x})</script> vanishes and we recover the standard multiplier rule</li>
 </ul>
 
 <h2 id="algorithm">Algorithm</h2>
