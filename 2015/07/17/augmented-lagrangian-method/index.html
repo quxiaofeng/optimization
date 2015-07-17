@@ -53,39 +53,50 @@
   </li>
 </ul>
 
-<p> <script type="math/tex; mode=display">  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  </script> &lt;\p&gt;
+<p> <script type="math/tex; mode=display">  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  </script> </p>
 
-holds provided <script type="math/tex">\nabla g_i({\bf x})</script> are linearly independent
+<p>holds provided <script type="math/tex">\nabla g_i({\bf x})</script> are linearly independent</p>
 
 <!--more-->
 
-**Augmented lagrangian**
+<p><strong>Augmented lagrangian</strong></p>
 
 <p> <script type="math/tex; mode=display">\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2</script> </p>
 
-+ The penalty term <script type="math/tex">\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2</script> punishes violations of the equality constraints <script type="math/tex">g_i({\bf \theta})</script>
+<ul>
+  <li>
+    <p>The penalty term <script type="math/tex">\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2</script> punishes violations of the equality constraints <script type="math/tex">g_i({\bf \theta})</script></p>
+  </li>
+  <li>
+    <p>Optimize the Augmented Lagrangian and adjust <script type="math/tex">{\bf \lambda}</script> in the hope of matching the true Lagrange multipliers</p>
+  </li>
+  <li>
+    <p>For <script type="math/tex">\rho</script> large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem</p>
+  </li>
+  <li>
+    <p>At convergence, the gradient <script type="math/tex">\rho g_i({\bf x})\nabla g_i({\bf x})</script> vanishes and we recover the standard multiplier rule</p>
+  </li>
+</ul>
 
-+ Optimize the Augmented Lagrangian and adjust <script type="math/tex">{\bf \lambda}</script> in the hope of matching the true Lagrange multipliers
+<h2 id="algorithm">Algorithm</h2>
 
-+ For <script type="math/tex">\rho</script> large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem
+<p>Take <script type="math/tex">\rho</script> initially large or gradually increase it; iterate</p>
 
-+ At convergence, the gradient <script type="math/tex">\rho g_i({\bf x})\nabla g_i({\bf x})</script> vanishes and we recover the standard multiplier rule
-
-## Algorithm
-
-Take <script type="math/tex">\rho</script> initially large or gradually increase it; iterate
-
-+ Find the unconstrained minimum
+<ul>
+  <li>Find the unconstrained minimum</li>
+</ul>
 
 <p> <script type="math/tex; mode=display">{\bf x}^{(t+1)}\leftarrow \min_x\mathcal{L}_\rho ({\bf x},{\bf \lambda}^{(t)})</script> </p>
 
-+ Update the multiplier vector <script type="math/tex">{\bf \lambda}</script>
+<ul>
+  <li>Update the multiplier vector <script type="math/tex">{\bf \lambda}</script></li>
+</ul>
 
 <p> <script type="math/tex; mode=display">\lambda^{(t+1)}_i \leftarrow \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}), \; i = 1, \ldots , q</script> </p>
 
-### Intuition for updating <script type="math/tex">{\bf \lambda}</script>
+<h3 id="intuition-for-updating-script-typemathtexbf-lambdascript">Intuition for updating <script type="math/tex">{\bf \lambda}</script></h3>
 
-If <script type="math/tex">{\bf x}^{(t)}</script> is the unconstrained minimum of <script type="math/tex">\mathcal{L}({\bf x},{\bf \lambda})</script>, then the stationary condition says
+<p>If <script type="math/tex">{\bf x}^{(t)}</script> is the unconstrained minimum of <script type="math/tex">\mathcal{L}({\bf x},{\bf \lambda})</script>, then the stationary condition says</p>
 
 <p>
 <script type="math/tex; mode=display">
@@ -96,11 +107,11 @@ If <script type="math/tex">{\bf x}^{(t)}</script> is the unconstrained minimum o
 </script>
 </p>
 
-### For non-smooth <script type="math/tex">f</script>, replace gradient <script type="math/tex">\nabla f</script> by sub-differential <script type="math/tex">\partial f</script>
+<h3 id="for-non-smooth-script-typemathtexfscript-replace-gradient-script-typemathtexnabla-fscript-by-sub-differential-script-typemathtexpartial-fscript">For non-smooth <script type="math/tex">f</script>, replace gradient <script type="math/tex">\nabla f</script> by sub-differential <script type="math/tex">\partial f</script></h3>
 
-## Example: basis pursuit
+<h2 id="example-basis-pursuit">Example: basis pursuit</h2>
 
-Basis pursuit problem seeks the sparsest solution subject to linear constraints
+<p>Basis pursuit problem seeks the sparsest solution subject to linear constraints</p>
 
 <p>
 <script type="math/tex; mode=display">
@@ -111,7 +122,7 @@ Basis pursuit problem seeks the sparsest solution subject to linear constraints
 </script>
 </p>
 
-Take <script type="math/tex">\rho</script> initially large or gradually increase it; iterate according to
+<p>Take <script type="math/tex">\rho</script> initially large or gradually increase it; iterate according to</p>
 
 <p>
 <script type="math/tex; mode=display">
@@ -122,8 +133,7 @@ Take <script type="math/tex">\rho</script> initially large or gradually increase
 </script>
 </p>
 
-Converges in a finite (small) number of steps <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> Bregman Iterative Algorithms for l1-Minimization with Applications to Compressed Sensing∗: [http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF](http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF)</span>
-</p>
+<p>Converges in a finite (small) number of steps <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> Bregman Iterative Algorithms for l1-Minimization with Applications to Compressed Sensing∗: <a href="http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF">http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF</a></span></p>
 
 
 
