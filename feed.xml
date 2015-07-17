@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 17 Jul 2015 13:04:55 +0800</pubDate>
-    <lastBuildDate>Fri, 17 Jul 2015 13:04:55 +0800</lastBuildDate>
+    <pubDate>Fri, 17 Jul 2015 13:06:09 +0800</pubDate>
+    <lastBuildDate>Fri, 17 Jul 2015 13:06:09 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -14,9 +14,15 @@
         <description>&lt;p&gt;Consider minimizing &lt;script type=&quot;math/tex&quot;&gt; f({\bf x}) &lt;/script&gt; subject to equality constraints &lt;script type=&quot;math/tex&quot;&gt; g_i({\bf x}) &lt;/script&gt; for &lt;script type=&quot;math/tex&quot;&gt;i=1, \ldots ,q&lt;/script&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Inequality constraints are ignored for simplicity&lt;/li&gt;
-  &lt;li&gt;Assume &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;g_i&lt;/script&gt; are smooth for simplicity&lt;/li&gt;
-  &lt;li&gt;At a constrained minimum, the Lagrange multiplier condition&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Inequality constraints are ignored for simplicity&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Assume &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;g_i&lt;/script&gt; are smooth for simplicity&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;At a constrained minimum, the Lagrange multiplier condition&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  &lt;/script&gt;
@@ -30,10 +36,18 @@
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{L}({\bf x},{\bf lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;The penalty term &lt;script type=&quot;math/tex&quot;&gt;\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt; punishes violations of the equality constraints &lt;script type=&quot;math/tex&quot;&gt;g_i({\bf \theta})&lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;Optimize the Augmented Lagrangian and adjust &lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt; in the hope of matching the true Lagrange multipliers&lt;/li&gt;
-  &lt;li&gt;For &lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt; large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem&lt;/li&gt;
-  &lt;li&gt;At convergence, the gradient &lt;script type=&quot;math/tex&quot;&gt;\rho g_i({\bf x})\nabla g_i({\bf x})&lt;/script&gt; vanishes and we recover the standard multiplier rule&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The penalty term &lt;script type=&quot;math/tex&quot;&gt;\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt; punishes violations of the equality constraints &lt;script type=&quot;math/tex&quot;&gt;g_i({\bf \theta})&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Optimize the Augmented Lagrangian and adjust &lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt; in the hope of matching the true Lagrange multipliers&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For &lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt; large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;At convergence, the gradient &lt;script type=&quot;math/tex&quot;&gt;\rho g_i({\bf x})\nabla g_i({\bf x})&lt;/script&gt; vanishes and we recover the standard multiplier rule&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;algorithm&quot;&gt;Algorithm&lt;/h2&gt;
@@ -51,6 +65,17 @@
 &lt;/ul&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\lambda^{(t+1)}_i \leftarrow \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}), \; i = 1, \ldots , q&lt;/script&gt;
+
+&lt;h3 id=&quot;intuition-for-updating-script-typemathtexbf-lambdascript&quot;&gt;Intuition for updating &lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;/h3&gt;
+
+&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;{\bf x}^{(t)}&lt;/script&gt; is the unconstrained minimum of &lt;script type=&quot;math/tex&quot;&gt;\mathcal{L}({\bf x},{\bf lambda})&lt;/script&gt;, then the stationary condition says&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{align}
+{\bf 0} &amp; = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \lambda^{(t)}_i \nabla g_i({\bf x}^{(t)}) + \rho \sum^q_{i=1} g_i({\bf x}^{(t)}) \nabla g_i({\bf x}^{(t)}) \\
+&amp; = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \left[ \lambda^{(t)}_i  \rho g_i({\bf x}^{(t)}) \right] \nabla g_i({\bf x}^{(t)})
+\end{align}
+&lt;/script&gt;
 
 </description>
         <pubDate>Fri, 17 Jul 2015 19:04:01 +0800</pubDate>

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Augmented Lagrangian Method | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="Consider minimizing  subject to equality constraints  for   Inequality constraints are ignored for simplicity  Assume  and  are smooth for simplicity  At a c...">
+  <meta name="description" content="Consider minimizing  subject to equality constraints  for       Inequality constraints are ignored for simplicity        Assume  and  are smooth for simplici...">
 
 
   <link rel="stylesheet" href="//www.quxiaofeng.me/optimization/css/tufte.css">	
@@ -42,9 +42,15 @@
 <p>Consider minimizing <script type="math/tex"> f({\bf x}) </script> subject to equality constraints <script type="math/tex"> g_i({\bf x}) </script> for <script type="math/tex">i=1, \ldots ,q</script></p>
 
 <ul>
-  <li>Inequality constraints are ignored for simplicity</li>
-  <li>Assume <script type="math/tex">f</script> and <script type="math/tex">g_i</script> are smooth for simplicity</li>
-  <li>At a constrained minimum, the Lagrange multiplier condition</li>
+  <li>
+    <p>Inequality constraints are ignored for simplicity</p>
+  </li>
+  <li>
+    <p>Assume <script type="math/tex">f</script> and <script type="math/tex">g_i</script> are smooth for simplicity</p>
+  </li>
+  <li>
+    <p>At a constrained minimum, the Lagrange multiplier condition</p>
+  </li>
 </ul>
 
 <script type="math/tex; mode=display">  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  </script>
@@ -58,10 +64,18 @@
 <script type="math/tex; mode=display">\mathcal{L}({\bf x},{\bf lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2</script>
 
 <ul>
-  <li>The penalty term <script type="math/tex">\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2</script> punishes violations of the equality constraints <script type="math/tex">g_i({\bf \theta})</script></li>
-  <li>Optimize the Augmented Lagrangian and adjust <script type="math/tex">{\bf \lambda}</script> in the hope of matching the true Lagrange multipliers</li>
-  <li>For <script type="math/tex">\rho</script> large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem</li>
-  <li>At convergence, the gradient <script type="math/tex">\rho g_i({\bf x})\nabla g_i({\bf x})</script> vanishes and we recover the standard multiplier rule</li>
+  <li>
+    <p>The penalty term <script type="math/tex">\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2</script> punishes violations of the equality constraints <script type="math/tex">g_i({\bf \theta})</script></p>
+  </li>
+  <li>
+    <p>Optimize the Augmented Lagrangian and adjust <script type="math/tex">{\bf \lambda}</script> in the hope of matching the true Lagrange multipliers</p>
+  </li>
+  <li>
+    <p>For <script type="math/tex">\rho</script> large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem</p>
+  </li>
+  <li>
+    <p>At convergence, the gradient <script type="math/tex">\rho g_i({\bf x})\nabla g_i({\bf x})</script> vanishes and we recover the standard multiplier rule</p>
+  </li>
 </ul>
 
 <h2 id="algorithm">Algorithm</h2>
@@ -79,6 +93,17 @@
 </ul>
 
 <script type="math/tex; mode=display">\lambda^{(t+1)}_i \leftarrow \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}), \; i = 1, \ldots , q</script>
+
+<h3 id="intuition-for-updating-script-typemathtexbf-lambdascript">Intuition for updating <script type="math/tex">{\bf \lambda}</script></h3>
+
+<p>If <script type="math/tex">{\bf x}^{(t)}</script> is the unconstrained minimum of <script type="math/tex">\mathcal{L}({\bf x},{\bf lambda})</script>, then the stationary condition says</p>
+
+<script type="math/tex; mode=display">
+\begin{align}
+{\bf 0} & = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \lambda^{(t)}_i \nabla g_i({\bf x}^{(t)}) + \rho \sum^q_{i=1} g_i({\bf x}^{(t)}) \nabla g_i({\bf x}^{(t)}) \\
+& = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \left[ \lambda^{(t)}_i  \rho g_i({\bf x}^{(t)}) \right] \nabla g_i({\bf x}^{(t)})
+\end{align}
+</script>
 
 
 
