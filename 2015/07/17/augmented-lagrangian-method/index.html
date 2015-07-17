@@ -113,11 +113,21 @@
 
 <script type="math/tex; mode=display">
 \begin{align}
-minimize & \norm({\bf x})_1 \\
-subject to & {\bf Ax} = {\bf b}
+\text{minimize} & \|{\bf x}\|_1 \\
+\text{subject to} & {\bf Ax} = {\bf b}
 \end{align}
 </script>
 
+<p>Take <script type="math/tex">\rho</script> initially large or gradually increase it; iterate according to</p>
+
+<script type="math/tex; mode=display">
+\begin{align}
+{\bf x}^{(t+1)}                 & \norm({\bf x})_1 \\
+{\bf \lambda}^{(t+1)} & {\bf Ax} = {\bf b}
+\end{align}
+</script>
+
+<p>Converges in a finite (small) number of steps <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> Bregman Iterative Algorithms for l1-Minimization with Applications to Compressed Sensing∗: <a href="http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF">http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF</a></span></p>
 
 
 
