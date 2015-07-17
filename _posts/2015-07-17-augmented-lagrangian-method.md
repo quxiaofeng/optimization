@@ -70,7 +70,7 @@ Take {%m%}\rho{%em%} initially large or gradually increase it; iterate according
 
 {%math%}
 \begin{align}
-{\bf x}^{(t+1)}                 & \norm({\bf x})_1 \\
+{\bf x}^{(t+1)}                 & \|{\bf x}\|_1 \\
 {\bf \lambda}^{(t+1)} & {\bf Ax} = {\bf b}
 \end{align}
 {%endmath%}
