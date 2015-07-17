@@ -62,7 +62,18 @@ Basis pursuit problem seeks the sparsest solution subject to linear constraints
 
 {%math%}
 \begin{align}
-minimize & \norm({\bf x})_1 \\
-subject to & {\bf Ax} = {\bf b}
+\text{minimize} & \|{\bf x}\|_1 \\
+\text{subject to} & {\bf Ax} = {\bf b}
 \end{align}
 {%endmath%}
+
+Take {%m%}\rho{%em%} initially large or gradually increase it; iterate according to
+
+{%math%}
+\begin{align}
+{\bf x}^{(t+1)}                 & \norm({\bf x})_1 \\
+{\bf \lambda}^{(t+1)} & {\bf Ax} = {\bf b}
+\end{align}
+{%endmath%}
+
+Converges in a finite (small) number of steps {% sidenote 1 'Bregman Iterative Algorithms for l1-Minimization with Applications to Compressed Sensing∗: [http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF](http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF)' %}
