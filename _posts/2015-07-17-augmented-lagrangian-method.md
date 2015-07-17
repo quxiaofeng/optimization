@@ -65,8 +65,8 @@ Basis pursuit problem seeks the sparsest solution subject to linear constraints
 <p>
 {%math%}
 \begin{align}
-\text{minimize} & \|{\bf x}\|_1 \\
-\text{subject to} & {\bf Ax} = {\bf b}
+\text{minimize    } & \|{\bf x}\|_1 \\
+\text{subject to    } & {\bf Ax} = {\bf b}
 \end{align}
 {%endmath%}
 </p>
@@ -76,10 +76,17 @@ Take {%m%}\rho{%em%} initially large or gradually increase it; iterate according
 <p>
 {%math%}
 \begin{align}
-{\bf x}^{(t+1)}                 & \|{\bf x}\|_1 \\
-{\bf \lambda}^{(t+1)} & {\bf Ax} = {\bf b}
+{\bf x}^{(t+1)}                 & \leftarrow \min \|{\bf x}\| + \langle {\bf \lambda}^{(t)}, {\bf Ax} - {\bf b} \rangle + \frac{\rho}{2} \|{\bf Ax} - {\bf b}\|^2-2 \text{(lasso)} \\
+{\bf \lambda}^{(t+1)} & \leftarrow {\bf \lambda}^{(t)} + \rho \left( {\bf Ax}^{(t+1)} - {\bf b} \right) 
 \end{align}
 {%endmath%}
 </p>
 
-Converges in a finite (small) number of steps {% sidenote 1 'Bregman Iterative Algorithms for l1-Minimization with Applications to Compressed Sensing∗: [http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF](http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF)' %}
+Converges in a finite (small) number of steps ([Yin et al., 2008](http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF)){% sidenote 1 'Bregman Iterative Algorithms for l1-Minimization with Applications to Compressed Sensing∗: [http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF](http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF)' %}
+
+## Remarks
+
++ The augmented Lagrangian method dates back to 50s (Hestenes, 1969; Powell, 1969)
++ Monograph by Bertsekas (1982) provides a general treatment
++ Same as the Bregman iteration (Yin etal., 2008) proposed for basis pursuit (compressive sensing)
++ Equivalent to proximal print algorithm applied to the dual; can be accelerated (Nesterov)
