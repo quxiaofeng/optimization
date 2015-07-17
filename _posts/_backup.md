@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Augmented Lagrangian Method"
-date:   2015-07-17 11:04:01
+title: 
+date:   
 categories:
 ---
 
