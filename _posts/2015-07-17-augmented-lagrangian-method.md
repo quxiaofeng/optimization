@@ -71,5 +71,5 @@ Take {%m%}\rho{%em%} initially large or gradually increase it; iterate according
 \end{align}
 {%endmath%}
 
-Converges in a finite (small) number of steps {% sidenote 1 'Bregman Iterative Algorithms for 1-Minimization with Applications to
+Converges in a finite (small) number of steps {% sidenote 1 'Bregman Iterative Algorithms for l1-Minimization with Applications to
 Compressed Sensing∗: [http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF](http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF)' %}
