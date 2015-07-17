@@ -45,11 +45,24 @@ Take {%m%}\rho{%em%} initially large or gradually increase it; iterate
 
 ### Intuition for updating {%m%}{\bf \lambda}{%em%}
 
-If {%m%}{\bf x}^{(t)}{%em%} is the unconstrained minimum of {%m%}\mathcal{L}({\bf x},{\bf lambda}){%em%}, then the stationary condition says
+If {%m%}{\bf x}^{(t)}{%em%} is the unconstrained minimum of {%m%}\mathcal{L}({\bf x},{\bf \lambda}){%em%}, then the stationary condition says
 
 {%math%}
 \begin{align}
 {\bf 0} & = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \lambda^{(t)}_i \nabla g_i({\bf x}^{(t)}) + \rho \sum^q_{i=1} g_i({\bf x}^{(t)}) \nabla g_i({\bf x}^{(t)}) \\
-& = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \left[ \lambda^{(t)}_i  \rho g_i({\bf x}^{(t)}) \right] \nabla g_i({\bf x}^{(t)})
+& = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \left[ \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}) \right] \nabla g_i({\bf x}^{(t)})
+\end{align}
+{%endmath%}
+
+### For non-smooth {%m%}f{%em%}, replace gradient {%m%}\nabla f{%em%} by sub-differential {%m%}\partial f{%em%}
+
+## Example: basis pursuit
+
+Basis pursuit problem seeks the sparsest solution subject to linear constraints
+
+{%math%}
+\begin{align}
+minimize & \norm({\bf x})_1 \\
+subject to & {\bf Ax} = {\bf b}
 \end{align}
 {%endmath%}
