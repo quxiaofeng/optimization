@@ -11,8 +11,17 @@ Consider minimizing {%m%} f({\bf x}) {%em%} subject to equality constraints {%m%
 + Assume {%m%}f{%em%} and {%m%}g_i{%em%} are smooth for simplicity
 + At a constrained minimum, the Lagrange multiplier condition
 
-<!--more-->
-
 {%math%} {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x}){%endmath%}
 
 holds provided {%m%}\nabla g_i({\bf x}){%em%} are linearly independent
+
+<!--more-->
+
+**Augmented lagrangian**
+
+{%math%}\mathcal{L}({\bf x},{\bf lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2{%endmath%}
+
++ The penalty term {%m%}\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2{%em%} punishes violations of the equality constraints {%m%}g_i({\bf \theta}){%em%}
++ Optimize the Augmented Lagrangian and adjust {%m%}{\bf \lambda}{%em%} in the hope of matching the true Lagrange multipliers
++ For {%m%}\rho{%em%} large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem
++ At convergence, the gradient {%m%}\rho g_i({\bf x})\nablagi({\bf x}){%em%} vanishes and we recover the standard multiplier rule
