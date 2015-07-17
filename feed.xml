@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 17 Jul 2015 12:56:50 +0800</pubDate>
-    <lastBuildDate>Fri, 17 Jul 2015 12:56:50 +0800</lastBuildDate>
+    <pubDate>Fri, 17 Jul 2015 12:57:41 +0800</pubDate>
+    <lastBuildDate>Fri, 17 Jul 2015 12:57:41 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -19,11 +19,22 @@
   &lt;li&gt;At a constrained minimum, the Lagrange multiplier condition&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;!--more--&gt;
-
 &lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})&lt;/script&gt;
 
 &lt;p&gt;holds provided &lt;script type=&quot;math/tex&quot;&gt;\nabla g_i({\bf x})&lt;/script&gt; are linearly independent&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;strong&gt;Augmented lagrangian&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{L}({\bf x},{\bf lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The penalty term &lt;script type=&quot;math/tex&quot;&gt;\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt; punishes violations of the equality constraints &lt;script type=&quot;math/tex&quot;&gt;g_i({\bf \theta})&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;Optimize the Augmented Lagrangian and adjust &lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt; in the hope of matching the true Lagrange multipliers&lt;/li&gt;
+  &lt;li&gt;For &lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt; large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem&lt;/li&gt;
+  &lt;li&gt;At convergence, the gradient &lt;script type=&quot;math/tex&quot;&gt;\rho g_i({\bf x})\nablagi({\bf x})&lt;/script&gt; vanishes and we recover the standard multiplier rule&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Fri, 17 Jul 2015 19:04:01 +0800</pubDate>
         <link>http://www.quxiaofeng.me/optimization/2015/07/17/augmented-lagrangian-method/</link>
