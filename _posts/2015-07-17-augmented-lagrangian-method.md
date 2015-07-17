@@ -24,7 +24,7 @@ holds provided {%m%}\nabla g_i({\bf x}){%em%} are linearly independent
 + The penalty term {%m%}\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2{%em%} punishes violations of the equality constraints {%m%}g_i({\bf \theta}){%em%}
 + Optimize the Augmented Lagrangian and adjust {%m%}{\bf \lambda}{%em%} in the hope of matching the true Lagrange multipliers
 + For {%m%}\rho{%em%} large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem
-+ At convergence, the gradient {%m%}\rho g_i({\bf x})\nablagi({\bf x}){%em%} vanishes and we recover the standard multiplier rule
++ At convergence, the gradient {%m%}\rho g_i({\bf x})\nabla g_i({\bf x}){%em%} vanishes and we recover the standard multiplier rule
 
 ## Algorithm
 
