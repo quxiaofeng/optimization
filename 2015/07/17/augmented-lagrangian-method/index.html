@@ -64,6 +64,23 @@
   <li>At convergence, the gradient <script type="math/tex">\rho g_i({\bf x})\nablagi({\bf x})</script> vanishes and we recover the standard multiplier rule</li>
 </ul>
 
+<h2 id="algorithm">Algorithm</h2>
+
+<p>Take <script type="math/tex">\rho</script> initially large or gradually increase it; iterate</p>
+
+<ul>
+  <li>Find the unconstrained minimum</li>
+</ul>
+
+<script type="math/tex; mode=display">{\bf x}^{(t+1)}\leftarrow \min_x\mathcal{L}_\rho ({\bf x},{\bf \lambda}^{(t)})</script>
+
+<ul>
+  <li>Update the multiplier vector <script type="math/tex">{\bf \lambda}</script></li>
+</ul>
+
+<script type="math/tex; mode=display">\lambda^{(t+1)}_i \leftarrow \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}), \; i = 1, \ldots , q</script>
+
+
 
 
     </article>
