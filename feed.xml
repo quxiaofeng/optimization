@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 18 Jul 2015 21:50:40 +0800</pubDate>
-    <lastBuildDate>Sat, 18 Jul 2015 21:50:40 +0800</lastBuildDate>
+    <pubDate>Sat, 18 Jul 2015 21:51:59 +0800</pubDate>
+    <lastBuildDate>Sat, 18 Jul 2015 21:51:59 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -15,44 +15,44 @@
 
 &lt;p&gt;The augmented Lagrangian&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 &lt;/script&gt;&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt; \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 &lt;/script&gt;
 
 &lt;!--more--&gt;
 
 &lt;p&gt;Idea: perform block descent on &lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;{\bf y}&lt;/script&gt; and then update multiplier vector &lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 \begin{align}
 {\bf x}^{(t+1)}       &amp; \leftarrow \min_{\bf x} f({\bf x}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By}^{(t)} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By}^{(t)} - {\bf c} \|^2_2 \\
 {\bf y}^{(t+1)}       &amp; \leftarrow \min_{\bf y} g({\bf y}) + \langle {\bf \lambda}, {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \|^2_2 \\
 {\bf \lambda}^{(t+1)} &amp; \leftarrow {\bf \lambda}^{(t)} + \rho ({\bf Ax}^{(t+1)} + {\bf By}^{(t+1)} - {\bf c})
 \end{align}
-&lt;/script&gt;&lt;/p&gt;
+&lt;/script&gt;
 
 &lt;h2 id=&quot;example-fused-lasso&quot;&gt;Example: fused lasso&lt;/h2&gt;
 
 &lt;p&gt;Fused lasso problem minimizes&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \frac{1}{2} \| {\bf y - X\beta} \|^2_2 + \mu \sum^{p-1}_{j=1} |\beta_{j+1} - \beta_j |&lt;/script&gt;&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt; \frac{1}{2} \| {\bf y - X\beta} \|^2_2 + \mu \sum^{p-1}_{j=1} |\beta_{j+1} - \beta_j |&lt;/script&gt;
 
 &lt;p&gt;Define &lt;script type=&quot;math/tex&quot;&gt;{\bf \gamma = D\beta}&lt;/script&gt;, where&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 D = \left(\begin{matrix}
 1 &amp; -1 &amp; &amp;      &amp;   &amp; \\
   &amp;    &amp; \cdots &amp;   &amp; \\
   &amp;    &amp;        &amp; 1 &amp; -1 
 \end{matrix}
 \right)
-&lt;/script&gt;&lt;/p&gt;
+&lt;/script&gt;
 
 &lt;p&gt;Then we minimize &lt;script type=&quot;math/tex&quot;&gt; \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \gamma \|_1 &lt;/script&gt; subject to &lt;script type=&quot;math/tex&quot;&gt; {\bf D\beta} = \gamma &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Augmented Lagrangian is&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 \mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2
-&lt;/script&gt;&lt;/p&gt;
+&lt;/script&gt;
 
 &lt;p&gt;ADMM:&lt;/p&gt;
 
@@ -60,9 +60,9 @@ D = \left(\begin{matrix}
 Update &lt;script type=&quot;math/tex&quot;&gt;{\bf \gamma}&lt;/script&gt; is a separated lasso problem (elementwise thresholding)&lt;br /&gt;
 Update multipliers&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 {\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)}) 
-&lt;/script&gt;&lt;/p&gt;
+&lt;/script&gt;
 
 &lt;p&gt;Same algorithm applies to a general regularization matrix &lt;script type=&quot;math/tex&quot;&gt;{\bf D}&lt;/script&gt; (generalized lasso)&lt;/p&gt;
 
