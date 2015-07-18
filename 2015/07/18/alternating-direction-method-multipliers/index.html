@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Alternating Direction Method of Multipliers (ADMM) | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="      Consider minimizing  subject to affine constraints         The augmented Lagrangian    Idea: perform block descent on  and  and then update multiplier ...">
+  <meta name="description" content="Consider minimizing  subject to affine constraints The augmented LagrangianIdea: perform block descent on  and  and then update multiplier vector Example: fu...">
 
 
   <link rel="stylesheet" href="//www.quxiaofeng.me/optimization/css/tufte.css">	
@@ -39,20 +39,13 @@
 <p>July 18, 2015</p>
 
 
-<ul>
-  <li>
-    <p>Consider minimizing <script type="math/tex"> f({\bf x}) + g({\bf y}) </script> subject to affine constraints <script type="math/tex"> {\bf Ax} + {\bf By} = {\bf c} </script></p>
-  </li>
-  <li>
-    <p>The augmented Lagrangian</p>
-  </li>
-</ul>
+<p>Consider minimizing <script type="math/tex"> f({\bf x}) + g({\bf y}) </script> subject to affine constraints <script type="math/tex"> {\bf Ax} + {\bf By} = {\bf c} </script></p>
+
+<p>The augmented Lagrangian</p>
 
 <p><script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 </script></p>
 
-<ul>
-  <li>Idea: perform block descent on <script type="math/tex">{\bf x}</script> and <script type="math/tex">{\bf y}</script> and then update multiplier vector <script type="math/tex">{\bf \lambda}</script></li>
-</ul>
+<p>Idea: perform block descent on <script type="math/tex">{\bf x}</script> and <script type="math/tex">{\bf y}</script> and then update multiplier vector <script type="math/tex">{\bf \lambda}</script></p>
 
 <p><script type="math/tex; mode=display">
 \begin{align}
@@ -68,9 +61,7 @@
 
 <p><script type="math/tex; mode=display"> \frac{1}{2} \| {\bf y - X\beta} \|^2_2 + \mu \sum^{p-1}_{j=1} |\beta_{j+1} - \beta_j |</script></p>
 
-<ul>
-  <li>Define <script type="math/tex">{\bf \gamma = D\beta}</script>, where</li>
-</ul>
+<p>Define <script type="math/tex">{\bf \gamma = D\beta}</script>, where</p>
 
 <p><script type="math/tex; mode=display">
 D = \left(\begin{matrix}
@@ -83,62 +74,39 @@ D = \left(\begin{matrix}
 
 <p>Then we minimize <script type="math/tex"> \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \gamma \|_1 </script> subject to <script type="math/tex"> {\bf D\beta} = \gamma </script></p>
 
-<ul>
-  <li>Augmented Lagrangian is</li>
-</ul>
+<p>Augmented Lagrangian is</p>
 
 <p><script type="math/tex; mode=display">
 \mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2
 </script></p>
 
-<ul>
-  <li>ADMM:
-    <ul>
-      <li>Update <script type="math/tex">{\bf \beta}</script> is a smooth quadratic problem</li>
-      <li>Update <script type="math/tex">{\bf \gamma}</script> is a separated lasso problem (elementwise thresholding)</li>
-      <li>Update multipliers</li>
-    </ul>
-  </li>
-</ul>
+<p>ADMM:</p>
+
+<p>Update <script type="math/tex">{\bf \beta}</script> is a smooth quadratic problem<br />
+Update <script type="math/tex">{\bf \gamma}</script> is a separated lasso problem (elementwise thresholding)<br />
+Update multipliers</p>
 
 <p><script type="math/tex; mode=display">
 {\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)}) 
 </script></p>
 
-<ul>
-  <li>Same algorithm applies to a general regularization matrix <script type="math/tex">{\bf D}</script> (generalized lasso)</li>
-</ul>
+<p>Same algorithm applies to a general regularization matrix <script type="math/tex">{\bf D}</script> (generalized lasso)</p>
 
 <h2 id="remarks-on-admm">Remarks on ADMM</h2>
 
-<ul>
-  <li>
-    <p>Related algorithms</p>
+<p>Related algorithms</p>
 
-    <ul>
-      <li>
-        <p>split Bregman iteration <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343.</span></p>
-      </li>
-      <li>
-        <p>Dykstra’s alternating projection algorithm <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842.</span></p>
-      </li>
-      <li>
-        <p>…</p>
-      </li>
-    </ul>
-  </li>
-</ul>
+<p>Split Bregman iteration <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343.</span></p>
+
+<p>Dykstra’s alternating projection algorithm <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842.</span></p>
+
+<p>…</p>
 
 <p>Proximal point algorithm applied to the dual</p>
 
-<ul>
-  <li>
-    <p>Numerous applications in statistics and machine learning: lasso, gen. lasso, graphical lasso, (overlapping) group lasso, …</p>
-  </li>
-  <li>
-    <p>Embraces distributed computing for big data <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122.</span></p>
-  </li>
-</ul>
+<p>Numerous applications in statistics and machine learning: lasso, gen. lasso, graphical lasso, (overlapping) group lasso, …</p>
+
+<p>Embraces distributed computing for big data <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122.</span></p>
 
 
 
