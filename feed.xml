@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 18 Jul 2015 21:51:59 +0800</pubDate>
-    <lastBuildDate>Sat, 18 Jul 2015 21:51:59 +0800</lastBuildDate>
+    <pubDate>Sat, 18 Jul 2015 21:53:44 +0800</pubDate>
+    <lastBuildDate>Sat, 18 Jul 2015 21:53:44 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -93,19 +93,13 @@ Update multipliers&lt;/p&gt;
         <title>Augmented Lagrangian Method</title>
         <description>&lt;p&gt;Consider minimizing &lt;script type=&quot;math/tex&quot;&gt; f({\bf x}) &lt;/script&gt; subject to equality constraints &lt;script type=&quot;math/tex&quot;&gt; g_i({\bf x}) = 0 &lt;/script&gt; for &lt;script type=&quot;math/tex&quot;&gt;i=1, \ldots ,q&lt;/script&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Inequality constraints are ignored for simplicity&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Assume &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;g_i&lt;/script&gt; are smooth for simplicity&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;At a constrained minimum, the Lagrange multiplier condition&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Inequality constraints are ignored for simplicity&lt;/p&gt;
 
-&lt;p&gt; &lt;script type=&quot;math/tex; mode=display&quot;&gt;  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  &lt;/script&gt; &lt;/p&gt;
+&lt;p&gt;Assume &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;g_i&lt;/script&gt; are smooth for simplicity&lt;/p&gt;
+
+&lt;p&gt;At a constrained minimum, the Lagrange multiplier condition&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  &lt;/script&gt;
 
 &lt;p&gt;holds provided &lt;script type=&quot;math/tex&quot;&gt;\nabla g_i({\bf x})&lt;/script&gt; are linearly independent&lt;/p&gt;
 
@@ -113,51 +107,38 @@ Update multipliers&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Augmented lagrangian&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt; &lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt; &lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;The penalty term &lt;script type=&quot;math/tex&quot;&gt;\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt; punishes violations of the equality constraints &lt;script type=&quot;math/tex&quot;&gt;g_i({\bf \theta})&lt;/script&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Optimize the Augmented Lagrangian and adjust &lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt; in the hope of matching the true Lagrange multipliers&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;For &lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt; large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;At convergence, the gradient &lt;script type=&quot;math/tex&quot;&gt;\rho g_i({\bf x})\nabla g_i({\bf x})&lt;/script&gt; vanishes and we recover the standard multiplier rule&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;The penalty term &lt;script type=&quot;math/tex&quot;&gt;\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt; punishes violations of the equality constraints &lt;script type=&quot;math/tex&quot;&gt;g_i({\bf \theta})&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Optimize the Augmented Lagrangian and adjust &lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt; in the hope of matching the true Lagrange multipliers&lt;/p&gt;
+
+&lt;p&gt;For &lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt; large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem&lt;/p&gt;
+
+&lt;p&gt;At convergence, the gradient &lt;script type=&quot;math/tex&quot;&gt;\rho g_i({\bf x})\nabla g_i({\bf x})&lt;/script&gt; vanishes and we recover the standard multiplier rule&lt;/p&gt;
 
 &lt;h2 id=&quot;algorithm&quot;&gt;Algorithm&lt;/h2&gt;
 
 &lt;p&gt;Take &lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt; initially large or gradually increase it; iterate&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Find the unconstrained minimum&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Find the unconstrained minimum&lt;/p&gt;
 
-&lt;p&gt; &lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf x}^{(t+1)}\leftarrow \min_x\mathcal{L}_\rho ({\bf x},{\bf \lambda}^{(t)})&lt;/script&gt; &lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf x}^{(t+1)}\leftarrow \min_x\mathcal{L}_\rho ({\bf x},{\bf \lambda}^{(t)})&lt;/script&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Update the multiplier vector &lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Update the multiplier vector &lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt; &lt;script type=&quot;math/tex; mode=display&quot;&gt;\lambda^{(t+1)}_i \leftarrow \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}), \; i = 1, \ldots , q&lt;/script&gt; &lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\lambda^{(t+1)}_i \leftarrow \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}), \; i = 1, \ldots , q&lt;/script&gt;
 
 &lt;h3 id=&quot;intuition-for-updating-script-typemathtexbf-lambdascript&quot;&gt;Intuition for updating &lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;/h3&gt;
 
 &lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;{\bf x}^{(t)}&lt;/script&gt; is the unconstrained minimum of &lt;script type=&quot;math/tex&quot;&gt;\mathcal{L}({\bf x},{\bf \lambda})&lt;/script&gt;, then the stationary condition says&lt;/p&gt;
 
-&lt;p&gt;
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;
 \begin{align}
 {\bf 0} &amp; = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \lambda^{(t)}_i \nabla g_i({\bf x}^{(t)}) + \rho \sum^q_{i=1} g_i({\bf x}^{(t)}) \nabla g_i({\bf x}^{(t)}) \\
 &amp; = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \left[ \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}) \right] \nabla g_i({\bf x}^{(t)})
 \end{align}
 &lt;/script&gt;
-&lt;/p&gt;
 
 &lt;h3 id=&quot;for-non-smooth-script-typemathtexfscript-replace-gradient-script-typemathtexnabla-fscript-by-sub-differential-script-typemathtexpartial-fscript&quot;&gt;For non-smooth &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;, replace gradient &lt;script type=&quot;math/tex&quot;&gt;\nabla f&lt;/script&gt; by sub-differential &lt;script type=&quot;math/tex&quot;&gt;\partial f&lt;/script&gt;&lt;/h3&gt;
 
@@ -165,37 +146,30 @@ Update multipliers&lt;/p&gt;
 
 &lt;p&gt;Basis pursuit problem seeks the sparsest solution subject to linear constraints&lt;/p&gt;
 
-&lt;p&gt;
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;
 \begin{align}
 \text{minimize    } &amp; \|{\bf x}\|_1 \\
 \text{subject to    } &amp; {\bf Ax} = {\bf b}
 \end{align}
 &lt;/script&gt;
-&lt;/p&gt;
 
 &lt;p&gt;Take &lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt; initially large or gradually increase it; iterate according to&lt;/p&gt;
 
-&lt;p&gt;
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;
 \begin{align}
 {\bf x}^{(t+1)}                 &amp; \leftarrow \min \|{\bf x}\| + \langle {\bf \lambda}^{(t)}, {\bf Ax} - {\bf b} \rangle + \frac{\rho}{2} \|{\bf Ax} - {\bf b}\|^2-2 \text{(lasso)} \\
 {\bf \lambda}^{(t+1)} &amp; \leftarrow {\bf \lambda}^{(t)} + \rho \left( {\bf Ax}^{(t+1)} - {\bf b} \right) 
 \end{align}
 &lt;/script&gt;
-&lt;/p&gt;
 
 &lt;p&gt;Converges in a finite (small) number of steps &lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l&lt;sub&gt;1&lt;/sub&gt;-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: &lt;a href=&quot;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&quot;&gt;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;remarks&quot;&gt;Remarks&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;The augmented Lagrangian method dates back to 50s &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. &lt;br /&gt; Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London.&lt;/span&gt;&lt;/li&gt;
-  &lt;li&gt;Monograph by Bertsekas&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York.&lt;/span&gt; provides a general treatment&lt;/li&gt;
-  &lt;li&gt;Same as the Bregman iteration (Yin etal., 2008) proposed for basis pursuit (compressive sensing)&lt;/li&gt;
-  &lt;li&gt;Equivalent to proximal print algorithm applied to the dual; can be accelerated (Nesterov)&lt;/li&gt;
-&lt;/ul&gt;
-
+&lt;p&gt;The augmented Lagrangian method dates back to 50s &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. &lt;br /&gt; Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London.&lt;/span&gt;&lt;br /&gt;
+Monograph by Bertsekas&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York.&lt;/span&gt; provides a general treatment&lt;br /&gt;
+Same as the Bregman iteration (Yin etal., 2008) proposed for basis pursuit (compressive sensing)&lt;br /&gt;
+Equivalent to proximal print algorithm applied to the dual; can be accelerated (Nesterov)&lt;/p&gt;
 </description>
         <pubDate>Fri, 17 Jul 2015 19:04:01 +0800</pubDate>
         <link>http://www.quxiaofeng.me/optimization/2015/07/17/augmented-lagrangian-method/</link>
