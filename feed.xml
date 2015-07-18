@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 18 Jul 2015 21:18:24 +0800</pubDate>
-    <lastBuildDate>Sat, 18 Jul 2015 21:18:24 +0800</lastBuildDate>
+    <pubDate>Sat, 18 Jul 2015 21:22:36 +0800</pubDate>
+    <lastBuildDate>Sat, 18 Jul 2015 21:22:36 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -109,12 +109,14 @@
 
 &lt;h2 id=&quot;remarks&quot;&gt;Remarks&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;The augmented Lagrangian method dates back to 50s &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320.&lt;/span&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London.&lt;/span&gt;&lt;/li&gt;
-  &lt;li&gt;Monograph by Bertsekas&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt; Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York.&lt;/span&gt; provides a general treatment&lt;/li&gt;
-  &lt;li&gt;Same as the Bregman iteration (Yin etal., 2008) proposed for basis pursuit (compressive sensing)&lt;/li&gt;
-  &lt;li&gt;Equivalent to proximal print algorithm applied to the dual; can be accelerated (Nesterov)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;
+
++ The augmented Lagrangian method dates back to 50s &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. &lt;br /&gt; Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London.&lt;/span&gt;
++ Monograph by Bertsekas&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York.&lt;/span&gt; provides a general treatment
++ Same as the Bregman iteration (Yin etal., 2008) proposed for basis pursuit (compressive sensing)
++ Equivalent to proximal print algorithm applied to the dual; can be accelerated (Nesterov)
+
+&lt;/p&gt;
 </description>
         <pubDate>Fri, 17 Jul 2015 19:04:01 +0800</pubDate>
         <link>http://www.quxiaofeng.me/optimization/2015/07/17/augmented-lagrangian-method/</link>
