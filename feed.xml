@@ -5,9 +5,121 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 18 Jul 2015 21:22:36 +0800</pubDate>
-    <lastBuildDate>Sat, 18 Jul 2015 21:22:36 +0800</lastBuildDate>
+    <pubDate>Sat, 18 Jul 2015 21:23:37 +0800</pubDate>
+    <lastBuildDate>Sat, 18 Jul 2015 21:23:37 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Alternating Direction Method of Multipliers (ADMM)</title>
+        <description>&lt;h2 id=&quot;alternating-direction-method-of-multipliers-admm&quot;&gt;Alternating Direction Method of Multipliers (ADMM)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Consider minimizing &lt;script type=&quot;math/tex&quot;&gt; f({\bf x}) + g({\bf y}) &lt;/script&gt; subject to affine constraints &lt;script type=&quot;math/tex&quot;&gt; {\bf Ax} + {\bf By} = {\bf c} &lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The augmented Lagrangian&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt; \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 &lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Idea: perform block descent on &lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;{\bf y}&lt;/script&gt; and then update multiplier vector &lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{align}
+{\bf x}^{(t+1)}       &amp; \leftarrow &amp; \min_{\bf x} f({\bf x}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By}^{(t)} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By}^{(t)} - {\bf c} \|^2_2 \\
+{\bf y}^{(t+1)}       &amp; \leftarrow &amp; \min_{\bf y} g({\bf y}) + \langle {\bf \lambda}, {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \|^2_2 \\
+{\bf \lambda}^{(t+1)} &amp; \leftarrow &amp; {\bf \lambda}^{(t)} + \rho ({\bf Ax}^{(t+1)} + {\bf By}^{(t+1)} - {\bf c})
+\end{align}
+&lt;/script&gt;
+
+&lt;h2 id=&quot;example-fused-lasso&quot;&gt;Example: fused lasso&lt;/h2&gt;
+
+&lt;p&gt;Fused lasso problem minimizes&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt; \frac{1}{2} \| {\bf y - X\beta} \|^2_2 + \mu \sum^{p-1}_{j=1} |\beta_{j+1} - \beta_j |&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Define &lt;script type=&quot;math/tex&quot;&gt;{\bf \gamma = D\beta}&lt;/script&gt;, where&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+D = \left(\begin{matrix}
+1 &amp; -1 &amp; &amp;      &amp;   &amp; \\
+  &amp;    &amp; \cdots &amp;   &amp; \\
+  &amp;    &amp;        &amp; 1 &amp; -1 
+\end{matrix}
+\right)
+&lt;/script&gt;
+
+&lt;p&gt;Then we minimize &lt;script type=&quot;math/tex&quot;&gt; \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \gamma \|_1 &lt;/script&gt; subject to &lt;script type=&quot;math/tex&quot;&gt; {\bf D\beta} = \gamma &lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Augmented Lagrangian is&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2
+&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ADMM:
+    &lt;ul&gt;
+      &lt;li&gt;Update &lt;script type=&quot;math/tex&quot;&gt;{\bf \beta}&lt;/script&gt; is a smooth quadratic problem&lt;/li&gt;
+      &lt;li&gt;Update &lt;script type=&quot;math/tex&quot;&gt;{\bf \gamma}&lt;/script&gt; is a separated lasso problem (elementwise thresholding)&lt;/li&gt;
+      &lt;li&gt;Update multipliers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)}) 
+&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Same algorithm applies to a general regularization matrix &lt;script type=&quot;math/tex&quot;&gt;{\bf D}&lt;/script&gt; (generalized lasso)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;remarks-on-admm&quot;&gt;Remarks on ADMM&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Related algorithms&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;split Bregman iteration &lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343.&lt;/span&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Dykstra’s alternating projection algorithm &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842.&lt;/span&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;…&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Proximal point algorithm applied to the dual&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Numerous applications in statistics and machine learning: lasso, gen. lasso, graphical lasso, (overlapping) group lasso, …&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Embraces distributed computing for big data &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122.&lt;/span&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 18 Jul 2015 21:36:14 +0800</pubDate>
+        <link>http://www.quxiaofeng.me/optimization/2015/07/18/alternating-direction-method-multipliers/</link>
+        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/2015/07/18/alternating-direction-method-multipliers/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Augmented Lagrangian Method</title>
