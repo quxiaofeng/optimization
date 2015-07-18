@@ -41,13 +41,13 @@
 
 <p>Consider minimizing <script type="math/tex"> f({\bf x}) + g({\bf y}) </script> subject to affine constraints <script type="math/tex"> {\bf Ax} + {\bf By} = {\bf c} </script></p>
 
-<p>The augmented Lagrangian</p>
+<p><strong>The augmented Lagrangian</strong></p>
 
 <script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 </script>
 
 <!--more-->
 
-<p>Idea: perform block descent on <script type="math/tex">{\bf x}</script> and <script type="math/tex">{\bf y}</script> and then update multiplier vector <script type="math/tex">{\bf \lambda}</script></p>
+<p><strong>Idea</strong>: perform block descent on <script type="math/tex">{\bf x}</script> and <script type="math/tex">{\bf y}</script> and then update multiplier vector <script type="math/tex">{\bf \lambda}</script></p>
 
 <script type="math/tex; mode=display">
 \begin{align}
@@ -78,19 +78,17 @@ D = \left(\begin{matrix}
 
 <p>Augmented Lagrangian is</p>
 
-<script type="math/tex; mode=display">
-\mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2
-</script>
+<script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2 </script>
 
-<p>ADMM:</p>
+<h2 id="admm">ADMM</h2>
 
-<p>Update <script type="math/tex">{\bf \beta}</script> is a smooth quadratic problem<br />
-Update <script type="math/tex">{\bf \gamma}</script> is a separated lasso problem (elementwise thresholding)<br />
-Update multipliers</p>
+<ul>
+  <li>Update <script type="math/tex">{\bf \beta}</script> is a smooth quadratic problem</li>
+  <li>Update <script type="math/tex">{\bf \gamma}</script> is a separated lasso problem (elementwise thresholding)</li>
+  <li>Update multipliers</li>
+</ul>
 
-<script type="math/tex; mode=display">
-{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)}) 
-</script>
+<script type="math/tex; mode=display">{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)})</script>
 
 <p>Same algorithm applies to a general regularization matrix <script type="math/tex">{\bf D}</script> (generalized lasso)</p>
 
@@ -101,8 +99,6 @@ Update multipliers</p>
 <p>Split Bregman iteration <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343.</span></p>
 
 <p>Dykstra’s alternating projection algorithm <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842.</span></p>
-
-<p>…</p>
 
 <p>Proximal point algorithm applied to the dual</p>
 
