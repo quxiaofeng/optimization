@@ -11,7 +11,9 @@ The augmented Lagrangian
 
 <p>{% math %} \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 {% endmath %}</p>
 
-Idea: perform block descent on {%m%}{\bf x}{%em%} and {%m%}{\bf y}{%em%} and then update multiplier vector {%m%}{\bf \lambda}{%em%} 
+<!--more-->
+
+Idea: perform block descent on {%m%}{\bf x}{%em%} and {%m%}{\bf y}{%em%} and then update multiplier vector {%m%}{\bf \lambda}{%em%}
 
 <p>{% math %}
 \begin{align}
