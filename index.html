@@ -42,9 +42,7 @@
       	<hr class="slender">
       	<a href="//www.quxiaofeng.me/optimization/2015/07/18/alternating-direction-method-multipliers/"><h4 class="contrast">Alternating Direction Method of Multipliers (ADMM)</h4></a>
       	<span class="smaller">July 18, 2015</span>  <br/>
-		<div><h2 id="alternating-direction-method-of-multipliers-admm">Alternating Direction Method of Multipliers (ADMM)</h2>
-
-<ul>
+		<div><ul>
   <li>
     <p>Consider minimizing <script type="math/tex"> f({\bf x}) + g({\bf y}) </script> subject to affine constraints <script type="math/tex"> {\bf Ax} + {\bf By} = {\bf c} </script></p>
   </li>
@@ -53,38 +51,38 @@
   </li>
 </ul>
 
-<script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 </script>
+<p><script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 </script></p>
 
 <ul>
   <li>Idea: perform block descent on <script type="math/tex">{\bf x}</script> and <script type="math/tex">{\bf y}</script> and then update multiplier vector <script type="math/tex">{\bf \lambda}</script></li>
 </ul>
 
-<script type="math/tex; mode=display">
+<p><script type="math/tex; mode=display">
 \begin{align}
 {\bf x}^{(t+1)}       & \leftarrow & \min_{\bf x} f({\bf x}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By}^{(t)} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By}^{(t)} - {\bf c} \|^2_2 \\
 {\bf y}^{(t+1)}       & \leftarrow & \min_{\bf y} g({\bf y}) + \langle {\bf \lambda}, {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \|^2_2 \\
 {\bf \lambda}^{(t+1)} & \leftarrow & {\bf \lambda}^{(t)} + \rho ({\bf Ax}^{(t+1)} + {\bf By}^{(t+1)} - {\bf c})
 \end{align}
-</script>
+</script></p>
 
 <h2 id="example-fused-lasso">Example: fused lasso</h2>
 
 <p>Fused lasso problem minimizes</p>
 
-<script type="math/tex; mode=display"> \frac{1}{2} \| {\bf y - X\beta} \|^2_2 + \mu \sum^{p-1}_{j=1} |\beta_{j+1} - \beta_j |</script>
+<p><script type="math/tex; mode=display"> \frac{1}{2} \| {\bf y - X\beta} \|^2_2 + \mu \sum^{p-1}_{j=1} |\beta_{j+1} - \beta_j |</script></p>
 
 <ul>
   <li>Define <script type="math/tex">{\bf \gamma = D\beta}</script>, where</li>
 </ul>
 
-<script type="math/tex; mode=display">
+<p><script type="math/tex; mode=display">
 D = \left(\begin{matrix}
 1 & -1 & &      &   & \\
   &    & \cdots &   & \\
   &    &        & 1 & -1 
 \end{matrix}
 \right)
-</script>
+</script></p>
 
 <p>Then we minimize <script type="math/tex"> \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \gamma \|_1 </script> subject to <script type="math/tex"> {\bf D\beta} = \gamma </script></p>
 
@@ -92,9 +90,9 @@ D = \left(\begin{matrix}
   <li>Augmented Lagrangian is</li>
 </ul>
 
-<script type="math/tex; mode=display">
+<p><script type="math/tex; mode=display">
 \mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2
-</script>
+</script></p>
 
 <ul>
   <li>ADMM:
@@ -106,9 +104,9 @@ D = \left(\begin{matrix}
   </li>
 </ul>
 
-<script type="math/tex; mode=display">
+<p><script type="math/tex; mode=display">
 {\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)}) 
-</script>
+</script></p>
 
 <ul>
   <li>Same algorithm applies to a general regularization matrix <script type="math/tex">{\bf D}</script> (generalized lasso)</li>
