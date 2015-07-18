@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Alternating Direction Method of Multipliers (ADMM) | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="Consider minimizing  subject to affine constraints The augmented LagrangianIdea: perform block descent on  and  and then update multiplier vector Example: fu...">
+  <meta name="description" content="Consider minimizing  subject to affine constraints The augmented Lagrangian">
 
 
   <link rel="stylesheet" href="//www.quxiaofeng.me/optimization/css/tufte.css">	
@@ -44,6 +44,8 @@
 <p>The augmented Lagrangian</p>
 
 <p><script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 </script></p>
+
+<!--more-->
 
 <p>Idea: perform block descent on <script type="math/tex">{\bf x}</script> and <script type="math/tex">{\bf y}</script> and then update multiplier vector <script type="math/tex">{\bf \lambda}</script></p>
 
