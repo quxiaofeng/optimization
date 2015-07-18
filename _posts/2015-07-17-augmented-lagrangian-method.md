@@ -86,11 +86,8 @@ Converges in a finite (small) number of steps {% sidenote 1 'Yin, W., Osher, S.,
 
 ## Remarks
 
-<p>
-
 + The augmented Lagrangian method dates back to 50s {% sidenote 2 'Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. <br /> Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London.'%}
 + Monograph by Bertsekas{% sidenote 3 'Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York.'%} provides a general treatment
 + Same as the Bregman iteration (Yin etal., 2008) proposed for basis pursuit (compressive sensing)
 + Equivalent to proximal print algorithm applied to the dual; can be accelerated (Nesterov)
 
-</p>
