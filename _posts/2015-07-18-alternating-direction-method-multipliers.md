@@ -7,13 +7,13 @@ categories:
 
 Consider minimizing {% m %} f({\bf x}) + g({\bf y}) {% em %} subject to affine constraints {% m %} {\bf Ax} + {\bf By} = {\bf c} {%em%}
 
-The augmented Lagrangian
+**The augmented Lagrangian**
 
 {% math %} \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 {% endmath %}
 
 <!--more-->
 
-Idea: perform block descent on {%m%}{\bf x}{%em%} and {%m%}{\bf y}{%em%} and then update multiplier vector {%m%}{\bf \lambda}{%em%}
+**Idea**: perform block descent on {%m%}{\bf x}{%em%} and {%m%}{\bf y}{%em%} and then update multiplier vector {%m%}{\bf \lambda}{%em%}
 
 {% math %}
 \begin{align}
@@ -44,19 +44,15 @@ Then we minimize {%m%} \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \ga
 
 Augmented Lagrangian is
 
-{% math %}
-\mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2
-{% endmath %}
+{% math %} \mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2 {% endmath %}
 
-ADMM:
+## ADMM
 
-Update {%m%}{\bf \beta}{%em%} is a smooth quadratic problem
-Update {%m%}{\bf \gamma}{%em%} is a separated lasso problem (elementwise thresholding)
-Update multipliers
++ Update {%m%}{\bf \beta}{%em%} is a smooth quadratic problem
++ Update {%m%}{\bf \gamma}{%em%} is a separated lasso problem (elementwise thresholding)
++ Update multipliers
 
-{% math %}
-{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)}) 
-{% endmath %}
+{% math %}{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)}){% endmath %}
 
 Same algorithm applies to a general regularization matrix {%m%}{\bf D}{%em%} (generalized lasso)
 
@@ -67,8 +63,6 @@ Related algorithms
 Split Bregman iteration {% sidenote 1 'Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343.' %}
 
 Dykstra's alternating projection algorithm {% sidenote 2 'Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842.' %}
-
-...
 
 Proximal point algorithm applied to the dual
 
