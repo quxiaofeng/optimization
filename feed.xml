@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jul 2015 02:53:26 +0800</pubDate>
-    <lastBuildDate>Mon, 20 Jul 2015 02:53:26 +0800</lastBuildDate>
+    <pubDate>Mon, 20 Jul 2015 03:03:30 +0800</pubDate>
+    <lastBuildDate>Mon, 20 Jul 2015 03:03:30 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -36,7 +36,9 @@
 
 &lt;p&gt;再生核特征映射&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Psi_x(\dot) \triangleq k(\cdot,x) &lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Phi_x(\cdot) \triangleq k(\cdot,x) &lt;/script&gt;
+
+&lt;p&gt;即对任意线性泛函&lt;script type=&quot;math/tex&quot;&gt; \Phi(\cdot) &lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt; \exists x_\Phi \in H &lt;/script&gt;, 使得 &lt;script type=&quot;math/tex&quot;&gt; \Phi(\cdot) = (\cdot, x_\Phi) &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;To be continued…&lt;/p&gt;
 </description>
