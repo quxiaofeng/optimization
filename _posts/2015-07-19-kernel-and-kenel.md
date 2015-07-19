@@ -22,6 +22,8 @@ Definition. {% m %}k: \mathcal{X} \times \mathcal{X} \rightarrow \Re {% em %} is
 
 再生核特征映射
 
-{% math %}\Psi_x(\dot) \triangleq k(\cdot,x) {% endmath %}
+{% math %}\Phi_x(\cdot) \triangleq k(\cdot,x) {% endmath %}
+
+即对任意线性泛函{% m %} \Phi(\cdot) {% em %}, {% m %} \exists x_\Phi \in H {% em %}, 使得 {% m %} \Phi(\cdot) = (\cdot, x_\Phi) {% em %}
 
 To be continued...
