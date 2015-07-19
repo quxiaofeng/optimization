@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jul 2015 02:47:10 +0800</pubDate>
-    <lastBuildDate>Mon, 20 Jul 2015 02:47:10 +0800</lastBuildDate>
+    <pubDate>Mon, 20 Jul 2015 02:53:26 +0800</pubDate>
+    <lastBuildDate>Mon, 20 Jul 2015 02:53:26 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -24,7 +24,7 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;
-    &lt;p&gt;is positive semi-definite, i.e., &lt;script type=&quot;math/tex&quot;&gt;\any x_1, x_2, \ldots , x_n \in \mathcal{X}&lt;/script&gt;, the “Gram Matrix” &lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; defined by &lt;script type=&quot;math/tex&quot;&gt;K_{ij} =  k(x_i,x_j)&lt;/script&gt; is positive semi-definite. (A matrix &lt;script type=&quot;math/tex&quot;&gt;M \in \Re^{n \times n}&lt;/script&gt; is positive semi-definite if &lt;script type=&quot;math/tex&quot;&gt;\any a \in \Re^n&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;a&#39; M a \ge 0&lt;/script&gt;.)&lt;/p&gt;
+    &lt;p&gt;is positive semi-definite, i.e., &lt;script type=&quot;math/tex&quot;&gt;\forall x_1, x_2, \ldots , x_n \in \mathcal{X}&lt;/script&gt;, the “Gram Matrix” &lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; defined by &lt;script type=&quot;math/tex&quot;&gt;K_{ij} =  k(x_i,x_j)&lt;/script&gt; is positive semi-definite. (A matrix &lt;script type=&quot;math/tex&quot;&gt;M \in \Re^{n \times n}&lt;/script&gt; is positive semi-definite if &lt;script type=&quot;math/tex&quot;&gt;\forall a \in \Re^n&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;a&#39; M a \ge 0&lt;/script&gt;.)&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -36,7 +36,7 @@
 
 &lt;p&gt;再生核特征映射&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Psi_x(\dot) \triangleq k(\codt,x) &lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Psi_x(\dot) \triangleq k(\cdot,x) &lt;/script&gt;
 
 &lt;p&gt;To be continued…&lt;/p&gt;
 </description>
