@@ -76,11 +76,11 @@ Take {%m%}\rho{%em%} initially large or gradually increase it; iterate according
 \end{align}
 {%endmath%}
 
-Converges in a finite (small) number of steps {% sidenote 1 'Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l<sub>1</sub>-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: [http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF](http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF)' %}
+Converges in a finite (small) number of steps {% sidenote 2 'Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l<sub>1</sub>-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: [http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF](http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF)' %}
 
 ## Remarks
 
-The augmented Lagrangian method dates back to 50s {% sidenote 2 'Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. <br /> Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London.'%}
-Monograph by Bertsekas{% sidenote 3 'Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York.'%} provides a general treatment
+The augmented Lagrangian method dates back to 50s {% sidenote 3 'Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. <br /> Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London.'%}
+Monograph by Bertsekas{% sidenote 4 'Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York.'%} provides a general treatment
 Same as the Bregman iteration (Yin etal., 2008) proposed for basis pursuit (compressive sensing)
 Equivalent to proximal print algorithm applied to the dual; can be accelerated (Nesterov)
