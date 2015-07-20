@@ -5,19 +5,24 @@ date:   2015-07-17 11:04:01
 categories:
 ---
 
-Consider minimizing {%m%} f({\bf x}) {%em%} subject to equality constraints {%m%} g_i({\bf x}) = 0 {%em%} for {%m%}i=1, \ldots ,q{%em%}
+Consider minimizing: 
+
+{%m%} f({\bf x}) {%em%} subject to equality constraints {%m%} g_i({\bf x}) = 0 {%em%} for {%m%}i=1, \ldots ,q{%em%}
 
 Inequality constraints are ignored for simplicity
 
 Assume {%m%}f{%em%} and {%m%}g_i{%em%} are smooth for simplicity
 
-At a constrained minimum, the Lagrange multiplier condition {%math%}  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  {%endmath%}
+At a constrained minimum, the Lagrange multiplier condition
+
+{%math%}  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  {%endmath%}
 
 holds provided {%m%}\nabla g_i({\bf x}){%em%} are linearly independent
 
 <!--more-->
 
 **Augmented lagrangian** {% sidenote 1 '[http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf](http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf)'%}
+
 {%math%}\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2{%endmath%}
 
 The penalty term {%m%}\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2{%em%} punishes violations of the equality constraints {%m%}g_i({\bf \theta}){%em%}
@@ -53,6 +58,7 @@ If {%m%}{\bf x}^{(t)}{%em%} is the unconstrained minimum of {%m%}\mathcal{L}({\b
 ## Example: basis pursuit
 
 Basis pursuit problem seeks the sparsest solution subject to linear constraints
+
 {%math%}
 \begin{align}
 \text{minimize    } & \|{\bf x}\|_1 \\
@@ -61,6 +67,7 @@ Basis pursuit problem seeks the sparsest solution subject to linear constraints
 {%endmath%}
 
 Take {%m%}\rho{%em%} initially large or gradually increase it; iterate according to
+
 {%math%}
 \begin{align}
 {\bf x}^{(t+1)}                 & \leftarrow \min \|{\bf x}\| + \langle {\bf \lambda}^{(t)}, {\bf Ax} - {\bf b} \rangle + \frac{\rho}{2} \|{\bf Ax} - {\bf b}\|^2-2 \text{(lasso)} \\
@@ -68,7 +75,7 @@ Take {%m%}\rho{%em%} initially large or gradually increase it; iterate according
 \end{align}
 {%endmath%}
 
-Converges in a finite (small) number of steps {% sidenote 2 'Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l<sub>1</sub>-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: [http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF](http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF)' %}
++ Converges in a finite (small) number of steps {% sidenote 2 'Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l<sub>1</sub>-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: [http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF](http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF)' %}
 
 ## Remarks
 
