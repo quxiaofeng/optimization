@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jul 2015 16:26:46 +0800</pubDate>
-    <lastBuildDate>Mon, 20 Jul 2015 16:26:46 +0800</lastBuildDate>
+    <pubDate>Mon, 20 Jul 2015 16:28:17 +0800</pubDate>
+    <lastBuildDate>Mon, 20 Jul 2015 16:28:17 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -67,15 +67,16 @@
 &lt;p&gt;Fused lasso problem minimizes&lt;br /&gt;
 &lt;script type=&quot;math/tex; mode=display&quot;&gt; \frac{1}{2} \| {\bf y - X\beta} \|^2_2 + \mu \sum^{p-1}_{j=1} |\beta_{j+1} - \beta_j |&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;Define &lt;script type=&quot;math/tex&quot;&gt;{\bf \gamma = D\beta}&lt;/script&gt;, where&lt;br /&gt;
+&lt;p&gt;Define &lt;script type=&quot;math/tex&quot;&gt;{\bf \gamma = D\beta}&lt;/script&gt;, where&lt;/p&gt;
+
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;
 D = \left(\begin{matrix}
-1 &amp;amp; -1 &amp;amp; &amp;amp;      &amp;amp;   &amp;amp; \\
-  &amp;amp;    &amp;amp; \cdots &amp;amp;   &amp;amp; \\
-  &amp;amp;    &amp;amp;        &amp;amp; 1 &amp;amp; -1 
+1 &amp; -1 &amp; &amp;      &amp;   &amp; \\
+  &amp;    &amp; \cdots &amp;   &amp; \\
+  &amp;    &amp;        &amp; 1 &amp; -1 
 \end{matrix}
 \right)
-&lt;/script&gt;&lt;/p&gt;
+&lt;/script&gt;
 
 &lt;p&gt;Then we minimize &lt;script type=&quot;math/tex&quot;&gt; \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \gamma \|_1 &lt;/script&gt; subject to &lt;script type=&quot;math/tex&quot;&gt; {\bf D\beta} = \gamma &lt;/script&gt;&lt;/p&gt;
 
