@@ -27,6 +27,7 @@ Fused lasso problem minimizes
 {% math %} \frac{1}{2} \| {\bf y - X\beta} \|^2_2 + \mu \sum^{p-1}_{j=1} |\beta_{j+1} - \beta_j |{% endmath %}
 
 Define {%m%}{\bf \gamma = D\beta}{%em%}, where
+
 {% math %}
 D = \left(\begin{matrix}
 1 & -1 & &      &   & \\
