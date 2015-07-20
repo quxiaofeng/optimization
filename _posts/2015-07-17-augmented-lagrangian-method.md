@@ -18,7 +18,7 @@ holds provided {%m%}\nabla g_i({\bf x}){%em%} are linearly independent
 
 <!--more-->
 
-**Augmented lagrangian**
+**Augmented lagrangian** {% sidenote 1 '[http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf](http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf)'%}
 
 {%math%}\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2{%endmath%}
 
