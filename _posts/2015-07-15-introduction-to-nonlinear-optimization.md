@@ -40,7 +40,7 @@ categories:
 **Example 1.3** 加权点积是 {% m %}\Re^n {% em %} 空间中另一个内积的例子，其中权重 {% m %}{\bf w}\in \Re^n_{++} {% em %}。
 {% math%} \langle {\bf x},{\bf y} \rangle_{\bf w} = \sum^n_{i=1}w_ix_iy_i \; \blacksquare{% endmath %}
 
-**Definition 1.4** Norm 范数 一个定义在实数向量集 {% m %}\Re^n {% em %} 上的范数 {% m %}\|\codt\| {% em %} 是一个满足如下条件，形如 {% m %}\| \cdot \| : \Re^n \rightarrow \Re {% em %} 的函数
+**Definition 1.4** Norm 范数 一个定义在实数向量集 {% m %}\Re^n {% em %} 上的范数 {% m %}\|\cdot\| {% em %} 是一个满足如下条件，形如 {% m %}\| \cdot \| : \Re^n \rightarrow \Re {% em %} 的函数
 
 1. 非负性 nonnegativity {% m %} \|{\bf x}\| \ge 0 \text{ for any } {\bf x} \in \Re^n \text{ and } \|{\bf x}\| = 0 \text{ if and only if } {\bf x} = {\bf 0} {% em %}
 2. 正线性 positive homogeneity {% m %} |\lambda {\bf x}\| = |\lambda| \|{\bf x}\| \text{ for any } {\bf x} \in \Re^n \text{ and } \lambda \in \Re{% em %}
@@ -48,4 +48,4 @@ categories:
 
 {% math %} \ell_p \equiv \|{\bf x}\|_p \equiv \sqrt[p]{\sum^n_{i=1}|x_i|^p} \text{ , for }  p \ge 1 {% endmath%}
 
-{% math %} \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \rightarrow \infty} \|{\bf x}\|_p {% endmath%}
+{% math %} \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \rightarrow \infty} \|{\bf x}\|_p \; \blacksquare{% endmath%}
