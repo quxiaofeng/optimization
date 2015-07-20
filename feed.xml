@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jul 2015 16:21:40 +0800</pubDate>
-    <lastBuildDate>Mon, 20 Jul 2015 16:21:40 +0800</lastBuildDate>
+    <pubDate>Mon, 20 Jul 2015 16:22:43 +0800</pubDate>
+    <lastBuildDate>Mon, 20 Jul 2015 16:22:43 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -24,9 +24,9 @@
 
 &lt;!--more--&gt;
 
-&lt;p&gt;再生核希尔贝特空间是从低维数据到函数泛函映射。Hilbert 空间“Frechet-Riesz”表现定理。&lt;/p&gt;
+&lt;p&gt;再生核希尔伯特空间是从低维数据到函数泛函映射。Hilbert 空间“Frechet-Riesz”表现定理。&lt;/p&gt;
 
-&lt;p&gt;希尔贝特空间是定义了内积的空间；相对应的 Banach 是定义了范数的空间。&lt;/p&gt;
+&lt;p&gt;希尔伯特空间是定义了内积的空间；相对应的 Banach 是定义了范数的空间。&lt;/p&gt;
 
 &lt;h2 id=&quot;reproducing-kernel-feature-map&quot;&gt;Reproducing Kernel Feature Map&lt;/h2&gt;
 
