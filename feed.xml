@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jul 2015 16:30:41 +0800</pubDate>
-    <lastBuildDate>Mon, 20 Jul 2015 16:30:41 +0800</lastBuildDate>
+    <pubDate>Mon, 20 Jul 2015 17:47:05 +0800</pubDate>
+    <lastBuildDate>Mon, 20 Jul 2015 17:47:05 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -123,20 +123,26 @@ D = \left(\begin{matrix}
     
       <item>
         <title>Augmented Lagrangian Method</title>
-        <description>&lt;p&gt;Consider minimizing &lt;script type=&quot;math/tex&quot;&gt; f({\bf x}) &lt;/script&gt; subject to equality constraints &lt;script type=&quot;math/tex&quot;&gt; g_i({\bf x}) = 0 &lt;/script&gt; for &lt;script type=&quot;math/tex&quot;&gt;i=1, \ldots ,q&lt;/script&gt;&lt;/p&gt;
+        <description>&lt;p&gt;Consider minimizing:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex&quot;&gt; f({\bf x}) &lt;/script&gt;
+&lt;p&gt;subject to equality constraints &lt;script type=&quot;math/tex&quot;&gt; g_i({\bf x}) = 0 &lt;/script&gt; for &lt;script type=&quot;math/tex&quot;&gt;i=1, \ldots ,q&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Inequality constraints are ignored for simplicity&lt;/p&gt;
 
 &lt;p&gt;Assume &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;g_i&lt;/script&gt; are smooth for simplicity&lt;/p&gt;
 
-&lt;p&gt;At a constrained minimum, the Lagrange multiplier condition &lt;script type=&quot;math/tex; mode=display&quot;&gt;  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;At a constrained minimum, the Lagrange multiplier condition&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  &lt;/script&gt;
 
 &lt;p&gt;holds provided &lt;script type=&quot;math/tex&quot;&gt;\nabla g_i({\bf x})&lt;/script&gt; are linearly independent&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;p&gt;&lt;strong&gt;Augmented lagrangian&lt;/strong&gt; &lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; &lt;a href=&quot;http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf&quot;&gt;http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Augmented lagrangian&lt;/strong&gt; &lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; &lt;a href=&quot;http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf&quot;&gt;http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt;
 
 &lt;p&gt;The penalty term &lt;script type=&quot;math/tex&quot;&gt;\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt; punishes violations of the equality constraints &lt;script type=&quot;math/tex&quot;&gt;g_i({\bf \theta})&lt;/script&gt;&lt;/p&gt;
 
@@ -170,23 +176,27 @@ D = \left(\begin{matrix}
 
 &lt;h2 id=&quot;example-basis-pursuit&quot;&gt;Example: basis pursuit&lt;/h2&gt;
 
-&lt;p&gt;Basis pursuit problem seeks the sparsest solution subject to linear constraints&lt;br /&gt;
+&lt;p&gt;Basis pursuit problem seeks the sparsest solution subject to linear constraints&lt;/p&gt;
+
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;
 \begin{align}
-\text{minimize    } &amp;amp; \|{\bf x}\|_1 \\
-\text{subject to    } &amp;amp; {\bf Ax} = {\bf b}
+\text{minimize    } &amp; \|{\bf x}\|_1 \\
+\text{subject to    } &amp; {\bf Ax} = {\bf b}
 \end{align}
-&lt;/script&gt;&lt;/p&gt;
+&lt;/script&gt;
 
-&lt;p&gt;Take &lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt; initially large or gradually increase it; iterate according to&lt;br /&gt;
+&lt;p&gt;Take &lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt; initially large or gradually increase it; iterate according to&lt;/p&gt;
+
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;
 \begin{align}
-{\bf x}^{(t+1)}                 &amp;amp; \leftarrow \min \|{\bf x}\| + \langle {\bf \lambda}^{(t)}, {\bf Ax} - {\bf b} \rangle + \frac{\rho}{2} \|{\bf Ax} - {\bf b}\|^2-2 \text{(lasso)} \\
-{\bf \lambda}^{(t+1)} &amp;amp; \leftarrow {\bf \lambda}^{(t)} + \rho \left( {\bf Ax}^{(t+1)} - {\bf b} \right) 
+{\bf x}^{(t+1)}                 &amp; \leftarrow \min \|{\bf x}\| + \langle {\bf \lambda}^{(t)}, {\bf Ax} - {\bf b} \rangle + \frac{\rho}{2} \|{\bf Ax} - {\bf b}\|^2-2 \text{(lasso)} \\
+{\bf \lambda}^{(t+1)} &amp; \leftarrow {\bf \lambda}^{(t)} + \rho \left( {\bf Ax}^{(t+1)} - {\bf b} \right) 
 \end{align}
-&lt;/script&gt;&lt;/p&gt;
+&lt;/script&gt;
 
-&lt;p&gt;Converges in a finite (small) number of steps &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l&lt;sub&gt;1&lt;/sub&gt;-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: &lt;a href=&quot;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&quot;&gt;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Converges in a finite (small) number of steps &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l&lt;sub&gt;1&lt;/sub&gt;-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: &lt;a href=&quot;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&quot;&gt;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;remarks&quot;&gt;Remarks&lt;/h2&gt;
 

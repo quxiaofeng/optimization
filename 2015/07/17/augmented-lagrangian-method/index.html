@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Augmented Lagrangian Method | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="Consider minimizing  subject to equality constraints  for Inequality constraints are ignored for simplicityAssume  and  are smooth for simplicityAt a constra...">
+  <meta name="description" content="Consider minimizing:subject to equality constraints  for Inequality constraints are ignored for simplicityAssume  and  are smooth for simplicityAt a constrai...">
 
 
   <link rel="stylesheet" href="//www.quxiaofeng.me/optimization/css/tufte.css">	
@@ -39,20 +39,26 @@
 <p>July 17, 2015</p>
 
 
-<p>Consider minimizing <script type="math/tex"> f({\bf x}) </script> subject to equality constraints <script type="math/tex"> g_i({\bf x}) = 0 </script> for <script type="math/tex">i=1, \ldots ,q</script></p>
+<p>Consider minimizing:</p>
+
+<script type="math/tex"> f({\bf x}) </script>
+<p>subject to equality constraints <script type="math/tex"> g_i({\bf x}) = 0 </script> for <script type="math/tex">i=1, \ldots ,q</script></p>
 
 <p>Inequality constraints are ignored for simplicity</p>
 
 <p>Assume <script type="math/tex">f</script> and <script type="math/tex">g_i</script> are smooth for simplicity</p>
 
-<p>At a constrained minimum, the Lagrange multiplier condition <script type="math/tex; mode=display">  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  </script></p>
+<p>At a constrained minimum, the Lagrange multiplier condition</p>
+
+<script type="math/tex; mode=display">  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  </script>
 
 <p>holds provided <script type="math/tex">\nabla g_i({\bf x})</script> are linearly independent</p>
 
 <!--more-->
 
-<p><strong>Augmented lagrangian</strong> <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> <a href="http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf">http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf</a></span><br />
-<script type="math/tex; mode=display">\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2</script></p>
+<p><strong>Augmented lagrangian</strong> <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> <a href="http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf">http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf</a></span></p>
+
+<script type="math/tex; mode=display">\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2</script>
 
 <p>The penalty term <script type="math/tex">\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2</script> punishes violations of the equality constraints <script type="math/tex">g_i({\bf \theta})</script></p>
 
@@ -86,23 +92,27 @@
 
 <h2 id="example-basis-pursuit">Example: basis pursuit</h2>
 
-<p>Basis pursuit problem seeks the sparsest solution subject to linear constraints<br />
+<p>Basis pursuit problem seeks the sparsest solution subject to linear constraints</p>
+
 <script type="math/tex; mode=display">
 \begin{align}
-\text{minimize    } &amp; \|{\bf x}\|_1 \\
-\text{subject to    } &amp; {\bf Ax} = {\bf b}
+\text{minimize    } & \|{\bf x}\|_1 \\
+\text{subject to    } & {\bf Ax} = {\bf b}
 \end{align}
-</script></p>
+</script>
 
-<p>Take <script type="math/tex">\rho</script> initially large or gradually increase it; iterate according to<br />
+<p>Take <script type="math/tex">\rho</script> initially large or gradually increase it; iterate according to</p>
+
 <script type="math/tex; mode=display">
 \begin{align}
-{\bf x}^{(t+1)}                 &amp; \leftarrow \min \|{\bf x}\| + \langle {\bf \lambda}^{(t)}, {\bf Ax} - {\bf b} \rangle + \frac{\rho}{2} \|{\bf Ax} - {\bf b}\|^2-2 \text{(lasso)} \\
-{\bf \lambda}^{(t+1)} &amp; \leftarrow {\bf \lambda}^{(t)} + \rho \left( {\bf Ax}^{(t+1)} - {\bf b} \right) 
+{\bf x}^{(t+1)}                 & \leftarrow \min \|{\bf x}\| + \langle {\bf \lambda}^{(t)}, {\bf Ax} - {\bf b} \rangle + \frac{\rho}{2} \|{\bf Ax} - {\bf b}\|^2-2 \text{(lasso)} \\
+{\bf \lambda}^{(t+1)} & \leftarrow {\bf \lambda}^{(t)} + \rho \left( {\bf Ax}^{(t+1)} - {\bf b} \right) 
 \end{align}
-</script></p>
+</script>
 
-<p>Converges in a finite (small) number of steps <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l<sub>1</sub>-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: <a href="http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF">http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF</a></span></p>
+<ul>
+  <li>Converges in a finite (small) number of steps <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l<sub>1</sub>-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: <a href="http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF">http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF</a></span></li>
+</ul>
 
 <h2 id="remarks">Remarks</h2>
 
