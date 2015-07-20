@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jul 2015 03:03:30 +0800</pubDate>
-    <lastBuildDate>Mon, 20 Jul 2015 03:03:30 +0800</lastBuildDate>
+    <pubDate>Mon, 20 Jul 2015 13:34:39 +0800</pubDate>
+    <lastBuildDate>Mon, 20 Jul 2015 13:34:39 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -141,7 +141,7 @@ D = \left(\begin{matrix}
 
 &lt;!--more--&gt;
 
-&lt;p&gt;&lt;strong&gt;Augmented lagrangian&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Augmented lagrangian&lt;/strong&gt; &lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; &lt;a href=&quot;http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf&quot;&gt;http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt;
 
@@ -198,12 +198,12 @@ D = \left(\begin{matrix}
 \end{align}
 &lt;/script&gt;
 
-&lt;p&gt;Converges in a finite (small) number of steps &lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l&lt;sub&gt;1&lt;/sub&gt;-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: &lt;a href=&quot;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&quot;&gt;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Converges in a finite (small) number of steps &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l&lt;sub&gt;1&lt;/sub&gt;-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: &lt;a href=&quot;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&quot;&gt;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;remarks&quot;&gt;Remarks&lt;/h2&gt;
 
-&lt;p&gt;The augmented Lagrangian method dates back to 50s &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. &lt;br /&gt; Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London.&lt;/span&gt;&lt;br /&gt;
-Monograph by Bertsekas&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York.&lt;/span&gt; provides a general treatment&lt;br /&gt;
+&lt;p&gt;The augmented Lagrangian method dates back to 50s &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. &lt;br /&gt; Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London.&lt;/span&gt;&lt;br /&gt;
+Monograph by Bertsekas&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt; Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York.&lt;/span&gt; provides a general treatment&lt;br /&gt;
 Same as the Bregman iteration (Yin etal., 2008) proposed for basis pursuit (compressive sensing)&lt;br /&gt;
 Equivalent to proximal print algorithm applied to the dual; can be accelerated (Nesterov)&lt;/p&gt;
 </description>
@@ -239,20 +239,20 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;h2 id=&quot;section&quot;&gt;第一章 数学基础&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Definition 1.1&lt;/strong&gt; 内积 inner product &lt;script type=&quot;math/tex&quot;&gt;\langle\cdot,\cdot\rangle:=\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 1.1&lt;/strong&gt; 内积 inner product &lt;script type=&quot;math/tex&quot;&gt;\langle\cdot,\cdot\rangle:=\Re^n \times \Re^n \rightarrow \Re&lt;/script&gt;&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;交换率 symmetry &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle&lt;/script&gt; for any &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y} \in \mathbb{R}^n &lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;分配率 additivity &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle&lt;/script&gt; for any &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y},{\bf z} \in \mathbb{R}^n &lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;线性 homogeneity &lt;script type=&quot;math/tex&quot;&gt;\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle&lt;/script&gt; for any &lt;script type=&quot;math/tex&quot;&gt;\lambda\in\mathbb{R}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y}\in\mathbb{R}^n&lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;正定 positive definiteness &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle\ge0&lt;/script&gt; for any &lt;script type=&quot;math/tex&quot;&gt;{\bf x}\in\mathbb{R}^n&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle=0&lt;/script&gt; if and only if &lt;script type=&quot;math/tex&quot;&gt;{\bf x}={\bf 0} \; \blacksquare&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;交换率 symmetry &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle&lt;/script&gt; for any &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y} \in \Re^n &lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;分配率 additivity &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle&lt;/script&gt; for any &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y},{\bf z} \in \Re^n &lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;线性 homogeneity &lt;script type=&quot;math/tex&quot;&gt;\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle&lt;/script&gt; for any &lt;script type=&quot;math/tex&quot;&gt;\lambda\in \Re &lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y} \in \Re^n&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;正定 positive definiteness &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle\ge0&lt;/script&gt; for any &lt;script type=&quot;math/tex&quot;&gt;{\bf x}\in \Re^n&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle=0&lt;/script&gt; if and only if &lt;script type=&quot;math/tex&quot;&gt;{\bf x}={\bf 0} \; \blacksquare&lt;/script&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;strong&gt;Example 1.2&lt;/strong&gt; 最常见的内积就是点积 dot product&lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\langle{\bf x},{\bf y}\rangle={\bf x}^T{\bf y}=\sum^n_{i=1}x_iy_i \text{ for any } {\bf x},{\bf y} \in \mathbb{R}^n &lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\langle{\bf x},{\bf y}\rangle={\bf x}^T{\bf y}=\sum^n_{i=1}x_iy_i \text{ for any } {\bf x},{\bf y} \in \Re^n &lt;/script&gt;&lt;br /&gt;
 点积是标准内积，当不明确说明时，默认内积就是点积。&lt;script type=&quot;math/tex&quot;&gt;\blacksquare&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Example 1.3&lt;/strong&gt; 加权点积是 &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}^n &lt;/script&gt; 空间中另一个内积的例子，其中权重 &lt;script type=&quot;math/tex&quot;&gt;{\bf w}\in\mathbb{R}^n_{++}&lt;/script&gt;。&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Example 1.3&lt;/strong&gt; 加权点积是 &lt;script type=&quot;math/tex&quot;&gt;\Re^n &lt;/script&gt; 空间中另一个内积的例子，其中权重 &lt;script type=&quot;math/tex&quot;&gt;{\bf w}\in \Re^n_{++} &lt;/script&gt;。&lt;br /&gt;
 &lt;script type=&quot;math/tex; mode=display&quot;&gt; \langle {\bf x},{\bf y} \rangle_{\bf w} = \sum^n_{i=1}w_ix_iy_i \; \blacksquare&lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 16 Jul 2015 05:22:17 +0800</pubDate>

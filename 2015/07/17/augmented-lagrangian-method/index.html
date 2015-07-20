@@ -53,7 +53,7 @@
 
 <!--more-->
 
-<p><strong>Augmented lagrangian</strong></p>
+<p><strong>Augmented lagrangian</strong> <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> <a href="http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf">http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf</a></span></p>
 
 <script type="math/tex; mode=display">\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2</script>
 
@@ -110,12 +110,12 @@
 \end{align}
 </script>
 
-<p>Converges in a finite (small) number of steps <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l<sub>1</sub>-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: <a href="http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF">http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF</a></span></p>
+<p>Converges in a finite (small) number of steps <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l<sub>1</sub>-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: <a href="http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF">http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF</a></span></p>
 
 <h2 id="remarks">Remarks</h2>
 
-<p>The augmented Lagrangian method dates back to 50s <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. <br /> Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London.</span><br />
-Monograph by Bertsekas<sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York.</span> provides a general treatment<br />
+<p>The augmented Lagrangian method dates back to 50s <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. <br /> Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London.</span><br />
+Monograph by Bertsekas<sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York.</span> provides a general treatment<br />
 Same as the Bregman iteration (Yin etal., 2008) proposed for basis pursuit (compressive sensing)<br />
 Equivalent to proximal print algorithm applied to the dual; can be accelerated (Nesterov)</p>
 
