@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Kernel and Kernel: Reproducing Kernel Hilbert Space and Kernel Method | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="Kernel再生核的定义Definition.  is a kernel if  核函数   对称 isymmetric: .  核函数  半正定 positive semi-definite, i.e., , the “Gram Matrix”  defined by  is positive semi-def...">
+  <meta name="description" content="Kernel再生核的定义Definition.  is a kernel if      核函数   对称 isymmetric: .        核函数  半正定 positive semi-definite  i.e., , the “Gram Matrix”  defined by  is positiv...">
 
 
   <link rel="stylesheet" href="//www.quxiaofeng.me/optimization/css/tufte.css">	
@@ -46,9 +46,15 @@
 <p>Definition. <script type="math/tex">k: \mathcal{X} \times \mathcal{X} \rightarrow \Re </script> is a kernel if</p>
 
 <ol>
-  <li>核函数 <script type="math/tex">k</script>  对称 isymmetric: <script type="math/tex">k(x,y)=k(y,x)</script>.</li>
-  <li>核函数 <script type="math/tex">k</script> 半正定 positive semi-definite, i.e., <script type="math/tex">\forall x_1, x_2, \ldots , x_n \in \mathcal{X}</script>, the “Gram Matrix” <script type="math/tex">K</script> defined by <script type="math/tex">K_{ij} =  k(x_i,x_j)</script> is positive semi-definite. (A matrix <script type="math/tex">M \in \Re^{n \times n}</script> is positive semi-definite if <script type="math/tex">\forall a \in \Re^n</script>, <script type="math/tex">a' M a \ge 0</script>.)</li>
+  <li>
+    <p>核函数 <script type="math/tex">k</script>  对称 isymmetric: <script type="math/tex">k(x,y)=k(y,x)</script>.</p>
+  </li>
+  <li>
+    <p>核函数 <script type="math/tex">k</script> 半正定 positive semi-definite</p>
+  </li>
 </ol>
+
+<p>i.e., <script type="math/tex">\forall x_1, x_2, \ldots , x_n \in \mathcal{X}</script>, the “Gram Matrix” <script type="math/tex">K</script> defined by <script type="math/tex">K_{ij} =  k(x_i,x_j)</script> is positive semi-definite. (A matrix <script type="math/tex">M \in \Re^{n \times n}</script> is positive semi-definite if <script type="math/tex">\forall a \in \Re^n</script>, <script type="math/tex">a' M a \ge 0</script>.)</p>
 
 <!--more-->
 
