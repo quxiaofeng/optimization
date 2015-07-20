@@ -12,7 +12,10 @@ categories:
 Definition. {% m %}k: \mathcal{X} \times \mathcal{X} \rightarrow \Re {% em %} is a kernel if
 
 1. 核函数 {% m %}k{% em %}  对称 isymmetric: {% m %}k(x,y)=k(y,x){% em %}.
-2. 核函数 {% m %}k{% em %} 半正定 positive semi-definite, i.e., {% m %}\forall x_1, x_2, \ldots , x_n \in \mathcal{X}{% em %}, the "Gram Matrix" {% m %}K{% em %} defined by {% m %}K_{ij} =  k(x_i,x_j){% em %} is positive semi-definite. (A matrix {% m %}M \in \Re^{n \times n}{% em %} is positive semi-definite if {% m %}\forall a \in \Re^n{% em %}, {% m %}a' M a \ge 0{% em %}.)
+
+2. 核函数 {% m %}k{% em %} 半正定 positive semi-definite
+
+  i.e., {% m %}\forall x_1, x_2, \ldots , x_n \in \mathcal{X}{% em %}, the "Gram Matrix" {% m %}K{% em %} defined by {% m %}K_{ij} =  k(x_i,x_j){% em %} is positive semi-definite. (A matrix {% m %}M \in \Re^{n \times n}{% em %} is positive semi-definite if {% m %}\forall a \in \Re^n{% em %}, {% m %}a' M a \ge 0{% em %}.)
 
 <!--more-->
 
