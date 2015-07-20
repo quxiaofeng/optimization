@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jul 2015 16:25:10 +0800</pubDate>
-    <lastBuildDate>Mon, 20 Jul 2015 16:25:10 +0800</lastBuildDate>
+    <pubDate>Mon, 20 Jul 2015 16:26:46 +0800</pubDate>
+    <lastBuildDate>Mon, 20 Jul 2015 16:26:46 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -122,8 +122,7 @@ D = \left(\begin{matrix}
 
 &lt;p&gt;Assume &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;g_i&lt;/script&gt; are smooth for simplicity&lt;/p&gt;
 
-&lt;p&gt;At a constrained minimum, the Lagrange multiplier condition&lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;At a constrained minimum, the Lagrange multiplier condition &lt;script type=&quot;math/tex; mode=display&quot;&gt;  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;holds provided &lt;script type=&quot;math/tex&quot;&gt;\nabla g_i({\bf x})&lt;/script&gt; are linearly independent&lt;/p&gt;
 
