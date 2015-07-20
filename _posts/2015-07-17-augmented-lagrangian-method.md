@@ -12,7 +12,6 @@ Inequality constraints are ignored for simplicity
 Assume {%m%}f{%em%} and {%m%}g_i{%em%} are smooth for simplicity
 
 At a constrained minimum, the Lagrange multiplier condition
-
 {%math%}  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  {%endmath%}
 
 holds provided {%m%}\nabla g_i({\bf x}){%em%} are linearly independent
@@ -20,7 +19,6 @@ holds provided {%m%}\nabla g_i({\bf x}){%em%} are linearly independent
 <!--more-->
 
 **Augmented lagrangian** {% sidenote 1 '[http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf](http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf)'%}
-
 {%math%}\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2{%endmath%}
 
 The penalty term {%m%}\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2{%em%} punishes violations of the equality constraints {%m%}g_i({\bf \theta}){%em%}
@@ -36,17 +34,14 @@ At convergence, the gradient {%m%}\rho g_i({\bf x})\nabla g_i({\bf x}){%em%} van
 Take {%m%}\rho{%em%} initially large or gradually increase it; iterate
 
 Find the unconstrained minimum
-
 {%math%}{\bf x}^{(t+1)}\leftarrow \min_x\mathcal{L}_\rho ({\bf x},{\bf \lambda}^{(t)}){%endmath%}
 
 Update the multiplier vector {%m%}{\bf \lambda}{%em%}
-
 {%math%}\lambda^{(t+1)}_i \leftarrow \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}), \; i = 1, \ldots , q{%endmath%}
 
 ### Intuition for updating {%m%}{\bf \lambda}{%em%}
 
 If {%m%}{\bf x}^{(t)}{%em%} is the unconstrained minimum of {%m%}\mathcal{L}({\bf x},{\bf \lambda}){%em%}, then the stationary condition says
-
 {%math%}
 \begin{align}
 {\bf 0} & = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \lambda^{(t)}_i \nabla g_i({\bf x}^{(t)}) + \rho \sum^q_{i=1} g_i({\bf x}^{(t)}) \nabla g_i({\bf x}^{(t)}) \\
@@ -59,7 +54,6 @@ If {%m%}{\bf x}^{(t)}{%em%} is the unconstrained minimum of {%m%}\mathcal{L}({\b
 ## Example: basis pursuit
 
 Basis pursuit problem seeks the sparsest solution subject to linear constraints
-
 {%math%}
 \begin{align}
 \text{minimize    } & \|{\bf x}\|_1 \\
@@ -68,7 +62,6 @@ Basis pursuit problem seeks the sparsest solution subject to linear constraints
 {%endmath%}
 
 Take {%m%}\rho{%em%} initially large or gradually increase it; iterate according to
-
 {%math%}
 \begin{align}
 {\bf x}^{(t+1)}                 & \leftarrow \min \|{\bf x}\| + \langle {\bf \lambda}^{(t)}, {\bf Ax} - {\bf b} \rangle + \frac{\rho}{2} \|{\bf Ax} - {\bf b}\|^2-2 \text{(lasso)} \\
