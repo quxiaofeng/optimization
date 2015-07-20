@@ -16,9 +16,9 @@ Definition. {% m %}k: \mathcal{X} \times \mathcal{X} \rightarrow \Re {% em %} is
 
 <!--more-->
 
-再生核希尔贝特空间是从低维数据到函数泛函映射。Hilbert 空间“Frechet-Riesz”表现定理。
+再生核希尔伯特空间是从低维数据到函数泛函映射。Hilbert 空间“Frechet-Riesz”表现定理。
 
-希尔贝特空间是定义了内积的空间；相对应的 Banach 是定义了范数的空间。
+希尔伯特空间是定义了内积的空间；相对应的 Banach 是定义了范数的空间。
 
 ## Reproducing Kernel Feature Map
 
