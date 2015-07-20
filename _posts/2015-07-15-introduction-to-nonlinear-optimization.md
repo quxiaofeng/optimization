@@ -38,4 +38,4 @@ categories:
 点积是标准内积，当不明确说明时，默认内积就是点积。{%m%}\blacksquare{%em%}
 
 **Example 1.3** 加权点积是 {% m %}\Re^n {% em %} 空间中另一个内积的例子，其中权重 {% m %}{\bf w}\in \Re^n_{++} {% em %}。
-{% mat h%} \langle {\bf x},{\bf y} \rangle_{\bf w} = \sum^n_{i=1}w_ix_iy_i \; \blacksquare{% endmath %}
+{% math%} \langle {\bf x},{\bf y} \rangle_{\bf w} = \sum^n_{i=1}w_ix_iy_i \; \blacksquare{% endmath %}
