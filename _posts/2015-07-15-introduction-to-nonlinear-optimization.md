@@ -46,8 +46,8 @@ categories:
 2. 正线性 positive homogeneity {% m %} |\lambda {\bf x}\| = |\lambda| \|{\bf x}\| \text{ for any } {\bf x} \in \Re^n \text{ and } \lambda \in \Re{% em %}
 3. 三角不等 triangle inequality  {% m %} \|{\bf x} + {\bf y}\| \le \|{\bf x}\| + \|{\bf y}\| \text{ for any } {\bf x},{\bf y} \in \Re^n{% em %}
 
- {% m %} p {% em %}范数定位为
+ 相应的，{% m %} p {% em %} 范数定位为
 {% math %} \ell_p \equiv \|{\bf x}\|_p \equiv \sqrt[p]{\sum^n_{i=1}|x_i|^p} \text{ , for }  p \ge 1 {% endmath%}
 
- {% m %}\infty {% em %} 范数定义为 
+ 类似的，{% m %}\infty {% em %} 范数定义为 
 {% math %} \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \rightarrow \infty} \|{\bf x}\|_p \; \blacksquare{% endmath%}
