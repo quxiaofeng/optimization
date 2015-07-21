@@ -30,14 +30,14 @@ Fused lasso problem minimizes
 
 Define {%m%}{\bf \gamma = D\beta}{%em%}, where
 
-{% math %}
+<p>{% math %}
 D = \left(\begin{matrix}
 1 & -1 & &      &   & \\
   &    & \cdots &   & \\
   &    &        & 1 & -1 
 \end{matrix}
 \right)
-{% endmath %}
+{% endmath %}</p>
 
 Then we minimize {%m%} \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \gamma \|_1 {%em%} subject to {%m%} {\bf D\beta} = \gamma {%em%}
 
