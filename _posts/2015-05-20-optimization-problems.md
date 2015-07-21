@@ -34,14 +34,15 @@ Question 2: {% m %} \arg\min \|x\|_2 + \|e\|_1 {% em %} subj. to {% m %} y=Ax+e 
 Question 3:  {% m %} \arg\min \|x\|_1 + \|e\|_2 {% em %} subj. to {% m %} y=Ax+e {% em %}
 
 标准 lasso 问题
+
 标准的 SRC
 
 ### Question 4
 
 {% newthought 'least energy with noise'%}
 
-
 Question 4: {% m %} \arg\min \|x\|_2 + \|e\|_2 {% em %} subj. to {% m %} y=Ax+e {% em %}
 
 极小最小二乘解，可求广义逆。
+
 CRC，用二范数约束表示系数，有解析解。
