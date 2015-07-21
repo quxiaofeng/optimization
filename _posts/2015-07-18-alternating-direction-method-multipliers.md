@@ -13,6 +13,7 @@ Consider minimizing {% m %} f({\bf x}) + g({\bf y}) {% em %} subject to affine c
 <!--more-->
 
 **Idea**: perform block descent on {%m%}{\bf x}{%em%} and {%m%}{\bf y}{%em%} and then update multiplier vector {%m%}{\bf \lambda}{%em%}
+
 {% math %}
 \begin{align}
 {\bf x}^{(t+1)}       & \leftarrow \min_{\bf x} f({\bf x}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By}^{(t)} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By}^{(t)} - {\bf c} \|^2_2 \\
