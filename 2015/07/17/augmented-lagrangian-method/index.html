@@ -56,7 +56,7 @@
 
 <!--more-->
 
-<p><strong>Augmented lagrangian</strong> <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> <a href="http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf">http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf</a></span></p>
+<p><strong>Augmented lagrangian</strong> <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> 参考<a href="http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf">http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf</a></span></p>
 
 <script type="math/tex; mode=display">\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2</script>
 
@@ -92,14 +92,13 @@
 
 <h2 id="example-basis-pursuit">Example: basis pursuit</h2>
 
-<p>Basis pursuit problem seeks the sparsest solution subject to linear constraints</p>
-
+<p>Basis pursuit problem seeks the sparsest solution subject to linear constraints<br />
 <script type="math/tex; mode=display">
 \begin{align}
-\text{minimize    } & \|{\bf x}\|_1 \\
-\text{subject to    } & {\bf Ax} = {\bf b}
+\text{minimize    } &amp; \|{\bf x}\|_1 \\
+\text{subject to    } &amp; {\bf Ax} = {\bf b}
 \end{align}
-</script>
+</script></p>
 
 <p>Take <script type="math/tex">\rho</script> initially large or gradually increase it; iterate according to</p>
 
