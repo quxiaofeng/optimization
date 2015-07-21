@@ -74,7 +74,7 @@ Take {%m%}\rho{%em%} initially large or gradually increase it; iterate according
 \end{align}
 {%endmath%}
 
-+ Converges in a finite (small) number of steps {% sidenote 2 'Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for {%m%}\ell_1{%em%}-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: [http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF](http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF)' %}
++ Converges in a finite (small) number of steps {% sidenote 2 'Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l<sub>1</sub>-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: [http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF](http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF)' %}
 
 ## Remarks
 
