@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 21 Jul 2015 10:02:25 +0800</pubDate>
-    <lastBuildDate>Tue, 21 Jul 2015 10:02:25 +0800</lastBuildDate>
+    <pubDate>Tue, 21 Jul 2015 10:06:41 +0800</pubDate>
+    <lastBuildDate>Tue, 21 Jul 2015 10:06:41 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -330,41 +330,29 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;h3 id=&quot;question-2&quot;&gt;Question 2&lt;/h3&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;least energy &amp;amp; error correction&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;least energy &amp;amp; error correction&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;Question 2: &lt;script type=&quot;math/tex&quot;&gt; \arg\min \|x\|_2 + \|e\|_1 &lt;/script&gt; subj. to &lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;鲁棒的 CRC&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;鲁棒的 CRC&lt;/p&gt;
 
 &lt;h3 id=&quot;question-3&quot;&gt;Question 3&lt;/h3&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;sparse regression with noise - lasso&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;sparse regression with noise - lasso&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;Question 3:  &lt;script type=&quot;math/tex&quot;&gt; \arg\min \|x\|_1 + \|e\|_2 &lt;/script&gt; subj. to &lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;标准 lasso 问题&lt;/li&gt;
-  &lt;li&gt;标准的 SRC&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;标准 lasso 问题&lt;br /&gt;
+标准的 SRC&lt;/p&gt;
 
 &lt;h3 id=&quot;question-4&quot;&gt;Question 4&lt;/h3&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;least energy with noise&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;least energy with noise&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;Question 4: &lt;script type=&quot;math/tex&quot;&gt; \arg\min \|x\|_2 + \|e\|_2 &lt;/script&gt; subj. to &lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;极小最小二乘解，可求广义逆。&lt;/li&gt;
-  &lt;li&gt;CRC，用二范数约束表示系数，有解析解。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;极小最小二乘解，可求广义逆。&lt;br /&gt;
+CRC，用二范数约束表示系数，有解析解。&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 May 2015 06:53:20 +0800</pubDate>
         <link>http://www.quxiaofeng.me/optimization/2015/05/21/optimization-problems/</link>
