@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 21 Jul 2015 10:06:41 +0800</pubDate>
-    <lastBuildDate>Tue, 21 Jul 2015 10:06:41 +0800</lastBuildDate>
+    <pubDate>Tue, 21 Jul 2015 10:14:09 +0800</pubDate>
+    <lastBuildDate>Tue, 21 Jul 2015 10:14:09 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -278,32 +278,37 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
         <title>稀疏编码的优化问题</title>
         <description>&lt;p&gt;稀疏编码问题：  &lt;script type=&quot;math/tex&quot;&gt; \arg\min_x f(x)\left\|y-Ax\right\|^2+ \lambda\|x\|_1 &lt;/script&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;用 alternating minimization (ADM)&lt;/li&gt;
-  &lt;li&gt;Primal-dual 算法？？&lt;/li&gt;
-  &lt;li&gt;Soft threshold ？？&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;用 alternating minimization (ADM)&lt;/p&gt;
+
+&lt;p&gt;Primal-dual 算法&lt;/p&gt;
+
+&lt;p&gt;Soft threshold&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;字典学习 K-SVD&lt;/li&gt;
-  &lt;li&gt;看完 K-SVD 之后，图像分类: Discriminative K-SVD for Dictionary Learning in Face Recognition (CVPR)，Label Consistent K-SVD Learning a Discriminative Dictionary for Recognition （TPAMI）；结构化稀疏: Robust Classiﬁcation using Structured Sparse Representation （CVPR）；低秩: Learning Structured Low-rank Representations for Image Classiﬁcation （CVPR）。&lt;/li&gt;
-  &lt;li&gt;关于稀疏表示的已有算法的分析: A survey of sparse representation: algorithms and applications&lt;/li&gt;
-  &lt;li&gt;参考林倞老师&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; &lt;a href=&quot;http://ss.sysu.edu.cn/~ll/&quot;&gt;林倞教授 中山大学计算机科学&lt;/a&gt;&lt;/span&gt; NIPS, ACML 和 ML 一系列工作的报告。基本上 ADM 及其扩展都介绍到了。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;字典学习 K-SVD&lt;/p&gt;
 
-&lt;p&gt;迭代优化：&lt;br /&gt;
-&lt;script type=&quot;math/tex&quot;&gt;\sum_{i=1}^p\left\|y^{(i)}-A\cdot x^{(i)}\right\|_2^2 + \sum_{i=1}^p S\left(x^{(i)}\right) &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;看完 K-SVD 之后，图像分类: Discriminative K-SVD for Dictionary Learning in Face Recognition (CVPR)，Label Consistent K-SVD Learning a Discriminative Dictionary for Recognition （TPAMI）；结构化稀疏: Robust Classiﬁcation using Structured Sparse Representation （CVPR）；低秩: Learning Structured Low-rank Representations for Image Classiﬁcation （CVPR）。&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;凸的稀疏模型求基于 proximal operator 的 alternating minimization。参考 boyd 的文章。&lt;/li&gt;
-  &lt;li&gt;An ADMM Solution to the Sparse Coding Problem: &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; &lt;a href=&quot;http://stanford.edu/class/ee364b/projects/2011projects/reports/bhaskar_zou.pdf&quot;&gt;http://stanford.edu/class/ee364b/projects/2011projects/reports/bhaskar_zou.pdf&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.eecs.berkeley.edu/~yang/software/l1benchmark/&quot;&gt;http://www.eecs.berkeley.edu/~yang/software/l1benchmark/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;这篇文章 &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; &lt;a href=&quot;http://web.stanford.edu/~boyd/papers/prox_algs.html&quot;&gt;http://web.stanford.edu/~boyd/papers/prox_algs.html&lt;/a&gt;&lt;/span&gt; 从 proximal operator 角度讲解，更加深入一点。&lt;/li&gt;
-  &lt;li&gt;南京大学何炳生老师的课程 &lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt; &lt;a href=&quot;http://math.nju.edu.cn/~hebma/&quot;&gt;http://math.nju.edu.cn/~hebma/&lt;/a&gt;&lt;/span&gt;，讲得比较深入。&lt;/li&gt;
-  &lt;li&gt;biconvex 问题，基本是个保证收敛的算法效果就还行。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;关于稀疏表示的已有算法的分析: A survey of sparse representation: algorithms and applications&lt;/p&gt;
+
+&lt;p&gt;参考林倞老师&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; &lt;a href=&quot;http://ss.sysu.edu.cn/~ll/&quot;&gt;林倞教授 中山大学计算机科学&lt;/a&gt;&lt;/span&gt; NIPS, ACML 和 ML 一系列工作的报告。基本上 ADM 及其扩展都介绍到了。&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;迭代优化&lt;/span&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex&quot;&gt;\sum_{i=1}^p\left\|y^{(i)}-A\cdot x^{(i)}\right\|_2^2 + \sum_{i=1}^p S\left(x^{(i)}\right) &lt;/script&gt;
+
+&lt;p&gt;凸的稀疏模型求基于 proximal operator 的 alternating minimization。参考 boyd 的文章。&lt;/p&gt;
+
+&lt;p&gt;An ADMM Solution to the Sparse Coding Problem: &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; &lt;a href=&quot;http://stanford.edu/class/ee364b/projects/2011projects/reports/bhaskar_zou.pdf&quot;&gt;http://stanford.edu/class/ee364b/projects/2011projects/reports/bhaskar_zou.pdf&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.eecs.berkeley.edu/~yang/software/l1benchmark/&quot;&gt;http://www.eecs.berkeley.edu/~yang/software/l1benchmark/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;这篇文章 &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; &lt;a href=&quot;http://web.stanford.edu/~boyd/papers/prox_algs.html&quot;&gt;http://web.stanford.edu/~boyd/papers/prox_algs.html&lt;/a&gt;&lt;/span&gt; 从 proximal operator 角度讲解，更加深入一点。&lt;/p&gt;
+
+&lt;p&gt;南京大学何炳生老师的课程 &lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt; &lt;a href=&quot;http://math.nju.edu.cn/~hebma/&quot;&gt;http://math.nju.edu.cn/~hebma/&lt;/a&gt;&lt;/span&gt;，讲得比较深入。&lt;/p&gt;
+
+&lt;p&gt;biconvex 问题，基本是个保证收敛的算法效果就还行。&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 May 2015 08:33:45 +0800</pubDate>
         <link>http://www.quxiaofeng.me/optimization/2015/05/21/solving-sparse/</link>
@@ -342,8 +347,9 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;p&gt;Question 3:  &lt;script type=&quot;math/tex&quot;&gt; \arg\min \|x\|_1 + \|e\|_2 &lt;/script&gt; subj. to &lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;标准 lasso 问题&lt;br /&gt;
-标准的 SRC&lt;/p&gt;
+&lt;p&gt;标准 lasso 问题&lt;/p&gt;
+
+&lt;p&gt;标准的 SRC&lt;/p&gt;
 
 &lt;h3 id=&quot;question-4&quot;&gt;Question 4&lt;/h3&gt;
 
@@ -351,8 +357,9 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;p&gt;Question 4: &lt;script type=&quot;math/tex&quot;&gt; \arg\min \|x\|_2 + \|e\|_2 &lt;/script&gt; subj. to &lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;极小最小二乘解，可求广义逆。&lt;br /&gt;
-CRC，用二范数约束表示系数，有解析解。&lt;/p&gt;
+&lt;p&gt;极小最小二乘解，可求广义逆。&lt;/p&gt;
+
+&lt;p&gt;CRC，用二范数约束表示系数，有解析解。&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 May 2015 06:53:20 +0800</pubDate>
         <link>http://www.quxiaofeng.me/optimization/2015/05/21/optimization-problems/</link>
