@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Jul 2015 21:43:30 +0800</pubDate>
-    <lastBuildDate>Wed, 22 Jul 2015 21:43:30 +0800</lastBuildDate>
+    <pubDate>Wed, 22 Jul 2015 21:47:09 +0800</pubDate>
+    <lastBuildDate>Wed, 22 Jul 2015 21:47:09 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -15,18 +15,18 @@
 
 &lt;p&gt;再生核的定义&lt;/p&gt;
 
-&lt;p&gt;Definition. &lt;script type=&quot;math/tex&quot;&gt;k: \mathcal{X} \times \mathcal{X} \rightarrow \Re &lt;/script&gt; is a kernel if&lt;/p&gt;
+&lt;p&gt;Definition. &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;k: \mathcal{X} \times \mathcal{X} \rightarrow \Re &lt;/script&gt;&amp;lt;/div&amp;gt; is a kernel if&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;核函数 &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;  对称 isymmetric: &lt;script type=&quot;math/tex&quot;&gt;k(x,y)=k(y,x)&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;核函数 &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;&amp;lt;/div&amp;gt;  对称 isymmetric: &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;k(x,y)=k(y,x)&lt;/script&gt;&amp;lt;/div&amp;gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;核函数 &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; 半正定 positive semi-definite&lt;/p&gt;
+    &lt;p&gt;核函数 &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;&amp;lt;/div&amp;gt; 半正定 positive semi-definite&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;i.e., &lt;script type=&quot;math/tex&quot;&gt;\forall x_1, x_2, \ldots , x_n \in \mathcal{X}&lt;/script&gt;, the “Gram Matrix” &lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; defined by &lt;script type=&quot;math/tex&quot;&gt;K_{ij} =  k(x_i,x_j)&lt;/script&gt; is positive semi-definite. (A matrix &lt;script type=&quot;math/tex&quot;&gt;M \in \Re^{n \times n}&lt;/script&gt; is positive semi-definite if &lt;script type=&quot;math/tex&quot;&gt;\forall a \in \Re^n&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;a&#39; M a \ge 0&lt;/script&gt;.)&lt;/p&gt;
+&lt;p&gt;i.e., &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\forall x_1, x_2, \ldots , x_n \in \mathcal{X}&lt;/script&gt;&amp;lt;/div&amp;gt;, the “Gram Matrix” &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt;&amp;lt;/div&amp;gt; defined by &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;K_{ij} =  k(x_i,x_j)&lt;/script&gt;&amp;lt;/div&amp;gt; is positive semi-definite. (A matrix &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;M \in \Re^{n \times n}&lt;/script&gt;&amp;lt;/div&amp;gt; is positive semi-definite if &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\forall a \in \Re^n&lt;/script&gt;&amp;lt;/div&amp;gt;, &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;a&#39; M a \ge 0&lt;/script&gt;&amp;lt;/div&amp;gt;.)&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -36,10 +36,10 @@
 
 &lt;h2 id=&quot;reproducing-kernel-feature-map&quot;&gt;Reproducing Kernel Feature Map&lt;/h2&gt;
 
-&lt;p&gt;再生核特征映射&lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Phi_x(\cdot) \triangleq k(\cdot,x) &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;再生核特征映射&lt;/p&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Phi_x(\cdot) \triangleq k(\cdot,x) &lt;/script&gt;&lt;/div&gt;
 
-&lt;p&gt;即对任意线性泛函&lt;script type=&quot;math/tex&quot;&gt; \Phi(\cdot) &lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt; \exists x_\Phi \in H &lt;/script&gt;, 使得 &lt;script type=&quot;math/tex&quot;&gt; \Phi(\cdot) = (\cdot, x_\Phi) &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;即对任意线性泛函&amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; \Phi(\cdot) &lt;/script&gt;&amp;lt;/div&amp;gt;, &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; \exists x_\Phi \in H &lt;/script&gt;&amp;lt;/div&amp;gt;, 使得 &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; \Phi(\cdot) = (\cdot, x_\Phi) &lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
 
 &lt;p&gt;To be continued…&lt;/p&gt;
 </description>
@@ -52,54 +52,54 @@
     
       <item>
         <title>Alternating Direction Method of Multipliers (ADMM)</title>
-        <description>&lt;p&gt;Consider minimizing &lt;script type=&quot;math/tex&quot;&gt; f({\bf x}) + g({\bf y}) &lt;/script&gt; subject to affine constraints &lt;script type=&quot;math/tex&quot;&gt; {\bf Ax} + {\bf By} = {\bf c} &lt;/script&gt;&lt;/p&gt;
+        <description>&lt;p&gt;Consider minimizing &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; f({\bf x}) + g({\bf y}) &lt;/script&gt;&amp;lt;/div&amp;gt; subject to affine constraints &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; {\bf Ax} + {\bf By} = {\bf c} &lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;The augmented Lagrangian&lt;/strong&gt;&lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt; \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The augmented Lagrangian&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 &lt;/script&gt;&lt;/div&gt;
 
 &lt;!--more--&gt;
 
-&lt;p&gt;&lt;strong&gt;Idea&lt;/strong&gt;: perform block descent on &lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;{\bf y}&lt;/script&gt; and then update multiplier vector &lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Idea&lt;/strong&gt;: perform block descent on &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt;&amp;lt;/div&amp;gt; and &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf y}&lt;/script&gt;&amp;lt;/div&amp;gt; and then update multiplier vector &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+&lt;p&gt;&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 \begin{align}
 {\bf x}^{(t+1)}       &amp; \leftarrow \min_{\bf x} f({\bf x}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By}^{(t)} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By}^{(t)} - {\bf c} \|^2_2 \\
 {\bf y}^{(t+1)}       &amp; \leftarrow \min_{\bf y} g({\bf y}) + \langle {\bf \lambda}, {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \|^2_2 \\
 {\bf \lambda}^{(t+1)} &amp; \leftarrow {\bf \lambda}^{(t)} + \rho ({\bf Ax}^{(t+1)} + {\bf By}^{(t+1)} - {\bf c})
 \end{align}
-&lt;/script&gt;&lt;/p&gt;
+&lt;/script&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;example-fused-lasso&quot;&gt;Example: fused lasso&lt;/h2&gt;
 
-&lt;p&gt;Fused lasso problem minimizes&lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt; \frac{1}{2} \| {\bf y - X\beta} \|^2_2 + \mu \sum^{p-1}_{j=1} |\beta_{j+1} - \beta_j |&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Fused lasso problem minimizes&lt;/p&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \frac{1}{2} \| {\bf y - X\beta} \|^2_2 + \mu \sum^{p-1}_{j=1} |\beta_{j+1} - \beta_j |&lt;/script&gt;&lt;/div&gt;
 
-&lt;p&gt;Define &lt;script type=&quot;math/tex&quot;&gt;{\bf \gamma = D\beta}&lt;/script&gt;, where&lt;/p&gt;
+&lt;p&gt;Define &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf \gamma = D\beta}&lt;/script&gt;&amp;lt;/div&amp;gt;, where&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+&lt;p&gt;&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 D = \left(\begin{matrix}
 1 &amp; -1 &amp; &amp;      &amp;   &amp; \\
   &amp;    &amp; \cdots &amp;   &amp; \\
   &amp;    &amp;        &amp; 1 &amp; -1 
 \end{matrix}
 \right)
-&lt;/script&gt;&lt;/p&gt;
+&lt;/script&gt;&lt;/div&gt;&lt;/p&gt;
 
-&lt;p&gt;Then we minimize &lt;script type=&quot;math/tex&quot;&gt; \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \gamma \|_1 &lt;/script&gt; subject to &lt;script type=&quot;math/tex&quot;&gt; {\bf D\beta} = \gamma &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Then we minimize &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \gamma \|_1 &lt;/script&gt;&amp;lt;/div&amp;gt; subject to &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; {\bf D\beta} = \gamma &lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
 
-&lt;p&gt;Augmented Lagrangian is&lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt; \mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2 &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Augmented Lagrangian is&lt;/p&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2 &lt;/script&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;admm&quot;&gt;ADMM&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Update &lt;script type=&quot;math/tex&quot;&gt;{\bf \beta}&lt;/script&gt; is a smooth quadratic problem&lt;/li&gt;
-  &lt;li&gt;Update &lt;script type=&quot;math/tex&quot;&gt;{\bf \gamma}&lt;/script&gt; is a separated lasso problem (elementwise thresholding)&lt;/li&gt;
-  &lt;li&gt;Update multipliers&lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)})&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;Update &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf \beta}&lt;/script&gt;&amp;lt;/div&amp;gt; is a smooth quadratic problem&lt;/li&gt;
+  &lt;li&gt;Update &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf \gamma}&lt;/script&gt;&amp;lt;/div&amp;gt; is a separated lasso problem (elementwise thresholding)&lt;/li&gt;
+  &lt;li&gt;Update multipliers&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)})&lt;/script&gt;&lt;/div&gt;
 
-&lt;p&gt;Same algorithm applies to a general regularization matrix &lt;script type=&quot;math/tex&quot;&gt;{\bf D}&lt;/script&gt; (generalized lasso)&lt;/p&gt;
+&lt;p&gt;Same algorithm applies to a general regularization matrix &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf D}&lt;/script&gt;&amp;lt;/div&amp;gt; (generalized lasso)&lt;/p&gt;
 
 &lt;h2 id=&quot;remarks-on-admm&quot;&gt;Remarks on ADMM&lt;/h2&gt;
 
@@ -126,73 +126,73 @@ D = \left(\begin{matrix}
         <title>Augmented Lagrangian Method</title>
         <description>&lt;p&gt;Consider minimizing:&lt;/p&gt;
 
-&lt;script type=&quot;math/tex&quot;&gt; f({\bf x}) &lt;/script&gt;
-&lt;p&gt;subject to equality constraints &lt;script type=&quot;math/tex&quot;&gt; g_i({\bf x}) = 0 &lt;/script&gt; for &lt;script type=&quot;math/tex&quot;&gt;i=1, \ldots ,q&lt;/script&gt;&lt;/p&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex&quot;&gt; f({\bf x}) &lt;/script&gt;&lt;/div&gt;
+&lt;p&gt;subject to equality constraints &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; g_i({\bf x}) = 0 &lt;/script&gt;&amp;lt;/div&amp;gt; for &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;i=1, \ldots ,q&lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
 
 &lt;p&gt;Inequality constraints are ignored for simplicity&lt;/p&gt;
 
-&lt;p&gt;Assume &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;g_i&lt;/script&gt; are smooth for simplicity&lt;/p&gt;
+&lt;p&gt;Assume &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;&amp;lt;/div&amp;gt; and &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;g_i&lt;/script&gt;&amp;lt;/div&amp;gt; are smooth for simplicity&lt;/p&gt;
 
 &lt;p&gt;At a constrained minimum, the Lagrange multiplier condition&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  &lt;/script&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  &lt;/script&gt;&lt;/div&gt;
 
-&lt;p&gt;holds provided &lt;script type=&quot;math/tex&quot;&gt;\nabla g_i({\bf x})&lt;/script&gt; are linearly independent&lt;/p&gt;
+&lt;p&gt;holds provided &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\nabla g_i({\bf x})&lt;/script&gt;&amp;lt;/div&amp;gt; are linearly independent&lt;/p&gt;
 
 &lt;!--more--&gt;
 
 &lt;p&gt;&lt;strong&gt;Augmented lagrangian&lt;/strong&gt; &lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; 参考&lt;a href=&quot;http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf&quot;&gt;http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt;&lt;/div&gt;
 
-&lt;p&gt;The penalty term &lt;script type=&quot;math/tex&quot;&gt;\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt; punishes violations of the equality constraints &lt;script type=&quot;math/tex&quot;&gt;g_i({\bf \theta})&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;The penalty term &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt;&amp;lt;/div&amp;gt; punishes violations of the equality constraints &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;g_i({\bf \theta})&lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
 
-&lt;p&gt;Optimize the Augmented Lagrangian and adjust &lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt; in the hope of matching the true Lagrange multipliers&lt;/p&gt;
+&lt;p&gt;Optimize the Augmented Lagrangian and adjust &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&amp;lt;/div&amp;gt; in the hope of matching the true Lagrange multipliers&lt;/p&gt;
 
-&lt;p&gt;For &lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt; large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem&lt;/p&gt;
+&lt;p&gt;For &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt;&amp;lt;/div&amp;gt; large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem&lt;/p&gt;
 
-&lt;p&gt;At convergence, the gradient &lt;script type=&quot;math/tex&quot;&gt;\rho g_i({\bf x})\nabla g_i({\bf x})&lt;/script&gt; vanishes and we recover the standard multiplier rule&lt;/p&gt;
+&lt;p&gt;At convergence, the gradient &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\rho g_i({\bf x})\nabla g_i({\bf x})&lt;/script&gt;&amp;lt;/div&amp;gt; vanishes and we recover the standard multiplier rule&lt;/p&gt;
 
 &lt;h2 id=&quot;algorithm&quot;&gt;Algorithm&lt;/h2&gt;
 
-&lt;p&gt;Take &lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt; initially large or gradually increase it; iterate&lt;/p&gt;
+&lt;p&gt;Take &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt;&amp;lt;/div&amp;gt; initially large or gradually increase it; iterate&lt;/p&gt;
 
-&lt;p&gt;Find the unconstrained minimum&lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf x}^{(t+1)}\leftarrow \min_x\mathcal{L}_\rho ({\bf x},{\bf \lambda}^{(t)})&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Find the unconstrained minimum&lt;/p&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf x}^{(t+1)}\leftarrow \min_x\mathcal{L}_\rho ({\bf x},{\bf \lambda}^{(t)})&lt;/script&gt;&lt;/div&gt;
 
-&lt;p&gt;Update the multiplier vector &lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\lambda^{(t+1)}_i \leftarrow \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}), \; i = 1, \ldots , q&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Update the multiplier vector &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\lambda^{(t+1)}_i \leftarrow \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}), \; i = 1, \ldots , q&lt;/script&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;intuition-for-updating-script-typemathtexbf-lambdascript&quot;&gt;Intuition for updating &lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;intuition-for-updating-divscript-typemathtexbf-lambdascriptdiv&quot;&gt;Intuition for updating &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/h3&gt;
 
-&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;{\bf x}^{(t)}&lt;/script&gt; is the unconstrained minimum of &lt;script type=&quot;math/tex&quot;&gt;\mathcal{L}({\bf x},{\bf \lambda})&lt;/script&gt;, then the stationary condition says&lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+&lt;p&gt;If &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf x}^{(t)}&lt;/script&gt;&amp;lt;/div&amp;gt; is the unconstrained minimum of &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\mathcal{L}({\bf x},{\bf \lambda})&lt;/script&gt;&amp;lt;/div&amp;gt;, then the stationary condition says&lt;/p&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 \begin{align}
-{\bf 0} &amp;amp; = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \lambda^{(t)}_i \nabla g_i({\bf x}^{(t)}) + \rho \sum^q_{i=1} g_i({\bf x}^{(t)}) \nabla g_i({\bf x}^{(t)}) \\
-&amp;amp; = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \left[ \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}) \right] \nabla g_i({\bf x}^{(t)})
+{\bf 0} &amp; = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \lambda^{(t)}_i \nabla g_i({\bf x}^{(t)}) + \rho \sum^q_{i=1} g_i({\bf x}^{(t)}) \nabla g_i({\bf x}^{(t)}) \\
+&amp; = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \left[ \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}) \right] \nabla g_i({\bf x}^{(t)})
 \end{align}
-&lt;/script&gt;&lt;/p&gt;
+&lt;/script&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;for-non-smooth-script-typemathtexfscript-replace-gradient-script-typemathtexnabla-fscript-by-sub-differential-script-typemathtexpartial-fscript&quot;&gt;For non-smooth &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;, replace gradient &lt;script type=&quot;math/tex&quot;&gt;\nabla f&lt;/script&gt; by sub-differential &lt;script type=&quot;math/tex&quot;&gt;\partial f&lt;/script&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;for-non-smooth-divscript-typemathtexfscriptdiv-replace-gradient-divscript-typemathtexnabla-fscriptdiv-by-sub-differential-divscript-typemathtexpartial-fscriptdiv&quot;&gt;For non-smooth &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;&amp;lt;/div&amp;gt;, replace gradient &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\nabla f&lt;/script&gt;&amp;lt;/div&amp;gt; by sub-differential &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\partial f&lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/h3&gt;
 
 &lt;h2 id=&quot;example-basis-pursuit&quot;&gt;Example: basis pursuit&lt;/h2&gt;
 
-&lt;p&gt;Basis pursuit problem seeks the sparsest solution subject to linear constraints&lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+&lt;p&gt;Basis pursuit problem seeks the sparsest solution subject to linear constraints&lt;/p&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 \begin{align}
-\text{minimize    } &amp;amp; \|{\bf x}\|_1 \\
-\text{subject to    } &amp;amp; {\bf Ax} = {\bf b}
+\text{minimize    } &amp; \|{\bf x}\|_1 \\
+\text{subject to    } &amp; {\bf Ax} = {\bf b}
 \end{align}
-&lt;/script&gt;&lt;/p&gt;
+&lt;/script&gt;&lt;/div&gt;
 
-&lt;p&gt;Take &lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt; initially large or gradually increase it; iterate according to&lt;/p&gt;
+&lt;p&gt;Take &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt;&amp;lt;/div&amp;gt; initially large or gradually increase it; iterate according to&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 \begin{align}
 {\bf x}^{(t+1)}                 &amp; \leftarrow \min \|{\bf x}\| + \langle {\bf \lambda}^{(t)}, {\bf Ax} - {\bf b} \rangle + \frac{\rho}{2} \|{\bf Ax} - {\bf b}\|^2-2 \text{(lasso)} \\
 {\bf \lambda}^{(t+1)} &amp; \leftarrow {\bf \lambda}^{(t)} + \rho \left( {\bf Ax}^{(t+1)} - {\bf b} \right) 
 \end{align}
-&lt;/script&gt;
+&lt;/script&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Converges in a finite (small) number of steps &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l&lt;sub&gt;1&lt;/sub&gt;-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: &lt;a href=&quot;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&quot;&gt;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
@@ -237,35 +237,35 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;h2 id=&quot;section&quot;&gt;第一章 数学基础&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Definition 1.1&lt;/strong&gt; 内积 inner product &lt;script type=&quot;math/tex&quot;&gt;\langle\cdot,\cdot\rangle:=\Re^n \times \Re^n \rightarrow \Re&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 1.1&lt;/strong&gt; 内积 inner product &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\langle\cdot,\cdot\rangle:=\Re^n \times \Re^n \rightarrow \Re&lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;交换率 symmetry &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle&lt;/script&gt; for any &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y} \in \Re^n &lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;分配率 additivity &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle&lt;/script&gt; for any &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y},{\bf z} \in \Re^n &lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;线性 homogeneity &lt;script type=&quot;math/tex&quot;&gt;\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle&lt;/script&gt; for any &lt;script type=&quot;math/tex&quot;&gt;\lambda\in \Re &lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y} \in \Re^n&lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;正定 positive definiteness &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle\ge0&lt;/script&gt; for any &lt;script type=&quot;math/tex&quot;&gt;{\bf x}\in \Re^n&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle=0&lt;/script&gt; if and only if &lt;script type=&quot;math/tex&quot;&gt;{\bf x}={\bf 0} \; \blacksquare&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;交换率 symmetry &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle&lt;/script&gt;&amp;lt;/div&amp;gt; for any &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y} \in \Re^n &lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/li&gt;
+  &lt;li&gt;分配率 additivity &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle&lt;/script&gt;&amp;lt;/div&amp;gt; for any &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y},{\bf z} \in \Re^n &lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/li&gt;
+  &lt;li&gt;线性 homogeneity &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle&lt;/script&gt;&amp;lt;/div&amp;gt; for any &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\lambda\in \Re &lt;/script&gt;&amp;lt;/div&amp;gt; and &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y} \in \Re^n&lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/li&gt;
+  &lt;li&gt;正定 positive definiteness &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle\ge0&lt;/script&gt;&amp;lt;/div&amp;gt; for any &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf x}\in \Re^n&lt;/script&gt;&amp;lt;/div&amp;gt; and &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle=0&lt;/script&gt;&amp;lt;/div&amp;gt; if and only if &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf x}={\bf 0} \; \blacksquare&lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;strong&gt;Example 1.2&lt;/strong&gt; 最常见的内积就是点积 dot product&lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\langle{\bf x},{\bf y}\rangle={\bf x}^T{\bf y}=\sum^n_{i=1}x_iy_i \text{ for any } {\bf x},{\bf y} \in \Re^n &lt;/script&gt;&lt;br /&gt;
-点积是标准内积，当不明确说明时，默认内积就是点积。&lt;script type=&quot;math/tex&quot;&gt;\blacksquare&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example 1.2&lt;/strong&gt; 最常见的内积就是点积 dot product&lt;/p&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\langle{\bf x},{\bf y}\rangle={\bf x}^T{\bf y}=\sum^n_{i=1}x_iy_i \text{ for any } {\bf x},{\bf y} \in \Re^n &lt;/script&gt;&lt;/div&gt;
+&lt;p&gt;点积是标准内积，当不明确说明时，默认内积就是点积。&amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\blacksquare&lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Example 1.3&lt;/strong&gt; 加权点积是 &lt;script type=&quot;math/tex&quot;&gt;\Re^n &lt;/script&gt; 空间中另一个内积的例子，其中权重 &lt;script type=&quot;math/tex&quot;&gt;{\bf w}\in \Re^n_{++} &lt;/script&gt;。&lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt; \langle {\bf x},{\bf y} \rangle_{\bf w} = \sum^n_{i=1}w_ix_iy_i \; \blacksquare&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example 1.3&lt;/strong&gt; 加权点积是 &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\Re^n &lt;/script&gt;&amp;lt;/div&amp;gt; 空间中另一个内积的例子，其中权重 &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;{\bf w}\in \Re^n_{++} &lt;/script&gt;&amp;lt;/div&amp;gt;。&lt;/p&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \langle {\bf x},{\bf y} \rangle_{\bf w} = \sum^n_{i=1}w_ix_iy_i \; \blacksquare&lt;/script&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Definition 1.4&lt;/strong&gt; Norm 范数 一个定义在实数向量集 &lt;script type=&quot;math/tex&quot;&gt;\Re^n &lt;/script&gt; 上的范数 &lt;script type=&quot;math/tex&quot;&gt;\|\cdot\| &lt;/script&gt; 是一个满足如下条件，形如 &lt;script type=&quot;math/tex&quot;&gt;\| \cdot \| : \Re^n \rightarrow \Re &lt;/script&gt; 的函数&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 1.4&lt;/strong&gt; Norm 范数 一个定义在实数向量集 &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\Re^n &lt;/script&gt;&amp;lt;/div&amp;gt; 上的范数 &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\|\cdot\| &lt;/script&gt;&amp;lt;/div&amp;gt; 是一个满足如下条件，形如 &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\| \cdot \| : \Re^n \rightarrow \Re &lt;/script&gt;&amp;lt;/div&amp;gt; 的函数&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;非负性 nonnegativity &lt;script type=&quot;math/tex&quot;&gt; \|{\bf x}\| \ge 0 \text{ for any } {\bf x} \in \Re^n \text{ and } \|{\bf x}\| = 0 \text{ if and only if } {\bf x} = {\bf 0} &lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;正线性 positive homogeneity &lt;script type=&quot;math/tex&quot;&gt; |\lambda {\bf x}\| = |\lambda| \|{\bf x}\| \text{ for any } {\bf x} \in \Re^n \text{ and } \lambda \in \Re&lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;三角不等 triangle inequality  &lt;script type=&quot;math/tex&quot;&gt; \|{\bf x} + {\bf y}\| \le \|{\bf x}\| + \|{\bf y}\| \text{ for any } {\bf x},{\bf y} \in \Re^n&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;非负性 nonnegativity &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; \|{\bf x}\| \ge 0 \text{ for any } {\bf x} \in \Re^n \text{ and } \|{\bf x}\| = 0 \text{ if and only if } {\bf x} = {\bf 0} &lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/li&gt;
+  &lt;li&gt;正线性 positive homogeneity &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; |\lambda {\bf x}\| = |\lambda| \|{\bf x}\| \text{ for any } {\bf x} \in \Re^n \text{ and } \lambda \in \Re&lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/li&gt;
+  &lt;li&gt;三角不等 triangle inequality  &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; \|{\bf x} + {\bf y}\| \le \|{\bf x}\| + \|{\bf y}\| \text{ for any } {\bf x},{\bf y} \in \Re^n&lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;相应的，&lt;script type=&quot;math/tex&quot;&gt; p &lt;/script&gt; 范数定位为&lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt; \ell_p \equiv \|{\bf x}\|_p \equiv \sqrt[p]{\sum^n_{i=1}|x_i|^p} \text{ , for }  p \ge 1 &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;相应的，&amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; p &lt;/script&gt;&amp;lt;/div&amp;gt; 范数定位为&lt;/p&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \ell_p \equiv \|{\bf x}\|_p \equiv \sqrt[p]{\sum^n_{i=1}|x_i|^p} \text{ , for }  p \ge 1 &lt;/script&gt;&lt;/div&gt;
 
-&lt;p&gt;类似的，&lt;script type=&quot;math/tex&quot;&gt;\infty &lt;/script&gt; 范数定义为 &lt;br /&gt;
-&lt;script type=&quot;math/tex; mode=display&quot;&gt; \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \rightarrow \infty} \|{\bf x}\|_p \; \blacksquare&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;类似的，&amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt;\infty &lt;/script&gt;&amp;lt;/div&amp;gt; 范数定义为&lt;/p&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \rightarrow \infty} \|{\bf x}\|_p \; \blacksquare&lt;/script&gt;&lt;/div&gt;
 </description>
         <pubDate>Thu, 16 Jul 2015 05:22:17 +0800</pubDate>
         <link>http://www.quxiaofeng.me/optimization/2015/07/16/introduction-to-nonlinear-optimization/</link>
@@ -276,7 +276,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
     
       <item>
         <title>稀疏编码的优化问题</title>
-        <description>&lt;p&gt;稀疏编码问题：  &lt;script type=&quot;math/tex&quot;&gt; \arg\min_x f(x)\left\|y-Ax\right\|^2+ \lambda\|x\|_1 &lt;/script&gt;&lt;/p&gt;
+        <description>&lt;p&gt;稀疏编码问题：  &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; \arg\min_x f(x)\left\|y-Ax\right\|^2+ \lambda\|x\|_1 &lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
 
 &lt;p&gt;用 alternating minimization (ADM)&lt;/p&gt;
 
@@ -296,7 +296,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;迭代优化&lt;/span&gt;&lt;/p&gt;
 
-&lt;script type=&quot;math/tex&quot;&gt;\sum_{i=1}^p\left\|y^{(i)}-A\cdot x^{(i)}\right\|_2^2 + \sum_{i=1}^p S\left(x^{(i)}\right) &lt;/script&gt;
+&lt;div&gt;&lt;script type=&quot;math/tex&quot;&gt;\sum_{i=1}^p\left\|y^{(i)}-A\cdot x^{(i)}\right\|_2^2 + \sum_{i=1}^p S\left(x^{(i)}\right) &lt;/script&gt;&lt;/div&gt;
 
 &lt;p&gt;凸的稀疏模型求基于 proximal operator 的 alternating minimization。参考 boyd 的文章。&lt;/p&gt;
 
@@ -325,7 +325,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;least entropy &amp;amp; error correction&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;Question 1: &lt;script type=&quot;math/tex&quot;&gt; \arg \min \|x\|_1 + \|e\|_1 &lt;/script&gt; subj. to &lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Question 1: &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; \arg \min \|x\|_1 + \|e\|_1 &lt;/script&gt;&amp;lt;/div&amp;gt; subj. to &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
 
 &lt;p&gt;标准 linear programming&lt;/p&gt;
 
@@ -337,7 +337,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;least energy &amp;amp; error correction&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;Question 2: &lt;script type=&quot;math/tex&quot;&gt; \arg\min \|x\|_2 + \|e\|_1 &lt;/script&gt; subj. to &lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Question 2: &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; \arg\min \|x\|_2 + \|e\|_1 &lt;/script&gt;&amp;lt;/div&amp;gt; subj. to &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
 
 &lt;p&gt;鲁棒的 CRC&lt;/p&gt;
 
@@ -345,7 +345,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;sparse regression with noise - lasso&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;Question 3:  &lt;script type=&quot;math/tex&quot;&gt; \arg\min \|x\|_1 + \|e\|_2 &lt;/script&gt; subj. to &lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Question 3:  &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; \arg\min \|x\|_1 + \|e\|_2 &lt;/script&gt;&amp;lt;/div&amp;gt; subj. to &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
 
 &lt;p&gt;标准 lasso 问题&lt;/p&gt;
 
@@ -355,7 +355,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;least energy with noise&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;Question 4: &lt;script type=&quot;math/tex&quot;&gt; \arg\min \|x\|_2 + \|e\|_2 &lt;/script&gt; subj. to &lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Question 4: &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; \arg\min \|x\|_2 + \|e\|_2 &lt;/script&gt;&amp;lt;/div&amp;gt; subj. to &amp;lt;div&amp;gt;&lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
 
 &lt;p&gt;极小最小二乘解，可求广义逆。&lt;/p&gt;
 

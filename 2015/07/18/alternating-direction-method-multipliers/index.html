@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Alternating Direction Method of Multipliers (ADMM) | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="Consider minimizing  subject to affine constraints The augmented Lagrangian">
+  <meta name="description" content="Consider minimizing &lt;div&gt;&lt;/div&gt; subject to affine constraints &lt;div&gt;&lt;/div&gt;The augmented Lagrangian">
 
 
   <link rel="stylesheet" href="//www.quxiaofeng.me/optimization/css/tufte.css">	
@@ -39,54 +39,54 @@
 <p>July 18, 2015</p>
 
 
-<p>Consider minimizing <script type="math/tex"> f({\bf x}) + g({\bf y}) </script> subject to affine constraints <script type="math/tex"> {\bf Ax} + {\bf By} = {\bf c} </script></p>
+<p>Consider minimizing &lt;div&gt;<script type="math/tex"> f({\bf x}) + g({\bf y}) </script>&lt;/div&gt; subject to affine constraints &lt;div&gt;<script type="math/tex"> {\bf Ax} + {\bf By} = {\bf c} </script>&lt;/div&gt;</p>
 
-<p><strong>The augmented Lagrangian</strong><br />
-<script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 </script></p>
+<p><strong>The augmented Lagrangian</strong></p>
+<div><script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 </script></div>
 
 <!--more-->
 
-<p><strong>Idea</strong>: perform block descent on <script type="math/tex">{\bf x}</script> and <script type="math/tex">{\bf y}</script> and then update multiplier vector <script type="math/tex">{\bf \lambda}</script></p>
+<p><strong>Idea</strong>: perform block descent on &lt;div&gt;<script type="math/tex">{\bf x}</script>&lt;/div&gt; and &lt;div&gt;<script type="math/tex">{\bf y}</script>&lt;/div&gt; and then update multiplier vector &lt;div&gt;<script type="math/tex">{\bf \lambda}</script>&lt;/div&gt;</p>
 
-<p><script type="math/tex; mode=display">
+<p><div><script type="math/tex; mode=display">
 \begin{align}
 {\bf x}^{(t+1)}       & \leftarrow \min_{\bf x} f({\bf x}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By}^{(t)} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By}^{(t)} - {\bf c} \|^2_2 \\
 {\bf y}^{(t+1)}       & \leftarrow \min_{\bf y} g({\bf y}) + \langle {\bf \lambda}, {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \|^2_2 \\
 {\bf \lambda}^{(t+1)} & \leftarrow {\bf \lambda}^{(t)} + \rho ({\bf Ax}^{(t+1)} + {\bf By}^{(t+1)} - {\bf c})
 \end{align}
-</script></p>
+</script></div></p>
 
 <h2 id="example-fused-lasso">Example: fused lasso</h2>
 
-<p>Fused lasso problem minimizes<br />
-<script type="math/tex; mode=display"> \frac{1}{2} \| {\bf y - X\beta} \|^2_2 + \mu \sum^{p-1}_{j=1} |\beta_{j+1} - \beta_j |</script></p>
+<p>Fused lasso problem minimizes</p>
+<div><script type="math/tex; mode=display"> \frac{1}{2} \| {\bf y - X\beta} \|^2_2 + \mu \sum^{p-1}_{j=1} |\beta_{j+1} - \beta_j |</script></div>
 
-<p>Define <script type="math/tex">{\bf \gamma = D\beta}</script>, where</p>
+<p>Define &lt;div&gt;<script type="math/tex">{\bf \gamma = D\beta}</script>&lt;/div&gt;, where</p>
 
-<p><script type="math/tex; mode=display">
+<p><div><script type="math/tex; mode=display">
 D = \left(\begin{matrix}
 1 & -1 & &      &   & \\
   &    & \cdots &   & \\
   &    &        & 1 & -1 
 \end{matrix}
 \right)
-</script></p>
+</script></div></p>
 
-<p>Then we minimize <script type="math/tex"> \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \gamma \|_1 </script> subject to <script type="math/tex"> {\bf D\beta} = \gamma </script></p>
+<p>Then we minimize &lt;div&gt;<script type="math/tex"> \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \gamma \|_1 </script>&lt;/div&gt; subject to &lt;div&gt;<script type="math/tex"> {\bf D\beta} = \gamma </script>&lt;/div&gt;</p>
 
-<p>Augmented Lagrangian is<br />
-<script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2 </script></p>
+<p>Augmented Lagrangian is</p>
+<div><script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2 </script></div>
 
 <h2 id="admm">ADMM</h2>
 
 <ul>
-  <li>Update <script type="math/tex">{\bf \beta}</script> is a smooth quadratic problem</li>
-  <li>Update <script type="math/tex">{\bf \gamma}</script> is a separated lasso problem (elementwise thresholding)</li>
-  <li>Update multipliers<br />
-<script type="math/tex; mode=display">{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)})</script></li>
+  <li>Update &lt;div&gt;<script type="math/tex">{\bf \beta}</script>&lt;/div&gt; is a smooth quadratic problem</li>
+  <li>Update &lt;div&gt;<script type="math/tex">{\bf \gamma}</script>&lt;/div&gt; is a separated lasso problem (elementwise thresholding)</li>
+  <li>Update multipliers</li>
 </ul>
+<div><script type="math/tex; mode=display">{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)})</script></div>
 
-<p>Same algorithm applies to a general regularization matrix <script type="math/tex">{\bf D}</script> (generalized lasso)</p>
+<p>Same algorithm applies to a general regularization matrix &lt;div&gt;<script type="math/tex">{\bf D}</script>&lt;/div&gt; (generalized lasso)</p>
 
 <h2 id="remarks-on-admm">Remarks on ADMM</h2>
 

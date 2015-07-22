@@ -46,18 +46,18 @@
 
 <p>再生核的定义</p>
 
-<p>Definition. <script type="math/tex">k: \mathcal{X} \times \mathcal{X} \rightarrow \Re </script> is a kernel if</p>
+<p>Definition. &lt;div&gt;<script type="math/tex">k: \mathcal{X} \times \mathcal{X} \rightarrow \Re </script>&lt;/div&gt; is a kernel if</p>
 
 <ol>
   <li>
-    <p>核函数 <script type="math/tex">k</script>  对称 isymmetric: <script type="math/tex">k(x,y)=k(y,x)</script>.</p>
+    <p>核函数 &lt;div&gt;<script type="math/tex">k</script>&lt;/div&gt;  对称 isymmetric: &lt;div&gt;<script type="math/tex">k(x,y)=k(y,x)</script>&lt;/div&gt;.</p>
   </li>
   <li>
-    <p>核函数 <script type="math/tex">k</script> 半正定 positive semi-definite</p>
+    <p>核函数 &lt;div&gt;<script type="math/tex">k</script>&lt;/div&gt; 半正定 positive semi-definite</p>
   </li>
 </ol>
 
-<p>i.e., <script type="math/tex">\forall x_1, x_2, \ldots , x_n \in \mathcal{X}</script>, the “Gram Matrix” <script type="math/tex">K</script> defined by <script type="math/tex">K_{ij} =  k(x_i,x_j)</script> is positive semi-definite. (A matrix <script type="math/tex">M \in \Re^{n \times n}</script> is positive semi-definite if <script type="math/tex">\forall a \in \Re^n</script>, <script type="math/tex">a' M a \ge 0</script>.)</p>
+<p>i.e., &lt;div&gt;<script type="math/tex">\forall x_1, x_2, \ldots , x_n \in \mathcal{X}</script>&lt;/div&gt;, the “Gram Matrix” &lt;div&gt;<script type="math/tex">K</script>&lt;/div&gt; defined by &lt;div&gt;<script type="math/tex">K_{ij} =  k(x_i,x_j)</script>&lt;/div&gt; is positive semi-definite. (A matrix &lt;div&gt;<script type="math/tex">M \in \Re^{n \times n}</script>&lt;/div&gt; is positive semi-definite if &lt;div&gt;<script type="math/tex">\forall a \in \Re^n</script>&lt;/div&gt;, &lt;div&gt;<script type="math/tex">a' M a \ge 0</script>&lt;/div&gt;.)</p>
 
 </div>
       </li>
@@ -66,10 +66,10 @@
       	<hr class="slender">
       	<a href="//www.quxiaofeng.me/optimization/2015/07/18/alternating-direction-method-multipliers/"><h4 class="contrast">Alternating Direction Method of Multipliers (ADMM)</h4></a>
       	<span class="smaller">July 18, 2015</span>  <br/>
-		<div><p>Consider minimizing <script type="math/tex"> f({\bf x}) + g({\bf y}) </script> subject to affine constraints <script type="math/tex"> {\bf Ax} + {\bf By} = {\bf c} </script></p>
+		<div><p>Consider minimizing &lt;div&gt;<script type="math/tex"> f({\bf x}) + g({\bf y}) </script>&lt;/div&gt; subject to affine constraints &lt;div&gt;<script type="math/tex"> {\bf Ax} + {\bf By} = {\bf c} </script>&lt;/div&gt;</p>
 
-<p><strong>The augmented Lagrangian</strong><br />
-<script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 </script></p>
+<p><strong>The augmented Lagrangian</strong></p>
+<div><script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 </script></div>
 
 </div>
       </li>
@@ -80,18 +80,18 @@
       	<span class="smaller">July 17, 2015</span>  <br/>
 		<div><p>Consider minimizing:</p>
 
-<script type="math/tex"> f({\bf x}) </script>
-<p>subject to equality constraints <script type="math/tex"> g_i({\bf x}) = 0 </script> for <script type="math/tex">i=1, \ldots ,q</script></p>
+<div><script type="math/tex"> f({\bf x}) </script></div>
+<p>subject to equality constraints &lt;div&gt;<script type="math/tex"> g_i({\bf x}) = 0 </script>&lt;/div&gt; for &lt;div&gt;<script type="math/tex">i=1, \ldots ,q</script>&lt;/div&gt;</p>
 
 <p>Inequality constraints are ignored for simplicity</p>
 
-<p>Assume <script type="math/tex">f</script> and <script type="math/tex">g_i</script> are smooth for simplicity</p>
+<p>Assume &lt;div&gt;<script type="math/tex">f</script>&lt;/div&gt; and &lt;div&gt;<script type="math/tex">g_i</script>&lt;/div&gt; are smooth for simplicity</p>
 
 <p>At a constrained minimum, the Lagrange multiplier condition</p>
 
-<script type="math/tex; mode=display">  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  </script>
+<div><script type="math/tex; mode=display">  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  </script></div>
 
-<p>holds provided <script type="math/tex">\nabla g_i({\bf x})</script> are linearly independent</p>
+<p>holds provided &lt;div&gt;<script type="math/tex">\nabla g_i({\bf x})</script>&lt;/div&gt; are linearly independent</p>
 
 </div>
       </li>
@@ -109,7 +109,7 @@
       	<hr class="slender">
       	<a href="//www.quxiaofeng.me/optimization/2015/05/21/solving-sparse/"><h4 class="contrast">稀疏编码的优化问题</h4></a>
       	<span class="smaller">May 21, 2015</span>  <br/>
-		<div><p>稀疏编码问题：  <script type="math/tex"> \arg\min_x f(x)\left\|y-Ax\right\|^2+ \lambda\|x\|_1 </script></p>
+		<div><p>稀疏编码问题：  &lt;div&gt;<script type="math/tex"> \arg\min_x f(x)\left\|y-Ax\right\|^2+ \lambda\|x\|_1 </script>&lt;/div&gt;</p>
 
 <p>用 alternating minimization (ADM)</p>
 
@@ -130,7 +130,7 @@
 
 <p><span class="newthought">least entropy &amp; error correction</span></p>
 
-<p>Question 1: <script type="math/tex"> \arg \min \|x\|_1 + \|e\|_1 </script> subj. to <script type="math/tex"> y=Ax+e </script></p>
+<p>Question 1: &lt;div&gt;<script type="math/tex"> \arg \min \|x\|_1 + \|e\|_1 </script>&lt;/div&gt; subj. to &lt;div&gt;<script type="math/tex"> y=Ax+e </script>&lt;/div&gt;</p>
 
 <p>标准 linear programming</p>
 
