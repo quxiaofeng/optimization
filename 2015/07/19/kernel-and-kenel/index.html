@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Kernel and Kernel: Reproducing Kernel Hilbert Space and Kernel Method | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="Kernel再生核的定义Definition. &lt;div&gt;&lt;/div&gt; is a kernel if      核函数 &lt;div&gt;&lt;/div&gt;  对称 isymmetric: &lt;div&gt;&lt;/div&gt;.        核函数 &lt;div&g...">
+  <meta name="description" content="Kernel再生核的定义Definition.  is a kernel if      核函数   对称 isymmetric: .        核函数  半正定 positive semi-definite  i.e., , the “Gram Matrix”  defined by  is positiv...">
 
 
   <link rel="stylesheet" href="//www.quxiaofeng.me/optimization/css/tufte.css">	
@@ -43,18 +43,18 @@
 
 <p>再生核的定义</p>
 
-<p>Definition. &lt;div&gt;<script type="math/tex">k: \mathcal{X} \times \mathcal{X} \rightarrow \Re </script>&lt;/div&gt; is a kernel if</p>
+<p>Definition. <script type="math/tex">k: \mathcal{X} \times \mathcal{X} \rightarrow \Re </script> is a kernel if</p>
 
 <ol>
   <li>
-    <p>核函数 &lt;div&gt;<script type="math/tex">k</script>&lt;/div&gt;  对称 isymmetric: &lt;div&gt;<script type="math/tex">k(x,y)=k(y,x)</script>&lt;/div&gt;.</p>
+    <p>核函数 <script type="math/tex">k</script>  对称 isymmetric: <script type="math/tex">k(x,y)=k(y,x)</script>.</p>
   </li>
   <li>
-    <p>核函数 &lt;div&gt;<script type="math/tex">k</script>&lt;/div&gt; 半正定 positive semi-definite</p>
+    <p>核函数 <script type="math/tex">k</script> 半正定 positive semi-definite</p>
   </li>
 </ol>
 
-<p>i.e., &lt;div&gt;<script type="math/tex">\forall x_1, x_2, \ldots , x_n \in \mathcal{X}</script>&lt;/div&gt;, the “Gram Matrix” &lt;div&gt;<script type="math/tex">K</script>&lt;/div&gt; defined by &lt;div&gt;<script type="math/tex">K_{ij} =  k(x_i,x_j)</script>&lt;/div&gt; is positive semi-definite. (A matrix &lt;div&gt;<script type="math/tex">M \in \Re^{n \times n}</script>&lt;/div&gt; is positive semi-definite if &lt;div&gt;<script type="math/tex">\forall a \in \Re^n</script>&lt;/div&gt;, &lt;div&gt;<script type="math/tex">a' M a \ge 0</script>&lt;/div&gt;.)</p>
+<p>i.e., <script type="math/tex">\forall x_1, x_2, \ldots , x_n \in \mathcal{X}</script>, the “Gram Matrix” <script type="math/tex">K</script> defined by <script type="math/tex">K_{ij} =  k(x_i,x_j)</script> is positive semi-definite. (A matrix <script type="math/tex">M \in \Re^{n \times n}</script> is positive semi-definite if <script type="math/tex">\forall a \in \Re^n</script>, <script type="math/tex">a' M a \ge 0</script>.)</p>
 
 <!--more-->
 
@@ -64,10 +64,10 @@
 
 <h2 id="reproducing-kernel-feature-map">Reproducing Kernel Feature Map</h2>
 
-<p>再生核特征映射</p>
-<div><script type="math/tex; mode=display">\Phi_x(\cdot) \triangleq k(\cdot,x) </script></div>
+<p>再生核特征映射<br />
+<script type="math/tex; mode=display">\Phi_x(\cdot) \triangleq k(\cdot,x) </script></p>
 
-<p>即对任意线性泛函&lt;div&gt;<script type="math/tex"> \Phi(\cdot) </script>&lt;/div&gt;, &lt;div&gt;<script type="math/tex"> \exists x_\Phi \in H </script>&lt;/div&gt;, 使得 &lt;div&gt;<script type="math/tex"> \Phi(\cdot) = (\cdot, x_\Phi) </script>&lt;/div&gt;</p>
+<p>即对任意线性泛函<script type="math/tex"> \Phi(\cdot) </script>, <script type="math/tex"> \exists x_\Phi \in H </script>, 使得 <script type="math/tex"> \Phi(\cdot) = (\cdot, x_\Phi) </script></p>
 
 <p>To be continued…</p>
 
