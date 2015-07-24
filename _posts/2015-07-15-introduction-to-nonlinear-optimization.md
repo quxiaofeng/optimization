@@ -60,4 +60,4 @@ categories:
 **Lemma 1.5** 柯西 - 施瓦茨不等式 Cauchy-Schwarz inequality {% m %} \text{ For any } {\bf x}, {\bf y} \in \Re^n,{% em %}
 {% math %}|{\bf x}^T{\bf y}| \le \|{\bf x}\|_2 \cdot \|{\bf y}\|_2 {% endmath %}
 
-{% m %} \text{ Equality is satisfied if and only if } {\bf x} \text{ and } {\bf y} \text{ are linearly dependent.} {% em %}
+{% math %} \text{ Equality is satisfied if and only if } {\bf x} \text{ and } {\bf y} \text{ are linearly dependent.} {% endmath %}
