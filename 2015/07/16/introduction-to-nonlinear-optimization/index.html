@@ -45,31 +45,30 @@
 
 <h2 id="table-of-content-">Table of Content 目录</h2>
 
-<ol>
-  <li>Mathematical Preliminaries 数学基础</li>
-  <li>Optimality Conditions for Unconstrained Optimization 无约束优化问题的优化条件</li>
-  <li>Least Squares 最小二乘问题</li>
-  <li>The Gradient Method 梯度下降法</li>
-  <li>Newton’s Method 牛顿法</li>
-  <li>Convex Sets 凸集</li>
-  <li>Convex Functions 凸函数</li>
-  <li>Convex Optimization 凸优化</li>
-  <li>Optimization over a Convex Set 凸集上的优化问题</li>
-  <li>Optimality Conditions for Linearly Constrained Problems 线性约束问题的优化条件</li>
-  <li>The KKT Conditions 库恩塔克条件</li>
-  <li>Duality 对偶问题</li>
-</ol>
+<p><strong>1.</strong> Mathematical Preliminaries 数学基础<br />
+<strong>2.</strong> Optimality Conditions for Unconstrained Optimization 无约束优化问题的优化条件<br />
+<strong>3.</strong> Least Squares 最小二乘问题<br />
+<strong>4.</strong> The Gradient Method 梯度下降法<br />
+<strong>5.</strong> Newton’s Method 牛顿法<br />
+<strong>6.</strong> Convex Sets 凸集<br />
+<strong>7.</strong> Convex Functions 凸函数<br />
+<strong>8.</strong> Convex Optimization 凸优化<br />
+<strong>9.</strong> Optimization over a Convex Set 凸集上的优化问题<br />
+<strong>10.</strong> Optimality Conditions for Linearly Constrained Problems 线性约束问题的优化条件<br />
+<strong>11.</strong> The KKT Conditions 库恩塔克条件<br />
+<strong>12.</strong> Duality 对偶问题</p>
 
 <h2 id="section">第一章 数学基础</h2>
 
 <p><strong>Definition 1.1</strong> 内积 inner product <script type="math/tex">\langle\cdot,\cdot\rangle:=\Re^n \times \Re^n \rightarrow \Re</script></p>
 
-<ol>
-  <li>交换率 symmetry <script type="math/tex">\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle</script> for any <script type="math/tex">{\bf x},{\bf y} \in \Re^n </script></li>
-  <li>分配率 additivity <script type="math/tex">\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle</script> for any <script type="math/tex">{\bf x},{\bf y},{\bf z} \in \Re^n </script></li>
-  <li>线性 homogeneity <script type="math/tex">\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle</script> for any <script type="math/tex">\lambda\in \Re </script> and <script type="math/tex">{\bf x},{\bf y} \in \Re^n</script></li>
-  <li>正定 positive definiteness <script type="math/tex">\langle{\bf x},{\bf x}\rangle\ge0</script> for any <script type="math/tex">{\bf x}\in \Re^n</script> and <script type="math/tex">\langle{\bf x},{\bf x}\rangle=0</script> if and only if <script type="math/tex">{\bf x}={\bf 0} \; \blacksquare</script></li>
-</ol>
+<p><strong>1.</strong> 交换率 symmetry <script type="math/tex">\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle</script> for any <script type="math/tex">{\bf x},{\bf y} \in \Re^n </script></p>
+
+<p><strong>2.</strong> 分配率 additivity <script type="math/tex">\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle</script> for any <script type="math/tex">{\bf x},{\bf y},{\bf z} \in \Re^n </script></p>
+
+<p><strong>3.</strong> 线性 homogeneity <script type="math/tex">\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle</script> for any <script type="math/tex">\lambda\in \Re </script> and <script type="math/tex">{\bf x},{\bf y} \in \Re^n</script></p>
+
+<p><strong>4.</strong> 正定 positive definiteness <script type="math/tex">\langle{\bf x},{\bf x}\rangle\ge0</script> for any <script type="math/tex">{\bf x}\in \Re^n</script> and <script type="math/tex">\langle{\bf x},{\bf x}\rangle=0</script> if and only if <script type="math/tex">{\bf x}={\bf 0} \; \blacksquare</script></p>
 
 <p><strong>Example 1.2</strong> 最常见的内积就是点积 dot product<br />
 <script type="math/tex; mode=display">\langle{\bf x},{\bf y}\rangle={\bf x}^T{\bf y}=\sum^n_{i=1}x_iy_i \text{ for any } {\bf x},{\bf y} \in \Re^n </script><br />
@@ -80,17 +79,23 @@
 
 <p><strong>Definition 1.4</strong> Norm 范数 一个定义在实数向量集 <script type="math/tex">\Re^n </script> 上的范数 <script type="math/tex">\|\cdot\| </script> 是一个满足如下条件，形如 <script type="math/tex">\| \cdot \| : \Re^n \rightarrow \Re </script> 的函数</p>
 
-<ol>
-  <li>非负性 nonnegativity <script type="math/tex"> \|{\bf x}\| \ge 0 \text{ for any } {\bf x} \in \Re^n \text{ and } \|{\bf x}\| = 0 \text{ if and only if } {\bf x} = {\bf 0} </script></li>
-  <li>正线性 positive homogeneity <script type="math/tex"> |\lambda {\bf x}\| = |\lambda| \|{\bf x}\| \text{ for any } {\bf x} \in \Re^n \text{ and } \lambda \in \Re</script></li>
-  <li>三角不等 triangle inequality  <script type="math/tex"> \|{\bf x} + {\bf y}\| \le \|{\bf x}\| + \|{\bf y}\| \text{ for any } {\bf x},{\bf y} \in \Re^n</script></li>
-</ol>
+<p><strong>1.</strong> 非负性 nonnegativity <script type="math/tex"> \|{\bf x}\| \ge 0 \text{ for any } {\bf x} \in \Re^n \text{ and } \|{\bf x}\| = 0 \text{ if and only if } {\bf x} = {\bf 0} </script></p>
+
+<p><strong>2.</strong> 正线性 positive homogeneity <script type="math/tex"> |\lambda {\bf x}\| = |\lambda| \|{\bf x}\| \text{ for any } {\bf x} \in \Re^n \text{ and } \lambda \in \Re</script></p>
+
+<p><strong>3.</strong> 三角不等 triangle inequality  <script type="math/tex"> \|{\bf x} + {\bf y}\| \le \|{\bf x}\| + \|{\bf y}\| \text{ for any } {\bf x},{\bf y} \in \Re^n</script></p>
 
 <p>相应的，<script type="math/tex"> p </script> 范数定位为<br />
 <script type="math/tex; mode=display"> \ell_p \equiv \|{\bf x}\|_p \equiv \sqrt[p]{\sum^n_{i=1}|x_i|^p} \text{ , for }  p \ge 1 </script></p>
 
-<p>类似的，<script type="math/tex">\infty </script> 范数定义为 <br />
+<p>类似的，<script type="math/tex">\infty </script> 范数定义为<br />
 <script type="math/tex; mode=display"> \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \rightarrow \infty} \|{\bf x}\|_p \; \blacksquare</script></p>
+
+<p><strong>Lemma 1.5</strong> 柯西 - 施瓦茨不等式 Cauchy-Schwarz inequality <script type="math/tex"> \text{ For any } {\bf x}, {\bf y} \in \Re^n,</script><br />
+<script type="math/tex; mode=display">|{\bf x}^T{\bf y}| \le \|{\bf x}\|_2 \cdot \|{\bf y}\|_2 </script></p>
+
+<script type="math/tex"> \text{ Equality is satisfied if and only if } {\bf x} \text{ and } {\bf y} \text{ are linearly dependent.} </script>
+
 
 
 
