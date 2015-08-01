@@ -26,47 +26,49 @@ categories:
 
 ## 第一章 数学基础
 
-**Definition 1.1** 内积 inner product {%m%}\langle\cdot,\cdot\rangle:=\Re^n \times \Re^n \rightarrow \Re{%em%}
+**Definition 1.1 内积** inner product {%m%}\langle\cdot,\cdot\rangle:=\Re^n \times \Re^n \to \Re{%em%}
 
-**1.** 交换率 symmetry {% m %}\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle{% em %} 对于任何 {% m %}{\bf x},{\bf y} \in \Re^n {% em %}
+**1. 对称性** symmetry {% m %}\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle{% em %} 对于任何 {% m %}{\bf x},{\bf y} \in \Re^n {% em %}
 
-**2.** 分配率 additivity {%m%}\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle{%em%} 对于任何 {% m %}{\bf x},{\bf y},{\bf z} \in \Re^n {% em %}
+**2. 可加性** additivity {%m%}\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle{%em%} 对于任何 {% m %}{\bf x},{\bf y},{\bf z} \in \Re^n {% em %}
 
-**3.** 线性 homogeneity {%m%}\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle{%em%} 对于任何 {%m%}\lambda\in \Re {%em%} 及 {%m%}{\bf x},{\bf y} \in \Re^n{%em%}
+**3. 线性** homogeneity {%m%}\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle{%em%} 对于任何 {%m%}\lambda\in \Re {%em%} 及 {%m%}{\bf x},{\bf y} \in \Re^n{%em%}
 
-**4.** 正定 positive definiteness 对于任意 {%m%}{\bf x}\in \Re^n{%em%}， {%m%}\langle{\bf x},{\bf x}\rangle\ge0{%em%}；当且仅当 {%m%}{\bf x}={\bf 0}{%em%} 时，{%m%}\langle{\bf x},{\bf x}\rangle=0{%em%}。 {%m%}\tag*{$\blacksquare$}{%em%}
+**4. 正定性** positive definiteness 对于任意 {%m%}{\bf x}\in \Re^n{%em%}， {%m%}\langle{\bf x},{\bf x}\rangle\ge0{%em%}；当且仅当 {%m%}{\bf x}={\bf 0}{%em%} 时，{%m%}\langle{\bf x},{\bf x}\rangle=0{%em%}。 {%m%}\tag*{$\blacksquare$}{%em%}
 
-**Example 1.2** 最常见的内积就是点积 dot product
+**Example 1.2 最常见的内积就是点积** dot product
 {%math%}\langle{\bf x},{\bf y}\rangle={\bf x}^T{\bf y}=\sum^n_{i=1}x_iy_i \text{ for any } {\bf x},{\bf y} \in \Re^n {%endmath%}
 点积是标准内积，当不明确说明时，默认内积就是点积。{%m%}\tag*{$\blacksquare$}{%em%}
 
-**Example 1.3** 加权点积是 {% m %}\Re^n {% em %} 空间中另一个内积的例子，其中权重 {% m %}{\bf w}\in \Re^n_{++} {% em %}。
+**Example 1.3 加权点积** weighted dot norm 是 {% m %}\Re^n {% em %} 空间中另一个内积的例子，其中权重 {% m %}{\bf w}\in \Re^n_{++} {% em %}。
 {% math%} \langle {\bf x},{\bf y} \rangle_{\bf w} = \sum^n_{i=1}w_ix_iy_i \; \tag*{$\blacksquare$}{% endmath %}
 
-**Definition 1.4** Norm 范数 一个定义在实数向量集 {% m %}\Re^n {% em %} 上的范数 {% m %}\|\cdot\| {% em %} 是一个满足如下条件，形如 {% m %}\| \cdot \| : \Re^n \rightarrow \Re {% em %} 的函数
+**Definition 1.4 范数** Norm 一个定义在实数向量集 {% m %}\Re^n {% em %} 上的范数 {% m %}\|\cdot\| {% em %} 是一个满足如下条件，形如 {% m %}\| \cdot \| : \Re^n \to \Re {% em %} 的函数
 
-**1.** 非负性 nonnegativity {% m %} \|{\bf x}\| \ge 0 \text{ for any } {\bf x} \in \Re^n \text{ and } \|{\bf x}\| = 0 \text{ if and only if } {\bf x} = {\bf 0} {% em %}
+**1. 非负性** nonnegativity {% m %} \|{\bf x}\| \ge 0 \text{ for any } {\bf x} \in \Re^n \text{ and } \|{\bf x}\| = 0 \text{ if and only if } {\bf x} = {\bf 0} {% em %}
 
-**2.** 正线性 positive homogeneity {% m %} |\lambda {\bf x}\| = |\lambda| \|{\bf x}\| \text{ for any } {\bf x} \in \Re^n \text{ and } \lambda \in \Re{% em %}
+**2. 正线性** positive homogeneity {% m %} |\lambda {\bf x}\| = |\lambda| \|{\bf x}\| \text{ for any } {\bf x} \in \Re^n \text{ and } \lambda \in \Re{% em %}
 
-**3.** 三角不等 triangle inequality  {% m %} \|{\bf x} + {\bf y}\| \le \|{\bf x}\| + \|{\bf y}\| \text{ for any } {\bf x},{\bf y} \in \Re^n{% em %}
+**3. 三角不等** triangle inequality  {% m %} \|{\bf x} + {\bf y}\| \le \|{\bf x}\| + \|{\bf y}\| \text{ for any } {\bf x},{\bf y} \in \Re^n{% em %}
 
- 相应的，{% m %} p {% em %} 范数定位为
+相应的，{% m %} p {% em %} 范数定位为
 {% math %} \ell_p \equiv \|{\bf x}\|_p \equiv \sqrt[p]{\sum^n_{i=1}|x_i|^p} \text{ , for }  p \ge 1 {% endmath%}
 
- 类似的，无穷范数 {% m %}\infty {% em %} 定义为
-{% math %} \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \rightarrow \infty} \|{\bf x}\|_p \;{% endmath%}
+类似的，无穷范数 {% m %}\infty {% em %} 定义为
+{% math %} \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \to \infty} \|{\bf x}\|_p \;{% endmath%}
 即最大绝对值。
 
 1 范数 {%m%}\|{\bf x}\|_1{%em%} 即为绝对值之和 {%m%}\sum^n_{i=1}|x_i|{%em%}。 {%m%}\tag*{$\blacksquare$}{%em%}
 
-**Lemma 1.5** 柯西 - 施瓦茨不等式 Cauchy-Schwarz inequality {% m %} \text{ For any } {\bf x}, {\bf y} \in \Re^n,{% em %}
+**Lemma 1.5 柯西 - 施瓦茨不等式** Cauchy-Schwarz inequality {% m %} \text{ For any } {\bf x}, {\bf y} \in \Re^n,{% em %}
 {% math %}|{\bf x}^T{\bf y}| \le \|{\bf x}\|_2 \cdot \|{\bf y}\|_2 {% endmath %}
 
-等号在且仅在  {%m%}{\bf x}{%em%} 和 {%m%}{\bf y}{%em%} 线性相关时成立。 {%m%}\tag*{$\blacksquare$}{%em%}
+等号在且仅在 {%m%}{\bf x}{%em%} 和 {%m%}{\bf y}{%em%} 线性相关时成立。 {%m%}\tag*{$\blacksquare$}{%em%}
 
-**Definition 1.6** 矩阵的范数 一个定义在{%m%}\Re^{m \times n}{%em%}空间上的范数{%m%}\|\cdot\|{%em%} 是一个形如 {%m%}\|\cdot\|:\Re^{m \times n} \to \Re{%em%}，且满足如下性质的函数。
+**Definition 1.6 矩阵的范数** matrix norms 一个定义在{%m%}\Re^{m \times n}{%em%} 空间上的范数 {%m%}\|\cdot\|{%em%} 是一个形如 {%m%}\|\cdot\|:\Re^{m \times n} \to \Re{%em%}，且满足如下性质的函数。
 
-**1.** 非负性 对于任何 {%m%}{\bf A} \in \Re^{m \times n}{%em%}, {%m%}\|{\bf A}\| \ge 0{%em%}
-**2.** 正线性
-**3.** 三角不等式 {%m%}\tag*{$\blacksquare$}{%em%}
+**1. 非负性** nonnegativity 对于任意 {%m%}{\bf A} \in \Re^{m \times n}{%em%}, {%m%}\|{\bf A}\| \ge 0{%em%}；同时，当且仅当 {%m%}{\bf A} = {\bf 0}{%em%} 时，{%m%}\|{\bf A}\| = 0{%em%}。
+
+**2. 正线性** positive homogeneity 对于任意 {%m%}{\bf A} \in \Re^{m \times n}{%em%} 和 {%m%}\lambda \in \Re{%em%}，{%m%}\|\lambda{\bf A}\| = |\lambda| \cdot \|{\bf A}\|{%em%}。
+
+**3. 三角不等式** triangle inequality 对于任意 {%m%}{\bf A},{\bf B} \in \Re^{m \times n}{%em%}，{%m%}\|{\bf A} + {\bf B}\| \le \|{\bf A}\| + \|{\bf B}\|{%em%}。{%m%}\tag*{$\blacksquare$}{%em%}
