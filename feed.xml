@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 01 Aug 2015 11:54:44 +0800</pubDate>
-    <lastBuildDate>Sat, 01 Aug 2015 11:54:44 +0800</lastBuildDate>
+    <pubDate>Sat, 01 Aug 2015 12:07:24 +0800</pubDate>
+    <lastBuildDate>Sat, 01 Aug 2015 12:07:24 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -243,7 +243,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 线性 homogeneity &lt;script type=&quot;math/tex&quot;&gt;\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle&lt;/script&gt; 对于任何 &lt;script type=&quot;math/tex&quot;&gt;\lambda\in \Re &lt;/script&gt; 及 &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y} \in \Re^n&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; 正定 positive definiteness 对于任意 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}\in \Re^n&lt;/script&gt;， &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle\ge0&lt;/script&gt; 而且，当且仅当 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}={\bf 0}&lt;/script&gt; 时，&lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle=0&lt;/script&gt;。 &lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; 正定 positive definiteness 对于任意 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}\in \Re^n&lt;/script&gt;， &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle\ge0&lt;/script&gt;；当且仅当 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}={\bf 0}&lt;/script&gt; 时，&lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle=0&lt;/script&gt;。 &lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Example 1.2&lt;/strong&gt; 最常见的内积就是点积 dot product&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\langle{\bf x},{\bf y}\rangle={\bf x}^T{\bf y}=\sum^n_{i=1}x_iy_i \text{ for any } {\bf x},{\bf y} \in \Re^n &lt;/script&gt;&lt;/p&gt;
