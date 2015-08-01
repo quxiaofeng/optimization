@@ -34,11 +34,11 @@ categories:
 
 **3.** 线性 homogeneity {%m%}\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle{%em%} for any {%m%}\lambda\in \Re {%em%} and {%m%}{\bf x},{\bf y} \in \Re^n{%em%}
 
-**4.** 正定 positive definiteness {%m%}\langle{\bf x},{\bf x}\rangle\ge0{%em%} for any {%m%}{\bf x}\in \Re^n{%em%} and {%m%}\langle{\bf x},{\bf x}\rangle=0{%em%} if and only if {%m%}{\bf x}={\bf 0} \; \blacksquare{%em%}
+**4.** 正定 positive definiteness {%m%}\langle{\bf x},{\bf x}\rangle\ge0{%em%} for any {%m%}{\bf x}\in \Re^n{%em%} and {%m%}\langle{\bf x},{\bf x}\rangle=0{%em%} if and only if {%m%}{\bf x}={\bf 0} \; \tag*{$\blacksquare$}{%em%}
 
 **Example 1.2** 最常见的内积就是点积 dot product
 {%math%}\langle{\bf x},{\bf y}\rangle={\bf x}^T{\bf y}=\sum^n_{i=1}x_iy_i \text{ for any } {\bf x},{\bf y} \in \Re^n {%endmath%}
-点积是标准内积，当不明确说明时，默认内积就是点积。{%m%}\blacksquare{%em%}
+点积是标准内积，当不明确说明时，默认内积就是点积。{%m%}\tag*{$\blacksquare$}{%em%}
 
 **Example 1.3** 加权点积是 {% m %}\Re^n {% em %} 空间中另一个内积的例子，其中权重 {% m %}{\bf w}\in \Re^n_{++} {% em %}。
 {% math%} \langle {\bf x},{\bf y} \rangle_{\bf w} = \sum^n_{i=1}w_ix_iy_i \; \qquads \blacksquare{% endmath %}
@@ -63,4 +63,4 @@ categories:
 **Lemma 1.5** 柯西 - 施瓦茨不等式 Cauchy-Schwarz inequality {% m %} \text{ For any } {\bf x}, {\bf y} \in \Re^n,{% em %}
 {% math %}|{\bf x}^T{\bf y}| \le \|{\bf x}\|_2 \cdot \|{\bf y}\|_2 {% endmath %}
 
-{% math %} \text{ 等号在且仅在 } {\bf x} \text{ 和 } {\bf y} \text{ 线性相关时成立。 } \blacksquare {% endmath %}
+等号在且仅在  {%m%}{\bf x}{%em%} 和 {%m%}{\bf y}{%em%} 线性相关时成立。 {%m%}\qquads\blacksquare{%em%}
