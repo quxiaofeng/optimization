@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 01 Aug 2015 22:16:20 +0800</pubDate>
-    <lastBuildDate>Sat, 01 Aug 2015 22:16:20 +0800</lastBuildDate>
+    <pubDate>Sat, 01 Aug 2015 22:54:29 +0800</pubDate>
+    <lastBuildDate>Sat, 01 Aug 2015 22:54:29 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -260,14 +260,14 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;p&gt;&lt;strong&gt;3. 三角不等&lt;/strong&gt; triangle inequality  &lt;script type=&quot;math/tex&quot;&gt; \|{\bf x} + {\bf y}\| \le \|{\bf x}\| + \|{\bf y}\| \text{ for any } {\bf x},{\bf y} \in \Re^n&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;相应的，&lt;script type=&quot;math/tex&quot;&gt; p &lt;/script&gt; 范数定位为&lt;/p&gt;
+&lt;p&gt;相应的，&lt;script type=&quot;math/tex&quot;&gt; p &lt;/script&gt; 范数 p-norm 定位为&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \ell_p \equiv \|{\bf x}\|_p \equiv \sqrt[p]{\sum^n_{i=1}|x_i|^p} \text{ , for }  p \ge 1 &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;类似的，无穷范数 &lt;script type=&quot;math/tex&quot;&gt;\infty &lt;/script&gt; 定义为&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \to \infty} \|{\bf x}\|_p \;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\cdots,n}|x_i|=\lim_{p \to \infty} \|{\bf x}\|_p \;&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;即最大绝对值。&lt;/p&gt;
 
-&lt;p&gt;1 范数 &lt;script type=&quot;math/tex&quot;&gt;\|{\bf x}\|_1&lt;/script&gt; 即为绝对值之和 &lt;script type=&quot;math/tex&quot;&gt;\sum^n_{i=1}|x_i|&lt;/script&gt;。 &lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;1-范数 1-norm &lt;script type=&quot;math/tex&quot;&gt;\|{\bf x}\|_1&lt;/script&gt; 即为绝对值之和 &lt;script type=&quot;math/tex&quot;&gt;\sum^n_{i=1}|x_i|&lt;/script&gt;。 &lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Lemma 1.5 柯西 - 施瓦茨不等式&lt;/strong&gt; Cauchy-Schwarz inequality &lt;script type=&quot;math/tex&quot;&gt; \text{ For any } {\bf x}, {\bf y} \in \Re^n,&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;|{\bf x}^T{\bf y}| \le \|{\bf x}\|_2 \cdot \|{\bf y}\|_2 &lt;/script&gt;&lt;/p&gt;
@@ -280,7 +280,28 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;p&gt;&lt;strong&gt;2. 正线性&lt;/strong&gt; positive homogeneity 对于任意 &lt;script type=&quot;math/tex&quot;&gt;{\bf A} \in \Re^{m \times n}&lt;/script&gt; 和 &lt;script type=&quot;math/tex&quot;&gt;\lambda \in \Re&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;\|\lambda{\bf A}\| = |\lambda| \cdot \|{\bf A}\|&lt;/script&gt;。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;3. 三角不等式&lt;/strong&gt; triangle inequality 对于任意 &lt;script type=&quot;math/tex&quot;&gt;{\bf A},{\bf B} \in \Re^{m \times n}&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;\|{\bf A} + {\bf B}\| \le \|{\bf A}\| + \|{\bf B}\|&lt;/script&gt;。&lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 三角不等式&lt;/strong&gt; triangle inequality 对于任意 &lt;script type=&quot;math/tex&quot;&gt;{\bf A},{\bf B} \in \Re^{m \times n}&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;\|{\bf A} + {\bf B}\| \le \|{\bf A}\| + \|{\bf B}\|&lt;/script&gt;。&lt;/p&gt;
+
+&lt;p&gt;常见的 induced matrix norm &lt;script type=&quot;math/tex&quot;&gt;\| \cdot \|_{a,b}&lt;/script&gt; 定义如下。给定一个矩阵 &lt;script type=&quot;math/tex&quot;&gt;{\bf A} \in \Re^{m \times n}&lt;/script&gt; 和分别定义在 &lt;script type=&quot;math/tex&quot;&gt;\Re^n&lt;/script&gt; 及 &lt;script type=&quot;math/tex&quot;&gt;\Re^m&lt;/script&gt; 上的两个范数 &lt;script type=&quot;math/tex&quot;&gt;\| \cdot \|_a&lt;/script&gt; 和 &lt;script type=&quot;math/tex&quot;&gt;\| \codt \|_b&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;\| {\bf A} \|_{a,b}&lt;/script&gt; 即为&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\| {\bf A} \|_{a,b} = \max_{\bf x}\{ \| {\bf Ax} \|_b : \| {\bf x} \|_a \le 1 \} &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;从定义可以看出，对于任意 &lt;script type=&quot;math/tex&quot;&gt;{\bf x} \in \Re^n&lt;/script&gt; 以下不等式均成立&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\| {\bf Ax} \|_b = \| {\bf A} \|_{a,b}  \| {\bf x} \|_a \tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1.7 谱范数&lt;/strong&gt; spectral norm&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1.8 1-范数&lt;/strong&gt; 1-norm 又称为最大列绝对值和范数&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1.9 无穷范数&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;\inf&lt;/script&gt;-norm 又称为最大行绝对值和范数&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Frobenius 范数是一个非 induced 范数的矩阵范数的例子，定义如下。&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\| {\bf A} \|_F = \sqrt{\sum^m_{i=1} \sum^n_{j=1}A^2_{ij}}, \; {\bf A} \in \Re^{m \times n} \tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 16 Jul 2015 05:22:17 +0800</pubDate>
         <link>http://www.quxiaofeng.me/optimization/2015/07/16/introduction-to-nonlinear-optimization/</link>

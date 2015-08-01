@@ -85,14 +85,14 @@
 
 <p><strong>3. 三角不等</strong> triangle inequality  <script type="math/tex"> \|{\bf x} + {\bf y}\| \le \|{\bf x}\| + \|{\bf y}\| \text{ for any } {\bf x},{\bf y} \in \Re^n</script></p>
 
-<p>相应的，<script type="math/tex"> p </script> 范数定位为</p>
+<p>相应的，<script type="math/tex"> p </script> 范数 p-norm 定位为</p>
 <p><script type="math/tex; mode=display"> \ell_p \equiv \|{\bf x}\|_p \equiv \sqrt[p]{\sum^n_{i=1}|x_i|^p} \text{ , for }  p \ge 1 </script></p>
 
 <p>类似的，无穷范数 <script type="math/tex">\infty </script> 定义为</p>
-<p><script type="math/tex; mode=display"> \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \to \infty} \|{\bf x}\|_p \;</script></p>
+<p><script type="math/tex; mode=display"> \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\cdots,n}|x_i|=\lim_{p \to \infty} \|{\bf x}\|_p \;</script></p>
 <p>即最大绝对值。</p>
 
-<p>1 范数 <script type="math/tex">\|{\bf x}\|_1</script> 即为绝对值之和 <script type="math/tex">\sum^n_{i=1}|x_i|</script>。 <script type="math/tex">\tag*{$\blacksquare$}</script></p>
+<p>1-范数 1-norm <script type="math/tex">\|{\bf x}\|_1</script> 即为绝对值之和 <script type="math/tex">\sum^n_{i=1}|x_i|</script>。 <script type="math/tex">\tag*{$\blacksquare$}</script></p>
 
 <p><strong>Lemma 1.5 柯西 - 施瓦茨不等式</strong> Cauchy-Schwarz inequality <script type="math/tex"> \text{ For any } {\bf x}, {\bf y} \in \Re^n,</script></p>
 <p><script type="math/tex; mode=display">|{\bf x}^T{\bf y}| \le \|{\bf x}\|_2 \cdot \|{\bf y}\|_2 </script></p>
@@ -105,7 +105,28 @@
 
 <p><strong>2. 正线性</strong> positive homogeneity 对于任意 <script type="math/tex">{\bf A} \in \Re^{m \times n}</script> 和 <script type="math/tex">\lambda \in \Re</script>，<script type="math/tex">\|\lambda{\bf A}\| = |\lambda| \cdot \|{\bf A}\|</script>。</p>
 
-<p><strong>3. 三角不等式</strong> triangle inequality 对于任意 <script type="math/tex">{\bf A},{\bf B} \in \Re^{m \times n}</script>，<script type="math/tex">\|{\bf A} + {\bf B}\| \le \|{\bf A}\| + \|{\bf B}\|</script>。<script type="math/tex">\tag*{$\blacksquare$}</script></p>
+<p><strong>3. 三角不等式</strong> triangle inequality 对于任意 <script type="math/tex">{\bf A},{\bf B} \in \Re^{m \times n}</script>，<script type="math/tex">\|{\bf A} + {\bf B}\| \le \|{\bf A}\| + \|{\bf B}\|</script>。</p>
+
+<p>常见的 induced matrix norm <script type="math/tex">\| \cdot \|_{a,b}</script> 定义如下。给定一个矩阵 <script type="math/tex">{\bf A} \in \Re^{m \times n}</script> 和分别定义在 <script type="math/tex">\Re^n</script> 及 <script type="math/tex">\Re^m</script> 上的两个范数 <script type="math/tex">\| \cdot \|_a</script> 和 <script type="math/tex">\| \codt \|_b</script>，<script type="math/tex">\| {\bf A} \|_{a,b}</script> 即为</p>
+
+<p><script type="math/tex; mode=display">\| {\bf A} \|_{a,b} = \max_{\bf x}\{ \| {\bf Ax} \|_b : \| {\bf x} \|_a \le 1 \} </script></p>
+
+<p>从定义可以看出，对于任意 <script type="math/tex">{\bf x} \in \Re^n</script> 以下不等式均成立</p>
+
+<p><script type="math/tex; mode=display">\| {\bf Ax} \|_b = \| {\bf A} \|_{a,b}  \| {\bf x} \|_a \tag*{$\blacksquare$}</script></p>
+
+<p><strong>Example 1.7 谱范数</strong> spectral norm<br />
+<script type="math/tex">\tag*{$\blacksquare$}</script></p>
+
+<p><strong>Example 1.8 1-范数</strong> 1-norm 又称为最大列绝对值和范数<br />
+<script type="math/tex">\tag*{$\blacksquare$}</script></p>
+
+<p><strong>Example 1.9 无穷范数</strong> <script type="math/tex">\inf</script>-norm 又称为最大行绝对值和范数<br />
+<script type="math/tex">\tag*{$\blacksquare$}</script></p>
+
+<p>Frobenius 范数是一个非 induced 范数的矩阵范数的例子，定义如下。</p>
+
+<p><script type="math/tex; mode=display">\| {\bf A} \|_F = \sqrt{\sum^m_{i=1} \sum^n_{j=1}A^2_{ij}}, \; {\bf A} \in \Re^{m \times n} \tag*{$\blacksquare$}</script></p>
 
 
 
