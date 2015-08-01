@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 25 Jul 2015 10:51:11 +0800</pubDate>
-    <lastBuildDate>Sat, 25 Jul 2015 10:51:11 +0800</lastBuildDate>
+    <pubDate>Sat, 01 Aug 2015 11:26:12 +0800</pubDate>
+    <lastBuildDate>Sat, 01 Aug 2015 11:26:12 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -263,13 +263,17 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 &lt;p&gt;相应的，&lt;script type=&quot;math/tex&quot;&gt; p &lt;/script&gt; 范数定位为&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \ell_p \equiv \|{\bf x}\|_p \equiv \sqrt[p]{\sum^n_{i=1}|x_i|^p} \text{ , for }  p \ge 1 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;类似的，&lt;script type=&quot;math/tex&quot;&gt;\infty &lt;/script&gt; 范数定义为&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \rightarrow \infty} \|{\bf x}\|_p \; \blacksquare&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;类似的，无穷范数 &lt;script type=&quot;math/tex&quot;&gt;\infty &lt;/script&gt; 定义为&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \rightarrow \infty} \|{\bf x}\|_p \;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;即最大绝对值。&lt;/p&gt;
+
+&lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt;
+&lt;p&gt;范数 &lt;script type=&quot;math/tex&quot;&gt;\|{\bf x}\|_1&lt;/script&gt; 即为绝对值之和 &lt;script type=&quot;math/tex&quot;&gt;\sum^n_{i=1}|x_i|&lt;/script&gt;。 &lt;script type=&quot;math/tex&quot;&gt;\blacksquare&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Lemma 1.5&lt;/strong&gt; 柯西 - 施瓦茨不等式 Cauchy-Schwarz inequality &lt;script type=&quot;math/tex&quot;&gt; \text{ For any } {\bf x}, {\bf y} \in \Re^n,&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;|{\bf x}^T{\bf y}| \le \|{\bf x}\|_2 \cdot \|{\bf y}\|_2 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \text{ Equality is satisfied if and only if } {\bf x} \text{ and } {\bf y} \text{ are linearly dependent.} &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \text{ 等号在且仅在 } {\bf x} \text{ 和 } {\bf y} \text{ 线性相关时成立。 } \blacksquare &lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 16 Jul 2015 05:22:17 +0800</pubDate>
         <link>http://www.quxiaofeng.me/optimization/2015/07/16/introduction-to-nonlinear-optimization/</link>
