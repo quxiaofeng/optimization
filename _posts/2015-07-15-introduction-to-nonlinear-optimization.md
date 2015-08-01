@@ -54,10 +54,13 @@ categories:
  相应的，{% m %} p {% em %} 范数定位为
 {% math %} \ell_p \equiv \|{\bf x}\|_p \equiv \sqrt[p]{\sum^n_{i=1}|x_i|^p} \text{ , for }  p \ge 1 {% endmath%}
 
- 类似的，{% m %}\infty {% em %} 范数定义为
-{% math %} \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \rightarrow \infty} \|{\bf x}\|_p \; \blacksquare{% endmath%}
+ 类似的，无穷范数 {% m %}\infty {% em %} 定义为
+{% math %} \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \rightarrow \infty} \|{\bf x}\|_p \;{% endmath%}
+即最大绝对值。
+
+{%m%}1{%em%} 范数 {%m%}\|{\bf x}\|_1{%em%} 即为绝对值之和 {%m%}\sum^n_{i=1}|x_i|{%em%}。 {%m%}\blacksquare{%em%}
 
 **Lemma 1.5** 柯西 - 施瓦茨不等式 Cauchy-Schwarz inequality {% m %} \text{ For any } {\bf x}, {\bf y} \in \Re^n,{% em %}
 {% math %}|{\bf x}^T{\bf y}| \le \|{\bf x}\|_2 \cdot \|{\bf y}\|_2 {% endmath %}
 
-{% math %} \text{ Equality is satisfied if and only if } {\bf x} \text{ and } {\bf y} \text{ are linearly dependent.} {% endmath %}
+{% math %} \text{ 等号在且仅在 } {\bf x} \text{ 和 } {\bf y} \text{ 线性相关时成立。 } \blacksquare {% endmath %}
