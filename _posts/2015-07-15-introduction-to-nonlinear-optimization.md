@@ -64,3 +64,9 @@ categories:
 {% math %}|{\bf x}^T{\bf y}| \le \|{\bf x}\|_2 \cdot \|{\bf y}\|_2 {% endmath %}
 
 等号在且仅在  {%m%}{\bf x}{%em%} 和 {%m%}{\bf y}{%em%} 线性相关时成立。 {%m%}\tag*{$\blacksquare$}{%em%}
+
+**Definition 1.6** 矩阵的范数 一个定义在{%m%}\Re^{m \times n}{%em%}空间上的范数{%m%}\|\cdot\|{%em%} 是一个形如 {%m%}\|\cdot\|:\Re^{m \times n} \to \Re{%em%}，且满足如下性质的函数。
+
+**1.** 非负性 对于任何 {%m%}{\bf A} \in \Re^{m \times n}{%em%}, {%m%}\|{\bf A}\| \ge 0{%em%}
+**2.** 正线性
+**3.** 三角不等式 {%m%}\tag*{$\blacksquare$}{%em%}
