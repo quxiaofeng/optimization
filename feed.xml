@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 01 Aug 2015 22:54:29 +0800</pubDate>
-    <lastBuildDate>Sat, 01 Aug 2015 22:54:29 +0800</lastBuildDate>
+    <pubDate>Sat, 01 Aug 2015 22:58:02 +0800</pubDate>
+    <lastBuildDate>Sat, 01 Aug 2015 22:58:02 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -282,7 +282,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;p&gt;&lt;strong&gt;3. 三角不等式&lt;/strong&gt; triangle inequality 对于任意 &lt;script type=&quot;math/tex&quot;&gt;{\bf A},{\bf B} \in \Re^{m \times n}&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;\|{\bf A} + {\bf B}\| \le \|{\bf A}\| + \|{\bf B}\|&lt;/script&gt;。&lt;/p&gt;
 
-&lt;p&gt;常见的 induced matrix norm &lt;script type=&quot;math/tex&quot;&gt;\| \cdot \|_{a,b}&lt;/script&gt; 定义如下。给定一个矩阵 &lt;script type=&quot;math/tex&quot;&gt;{\bf A} \in \Re^{m \times n}&lt;/script&gt; 和分别定义在 &lt;script type=&quot;math/tex&quot;&gt;\Re^n&lt;/script&gt; 及 &lt;script type=&quot;math/tex&quot;&gt;\Re^m&lt;/script&gt; 上的两个范数 &lt;script type=&quot;math/tex&quot;&gt;\| \cdot \|_a&lt;/script&gt; 和 &lt;script type=&quot;math/tex&quot;&gt;\| \codt \|_b&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;\| {\bf A} \|_{a,b}&lt;/script&gt; 即为&lt;/p&gt;
+&lt;p&gt;常见的 induced matrix norm &lt;script type=&quot;math/tex&quot;&gt;\| \cdot \|_{a,b}&lt;/script&gt; 定义如下。给定一个矩阵 &lt;script type=&quot;math/tex&quot;&gt;{\bf A} \in \Re^{m \times n}&lt;/script&gt; 和分别定义在 &lt;script type=&quot;math/tex&quot;&gt;\Re^n&lt;/script&gt; 及 &lt;script type=&quot;math/tex&quot;&gt;\Re^m&lt;/script&gt; 上的两个范数 &lt;script type=&quot;math/tex&quot;&gt;\| \cdot \|_a&lt;/script&gt; 和 &lt;script type=&quot;math/tex&quot;&gt;\| \cdot \|_b&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;\| {\bf A} \|_{a,b}&lt;/script&gt; 即为&lt;/p&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\| {\bf A} \|_{a,b} = \max_{\bf x}\{ \| {\bf Ax} \|_b : \| {\bf x} \|_a \le 1 \} &lt;/script&gt;&lt;/p&gt;
 
