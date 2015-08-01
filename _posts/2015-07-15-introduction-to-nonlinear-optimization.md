@@ -41,7 +41,7 @@ categories:
 点积是标准内积，当不明确说明时，默认内积就是点积。{%m%}\blacksquare{%em%}
 
 **Example 1.3** 加权点积是 {% m %}\Re^n {% em %} 空间中另一个内积的例子，其中权重 {% m %}{\bf w}\in \Re^n_{++} {% em %}。
-{% math%} \langle {\bf x},{\bf y} \rangle_{\bf w} = \sum^n_{i=1}w_ix_iy_i \; \blacksquare{% endmath %}
+{% math%} \langle {\bf x},{\bf y} \rangle_{\bf w} = \sum^n_{i=1}w_ix_iy_i \; \qquads \blacksquare{% endmath %}
 
 **Definition 1.4** Norm 范数 一个定义在实数向量集 {% m %}\Re^n {% em %} 上的范数 {% m %}\|\cdot\| {% em %} 是一个满足如下条件，形如 {% m %}\| \cdot \| : \Re^n \rightarrow \Re {% em %} 的函数
 
