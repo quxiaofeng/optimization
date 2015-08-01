@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 01 Aug 2015 22:02:13 +0800</pubDate>
-    <lastBuildDate>Sat, 01 Aug 2015 22:02:13 +0800</lastBuildDate>
+    <pubDate>Sat, 01 Aug 2015 22:16:20 +0800</pubDate>
+    <lastBuildDate>Sat, 01 Aug 2015 22:16:20 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -235,50 +235,52 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;h2 id=&quot;section&quot;&gt;第一章 数学基础&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Definition 1.1&lt;/strong&gt; 内积 inner product &lt;script type=&quot;math/tex&quot;&gt;\langle\cdot,\cdot\rangle:=\Re^n \times \Re^n \rightarrow \Re&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 1.1 内积&lt;/strong&gt; inner product &lt;script type=&quot;math/tex&quot;&gt;\langle\cdot,\cdot\rangle:=\Re^n \times \Re^n \to \Re&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 交换率 symmetry &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle&lt;/script&gt; 对于任何 &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y} \in \Re^n &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 对称性&lt;/strong&gt; symmetry &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle&lt;/script&gt; 对于任何 &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y} \in \Re^n &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 分配率 additivity &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle&lt;/script&gt; 对于任何 &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y},{\bf z} \in \Re^n &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 可加性&lt;/strong&gt; additivity &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle&lt;/script&gt; 对于任何 &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y},{\bf z} \in \Re^n &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 线性 homogeneity &lt;script type=&quot;math/tex&quot;&gt;\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle&lt;/script&gt; 对于任何 &lt;script type=&quot;math/tex&quot;&gt;\lambda\in \Re &lt;/script&gt; 及 &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y} \in \Re^n&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 线性&lt;/strong&gt; homogeneity &lt;script type=&quot;math/tex&quot;&gt;\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle&lt;/script&gt; 对于任何 &lt;script type=&quot;math/tex&quot;&gt;\lambda\in \Re &lt;/script&gt; 及 &lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y} \in \Re^n&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; 正定 positive definiteness 对于任意 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}\in \Re^n&lt;/script&gt;， &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle\ge0&lt;/script&gt;；当且仅当 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}={\bf 0}&lt;/script&gt; 时，&lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle=0&lt;/script&gt;。 &lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. 正定性&lt;/strong&gt; positive definiteness 对于任意 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}\in \Re^n&lt;/script&gt;， &lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle\ge0&lt;/script&gt;；当且仅当 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}={\bf 0}&lt;/script&gt; 时，&lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle=0&lt;/script&gt;。 &lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Example 1.2&lt;/strong&gt; 最常见的内积就是点积 dot product&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example 1.2 最常见的内积就是点积&lt;/strong&gt; dot product&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\langle{\bf x},{\bf y}\rangle={\bf x}^T{\bf y}=\sum^n_{i=1}x_iy_i \text{ for any } {\bf x},{\bf y} \in \Re^n &lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;点积是标准内积，当不明确说明时，默认内积就是点积。&lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Example 1.3&lt;/strong&gt; 加权点积是 &lt;script type=&quot;math/tex&quot;&gt;\Re^n &lt;/script&gt; 空间中另一个内积的例子，其中权重 &lt;script type=&quot;math/tex&quot;&gt;{\bf w}\in \Re^n_{++} &lt;/script&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example 1.3 加权点积&lt;/strong&gt; weighted dot norm 是 &lt;script type=&quot;math/tex&quot;&gt;\Re^n &lt;/script&gt; 空间中另一个内积的例子，其中权重 &lt;script type=&quot;math/tex&quot;&gt;{\bf w}\in \Re^n_{++} &lt;/script&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \langle {\bf x},{\bf y} \rangle_{\bf w} = \sum^n_{i=1}w_ix_iy_i \; \tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Definition 1.4&lt;/strong&gt; Norm 范数 一个定义在实数向量集 &lt;script type=&quot;math/tex&quot;&gt;\Re^n &lt;/script&gt; 上的范数 &lt;script type=&quot;math/tex&quot;&gt;\|\cdot\| &lt;/script&gt; 是一个满足如下条件，形如 &lt;script type=&quot;math/tex&quot;&gt;\| \cdot \| : \Re^n \rightarrow \Re &lt;/script&gt; 的函数&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 1.4 范数&lt;/strong&gt; Norm 一个定义在实数向量集 &lt;script type=&quot;math/tex&quot;&gt;\Re^n &lt;/script&gt; 上的范数 &lt;script type=&quot;math/tex&quot;&gt;\|\cdot\| &lt;/script&gt; 是一个满足如下条件，形如 &lt;script type=&quot;math/tex&quot;&gt;\| \cdot \| : \Re^n \to \Re &lt;/script&gt; 的函数&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 非负性 nonnegativity &lt;script type=&quot;math/tex&quot;&gt; \|{\bf x}\| \ge 0 \text{ for any } {\bf x} \in \Re^n \text{ and } \|{\bf x}\| = 0 \text{ if and only if } {\bf x} = {\bf 0} &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 非负性&lt;/strong&gt; nonnegativity &lt;script type=&quot;math/tex&quot;&gt; \|{\bf x}\| \ge 0 \text{ for any } {\bf x} \in \Re^n \text{ and } \|{\bf x}\| = 0 \text{ if and only if } {\bf x} = {\bf 0} &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 正线性 positive homogeneity &lt;script type=&quot;math/tex&quot;&gt; |\lambda {\bf x}\| = |\lambda| \|{\bf x}\| \text{ for any } {\bf x} \in \Re^n \text{ and } \lambda \in \Re&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 正线性&lt;/strong&gt; positive homogeneity &lt;script type=&quot;math/tex&quot;&gt; |\lambda {\bf x}\| = |\lambda| \|{\bf x}\| \text{ for any } {\bf x} \in \Re^n \text{ and } \lambda \in \Re&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 三角不等 triangle inequality  &lt;script type=&quot;math/tex&quot;&gt; \|{\bf x} + {\bf y}\| \le \|{\bf x}\| + \|{\bf y}\| \text{ for any } {\bf x},{\bf y} \in \Re^n&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 三角不等&lt;/strong&gt; triangle inequality  &lt;script type=&quot;math/tex&quot;&gt; \|{\bf x} + {\bf y}\| \le \|{\bf x}\| + \|{\bf y}\| \text{ for any } {\bf x},{\bf y} \in \Re^n&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;相应的，&lt;script type=&quot;math/tex&quot;&gt; p &lt;/script&gt; 范数定位为&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \ell_p \equiv \|{\bf x}\|_p \equiv \sqrt[p]{\sum^n_{i=1}|x_i|^p} \text{ , for }  p \ge 1 &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;类似的，无穷范数 &lt;script type=&quot;math/tex&quot;&gt;\infty &lt;/script&gt; 定义为&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \rightarrow \infty} \|{\bf x}\|_p \;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \to \infty} \|{\bf x}\|_p \;&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;即最大绝对值。&lt;/p&gt;
 
 &lt;p&gt;1 范数 &lt;script type=&quot;math/tex&quot;&gt;\|{\bf x}\|_1&lt;/script&gt; 即为绝对值之和 &lt;script type=&quot;math/tex&quot;&gt;\sum^n_{i=1}|x_i|&lt;/script&gt;。 &lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Lemma 1.5&lt;/strong&gt; 柯西 - 施瓦茨不等式 Cauchy-Schwarz inequality &lt;script type=&quot;math/tex&quot;&gt; \text{ For any } {\bf x}, {\bf y} \in \Re^n,&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 1.5 柯西 - 施瓦茨不等式&lt;/strong&gt; Cauchy-Schwarz inequality &lt;script type=&quot;math/tex&quot;&gt; \text{ For any } {\bf x}, {\bf y} \in \Re^n,&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;|{\bf x}^T{\bf y}| \le \|{\bf x}\|_2 \cdot \|{\bf y}\|_2 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;等号在且仅在  &lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 和 &lt;script type=&quot;math/tex&quot;&gt;{\bf y}&lt;/script&gt; 线性相关时成立。 &lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;等号在且仅在 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 和 &lt;script type=&quot;math/tex&quot;&gt;{\bf y}&lt;/script&gt; 线性相关时成立。 &lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Definition 1.6&lt;/strong&gt; 矩阵的范数 一个定义在&lt;script type=&quot;math/tex&quot;&gt;\Re^{m \times n}&lt;/script&gt;空间上的范数&lt;script type=&quot;math/tex&quot;&gt;\|\cdot\|&lt;/script&gt; 是一个形如 &lt;script type=&quot;math/tex&quot;&gt;\|\cdot\|:\Re^{m \times n} \to \Re&lt;/script&gt;，且满足如下性质的函数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 1.6 矩阵的范数&lt;/strong&gt; matrix norms 一个定义在&lt;script type=&quot;math/tex&quot;&gt;\Re^{m \times n}&lt;/script&gt; 空间上的范数 &lt;script type=&quot;math/tex&quot;&gt;\|\cdot\|&lt;/script&gt; 是一个形如 &lt;script type=&quot;math/tex&quot;&gt;\|\cdot\|:\Re^{m \times n} \to \Re&lt;/script&gt;，且满足如下性质的函数。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 非负性 对于任何 &lt;script type=&quot;math/tex&quot;&gt;{\bf A} \in \Re^{m \times n}&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\|{\bf A}\| \ge 0&lt;/script&gt;&lt;br /&gt;
-&lt;strong&gt;2.&lt;/strong&gt; 正线性&lt;br /&gt;
-&lt;strong&gt;3.&lt;/strong&gt; 三角不等式 &lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 非负性&lt;/strong&gt; nonnegativity 对于任意 &lt;script type=&quot;math/tex&quot;&gt;{\bf A} \in \Re^{m \times n}&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\|{\bf A}\| \ge 0&lt;/script&gt;；同时，当且仅当 &lt;script type=&quot;math/tex&quot;&gt;{\bf A} = {\bf 0}&lt;/script&gt; 时，&lt;script type=&quot;math/tex&quot;&gt;\|{\bf A}\| = 0&lt;/script&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. 正线性&lt;/strong&gt; positive homogeneity 对于任意 &lt;script type=&quot;math/tex&quot;&gt;{\bf A} \in \Re^{m \times n}&lt;/script&gt; 和 &lt;script type=&quot;math/tex&quot;&gt;\lambda \in \Re&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;\|\lambda{\bf A}\| = |\lambda| \cdot \|{\bf A}\|&lt;/script&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. 三角不等式&lt;/strong&gt; triangle inequality 对于任意 &lt;script type=&quot;math/tex&quot;&gt;{\bf A},{\bf B} \in \Re^{m \times n}&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;\|{\bf A} + {\bf B}\| \le \|{\bf A}\| + \|{\bf B}\|&lt;/script&gt;。&lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 16 Jul 2015 05:22:17 +0800</pubDate>
         <link>http://www.quxiaofeng.me/optimization/2015/07/16/introduction-to-nonlinear-optimization/</link>
