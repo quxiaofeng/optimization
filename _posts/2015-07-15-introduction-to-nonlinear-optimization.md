@@ -73,7 +73,7 @@ categories:
 
 **3. 三角不等式** triangle inequality 对于任意 {%m%}{\bf A},{\bf B} \in \Re^{m \times n}{%em%}，{%m%}\|{\bf A} + {\bf B}\| \le \|{\bf A}\| + \|{\bf B}\|{%em%}。
 
-常见的 induced matrix norm {%m%}\| \cdot \|_{a,b}{%em%} 定义如下。给定一个矩阵 {%m%}{\bf A} \in \Re^{m \times n}{%em%} 和分别定义在 {%m%}\Re^n{%em%} 及 {%m%}\Re^m{%em%} 上的两个范数 {%m%}\| \cdot \|_a{%em%} 和 {%m%}\| \codt \|_b{%em%}，{%m%}\| {\bf A} \|_{a,b}{%em%} 即为
+常见的 induced matrix norm {%m%}\| \cdot \|_{a,b}{%em%} 定义如下。给定一个矩阵 {%m%}{\bf A} \in \Re^{m \times n}{%em%} 和分别定义在 {%m%}\Re^n{%em%} 及 {%m%}\Re^m{%em%} 上的两个范数 {%m%}\| \cdot \|_a{%em%} 和 {%m%}\| \cdot \|_b{%em%}，{%m%}\| {\bf A} \|_{a,b}{%em%} 即为
 
 {% math %}\| {\bf A} \|_{a,b} = \max_{\bf x}\{ \| {\bf Ax} \|_b : \| {\bf x} \|_a \le 1 \} {% endmath %}
 
