@@ -41,7 +41,7 @@ categories:
 点积是标准内积，当不明确说明时，默认内积就是点积。{%m%}\tag*{$\blacksquare$}{%em%}
 
 **Example 1.3** 加权点积是 {% m %}\Re^n {% em %} 空间中另一个内积的例子，其中权重 {% m %}{\bf w}\in \Re^n_{++} {% em %}。
-{% math%} \langle {\bf x},{\bf y} \rangle_{\bf w} = \sum^n_{i=1}w_ix_iy_i \; \qquads \blacksquare{% endmath %}
+{% math%} \langle {\bf x},{\bf y} \rangle_{\bf w} = \sum^n_{i=1}w_ix_iy_i \; \tag*{$\blacksquare$}{% endmath %}
 
 **Definition 1.4** Norm 范数 一个定义在实数向量集 {% m %}\Re^n {% em %} 上的范数 {% m %}\|\cdot\| {% em %} 是一个满足如下条件，形如 {% m %}\| \cdot \| : \Re^n \rightarrow \Re {% em %} 的函数
 
@@ -58,9 +58,9 @@ categories:
 {% math %} \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\ldots,n}|x_i|=\lim_{p \rightarrow \infty} \|{\bf x}\|_p \;{% endmath%}
 即最大绝对值。
 
-{%m%}1{%em%} 范数 {%m%}\|{\bf x}\|_1{%em%} 即为绝对值之和 {%m%}\sum^n_{i=1}|x_i|{%em%}。 {%m%}\blacksquare{%em%}
+1 范数 {%m%}\|{\bf x}\|_1{%em%} 即为绝对值之和 {%m%}\sum^n_{i=1}|x_i|{%em%}。 {%m%}\tag*{$\blacksquare$}{%em%}
 
 **Lemma 1.5** 柯西 - 施瓦茨不等式 Cauchy-Schwarz inequality {% m %} \text{ For any } {\bf x}, {\bf y} \in \Re^n,{% em %}
 {% math %}|{\bf x}^T{\bf y}| \le \|{\bf x}\|_2 \cdot \|{\bf y}\|_2 {% endmath %}
 
-等号在且仅在  {%m%}{\bf x}{%em%} 和 {%m%}{\bf y}{%em%} 线性相关时成立。 {%m%}\qquads\blacksquare{%em%}
+等号在且仅在  {%m%}{\bf x}{%em%} 和 {%m%}{\bf y}{%em%} 线性相关时成立。 {%m%}\tag*{$\blacksquare$}{%em%}
