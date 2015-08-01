@@ -34,7 +34,7 @@ categories:
 
 **3.** 线性 homogeneity {%m%}\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle{%em%} 对于任何 {%m%}\lambda\in \Re {%em%} 及 {%m%}{\bf x},{\bf y} \in \Re^n{%em%}
 
-**4.** 正定 positive definiteness 对于任意 {%m%}{\bf x}\in \Re^n{%em%}， {%m%}\langle{\bf x},{\bf x}\rangle\ge0{%em%} 而且，当且仅当 {%m%}{\bf x}={\bf 0}{%em%} 时，{%m%}\langle{\bf x},{\bf x}\rangle=0{%em%}。 {%m%}\tag*{$\blacksquare$}{%em%}
+**4.** 正定 positive definiteness 对于任意 {%m%}{\bf x}\in \Re^n{%em%}， {%m%}\langle{\bf x},{\bf x}\rangle\ge0{%em%}；当且仅当 {%m%}{\bf x}={\bf 0}{%em%} 时，{%m%}\langle{\bf x},{\bf x}\rangle=0{%em%}。 {%m%}\tag*{$\blacksquare$}{%em%}
 
 **Example 1.2** 最常见的内积就是点积 dot product
 {%math%}\langle{\bf x},{\bf y}\rangle={\bf x}^T{\bf y}=\sum^n_{i=1}x_iy_i \text{ for any } {\bf x},{\bf y} \in \Re^n {%endmath%}
