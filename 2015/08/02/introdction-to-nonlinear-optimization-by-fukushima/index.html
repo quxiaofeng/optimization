@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>非线性最优化基础 by Masao Fukushima | OPTIMIZATIONS for Machine Learning</title>
+  <meta name="description" content="豆瓣链接：http://book.douban.com/subject/6510671/冯象初教授 ｛% sidenote 1 ‘冯象初，教授，博导，西安电子科技大学数学系。个人主页：http://web.xidian.edu.cn/xcfeng/’ %｝讲座的笔记主要内容理论基础  凸函数、闭函数  共轭函数 ...">
+
+
+  <link rel="stylesheet" href="//www.quxiaofeng.me/optimization/css/tufte.css">	
+  
+
+  <!-- Google Fonts loaded here -->
+  <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+  <script type="text/javascript" src="//cdn.staticfile.org/mathjax/2.4.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+  <link rel="canonical" href="http://www.quxiaofeng.me/optimization/2015/08/02/introdction-to-nonlinear-optimization-by-fukushima/">
+  <link rel="alternate" type="application/rss+xml" title="OPTIMIZATIONS for Machine Learning" href="http://www.quxiaofeng.me/optimization/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="//www.quxiaofeng.me/optimization/"><img class="badge" src="//www.quxiaofeng.me/optimization/assets/img/badge_op_ml.png" alt="OP"></a>
+		<a href="//www.quxiaofeng.me/optimization/">Home</a>
+		<a href="//www.quxiaofeng.me/optimization/about">About</a>
+	</nav>
+</header>
+
+    <article>
+      <h1>非线性最优化基础 by masao fukushima</h1>
+<p>August 2, 2015</p>
+
+
+<p>豆瓣链接：<a href="http://book.douban.com/subject/6510671/">http://book.douban.com/subject/6510671/</a></p>
+
+<p><a href="http://web.xidian.edu.cn/xcfeng/">冯象初教授</a> ｛% sidenote 1 ‘冯象初，教授，博导，西安电子科技大学数学系。个人主页：<a href="http://web.xidian.edu.cn/xcfeng/">http://web.xidian.edu.cn/xcfeng/</a>’ %｝讲座的笔记</p>
+
+<p>主要内容</p>
+
+<p>理论基础</p>
+
+<ol>
+  <li>凸函数、闭函数</li>
+  <li>共轭函数</li>
+  <li>鞍点问题</li>
+  <li>Lagrange 对偶问题</li>
+  <li>Lagrange 对偶性的推广</li>
+  <li>Fenchel 对偶性</li>
+</ol>
+
+<p>算法</p>
+
+<ol>
+  <li>Proximal gradient methods</li>
+  <li>Dual proximal gradient methods</li>
+  <li>Fast proximal gradient methods</li>
+  <li>Fast dual proximal gradient methods</li>
+</ol>
+
+<!--more-->
+
+<h2 id="section">理论基础</h2>
+
+<h3 id="section-1">凸函数、闭函数</h3>
+
+<p>给定函数 <script type="math/tex">f : \Re^n \to [-\infty, +\infty] </script> 称 <script type="math/tex">\Re^{n+1}</script> 的子集</p>
+<p><script type="math/tex; mode=display"> graph \; f = \left{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \right}, </script></p>
+<p>为 <script type="math/tex">f</script> 的图像（graph），而称位于 <script type="math/tex">f</script> 的图像上方的点的全体构成的集合</p>
+<p><script type="math/tex; mode=display">epi \; f =\left{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \ge f({\bf x}) \right}</script></p>
+<p>为 <script type="math/tex">f</script> 的上图（epigraph），若上图 <script type="math/tex">epi \; f</script> 为凸集，则称 <script type="math/tex">f</script> 为<strong>凸函数</strong>(convex function)。</p>
+
+<p><strong>定理</strong>：设 <script type="math/tex">\Iota</script> 为任意非空指标集，而 <script type="math/tex">f_{\iota} : \Re^n \to [-\infty, +\infty] \; (\iota \in \Iota)</script> 均为凸函数，则由</p>
+<p><script type="math/tex; mode=display"> f({\bf x}) = \sup \left{ f_i({\bf x}) \mid \iota \in \Iota \right}</script></p>
+<p>定义的函数 <script type="math/tex">f : \Re^n \to [-\infty, +\infty] </script> 为凸函数。进一步，若 <script type="math/tex">\Iota</script> 为有限指标集，每个 <script type="math/tex">f_i</script> 均为正常的凸函数，并且 <script type="math/tex">\cap_{\iota \in \Iota} \; dom \; f_i \neq \varnothing </script>，则 <script type="math/tex">f</script> 为正常凸函数。</p>
+
+<script type="math/tex"></script>
+
+<p><script type="math/tex; mode=display"> \tag*{$\blacksquare$} </script></p>
+
+
+
+    </article>
+    <span class="print-footer">非线性最优化基础 by Masao Fukushima - August 2, 2015 - QU Xiaofeng</span>
+    <footer>
+  <ul class="footer-links group">
+    <li><a href="mailto:xiaofeng.qu.hk@ieee.org"><span class="icon-mail"></span></a></li>
+    
+      <li>
+        <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
+      </li>
+    
+  </ul>
+<div class="credits">
+<span>&copy; 2015 &nbsp;&nbsp;QU XIAOFENG</span></br>
+<span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
+</div>
+</footer>
+  </body>
+</html>
