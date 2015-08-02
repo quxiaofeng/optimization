@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 02 Aug 2015 23:52:21 +0800</pubDate>
-    <lastBuildDate>Sun, 02 Aug 2015 23:52:21 +0800</lastBuildDate>
+    <pubDate>Mon, 03 Aug 2015 00:10:22 +0800</pubDate>
+    <lastBuildDate>Mon, 03 Aug 2015 00:10:22 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -45,9 +45,9 @@
 
 &lt;p&gt;给定函数 &lt;script type=&quot;math/tex&quot;&gt;f : \Re^n \to [-\infty, +\infty] &lt;/script&gt;，称 &lt;script type=&quot;math/tex&quot;&gt;\Re^{n+1}&lt;/script&gt; 的子集&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; graph \; f = \left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \right\rbrace, &lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;为 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的图像（graph），而称位于 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的图像上方的点的全体构成的集合&lt;/p&gt;
+&lt;p&gt;为 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的&lt;strong&gt;图像&lt;/strong&gt;（graph），而称位于 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的图像上方的点的全体构成的集合&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;epi \; f =\left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \ge f({\bf x}) \right\rbrace&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;为 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的上图（epigraph）。若上图 &lt;script type=&quot;math/tex&quot;&gt;epi \; f&lt;/script&gt; 为凸集，则称 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 为&lt;strong&gt;凸函数&lt;/strong&gt;(convex function)。&lt;/p&gt;
+&lt;p&gt;为 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的&lt;strong&gt;上图&lt;/strong&gt;（epigraph）。若上图 &lt;script type=&quot;math/tex&quot;&gt;epi \; f&lt;/script&gt; 为凸集，则称 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 为&lt;strong&gt;凸函数&lt;/strong&gt;(convex function)。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;定理 2.27&lt;/strong&gt; 设 &lt;script type=&quot;math/tex&quot;&gt; \mathcal{I} &lt;/script&gt; 为任意非空指标集，而 &lt;script type=&quot;math/tex&quot;&gt;f_i : \Re^n \to [-\infty, +\infty] \; (i \in \mathcal{I})&lt;/script&gt; 均为凸函数，则由&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; f({\bf x}) = \sup \left\lbrace f_i({\bf x}) \mid i \in \mathcal{I} \right\rbrace&lt;/script&gt;&lt;/p&gt;
@@ -55,30 +55,30 @@
 
 &lt;p&gt;若对任意收敛于&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt;的点列&lt;script type=&quot;math/tex&quot;&gt;\lbrace{\bf x}^k\rbrace \subseteq \Re^n&lt;/script&gt;均有&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; f({\bf x}) \ge \limsup_{k \to \infty}f({\bf x}^k) &lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;成立，则称函数&lt;script type=&quot;math/tex&quot;&gt;f:\Re^n\to[-\infty,+\infty]&lt;/script&gt;在&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt;处上半连续（upper semicontinuous）；反之，当&lt;/p&gt;
+&lt;p&gt;成立，则称函数&lt;script type=&quot;math/tex&quot;&gt;f:\Re^n\to[-\infty,+\infty]&lt;/script&gt;在&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt;处&lt;strong&gt;上半连续&lt;/strong&gt;（upper semicontinuous）；反之，当&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; f({\bf x}) \le \liminf_{k \to \infty}f({\bf x}^k) &lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;成立时，称&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;在&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt;处下半连续（lower semicontinuous）。若&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;在&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt;处既为上半连续又为下半连续，则称&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt;在&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt;处连续（continuous）。&lt;/p&gt;
+&lt;p&gt;成立时，称&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;在&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt;处&lt;strong&gt;下半连续&lt;/strong&gt;（lower semicontinuous）。若&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;在&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt;处既为上半连续又为下半连续，则称&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;在&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt;处&lt;strong&gt;连续&lt;/strong&gt;（continuous）。&lt;/p&gt;
 
 &lt;h3 id=&quot;section-2&quot;&gt;共轭函数&lt;/h3&gt;
 
 &lt;p&gt;给定正常凸函数&lt;script type=&quot;math/tex&quot;&gt;f:\Re^n \to (-\infty,+\infty]&lt;/script&gt;，由&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;f^\ast({\bf \xi}) = \sup\left{&lt;{\bf x},{\bf\xi}&gt;-f({\bf x}) \mid {\bf x}\in \Re^n \right}&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;定义的函数&lt;script type=&quot;math/tex&quot;&gt;f^\ast:\Re^n \to [-\infty,+\infty]&lt;/script&gt;称为&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;的共轭函数（conjuagate function）。&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;f^\ast({\bf\xi}) = \sup \left\{ &lt;{\bf x},{\bf\xi}&gt;-f({\bf x}) \mid {\bf x}\in \Re^n \right\}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;定义的函数&lt;script type=&quot;math/tex&quot;&gt;f^\ast:\Re^n \to [-\infty,+\infty]&lt;/script&gt;称为&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;的&lt;strong&gt;共轭函数&lt;/strong&gt;（conjuagate function）。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;定理 2.36&lt;/strong&gt; 正常凸函数&lt;script type=&quot;math/tex&quot;&gt;f:\Re^n \to (-\infty,+\infty]&lt;/script&gt;的共轭函数&lt;script type=&quot;math/tex&quot;&gt;f^\ast&lt;/script&gt;必为闭正常凸函数。&lt;/p&gt;
 
 &lt;h3 id=&quot;section-3&quot;&gt;鞍点问题&lt;/h3&gt;
 
 &lt;p&gt;设&lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;与&lt;script type=&quot;math/tex&quot;&gt;Z&lt;/script&gt;分别为&lt;script type=&quot;math/tex&quot;&gt;\Re^n&lt;/script&gt;与&lt;script type=&quot;math/tex&quot;&gt;\Re^m&lt;/script&gt;的非空子集，给定以&lt;script type=&quot;math/tex&quot;&gt;Y\times Z&lt;/script&gt;为定义域的函数&lt;script type=&quot;math/tex&quot;&gt;K:Y\times Z\to[-\infty,+\infty]&lt;/script&gt;，定义两个函数&lt;script type=&quot;math/tex&quot;&gt;\eta:Y\to[-\infty,+\infty]&lt;/script&gt;与&lt;script type=&quot;math/tex&quot;&gt;\zeta:Z\to[-\infty,+\infty]&lt;/script&gt;如下：&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta({\bf y})=\sup\left{K({\bf y},{\bf z} \mid {\bf z} \in Z)\right}&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\zeta({\bf z})=\inf\left{K({\bf y},{\bf z} \mid {\bf y} \in Y)\right}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta({\bf y})=\sup\left\{K({\bf y},{\bf z} \mid {\bf z} \in Z)\right\}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\zeta({\bf z})=\inf\left\{K({\bf y},{\bf z} \mid {\bf y} \in Y)\right\}&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\min \; \; \; \eta({\bf y})\\s.t. \; \; \; {\bf y} \in Y&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\max \; \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;引理 4.1&lt;/strong&gt; 对任意&lt;script type=&quot;math/tex&quot;&gt;{\bf y}\in Y&lt;/script&gt;与&lt;script type=&quot;math/tex&quot;&gt;{\bf z}\in Z&lt;/script&gt;均有&lt;script type=&quot;math/tex&quot;&gt;\zeta({\bf z} \leq \eta({\bf y}))&lt;/script&gt;成立。进一步，还有&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sup\left{\zeta({\bf z})\mid {\bf z}\in Z\right}\leq\inf\left{\eta({\bf y})\mid {\bf y} \in Y\right}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sup\left\{\zeta({\bf z})\mid {\bf z}\in Z\right\}\leq\inf\left\{\eta({\bf y})\mid {\bf y} \in Y\right\}&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;定理 4.1&lt;/strong&gt; 点&lt;script type=&quot;math/tex&quot;&gt;(\bar{\bf y},\bar{\bf z}\in Y\times Z)&lt;/script&gt;为函数&lt;script type=&quot;math/tex&quot;&gt;K:Y\times Z\to[-\infty,+\infty]&lt;/script&gt;的鞍点的充要条件是&lt;script type=&quot;math/tex&quot;&gt;\bar{\bf y}\in Y&lt;/script&gt;与&lt;script type=&quot;math/tex&quot;&gt;\bar{\bf z}\in Z&lt;/script&gt;满足&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta(\bar{\bf y})=\inf\left{\eta({\bf y})\mid {\bf y}\in Y\right}=\sup\left{\zeta({\bf z})\mid {\bf z}\in Z\right}=\zeta(\bar{\bf z})&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta(\bar{\bf y})=\inf\left\{\eta({\bf y})\mid {\bf y}\in Y\right\}=\sup\left\{\zeta({\bf z})\mid {\bf z}\in Z\right\}=\zeta(\bar{\bf z})&lt;/script&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;
 
