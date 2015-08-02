@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 02 Aug 2015 15:45:12 +0800</pubDate>
-    <lastBuildDate>Sun, 02 Aug 2015 15:45:12 +0800</lastBuildDate>
+    <pubDate>Sun, 02 Aug 2015 15:47:34 +0800</pubDate>
+    <lastBuildDate>Sun, 02 Aug 2015 15:47:34 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -44,13 +44,13 @@
 &lt;h3 id=&quot;section-1&quot;&gt;凸函数、闭函数&lt;/h3&gt;
 
 &lt;p&gt;给定函数 &lt;script type=&quot;math/tex&quot;&gt;f : \Re^n \to [-\infty, +\infty] &lt;/script&gt; 称 &lt;script type=&quot;math/tex&quot;&gt;\Re^{n+1}&lt;/script&gt; 的子集&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; graph \; f = \lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \rbrace, &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; graph \; f = \left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \right\rbrace, &lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;为 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的图像（graph），而称位于 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的图像上方的点的全体构成的集合&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;epi \; f =\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \ge f({\bf x}) \rbrace&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;epi \; f =\left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \ge f({\bf x}) \right\rbrace&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;为 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的上图（epigraph），若上图 &lt;script type=&quot;math/tex&quot;&gt;epi \; f&lt;/script&gt; 为凸集，则称 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 为&lt;strong&gt;凸函数&lt;/strong&gt;(convex function)。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;定理&lt;/strong&gt;：设 &lt;script type=&quot;math/tex&quot;&gt; \mathcal{I} &lt;/script&gt; 为任意非空指标集，而 &lt;script type=&quot;math/tex&quot;&gt;f_i : \Re^n \to [-\infty, +\infty] \; (i \in \mathcal{I})&lt;/script&gt; 均为凸函数，则由&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; f({\bf x}) = \sup \lbrace f_i({\bf x}) \mid i \in \mathcal{I} \rbrace&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; f({\bf x}) = \sup \left\lbrace f_i({\bf x}) \mid i \in \mathcal{I} \right\rbrace&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;定义的函数 &lt;script type=&quot;math/tex&quot;&gt;f : \Re^n \to [-\infty, +\infty] &lt;/script&gt; 为凸函数。进一步，若 &lt;script type=&quot;math/tex&quot;&gt;\mathcal{I}&lt;/script&gt; 为有限指标集，每个 &lt;script type=&quot;math/tex&quot;&gt;f_i&lt;/script&gt; 均为正常的凸函数，并且 &lt;script type=&quot;math/tex&quot;&gt;\cap_{i \in \mathcal{I}} \; dom \; f_i \neq \varnothing &lt;/script&gt;，则 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 为正常凸函数。&lt;/p&gt;
 
 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;
