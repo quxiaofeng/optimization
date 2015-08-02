@@ -35,9 +35,9 @@ categories:
 
 给定函数 {%m%}f : \Re^n \to [-\infty, +\infty] {%em%}，称 {%m%}\Re^{n+1}{%em%} 的子集
 {% math %} graph \; f = \left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \right\rbrace, {% endmath %}
-为 {%m%}f{%em%} 的图像（graph），而称位于 {%m%}f{%em%} 的图像上方的点的全体构成的集合
+为 {%m%}f{%em%} 的**图像**（graph），而称位于 {%m%}f{%em%} 的图像上方的点的全体构成的集合
 {% math %}epi \; f =\left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \ge f({\bf x}) \right\rbrace{% endmath %}
-为 {%m%}f{%em%} 的上图（epigraph）。若上图 {%m%}epi \; f{%em%} 为凸集，则称 {%m%}f{%em%} 为**凸函数**(convex function)。
+为 {%m%}f{%em%} 的**上图**（epigraph）。若上图 {%m%}epi \; f{%em%} 为凸集，则称 {%m%}f{%em%} 为**凸函数**(convex function)。
 
 **定理 2.27** 设 {%m%} \mathcal{I} {%em%} 为任意非空指标集，而 {%m%}f_i : \Re^n \to [-\infty, +\infty] \; (i \in \mathcal{I}){%em%} 均为凸函数，则由
 {% math %} f({\bf x}) = \sup \left\lbrace f_i({\bf x}) \mid i \in \mathcal{I} \right\rbrace{% endmath %}
@@ -45,30 +45,30 @@ categories:
 
 若对任意收敛于{%m%}{\bf x}{%em%}的点列{%m%}\lbrace{\bf x}^k\rbrace \subseteq \Re^n{%em%}均有
 {% math %} f({\bf x}) \ge \limsup_{k \to \infty}f({\bf x}^k) {% endmath %}
-成立，则称函数{%m%}f:\Re^n\to[-\infty,+\infty]{%em%}在{%m%}{\bf x}{%em%}处上半连续（upper semicontinuous）；反之，当
+成立，则称函数{%m%}f:\Re^n\to[-\infty,+\infty]{%em%}在{%m%}{\bf x}{%em%}处**上半连续**（upper semicontinuous）；反之，当
 {% math %} f({\bf x}) \le \liminf_{k \to \infty}f({\bf x}^k) {% endmath %}
-成立时，称{%m%}f{%em%}在{%m%}{\bf x}{%em%}处下半连续（lower semicontinuous）。若{%m%}f{%em%}在{%m%}{\bf x}{%em%}处既为上半连续又为下半连续，则称{%m%}{\bf x}{%em%}在{%m%}{\bf x}{%em%}处连续（continuous）。
+成立时，称{%m%}f{%em%}在{%m%}{\bf x}{%em%}处**下半连续**（lower semicontinuous）。若{%m%}f{%em%}在{%m%}{\bf x}{%em%}处既为上半连续又为下半连续，则称{%m%}f{%em%}在{%m%}{\bf x}{%em%}处**连续**（continuous）。
 
 ### 共轭函数 ###
 
 给定正常凸函数{%m%}f:\Re^n \to (-\infty,+\infty]{%em%}，由
-{% math %}f^\ast({\bf \xi}) = \sup\left{<{\bf x},{\bf\xi}>-f({\bf x}) \mid {\bf x}\in \Re^n \right}{% endmath %}
-定义的函数{%m%}f^\ast:\Re^n \to [-\infty,+\infty]{%em%}称为{%m%}f{%em%}的共轭函数（conjuagate function）。
+{% math %}f^\ast({\bf\xi}) = \sup \left\{ <{\bf x},{\bf\xi}>-f({\bf x}) \mid {\bf x}\in \Re^n \right\}{% endmath %}
+定义的函数{%m%}f^\ast:\Re^n \to [-\infty,+\infty]{%em%}称为{%m%}f{%em%}的**共轭函数**（conjuagate function）。
 
 **定理 2.36** 正常凸函数{%m%}f:\Re^n \to (-\infty,+\infty]{%em%}的共轭函数{%m%}f^\ast{%em%}必为闭正常凸函数。
 
 ### 鞍点问题 ###
 
 设{%m%}Y{%em%}与{%m%}Z{%em%}分别为{%m%}\Re^n{%em%}与{%m%}\Re^m{%em%}的非空子集，给定以{%m%}Y\times Z{%em%}为定义域的函数{%m%}K:Y\times Z\to[-\infty,+\infty]{%em%}，定义两个函数{%m%}\eta:Y\to[-\infty,+\infty]{%em%}与{%m%}\zeta:Z\to[-\infty,+\infty]{%em%}如下：
-{% math %}\eta({\bf y})=\sup\left{K({\bf y},{\bf z} \mid {\bf z} \in Z)\right}{% endmath %}
-{% math %}\zeta({\bf z})=\inf\left{K({\bf y},{\bf z} \mid {\bf y} \in Y)\right}{% endmath %}
+{% math %}\eta({\bf y})=\sup\left\{K({\bf y},{\bf z} \mid {\bf z} \in Z)\right\}{% endmath %}
+{% math %}\zeta({\bf z})=\inf\left\{K({\bf y},{\bf z} \mid {\bf y} \in Y)\right\}{% endmath %}
 {% math %}\min \; \; \; \eta({\bf y})\\s.t. \; \; \; {\bf y} \in Y{% endmath %}
 {% math %}\max \; \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z{% endmath %}
 
 **引理 4.1** 对任意{%m%}{\bf y}\in Y{%em%}与{%m%}{\bf z}\in Z{%em%}均有{%m%}\zeta({\bf z} \leq \eta({\bf y})){%em%}成立。进一步，还有
-{% math %}\sup\left{\zeta({\bf z})\mid {\bf z}\in Z\right}\leq\inf\left{\eta({\bf y})\mid {\bf y} \in Y\right}{% endmath %}
+{% math %}\sup\left\{\zeta({\bf z})\mid {\bf z}\in Z\right\}\leq\inf\left\{\eta({\bf y})\mid {\bf y} \in Y\right\}{% endmath %}
 **定理 4.1** 点{%m%}(\bar{\bf y},\bar{\bf z}\in Y\times Z){%em%}为函数{%m%}K:Y\times Z\to[-\infty,+\infty]{%em%}的鞍点的充要条件是{%m%}\bar{\bf y}\in Y{%em%}与{%m%}\bar{\bf z}\in Z{%em%}满足
-{% math %}\eta(\bar{\bf y})=\inf\left{\eta({\bf y})\mid {\bf y}\in Y\right}=\sup\left{\zeta({\bf z})\mid {\bf z}\in Z\right}=\zeta(\bar{\bf z}){% endmath %}
+{% math %}\eta(\bar{\bf y})=\inf\left\{\eta({\bf y})\mid {\bf y}\in Y\right\}=\sup\left\{\zeta({\bf z})\mid {\bf z}\in Z\right\}=\zeta(\bar{\bf z}){% endmath %}
 
 {%m%}{%em%}
 
