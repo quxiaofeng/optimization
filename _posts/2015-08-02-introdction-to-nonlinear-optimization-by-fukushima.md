@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "非线性最优化基础 by Masao Fukushima"
+title:  "《非线性最优化基础》学习笔记"
 date:   2015-08-02 14:33:54
 categories:
 ---
 
-非线性最优化基础 by Masao Fukushima {% sidenote 1 '非线性最优化基础（豆瓣链接：[http://book.douban.com/subject/6510671/](http://book.douban.com/subject/6510671/)） by Masao Fukushima （个人主页：[http://www.seto.nanzan-u.ac.jp/~fuku/fuku-e.html](http://www.seto.nanzan-u.ac.jp/~fuku/fuku-e.html)）' %}
+《[非线性最优化基础](http://book.douban.com/subject/6510671/)》 作者 [福嶋雅夫](http://www.seto.nanzan-u.ac.jp/~fuku/index.html) {% sidenote 1 '《非线性最优化基础》（豆瓣链接：[http://book.douban.com/subject/6510671/](http://book.douban.com/subject/6510671/)）。福嶋雅夫（Masao Fukushima），教授，日本南山大学理工学院系统与数学科学系，日本京都大学名誉教授，加拿大滑铁卢大学/比利时那慕尔大学/澳大利亚新南威尔士大学客座教授。主页：[http://www.seto.nanzan-u.ac.jp/~fuku/index.html](http://www.seto.nanzan-u.ac.jp/~fuku/index.html)。' %}
 
-该文为[冯象初教授](http://web.xidian.edu.cn/xcfeng/){% sidenote 2 '冯象初，教授，博导，西安电子科技大学数学系。个人主页：[http://web.xidian.edu.cn/xcfeng/](http://web.xidian.edu.cn/xcfeng/)' %}有关非线性最优化的讲座的笔记。
+该文为[冯象初教授](http://web.xidian.edu.cn/xcfeng/){% sidenote 2 '冯象初，教授，西安电子科技大学数学系。主页：[http://web.xidian.edu.cn/xcfeng/](http://web.xidian.edu.cn/xcfeng/)' %}有关非线性最优化的讲座的笔记。
 
 **主要内容**
 
