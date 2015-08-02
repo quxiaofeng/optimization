@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>非线性最优化基础 by Masao Fukushima | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="豆瓣链接：http://book.douban.com/subject/6510671/冯象初教授 ｛% sidenote 1 ‘冯象初，教授，博导，西安电子科技大学数学系。个人主页：http://web.xidian.edu.cn/xcfeng/’ %｝讲座的笔记主要内容理论基础  凸函数、闭函数  共轭函数 ...">
+  <meta name="description" content="豆瓣链接：http://book.douban.com/subject/6510671/冯象初教授11 冯象初，教授，博导，西安电子科技大学数学系。个人主页：http://web.xidian.edu.cn/xcfeng/讲座的笔记主要内容理论基础  凸函数、闭函数  共轭函数  鞍点问题  Lagrange 对...">
 
 
   <link rel="stylesheet" href="//www.quxiaofeng.me/optimization/css/tufte.css">	
@@ -41,7 +41,7 @@
 
 <p>豆瓣链接：<a href="http://book.douban.com/subject/6510671/">http://book.douban.com/subject/6510671/</a></p>
 
-<p><a href="http://web.xidian.edu.cn/xcfeng/">冯象初教授</a> ｛% sidenote 1 ‘冯象初，教授，博导，西安电子科技大学数学系。个人主页：<a href="http://web.xidian.edu.cn/xcfeng/">http://web.xidian.edu.cn/xcfeng/</a>’ %｝讲座的笔记</p>
+<p><a href="http://web.xidian.edu.cn/xcfeng/">冯象初教授</a><sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> 冯象初，教授，博导，西安电子科技大学数学系。个人主页：<a href="http://web.xidian.edu.cn/xcfeng/">http://web.xidian.edu.cn/xcfeng/</a></span>讲座的笔记</p>
 
 <p>主要内容</p>
 
@@ -72,14 +72,14 @@
 <h3 id="section-1">凸函数、闭函数</h3>
 
 <p>给定函数 <script type="math/tex">f : \Re^n \to [-\infty, +\infty] </script> 称 <script type="math/tex">\Re^{n+1}</script> 的子集</p>
-<p><script type="math/tex; mode=display"> graph \; f = \left{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \right}, </script></p>
+<p><script type="math/tex; mode=display"> graph \; f = \lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \rbrace, </script></p>
 <p>为 <script type="math/tex">f</script> 的图像（graph），而称位于 <script type="math/tex">f</script> 的图像上方的点的全体构成的集合</p>
-<p><script type="math/tex; mode=display">epi \; f =\left{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \ge f({\bf x}) \right}</script></p>
+<p><script type="math/tex; mode=display">epi \; f =\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \ge f({\bf x}) \rbrace</script></p>
 <p>为 <script type="math/tex">f</script> 的上图（epigraph），若上图 <script type="math/tex">epi \; f</script> 为凸集，则称 <script type="math/tex">f</script> 为<strong>凸函数</strong>(convex function)。</p>
 
-<p><strong>定理</strong>：设 <script type="math/tex">\Iota</script> 为任意非空指标集，而 <script type="math/tex">f_{\iota} : \Re^n \to [-\infty, +\infty] \; (\iota \in \Iota)</script> 均为凸函数，则由</p>
-<p><script type="math/tex; mode=display"> f({\bf x}) = \sup \left{ f_i({\bf x}) \mid \iota \in \Iota \right}</script></p>
-<p>定义的函数 <script type="math/tex">f : \Re^n \to [-\infty, +\infty] </script> 为凸函数。进一步，若 <script type="math/tex">\Iota</script> 为有限指标集，每个 <script type="math/tex">f_i</script> 均为正常的凸函数，并且 <script type="math/tex">\cap_{\iota \in \Iota} \; dom \; f_i \neq \varnothing </script>，则 <script type="math/tex">f</script> 为正常凸函数。</p>
+<p><strong>定理</strong>：设 <script type="math/tex"> \mathcal{I} </script> 为任意非空指标集，而 <script type="math/tex">f_i : \Re^n \to [-\infty, +\infty] \; (i \in \mathcal{I})</script> 均为凸函数，则由</p>
+<p><script type="math/tex; mode=display"> f({\bf x}) = \sup \lbrace f_i({\bf x}) \mid i \in \mathcal{I} \rbrace</script></p>
+<p>定义的函数 <script type="math/tex">f : \Re^n \to [-\infty, +\infty] </script> 为凸函数。进一步，若 <script type="math/tex">\mathcal{I}</script> 为有限指标集，每个 <script type="math/tex">f_i</script> 均为正常的凸函数，并且 <script type="math/tex">\cap_{i \in \mathcal{I}} \; dom \; f_i \neq \varnothing </script>，则 <script type="math/tex">f</script> 为正常凸函数。</p>
 
 <script type="math/tex"></script>
 
