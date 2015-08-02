@@ -34,13 +34,13 @@ categories:
 ### 凸函数、闭函数 ###
 
 给定函数 {%m%}f : \Re^n \to [-\infty, +\infty] {%em%} 称 {%m%}\Re^{n+1}{%em%} 的子集
-{% math %} graph \; f = \lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \rbrace, {% endmath %}
+{% math %} graph \; f = \left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \right\rbrace, {% endmath %}
 为 {%m%}f{%em%} 的图像（graph），而称位于 {%m%}f{%em%} 的图像上方的点的全体构成的集合
-{% math %}epi \; f =\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \ge f({\bf x}) \rbrace{% endmath %}
+{% math %}epi \; f =\left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \ge f({\bf x}) \right\rbrace{% endmath %}
 为 {%m%}f{%em%} 的上图（epigraph），若上图 {%m%}epi \; f{%em%} 为凸集，则称 {%m%}f{%em%} 为**凸函数**(convex function)。
 
 **定理**：设 {%m%} \mathcal{I} {%em%} 为任意非空指标集，而 {%m%}f_i : \Re^n \to [-\infty, +\infty] \; (i \in \mathcal{I}){%em%} 均为凸函数，则由
-{% math %} f({\bf x}) = \sup \lbrace f_i({\bf x}) \mid i \in \mathcal{I} \rbrace{% endmath %}
+{% math %} f({\bf x}) = \sup \left\lbrace f_i({\bf x}) \mid i \in \mathcal{I} \right\rbrace{% endmath %}
 定义的函数 {%m%}f : \Re^n \to [-\infty, +\infty] {%em%} 为凸函数。进一步，若 {%m%}\mathcal{I}{%em%} 为有限指标集，每个 {%m%}f_i{%em%} 均为正常的凸函数，并且 {%m%}\cap_{i \in \mathcal{I}} \; dom \; f_i \neq \varnothing {%em%}，则 {%m%}f{%em%} 为正常凸函数。
 
 {%m%}{%em%}
