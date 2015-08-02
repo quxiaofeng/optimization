@@ -90,7 +90,7 @@
 <h3 id="section-2">共轭函数</h3>
 
 <p>给定正常凸函数<script type="math/tex">f:\Re^n \to (-\infty,+\infty]</script>，由</p>
-<p><script type="math/tex; mode=display">f^\ast({\bf\xi}) = \sup \left\{ <{\bf x},{\bf\xi}>-f({\bf x}) \mid {\bf x}\in \Re^n \right\}</script></p>
+<p><script type="math/tex; mode=display">f^\ast({\bf\xi}) = \sup \left\lbrace <{\bf x},{\bf\xi}>-f({\bf x}) \mid {\bf x}\in \Re^n \right\rbrace </script></p>
 <p>定义的函数<script type="math/tex">f^\ast:\Re^n \to [-\infty,+\infty]</script>称为<script type="math/tex">f</script>的<strong>共轭函数</strong>（conjuagate function）。</p>
 
 <p><strong>定理 2.36</strong> 正常凸函数<script type="math/tex">f:\Re^n \to (-\infty,+\infty]</script>的共轭函数<script type="math/tex">f^\ast</script>必为闭正常凸函数。</p>
@@ -98,15 +98,16 @@
 <h3 id="section-3">鞍点问题</h3>
 
 <p>设<script type="math/tex">Y</script>与<script type="math/tex">Z</script>分别为<script type="math/tex">\Re^n</script>与<script type="math/tex">\Re^m</script>的非空子集，给定以<script type="math/tex">Y\times Z</script>为定义域的函数<script type="math/tex">K:Y\times Z\to[-\infty,+\infty]</script>，定义两个函数<script type="math/tex">\eta:Y\to[-\infty,+\infty]</script>与<script type="math/tex">\zeta:Z\to[-\infty,+\infty]</script>如下：</p>
-<p><script type="math/tex; mode=display">\eta({\bf y})=\sup\left\{K({\bf y},{\bf z} \mid {\bf z} \in Z)\right\}</script></p>
-<p><script type="math/tex; mode=display">\zeta({\bf z})=\inf\left\{K({\bf y},{\bf z} \mid {\bf y} \in Y)\right\}</script></p>
-<p><script type="math/tex; mode=display">\min \; \; \; \eta({\bf y})\\s.t. \; \; \; {\bf y} \in Y</script></p>
-<p><script type="math/tex; mode=display">\max \; \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z</script></p>
+<p><script type="math/tex; mode=display">\eta({\bf y})=\sup\left\lbrace K({\bf y},{\bf z}) \mid {\bf z} \in Z\right\rbrace </script></p>
+<p><script type="math/tex; mode=display">\zeta({\bf z})=\inf\left\lbrace K({\bf y},{\bf z}) \mid {\bf y} \in Y\right\rbrace </script></p>
+<p><script type="math/tex; mode=display">\min \; \; \eta({\bf y})\\s.t. \; \; \; {\bf y} \in Y</script></p>
+<p><script type="math/tex; mode=display">\max \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z</script></p>
 
-<p><strong>引理 4.1</strong> 对任意<script type="math/tex">{\bf y}\in Y</script>与<script type="math/tex">{\bf z}\in Z</script>均有<script type="math/tex">\zeta({\bf z} \leq \eta({\bf y}))</script>成立。进一步，还有</p>
-<p><script type="math/tex; mode=display">\sup\left\{\zeta({\bf z})\mid {\bf z}\in Z\right\}\leq\inf\left\{\eta({\bf y})\mid {\bf y} \in Y\right\}</script></p>
-<p><strong>定理 4.1</strong> 点<script type="math/tex">(\bar{\bf y},\bar{\bf z}\in Y\times Z)</script>为函数<script type="math/tex">K:Y\times Z\to[-\infty,+\infty]</script>的鞍点的充要条件是<script type="math/tex">\bar{\bf y}\in Y</script>与<script type="math/tex">\bar{\bf z}\in Z</script>满足</p>
-<p><script type="math/tex; mode=display">\eta(\bar{\bf y})=\inf\left\{\eta({\bf y})\mid {\bf y}\in Y\right\}=\sup\left\{\zeta({\bf z})\mid {\bf z}\in Z\right\}=\zeta(\bar{\bf z})</script></p>
+<p><strong>引理 4.1</strong> 对任意<script type="math/tex">{\bf y}\in Y</script>与<script type="math/tex">{\bf z}\in Z</script>均有<script type="math/tex">\zeta({\bf z}) \leq \eta({\bf y})</script>成立。进一步，还有</p>
+<p><script type="math/tex; mode=display">\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace \leq\inf\left\lbrace \eta({\bf y})\mid {\bf y} \in Y\right\rbrace </script></p>
+
+<p><strong>定理 4.1</strong> 点<script type="math/tex">(\bar{\bf y},\bar{\bf z})\in Y\times Z</script>为函数<script type="math/tex">K:Y\times Z\to[-\infty,+\infty]</script>的鞍点的充要条件是<script type="math/tex">\bar{\bf y}\in Y</script>与<script type="math/tex">\bar{\bf z}\in Z</script>满足</p>
+<p><script type="math/tex; mode=display">\eta(\bar{\bf y})=\inf\left\lbrace \eta({\bf y})\mid {\bf y}\in Y\right\rbrace =\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace =\zeta(\bar{\bf z})</script></p>
 
 <script type="math/tex"></script>
 

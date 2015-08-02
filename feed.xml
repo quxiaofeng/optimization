@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Aug 2015 00:10:22 +0800</pubDate>
-    <lastBuildDate>Mon, 03 Aug 2015 00:10:22 +0800</lastBuildDate>
+    <pubDate>Mon, 03 Aug 2015 00:21:26 +0800</pubDate>
+    <lastBuildDate>Mon, 03 Aug 2015 00:21:26 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -62,7 +62,7 @@
 &lt;h3 id=&quot;section-2&quot;&gt;共轭函数&lt;/h3&gt;
 
 &lt;p&gt;给定正常凸函数&lt;script type=&quot;math/tex&quot;&gt;f:\Re^n \to (-\infty,+\infty]&lt;/script&gt;，由&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;f^\ast({\bf\xi}) = \sup \left\{ &lt;{\bf x},{\bf\xi}&gt;-f({\bf x}) \mid {\bf x}\in \Re^n \right\}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;f^\ast({\bf\xi}) = \sup \left\lbrace &lt;{\bf x},{\bf\xi}&gt;-f({\bf x}) \mid {\bf x}\in \Re^n \right\rbrace &lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;定义的函数&lt;script type=&quot;math/tex&quot;&gt;f^\ast:\Re^n \to [-\infty,+\infty]&lt;/script&gt;称为&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;的&lt;strong&gt;共轭函数&lt;/strong&gt;（conjuagate function）。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;定理 2.36&lt;/strong&gt; 正常凸函数&lt;script type=&quot;math/tex&quot;&gt;f:\Re^n \to (-\infty,+\infty]&lt;/script&gt;的共轭函数&lt;script type=&quot;math/tex&quot;&gt;f^\ast&lt;/script&gt;必为闭正常凸函数。&lt;/p&gt;
@@ -70,15 +70,16 @@
 &lt;h3 id=&quot;section-3&quot;&gt;鞍点问题&lt;/h3&gt;
 
 &lt;p&gt;设&lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;与&lt;script type=&quot;math/tex&quot;&gt;Z&lt;/script&gt;分别为&lt;script type=&quot;math/tex&quot;&gt;\Re^n&lt;/script&gt;与&lt;script type=&quot;math/tex&quot;&gt;\Re^m&lt;/script&gt;的非空子集，给定以&lt;script type=&quot;math/tex&quot;&gt;Y\times Z&lt;/script&gt;为定义域的函数&lt;script type=&quot;math/tex&quot;&gt;K:Y\times Z\to[-\infty,+\infty]&lt;/script&gt;，定义两个函数&lt;script type=&quot;math/tex&quot;&gt;\eta:Y\to[-\infty,+\infty]&lt;/script&gt;与&lt;script type=&quot;math/tex&quot;&gt;\zeta:Z\to[-\infty,+\infty]&lt;/script&gt;如下：&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta({\bf y})=\sup\left\{K({\bf y},{\bf z} \mid {\bf z} \in Z)\right\}&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\zeta({\bf z})=\inf\left\{K({\bf y},{\bf z} \mid {\bf y} \in Y)\right\}&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\min \; \; \; \eta({\bf y})\\s.t. \; \; \; {\bf y} \in Y&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\max \; \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta({\bf y})=\sup\left\lbrace K({\bf y},{\bf z}) \mid {\bf z} \in Z\right\rbrace &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\zeta({\bf z})=\inf\left\lbrace K({\bf y},{\bf z}) \mid {\bf y} \in Y\right\rbrace &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\min \; \; \eta({\bf y})\\s.t. \; \; \; {\bf y} \in Y&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\max \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;引理 4.1&lt;/strong&gt; 对任意&lt;script type=&quot;math/tex&quot;&gt;{\bf y}\in Y&lt;/script&gt;与&lt;script type=&quot;math/tex&quot;&gt;{\bf z}\in Z&lt;/script&gt;均有&lt;script type=&quot;math/tex&quot;&gt;\zeta({\bf z} \leq \eta({\bf y}))&lt;/script&gt;成立。进一步，还有&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sup\left\{\zeta({\bf z})\mid {\bf z}\in Z\right\}\leq\inf\left\{\eta({\bf y})\mid {\bf y} \in Y\right\}&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;定理 4.1&lt;/strong&gt; 点&lt;script type=&quot;math/tex&quot;&gt;(\bar{\bf y},\bar{\bf z}\in Y\times Z)&lt;/script&gt;为函数&lt;script type=&quot;math/tex&quot;&gt;K:Y\times Z\to[-\infty,+\infty]&lt;/script&gt;的鞍点的充要条件是&lt;script type=&quot;math/tex&quot;&gt;\bar{\bf y}\in Y&lt;/script&gt;与&lt;script type=&quot;math/tex&quot;&gt;\bar{\bf z}\in Z&lt;/script&gt;满足&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta(\bar{\bf y})=\inf\left\{\eta({\bf y})\mid {\bf y}\in Y\right\}=\sup\left\{\zeta({\bf z})\mid {\bf z}\in Z\right\}=\zeta(\bar{\bf z})&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;引理 4.1&lt;/strong&gt; 对任意&lt;script type=&quot;math/tex&quot;&gt;{\bf y}\in Y&lt;/script&gt;与&lt;script type=&quot;math/tex&quot;&gt;{\bf z}\in Z&lt;/script&gt;均有&lt;script type=&quot;math/tex&quot;&gt;\zeta({\bf z}) \leq \eta({\bf y})&lt;/script&gt;成立。进一步，还有&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace \leq\inf\left\lbrace \eta({\bf y})\mid {\bf y} \in Y\right\rbrace &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;定理 4.1&lt;/strong&gt; 点&lt;script type=&quot;math/tex&quot;&gt;(\bar{\bf y},\bar{\bf z})\in Y\times Z&lt;/script&gt;为函数&lt;script type=&quot;math/tex&quot;&gt;K:Y\times Z\to[-\infty,+\infty]&lt;/script&gt;的鞍点的充要条件是&lt;script type=&quot;math/tex&quot;&gt;\bar{\bf y}\in Y&lt;/script&gt;与&lt;script type=&quot;math/tex&quot;&gt;\bar{\bf z}\in Z&lt;/script&gt;满足&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta(\bar{\bf y})=\inf\left\lbrace \eta({\bf y})\mid {\bf y}\in Y\right\rbrace =\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace =\zeta(\bar{\bf z})&lt;/script&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;
 
