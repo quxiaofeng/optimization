@@ -52,7 +52,7 @@ categories:
 ### 共轭函数 ###
 
 给定正常凸函数{%m%}f:\Re^n \to (-\infty,+\infty]{%em%}，由
-{% math %}f^\ast({\bf\xi}) = \sup \left\{ <{\bf x},{\bf\xi}>-f({\bf x}) \mid {\bf x}\in \Re^n \right\}{% endmath %}
+{% math %}f^\ast({\bf\xi}) = \sup \left\lbrace <{\bf x},{\bf\xi}>-f({\bf x}) \mid {\bf x}\in \Re^n \right\rbrace {% endmath %}
 定义的函数{%m%}f^\ast:\Re^n \to [-\infty,+\infty]{%em%}称为{%m%}f{%em%}的**共轭函数**（conjuagate function）。
 
 **定理 2.36** 正常凸函数{%m%}f:\Re^n \to (-\infty,+\infty]{%em%}的共轭函数{%m%}f^\ast{%em%}必为闭正常凸函数。
@@ -60,15 +60,16 @@ categories:
 ### 鞍点问题 ###
 
 设{%m%}Y{%em%}与{%m%}Z{%em%}分别为{%m%}\Re^n{%em%}与{%m%}\Re^m{%em%}的非空子集，给定以{%m%}Y\times Z{%em%}为定义域的函数{%m%}K:Y\times Z\to[-\infty,+\infty]{%em%}，定义两个函数{%m%}\eta:Y\to[-\infty,+\infty]{%em%}与{%m%}\zeta:Z\to[-\infty,+\infty]{%em%}如下：
-{% math %}\eta({\bf y})=\sup\left\{K({\bf y},{\bf z} \mid {\bf z} \in Z)\right\}{% endmath %}
-{% math %}\zeta({\bf z})=\inf\left\{K({\bf y},{\bf z} \mid {\bf y} \in Y)\right\}{% endmath %}
-{% math %}\min \; \; \; \eta({\bf y})\\s.t. \; \; \; {\bf y} \in Y{% endmath %}
-{% math %}\max \; \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z{% endmath %}
+{% math %}\eta({\bf y})=\sup\left\lbrace K({\bf y},{\bf z}) \mid {\bf z} \in Z\right\rbrace {% endmath %}
+{% math %}\zeta({\bf z})=\inf\left\lbrace K({\bf y},{\bf z}) \mid {\bf y} \in Y\right\rbrace {% endmath %}
+{% math %}\min \; \; \eta({\bf y})\\s.t. \; \; \; {\bf y} \in Y{% endmath %}
+{% math %}\max \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z{% endmath %}
 
-**引理 4.1** 对任意{%m%}{\bf y}\in Y{%em%}与{%m%}{\bf z}\in Z{%em%}均有{%m%}\zeta({\bf z} \leq \eta({\bf y})){%em%}成立。进一步，还有
-{% math %}\sup\left\{\zeta({\bf z})\mid {\bf z}\in Z\right\}\leq\inf\left\{\eta({\bf y})\mid {\bf y} \in Y\right\}{% endmath %}
-**定理 4.1** 点{%m%}(\bar{\bf y},\bar{\bf z}\in Y\times Z){%em%}为函数{%m%}K:Y\times Z\to[-\infty,+\infty]{%em%}的鞍点的充要条件是{%m%}\bar{\bf y}\in Y{%em%}与{%m%}\bar{\bf z}\in Z{%em%}满足
-{% math %}\eta(\bar{\bf y})=\inf\left\{\eta({\bf y})\mid {\bf y}\in Y\right\}=\sup\left\{\zeta({\bf z})\mid {\bf z}\in Z\right\}=\zeta(\bar{\bf z}){% endmath %}
+**引理 4.1** 对任意{%m%}{\bf y}\in Y{%em%}与{%m%}{\bf z}\in Z{%em%}均有{%m%}\zeta({\bf z}) \leq \eta({\bf y}){%em%}成立。进一步，还有
+{% math %}\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace \leq\inf\left\lbrace \eta({\bf y})\mid {\bf y} \in Y\right\rbrace {% endmath %}
+
+**定理 4.1** 点{%m%}(\bar{\bf y},\bar{\bf z})\in Y\times Z{%em%}为函数{%m%}K:Y\times Z\to[-\infty,+\infty]{%em%}的鞍点的充要条件是{%m%}\bar{\bf y}\in Y{%em%}与{%m%}\bar{\bf z}\in Z{%em%}满足
+{% math %}\eta(\bar{\bf y})=\inf\left\lbrace \eta({\bf y})\mid {\bf y}\in Y\right\rbrace =\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace =\zeta(\bar{\bf z}){% endmath %}
 
 {%m%}{%em%}
 
