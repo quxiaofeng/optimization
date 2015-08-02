@@ -5,13 +5,13 @@ date:   2015-08-02 14:33:54
 categories:
 ---
 
-豆瓣链接：[http://book.douban.com/subject/6510671/](http://book.douban.com/subject/6510671/)
+非线性最优化基础 by Masao Fukushima {% sidenote 1 '非线性最优化基础（豆瓣链接：[http://book.douban.com/subject/6510671/](http://book.douban.com/subject/6510671/)） by Masao Fukushima （个人主页：[http://www.seto.nanzan-u.ac.jp/~fuku/fuku-e.html](http://www.seto.nanzan-u.ac.jp/~fuku/fuku-e.html)）' %}
 
-[冯象初教授](http://web.xidian.edu.cn/xcfeng/){% sidenote 1 '冯象初，教授，博导，西安电子科技大学数学系。个人主页：[http://web.xidian.edu.cn/xcfeng/](http://web.xidian.edu.cn/xcfeng/)' %}讲座的笔记
+该文为[冯象初教授](http://web.xidian.edu.cn/xcfeng/){% sidenote 2 '冯象初，教授，博导，西安电子科技大学数学系。个人主页：[http://web.xidian.edu.cn/xcfeng/](http://web.xidian.edu.cn/xcfeng/)' %}有关非线性最优化的讲座的笔记。
 
-主要内容
+**主要内容**
 
-理论基础
+**理论基础**
 
 1. 凸函数、闭函数
 2. 共轭函数
@@ -20,7 +20,7 @@ categories:
 5. Lagrange 对偶性的推广
 6. Fenchel 对偶性
 
-算法
+**算法**
 
 1. Proximal gradient methods
 2. Dual proximal gradient methods
