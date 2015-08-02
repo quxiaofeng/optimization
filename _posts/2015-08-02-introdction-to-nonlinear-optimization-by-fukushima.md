@@ -7,7 +7,7 @@ categories:
 
 豆瓣链接：[http://book.douban.com/subject/6510671/](http://book.douban.com/subject/6510671/)
 
-[冯象初教授](http://web.xidian.edu.cn/xcfeng/) ｛% sidenote 1 '冯象初，教授，博导，西安电子科技大学数学系。个人主页：[http://web.xidian.edu.cn/xcfeng/](http://web.xidian.edu.cn/xcfeng/)' %｝讲座的笔记
+[冯象初教授](http://web.xidian.edu.cn/xcfeng/){% sidenote 1 '冯象初，教授，博导，西安电子科技大学数学系。个人主页：[http://web.xidian.edu.cn/xcfeng/](http://web.xidian.edu.cn/xcfeng/)' %}讲座的笔记
 
 主要内容
 
@@ -34,15 +34,14 @@ categories:
 ### 凸函数、闭函数 ###
 
 给定函数 {%m%}f : \Re^n \to [-\infty, +\infty] {%em%} 称 {%m%}\Re^{n+1}{%em%} 的子集
-{% math %} graph \; f = \left{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \right}, {% endmath %}
+{% math %} graph \; f = \lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \rbrace, {% endmath %}
 为 {%m%}f{%em%} 的图像（graph），而称位于 {%m%}f{%em%} 的图像上方的点的全体构成的集合
-{% math %}epi \; f =\left{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \ge f({\bf x}) \right}{% endmath %}
+{% math %}epi \; f =\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \ge f({\bf x}) \rbrace{% endmath %}
 为 {%m%}f{%em%} 的上图（epigraph），若上图 {%m%}epi \; f{%em%} 为凸集，则称 {%m%}f{%em%} 为**凸函数**(convex function)。
 
-**定理**：设 {%m%}\Iota{%em%} 为任意非空指标集，而 {%m%}f_{\iota} : \Re^n \to [-\infty, +\infty] \; (\iota \in \Iota){%em%} 均为凸函数，则由
-{% math %} f({\bf x}) = \sup \left{ f_i({\bf x}) \mid \iota \in \Iota \right}{% endmath %}
-定义的函数 {%m%}f : \Re^n \to [-\infty, +\infty] {%em%} 为凸函数。进一步，若 {%m%}\Iota{%em%} 为有限指标集，每个 {%m%}f_i{%em%} 均为正常的凸函数，并且 {%m%}\cap_{\iota \in \Iota} \; dom \; f_i \neq \varnothing {%em%}，则 {%m%}f{%em%} 为正常凸函数。
-
+**定理**：设 {%m%} \mathcal{I} {%em%} 为任意非空指标集，而 {%m%}f_i : \Re^n \to [-\infty, +\infty] \; (i \in \mathcal{I}){%em%} 均为凸函数，则由
+{% math %} f({\bf x}) = \sup \lbrace f_i({\bf x}) \mid i \in \mathcal{I} \rbrace{% endmath %}
+定义的函数 {%m%}f : \Re^n \to [-\infty, +\infty] {%em%} 为凸函数。进一步，若 {%m%}\mathcal{I}{%em%} 为有限指标集，每个 {%m%}f_i{%em%} 均为正常的凸函数，并且 {%m%}\cap_{i \in \mathcal{I}} \; dom \; f_i \neq \varnothing {%em%}，则 {%m%}f{%em%} 为正常凸函数。
 
 {%m%}{%em%}
 
