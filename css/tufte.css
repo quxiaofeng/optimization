@@ -311,7 +311,8 @@ pre {
   margin-bottom: 1.4rem; }
 
 article {
-  position: relative; }
+  position: relative;
+  display: inline-block;}
 
 p, li {
   font-size: 1.4rem;
