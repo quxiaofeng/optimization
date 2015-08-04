@@ -208,7 +208,8 @@ body {
 
 @media screen and (min-width: 800px) {
   body {
-    width: 95%; } }
+    width: 95%;
+    padding-left: 3.4%; } }
 body > header {
   padding-top: 1rem;
   border-bottom: 1px #aaaaaa solid;
@@ -327,10 +328,12 @@ p, article ul li, pre code, pre code p, code {
 
 @media screen and (max-width: 600px) {
   p {
-    width: 65%; } }
+    width: 65%;
+    padding-left: 3.4%; } }
 @media screen and (max-width: 400px) {
   p {
-    width: 90%; } }
+    width: 90%;
+    padding-left: 6.8%; } }
 a, .marginnote a, .sidenote a {
   color: #a00000; }
 
