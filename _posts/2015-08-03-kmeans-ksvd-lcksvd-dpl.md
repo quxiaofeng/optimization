@@ -9,7 +9,7 @@ categories:
 
 Julia 代码测试
 
-{% highlight python %}
+{% highlight ruby %}
 include("diagadd!.jl")
 
 function updateA!(A::Array{Any,1}, D::Array{Any,1}, 
