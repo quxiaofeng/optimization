@@ -7,9 +7,9 @@ categories:
 
 从 Kmeans 到 KSVD，到 LC-KSVD，到 DPL。
 
-Julia 代码测试
+Julia Code Highlight Test
 
-{% highlight ruby linenos=table %}
+{% highlight ruby linenos %}
 include("diagadd!.jl")
 
 function updateA!(A::Array{Any,1}, 
