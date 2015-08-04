@@ -328,12 +328,10 @@ p, article ul li, pre code, pre code p, code {
 
 @media screen and (max-width: 600px) {
   p {
-    width: 65%;
-    padding-left: 3.4%; } }
+    width: 65%; } }
 @media screen and (max-width: 400px) {
   p {
-    width: 90%;
-    padding-left: 6.8%; } }
+    width: 90%; } }
 a, .marginnote a, .sidenote a {
   color: #a00000; }
 
