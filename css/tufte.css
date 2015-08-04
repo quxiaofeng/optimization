@@ -7,7 +7,7 @@
 /*****************************************************************************/
 @font-face {
   font-family: ETBembo;
-  src: url("../fonts/ETBembo-RomanLF.ttf"); }
+  src: url("http://www.quxiaofeng.me/optimization/fonts/ETBembo-RomanLF.ttf"); }
 /* This file contains all the constants for colors and font styles */
 /*-- Global stuff with fonts, background colors,etc --*/
 /**
@@ -548,8 +548,8 @@ span.newthought {
 /* --- Icomoon icon fonts CSS --*/
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?rgwlb8");
-  src: url("../fonts/icomoon.eot?#iefixrgwlb8") format("embedded-opentype"), url("../fonts/icomoon.woff?rgwlb8") format("woff"), url("../fonts/icomoon.ttf?rgwlb8") format("truetype"), url("../fonts/icomoon.svg?rgwlb8#icomoon") format("svg");
+  src: url("http://www.quxiaofeng.me/optimization/fonts/icomoon.eot?rgwlb8");
+  src: url("http://www.quxiaofeng.me/optimization/fonts/icomoon.eot?#iefixrgwlb8") format("embedded-opentype"), url("http://www.quxiaofeng.me/optimization/fonts/icomoon.woff?rgwlb8") format("woff"), url("http://www.quxiaofeng.me/optimization/fonts/icomoon.ttf?rgwlb8") format("truetype"), url("http://www.quxiaofeng.me/optimization/fonts/icomoon.svg?rgwlb8#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
