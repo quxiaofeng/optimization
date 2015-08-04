@@ -46,22 +46,22 @@
 
 <p>Julia 代码测试</p>
 
-<div class="highlight"><pre><code class="language-julia" data-lang="julia">include("diagadd!.jl")
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">include</span><span class="p">(</span><span class="s">"diagadd!.jl"</span><span class="p">)</span>
 
-function updateA!(A::Array{Any,1}, D::Array{Any,1}, DataMat::Array{Any,1}, P::Array{Any,1}, τ::Float64, DictSize::Int64)
-    # Update tempDictCoef by Eq. (8)
+<span class="n">function</span> <span class="n">updateA</span><span class="err">!</span><span class="p">(</span><span class="n">A</span><span class="p">::</span><span class="n">Array</span><span class="p">{</span><span class="n">Any</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> <span class="n">D</span><span class="p">::</span><span class="n">Array</span><span class="p">{</span><span class="n">Any</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> <span class="n">DataMat</span><span class="p">::</span><span class="n">Array</span><span class="p">{</span><span class="n">Any</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> <span class="n">P</span><span class="p">::</span><span class="n">Array</span><span class="p">{</span><span class="n">Any</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> <span class="err">τ</span><span class="p">::</span><span class="n">Float64</span><span class="p">,</span> <span class="n">DictSize</span><span class="p">::</span><span class="n">Int64</span><span class="p">)</span>
+    <span class="c"># Update tempDictCoef by Eq. (8)</span>
 
-    for i=1:length(A)
-        @inbounds TempDict::Matrix{Float64} = D[i]
-        @inbounds TempData::Matrix{Float64} = DataMat[i]
-        tempDictCoef::Matrix{Float64}       = TempDict' * TempDict
-        tempDictDataCoef::Matrix{Float64}   = TempDict' * TempData
-        @inbounds C::Matrix{Float64}        = P[i] * TempData
-        diagadd!(tempDictCoef, τ)
-        fma!(tempDictDataCoef, C, τ)
-        @inbounds A[i]                      = tempDictCoef \ tempDictDataCoef
-    end
-end</code></pre></div>
+    <span class="k">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">length</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+        <span class="nd">@inbounds</span> <span class="n">TempDict</span><span class="p">::</span><span class="n">Matrix</span><span class="p">{</span><span class="n">Float64</span><span class="p">}</span> <span class="o">=</span> <span class="n">D</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="nd">@inbounds</span> <span class="n">TempData</span><span class="p">::</span><span class="n">Matrix</span><span class="p">{</span><span class="n">Float64</span><span class="p">}</span> <span class="o">=</span> <span class="n">DataMat</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">tempDictCoef</span><span class="p">::</span><span class="n">Matrix</span><span class="p">{</span><span class="n">Float64</span><span class="p">}</span>       <span class="o">=</span> <span class="n">TempDict</span><span class="s">' * TempDict</span><span class="err">
+</span><span class="s">        tempDictDataCoef::Matrix{Float64}   = TempDict'</span> <span class="o">*</span> <span class="n">TempData</span>
+        <span class="nd">@inbounds</span> <span class="n">C</span><span class="p">::</span><span class="n">Matrix</span><span class="p">{</span><span class="n">Float64</span><span class="p">}</span>        <span class="o">=</span> <span class="n">P</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">TempData</span>
+        <span class="n">diagadd</span><span class="err">!</span><span class="p">(</span><span class="n">tempDictCoef</span><span class="p">,</span> <span class="err">τ</span><span class="p">)</span>
+        <span class="n">fma</span><span class="err">!</span><span class="p">(</span><span class="n">tempDictDataCoef</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="err">τ</span><span class="p">)</span>
+        <span class="nd">@inbounds</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>                      <span class="o">=</span> <span class="n">tempDictCoef</span> \ <span class="n">tempDictDataCoef</span>
+    <span class="n">end</span>
+<span class="n">end</span></code></pre></div>
 
 </div>
       </li>
