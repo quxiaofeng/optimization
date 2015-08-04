@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Kmeans, KSVD, LC-KSVD and DPL | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="从 Kmeans 到 KSVD，到 LC-KSVD，到 DPL。Julia Code Highlight Test123456789101112131415161718192021include("diagadd!.jl")function updateA!(A::Array{Any,1},           ...">
+  <meta name="description" content="从 Kmeans 到 KSVD，到 LC-KSVD，到 DPL。Julia Code Highlight Testinclude("diagadd!.jl")function updateA!(A::Array{Any,1},                   D::Array{Any,1},         ...">
 
 
   <link rel="stylesheet" href="//www.quxiaofeng.me/optimization/css/tufte.css">	
@@ -43,27 +43,7 @@
 
 <p>Julia Code Highlight Test</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21</pre></td><td class="code"><pre><span class="kp">include</span><span class="p">(</span><span class="s2">"diagadd!.jl"</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="kp">include</span><span class="p">(</span><span class="s2">"diagadd!.jl"</span><span class="p">)</span>
 
 <span class="n">function</span> <span class="n">updateA!</span><span class="p">(</span><span class="no">A</span><span class="o">::</span><span class="no">Array</span><span class="p">{</span><span class="no">Any</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> 
                   <span class="no">D</span><span class="o">::</span><span class="no">Array</span><span class="p">{</span><span class="no">Any</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> 
@@ -83,17 +63,13 @@
         <span class="n">fma!</span><span class="p">(</span><span class="n">tempDictDataCoef</span><span class="p">,</span> <span class="no">C</span><span class="p">,</span> <span class="err">τ</span><span class="p">)</span>
         <span class="vi">@inbounds</span> <span class="no">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>                      <span class="o">=</span> <span class="n">tempDictCoef</span> <span class="p">\</span> <span class="n">tempDictDataCoef</span>
     <span class="k">end</span>
-<span class="k">end</span><span class="w">
-</span></pre></td></tr></tbody></table>
-
-
+<span class="k">end</span></code></pre></div>
 
 <!--more-->
 
 <script type="math/tex"></script>
 
 <p><script type="math/tex; mode=display"> </script></p>
-</code></pre></div>
 
 
 
