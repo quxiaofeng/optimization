@@ -9,7 +9,7 @@ categories:
 
 Julia 代码测试
 
-{% highlight ruby %}
+{% highlight ruby linenos=table %}
 include("diagadd!.jl")
 
 function updateA!(A::Array{Any,1}, 
@@ -34,9 +34,6 @@ end
 {% endhighlight %}
 
 <!--more-->
-
-
-
 
 {%m%}{%em%}
 
