@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Kmeans, KSVD, LC-KSVD and DPL | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="从 Kmeans 到 KSVD，到 LC-KSVD，到 DPL。Julia 代码测试include("diagadd!.jl")function updateA!(A::Array{Any,1}, D::Array{Any,1},     DataMat::Array{Any,1}, P::Array{Any,1...">
+  <meta name="description" content="从 Kmeans 到 KSVD，到 LC-KSVD，到 DPL。Julia 代码测试include("diagadd!.jl")function updateA!(A::Array{Any,1},                   D::Array{Any,1},                   DataM...">
 
 
   <link rel="stylesheet" href="//www.quxiaofeng.me/optimization/css/tufte.css">	
@@ -45,8 +45,12 @@
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="kp">include</span><span class="p">(</span><span class="s2">"diagadd!.jl"</span><span class="p">)</span>
 
-<span class="n">function</span> <span class="n">updateA!</span><span class="p">(</span><span class="no">A</span><span class="o">::</span><span class="no">Array</span><span class="p">{</span><span class="no">Any</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> <span class="no">D</span><span class="o">::</span><span class="no">Array</span><span class="p">{</span><span class="no">Any</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> 
-    <span class="no">DataMat</span><span class="o">::</span><span class="no">Array</span><span class="p">{</span><span class="no">Any</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> <span class="no">P</span><span class="o">::</span><span class="no">Array</span><span class="p">{</span><span class="no">Any</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> <span class="err">τ</span><span class="o">::</span><span class="no">Float64</span><span class="p">,</span> <span class="no">DictSize</span><span class="o">::</span><span class="no">Int64</span><span class="p">)</span>
+<span class="n">function</span> <span class="n">updateA!</span><span class="p">(</span><span class="no">A</span><span class="o">::</span><span class="no">Array</span><span class="p">{</span><span class="no">Any</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> 
+                  <span class="no">D</span><span class="o">::</span><span class="no">Array</span><span class="p">{</span><span class="no">Any</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> 
+                  <span class="no">DataMat</span><span class="o">::</span><span class="no">Array</span><span class="p">{</span><span class="no">Any</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> 
+                  <span class="no">P</span><span class="o">::</span><span class="no">Array</span><span class="p">{</span><span class="no">Any</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span> 
+                  <span class="err">τ</span><span class="o">::</span><span class="no">Float64</span><span class="p">,</span> 
+                  <span class="no">DictSize</span><span class="o">::</span><span class="no">Int64</span><span class="p">)</span>
     <span class="c1"># Update tempDictCoef by Eq. (8)</span>
 
     <span class="k">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="ss">:length</span><span class="p">(</span><span class="no">A</span><span class="p">)</span>
