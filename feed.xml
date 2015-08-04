@@ -5,13 +5,32 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 04 Aug 2015 10:02:10 +0800</pubDate>
-    <lastBuildDate>Tue, 04 Aug 2015 10:02:10 +0800</lastBuildDate>
+    <pubDate>Tue, 04 Aug 2015 11:03:12 +0800</pubDate>
+    <lastBuildDate>Tue, 04 Aug 2015 11:03:12 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Kmeans, KSVD, LC-KSVD and DPL</title>
         <description>&lt;p&gt;从 Kmeans 到 KSVD，到 LC-KSVD，到 DPL。&lt;/p&gt;
+
+&lt;p&gt;Julia 代码测试&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-julia&quot; data-lang=&quot;julia&quot;&gt;include(&quot;diagadd!.jl&quot;)
+
+function updateA!(A::Array{Any,1}, D::Array{Any,1}, DataMat::Array{Any,1}, P::Array{Any,1}, τ::Float64, DictSize::Int64)
+    # Update tempDictCoef by Eq. (8)
+
+    for i=1:length(A)
+        @inbounds TempDict::Matrix{Float64} = D[i]
+        @inbounds TempData::Matrix{Float64} = DataMat[i]
+        tempDictCoef::Matrix{Float64}       = TempDict&#39; * TempDict
+        tempDictDataCoef::Matrix{Float64}   = TempDict&#39; * TempData
+        @inbounds C::Matrix{Float64}        = P[i] * TempData
+        diagadd!(tempDictCoef, τ)
+        fma!(tempDictDataCoef, C, τ)
+        @inbounds A[i]                      = tempDictCoef \ tempDictDataCoef
+    end
+end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;!--more--&gt;
 
