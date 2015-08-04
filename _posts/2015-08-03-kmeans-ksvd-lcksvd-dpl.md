@@ -9,7 +9,7 @@ categories:
 
 Julia Code Highlight Test
 
-{% highlight ruby linenos %}
+{% highlight ruby %}
 include("diagadd!.jl")
 
 function updateA!(A::Array{Any,1}, 
