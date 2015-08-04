@@ -9,7 +9,7 @@ categories:
 
 Julia 代码测试
 
-{% highlight julia %}
+{% highlight python %}
 include("diagadd!.jl")
 
 function updateA!(A::Array{Any,1}, D::Array{Any,1}, DataMat::Array{Any,1}, P::Array{Any,1}, τ::Float64, DictSize::Int64)
