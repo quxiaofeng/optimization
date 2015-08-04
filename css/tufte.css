@@ -313,7 +313,8 @@ pre {
 
 article {
   position: relative;
-  display: inline-block;}
+  display: inline-block;
+  width: 100%; }
 
 p, li {
   font-size: 1.4rem;
