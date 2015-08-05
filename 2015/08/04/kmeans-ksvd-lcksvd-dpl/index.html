@@ -41,6 +41,8 @@
 
 <p>从 K-means 到 <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf">K-SVD</a><sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> M. Aharon, M. Elad, and A.M. Bruckstein, “The K-SVD: An Algorithm for Designing of Overcomplete Dictionaries for Sparse Representation”, the IEEE Trans. On Signal Processing, Vol. 54, no. 11, pp. 4311-4322, November 2006. <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf">http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf</a></span><sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> O. Bryt and M. Elad, Compression of Facial Images Using the K-SVD Algorithm, Journal of Visual Communication and Image Representation, Vol. 19, No. 4, Pages 270-283, May 2008. <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf">http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf</a></span><sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> R. Rubinstein, T. Peleg and M. Elad, Analysis K-SVD: A Dictionary-Learning Algorithm for the Analysis Sparse Model, IEEE Trans. on Signal Processing, Vol. 61, No. 3, Pages 661-677, March 2013. <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf">http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf</a></span>，到 <a href="http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html">LC-KSVD</a><sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> Zhuolin Jiang, Zhe Lin, Larry S. Davis. “Label Consistent K-SVD: Learning A Discriminative Dictionary for Recognition”. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2013, 35(11): 2651-2664. <a href="http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html">http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html</a></span>，到 <a href="http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian">DPL</a><sup class="sidenote-number">5</sup><span class="sidenote"><sup class="sidenote-number">5</sup> Gu, S., Zhang, L., Zuo, W., &amp; Feng, X. (2014). Projective dictionary pair learning for pattern classification. In Z. Ghahramani, M. Welling, C. Cortes, N. D. Lawrence, &amp; K. Q. Weinberger (Eds.), Advances in Neural Information Processing Systems 27 (pp. 793–801). Curran Associates, Inc. <a href="http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian">http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian</a></span>。</p>
 
+<!--more-->
+
 <p>Julia Code Highlight Test</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="kp">include</span><span class="p">(</span><span class="s2">"diagadd!.jl"</span><span class="p">)</span>
@@ -64,8 +66,6 @@
         <span class="vi">@inbounds</span> <span class="no">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>                      <span class="o">=</span> <span class="n">tempDictCoef</span> <span class="p">\</span> <span class="n">tempDictDataCoef</span>
     <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
-
-<!--more-->
 
 <script type="math/tex"></script>
 
