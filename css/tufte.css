@@ -200,7 +200,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding-left: 8.4%;
-  font-family: ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family: ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia,
+               "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", serif;
   padding-bottom: 400px;
   background-color: #fffff8;
   color: #111;
@@ -221,7 +222,8 @@ header > nav.group {
 
 header > nav a {
   font-size: 1.2rem;
-  font-family: "Gill Sans", "Gill Sans MT", "Lato", Calibri, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", "Lato", Calibri,
+               "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #a00000;
@@ -255,7 +257,8 @@ body > footer ul li a {
   font-size: 1.8rem; }
 
 .credits {
-  font-family: "Gill Sans", "Gill Sans MT", "Lato", Calibri, sans-serif; }
+  font-family: "Gill Sans", "Gill Sans MT", "Lato", Calibri,
+               "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; }
   .credits a {
     color: #a00000; }
 
@@ -299,10 +302,12 @@ cite {
   font-style: italic; }
 
 .sans {
-  font-family: "Gill Sans", "Gill Sans MT", "Lato", Calibri, sans-serif; }
+  font-family: "Gill Sans", "Gill Sans MT", "Lato", Calibri,
+               "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; }
 
 pre code, pre code p, code {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier,
+               "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", monospace;
   color: #222;
   font-size: 1.2rem;
   line-height: 1.63333333333; }
@@ -474,7 +479,8 @@ thead th {
 a.url, .sidenote a {
   text-decoration: none;
   word-break: break-all;
-  font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace; }
+  font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono",
+               "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", monospace; }
 
 sup.sidenote-number {
   color: #ed0000; }
@@ -520,7 +526,8 @@ span.newthought {
     font-size: 12pt; }
 
   html body span.print-footer {
-    font-family: "Gill Sans", "Gill Sans MT", "Lato", Calibri, sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", "Lato", Calibri,
+                 "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     font-size: 9pt;
     margin-top: 22.4pt;
     padding-top: 4pt;
