@@ -39,7 +39,7 @@ categories:
 
 为 {%m%}f{%em%} 的**图像**（graph），而称位于 {%m%}f{%em%} 的图像上方的点的全体构成的集合
 
-{% math %}epi \; f =\left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \ge f({\bf x}) \right\rbrace{% endmath %}
+{% math %}epi \; f =\left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \geqslant f({\bf x}) \right\rbrace{% endmath %}
 
 为 {%m%}f{%em%} 的**上图**（epigraph）。若上图 {%m%}epi \; f{%em%} 为凸集，则称 {%m%}f{%em%} 为**凸函数**(convex function)。
 
@@ -51,11 +51,11 @@ categories:
 
 若对任意收敛于 {%m%}{\bf x}{%em%} 的点列 {%m%}\lbrace{\bf x}^k\rbrace \subseteq \Re^n{%em%} 均有
 
-{% math %} f({\bf x}) \ge \limsup_{k \to \infty}f({\bf x}^k) {% endmath %}
+{% math %} f({\bf x}) \geqslant \limsup_{k \to \infty}f({\bf x}^k) {% endmath %}
 
 成立，则称函数 {%m%}f:\Re^n\to[-\infty,+\infty]{%em%} 在 {%m%}{\bf x}{%em%} 处**上半连续**（upper semicontinuous）；反之，当
 
-{% math %} f({\bf x}) \le \liminf_{k \to \infty}f({\bf x}^k) {% endmath %}
+{% math %} f({\bf x}) \leqslant \liminf_{k \to \infty}f({\bf x}^k) {% endmath %}
 
 成立时，称 {%m%}f{%em%} 在 {%m%}{\bf x}{%em%} 处**下半连续**（lower semicontinuous）。若 {%m%}f{%em%} 在 {%m%}{\bf x}{%em%} 处既为上半连续又为下半连续，则称 {%m%}f{%em%} 在 {%m%}{\bf x}{%em%} 处**连续**（continuous）。
 
@@ -81,8 +81,8 @@ categories:
 
 {% math %}\max \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z{% endmath %}
 
-**引理 4.1** 对任意 {%m%}{\bf y}\in Y{%em%} 与 {%m%}{\bf z}\in Z{%em%} 均有 {%m%}\zeta({\bf z}) \leq \eta({\bf y}){%em%} 成立。进一步，还有
-{% math %}\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace \leq\inf\left\lbrace \eta({\bf y})\mid {\bf y} \in Y\right\rbrace {% endmath %}
+**引理 4.1** 对任意 {%m%}{\bf y}\in Y{%em%} 与 {%m%}{\bf z}\in Z{%em%} 均有 {%m%}\zeta({\bf z}) \leqslant \eta({\bf y}){%em%} 成立。进一步，还有
+{% math %}\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace \leqslant \inf\left\lbrace \eta({\bf y})\mid {\bf y} \in Y\right\rbrace {% endmath %}
 
 **定理 4.1** 点 {%m%}(\bar{\bf y},\bar{\bf z})\in Y\times Z{%em%} 为函数 {%m%}K:Y\times Z\to[-\infty,+\infty]{%em%} 的鞍点的充要条件是 {%m%}\bar{\bf y}\in Y{%em%} 与 {%m%}\bar{\bf z}\in Z{%em%} 满足
 
@@ -92,13 +92,13 @@ categories:
 
 考虑如下非线性规划问题：
 
-{% math %} \min \; \; f({\bf x}) \\ s.t. \; \; g_i({\bf x}) \leq 0, \; \; i=1, \cdots, m{% endmath %}
+{% math %} \min \; \; f({\bf x}) \\ s.t. \; \; g_i({\bf x}) \leqslant 0, \; \; i=1, \cdots, m{% endmath %}
 
 其中 {%m%}f: \Re^n \to \Re{%em%}, {%m%}g_i: \Re^n \to \Re (i=1, \cdots, m){%em%}。
 
-{% math %} S = \left\lbrace x \in \Re^n \mid g_i({\bf x}) \leq 0 \text{, } i=1, \cdots, m\right \rbrace{% endmath %}
+{% math %} S = \left\lbrace x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } i=1, \cdots, m\right \rbrace{% endmath %}
 
-{% math %} L_0({\bf x}, {\bf \lambda}) = \left\{ {f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x}), {\bf \lambda} \geq {\bf 0}\\ -\infty \text{,   } {\bf \lambda} \ngeq {\bf 0}}{% endmath %}
+{% math %} L_0({\bf x}, {\bf \lambda}) = \left\{ {f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x}), {\bf \lambda} \geqslant {\bf 0}\\ -\infty \text{,   } {\bf \lambda} \ngeqslant {\bf 0}}{% endmath %}
 
 {% math %} \theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}{% endmath %}
 
