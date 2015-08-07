@@ -98,7 +98,11 @@ categories:
 
 {% math %} S = \left\lbrace x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } i=1, \cdots, m\right \rbrace{% endmath %}
 
-{% math %} L_0({\bf x}, {\bf \lambda}) = \left\{ \begin{array}{ll} f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x}), {\bf \lambda} \geqslant {\bf 0}\\ -\infty \text{,   } {\bf \lambda} \ngeqslant {\bf 0} \end{array} \right {% endmath %}
+{% math %} L_0({\bf x}, {\bf \lambda}) = \begin{cases}
+        f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x}), {\bf \lambda} \geqslant {\bf 0}\\
+        -\infty \text{,   } {\bf \lambda} \ngeqslant {\bf 0}
+    \end{cases}
+{% endmath %}
 
 {% math %} \theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}{% endmath %}
 
