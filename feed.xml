@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 07 Aug 2015 23:29:59 +0800</pubDate>
-    <lastBuildDate>Fri, 07 Aug 2015 23:29:59 +0800</lastBuildDate>
+    <pubDate>Fri, 07 Aug 2015 23:32:43 +0800</pubDate>
+    <lastBuildDate>Fri, 07 Aug 2015 23:32:43 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -90,7 +90,7 @@
 
 &lt;p&gt;为 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的&lt;strong&gt;图像&lt;/strong&gt;（graph），而称位于 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的图像上方的点的全体构成的集合&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;epi \; f =\left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \ge f({\bf x}) \right\rbrace&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;epi \; f =\left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \geqslant f({\bf x}) \right\rbrace&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;为 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的&lt;strong&gt;上图&lt;/strong&gt;（epigraph）。若上图 &lt;script type=&quot;math/tex&quot;&gt;epi \; f&lt;/script&gt; 为凸集，则称 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 为&lt;strong&gt;凸函数&lt;/strong&gt;(convex function)。&lt;/p&gt;
 
@@ -102,11 +102,11 @@
 
 &lt;p&gt;若对任意收敛于 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 的点列 &lt;script type=&quot;math/tex&quot;&gt;\lbrace{\bf x}^k\rbrace \subseteq \Re^n&lt;/script&gt; 均有&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; f({\bf x}) \ge \limsup_{k \to \infty}f({\bf x}^k) &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; f({\bf x}) \geqslant \limsup_{k \to \infty}f({\bf x}^k) &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;成立，则称函数 &lt;script type=&quot;math/tex&quot;&gt;f:\Re^n\to[-\infty,+\infty]&lt;/script&gt; 在 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 处&lt;strong&gt;上半连续&lt;/strong&gt;（upper semicontinuous）；反之，当&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; f({\bf x}) \le \liminf_{k \to \infty}f({\bf x}^k) &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; f({\bf x}) \leqslant \liminf_{k \to \infty}f({\bf x}^k) &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;成立时，称 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 在 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 处&lt;strong&gt;下半连续&lt;/strong&gt;（lower semicontinuous）。若 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 在 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 处既为上半连续又为下半连续，则称 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 在 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 处&lt;strong&gt;连续&lt;/strong&gt;（continuous）。&lt;/p&gt;
 
@@ -132,8 +132,8 @@
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\max \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;引理 4.1&lt;/strong&gt; 对任意 &lt;script type=&quot;math/tex&quot;&gt;{\bf y}\in Y&lt;/script&gt; 与 &lt;script type=&quot;math/tex&quot;&gt;{\bf z}\in Z&lt;/script&gt; 均有 &lt;script type=&quot;math/tex&quot;&gt;\zeta({\bf z}) \leq \eta({\bf y})&lt;/script&gt; 成立。进一步，还有&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace \leq\inf\left\lbrace \eta({\bf y})\mid {\bf y} \in Y\right\rbrace &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;引理 4.1&lt;/strong&gt; 对任意 &lt;script type=&quot;math/tex&quot;&gt;{\bf y}\in Y&lt;/script&gt; 与 &lt;script type=&quot;math/tex&quot;&gt;{\bf z}\in Z&lt;/script&gt; 均有 &lt;script type=&quot;math/tex&quot;&gt;\zeta({\bf z}) \leqslant \eta({\bf y})&lt;/script&gt; 成立。进一步，还有&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace \leqslant \inf\left\lbrace \eta({\bf y})\mid {\bf y} \in Y\right\rbrace &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;定理 4.1&lt;/strong&gt; 点 &lt;script type=&quot;math/tex&quot;&gt;(\bar{\bf y},\bar{\bf z})\in Y\times Z&lt;/script&gt; 为函数 &lt;script type=&quot;math/tex&quot;&gt;K:Y\times Z\to[-\infty,+\infty]&lt;/script&gt; 的鞍点的充要条件是 &lt;script type=&quot;math/tex&quot;&gt;\bar{\bf y}\in Y&lt;/script&gt; 与 &lt;script type=&quot;math/tex&quot;&gt;\bar{\bf z}\in Z&lt;/script&gt; 满足&lt;/p&gt;
 
@@ -143,13 +143,13 @@
 
 &lt;p&gt;考虑如下非线性规划问题：&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \min \; \; f({\bf x}) \\ s.t. \; \; g_i({\bf x}) \leq 0, \; \; i=1, \cdots, m&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \min \; \; f({\bf x}) \\ s.t. \; \; g_i({\bf x}) \leqslant 0, \; \; i=1, \cdots, m&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;其中 &lt;script type=&quot;math/tex&quot;&gt;f: \Re^n \to \Re&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;g_i: \Re^n \to \Re (i=1, \cdots, m)&lt;/script&gt;。&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; S = \left\lbrace x \in \Re^n \mid g_i({\bf x}) \leq 0 \text{, } i=1, \cdots, m\right \rbrace&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; S = \left\lbrace x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } i=1, \cdots, m\right \rbrace&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; L_0({\bf x}, {\bf \lambda}) = \left\{ {f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x}), {\bf \lambda} \geq {\bf 0}\\ -\infty \text{,   } {\bf \lambda} \ngeq {\bf 0}}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; L_0({\bf x}, {\bf \lambda}) = \left\{ {f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x}), {\bf \lambda} \geqslant {\bf 0}\\ -\infty \text{,   } {\bf \lambda} \ngeqslant {\bf 0}}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}&lt;/script&gt;&lt;/p&gt;
 

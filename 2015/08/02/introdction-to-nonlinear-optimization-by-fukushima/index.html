@@ -77,7 +77,7 @@
 
 <p>为 <script type="math/tex">f</script> 的<strong>图像</strong>（graph），而称位于 <script type="math/tex">f</script> 的图像上方的点的全体构成的集合</p>
 
-<p><script type="math/tex; mode=display">epi \; f =\left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \ge f({\bf x}) \right\rbrace</script></p>
+<p><script type="math/tex; mode=display">epi \; f =\left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \geqslant f({\bf x}) \right\rbrace</script></p>
 
 <p>为 <script type="math/tex">f</script> 的<strong>上图</strong>（epigraph）。若上图 <script type="math/tex">epi \; f</script> 为凸集，则称 <script type="math/tex">f</script> 为<strong>凸函数</strong>(convex function)。</p>
 
@@ -89,11 +89,11 @@
 
 <p>若对任意收敛于 <script type="math/tex">{\bf x}</script> 的点列 <script type="math/tex">\lbrace{\bf x}^k\rbrace \subseteq \Re^n</script> 均有</p>
 
-<p><script type="math/tex; mode=display"> f({\bf x}) \ge \limsup_{k \to \infty}f({\bf x}^k) </script></p>
+<p><script type="math/tex; mode=display"> f({\bf x}) \geqslant \limsup_{k \to \infty}f({\bf x}^k) </script></p>
 
 <p>成立，则称函数 <script type="math/tex">f:\Re^n\to[-\infty,+\infty]</script> 在 <script type="math/tex">{\bf x}</script> 处<strong>上半连续</strong>（upper semicontinuous）；反之，当</p>
 
-<p><script type="math/tex; mode=display"> f({\bf x}) \le \liminf_{k \to \infty}f({\bf x}^k) </script></p>
+<p><script type="math/tex; mode=display"> f({\bf x}) \leqslant \liminf_{k \to \infty}f({\bf x}^k) </script></p>
 
 <p>成立时，称 <script type="math/tex">f</script> 在 <script type="math/tex">{\bf x}</script> 处<strong>下半连续</strong>（lower semicontinuous）。若 <script type="math/tex">f</script> 在 <script type="math/tex">{\bf x}</script> 处既为上半连续又为下半连续，则称 <script type="math/tex">f</script> 在 <script type="math/tex">{\bf x}</script> 处<strong>连续</strong>（continuous）。</p>
 
@@ -119,8 +119,8 @@
 
 <p><script type="math/tex; mode=display">\max \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z</script></p>
 
-<p><strong>引理 4.1</strong> 对任意 <script type="math/tex">{\bf y}\in Y</script> 与 <script type="math/tex">{\bf z}\in Z</script> 均有 <script type="math/tex">\zeta({\bf z}) \leq \eta({\bf y})</script> 成立。进一步，还有</p>
-<p><script type="math/tex; mode=display">\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace \leq\inf\left\lbrace \eta({\bf y})\mid {\bf y} \in Y\right\rbrace </script></p>
+<p><strong>引理 4.1</strong> 对任意 <script type="math/tex">{\bf y}\in Y</script> 与 <script type="math/tex">{\bf z}\in Z</script> 均有 <script type="math/tex">\zeta({\bf z}) \leqslant \eta({\bf y})</script> 成立。进一步，还有</p>
+<p><script type="math/tex; mode=display">\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace \leqslant \inf\left\lbrace \eta({\bf y})\mid {\bf y} \in Y\right\rbrace </script></p>
 
 <p><strong>定理 4.1</strong> 点 <script type="math/tex">(\bar{\bf y},\bar{\bf z})\in Y\times Z</script> 为函数 <script type="math/tex">K:Y\times Z\to[-\infty,+\infty]</script> 的鞍点的充要条件是 <script type="math/tex">\bar{\bf y}\in Y</script> 与 <script type="math/tex">\bar{\bf z}\in Z</script> 满足</p>
 
@@ -130,13 +130,13 @@
 
 <p>考虑如下非线性规划问题：</p>
 
-<p><script type="math/tex; mode=display"> \min \; \; f({\bf x}) \\ s.t. \; \; g_i({\bf x}) \leq 0, \; \; i=1, \cdots, m</script></p>
+<p><script type="math/tex; mode=display"> \min \; \; f({\bf x}) \\ s.t. \; \; g_i({\bf x}) \leqslant 0, \; \; i=1, \cdots, m</script></p>
 
 <p>其中 <script type="math/tex">f: \Re^n \to \Re</script>, <script type="math/tex">g_i: \Re^n \to \Re (i=1, \cdots, m)</script>。</p>
 
-<p><script type="math/tex; mode=display"> S = \left\lbrace x \in \Re^n \mid g_i({\bf x}) \leq 0 \text{, } i=1, \cdots, m\right \rbrace</script></p>
+<p><script type="math/tex; mode=display"> S = \left\lbrace x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } i=1, \cdots, m\right \rbrace</script></p>
 
-<p><script type="math/tex; mode=display"> L_0({\bf x}, {\bf \lambda}) = \left\{ {f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x}), {\bf \lambda} \geq {\bf 0}\\ -\infty \text{,   } {\bf \lambda} \ngeq {\bf 0}}</script></p>
+<p><script type="math/tex; mode=display"> L_0({\bf x}, {\bf \lambda}) = \left\{ {f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x}), {\bf \lambda} \geqslant {\bf 0}\\ -\infty \text{,   } {\bf \lambda} \ngeqslant {\bf 0}}</script></p>
 
 <p><script type="math/tex; mode=display"> \theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}</script></p>
 
