@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 07 Aug 2015 23:27:00 +0800</pubDate>
-    <lastBuildDate>Fri, 07 Aug 2015 23:27:00 +0800</lastBuildDate>
+    <pubDate>Fri, 07 Aug 2015 23:29:59 +0800</pubDate>
+    <lastBuildDate>Fri, 07 Aug 2015 23:29:59 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -149,7 +149,7 @@
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; S = \left\lbrace x \in \Re^n \mid g_i({\bf x}) \leq 0 \text{, } i=1, \cdots, m\right \rbrace&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; L_0({\bf x}, {\bf \lambda}) = \left\{ {f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x}), {\bf \lambda} \geq {\bf 0}\\ -\infty \text{,   } {\bf \lambda} \notgeq {\bf 0}}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; L_0({\bf x}, {\bf \lambda}) = \left\{ {f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x}), {\bf \lambda} \geq {\bf 0}\\ -\infty \text{,   } {\bf \lambda} \ngeq {\bf 0}}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}&lt;/script&gt;&lt;/p&gt;
 
