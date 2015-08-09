@@ -13,7 +13,7 @@ categories:
 
 任务：通过最近邻寻找能够表达数据样本 {%m%}\{ {\bf y}_i \}^N_{i=1} {%em%} 的最优代码本（codebook，既字典参数），既求解如下问题
 
-{%math%}\min_{\bf C, X}\{\|{\bf Y} - {\bf CX}\|^2_F\} \text{ subject to } \forall i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k {%endmath%}
+{%math%}\min_{\bf C, X} \left\{ \|{\bf Y} - {\bf CX}\|^2_F \right\} \text{ subject to } \forall i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k {%endmath%}
 
 初始化： 设置代码本矩阵 {%m%}{\bf C}^{(0)} \in \Re^{n \times K}{%em%}. 设置 {%m%}J=1{%em%}。
 
