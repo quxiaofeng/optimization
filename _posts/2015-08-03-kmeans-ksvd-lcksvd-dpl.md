@@ -35,9 +35,9 @@ categories:
 
 ----
 
-K-means 有很多拓展方法。在 K-SVD 的文章中，
+K-means 相当于是只使用代码本矩阵中的一列的稀疏表达。又因为只有一列，所以系数为1。其中该列由如下公式确定。
 
-
+{%math%}\forall_{k \neq j} \|{\bf y}_i - {Ce}_j\|^2_2 \leqslant \|{\bf y}_i - {Ce}_k\|^2_2{%endmath%}
 
 <!--more-->
 
