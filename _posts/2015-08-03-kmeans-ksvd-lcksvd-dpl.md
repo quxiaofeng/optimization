@@ -13,7 +13,7 @@ categories:
 
 任务：通过最近邻寻找能够表达数据样本 {%m%}\{ {\bf y}_i \}^N_{i=1} {%em%} 的最优代码本（codebook，既字典参数），既求解如下问题
 
-{%math%}\min_{\bf C, X}\{\|{\bf Y} - {\bf CX}\|^2_F\} \text{ subject to } \forany i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k {%endmath%}
+{%math%}\min_{\bf C, X}\{\|{\bf Y} - {\bf CX}\|^2_F\} \text{ subject to } \forall i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k {%endmath%}
 
 初始化： 设置代码本矩阵 {%m%}{\bf C}^{(0)} \ in \Re^{n \times K}{%em%}. 设置 {%m%}J=1{%em%}。
 
@@ -25,7 +25,7 @@ categories:
 
 每个集合中存放与 {%m%}{\bf c}^{J-1}_k{%em%} 列最相似的样本的索引。
 
-{%math%}{\bf R}^{(J-1)}_k = \left\{ i \mid \forany_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 < \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\}{%endmath%}
+{%math%}{\bf R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 < \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\}{%endmath%}
 
 **2.** 代码本更新阶段：{%m%}{\bf C}^{(J-1)}{%em%} 中的任一列 {%m%}k{%em%} 都根据如下公式更新。
 
