@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Aug 2015 20:31:53 +0800</pubDate>
-    <lastBuildDate>Sun, 09 Aug 2015 20:31:53 +0800</lastBuildDate>
+    <pubDate>Sun, 09 Aug 2015 20:40:16 +0800</pubDate>
+    <lastBuildDate>Sun, 09 Aug 2015 20:40:16 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -41,7 +41,9 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;K-means 有很多拓展方法。在 K-SVD 的文章中，&lt;/p&gt;
+&lt;p&gt;K-means 相当于是只使用代码本矩阵中的一列的稀疏表达。又因为只有一列，所以系数为1。其中该列由如下公式确定。&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\forall_{k \neq j} \|{\bf y}_i - {Ce}_j\|^2_2 \leqslant \|{\bf y}_i - {Ce}_k\|^2_2&lt;/script&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
 
