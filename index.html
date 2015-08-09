@@ -50,7 +50,7 @@
 
 <p>任务：通过最近邻寻找能够表达数据样本 <script type="math/tex">\{ {\bf y}_i \}^N_{i=1} </script> 的最优代码本（codebook，既字典参数），既求解如下问题</p>
 
-<p><script type="math/tex; mode=display">\min_{\bf C, X}\{\|{\bf Y} - {\bf CX}\|^2_F\} \text{ subject to } \forany i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k </script></p>
+<p><script type="math/tex; mode=display">\min_{\bf C, X}\{\|{\bf Y} - {\bf CX}\|^2_F\} \text{ subject to } \forall i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k </script></p>
 
 <p>初始化： 设置代码本矩阵 <script type="math/tex">{\bf C}^{(0)} \ in \Re^{n \times K}</script>. 设置 <script type="math/tex">J=1</script>。</p>
 
@@ -62,7 +62,7 @@
 
 <p>每个集合中存放与 <script type="math/tex">{\bf c}^{J-1}_k</script> 列最相似的样本的索引。</p>
 
-<p><script type="math/tex; mode=display">{\bf R}^{(J-1)}_k = \left\{ i \mid \forany_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 < \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\}</script></p>
+<p><script type="math/tex; mode=display">{\bf R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 < \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\}</script></p>
 
 <p><strong>2.</strong> 代码本更新阶段：<script type="math/tex">{\bf C}^{(J-1)}</script> 中的任一列 <script type="math/tex">k</script> 都根据如下公式更新。</p>
 
