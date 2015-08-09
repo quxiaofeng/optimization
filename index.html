@@ -44,6 +44,36 @@
       	<span class="smaller">August 4, 2015</span>  <br/>
 		<div><p>从 K-means 到 <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf">K-SVD</a><sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> M. Aharon, M. Elad, and A.M. Bruckstein, “The K-SVD: An Algorithm for Designing of Overcomplete Dictionaries for Sparse Representation”, the IEEE Trans. On Signal Processing, Vol. 54, no. 11, pp. 4311-4322, November 2006. <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf">http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf</a></span><sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> O. Bryt and M. Elad, Compression of Facial Images Using the K-SVD Algorithm, Journal of Visual Communication and Image Representation, Vol. 19, No. 4, Pages 270-283, May 2008. <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf">http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf</a></span><sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> R. Rubinstein, T. Peleg and M. Elad, Analysis K-SVD: A Dictionary-Learning Algorithm for the Analysis Sparse Model, IEEE Trans. on Signal Processing, Vol. 61, No. 3, Pages 661-677, March 2013. <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf">http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf</a></span>，到 <a href="http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html">LC-KSVD</a><sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> Zhuolin Jiang, Zhe Lin, Larry S. Davis. “Label Consistent K-SVD: Learning A Discriminative Dictionary for Recognition”. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2013, 35(11): 2651-2664. <a href="http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html">http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html</a></span>，到 <a href="http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian">DPL</a><sup class="sidenote-number">5</sup><span class="sidenote"><sup class="sidenote-number">5</sup> Gu, S., Zhang, L., Zuo, W., &amp; Feng, X. (2014). Projective dictionary pair learning for pattern classification. In Z. Ghahramani, M. Welling, C. Cortes, N. D. Lawrence, &amp; K. Q. Weinberger (Eds.), Advances in Neural Information Processing Systems 27 (pp. 793–801). Curran Associates, Inc. <a href="http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian">http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian</a></span>。</p>
 
+<hr />
+
+<p><strong>K-means 算法</strong></p>
+
+<p>任务：通过最近邻寻找能够表达数据样本 <script type="math/tex">\{ {\bf y}_i \}^N_{i=1} </script> 的最优代码本（codebook，既字典参数），既求解如下问题</p>
+
+<p><script type="math/tex; mode=display">\min_{\bf C, X}\{\|{\bf Y} - {\bf CX}\|^2_F\} \text{ subject to } \forany i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k </script></p>
+
+<p>初始化： 设置代码本矩阵 <script type="math/tex">{\bf C}^{(0)} \ in \Re^{n \times K}</script>. 设置 <script type="math/tex">J=1</script>。</p>
+
+<p>循环至收敛 （使用停止规则）</p>
+
+<p><strong>1.</strong> 稀疏编码阶段：将训练样本 <script type="math/tex">{\bf Y}</script> 分为如下 <script type="math/tex">K</script> 个集合。</p>
+
+<p><script type="math/tex; mode=display">({\bf R}^{(J-1)}_1, {\bf R}^{(J-1)}_2, \cdots, {\bf R}^{(J-1)}_K)</script></p>
+
+<p>每个集合中存放与 <script type="math/tex">{\bf c}^{J-1}_k</script> 列最相似的样本的索引。</p>
+
+<p><script type="math/tex; mode=display">{\bf R}^{(J-1)}_k = \left\{ i \mid \forany_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 < \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\}</script></p>
+
+<p><strong>2.</strong> 代码本更新阶段：<script type="math/tex">{\bf C}^{(J-1)}</script> 中的任一列 <script type="math/tex">k</script> 都根据如下公式更新。</p>
+
+<p><script type="math/tex; mode=display">{\bf c}^{(J)}_k = \frac{1}{|{\bf R}_k|}\sum_{i \in {\bf R}^{(J-1)}_k}{\bf y}_i</script></p>
+
+<p><strong>3.</strong> 令<script type="math/tex"> J = J + 1 </script></p>
+
+<hr />
+
+<p>K-means 有很多拓展方法。在 K-SVD 的文章中，</p>
+
 </div>
       </li>
     

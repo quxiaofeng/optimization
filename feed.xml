@@ -5,13 +5,43 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 08 Aug 2015 00:15:41 +0800</pubDate>
-    <lastBuildDate>Sat, 08 Aug 2015 00:15:41 +0800</lastBuildDate>
+    <pubDate>Sun, 09 Aug 2015 20:29:13 +0800</pubDate>
+    <lastBuildDate>Sun, 09 Aug 2015 20:29:13 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>K-means, K-SVD, LC-KSVD and DPL</title>
         <description>&lt;p&gt;从 K-means 到 &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf&quot;&gt;K-SVD&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; M. Aharon, M. Elad, and A.M. Bruckstein, “The K-SVD: An Algorithm for Designing of Overcomplete Dictionaries for Sparse Representation”, the IEEE Trans. On Signal Processing, Vol. 54, no. 11, pp. 4311-4322, November 2006. &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf&quot;&gt;http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf&lt;/a&gt;&lt;/span&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; O. Bryt and M. Elad, Compression of Facial Images Using the K-SVD Algorithm, Journal of Visual Communication and Image Representation, Vol. 19, No. 4, Pages 270-283, May 2008. &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf&quot;&gt;http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf&lt;/a&gt;&lt;/span&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; R. Rubinstein, T. Peleg and M. Elad, Analysis K-SVD: A Dictionary-Learning Algorithm for the Analysis Sparse Model, IEEE Trans. on Signal Processing, Vol. 61, No. 3, Pages 661-677, March 2013. &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf&quot;&gt;http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf&lt;/a&gt;&lt;/span&gt;，到 &lt;a href=&quot;http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html&quot;&gt;LC-KSVD&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt; Zhuolin Jiang, Zhe Lin, Larry S. Davis. “Label Consistent K-SVD: Learning A Discriminative Dictionary for Recognition”. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2013, 35(11): 2651-2664. &lt;a href=&quot;http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html&quot;&gt;http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html&lt;/a&gt;&lt;/span&gt;，到 &lt;a href=&quot;http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian&quot;&gt;DPL&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;5&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;5&lt;/sup&gt; Gu, S., Zhang, L., Zuo, W., &amp;amp; Feng, X. (2014). Projective dictionary pair learning for pattern classification. In Z. Ghahramani, M. Welling, C. Cortes, N. D. Lawrence, &amp;amp; K. Q. Weinberger (Eds.), Advances in Neural Information Processing Systems 27 (pp. 793–801). Curran Associates, Inc. &lt;a href=&quot;http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian&quot;&gt;http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian&lt;/a&gt;&lt;/span&gt;。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;K-means 算法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;任务：通过最近邻寻找能够表达数据样本 &lt;script type=&quot;math/tex&quot;&gt;\{ {\bf y}_i \}^N_{i=1} &lt;/script&gt; 的最优代码本（codebook，既字典参数），既求解如下问题&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\min_{\bf C, X}\{\|{\bf Y} - {\bf CX}\|^2_F\} \text{ subject to } \forany i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;初始化： 设置代码本矩阵 &lt;script type=&quot;math/tex&quot;&gt;{\bf C}^{(0)} \ in \Re^{n \times K}&lt;/script&gt;. 设置 &lt;script type=&quot;math/tex&quot;&gt;J=1&lt;/script&gt;。&lt;/p&gt;
+
+&lt;p&gt;循环至收敛 （使用停止规则）&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 稀疏编码阶段：将训练样本 &lt;script type=&quot;math/tex&quot;&gt;{\bf Y}&lt;/script&gt; 分为如下 &lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; 个集合。&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;({\bf R}^{(J-1)}_1, {\bf R}^{(J-1)}_2, \cdots, {\bf R}^{(J-1)}_K)&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;每个集合中存放与 &lt;script type=&quot;math/tex&quot;&gt;{\bf c}^{J-1}_k&lt;/script&gt; 列最相似的样本的索引。&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf R}^{(J-1)}_k = \left\{ i \mid \forany_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 &lt; \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 代码本更新阶段：&lt;script type=&quot;math/tex&quot;&gt;{\bf C}^{(J-1)}&lt;/script&gt; 中的任一列 &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; 都根据如下公式更新。&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf c}^{(J)}_k = \frac{1}{|{\bf R}_k|}\sum_{i \in {\bf R}^{(J-1)}_k}{\bf y}_i&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 令&lt;script type=&quot;math/tex&quot;&gt; J = J + 1 &lt;/script&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;K-means 有很多拓展方法。在 K-SVD 的文章中，&lt;/p&gt;
 
 &lt;!--more--&gt;
 
