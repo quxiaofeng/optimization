@@ -15,7 +15,7 @@ categories:
 
 {%math%}\min_{\bf C, X}\{\|{\bf Y} - {\bf CX}\|^2_F\} \text{ subject to } \forall i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k {%endmath%}
 
-初始化： 设置代码本矩阵 {%m%}{\bf C}^{(0)} \ in \Re^{n \times K}{%em%}. 设置 {%m%}J=1{%em%}。
+初始化： 设置代码本矩阵 {%m%}{\bf C}^{(0)} \in \Re^{n \times K}{%em%}. 设置 {%m%}J=1{%em%}。
 
 循环至收敛 （使用停止规则）
 
