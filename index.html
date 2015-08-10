@@ -48,23 +48,23 @@
 
 <p><strong>K-means 算法</strong></p>
 
-<p>任务：通过最近邻寻找能够表达数据样本 <script type="math/tex">\{ {\bf y}_i \}^N_{i=1} </script> 的最优代码本（codebook，既字典参数），既求解如下问题</p>
+<p>任务：通过最近邻寻找能够表达数据样本 <script type="math/tex">\{ {\bf y}_i \}^N_{i=1} </script> 的最优编码本（codebook，既字典参数），既求解如下问题</p>
 
 <p><script type="math/tex; mode=display">\min_{\bf C, X} \left\{ \|{\bf Y} - {\bf CX}\|^2_F \right\} \text{ subject to } \forall i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k </script></p>
 
-<p>初始化： 设置代码本矩阵 <script type="math/tex">{\bf C}^{(0)} \in \Re^{n \times K}</script>. 设置 <script type="math/tex">J=1</script>。</p>
+<p>初始化： 设置编码本矩阵 <script type="math/tex">{\bf C}^{(0)} \in \Re^{n \times K}</script>. 设置 <script type="math/tex">J=1</script>。</p>
 
 <p>循环至收敛 （使用停止规则）</p>
 
 <p><strong>1.</strong> 稀疏编码阶段：将训练样本 <script type="math/tex">{\bf Y}</script> 分为如下 <script type="math/tex">K</script> 个集合。</p>
 
-<p><script type="math/tex; mode=display">({\bf R}^{(J-1)}_1, {\bf R}^{(J-1)}_2, \cdots, {\bf R}^{(J-1)}_K)</script></p>
+<p><script type="math/tex; mode=display">\left( {\bf R}^{(J-1)}_1, {\bf R}^{(J-1)}_2, \cdots, {\bf R}^{(J-1)}_K \right)</script></p>
 
 <p>每个集合中存放与 <script type="math/tex">{\bf c}^{J-1}_k</script> 列最相似的样本的索引。</p>
 
 <p><script type="math/tex; mode=display">{\bf R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 < \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\}</script></p>
 
-<p><strong>2.</strong> 代码本更新阶段：<script type="math/tex">{\bf C}^{(J-1)}</script> 中的任一列 <script type="math/tex">k</script> 都根据如下公式更新。</p>
+<p><strong>2.</strong> 编码本更新阶段：<script type="math/tex">{\bf C}^{(J-1)}</script> 中的任一列 <script type="math/tex">k</script> 都根据如下公式更新。</p>
 
 <p><script type="math/tex; mode=display">{\bf c}^{(J)}_k = \frac{1}{|{\bf R}_k|}\sum_{i \in {\bf R}^{(J-1)}_k}{\bf y}_i</script></p>
 
@@ -72,9 +72,9 @@
 
 <hr />
 
-<p>K-means 相当于是只使用代码本矩阵中的一列的稀疏表达。又因为只有一列，所以系数为1。其中该列由如下公式确定。</p>
+<p>K-means 相当于是只使用编码本矩阵中的一列的稀疏表达。又因为只有一列，所以系数为1。其中该列由如下公式确定。</p>
 
-<p><script type="math/tex; mode=display">\forall_{k \neq j} \|{\bf y}_i - {Ce}_j\|^2_2 \leqslant \|{\bf y}_i - {Ce}_k\|^2_2</script></p>
+<p><script type="math/tex; mode=display">\forall_{k \neq j} \; \left\|{\bf y}_i - {Ce}_j \right\|^2_2 \leqslant \left\|{\bf y}_i - {Ce}_k \right\|^2_2</script></p>
 
 </div>
       </li>
