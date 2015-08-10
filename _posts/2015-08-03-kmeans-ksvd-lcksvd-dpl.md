@@ -11,23 +11,23 @@ categories:
 
 **K-means 算法**
 
-任务：通过最近邻寻找能够表达数据样本 {%m%}\{ {\bf y}_i \}^N_{i=1} {%em%} 的最优代码本（codebook，既字典参数），既求解如下问题
+任务：通过最近邻寻找能够表达数据样本 {%m%}\{ {\bf y}_i \}^N_{i=1} {%em%} 的最优编码本（codebook，既字典参数），既求解如下问题
 
 {%math%}\min_{\bf C, X} \left\{ \|{\bf Y} - {\bf CX}\|^2_F \right\} \text{ subject to } \forall i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k {%endmath%}
 
-初始化： 设置代码本矩阵 {%m%}{\bf C}^{(0)} \in \Re^{n \times K}{%em%}. 设置 {%m%}J=1{%em%}。
+初始化： 设置编码本矩阵 {%m%}{\bf C}^{(0)} \in \Re^{n \times K}{%em%}. 设置 {%m%}J=1{%em%}。
 
 循环至收敛 （使用停止规则）
 
 **1.** 稀疏编码阶段：将训练样本 {%m%}{\bf Y}{%em%} 分为如下 {%m%}K{%em%} 个集合。
 
-{%math%}({\bf R}^{(J-1)}_1, {\bf R}^{(J-1)}_2, \cdots, {\bf R}^{(J-1)}_K){%endmath%}
+{%math%}\left( {\bf R}^{(J-1)}_1, {\bf R}^{(J-1)}_2, \cdots, {\bf R}^{(J-1)}_K \right){%endmath%}
 
 每个集合中存放与 {%m%}{\bf c}^{J-1}_k{%em%} 列最相似的样本的索引。
 
 {%math%}{\bf R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 < \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\}{%endmath%}
 
-**2.** 代码本更新阶段：{%m%}{\bf C}^{(J-1)}{%em%} 中的任一列 {%m%}k{%em%} 都根据如下公式更新。
+**2.** 编码本更新阶段：{%m%}{\bf C}^{(J-1)}{%em%} 中的任一列 {%m%}k{%em%} 都根据如下公式更新。
 
 {%math%}{\bf c}^{(J)}_k = \frac{1}{|{\bf R}_k|}\sum_{i \in {\bf R}^{(J-1)}_k}{\bf y}_i{%endmath%}
 
@@ -35,9 +35,9 @@ categories:
 
 ----
 
-K-means 相当于是只使用代码本矩阵中的一列的稀疏表达。又因为只有一列，所以系数为1。其中该列由如下公式确定。
+K-means 相当于是只使用编码本矩阵中的一列的稀疏表达。又因为只有一列，所以系数为1。其中该列由如下公式确定。
 
-{%math%}\forall_{k \neq j} \|{\bf y}_i - {Ce}_j\|^2_2 \leqslant \|{\bf y}_i - {Ce}_k\|^2_2{%endmath%}
+{%math%}\forall_{k \neq j} \; \left\|{\bf y}_i - {Ce}_j \right\|^2_2 \leqslant \left\|{\bf y}_i - {Ce}_k \right\|^2_2{%endmath%}
 
 <!--more-->
 
