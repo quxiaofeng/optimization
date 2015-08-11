@@ -104,7 +104,21 @@ categories:
     \end{cases}
 {% endmath %}
 
+{% math %} \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x}){% endmath %}
+
 {% math %} \theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}{% endmath %}
+
+{% math %}\omega_0({\bf \lambda}) = \inf \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} {% endmath %}
+
+Constrains relax
+
+{% math %} F_0({\bf x}, {\bf u}) = \begin{cases}
+        f({\bf x}),  & {\bf x} \in        S({\bf u}) & \min  & f({\bf x}) & & \\
+        +\infty,      & {\bf x} \notin S({\bf u}) & s.t.      & g_i({\bf x}) & \leqslant u_i, & i = 1, \cdots, m 
+    \end{cases}
+{% endmath %}
+
+{% math %} S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, \cdots, m \right\} {% endmath %}
 
 {%m%}{%em%}
 
