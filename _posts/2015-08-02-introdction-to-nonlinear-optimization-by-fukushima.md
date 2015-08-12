@@ -136,28 +136,28 @@ Constrains relax
 
 {% math %} F({\bf x}, {\bf u}) = F_0({\bf x}, {\bf u}) + q({\bf u}) {% endmath %}
 
----
+
 {% math %} \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x}) {% endmath %}
-{% math %} \implies F({\bf x}, {\bf u}) \mid F({\bf x}, {\bf 0} = \theta({\bf x})) {% endmath %}
+{% math %} \implies F({\bf x}, {\bf u}) \mid F({\bf x}, {\bf 0}) = \theta({\bf x}) {% endmath %}
 {% math %} \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + <{\bf \lambda}, {\bf u}> \mid {\bf u} \in \Re^M \right\} {% endmath %}
 {% math %} \implies \omega({\bf \lambda}) = \inf \left\{ L({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} {% endmath %}
----
+
 
 ### Fenchel 对偶性 ###
 
 {% math %} \min_{\bf x} f({\bf x}) + g({\bf Ax}) {% endmath %}
 
-{% math %} F({\bf x}, {\bf 0}) = \theta({\bf x}) \text{,  } x \in \Re^n {% endmath %}
-{% math %} \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) {% endmath %}
+{% math %} \begin{cases} & F({\bf x}, {\bf 0}) = \theta({\bf x}), & x \in \Re^n \\
+& \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) & \end{cases} {% endmath %}
 
 {% math %} \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) {% endmath %}
 {% math %} \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) & = & \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + <{\bf \lambda}, {\bf u}> \mid {\bf u} \in \Re^m \right\} \\
-& = & f({\bf x}) - g^\ast(-{-\lambda}) - <{\bf \lambda}, {\bf Ax}> \end{eqnarray*}{% endmath %}
+& = & f({\bf x}) - g^\ast(-{\bf \lambda}) - <{\bf \lambda}, {\bf Ax}> \end{eqnarray*}{% endmath %}
 {% math %} \begin{eqnarray*} \implies \omega({\bf \lambda}) & = & \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - <{\bf \lambda}, {\bf Ax}> \mid {\bf x} \in \Re^n \right\} \\
 & = & -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}{% endmath %}
 
-{% math %} \min_{\bf \lambda} f^\ast({\bf A}^T{\bf \lambda}) + g^\ast(-{\bf \lambda}){% endmath %}
-{% math %} \max_{\bf \lambda} -f^\ast\left({\bf A}^T{\bf \lambda}\right) - g^\ast\left(-{\bf\lambda}\right){% endmath %}
+{% math %} \min_{\bf \lambda} f^\ast\left( {\bf A}^T{\bf \lambda} \right) + g^\ast(-{\bf \lambda}){% endmath %}
+{% math %} \max_{\bf \lambda} -f^\ast\left({\bf A}^T{\bf \lambda} \right) - g^\ast\left(-{\bf\lambda}\right){% endmath %}
 
 ## 算法 ##
 
@@ -169,7 +169,7 @@ Constrains relax
 
 The **proximal mapping** (or proximal operator) of a convex function {%m%}h{%em%} is
 
-{% math %} {\bf prox}_h(x) = \argmin_u \left( h(u) + \frac{1}{2} \|u - x\|^2_2 \right){% endmath %}
+{% math %} {\bf prox}_h(x) = \mathop{argmin}_u \left( h(u) + \frac{1}{2} \|u - x\|^2_2 \right){% endmath %}
 
 **examples**
 
@@ -177,7 +177,7 @@ The **proximal mapping** (or proximal operator) of a convex function {%m%}h{%em%
 
 **2.** {%m%}h(x) = I_C(x){%em%} (indicator function of {%m%}C{%em%}): {%m%}{\bf prox}_h{%em%} is projection on {%m%}C{%em%}
 
-{% math %} {\bf prox}_h(x) = P_C(x) = \argmin_{u \in C} \|u - x\|^2_2 {% endmath %}
+{% math %} {\bf prox}_h(x) = P_C(x) = \mathop{argmin}_{u \in C} \|u - x\|^2_2 {% endmath %}
 
 **3.** {%m%}h(x) = t \|x\|_1{%em%}: {%m%}{\bf prox}_h{%em%} is shinkage (soft threshold) operation
 
@@ -185,7 +185,7 @@ The **proximal mapping** (or proximal operator) of a convex function {%m%}h{%em%
     x_i - t & x_i   \geqslant t \\
     0       & |x_i| \leqslant t \\
     x_i + t & x_i   \leqslant -t
-\end{\cases} {% endmath %}
+\end{cases} {% endmath %}
 
 {%m%}{%em%}
 
