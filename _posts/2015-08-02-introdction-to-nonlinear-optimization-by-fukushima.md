@@ -165,6 +165,28 @@ Constrains relax
 
 参考 [Algorithms for large-scale convex optimization - DTU 2010](http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf){% sidenote 3 'A Lecture note from "02930 Algorithms for Large-Scale Convex Optimization" taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe ([http://www.seas.ucla.edu/~vandenbe/](http://www.seas.ucla.edu/~vandenbe/)) at Danmarks Tekniske Universitet ([http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB](http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB)). The Download Link is found at the page of "EE227BT: Convex Optimization - Fall 2013" taught by Laurent El Ghaoui at Berkeley ([http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf](http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf)). And both of the lectures mentioned the book "Convex Optimization" by Stephen Boyd and Lieven Vandenberghe ([http://stanford.edu/~boyd/cvxbook/](http://stanford.edu/~boyd/cvxbook/)) and the software "CVX" - a MATLAB software for desciplined Convex Programming ([http://cvxr.com/cvx/](http://cvxr.com/cvx/)). A similar lecture note on Proximal Gradient Method from "EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)" ([http://www.seas.ucla.edu/~vandenbe/ee236c.html](http://www.seas.ucla.edu/~vandenbe/ee236c.html)) at UCLA' can be found at [http://www.seas.ucla.edu/~vandenbe/236C/lectures/proxgrad.pdf](http://www.seas.ucla.edu/~vandenbe/236C/lectures/proxgrad.pdf). %}
 
+#### Proximal mapping ####
+
+The **proximal mapping** (or proximal operator) of a convex function {%m%}h{%em%} is
+
+{% math %} {\bf prox}_h(x) = \argmin_u \left( h(u) + \frac{1}{2} \|u - x\|^2_2 \right){% endmath %}
+
+**examples**
+
+**1.** {%m%}h(x) = 0: {\bf prox}_h(x) = x{%em%}
+
+**2.** {%m%}h(x) = I_C(x){%em%} (indicator function of {%m%}C{%em%}): {%m%}{\bf prox}_h{%em%} is projection on {%m%}C{%em%}
+
+{% math %} {\bf prox}_h(x) = P_C(x) = \argmin_{u \in C} \|u - x\|^2_2 {% endmath %}
+
+**3.** {%m%}h(x) = t \|x\|_1{%em%}: {%m%}{\bf prox}_h{%em%} is shinkage (soft threshold) operation
+
+{% math %} {\bf prox}_h = \begin{cases}
+    x_i - t & x_i   \geqslant t \\
+    0       & |x_i| \leqslant t \\
+    x_i + t & x_i   \leqslant -t
+\end{\cases} {% endmath %}
+
 {%m%}{%em%}
 
 {% math %} {% endmath %}
