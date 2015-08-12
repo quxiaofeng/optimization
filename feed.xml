@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 13 Aug 2015 06:12:10 +0800</pubDate>
-    <lastBuildDate>Thu, 13 Aug 2015 06:12:10 +0800</lastBuildDate>
+    <pubDate>Thu, 13 Aug 2015 06:24:05 +0800</pubDate>
+    <lastBuildDate>Thu, 13 Aug 2015 06:24:05 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -219,28 +219,26 @@
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; F({\bf x}, {\bf u}) = F_0({\bf x}, {\bf u}) + q({\bf u}) &lt;/script&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x}) &lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies F({\bf x}, {\bf u}) \mid F({\bf x}, {\bf 0} = \theta({\bf x})) &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies F({\bf x}, {\bf u}) \mid F({\bf x}, {\bf 0}) = \theta({\bf x}) &lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + &lt;{\bf \lambda}, {\bf u}&gt; \mid {\bf u} \in \Re^M \right\} &lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies \omega({\bf \lambda}) = \inf \left\{ L({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} &lt;/script&gt;&lt;/p&gt;
-&lt;hr /&gt;
 
 &lt;h3 id=&quot;fenchel-&quot;&gt;Fenchel 对偶性&lt;/h3&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \min_{\bf x} f({\bf x}) + g({\bf Ax}) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; F({\bf x}, {\bf 0}) = \theta({\bf x}) \text{,  } x \in \Re^n &lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{cases} &amp; F({\bf x}, {\bf 0}) = \theta({\bf x}), &amp; x \in \Re^n \\
+&amp; \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) &amp; \end{cases} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) &lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + &lt;{\bf \lambda}, {\bf u}&gt; \mid {\bf u} \in \Re^m \right\} \\
-&amp; = &amp; f({\bf x}) - g^\ast(-{-\lambda}) - &lt;{\bf \lambda}, {\bf Ax}&gt; \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
+&amp; = &amp; f({\bf x}) - g^\ast(-{\bf \lambda}) - &lt;{\bf \lambda}, {\bf Ax}&gt; \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*} \implies \omega({\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - &lt;{\bf \lambda}, {\bf Ax}&gt; \mid {\bf x} \in \Re^n \right\} \\
 &amp; = &amp; -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \min_{\bf \lambda} f^\ast({\bf A}^T{\bf \lambda}) + g^\ast(-{\bf \lambda})&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \max_{\bf \lambda} -f^\ast\left({\bf A}^T{\bf \lambda}\right) - g^\ast\left(-{\bf\lambda}\right)&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \min_{\bf \lambda} f^\ast\left( {\bf A}^T{\bf \lambda} \right) + g^\ast(-{\bf \lambda})&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \max_{\bf \lambda} -f^\ast\left({\bf A}^T{\bf \lambda} \right) - g^\ast\left(-{\bf\lambda}\right)&lt;/script&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section-5&quot;&gt;算法&lt;/h2&gt;
 
@@ -252,7 +250,7 @@
 
 &lt;p&gt;The &lt;strong&gt;proximal mapping&lt;/strong&gt; (or proximal operator) of a convex function &lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt; is&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf prox}_h(x) = \argmin_u \left( h(u) + \frac{1}{2} \|u - x\|^2_2 \right)&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf prox}_h(x) = \mathop{argmin}_u \left( h(u) + \frac{1}{2} \|u - x\|^2_2 \right)&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;examples&lt;/strong&gt;&lt;/p&gt;
 
@@ -260,7 +258,7 @@
 
 &lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;h(x) = I_C(x)&lt;/script&gt; (indicator function of &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;): &lt;script type=&quot;math/tex&quot;&gt;{\bf prox}_h&lt;/script&gt; is projection on &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf prox}_h(x) = P_C(x) = \argmin_{u \in C} \|u - x\|^2_2 &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf prox}_h(x) = P_C(x) = \mathop{argmin}_{u \in C} \|u - x\|^2_2 &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;h(x) = t \|x\|_1&lt;/script&gt;: &lt;script type=&quot;math/tex&quot;&gt;{\bf prox}_h&lt;/script&gt; is shinkage (soft threshold) operation&lt;/p&gt;
 
@@ -268,7 +266,7 @@
     x_i - t &amp; x_i   \geqslant t \\
     0       &amp; |x_i| \leqslant t \\
     x_i + t &amp; x_i   \leqslant -t
-\end{\cases} &lt;/script&gt;&lt;/p&gt;
+\end{cases} &lt;/script&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;
 
