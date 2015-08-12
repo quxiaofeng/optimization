@@ -120,8 +120,29 @@ Constrains relax
 
 {% math %} S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, \cdots, m \right\} {% endmath %}
 
-**引理 4.5** Lagrange 函数 {%m%}L_0: \Re^{n+m} \to [-\infty, +\infty) {%em%} 与函数 {%m%}F_0: \Re^{n+m} \to {%em%}
-{% math %}\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace \leqslant \inf\left\lbrace \eta({\bf y})\mid {\bf y} \in Y\right\rbrace {% endmath %}
+**引理 4.5** Lagrange 函数 {%m%}L_0: \Re^{n+m} \to [-\infty, +\infty) {%em%} 与函数 {%m%}F_0: \Re^{n+m} \to (-\infty,+\infty]{%em%} 之间有如下关系成立：
+
+{% math %}L_0({\bf x}, {\bf \lambda}) = \inf \left\{ F_0({\bf x}, {\bf u}) + <{\bf \lambda}, {\bf u}> \mid {\bf u} \in \Re^m \right\}{% endmath %}
+
+{% math %}F_0({\bf x}, {\bf u}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) - <{\bf \lambda}, {\bf u}> \mid {\bf \lambda} \in \Re^m \right\}{% endmath %}
+
+### Lagrange 对偶性的推广 ###
+
+对于原始问题 {%m%}(P){%em%}，考虑函数 {%m%}{%em%}，似的对任意固定的 {%m%}{%em%}，{%m%}{%em%} 均为闭正常凸函数，并且满足
+
+{% math %} {% endmath %}
+
+**例 4.7** 设 {%m%}{%em%}，考虑函数 {%m%}{%em%}。利用满足 {%m%}{%em%} 的闭正常凸函数 {%m%}{%em%} 定义函数 {%m%}{%em%} 如下：
+
+{% math %} {% endmath %}
+
+### Fenchel 对偶性 ###
+
+## 算法 ##
+
+### Proximal Gradient Method ###
+
+参考 [Algorithms for large-scale convex optimization - DTU 2010](http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf){% sidenote 1 'A Lecture note from "02930 Algorithms for Large-Scale Convex Optimization" taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe ([http://www.seas.ucla.edu/~vandenbe/](http://www.seas.ucla.edu/~vandenbe/)) at Danmarks Tekniske Universitet. ([http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB](http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB)) The Download Link is found at the page of "EE227BT: Convex Optimization - Fall 2013" taught by Laurent El Ghaoui at Berkeley. ([http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf](http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf)) And both of the lectures mentioned the book "Convex Optimization" by Stephen Boyd and Lieven Vandenberghe ([http://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf](http://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf)) and software "CVX" - a MATLAB software for desciplined Convex Programming ([http://cvxr.com/cvx/](http://cvxr.com/cvx/)). A similar lecture note on Proximal Gradient Method from "EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)" ([http://www.seas.ucla.edu/~vandenbe/ee236c.html](http://www.seas.ucla.edu/~vandenbe/ee236c.html)) at UCLA' can be found at [http://www.seas.ucla.edu/~vandenbe/236C/lectures/proxgrad.pdf](http://www.seas.ucla.edu/~vandenbe/236C/lectures/proxgrad.pdf) %}
 
 {%m%}{%em%}
 
