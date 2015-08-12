@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 Aug 2015 23:31:06 +0800</pubDate>
-    <lastBuildDate>Wed, 12 Aug 2015 23:31:06 +0800</lastBuildDate>
+    <pubDate>Thu, 13 Aug 2015 05:59:37 +0800</pubDate>
+    <lastBuildDate>Thu, 13 Aug 2015 05:59:37 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -118,21 +118,21 @@
 
 &lt;p&gt;给定函数 &lt;script type=&quot;math/tex&quot;&gt;f : \Re^n \to [-\infty, +\infty] &lt;/script&gt;，称 &lt;script type=&quot;math/tex&quot;&gt;\Re^{n+1}&lt;/script&gt; 的子集&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; graph \; f = \left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \right\rbrace, &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; graph \; f = \left\{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \right\} , &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;为 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的&lt;strong&gt;图像&lt;/strong&gt;（graph），而称位于 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的图像上方的点的全体构成的集合&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;epi \; f =\left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \geqslant f({\bf x}) \right\rbrace&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;epi \; f =\left\{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \geqslant f({\bf x}) \right\} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;为 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的&lt;strong&gt;上图&lt;/strong&gt;（epigraph）。若上图 &lt;script type=&quot;math/tex&quot;&gt;epi \; f&lt;/script&gt; 为凸集，则称 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 为&lt;strong&gt;凸函数&lt;/strong&gt;(convex function)。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;定理 2.27&lt;/strong&gt; 设 &lt;script type=&quot;math/tex&quot;&gt; \mathcal{I} &lt;/script&gt; 为任意非空指标集，而 &lt;script type=&quot;math/tex&quot;&gt;f_i : \Re^n \to [-\infty, +\infty] \; (i \in \mathcal{I})&lt;/script&gt; 均为凸函数，则由&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; f({\bf x}) = \sup \left\lbrace f_i({\bf x}) \mid i \in \mathcal{I} \right\rbrace&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; f({\bf x}) = \sup \left\{ f_i({\bf x}) \mid i \in \mathcal{I} \right\} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;定义的函数 &lt;script type=&quot;math/tex&quot;&gt;f : \Re^n \to [-\infty, +\infty] &lt;/script&gt; 为凸函数。进一步，若 &lt;script type=&quot;math/tex&quot;&gt;\mathcal{I}&lt;/script&gt; 为有限指标集，每个 &lt;script type=&quot;math/tex&quot;&gt;f_i&lt;/script&gt; 均为正常的凸函数，并且 &lt;script type=&quot;math/tex&quot;&gt;\cap_{i \in \mathcal{I}} \; dom \; f_i \neq \varnothing &lt;/script&gt;，则 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 为正常凸函数。&lt;/p&gt;
 
-&lt;p&gt;若对任意收敛于 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 的点列 &lt;script type=&quot;math/tex&quot;&gt;\lbrace{\bf x}^k\rbrace \subseteq \Re^n&lt;/script&gt; 均有&lt;/p&gt;
+&lt;p&gt;若对任意收敛于 &lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 的点列 &lt;script type=&quot;math/tex&quot;&gt;\{ {\bf x}^k\} \subseteq \Re^n&lt;/script&gt; 均有&lt;/p&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; f({\bf x}) \geqslant \limsup_{k \to \infty}f({\bf x}^k) &lt;/script&gt;&lt;/p&gt;
 
@@ -146,7 +146,7 @@
 
 &lt;p&gt;给定正常凸函数 &lt;script type=&quot;math/tex&quot;&gt;f:\Re^n \to (-\infty,+\infty]&lt;/script&gt;，由&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;f^\ast({\bf\xi}) = \sup \left\lbrace &lt;{\bf x},{\bf\xi}&gt;-f({\bf x}) \mid {\bf x}\in \Re^n \right\rbrace &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;f^\ast({\bf\xi}) = \sup \left\{ &lt;{\bf x},{\bf\xi}&gt;-f({\bf x}) \mid {\bf x}\in \Re^n \right\} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;定义的函数 &lt;script type=&quot;math/tex&quot;&gt;f^\ast:\Re^n \to [-\infty,+\infty]&lt;/script&gt; 称为 &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的&lt;strong&gt;共轭函数&lt;/strong&gt;（conjuagate function）。&lt;/p&gt;
 
@@ -156,20 +156,20 @@
 
 &lt;p&gt;设 &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; 与 &lt;script type=&quot;math/tex&quot;&gt;Z&lt;/script&gt; 分别为 &lt;script type=&quot;math/tex&quot;&gt;\Re^n&lt;/script&gt; 与 &lt;script type=&quot;math/tex&quot;&gt;\Re^m&lt;/script&gt; 的非空子集，给定以 &lt;script type=&quot;math/tex&quot;&gt;Y\times Z&lt;/script&gt; 为定义域的函数 &lt;script type=&quot;math/tex&quot;&gt;K:Y\times Z\to[-\infty,+\infty]&lt;/script&gt;，定义两个函数 &lt;script type=&quot;math/tex&quot;&gt;\eta:Y\to[-\infty,+\infty]&lt;/script&gt; 与 &lt;script type=&quot;math/tex&quot;&gt;\zeta:Z\to[-\infty,+\infty]&lt;/script&gt; 如下：&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta({\bf y})=\sup\left\lbrace K({\bf y},{\bf z}) \mid {\bf z} \in Z\right\rbrace &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta({\bf y})=\sup\left\{ K({\bf y},{\bf z}) \mid {\bf z} \in Z\right\} &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\zeta({\bf z})=\inf\left\lbrace K({\bf y},{\bf z}) \mid {\bf y} \in Y\right\rbrace &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\zeta({\bf z})=\inf\left\{ K({\bf y},{\bf z}) \mid {\bf y} \in Y\right\} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\min \; \; \eta({\bf y})\\s.t. \; \; \; {\bf y} \in Y&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\max \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;引理 4.1&lt;/strong&gt; 对任意 &lt;script type=&quot;math/tex&quot;&gt;{\bf y}\in Y&lt;/script&gt; 与 &lt;script type=&quot;math/tex&quot;&gt;{\bf z}\in Z&lt;/script&gt; 均有 &lt;script type=&quot;math/tex&quot;&gt;\zeta({\bf z}) \leqslant \eta({\bf y})&lt;/script&gt; 成立。进一步，还有&lt;/p&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace \leqslant \inf\left\lbrace \eta({\bf y})\mid {\bf y} \in Y\right\rbrace &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sup\left\{ \zeta({\bf z})\mid {\bf z}\in Z\right\} \leqslant \inf\left\{ \eta({\bf y})\mid {\bf y} \in Y\right\} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;定理 4.1&lt;/strong&gt; 点 &lt;script type=&quot;math/tex&quot;&gt;(\bar{\bf y},\bar{\bf z})\in Y\times Z&lt;/script&gt; 为函数 &lt;script type=&quot;math/tex&quot;&gt;K:Y\times Z\to[-\infty,+\infty]&lt;/script&gt; 的鞍点的充要条件是 &lt;script type=&quot;math/tex&quot;&gt;\bar{\bf y}\in Y&lt;/script&gt; 与 &lt;script type=&quot;math/tex&quot;&gt;\bar{\bf z}\in Z&lt;/script&gt; 满足&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta(\bar{\bf y})=\inf\left\lbrace \eta({\bf y})\mid {\bf y}\in Y\right\rbrace =\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace =\zeta(\bar{\bf z})&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta(\bar{\bf y})=\inf\left\{ \eta({\bf y})\mid {\bf y}\in Y\right\} =\sup\left\{ \zeta({\bf z})\mid {\bf z}\in Z\right\} =\zeta(\bar{\bf z})&lt;/script&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;lagrange-&quot;&gt;Lagrange 对偶问题&lt;/h3&gt;
 
@@ -179,7 +179,7 @@
 
 &lt;p&gt;其中 &lt;script type=&quot;math/tex&quot;&gt;f: \Re^n \to \Re&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;g_i: \Re^n \to \Re (i=1, \cdots, m)&lt;/script&gt;。&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; S = \left\lbrace x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } i=1, \cdots, m\right \rbrace&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } i=1, \cdots, m\right \}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; L_0({\bf x}, {\bf \lambda}) = \begin{cases}
         f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, &amp; {\bf \lambda} \geqslant {\bf 0}\\
@@ -191,7 +191,7 @@
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\omega_0({\bf \lambda}) = \inf \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \omega_0({\bf \lambda}) = \inf \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Constrains relax&lt;/p&gt;
 
@@ -211,21 +211,42 @@
 
 &lt;h3 id=&quot;lagrange--1&quot;&gt;Lagrange 对偶性的推广&lt;/h3&gt;
 
-&lt;p&gt;对于原始问题 &lt;script type=&quot;math/tex&quot;&gt;(P)&lt;/script&gt;，考虑函数 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;，似的对任意固定的 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt; 均为闭正常凸函数，并且满足&lt;/p&gt;
+&lt;p&gt;对于原始问题 &lt;script type=&quot;math/tex&quot;&gt;(P)&lt;/script&gt;，考虑函数 &lt;script type=&quot;math/tex&quot;&gt;F: \Re^{n+M} \to (-\infty, +\infty]&lt;/script&gt;，使得对任意固定的 &lt;script type=&quot;math/tex&quot;&gt;{\bf x} \in \Re^n&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;F({\bf x}, \cdot): \Re^M \to (-\infty, +\infty]&lt;/script&gt; 均为闭正常凸函数，并且满足&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; F({\bf x}, {\bf 0}) = \theta({\bf x}) \text{,  } {\bf x} \in \Re^n &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;例 4.7&lt;/strong&gt; 设 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;，考虑函数 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;。利用满足 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt; 的闭正常凸函数 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt; 定义函数 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt; 如下：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例 4.7&lt;/strong&gt; 设 &lt;script type=&quot;math/tex&quot;&gt;M = m&lt;/script&gt;，考虑函数 &lt;script type=&quot;math/tex&quot;&gt;F_0: \Re^{n+m} \to (-\infty, +\infty]&lt;/script&gt;，利用满足 &lt;script type=&quot;math/tex&quot;&gt;q({\bf 0}) = 0&lt;/script&gt; 的闭正常凸函数 &lt;script type=&quot;math/tex&quot;&gt;q: \Re^m \to (-\infty, +\infty]&lt;/script&gt; 定义函数 &lt;script type=&quot;math/tex&quot;&gt;F: \Re^{n+m} \to (-\infty, +\infty]&lt;/script&gt; 如下：&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; F({\bf x}, {\bf u}) = F_0({\bf x}, {\bf u}) + q({\bf u}) &lt;/script&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x}) &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies F({\bf x}, {\bf u}) \mid F({\bf x}, {\bf 0} = \theta({\bf x})) &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + &lt;{\bf \lambda}, {\bf u}&gt; \mid {\bf u} \in \Re^M \right\} &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies \omega({\bf \lambda}) = \inf \left\{ L({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} &lt;/script&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;fenchel-&quot;&gt;Fenchel 对偶性&lt;/h3&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \min_{\bf x} f({\bf x}) + g({\bf Ax}) &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; F({\bf x}, {\bf 0}) = \theta({\bf x}) \text{,  } x \in \Re^n &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + &lt;{\bf \lambda}, {\bf u}&gt; \mid {\bf u} \in \Re^m \right\} \\
+&amp; = &amp; f({\bf x}) - g^\ast(-{-\lambda}) - &lt;{\bf \lambda}, {\bf Ax}&gt; \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*} \implies \omega({\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - &lt;{\bf \lambda}, {\bf Ax}&gt; \mid {\bf x} \in \Re^n \right\} \\
+&amp; = &amp; -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \min_{\bf \lambda} f^\ast({\bf A}^T{\bf \lambda}) + g^\ast(-{\bf \lambda})&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \max_{\bf \lambda} -f^\ast\left({\bf A}^T{\bf \lambda}\right) - g^\ast\left(-{\bf\lambda}\right)&lt;/script&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section-5&quot;&gt;算法&lt;/h2&gt;
 
 &lt;h3 id=&quot;proximal-gradient-method&quot;&gt;Proximal Gradient Method&lt;/h3&gt;
 
-&lt;p&gt;参考 &lt;a href=&quot;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&quot;&gt;Algorithms for large-scale convex optimization - DTU 2010&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; A Lecture note from “02930 Algorithms for Large-Scale Convex Optimization” taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe (&lt;a href=&quot;http://www.seas.ucla.edu/~vandenbe/&quot;&gt;http://www.seas.ucla.edu/~vandenbe/&lt;/a&gt;) at Danmarks Tekniske Universitet (&lt;a href=&quot;http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB&quot;&gt;http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB&lt;/a&gt;). The Download Link is found at the page of “EE227BT: Convex Optimization - Fall 2013” taught by Laurent El Ghaoui at Berkeley (&lt;a href=&quot;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&quot;&gt;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&lt;/a&gt;). And both of the lectures mentioned the book “Convex Optimization” by Stephen Boyd and Lieven Vandenberghe (&lt;a href=&quot;http://stanford.edu/~boyd/cvxbook/&quot;&gt;http://stanford.edu/~boyd/cvxbook/&lt;/a&gt;) and the software “CVX” - a MATLAB software for desciplined Convex Programming (&lt;a href=&quot;http://cvxr.com/cvx/&quot;&gt;http://cvxr.com/cvx/&lt;/a&gt;). A similar lecture note on Proximal Gradient Method from “EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)” (&lt;a href=&quot;http://www.seas.ucla.edu/~vandenbe/ee236c.html&quot;&gt;http://www.seas.ucla.edu/~vandenbe/ee236c.html&lt;/a&gt;) at UCLA&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;参考 &lt;a href=&quot;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&quot;&gt;Algorithms for large-scale convex optimization - DTU 2010&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; A Lecture note from “02930 Algorithms for Large-Scale Convex Optimization” taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe (&lt;a href=&quot;http://www.seas.ucla.edu/~vandenbe/&quot;&gt;http://www.seas.ucla.edu/~vandenbe/&lt;/a&gt;) at Danmarks Tekniske Universitet (&lt;a href=&quot;http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB&quot;&gt;http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB&lt;/a&gt;). The Download Link is found at the page of “EE227BT: Convex Optimization - Fall 2013” taught by Laurent El Ghaoui at Berkeley (&lt;a href=&quot;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&quot;&gt;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&lt;/a&gt;). And both of the lectures mentioned the book “Convex Optimization” by Stephen Boyd and Lieven Vandenberghe (&lt;a href=&quot;http://stanford.edu/~boyd/cvxbook/&quot;&gt;http://stanford.edu/~boyd/cvxbook/&lt;/a&gt;) and the software “CVX” - a MATLAB software for desciplined Convex Programming (&lt;a href=&quot;http://cvxr.com/cvx/&quot;&gt;http://cvxr.com/cvx/&lt;/a&gt;). A similar lecture note on Proximal Gradient Method from “EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)” (&lt;a href=&quot;http://www.seas.ucla.edu/~vandenbe/ee236c.html&quot;&gt;http://www.seas.ucla.edu/~vandenbe/ee236c.html&lt;/a&gt;) at UCLA&lt;/span&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;
 

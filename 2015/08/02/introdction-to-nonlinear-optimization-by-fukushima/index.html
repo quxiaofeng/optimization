@@ -73,21 +73,21 @@
 
 <p>给定函数 <script type="math/tex">f : \Re^n \to [-\infty, +\infty] </script>，称 <script type="math/tex">\Re^{n+1}</script> 的子集</p>
 
-<p><script type="math/tex; mode=display"> graph \; f = \left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \right\rbrace, </script></p>
+<p><script type="math/tex; mode=display"> graph \; f = \left\{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \right\} , </script></p>
 
 <p>为 <script type="math/tex">f</script> 的<strong>图像</strong>（graph），而称位于 <script type="math/tex">f</script> 的图像上方的点的全体构成的集合</p>
 
-<p><script type="math/tex; mode=display">epi \; f =\left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \geqslant f({\bf x}) \right\rbrace</script></p>
+<p><script type="math/tex; mode=display">epi \; f =\left\{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \geqslant f({\bf x}) \right\} </script></p>
 
 <p>为 <script type="math/tex">f</script> 的<strong>上图</strong>（epigraph）。若上图 <script type="math/tex">epi \; f</script> 为凸集，则称 <script type="math/tex">f</script> 为<strong>凸函数</strong>(convex function)。</p>
 
 <p><strong>定理 2.27</strong> 设 <script type="math/tex"> \mathcal{I} </script> 为任意非空指标集，而 <script type="math/tex">f_i : \Re^n \to [-\infty, +\infty] \; (i \in \mathcal{I})</script> 均为凸函数，则由</p>
 
-<p><script type="math/tex; mode=display"> f({\bf x}) = \sup \left\lbrace f_i({\bf x}) \mid i \in \mathcal{I} \right\rbrace</script></p>
+<p><script type="math/tex; mode=display"> f({\bf x}) = \sup \left\{ f_i({\bf x}) \mid i \in \mathcal{I} \right\} </script></p>
 
 <p>定义的函数 <script type="math/tex">f : \Re^n \to [-\infty, +\infty] </script> 为凸函数。进一步，若 <script type="math/tex">\mathcal{I}</script> 为有限指标集，每个 <script type="math/tex">f_i</script> 均为正常的凸函数，并且 <script type="math/tex">\cap_{i \in \mathcal{I}} \; dom \; f_i \neq \varnothing </script>，则 <script type="math/tex">f</script> 为正常凸函数。</p>
 
-<p>若对任意收敛于 <script type="math/tex">{\bf x}</script> 的点列 <script type="math/tex">\lbrace{\bf x}^k\rbrace \subseteq \Re^n</script> 均有</p>
+<p>若对任意收敛于 <script type="math/tex">{\bf x}</script> 的点列 <script type="math/tex">\{ {\bf x}^k\} \subseteq \Re^n</script> 均有</p>
 
 <p><script type="math/tex; mode=display"> f({\bf x}) \geqslant \limsup_{k \to \infty}f({\bf x}^k) </script></p>
 
@@ -101,7 +101,7 @@
 
 <p>给定正常凸函数 <script type="math/tex">f:\Re^n \to (-\infty,+\infty]</script>，由</p>
 
-<p><script type="math/tex; mode=display">f^\ast({\bf\xi}) = \sup \left\lbrace <{\bf x},{\bf\xi}>-f({\bf x}) \mid {\bf x}\in \Re^n \right\rbrace </script></p>
+<p><script type="math/tex; mode=display">f^\ast({\bf\xi}) = \sup \left\{ <{\bf x},{\bf\xi}>-f({\bf x}) \mid {\bf x}\in \Re^n \right\} </script></p>
 
 <p>定义的函数 <script type="math/tex">f^\ast:\Re^n \to [-\infty,+\infty]</script> 称为 <script type="math/tex">f</script> 的<strong>共轭函数</strong>（conjuagate function）。</p>
 
@@ -111,20 +111,20 @@
 
 <p>设 <script type="math/tex">Y</script> 与 <script type="math/tex">Z</script> 分别为 <script type="math/tex">\Re^n</script> 与 <script type="math/tex">\Re^m</script> 的非空子集，给定以 <script type="math/tex">Y\times Z</script> 为定义域的函数 <script type="math/tex">K:Y\times Z\to[-\infty,+\infty]</script>，定义两个函数 <script type="math/tex">\eta:Y\to[-\infty,+\infty]</script> 与 <script type="math/tex">\zeta:Z\to[-\infty,+\infty]</script> 如下：</p>
 
-<p><script type="math/tex; mode=display">\eta({\bf y})=\sup\left\lbrace K({\bf y},{\bf z}) \mid {\bf z} \in Z\right\rbrace </script></p>
+<p><script type="math/tex; mode=display">\eta({\bf y})=\sup\left\{ K({\bf y},{\bf z}) \mid {\bf z} \in Z\right\} </script></p>
 
-<p><script type="math/tex; mode=display">\zeta({\bf z})=\inf\left\lbrace K({\bf y},{\bf z}) \mid {\bf y} \in Y\right\rbrace </script></p>
+<p><script type="math/tex; mode=display">\zeta({\bf z})=\inf\left\{ K({\bf y},{\bf z}) \mid {\bf y} \in Y\right\} </script></p>
 
 <p><script type="math/tex; mode=display">\min \; \; \eta({\bf y})\\s.t. \; \; \; {\bf y} \in Y</script></p>
 
 <p><script type="math/tex; mode=display">\max \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z</script></p>
 
 <p><strong>引理 4.1</strong> 对任意 <script type="math/tex">{\bf y}\in Y</script> 与 <script type="math/tex">{\bf z}\in Z</script> 均有 <script type="math/tex">\zeta({\bf z}) \leqslant \eta({\bf y})</script> 成立。进一步，还有</p>
-<p><script type="math/tex; mode=display">\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace \leqslant \inf\left\lbrace \eta({\bf y})\mid {\bf y} \in Y\right\rbrace </script></p>
+<p><script type="math/tex; mode=display">\sup\left\{ \zeta({\bf z})\mid {\bf z}\in Z\right\} \leqslant \inf\left\{ \eta({\bf y})\mid {\bf y} \in Y\right\} </script></p>
 
 <p><strong>定理 4.1</strong> 点 <script type="math/tex">(\bar{\bf y},\bar{\bf z})\in Y\times Z</script> 为函数 <script type="math/tex">K:Y\times Z\to[-\infty,+\infty]</script> 的鞍点的充要条件是 <script type="math/tex">\bar{\bf y}\in Y</script> 与 <script type="math/tex">\bar{\bf z}\in Z</script> 满足</p>
 
-<p><script type="math/tex; mode=display">\eta(\bar{\bf y})=\inf\left\lbrace \eta({\bf y})\mid {\bf y}\in Y\right\rbrace =\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace =\zeta(\bar{\bf z})</script></p>
+<p><script type="math/tex; mode=display">\eta(\bar{\bf y})=\inf\left\{ \eta({\bf y})\mid {\bf y}\in Y\right\} =\sup\left\{ \zeta({\bf z})\mid {\bf z}\in Z\right\} =\zeta(\bar{\bf z})</script></p>
 
 <h3 id="lagrange-">Lagrange 对偶问题</h3>
 
@@ -134,7 +134,7 @@
 
 <p>其中 <script type="math/tex">f: \Re^n \to \Re</script>, <script type="math/tex">g_i: \Re^n \to \Re (i=1, \cdots, m)</script>。</p>
 
-<p><script type="math/tex; mode=display"> S = \left\lbrace x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } i=1, \cdots, m\right \rbrace</script></p>
+<p><script type="math/tex; mode=display"> S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } i=1, \cdots, m\right \}</script></p>
 
 <p><script type="math/tex; mode=display"> L_0({\bf x}, {\bf \lambda}) = \begin{cases}
         f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, & {\bf \lambda} \geqslant {\bf 0}\\
@@ -146,7 +146,7 @@
 
 <p><script type="math/tex; mode=display"> \theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}</script></p>
 
-<p><script type="math/tex; mode=display">\omega_0({\bf \lambda}) = \inf \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} </script></p>
+<p><script type="math/tex; mode=display"> \omega_0({\bf \lambda}) = \inf \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} </script></p>
 
 <p>Constrains relax</p>
 
@@ -166,21 +166,42 @@
 
 <h3 id="lagrange--1">Lagrange 对偶性的推广</h3>
 
-<p>对于原始问题 <script type="math/tex">(P)</script>，考虑函数 <script type="math/tex"></script>，似的对任意固定的 <script type="math/tex"></script>，<script type="math/tex"></script> 均为闭正常凸函数，并且满足</p>
+<p>对于原始问题 <script type="math/tex">(P)</script>，考虑函数 <script type="math/tex">F: \Re^{n+M} \to (-\infty, +\infty]</script>，使得对任意固定的 <script type="math/tex">{\bf x} \in \Re^n</script>，<script type="math/tex">F({\bf x}, \cdot): \Re^M \to (-\infty, +\infty]</script> 均为闭正常凸函数，并且满足</p>
 
-<p><script type="math/tex; mode=display"> </script></p>
+<p><script type="math/tex; mode=display"> F({\bf x}, {\bf 0}) = \theta({\bf x}) \text{,  } {\bf x} \in \Re^n </script></p>
 
-<p><strong>例 4.7</strong> 设 <script type="math/tex"></script>，考虑函数 <script type="math/tex"></script>。利用满足 <script type="math/tex"></script> 的闭正常凸函数 <script type="math/tex"></script> 定义函数 <script type="math/tex"></script> 如下：</p>
+<p><strong>例 4.7</strong> 设 <script type="math/tex">M = m</script>，考虑函数 <script type="math/tex">F_0: \Re^{n+m} \to (-\infty, +\infty]</script>，利用满足 <script type="math/tex">q({\bf 0}) = 0</script> 的闭正常凸函数 <script type="math/tex">q: \Re^m \to (-\infty, +\infty]</script> 定义函数 <script type="math/tex">F: \Re^{n+m} \to (-\infty, +\infty]</script> 如下：</p>
 
-<p><script type="math/tex; mode=display"> </script></p>
+<p><script type="math/tex; mode=display"> F({\bf x}, {\bf u}) = F_0({\bf x}, {\bf u}) + q({\bf u}) </script></p>
+
+<hr />
+<p><script type="math/tex; mode=display"> \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x}) </script></p>
+<p><script type="math/tex; mode=display"> \implies F({\bf x}, {\bf u}) \mid F({\bf x}, {\bf 0} = \theta({\bf x})) </script></p>
+<p><script type="math/tex; mode=display"> \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + <{\bf \lambda}, {\bf u}> \mid {\bf u} \in \Re^M \right\} </script></p>
+<p><script type="math/tex; mode=display"> \implies \omega({\bf \lambda}) = \inf \left\{ L({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} </script></p>
+<hr />
 
 <h3 id="fenchel-">Fenchel 对偶性</h3>
+
+<p><script type="math/tex; mode=display"> \min_{\bf x} f({\bf x}) + g({\bf Ax}) </script></p>
+
+<p><script type="math/tex; mode=display"> F({\bf x}, {\bf 0}) = \theta({\bf x}) \text{,  } x \in \Re^n </script></p>
+<p><script type="math/tex; mode=display"> \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) </script></p>
+
+<p><script type="math/tex; mode=display"> \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) </script></p>
+<p><script type="math/tex; mode=display"> \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) & = & \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + <{\bf \lambda}, {\bf u}> \mid {\bf u} \in \Re^m \right\} \\
+& = & f({\bf x}) - g^\ast(-{-\lambda}) - <{\bf \lambda}, {\bf Ax}> \end{eqnarray*}</script></p>
+<p><script type="math/tex; mode=display"> \begin{eqnarray*} \implies \omega({\bf \lambda}) & = & \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - <{\bf \lambda}, {\bf Ax}> \mid {\bf x} \in \Re^n \right\} \\
+& = & -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}</script></p>
+
+<p><script type="math/tex; mode=display"> \min_{\bf \lambda} f^\ast({\bf A}^T{\bf \lambda}) + g^\ast(-{\bf \lambda})</script></p>
+<p><script type="math/tex; mode=display"> \max_{\bf \lambda} -f^\ast\left({\bf A}^T{\bf \lambda}\right) - g^\ast\left(-{\bf\lambda}\right)</script></p>
 
 <h2 id="section-5">算法</h2>
 
 <h3 id="proximal-gradient-method">Proximal Gradient Method</h3>
 
-<p>参考 <a href="http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf">Algorithms for large-scale convex optimization - DTU 2010</a><sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> A Lecture note from “02930 Algorithms for Large-Scale Convex Optimization” taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe (<a href="http://www.seas.ucla.edu/~vandenbe/">http://www.seas.ucla.edu/~vandenbe/</a>) at Danmarks Tekniske Universitet (<a href="http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB">http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB</a>). The Download Link is found at the page of “EE227BT: Convex Optimization - Fall 2013” taught by Laurent El Ghaoui at Berkeley (<a href="http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf">http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf</a>). And both of the lectures mentioned the book “Convex Optimization” by Stephen Boyd and Lieven Vandenberghe (<a href="http://stanford.edu/~boyd/cvxbook/">http://stanford.edu/~boyd/cvxbook/</a>) and the software “CVX” - a MATLAB software for desciplined Convex Programming (<a href="http://cvxr.com/cvx/">http://cvxr.com/cvx/</a>). A similar lecture note on Proximal Gradient Method from “EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)” (<a href="http://www.seas.ucla.edu/~vandenbe/ee236c.html">http://www.seas.ucla.edu/~vandenbe/ee236c.html</a>) at UCLA</span></p>
+<p>参考 <a href="http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf">Algorithms for large-scale convex optimization - DTU 2010</a><sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> A Lecture note from “02930 Algorithms for Large-Scale Convex Optimization” taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe (<a href="http://www.seas.ucla.edu/~vandenbe/">http://www.seas.ucla.edu/~vandenbe/</a>) at Danmarks Tekniske Universitet (<a href="http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB">http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB</a>). The Download Link is found at the page of “EE227BT: Convex Optimization - Fall 2013” taught by Laurent El Ghaoui at Berkeley (<a href="http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf">http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf</a>). And both of the lectures mentioned the book “Convex Optimization” by Stephen Boyd and Lieven Vandenberghe (<a href="http://stanford.edu/~boyd/cvxbook/">http://stanford.edu/~boyd/cvxbook/</a>) and the software “CVX” - a MATLAB software for desciplined Convex Programming (<a href="http://cvxr.com/cvx/">http://cvxr.com/cvx/</a>). A similar lecture note on Proximal Gradient Method from “EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)” (<a href="http://www.seas.ucla.edu/~vandenbe/ee236c.html">http://www.seas.ucla.edu/~vandenbe/ee236c.html</a>) at UCLA</span></p>
 
 <script type="math/tex"></script>
 
