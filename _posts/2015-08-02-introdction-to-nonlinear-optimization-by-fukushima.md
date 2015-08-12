@@ -35,21 +35,21 @@ categories:
 
 给定函数 {%m%}f : \Re^n \to [-\infty, +\infty] {%em%}，称 {%m%}\Re^{n+1}{%em%} 的子集
 
-{% math %} graph \; f = \left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \right\rbrace, {% endmath %}
+{% math %} graph \; f = \left\{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \right\} , {% endmath %}
 
 为 {%m%}f{%em%} 的**图像**（graph），而称位于 {%m%}f{%em%} 的图像上方的点的全体构成的集合
 
-{% math %}epi \; f =\left\lbrace ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \geqslant f({\bf x}) \right\rbrace{% endmath %}
+{% math %}epi \; f =\left\{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \geqslant f({\bf x}) \right\} {% endmath %}
 
 为 {%m%}f{%em%} 的**上图**（epigraph）。若上图 {%m%}epi \; f{%em%} 为凸集，则称 {%m%}f{%em%} 为**凸函数**(convex function)。
 
 **定理 2.27** 设 {%m%} \mathcal{I} {%em%} 为任意非空指标集，而 {%m%}f_i : \Re^n \to [-\infty, +\infty] \; (i \in \mathcal{I}){%em%} 均为凸函数，则由
 
-{% math %} f({\bf x}) = \sup \left\lbrace f_i({\bf x}) \mid i \in \mathcal{I} \right\rbrace{% endmath %}
+{% math %} f({\bf x}) = \sup \left\{ f_i({\bf x}) \mid i \in \mathcal{I} \right\} {% endmath %}
 
 定义的函数 {%m%}f : \Re^n \to [-\infty, +\infty] {%em%} 为凸函数。进一步，若 {%m%}\mathcal{I}{%em%} 为有限指标集，每个 {%m%}f_i{%em%} 均为正常的凸函数，并且 {%m%}\cap_{i \in \mathcal{I}} \; dom \; f_i \neq \varnothing {%em%}，则 {%m%}f{%em%} 为正常凸函数。
 
-若对任意收敛于 {%m%}{\bf x}{%em%} 的点列 {%m%}\lbrace{\bf x}^k\rbrace \subseteq \Re^n{%em%} 均有
+若对任意收敛于 {%m%}{\bf x}{%em%} 的点列 {%m%}\{ {\bf x}^k\} \subseteq \Re^n{%em%} 均有
 
 {% math %} f({\bf x}) \geqslant \limsup_{k \to \infty}f({\bf x}^k) {% endmath %}
 
@@ -63,7 +63,7 @@ categories:
 
 给定正常凸函数 {%m%}f:\Re^n \to (-\infty,+\infty]{%em%}，由
 
-{% math %}f^\ast({\bf\xi}) = \sup \left\lbrace <{\bf x},{\bf\xi}>-f({\bf x}) \mid {\bf x}\in \Re^n \right\rbrace {% endmath %}
+{% math %}f^\ast({\bf\xi}) = \sup \left\{ <{\bf x},{\bf\xi}>-f({\bf x}) \mid {\bf x}\in \Re^n \right\} {% endmath %}
 
 定义的函数 {%m%}f^\ast:\Re^n \to [-\infty,+\infty]{%em%} 称为 {%m%}f{%em%} 的**共轭函数**（conjuagate function）。
 
@@ -73,20 +73,20 @@ categories:
 
 设 {%m%}Y{%em%} 与 {%m%}Z{%em%} 分别为 {%m%}\Re^n{%em%} 与 {%m%}\Re^m{%em%} 的非空子集，给定以 {%m%}Y\times Z{%em%} 为定义域的函数 {%m%}K:Y\times Z\to[-\infty,+\infty]{%em%}，定义两个函数 {%m%}\eta:Y\to[-\infty,+\infty]{%em%} 与 {%m%}\zeta:Z\to[-\infty,+\infty]{%em%} 如下：
 
-{% math %}\eta({\bf y})=\sup\left\lbrace K({\bf y},{\bf z}) \mid {\bf z} \in Z\right\rbrace {% endmath %}
+{% math %}\eta({\bf y})=\sup\left\{ K({\bf y},{\bf z}) \mid {\bf z} \in Z\right\} {% endmath %}
 
-{% math %}\zeta({\bf z})=\inf\left\lbrace K({\bf y},{\bf z}) \mid {\bf y} \in Y\right\rbrace {% endmath %}
+{% math %}\zeta({\bf z})=\inf\left\{ K({\bf y},{\bf z}) \mid {\bf y} \in Y\right\} {% endmath %}
 
 {% math %}\min \; \; \eta({\bf y})\\s.t. \; \; \; {\bf y} \in Y{% endmath %}
 
 {% math %}\max \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z{% endmath %}
 
 **引理 4.1** 对任意 {%m%}{\bf y}\in Y{%em%} 与 {%m%}{\bf z}\in Z{%em%} 均有 {%m%}\zeta({\bf z}) \leqslant \eta({\bf y}){%em%} 成立。进一步，还有
-{% math %}\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace \leqslant \inf\left\lbrace \eta({\bf y})\mid {\bf y} \in Y\right\rbrace {% endmath %}
+{% math %}\sup\left\{ \zeta({\bf z})\mid {\bf z}\in Z\right\} \leqslant \inf\left\{ \eta({\bf y})\mid {\bf y} \in Y\right\} {% endmath %}
 
 **定理 4.1** 点 {%m%}(\bar{\bf y},\bar{\bf z})\in Y\times Z{%em%} 为函数 {%m%}K:Y\times Z\to[-\infty,+\infty]{%em%} 的鞍点的充要条件是 {%m%}\bar{\bf y}\in Y{%em%} 与 {%m%}\bar{\bf z}\in Z{%em%} 满足
 
-{% math %}\eta(\bar{\bf y})=\inf\left\lbrace \eta({\bf y})\mid {\bf y}\in Y\right\rbrace =\sup\left\lbrace \zeta({\bf z})\mid {\bf z}\in Z\right\rbrace =\zeta(\bar{\bf z}){% endmath %}
+{% math %}\eta(\bar{\bf y})=\inf\left\{ \eta({\bf y})\mid {\bf y}\in Y\right\} =\sup\left\{ \zeta({\bf z})\mid {\bf z}\in Z\right\} =\zeta(\bar{\bf z}){% endmath %}
 
 ### Lagrange 对偶问题 ###
 
@@ -96,7 +96,7 @@ categories:
 
 其中 {%m%}f: \Re^n \to \Re{%em%}, {%m%}g_i: \Re^n \to \Re (i=1, \cdots, m){%em%}。
 
-{% math %} S = \left\lbrace x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } i=1, \cdots, m\right \rbrace{% endmath %}
+{% math %} S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } i=1, \cdots, m\right \}{% endmath %}
 
 {% math %} L_0({\bf x}, {\bf \lambda}) = \begin{cases}
         f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, & {\bf \lambda} \geqslant {\bf 0}\\
@@ -108,7 +108,7 @@ categories:
 
 {% math %} \theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}{% endmath %}
 
-{% math %}\omega_0({\bf \lambda}) = \inf \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} {% endmath %}
+{% math %} \omega_0({\bf \lambda}) = \inf \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} {% endmath %}
 
 Constrains relax
 
@@ -128,21 +128,42 @@ Constrains relax
 
 ### Lagrange 对偶性的推广 ###
 
-对于原始问题 {%m%}(P){%em%}，考虑函数 {%m%}{%em%}，似的对任意固定的 {%m%}{%em%}，{%m%}{%em%} 均为闭正常凸函数，并且满足
+对于原始问题 {%m%}(P){%em%}，考虑函数 {%m%}F: \Re^{n+M} \to (-\infty, +\infty]{%em%}，使得对任意固定的 {%m%}{\bf x} \in \Re^n{%em%}，{%m%}F({\bf x}, \cdot): \Re^M \to (-\infty, +\infty]{%em%} 均为闭正常凸函数，并且满足
 
-{% math %} {% endmath %}
+{% math %} F({\bf x}, {\bf 0}) = \theta({\bf x}) \text{,  } {\bf x} \in \Re^n {% endmath %}
 
-**例 4.7** 设 {%m%}{%em%}，考虑函数 {%m%}{%em%}。利用满足 {%m%}{%em%} 的闭正常凸函数 {%m%}{%em%} 定义函数 {%m%}{%em%} 如下：
+**例 4.7** 设 {%m%}M = m{%em%}，考虑函数 {%m%}F_0: \Re^{n+m} \to (-\infty, +\infty]{%em%}，利用满足 {%m%}q({\bf 0}) = 0{%em%} 的闭正常凸函数 {%m%}q: \Re^m \to (-\infty, +\infty]{%em%} 定义函数 {%m%}F: \Re^{n+m} \to (-\infty, +\infty]{%em%} 如下：
 
-{% math %} {% endmath %}
+{% math %} F({\bf x}, {\bf u}) = F_0({\bf x}, {\bf u}) + q({\bf u}) {% endmath %}
+
+---
+{% math %} \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x}) {% endmath %}
+{% math %} \implies F({\bf x}, {\bf u}) \mid F({\bf x}, {\bf 0} = \theta({\bf x})) {% endmath %}
+{% math %} \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + <{\bf \lambda}, {\bf u}> \mid {\bf u} \in \Re^M \right\} {% endmath %}
+{% math %} \implies \omega({\bf \lambda}) = \inf \left\{ L({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} {% endmath %}
+---
 
 ### Fenchel 对偶性 ###
+
+{% math %} \min_{\bf x} f({\bf x}) + g({\bf Ax}) {% endmath %}
+
+{% math %} F({\bf x}, {\bf 0}) = \theta({\bf x}) \text{,  } x \in \Re^n {% endmath %}
+{% math %} \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) {% endmath %}
+
+{% math %} \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) {% endmath %}
+{% math %} \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) & = & \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + <{\bf \lambda}, {\bf u}> \mid {\bf u} \in \Re^m \right\} \\
+& = & f({\bf x}) - g^\ast(-{-\lambda}) - <{\bf \lambda}, {\bf Ax}> \end{eqnarray*}{% endmath %}
+{% math %} \begin{eqnarray*} \implies \omega({\bf \lambda}) & = & \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - <{\bf \lambda}, {\bf Ax}> \mid {\bf x} \in \Re^n \right\} \\
+& = & -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}{% endmath %}
+
+{% math %} \min_{\bf \lambda} f^\ast({\bf A}^T{\bf \lambda}) + g^\ast(-{\bf \lambda}){% endmath %}
+{% math %} \max_{\bf \lambda} -f^\ast\left({\bf A}^T{\bf \lambda}\right) - g^\ast\left(-{\bf\lambda}\right){% endmath %}
 
 ## 算法 ##
 
 ### Proximal Gradient Method ###
 
-参考 [Algorithms for large-scale convex optimization - DTU 2010](http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf){% sidenote 1 'A Lecture note from "02930 Algorithms for Large-Scale Convex Optimization" taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe ([http://www.seas.ucla.edu/~vandenbe/](http://www.seas.ucla.edu/~vandenbe/)) at Danmarks Tekniske Universitet ([http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB](http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB)). The Download Link is found at the page of "EE227BT: Convex Optimization - Fall 2013" taught by Laurent El Ghaoui at Berkeley ([http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf](http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf)). And both of the lectures mentioned the book "Convex Optimization" by Stephen Boyd and Lieven Vandenberghe ([http://stanford.edu/~boyd/cvxbook/](http://stanford.edu/~boyd/cvxbook/)) and the software "CVX" - a MATLAB software for desciplined Convex Programming ([http://cvxr.com/cvx/](http://cvxr.com/cvx/)). A similar lecture note on Proximal Gradient Method from "EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)" ([http://www.seas.ucla.edu/~vandenbe/ee236c.html](http://www.seas.ucla.edu/~vandenbe/ee236c.html)) at UCLA' can be found at [http://www.seas.ucla.edu/~vandenbe/236C/lectures/proxgrad.pdf](http://www.seas.ucla.edu/~vandenbe/236C/lectures/proxgrad.pdf). %}
+参考 [Algorithms for large-scale convex optimization - DTU 2010](http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf){% sidenote 3 'A Lecture note from "02930 Algorithms for Large-Scale Convex Optimization" taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe ([http://www.seas.ucla.edu/~vandenbe/](http://www.seas.ucla.edu/~vandenbe/)) at Danmarks Tekniske Universitet ([http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB](http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB)). The Download Link is found at the page of "EE227BT: Convex Optimization - Fall 2013" taught by Laurent El Ghaoui at Berkeley ([http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf](http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf)). And both of the lectures mentioned the book "Convex Optimization" by Stephen Boyd and Lieven Vandenberghe ([http://stanford.edu/~boyd/cvxbook/](http://stanford.edu/~boyd/cvxbook/)) and the software "CVX" - a MATLAB software for desciplined Convex Programming ([http://cvxr.com/cvx/](http://cvxr.com/cvx/)). A similar lecture note on Proximal Gradient Method from "EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)" ([http://www.seas.ucla.edu/~vandenbe/ee236c.html](http://www.seas.ucla.edu/~vandenbe/ee236c.html)) at UCLA' can be found at [http://www.seas.ucla.edu/~vandenbe/236C/lectures/proxgrad.pdf](http://www.seas.ucla.edu/~vandenbe/236C/lectures/proxgrad.pdf). %}
 
 {%m%}{%em%}
 
