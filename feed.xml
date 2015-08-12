@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 13 Aug 2015 05:59:37 +0800</pubDate>
-    <lastBuildDate>Thu, 13 Aug 2015 05:59:37 +0800</lastBuildDate>
+    <pubDate>Thu, 13 Aug 2015 06:12:10 +0800</pubDate>
+    <lastBuildDate>Thu, 13 Aug 2015 06:12:10 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -247,6 +247,28 @@
 &lt;h3 id=&quot;proximal-gradient-method&quot;&gt;Proximal Gradient Method&lt;/h3&gt;
 
 &lt;p&gt;参考 &lt;a href=&quot;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&quot;&gt;Algorithms for large-scale convex optimization - DTU 2010&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; A Lecture note from “02930 Algorithms for Large-Scale Convex Optimization” taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe (&lt;a href=&quot;http://www.seas.ucla.edu/~vandenbe/&quot;&gt;http://www.seas.ucla.edu/~vandenbe/&lt;/a&gt;) at Danmarks Tekniske Universitet (&lt;a href=&quot;http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB&quot;&gt;http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB&lt;/a&gt;). The Download Link is found at the page of “EE227BT: Convex Optimization - Fall 2013” taught by Laurent El Ghaoui at Berkeley (&lt;a href=&quot;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&quot;&gt;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&lt;/a&gt;). And both of the lectures mentioned the book “Convex Optimization” by Stephen Boyd and Lieven Vandenberghe (&lt;a href=&quot;http://stanford.edu/~boyd/cvxbook/&quot;&gt;http://stanford.edu/~boyd/cvxbook/&lt;/a&gt;) and the software “CVX” - a MATLAB software for desciplined Convex Programming (&lt;a href=&quot;http://cvxr.com/cvx/&quot;&gt;http://cvxr.com/cvx/&lt;/a&gt;). A similar lecture note on Proximal Gradient Method from “EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)” (&lt;a href=&quot;http://www.seas.ucla.edu/~vandenbe/ee236c.html&quot;&gt;http://www.seas.ucla.edu/~vandenbe/ee236c.html&lt;/a&gt;) at UCLA&lt;/span&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;proximal-mapping&quot;&gt;Proximal mapping&lt;/h4&gt;
+
+&lt;p&gt;The &lt;strong&gt;proximal mapping&lt;/strong&gt; (or proximal operator) of a convex function &lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt; is&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf prox}_h(x) = \argmin_u \left( h(u) + \frac{1}{2} \|u - x\|^2_2 \right)&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;examples&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;h(x) = 0: {\bf prox}_h(x) = x&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;h(x) = I_C(x)&lt;/script&gt; (indicator function of &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;): &lt;script type=&quot;math/tex&quot;&gt;{\bf prox}_h&lt;/script&gt; is projection on &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf prox}_h(x) = P_C(x) = \argmin_{u \in C} \|u - x\|^2_2 &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;h(x) = t \|x\|_1&lt;/script&gt;: &lt;script type=&quot;math/tex&quot;&gt;{\bf prox}_h&lt;/script&gt; is shinkage (soft threshold) operation&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf prox}_h = \begin{cases}
+    x_i - t &amp; x_i   \geqslant t \\
+    0       &amp; |x_i| \leqslant t \\
+    x_i + t &amp; x_i   \leqslant -t
+\end{\cases} &lt;/script&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;
 
