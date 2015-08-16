@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 17 Aug 2015 00:26:47 +0800</pubDate>
-    <lastBuildDate>Mon, 17 Aug 2015 00:26:47 +0800</lastBuildDate>
+    <pubDate>Mon, 17 Aug 2015 02:55:58 +0800</pubDate>
+    <lastBuildDate>Mon, 17 Aug 2015 02:55:58 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -283,7 +283,7 @@
         <title>The Expectation Maximization Algorithm and Finite Mixture Models</title>
         <description>&lt;p&gt;期望最大化算法和有限混合模型&lt;/p&gt;
 
-&lt;p&gt;概念主要来自于一次跟师弟的讨论。师弟提到 Expectation Maximization Algorithm(EM 算法) 方面的专家 &lt;a href=&quot;http://www.maths.uq.edu.au/~gjm/&quot;&gt;Prof. Geoffrey John McLachlan&lt;/a&gt; 的一篇早期的论文就完全涵盖了多个最新顶级期刊论文的思想。就跟着追到该教授的&lt;a href=&quot;http://www.maths.uq.edu.au/~gjm/&quot;&gt;主页&lt;/a&gt;，找到这两本书：&lt;a href=&quot;http://book.douban.com/subject/2857809/&quot;&gt;Finite Mixture Models (有限混合模型)&lt;/a&gt; 和 &lt;a href=&quot;http://book.douban.com/subject/3554292/&quot;&gt;The EM Algorithm and Extensions (期望最大化算法及其拓展)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;概念主要来自于一次跟师弟的讨论。师弟提到 Expectation Maximization Algorithm (EM 算法) 方面的专家 &lt;a href=&quot;http://www.maths.uq.edu.au/~gjm/&quot;&gt;Prof. Geoffrey John McLachlan&lt;/a&gt; 的一篇早期的论文就完全涵盖了多个最新顶级期刊论文的思想。就跟着追到该教授的&lt;a href=&quot;http://www.maths.uq.edu.au/~gjm/&quot;&gt;主页&lt;/a&gt;，找到这两本书：&lt;a href=&quot;http://book.douban.com/subject/2857809/&quot;&gt;Finite Mixture Models (有限混合模型)&lt;/a&gt; 和 &lt;a href=&quot;http://book.douban.com/subject/3554292/&quot;&gt;The EM Algorithm and Extensions (期望最大化算法及其拓展)&lt;/a&gt;。&lt;/p&gt;
 
 &lt;h2 id=&quot;prof-geoffrey-john-mclachlanhttpwwwmathsuqeduaugjm-&quot;&gt;&lt;a href=&quot;http://www.maths.uq.edu.au/~gjm/&quot;&gt;Prof. Geoffrey John McLachlan&lt;/a&gt; 近期相关论文&lt;/h2&gt;
 
@@ -309,13 +309,13 @@
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;简单模型&lt;/h2&gt;
+&lt;h2 id=&quot;section&quot;&gt;高斯混合模型&lt;/h2&gt;
 
-&lt;p&gt;在应用领域，更多提及的是高斯混合模型（GMM, Gaussian Mixture Model）。最简单的是单高斯模型，在单高斯模型中，假设多维变量符合高斯分布。高斯分布从空间上观察，在二维情况，近似于椭圆；在三维情况近似于椭球。当单高斯分布不足以表达高维随机变量的分布时，采用多个高斯分布合成来近似该高维随机变量的分布。类似于小波分解，使用足够多的高斯分布，就拟合任意数据分布。尤其是对于独立同分布（i.i.d., independent identically distributed）随机变量，当数据足够多时，近似服从高斯分布。&lt;/p&gt;
+&lt;p&gt;在应用领域，更多提及的是高斯混合模型 (GMM, Gaussian Mixture Model)。最简单的是单高斯模型。在单高斯模型中，假设多维变量符合高斯分布。高斯分布从空间上观察，在二维情况，近似于椭圆；在三维情况，近似于椭球。当单高斯分布不足以表达高维随机变量的分布时，用多个高斯分布的合成来近似该高维随机变量的分布。可以类比小波分解，使用足够多的高斯分布，可以拟合任意高维数据分布。特别考虑到，独立同分布 (i.i.d., independent identically distributed) 随机变量，当数据足够多时，近似服从高斯分布。&lt;/p&gt;
 
-&lt;p&gt;这里 GMM 很是类似 K-means 算法。K-means 算法是从样本中根据距离选择其中一个最近邻样本作为聚类中心。GMM 中是根据一组数据计算中心与方差，然后为每一个数据计算属于该高斯分布的概率。GMM 可以看成是一种柔性、概率的 K-means。&lt;/p&gt;
+&lt;p&gt;这里 GMM 跟 K-means 算法在很多方面近似。K-means 算法是从一组样本中选择其中一个最近邻样本作为聚类中心。GMM 中是根据一组数据按照高斯分布计算中心与方差，然后为每一个数据计算属于该高斯分布的概率。GMM 可以看成是一种柔性、概率的 K-means。&lt;/p&gt;
 
-&lt;p&gt;给定样本及类别信息，可以通过 Maximum Likelihood 算法求解 GMM 模型。当样本类别未知时，使用各样本符合分布的概率，当微小概率连乘时，可以通过取对数的方式，提高数值计算的稳定性。&lt;/p&gt;
+&lt;p&gt;给定样本及类别信息，可以通过 Maximum Likelihood 算法求解 GMM 参数。当样本类别未知时，使用各样本符合分布的概率，当微小概率连乘时，可以通过取对数的方式，提高数值计算的稳定性。&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 24 Jul 2015 03:52:47 +0800</pubDate>
