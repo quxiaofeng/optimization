@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>EM Method | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="期望最大化算法">
+  <title>The EM Algorithm and Finite Mixture Models | OPTIMIZATIONS for Machine Learning</title>
+  <meta name="description" content="期望最大化算法和有限混合模型概念主要来自于一次跟师弟的讨论。师弟提到 EM 方面的专家 Prof. Geoffrey John McLachlan 的一篇早期的论文就完全涵盖了多个最新顶级期刊论文的思想。就跟着追到该教授的主页，找到这两本书：Finite Mixture Models (有限混合模型) 和 The...">
 
 
   <link rel="stylesheet" href="//www.quxiaofeng.me/optimization/css/tufte.css">	
@@ -35,18 +35,42 @@
 </header>
 
     <article>
-      <h1>EM Method</h1>
+      <h1>The EM Algorithm and Finite Mixture Models</h1>
 <p>July 24, 2015</p>
 
 
-<p>期望最大化算法</p>
+<p>期望最大化算法和有限混合模型</p>
+
+<p>概念主要来自于一次跟师弟的讨论。师弟提到 EM 方面的专家 <a href="http://www.maths.uq.edu.au/~gjm/">Prof. Geoffrey John McLachlan</a> 的一篇早期的论文就完全涵盖了多个最新顶级期刊论文的思想。就跟着追到该教授的<a href="http://www.maths.uq.edu.au/~gjm/">主页</a>，找到这两本书：<a href="http://book.douban.com/subject/2857809/">Finite Mixture Models (有限混合模型)</a> 和 <a href="http://book.douban.com/subject/3554292/">The EM Algorithm and Extensions (期望最大化算法及其拓展)</a></p>
+
+<h2 id="section">相关论文</h2>
+
+<p>McLachlan, G.J. and Ng, S.K. (2009). <a href="http://www.maths.uq.edu.au/~gjm/mn_em.pdf">The EM Algorithm</a>. In The Top-Ten Algorithms in Data Mining, X. Wu and V. Kumar (Eds.). Boca Raton, Florida: Chapman &amp; Hall/CRC, pp. 93-115.</p>
+
+<p>McLachlan, G.J., Ng, S.K., and Wang, K. (2010). <a href="http://www.maths.uq.edu.au/~gjm/mnw_cladag07.pdf">Clustering of high-dimensional and correlated data</a>. In Studies in Classification, Data Analysis, and Knowledge Organization: Data Analysis and Classification, C. Lauro, F. Palumbo, and M. Greenacre (Eds.). Berlin: Springer-Verlag, pp. 3-11.</p>
+
+<p>McLachlan, G.J. and Baek, J. (2010). <a href="http://www.maths.uq.edu.au/~gjm/mb_gfkl08.pdf">Clustering of high-dimensional data via finite mixture models</a>. In Advances in Data Analysis, Data Handling and Business Intelligence, A. Fink, B. Lausen, W. Seidel, and A. Ultsch (Eds.). Berlin: Springer-Verlag, pp. 33-44.</p>
+
+<p>Baek, J., McLachlan, G.J., and Flack, L. (2010). <a href="http://www.maths.uq.edu.au/~gjm/bmf_pami09.pdf">Mixtures of factor analyzers with common factor loadings: applications to the clustering and visualisation of high-dimensional data</a>. IEEE Transactions on Pattern Analysis and Machine Intelligence 32, 1298-1309.</p>
+
+<p>Nikulin, V., Huang, T.-H., Ng, S.K., Rathnayake, S.I., and McLachlan, G.J. (2011). <a href="http://www.maths.uq.edu.au/~gjm/nhnrm_spl11.pdf">A very fast algorithm for matrix factorization</a>. Statistics &amp; Probability Letters 81, 773-782.</p>
+
+<p>Lee, S.X. and McLachlan, G.J. (2011). <a href="http://arxiv.org/abs/1109.4706">On the fitting of mixtures of multivariate skew t-distributions via the EM algorithm</a>. Preprint arXiv:1109.4706v2.</p>
+
+<p>Lee, S. and McLachlan, G.J. (2014). <a href="http://www.maths.uq.edu.au/~gjm/lm_sc2014a.pdf">Finite mixtures of multivariate skew t-distributions: some recent and new results</a>. Statistics and Computing 24, 181-202. See also amended version with corrections.</p>
+
+<p>Lin, T.-I., McLachlan, G.J., and Lee, S.X. (2016). <a href="http://arxiv.org/abs/1307.1748">Extending mixtures of factor models using the restricted multivariate skew-normal distribution</a>. Journal of Multivariate Analysis. To appear. Preprint arXiv.1307.1748.</p>
+
+<p>McLachlan, G.J. and Lee, S.X. (2014). <a href="http://arxiv.org/abs/1404.1733">Comment on “Comparing two formulations of skew distributions with special reference to model-based clustering” by A. Azzalini, R. Browne, M. Genton, and P. McNicholas</a>. Preprint arXiv:1404.1733.</p>
+
+<p>Lee, S.X., McLachlan, G.J., and Pyne, S. (2014). <a href="http://arxiv.org/abs/1411.2820">Supervised classification of flow cytometric samples via the joint clustering and matching (JCM) procedure</a>. Preprint arXiv:1411.0685.</p>
 
 <!--more-->
 
 
 
     </article>
-    <span class="print-footer">EM Method - July 24, 2015 - QU Xiaofeng</span>
+    <span class="print-footer">The EM Algorithm and Finite Mixture Models - July 24, 2015 - QU Xiaofeng</span>
     <footer>
   <ul class="footer-links group">
     <li><a href="mailto:xiaofeng.qu.hk@ieee.org"><span class="icon-mail"></span></a></li>
