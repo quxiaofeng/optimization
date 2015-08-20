@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.quxiaofeng.me/optimization/</link>
     <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 17 Aug 2015 03:53:53 +0800</pubDate>
-    <lastBuildDate>Mon, 17 Aug 2015 03:53:53 +0800</lastBuildDate>
+    <pubDate>Thu, 20 Aug 2015 23:14:24 +0800</pubDate>
+    <lastBuildDate>Thu, 20 Aug 2015 23:14:24 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -267,6 +267,22 @@
     0       &amp; |x_i| \leqslant t \\
     x_i + t &amp; x_i   \leqslant -t
 \end{cases} &lt;/script&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;proximal-gradient-method-1&quot;&gt;Proximal gradient method&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;unconstrained problem&lt;/strong&gt; with cost function split in two components&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \argmin f(x) = g(x) + h(x) &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Here, &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; convext, differentiable, with &lt;strong&gt;dom&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;g=\Re^n&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;And &lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt; closed, convex, possibly nondifferentiable; &lt;script type=&quot;math/tex&quot;&gt;{\bf prox}_h&lt;/script&gt; is inexpensive&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;proximal gradient algorithm&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^{(k)} = {\bf prox}_{t_k h} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Here, &lt;script type=&quot;math/tex&quot;&gt;t_k &amp;gt; 0&lt;/script&gt; is step size, constant or determined by line search&lt;/p&gt;
 
 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;
 

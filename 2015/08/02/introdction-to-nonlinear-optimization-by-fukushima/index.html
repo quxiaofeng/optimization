@@ -223,6 +223,22 @@
     x_i + t & x_i   \leqslant -t
 \end{cases} </script></p>
 
+<h4 id="proximal-gradient-method-1">Proximal gradient method</h4>
+
+<p><strong>unconstrained problem</strong> with cost function split in two components</p>
+
+<p><script type="math/tex; mode=display"> \argmin f(x) = g(x) + h(x) </script></p>
+
+<p>Here, <script type="math/tex">g</script> convext, differentiable, with <strong>dom</strong> <script type="math/tex">g=\Re^n</script></p>
+
+<p>And <script type="math/tex">h</script> closed, convex, possibly nondifferentiable; <script type="math/tex">{\bf prox}_h</script> is inexpensive</p>
+
+<p><strong>proximal gradient algorithm</strong></p>
+
+<p><script type="math/tex; mode=display"> x^{(k)} = {\bf prox}_{t_k h} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) </script></p>
+
+<p>Here, <script type="math/tex">t_k &gt; 0</script> is step size, constant or determined by line search</p>
+
 <script type="math/tex"></script>
 
 <p><script type="math/tex; mode=display"> </script></p>
