@@ -187,6 +187,22 @@ The **proximal mapping** (or proximal operator) of a convex function {%m%}h{%em%
     x_i + t & x_i   \leqslant -t
 \end{cases} {% endmath %}
 
+#### Proximal gradient method ####
+
+**unconstrained problem** with cost function split in two components
+
+{% math %} \argmin f(x) = g(x) + h(x) {% endmath %}
+
+Here, {%m%}g{%em%} convext, differentiable, with **dom** {%m%}g=\Re^n{%em%}
+
+And {%m%}h{%em%} closed, convex, possibly nondifferentiable; {%m%}{\bf prox}_h{%em%} is inexpensive
+
+**proximal gradient algorithm**
+
+{% math %} x^{(k)} = {\bf prox}_{t_k h} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) {% endmath %}
+
+Here, {%m%}t_k > 0{%em%} is step size, constant or determined by line search
+
 {%m%}{%em%}
 
 {% math %} {% endmath %}
