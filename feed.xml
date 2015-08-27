@@ -3,10 +3,10 @@
   <channel>
     <title>OPTIMIZATIONS for Machine Learning</title>
     <description>A little blog collecting optimization methods in machine learning field</description>
-    <link>http://www.quxiaofeng.me/optimization/</link>
-    <atom:link href="http://www.quxiaofeng.me/optimization/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 20 Aug 2015 23:14:24 +0800</pubDate>
-    <lastBuildDate>Thu, 20 Aug 2015 23:14:24 +0800</lastBuildDate>
+    <link>http://www.optimizations.ml/</link>
+    <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 27 Aug 2015 19:12:17 +0800</pubDate>
+    <lastBuildDate>Thu, 27 Aug 2015 19:12:17 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -76,8 +76,8 @@
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 04 Aug 2015 06:46:53 +0800</pubDate>
-        <link>http://www.quxiaofeng.me/optimization/2015/08/04/kmeans-ksvd-lcksvd-dpl/</link>
-        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/2015/08/04/kmeans-ksvd-lcksvd-dpl/</guid>
+        <link>http://www.optimizations.ml/2015/08/04/kmeans-ksvd-lcksvd-dpl/</link>
+        <guid isPermaLink="true">http://www.optimizations.ml/2015/08/04/kmeans-ksvd-lcksvd-dpl/</guid>
         
         
       </item>
@@ -289,8 +289,8 @@
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 02 Aug 2015 22:33:54 +0800</pubDate>
-        <link>http://www.quxiaofeng.me/optimization/2015/08/02/introdction-to-nonlinear-optimization-by-fukushima/</link>
-        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/2015/08/02/introdction-to-nonlinear-optimization-by-fukushima/</guid>
+        <link>http://www.optimizations.ml/2015/08/02/introdction-to-nonlinear-optimization-by-fukushima/</link>
+        <guid isPermaLink="true">http://www.optimizations.ml/2015/08/02/introdction-to-nonlinear-optimization-by-fukushima/</guid>
         
         
       </item>
@@ -335,8 +335,8 @@
 
 </description>
         <pubDate>Fri, 24 Jul 2015 03:52:47 +0800</pubDate>
-        <link>http://www.quxiaofeng.me/optimization/2015/07/24/em-method/</link>
-        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/2015/07/24/em-method/</guid>
+        <link>http://www.optimizations.ml/2015/07/24/em-method/</link>
+        <guid isPermaLink="true">http://www.optimizations.ml/2015/07/24/em-method/</guid>
         
         
       </item>
@@ -376,8 +376,8 @@
 &lt;p&gt;To be continued…&lt;/p&gt;
 </description>
         <pubDate>Sun, 19 Jul 2015 17:22:53 +0800</pubDate>
-        <link>http://www.quxiaofeng.me/optimization/2015/07/19/kernel-and-kenel/</link>
-        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/2015/07/19/kernel-and-kenel/</guid>
+        <link>http://www.optimizations.ml/2015/07/19/kernel-and-kenel/</link>
+        <guid isPermaLink="true">http://www.optimizations.ml/2015/07/19/kernel-and-kenel/</guid>
         
         
       </item>
@@ -448,8 +448,8 @@ D = \left(\begin{matrix}
 &lt;p&gt;Embraces distributed computing for big data &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122.&lt;/span&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Jul 2015 21:36:14 +0800</pubDate>
-        <link>http://www.quxiaofeng.me/optimization/2015/07/18/alternating-direction-method-multipliers/</link>
-        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/2015/07/18/alternating-direction-method-multipliers/</guid>
+        <link>http://www.optimizations.ml/2015/07/18/alternating-direction-method-multipliers/</link>
+        <guid isPermaLink="true">http://www.optimizations.ml/2015/07/18/alternating-direction-method-multipliers/</guid>
         
         
       </item>
@@ -538,8 +538,8 @@ Same as the Bregman iteration (Yin etal., 2008) proposed for basis pursuit (comp
 Equivalent to proximal print algorithm applied to the dual; can be accelerated (Nesterov)&lt;/p&gt;
 </description>
         <pubDate>Fri, 17 Jul 2015 19:04:01 +0800</pubDate>
-        <link>http://www.quxiaofeng.me/optimization/2015/07/17/augmented-lagrangian-method/</link>
-        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/2015/07/17/augmented-lagrangian-method/</guid>
+        <link>http://www.optimizations.ml/2015/07/17/augmented-lagrangian-method/</link>
+        <guid isPermaLink="true">http://www.optimizations.ml/2015/07/17/augmented-lagrangian-method/</guid>
         
         
       </item>
@@ -636,8 +636,8 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\| {\bf A} \|_F = \sqrt{\sum^m_{i=1} \sum^n_{j=1}A^2_{ij}}, \; {\bf A} \in \Re^{m \times n} \tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 16 Jul 2015 05:22:17 +0800</pubDate>
-        <link>http://www.quxiaofeng.me/optimization/2015/07/16/introduction-to-nonlinear-optimization/</link>
-        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/2015/07/16/introduction-to-nonlinear-optimization/</guid>
+        <link>http://www.optimizations.ml/2015/07/16/introduction-to-nonlinear-optimization/</link>
+        <guid isPermaLink="true">http://www.optimizations.ml/2015/07/16/introduction-to-nonlinear-optimization/</guid>
         
         
       </item>
@@ -679,8 +679,8 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 &lt;p&gt;biconvex 问题，基本是个保证收敛的算法效果就还行。&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 May 2015 08:33:45 +0800</pubDate>
-        <link>http://www.quxiaofeng.me/optimization/2015/05/21/solving-sparse/</link>
-        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/2015/05/21/solving-sparse/</guid>
+        <link>http://www.optimizations.ml/2015/05/21/solving-sparse/</link>
+        <guid isPermaLink="true">http://www.optimizations.ml/2015/05/21/solving-sparse/</guid>
         
         
       </item>
@@ -730,8 +730,8 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 &lt;p&gt;CRC，用二范数约束表示系数，有解析解。&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 May 2015 06:53:20 +0800</pubDate>
-        <link>http://www.quxiaofeng.me/optimization/2015/05/21/optimization-problems/</link>
-        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/2015/05/21/optimization-problems/</guid>
+        <link>http://www.optimizations.ml/2015/05/21/optimization-problems/</link>
+        <guid isPermaLink="true">http://www.optimizations.ml/2015/05/21/optimization-problems/</guid>
         
         
       </item>
