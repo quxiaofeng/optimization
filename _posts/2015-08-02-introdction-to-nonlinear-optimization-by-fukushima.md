@@ -201,7 +201,7 @@ And {%m%}h{%em%} closed, convex, possibly nondifferentiable; {%m%}{\bf prox}_h{%
 
 {% math %} x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) {% endmath %}
 
-Here, {%m%}t_k > 0{%em%} is step size, constant or determined by line search
+here the step size is {%m%}t_k > 0{%em%}, constant or determined by line search
 
 #### Interpretation ####
 
@@ -212,7 +212,7 @@ from definition of proximal operator:
 
 {% math %} \begin{eqnarray*}
 x^+ & = &  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + t\nabla g(x) \right\|^2_2 \right) \\
-    & = & \mathop{argmin}_u \left( h(u) + g(x) + \nablag(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
+    & = & \mathop{argmin}_u \left( h(u) + g(x) + \nabla g(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
 \end{eqnarray*}{% endmath %}
 
 here {%m%}x^+{%em%} minimizes {%m%}h(u){%em%} plus a simple quadratic local of {%m%}g(u){%em%} around {%m%}x{%em%}
@@ -227,7 +227,7 @@ here {%m%}x^+{%em%} minimizes {%m%}h(u){%em%} plus a simple quadratic local of {
 
 **gradient projection method**: {%m%}h(x) = I_C(x){%em%}, i.e., minimize {%m%}g(x){%em%} over {%m%}C{%em%}
 
-{% math %} x^(k) = P_C \left( x(k-1) - t_k\nabla g \left(x^(k-1) \right) \right) {% endmath %}
+{% math %} x^(k) = P_C \left( x^{(k-1)} - t_k\nabla g \left(x^{(k-1)} \right) \right) {% endmath %}
 
 {%m%}{%em%}
 
