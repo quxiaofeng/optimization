@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Sep 2015 10:57:12 +0800</pubDate>
-    <lastBuildDate>Tue, 01 Sep 2015 10:57:12 +0800</lastBuildDate>
+    <pubDate>Tue, 01 Sep 2015 11:03:14 +0800</pubDate>
+    <lastBuildDate>Tue, 01 Sep 2015 11:03:14 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -280,7 +280,7 @@
 
 &lt;p&gt;&lt;strong&gt;proximal gradient algorithm&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^{(k)} = {\bf prox}_{t_k h} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Here, &lt;script type=&quot;math/tex&quot;&gt;t_k &amp;gt; 0&lt;/script&gt; is step size, constant or determined by line search&lt;/p&gt;
 
