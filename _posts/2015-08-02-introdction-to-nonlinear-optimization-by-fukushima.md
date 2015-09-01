@@ -227,7 +227,7 @@ here {%m%}x^+{%em%} minimizes {%m%}h(u){%em%} plus a simple quadratic local of {
 
 **gradient projection method**: {%m%}h(x) = I_C(x){%em%}, i.e., minimize {%m%}g(x){%em%} over {%m%}C{%em%}
 
-{% math %} x^(k) = P_C \left( x^{(k-1)} - t_k\nabla g \left(x^{(k-1)} \right) \right) {% endmath %}
+{% math %} x^{(k)} = P_C \left( x^{(k-1)} - t_k\nabla g \left(x^{(k-1)} \right) \right) {% endmath %}
 
 {%m%}{%em%}
 
