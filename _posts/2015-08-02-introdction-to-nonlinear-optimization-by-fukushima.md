@@ -199,7 +199,7 @@ And {%m%}h{%em%} closed, convex, possibly nondifferentiable; {%m%}{\bf prox}_h{%
 
 **proximal gradient algorithm**
 
-{% math %} x^{(k)} = {\bf prox}_{t_k h} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) {% endmath %}
+{% math %} x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) {% endmath %}
 
 Here, {%m%}t_k > 0{%em%} is step size, constant or determined by line search
 
