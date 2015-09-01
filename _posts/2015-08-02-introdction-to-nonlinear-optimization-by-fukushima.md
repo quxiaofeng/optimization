@@ -191,7 +191,7 @@ The **proximal mapping** (or proximal operator) of a convex function {%m%}h{%em%
 
 **unconstrained problem** with cost function split in two components
 
-{% math %} \argmin f(x) = g(x) + h(x) {% endmath %}
+{% math %} \mathop{argmin} f(x) = g(x) + h(x) {% endmath %}
 
 Here, {%m%}g{%em%} convext, differentiable, with **dom** {%m%}g=\Re^n{%em%}
 
@@ -202,6 +202,32 @@ And {%m%}h{%em%} closed, convex, possibly nondifferentiable; {%m%}{\bf prox}_h{%
 {% math %} x^{(k)} = {\bf prox}_{t_k h} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) {% endmath %}
 
 Here, {%m%}t_k > 0{%em%} is step size, constant or determined by line search
+
+#### Interpretation ####
+
+{% math %} x^+ = {\bf prox}_th \left( x - t\nabla g(x) \right) {% endmath %}
+
+
+from definition of proximal operator:
+
+{% math %} \begin{eqnarray*}
+x^+ & = &  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + t\nabla g(x) \right\|^2_2 \right) \\
+    & = & \mathop{argmin}_u \left( h(u) + g(x) + \nablag(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
+\end{eqnarray*}{% endmath %}
+
+here {%m%}x^+{%em%} minimizes {%m%}h(u){%em%} plus a simple quadratic local of {%m%}g(u){%em%} around {%m%}x{%em%}
+
+#### Examples ####
+
+{% math %} minimize \; \; g(x) + h(x) {% endmath %}
+
+**gradient method**: {%m%}h(x) = 0{%em%}, i.e., minimize g(x)
+
+{% math %} x^{(k)} = x^{(k-1)} - t_k\nabla g\left( x^{(k-1)} \right){% endmath %}
+
+**gradient projection method**: {%m%}h(x) = I_C(x){%em%}, i.e., minimize {%m%}g(x){%em%} over {%m%}C{%em%}
+
+{% math %} x^(k) = P_C \left( x(k-1) - t_k\nabla g \left(x^(k-1) \right) \right) {% endmath %}
 
 {%m%}{%em%}
 
