@@ -237,7 +237,7 @@
 
 <p><script type="math/tex; mode=display"> x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) </script></p>
 
-<p>Here, <script type="math/tex">t_k &gt; 0</script> is step size, constant or determined by line search</p>
+<p>here the step size is <script type="math/tex">t_k &gt; 0</script>, constant or determined by line search</p>
 
 <h4 id="interpretation">Interpretation</h4>
 
@@ -247,7 +247,7 @@
 
 <p><script type="math/tex; mode=display"> \begin{eqnarray*}
 x^+ & = &  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + t\nabla g(x) \right\|^2_2 \right) \\
-    & = & \mathop{argmin}_u \left( h(u) + g(x) + \nablag(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
+    & = & \mathop{argmin}_u \left( h(u) + g(x) + \nabla g(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
 \end{eqnarray*}</script></p>
 
 <p>here <script type="math/tex">x^+</script> minimizes <script type="math/tex">h(u)</script> plus a simple quadratic local of <script type="math/tex">g(u)</script> around <script type="math/tex">x</script></p>
@@ -262,7 +262,7 @@ x^+ & = &  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + t\nabla 
 
 <p><strong>gradient projection method</strong>: <script type="math/tex">h(x) = I_C(x)</script>, i.e., minimize <script type="math/tex">g(x)</script> over <script type="math/tex">C</script></p>
 
-<p><script type="math/tex; mode=display"> x^(k) = P_C \left( x(k-1) - t_k\nabla g \left(x^(k-1) \right) \right) </script></p>
+<p><script type="math/tex; mode=display"> x^(k) = P_C \left( x^{(k-1)} - t_k\nabla g \left(x^{(k-1)} \right) \right) </script></p>
 
 <script type="math/tex"></script>
 

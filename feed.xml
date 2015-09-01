@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Sep 2015 11:03:14 +0800</pubDate>
-    <lastBuildDate>Tue, 01 Sep 2015 11:03:14 +0800</lastBuildDate>
+    <pubDate>Tue, 01 Sep 2015 11:03:53 +0800</pubDate>
+    <lastBuildDate>Tue, 01 Sep 2015 11:03:53 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -282,7 +282,7 @@
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;Here, &lt;script type=&quot;math/tex&quot;&gt;t_k &amp;gt; 0&lt;/script&gt; is step size, constant or determined by line search&lt;/p&gt;
+&lt;p&gt;here the step size is &lt;script type=&quot;math/tex&quot;&gt;t_k &amp;gt; 0&lt;/script&gt;, constant or determined by line search&lt;/p&gt;
 
 &lt;h4 id=&quot;interpretation&quot;&gt;Interpretation&lt;/h4&gt;
 
@@ -292,7 +292,7 @@
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
 x^+ &amp; = &amp;  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + t\nabla g(x) \right\|^2_2 \right) \\
-    &amp; = &amp; \mathop{argmin}_u \left( h(u) + g(x) + \nablag(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
+    &amp; = &amp; \mathop{argmin}_u \left( h(u) + g(x) + \nabla g(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;here &lt;script type=&quot;math/tex&quot;&gt;x^+&lt;/script&gt; minimizes &lt;script type=&quot;math/tex&quot;&gt;h(u)&lt;/script&gt; plus a simple quadratic local of &lt;script type=&quot;math/tex&quot;&gt;g(u)&lt;/script&gt; around &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;&lt;/p&gt;
@@ -307,7 +307,7 @@ x^+ &amp; = &amp;  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + 
 
 &lt;p&gt;&lt;strong&gt;gradient projection method&lt;/strong&gt;: &lt;script type=&quot;math/tex&quot;&gt;h(x) = I_C(x)&lt;/script&gt;, i.e., minimize &lt;script type=&quot;math/tex&quot;&gt;g(x)&lt;/script&gt; over &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^(k) = P_C \left( x(k-1) - t_k\nabla g \left(x^(k-1) \right) \right) &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^(k) = P_C \left( x^{(k-1)} - t_k\nabla g \left(x^{(k-1)} \right) \right) &lt;/script&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;
 
