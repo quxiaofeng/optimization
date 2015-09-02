@@ -201,7 +201,7 @@ And {%m%}h{%em%} closed, convex, possibly nondifferentiable; {%m%}{\bf prox}_h{%
 
 {% math %} x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) {% endmath %}
 
-here the step size is, constant or determined by line search {%m%}t_k>0{%em%}
+here {%m%}{%em%}the step size is, constant or determined by line search {%m%}t_k>0{%em%}
 
 #### Interpretation ####
 
@@ -244,6 +244,16 @@ u_i + t & & u_i \geq t
 
 {% maincolumn /assets/img/fukushima-softthresholding.jpg '' %}
 
+### Dual Proximal Gradient Methods ###
+
+参考 L. Vandenberghe EE236C (Spring 2013-14)
+
+#### Composite structure in the Dual ####
+
+{% math %} \begin{eqnarray*}
+minimize & & f(x)+g(Ax) \\
+maximize & & -f^* \left( -A^Tz \right) - g^*(z)
+\end{eqnarray*}{% endmath %}
 
 {%m%}{%em%}
 
