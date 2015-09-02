@@ -231,9 +231,19 @@ here {%m%}x^+{%em%} minimizes {%m%}h(u){%em%} plus a simple quadratic local of {
 
 **iterative soft-thresholding**: {%m%}h(x) = \|x\|_1{%em%}, i.e., {%m%} minimize \; \; g(x)+ \| x \|_1{%em%}
 
-{% math %} x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} -
+{% math %} x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k\nabla g\left( x^{(k-1)} \right)  \right) {% endmath %}
 
->  \right) {% endmath %}
+and
+
+{% math %} {\bf prox}_{th}(u)_i = 
+\begin{cases}
+u_i - t & & u_i \geq t \\
+0       & & -t \leq u_i \leq t \\
+u_i + t & & u_i \geq t
+\end{cases}{% endmath %}
+
+{% maincolumn /assets/img/fukushima-softthresholding.jpg '' %}
+
 
 {%m%}{%em%}
 
