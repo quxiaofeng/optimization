@@ -257,9 +257,9 @@ maximize & & -f^\ast \left( -A^Tz \right) - g^\ast(z)
 
 dual has the right structure for the proximal gradient method if
 
-+ prox-operator of {%m%}g{%em%} (or {%m%}g^\ast{%em%}) is cheap (closed form or simple algorithm)
+prox-operator of {%m%}g{%em%} (or {%m%}g^\ast{%em%}) is cheap (closed form or simple algorithm)
 
-+ here {%m%}f{%em%} is strongly convex ({%m%}f(x)-(\frac{\mu}{2})x^T{%em%} is convex) implies {%m%}f\ast\left(-A^Tz\right){%em%} has Lipschitz continuous gradient ({%m%}L=\frac{\|A\|^2_2}{\mu}{%em%}):
+here {%m%}f{%em%} is strongly convex ({%m%}f(x)-(\frac{\mu}{2})x^T{%em%} is convex) implies {%m%}f\ast\left(-A^Tz\right){%em%} has Lipschitz continuous gradient ({%m%}L=\frac{\|A\|^2_2}{\mu}{%em%}):
 
 {% math %} \left\| A\nabla f^\ast(-A^Tu)-A\nabla f^\ast(-A^Tv) \right\|_2 \leq \frac{\|A\|^2_2}{\mu}\|u-v\|_2 {% endmath %}
 
@@ -273,9 +273,9 @@ equivalent expression in term of {%m%}f{%em%}:
 
 {% math %} z^+ = prox_{tg^\ast}(z+tA\hat{x}) \text{  where } \hat{x} = \mathop{argmin}_x \left( f(x) + z^TAx \right){% endmath %}
 
-+ if {%m%}f{%em%} is separable, calculation of {%m%}\hat{x}{%em%} decomposes into independent problems
+**1.** if {%m%}f{%em%} is separable, calculation of {%m%}\hat{x}{%em%} decomposes into independent problems
 
-+ step size {%m%} t_k>0 {%em%} constant or from backtracking line search
+**2.** step size {%m%}t{%em%} constant or from backtracking line search
 
 #### Alternating minimization interpretation ####
 
@@ -284,6 +284,8 @@ Moreau decomposition gives alternate expression for {%m%}z{%em%}-update
 {% math %} z^+ = z + t(A\hat{x} - \hat{y}) {% endmath %}
 
 where
+
+{% math %} {% endmath %}
 
 {%m%}{%em%}
 
