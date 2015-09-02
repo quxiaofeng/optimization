@@ -237,7 +237,7 @@
 
 <p><script type="math/tex; mode=display"> x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) </script></p>
 
-<p>here <script type="math/tex"></script>the step size is, constant or determined by line search <script type="math/tex">t_k&gt;0</script></p>
+<p>here <script type="math/tex"> t_k &gt; 0 </script> is the step size, constant or determined by line search</p>
 
 <h4 id="interpretation">Interpretation</h4>
 
@@ -287,8 +287,48 @@ u_i + t & & u_i \geq t
 
 <p><script type="math/tex; mode=display"> \begin{eqnarray*}
 minimize & & f(x)+g(Ax) \\
-maximize & & -f^* \left( -A^Tz \right) - g^*(z)
+maximize & & -f^\ast \left( -A^Tz \right) - g^\ast(z)
 \end{eqnarray*}</script></p>
+
+<p>dual has the right structure for the proximal gradient method if</p>
+
+<ul>
+  <li>
+    <p>prox-operator of <script type="math/tex">g</script> (or <script type="math/tex">g^\ast</script>) is cheap (closed form or simple algorithm)</p>
+  </li>
+  <li>
+    <p>here <script type="math/tex">f</script> is strongly convex (<script type="math/tex">f(x)-(\frac{\mu}{2})x^T</script> is convex) implies <script type="math/tex">f\ast\left(-A^Tz\right)</script> has Lipschitz continuous gradient (<script type="math/tex">L=\frac{\|A\|^2_2}{\mu}</script>):</p>
+  </li>
+</ul>
+
+<p><script type="math/tex; mode=display"> \left\| A\nabla f^\ast(-A^Tu)-A\nabla f^\ast(-A^Tv) \right\|_2 \leq \frac{\|A\|^2_2}{\mu}\|u-v\|_2 </script></p>
+
+<p>because <script type="math/tex">\nabla f^2</script> is Lipschitz continuous with constant <script type="math/tex">\frac{1}{\mu}</script></p>
+
+<h4 id="dual-proximal-gradient-update">Dual proximal gradient update</h4>
+
+<p><script type="math/tex; mode=display"> z^+ = prox_{tg^\ast}\left( z+tA\nabla f^\ast\left( -A^Tz \right) \right) </script></p>
+
+<p>equivalent expression in term of <script type="math/tex">f</script>:</p>
+
+<p><script type="math/tex; mode=display"> z^+ = prox_{tg^\ast}(z+tA\hat{x}) \text{  where } \hat{x} = \mathop{argmin}_x \left( f(x) + z^TAx \right)</script></p>
+
+<ul>
+  <li>
+    <p>if <script type="math/tex">f</script> is separable, calculation of <script type="math/tex">\hat{x}</script> decomposes into independent problems</p>
+  </li>
+  <li>
+    <p>step size <script type="math/tex"> t_k&gt;0 </script> constant or from backtracking line search</p>
+  </li>
+</ul>
+
+<h4 id="alternating-minimization-interpretation">Alternating minimization interpretation</h4>
+
+<p>Moreau decomposition gives alternate expression for <script type="math/tex">z</script>-update</p>
+
+<p><script type="math/tex; mode=display"> z^+ = z + t(A\hat{x} - \hat{y}) </script></p>
+
+<p>where</p>
 
 <script type="math/tex"></script>
 
