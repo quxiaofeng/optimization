@@ -266,9 +266,18 @@ x^+ & = &  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + t\nabla 
 
 <p><strong>iterative soft-thresholding</strong>: <script type="math/tex">h(x) = \|x\|_1</script>, i.e., <script type="math/tex"> minimize \; \; g(x)+ \| x \|_1</script></p>
 
-<p><script type="math/tex; mode=display"> x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} -
+<p><script type="math/tex; mode=display"> x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k\nabla g\left( x^{(k-1)} \right)  \right) </script></p>
 
->  \right) </script></p>
+<p>and</p>
+
+<p><script type="math/tex; mode=display"> {\bf prox}_{th}(u)_i = 
+\begin{cases}
+u_i - t & & u_i \geq t \\
+0       & & -t \leq u_i \leq t \\
+u_i + t & & u_i \geq t
+\end{cases}</script></p>
+
+<p><span class="marginnote"></span><img class="fullwidth" src="/assets/img/fukushima-softthresholding.jpg" /></p>
 
 <script type="math/tex"></script>
 
