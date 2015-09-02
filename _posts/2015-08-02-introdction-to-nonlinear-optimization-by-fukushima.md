@@ -193,7 +193,7 @@ The **proximal mapping** (or proximal operator) of a convex function {%m%}h{%em%
 
 {% math %} \mathop{argmin} f(x) = g(x) + h(x) {% endmath %}
 
-Here, {%m%}g{%em%} convext, differentiable, with **dom** {%m%}g=\Re^n{%em%}
+here, {%m%}g{%em%} convex, differentiable, with **dom** {%m%}g=\Re^n{%em%}
 
 And {%m%}h{%em%} closed, convex, possibly nondifferentiable; {%m%}{\bf prox}_h{%em%} is inexpensive
 
@@ -201,7 +201,7 @@ And {%m%}h{%em%} closed, convex, possibly nondifferentiable; {%m%}{\bf prox}_h{%
 
 {% math %} x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) {% endmath %}
 
-here the step size is {%m%}t_k > 0{%em%}, constant or determined by line search
+here the step size is, constant or determined by line search {%m%}t_k>0{%em%}
 
 #### Interpretation ####
 
@@ -228,6 +228,12 @@ here {%m%}x^+{%em%} minimizes {%m%}h(u){%em%} plus a simple quadratic local of {
 **gradient projection method**: {%m%}h(x) = I_C(x){%em%}, i.e., minimize {%m%}g(x){%em%} over {%m%}C{%em%}
 
 {% math %} x^{(k)} = P_C \left( x^{(k-1)} - t_k\nabla g \left(x^{(k-1)} \right) \right) {% endmath %}
+
+**iterative soft-thresholding**: {%m%}h(x) = \|x\|_1{%em%}, i.e., {%m%} minimize \; \; g(x)+ \| x \|_1{%em%}
+
+{% math %} x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} -
+
+>  \right) {% endmath %}
 
 {%m%}{%em%}
 
