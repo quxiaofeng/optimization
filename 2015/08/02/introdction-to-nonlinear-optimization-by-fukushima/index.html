@@ -292,14 +292,9 @@ maximize & & -f^\ast \left( -A^Tz \right) - g^\ast(z)
 
 <p>dual has the right structure for the proximal gradient method if</p>
 
-<ul>
-  <li>
-    <p>prox-operator of <script type="math/tex">g</script> (or <script type="math/tex">g^\ast</script>) is cheap (closed form or simple algorithm)</p>
-  </li>
-  <li>
-    <p>here <script type="math/tex">f</script> is strongly convex (<script type="math/tex">f(x)-(\frac{\mu}{2})x^T</script> is convex) implies <script type="math/tex">f\ast\left(-A^Tz\right)</script> has Lipschitz continuous gradient (<script type="math/tex">L=\frac{\|A\|^2_2}{\mu}</script>):</p>
-  </li>
-</ul>
+<p>prox-operator of <script type="math/tex">g</script> (or <script type="math/tex">g^\ast</script>) is cheap (closed form or simple algorithm)</p>
+
+<p>here <script type="math/tex">f</script> is strongly convex (<script type="math/tex">f(x)-(\frac{\mu}{2})x^T</script> is convex) implies <script type="math/tex">f\ast\left(-A^Tz\right)</script> has Lipschitz continuous gradient (<script type="math/tex">L=\frac{\|A\|^2_2}{\mu}</script>):</p>
 
 <p><script type="math/tex; mode=display"> \left\| A\nabla f^\ast(-A^Tu)-A\nabla f^\ast(-A^Tv) \right\|_2 \leq \frac{\|A\|^2_2}{\mu}\|u-v\|_2 </script></p>
 
@@ -313,14 +308,9 @@ maximize & & -f^\ast \left( -A^Tz \right) - g^\ast(z)
 
 <p><script type="math/tex; mode=display"> z^+ = prox_{tg^\ast}(z+tA\hat{x}) \text{  where } \hat{x} = \mathop{argmin}_x \left( f(x) + z^TAx \right)</script></p>
 
-<ul>
-  <li>
-    <p>if <script type="math/tex">f</script> is separable, calculation of <script type="math/tex">\hat{x}</script> decomposes into independent problems</p>
-  </li>
-  <li>
-    <p>step size <script type="math/tex"> t_k&gt;0 </script> constant or from backtracking line search</p>
-  </li>
-</ul>
+<p><strong>1.</strong> if <script type="math/tex">f</script> is separable, calculation of <script type="math/tex">\hat{x}</script> decomposes into independent problems</p>
+
+<p><strong>2.</strong> step size <script type="math/tex">t</script> constant or from backtracking line search</p>
 
 <h4 id="alternating-minimization-interpretation">Alternating minimization interpretation</h4>
 
@@ -329,6 +319,8 @@ maximize & & -f^\ast \left( -A^Tz \right) - g^\ast(z)
 <p><script type="math/tex; mode=display"> z^+ = z + t(A\hat{x} - \hat{y}) </script></p>
 
 <p>where</p>
+
+<p><script type="math/tex; mode=display"> </script></p>
 
 <script type="math/tex"></script>
 
