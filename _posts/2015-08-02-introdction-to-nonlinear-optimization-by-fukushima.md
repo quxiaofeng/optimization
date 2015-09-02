@@ -201,7 +201,7 @@ And {%m%}h{%em%} closed, convex, possibly nondifferentiable; {%m%}{\bf prox}_h{%
 
 {% math %} x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) {% endmath %}
 
-here {%m%} t_k > 0 {%em%} is the step size, constant or determined by line search
+here {%m%} {t_{k}} > 0 {%em%} is the step size, constant or determined by line search
 
 #### Interpretation ####
 
@@ -273,9 +273,9 @@ equivalent expression in term of {%m%}f{%em%}:
 
 {% math %} z^+ = prox_{tg^\ast}(z+tA\hat{x}) \text{  where } \hat{x} = \mathop{argmin}_x \left( f(x) + z^TAx \right){% endmath %}
 
-**1.** if {%m%}f{%em%} is separable, calculation of {%m%}\hat{x}{%em%} decomposes into independent problems
+**1.**  if {%m%}f{%em%} is separable, calculation of {%m%}\hat{x}{%em%} decomposes into independent problems
 
-**2.** step size {%m%}t{%em%} constant or from backtracking line search
+**2.**  step size {%m%}t{%em%} constant or from backtracking line search
 
 #### Alternating minimization interpretation ####
 
