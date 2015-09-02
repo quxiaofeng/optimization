@@ -237,7 +237,7 @@
 
 <p><script type="math/tex; mode=display"> x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) </script></p>
 
-<p>here the step size is, constant or determined by line search <script type="math/tex">t_k&gt;0</script></p>
+<p>here <script type="math/tex"></script>the step size is, constant or determined by line search <script type="math/tex">t_k&gt;0</script></p>
 
 <h4 id="interpretation">Interpretation</h4>
 
@@ -278,6 +278,17 @@ u_i + t & & u_i \geq t
 \end{cases}</script></p>
 
 <p><span class="marginnote"></span><img class="fullwidth" src="/assets/img/fukushima-softthresholding.jpg" /></p>
+
+<h3 id="dual-proximal-gradient-methods">Dual Proximal Gradient Methods</h3>
+
+<p>参考 L. Vandenberghe EE236C (Spring 2013-14)</p>
+
+<h4 id="composite-structure-in-the-dual">Composite structure in the Dual</h4>
+
+<p><script type="math/tex; mode=display"> \begin{eqnarray*}
+minimize & & f(x)+g(Ax) \\
+maximize & & -f^* \left( -A^Tz \right) - g^*(z)
+\end{eqnarray*}</script></p>
 
 <script type="math/tex"></script>
 
