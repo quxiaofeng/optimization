@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 02 Sep 2015 23:28:54 +0800</pubDate>
-    <lastBuildDate>Wed, 02 Sep 2015 23:28:54 +0800</lastBuildDate>
+    <pubDate>Thu, 03 Sep 2015 00:08:46 +0800</pubDate>
+    <lastBuildDate>Thu, 03 Sep 2015 00:08:46 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -282,7 +282,7 @@
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;here &lt;script type=&quot;math/tex&quot;&gt; t_k &amp;gt; 0 &lt;/script&gt; is the step size, constant or determined by line search&lt;/p&gt;
+&lt;p&gt;here &lt;script type=&quot;math/tex&quot;&gt; {t_{k}} &amp;gt; 0 &lt;/script&gt; is the step size, constant or determined by line search&lt;/p&gt;
 
 &lt;h4 id=&quot;interpretation&quot;&gt;Interpretation&lt;/h4&gt;
 
@@ -353,9 +353,9 @@ maximize &amp; &amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; z^+ = prox_{tg^\ast}(z+tA\hat{x}) \text{  where } \hat{x} = \mathop{argmin}_x \left( f(x) + z^TAx \right)&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; if &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is separable, calculation of &lt;script type=&quot;math/tex&quot;&gt;\hat{x}&lt;/script&gt; decomposes into independent problems&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt;  if &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is separable, calculation of &lt;script type=&quot;math/tex&quot;&gt;\hat{x}&lt;/script&gt; decomposes into independent problems&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; step size &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; constant or from backtracking line search&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt;  step size &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; constant or from backtracking line search&lt;/p&gt;
 
 &lt;h4 id=&quot;alternating-minimization-interpretation&quot;&gt;Alternating minimization interpretation&lt;/h4&gt;
 
