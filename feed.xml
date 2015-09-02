@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Sep 2015 11:05:56 +0800</pubDate>
-    <lastBuildDate>Tue, 01 Sep 2015 11:05:56 +0800</lastBuildDate>
+    <pubDate>Wed, 02 Sep 2015 19:43:18 +0800</pubDate>
+    <lastBuildDate>Wed, 02 Sep 2015 19:43:18 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -274,7 +274,7 @@
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \mathop{argmin} f(x) = g(x) + h(x) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;Here, &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; convext, differentiable, with &lt;strong&gt;dom&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;g=\Re^n&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;here, &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; convex, differentiable, with &lt;strong&gt;dom&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;g=\Re^n&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;And &lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt; closed, convex, possibly nondifferentiable; &lt;script type=&quot;math/tex&quot;&gt;{\bf prox}_h&lt;/script&gt; is inexpensive&lt;/p&gt;
 
@@ -282,7 +282,7 @@
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;here the step size is &lt;script type=&quot;math/tex&quot;&gt;t_k &amp;gt; 0&lt;/script&gt;, constant or determined by line search&lt;/p&gt;
+&lt;p&gt;here the step size is, constant or determined by line search &lt;script type=&quot;math/tex&quot;&gt;t_k&amp;gt;0&lt;/script&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;interpretation&quot;&gt;Interpretation&lt;/h4&gt;
 
@@ -308,6 +308,12 @@ x^+ &amp; = &amp;  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + 
 &lt;p&gt;&lt;strong&gt;gradient projection method&lt;/strong&gt;: &lt;script type=&quot;math/tex&quot;&gt;h(x) = I_C(x)&lt;/script&gt;, i.e., minimize &lt;script type=&quot;math/tex&quot;&gt;g(x)&lt;/script&gt; over &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^{(k)} = P_C \left( x^{(k-1)} - t_k\nabla g \left(x^{(k-1)} \right) \right) &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;iterative soft-thresholding&lt;/strong&gt;: &lt;script type=&quot;math/tex&quot;&gt;h(x) = \|x\|_1&lt;/script&gt;, i.e., &lt;script type=&quot;math/tex&quot;&gt; minimize \; \; g(x)+ \| x \|_1&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} -
+
+&gt;  \right) &lt;/script&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;
 
