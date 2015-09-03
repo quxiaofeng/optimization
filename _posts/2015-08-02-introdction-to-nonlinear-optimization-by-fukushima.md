@@ -201,7 +201,7 @@ And {%m%}h{%em%} closed, convex, possibly nondifferentiable; {%m%}{\bf prox}_h{%
 
 {% math %} x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) {% endmath %}
 
-here {%m%} $$ t_k > 0 $${%em%} is the step size, constant or determined by line search
+{% math %} t_k > 0 \text{is the step size, constant or determined by line search}{% endmath %}
 
 #### Interpretation ####
 
@@ -286,9 +286,9 @@ Moreau decomposition gives alternate expression for {%m%}z{%em%}-update
 where
 
 {% math %} \begin{eqnarray*}
-\hat{x} & & \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
-\hat{y} & & prox_{t^{-1}g}(\frac{z}{t} + A\hat{x})        \\
-        & & \mathop{argmin}_y \left(g(y) + z^T(A\hat{x} - y) + \frac{t}{2} \|A\hat{x} - y\|^2_2  \right)
+\hat{x} & = & \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
+\hat{y} & = & prox_{t^{-1}g} \left( \frac{z}{t} + A\hat{x} \right)        \\
+        & = & \mathop{argmin}_y \left(g(y) + z^T(A\hat{x} - y) + \frac{t}{2} \|A\hat{x} - y\|^2_2  \right)
 \end{eqnarray*}{% endmath %}
 
 in each iteration, an alternating minimization of:
