@@ -294,7 +294,7 @@ maximize & & -f^\ast \left( -A^Tz \right) - g^\ast(z)
 
 <p>prox-operator of <script type="math/tex">g</script> (or <script type="math/tex">g^\ast</script>) is cheap (closed form or simple algorithm)</p>
 
-<p>here <script type="math/tex">f</script> is strongly convex (<script type="math/tex">f(x)-(\frac{\mu}{2})x^T</script> is convex) implies <script type="math/tex">f\ast\left(-A^Tz\right)</script> has Lipschitz continuous gradient (<script type="math/tex">L=\frac{\|A\|^2_2}{\mu}</script>):</p>
+<p>here <script type="math/tex">f</script> is strongly convex (<script type="math/tex">f(x)-(\frac{\mu}{2})x^T</script> is convex) implies <script type="math/tex">f^\ast\left(-A^Tz\right)</script> has Lipschitz continuous gradient (<script type="math/tex">L=\frac{\|A\|^2_2}{\mu}</script>):</p>
 
 <p><script type="math/tex; mode=display"> \left\| A\nabla f^\ast(-A^Tu)-A\nabla f^\ast(-A^Tv) \right\|_2 \leq \frac{\|A\|^2_2}{\mu}\|u-v\|_2 </script></p>
 
@@ -388,7 +388,7 @@ subject to & & x \in C_i \cap \cdots \cap C_m
 
 <p><script type="math/tex; mode=display"> \begin{eqnarray*}
 \hat{x} & = & \mathop{argmin}_x \left( f(x) + (z_i + \cdots + z_m)^Tx \right) \\
-z^+_i   & = & z_i + t\hat{x} - tP_{C_i}(\frac{z_i}{t} + \hat{x}) \text{,   } i=1, \cdots, m
+z^+_i   & = & z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{,   } i=1, \cdots, m
 \end{eqnarray*}</script></p>
 
 <script type="math/tex"></script>

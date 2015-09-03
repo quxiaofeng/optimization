@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Sep 2015 10:58:21 +0800</pubDate>
-    <lastBuildDate>Thu, 03 Sep 2015 10:58:21 +0800</lastBuildDate>
+    <pubDate>Thu, 03 Sep 2015 11:00:48 +0800</pubDate>
+    <lastBuildDate>Thu, 03 Sep 2015 11:00:48 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -339,7 +339,7 @@ maximize &amp; &amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
 
 &lt;p&gt;prox-operator of &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; (or &lt;script type=&quot;math/tex&quot;&gt;g^\ast&lt;/script&gt;) is cheap (closed form or simple algorithm)&lt;/p&gt;
 
-&lt;p&gt;here &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is strongly convex (&lt;script type=&quot;math/tex&quot;&gt;f(x)-(\frac{\mu}{2})x^T&lt;/script&gt; is convex) implies &lt;script type=&quot;math/tex&quot;&gt;f\ast\left(-A^Tz\right)&lt;/script&gt; has Lipschitz continuous gradient (&lt;script type=&quot;math/tex&quot;&gt;L=\frac{\|A\|^2_2}{\mu}&lt;/script&gt;):&lt;/p&gt;
+&lt;p&gt;here &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is strongly convex (&lt;script type=&quot;math/tex&quot;&gt;f(x)-(\frac{\mu}{2})x^T&lt;/script&gt; is convex) implies &lt;script type=&quot;math/tex&quot;&gt;f^\ast\left(-A^Tz\right)&lt;/script&gt; has Lipschitz continuous gradient (&lt;script type=&quot;math/tex&quot;&gt;L=\frac{\|A\|^2_2}{\mu}&lt;/script&gt;):&lt;/p&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \left\| A\nabla f^\ast(-A^Tu)-A\nabla f^\ast(-A^Tv) \right\|_2 \leq \frac{\|A\|^2_2}{\mu}\|u-v\|_2 &lt;/script&gt;&lt;/p&gt;
 
@@ -433,7 +433,7 @@ subject to &amp; &amp; x \in C_i \cap \cdots \cap C_m
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
 \hat{x} &amp; = &amp; \mathop{argmin}_x \left( f(x) + (z_i + \cdots + z_m)^Tx \right) \\
-z^+_i   &amp; = &amp; z_i + t\hat{x} - tP_{C_i}(\frac{z_i}{t} + \hat{x}) \text{,   } i=1, \cdots, m
+z^+_i   &amp; = &amp; z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{,   } i=1, \cdots, m
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;
