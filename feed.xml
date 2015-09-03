@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Sep 2015 08:44:38 +0800</pubDate>
-    <lastBuildDate>Thu, 03 Sep 2015 08:44:38 +0800</lastBuildDate>
+    <pubDate>Thu, 03 Sep 2015 09:48:06 +0800</pubDate>
+    <lastBuildDate>Thu, 03 Sep 2015 09:48:06 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -347,11 +347,11 @@ maximize &amp; &amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
 
 &lt;h4 id=&quot;dual-proximal-gradient-update&quot;&gt;Dual proximal gradient update&lt;/h4&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; z^+ = prox_{tg^\ast}\left( z+tA\nabla f^\ast\left( -A^Tz \right) \right) &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; z^+ = prox_{tg\ast}\left( z+tA\nabla f^\ast\left( -A^Tz \right) \right) &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;equivalent expression in term of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; z^+ = prox_{tg^\ast}(z+tA\hat{x}) \text{  where } \hat{x} = \mathop{argmin}_x \left( f(x) + z^TAx \right)&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; z^+ = prox_{tg\ast}(z+tA\hat{x}) \text{  where } \hat{x} = \mathop{argmin}_x \left( f(x) + z^TAx \right)&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt;  if &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is separable, calculation of &lt;script type=&quot;math/tex&quot;&gt;\hat{x}&lt;/script&gt; decomposes into independent problems&lt;/p&gt;
 
@@ -365,11 +365,81 @@ maximize &amp; &amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
 
 &lt;p&gt;where&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
+\hat{x} &amp; &amp; \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
+\hat{y} &amp; &amp; prox_{t^{-1}g}(\frac{z}{t} + A\hat{x})        \\
+        &amp; &amp; \mathop{argmin}_y \left(g(y) + z^T(A\hat{x} - y) + \frac{t}{2} \|A\hat{x} - y\|^2_2  \right)
+\end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;in each iteration, an alternating minimization of:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Lagrangian&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;f(x) + g(y) + z^T(Ax - y)&lt;/script&gt; over &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. augmented Lagrangian&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;f(x) + g(y) + z^T(Ax - y) + \frac{t}{2} \|Ax - y\|^2_2&lt;/script&gt; over &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;regularized-norm-approximation&quot;&gt;Regularized norm approximation&lt;/h4&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; minimize f(x) + \|Ax - b\| \text{   (with } f \text{ strongly convex)   } &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;a special case with &lt;script type=&quot;math/tex&quot;&gt;g(y) = \|y - b\|&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+g^\ast = \begin{cases}
+b^Tz    &amp; &amp; \|z\|_\ast \leq 1 \\
++\infty &amp; &amp; otherwise 
+\end{cases}
+&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+prox_{tg\ast}(z) = P_C(z - tb)
+&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;C is unit norm ball for dual norm &lt;script type=&quot;math/tex&quot;&gt;\|\cdot\|_\ast&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;dual gradient projection update&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
+\hat{x} &amp; = &amp; \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
+z^+     &amp; = &amp; P_C(z + t(A\hat{x} - b))
+\end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;example&quot;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+minimize \; \; f(x) + \sum^p_{i=1}\|B_ix\|_2 \text{   (with } f \text{ strongly convex)   }
+&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;dual gradient projection update&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
+\hat{x} &amp; = &amp; \mathop{argmin}_x \left( f(x) + \left(\sum^p_{i=1}B^T_iz_i\right)^Tx \right) \\
+z^+_i   &amp; = &amp; P_{C_i}(z_i + tB_i\hat{x}) \text{,   } i=1, \cdots, p
+\end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;here &lt;script type=&quot;math/tex&quot;&gt;C_i&lt;/script&gt; is unit Euclidean norm ball in &lt;script type=&quot;math/tex&quot;&gt;\Re^{m_i}&lt;/script&gt;, if &lt;script type=&quot;math/tex&quot;&gt;B_i \in \Re^{m_i \times n}&lt;/script&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;minimization-over-intersection-of-convex-sets&quot;&gt;Minimization over intersection of convex sets&lt;/h4&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
+minimize   &amp; &amp; f(x) \\
+subject to &amp; &amp; x \in C_i \cap \cdots \cap C_m
+\end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;here &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; strongly convex; e.g., &lt;script type=&quot;math/tex&quot;&gt;f(x) = \|x - a\|^2_2&lt;/script&gt; for projecting &lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; on intersection&lt;/p&gt;
+
+&lt;p&gt;sets &lt;script type=&quot;math/tex&quot;&gt;C_i&lt;/script&gt; are closed, convex, and easy to project onto&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;dual proximal gradient update&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
+\hat{x} &amp; = &amp; \mathop{argmin}_x \left( f(x) + (z_i + \cdots + z_m)^Tx \right) \\
+z^+_i   &amp; = &amp; z_i + t\hat{x} - tP_{C_i}(\frac{z_i}{t} + \hat{x}) \text{,   } i=1, \cdots, m
+\end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+&lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 02 Aug 2015 22:33:54 +0800</pubDate>
         <link>http://www.optimizations.ml/2015/08/02/introdction-to-nonlinear-optimization-by-fukushima/</link>

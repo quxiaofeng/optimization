@@ -302,11 +302,11 @@ maximize & & -f^\ast \left( -A^Tz \right) - g^\ast(z)
 
 <h4 id="dual-proximal-gradient-update">Dual proximal gradient update</h4>
 
-<p><script type="math/tex; mode=display"> z^+ = prox_{tg^\ast}\left( z+tA\nabla f^\ast\left( -A^Tz \right) \right) </script></p>
+<p><script type="math/tex; mode=display"> z^+ = prox_{tg\ast}\left( z+tA\nabla f^\ast\left( -A^Tz \right) \right) </script></p>
 
 <p>equivalent expression in term of <script type="math/tex">f</script>:</p>
 
-<p><script type="math/tex; mode=display"> z^+ = prox_{tg^\ast}(z+tA\hat{x}) \text{  where } \hat{x} = \mathop{argmin}_x \left( f(x) + z^TAx \right)</script></p>
+<p><script type="math/tex; mode=display"> z^+ = prox_{tg\ast}(z+tA\hat{x}) \text{  where } \hat{x} = \mathop{argmin}_x \left( f(x) + z^TAx \right)</script></p>
 
 <p><strong>1.</strong>  if <script type="math/tex">f</script> is separable, calculation of <script type="math/tex">\hat{x}</script> decomposes into independent problems</p>
 
@@ -320,11 +320,81 @@ maximize & & -f^\ast \left( -A^Tz \right) - g^\ast(z)
 
 <p>where</p>
 
-<p><script type="math/tex; mode=display"> </script></p>
+<p><script type="math/tex; mode=display"> \begin{eqnarray*}
+\hat{x} & & \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
+\hat{y} & & prox_{t^{-1}g}(\frac{z}{t} + A\hat{x})        \\
+        & & \mathop{argmin}_y \left(g(y) + z^T(A\hat{x} - y) + \frac{t}{2} \|A\hat{x} - y\|^2_2  \right)
+\end{eqnarray*}</script></p>
+
+<p>in each iteration, an alternating minimization of:</p>
+
+<p><strong>1. Lagrangian</strong> <script type="math/tex">f(x) + g(y) + z^T(Ax - y)</script> over <script type="math/tex">x</script></p>
+
+<p><strong>2. augmented Lagrangian</strong> <script type="math/tex">f(x) + g(y) + z^T(Ax - y) + \frac{t}{2} \|Ax - y\|^2_2</script> over <script type="math/tex">y</script></p>
+
+<h4 id="regularized-norm-approximation">Regularized norm approximation</h4>
+
+<p><script type="math/tex; mode=display"> minimize f(x) + \|Ax - b\| \text{   (with } f \text{ strongly convex)   } </script></p>
+
+<p>a special case with <script type="math/tex">g(y) = \|y - b\|</script></p>
+
+<p><script type="math/tex; mode=display">
+g^\ast = \begin{cases}
+b^Tz    & & \|z\|_\ast \leq 1 \\
++\infty & & otherwise 
+\end{cases}
+</script></p>
+
+<p><script type="math/tex; mode=display">
+prox_{tg\ast}(z) = P_C(z - tb)
+</script></p>
+
+<p>C is unit norm ball for dual norm <script type="math/tex">\|\cdot\|_\ast</script></p>
+
+<p><strong>dual gradient projection update</strong></p>
+
+<p><script type="math/tex; mode=display"> \begin{eqnarray*}
+\hat{x} & = & \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
+z^+     & = & P_C(z + t(A\hat{x} - b))
+\end{eqnarray*}</script></p>
+
+<h4 id="example">Example</h4>
+
+<p><script type="math/tex; mode=display">
+minimize \; \; f(x) + \sum^p_{i=1}\|B_ix\|_2 \text{   (with } f \text{ strongly convex)   }
+</script></p>
+
+<p><strong>dual gradient projection update</strong></p>
+
+<p><script type="math/tex; mode=display"> \begin{eqnarray*}
+\hat{x} & = & \mathop{argmin}_x \left( f(x) + \left(\sum^p_{i=1}B^T_iz_i\right)^Tx \right) \\
+z^+_i   & = & P_{C_i}(z_i + tB_i\hat{x}) \text{,   } i=1, \cdots, p
+\end{eqnarray*}</script></p>
+
+<p>here <script type="math/tex">C_i</script> is unit Euclidean norm ball in <script type="math/tex">\Re^{m_i}</script>, if <script type="math/tex">B_i \in \Re^{m_i \times n}</script></p>
+
+<h4 id="minimization-over-intersection-of-convex-sets">Minimization over intersection of convex sets</h4>
+
+<p><script type="math/tex; mode=display"> \begin{eqnarray*}
+minimize   & & f(x) \\
+subject to & & x \in C_i \cap \cdots \cap C_m
+\end{eqnarray*}</script></p>
+
+<p>here <script type="math/tex">f</script> strongly convex; e.g., <script type="math/tex">f(x) = \|x - a\|^2_2</script> for projecting <script type="math/tex">a</script> on intersection</p>
+
+<p>sets <script type="math/tex">C_i</script> are closed, convex, and easy to project onto</p>
+
+<p><strong>dual proximal gradient update</strong></p>
+
+<p><script type="math/tex; mode=display"> \begin{eqnarray*}
+\hat{x} & = & \mathop{argmin}_x \left( f(x) + (z_i + \cdots + z_m)^Tx \right) \\
+z^+_i   & = & z_i + t\hat{x} - tP_{C_i}(\frac{z_i}{t} + \hat{x}) \text{,   } i=1, \cdots, m
+\end{eqnarray*}</script></p>
 
 <script type="math/tex"></script>
 
-<p><script type="math/tex; mode=display"> </script></p>
+<p><script type="math/tex; mode=display">
+</script></p>
 
 
 
