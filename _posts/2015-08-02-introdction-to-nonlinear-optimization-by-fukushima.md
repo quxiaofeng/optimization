@@ -201,7 +201,9 @@ And {%m%}h{%em%} closed, convex, possibly nondifferentiable; {%m%}{\bf prox}_h{%
 
 {% math %} x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) {% endmath %}
 
-{% math %} t_k > 0 \text{ is the step size, constant or determined by line search}{% endmath %}
+{% math %} t_k > 0 \text{ is the step size,}{% endmath %}
+
+constant or determined by line search
 
 #### Interpretation ####
 
