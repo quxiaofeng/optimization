@@ -237,7 +237,7 @@
 
 <p><script type="math/tex; mode=display"> x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) </script></p>
 
-<p>here <script type="math/tex"> $$ t_k &gt; 0 $$</script> is the step size, constant or determined by line search</p>
+<p><script type="math/tex; mode=display"> t_k > 0 \text{is the step size, constant or determined by line search}</script></p>
 
 <h4 id="interpretation">Interpretation</h4>
 
@@ -321,9 +321,9 @@ maximize & & -f^\ast \left( -A^Tz \right) - g^\ast(z)
 <p>where</p>
 
 <p><script type="math/tex; mode=display"> \begin{eqnarray*}
-\hat{x} & & \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
-\hat{y} & & prox_{t^{-1}g}(\frac{z}{t} + A\hat{x})        \\
-        & & \mathop{argmin}_y \left(g(y) + z^T(A\hat{x} - y) + \frac{t}{2} \|A\hat{x} - y\|^2_2  \right)
+\hat{x} & = & \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
+\hat{y} & = & prox_{t^{-1}g} \left( \frac{z}{t} + A\hat{x} \right)        \\
+        & = & \mathop{argmin}_y \left(g(y) + z^T(A\hat{x} - y) + \frac{t}{2} \|A\hat{x} - y\|^2_2  \right)
 \end{eqnarray*}</script></p>
 
 <p>in each iteration, an alternating minimization of:</p>

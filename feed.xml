@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Sep 2015 09:48:06 +0800</pubDate>
-    <lastBuildDate>Thu, 03 Sep 2015 09:48:06 +0800</lastBuildDate>
+    <pubDate>Thu, 03 Sep 2015 10:58:21 +0800</pubDate>
+    <lastBuildDate>Thu, 03 Sep 2015 10:58:21 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -282,7 +282,7 @@
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;here &lt;script type=&quot;math/tex&quot;&gt; $$ t_k &amp;gt; 0 $$&lt;/script&gt; is the step size, constant or determined by line search&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; t_k &gt; 0 \text{is the step size, constant or determined by line search}&lt;/script&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;interpretation&quot;&gt;Interpretation&lt;/h4&gt;
 
@@ -366,9 +366,9 @@ maximize &amp; &amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
 &lt;p&gt;where&lt;/p&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
-\hat{x} &amp; &amp; \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
-\hat{y} &amp; &amp; prox_{t^{-1}g}(\frac{z}{t} + A\hat{x})        \\
-        &amp; &amp; \mathop{argmin}_y \left(g(y) + z^T(A\hat{x} - y) + \frac{t}{2} \|A\hat{x} - y\|^2_2  \right)
+\hat{x} &amp; = &amp; \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
+\hat{y} &amp; = &amp; prox_{t^{-1}g} \left( \frac{z}{t} + A\hat{x} \right)        \\
+        &amp; = &amp; \mathop{argmin}_y \left(g(y) + z^T(A\hat{x} - y) + \frac{t}{2} \|A\hat{x} - y\|^2_2  \right)
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;in each iteration, an alternating minimization of:&lt;/p&gt;
