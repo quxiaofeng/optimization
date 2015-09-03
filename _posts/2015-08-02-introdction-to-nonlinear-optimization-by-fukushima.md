@@ -96,7 +96,7 @@ categories:
 
 其中 {%m%}f: \Re^n \to \Re{%em%}, {%m%}g_i: \Re^n \to \Re (i=1, \cdots, m){%em%}。
 
-{% math %} S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } i=1, \cdots, m\right \}{% endmath %}
+{% math %} S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}{% endmath %}
 
 {% math %} L_0({\bf x}, {\bf \lambda}) = \begin{cases}
         f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, & {\bf \lambda} \geqslant {\bf 0}\\
@@ -130,7 +130,7 @@ Constrains relax
 
 对于原始问题 {%m%}(P){%em%}，考虑函数 {%m%}F: \Re^{n+M} \to (-\infty, +\infty]{%em%}，使得对任意固定的 {%m%}{\bf x} \in \Re^n{%em%}，{%m%}F({\bf x}, \cdot): \Re^M \to (-\infty, +\infty]{%em%} 均为闭正常凸函数，并且满足
 
-{% math %} F({\bf x}, {\bf 0}) = \theta({\bf x}) \text{,  } {\bf x} \in \Re^n {% endmath %}
+{% math %} F({\bf x}, {\bf 0}) = \theta({\bf x}) \text{, } {\bf x} \in \Re^n {% endmath %}
 
 **例 4.7** 设 {%m%}M = m{%em%}，考虑函数 {%m%}F_0: \Re^{n+m} \to (-\infty, +\infty]{%em%}，利用满足 {%m%}q({\bf 0}) = 0{%em%} 的闭正常凸函数 {%m%}q: \Re^m \to (-\infty, +\infty]{%em%} 定义函数 {%m%}F: \Re^{n+m} \to (-\infty, +\infty]{%em%} 如下：
 
@@ -201,11 +201,11 @@ And {%m%}h{%em%} closed, convex, possibly nondifferentiable; {%m%}{\bf prox}_h{%
 
 {% math %} x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) {% endmath %}
 
-{% math %} t_k > 0 \text{is the step size, constant or determined by line search}{% endmath %}
+{% math %} t_k > 0 \text{ is the step size, constant or determined by line search}{% endmath %}
 
 #### Interpretation ####
 
-{% math %} x^+ = {\bf prox}_th \left( x - t\nabla g(x) \right) {% endmath %}
+{% math %} x^+ = {\bf prox}_{th} \left( x - t\nabla g(x) \right) {% endmath %}
 
 
 from definition of proximal operator:
@@ -333,7 +333,7 @@ minimize \; \; f(x) + \sum^p_{i=1}\|B_ix\|_2 \text{   (with } f \text{ strongly 
 
 {% math %} \begin{eqnarray*}
 \hat{x} & = & \mathop{argmin}_x \left( f(x) + \left(\sum^p_{i=1}B^T_iz_i\right)^Tx \right) \\
-z^+_i   & = & P_{C_i}(z_i + tB_i\hat{x}) \text{,   } i=1, \cdots, p
+z^+_i   & = & P_{C_i}(z_i + tB_i\hat{x}) \text{, } \; \; i=1, \cdots, p
 \end{eqnarray*}{% endmath %}
 
 here {%m%}C_i{%em%} is unit Euclidean norm ball in {%m%}\Re^{m_i}{%em%}, if {%m%}B_i \in \Re^{m_i \times n}{%em%}
@@ -353,7 +353,7 @@ sets {%m%}C_i{%em%} are closed, convex, and easy to project onto
 
 {% math %} \begin{eqnarray*}
 \hat{x} & = & \mathop{argmin}_x \left( f(x) + (z_i + \cdots + z_m)^Tx \right) \\
-z^+_i   & = & z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{,   } i=1, \cdots, m
+z^+_i   & = & z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{, }\; \; i=1, \cdots, m
 \end{eqnarray*}{% endmath %}
 
 {%m%}{%em%}
