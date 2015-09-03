@@ -259,7 +259,7 @@ dual has the right structure for the proximal gradient method if
 
 prox-operator of {%m%}g{%em%} (or {%m%}g^\ast{%em%}) is cheap (closed form or simple algorithm)
 
-here {%m%}f{%em%} is strongly convex ({%m%}f(x)-(\frac{\mu}{2})x^T{%em%} is convex) implies {%m%}f\ast\left(-A^Tz\right){%em%} has Lipschitz continuous gradient ({%m%}L=\frac{\|A\|^2_2}{\mu}{%em%}):
+here {%m%}f{%em%} is strongly convex ({%m%}f(x)-(\frac{\mu}{2})x^T{%em%} is convex) implies {%m%}f^\ast\left(-A^Tz\right){%em%} has Lipschitz continuous gradient ({%m%}L=\frac{\|A\|^2_2}{\mu}{%em%}):
 
 {% math %} \left\| A\nabla f^\ast(-A^Tu)-A\nabla f^\ast(-A^Tv) \right\|_2 \leq \frac{\|A\|^2_2}{\mu}\|u-v\|_2 {% endmath %}
 
@@ -353,7 +353,7 @@ sets {%m%}C_i{%em%} are closed, convex, and easy to project onto
 
 {% math %} \begin{eqnarray*}
 \hat{x} & = & \mathop{argmin}_x \left( f(x) + (z_i + \cdots + z_m)^Tx \right) \\
-z^+_i   & = & z_i + t\hat{x} - tP_{C_i}(\frac{z_i}{t} + \hat{x}) \text{,   } i=1, \cdots, m
+z^+_i   & = & z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{,   } i=1, \cdots, m
 \end{eqnarray*}{% endmath %}
 
 {%m%}{%em%}
