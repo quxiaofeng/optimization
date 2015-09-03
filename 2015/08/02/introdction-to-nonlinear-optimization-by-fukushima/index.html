@@ -134,7 +134,7 @@
 
 <p>其中 <script type="math/tex">f: \Re^n \to \Re</script>, <script type="math/tex">g_i: \Re^n \to \Re (i=1, \cdots, m)</script>。</p>
 
-<p><script type="math/tex; mode=display"> S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } i=1, \cdots, m\right \}</script></p>
+<p><script type="math/tex; mode=display"> S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}</script></p>
 
 <p><script type="math/tex; mode=display"> L_0({\bf x}, {\bf \lambda}) = \begin{cases}
         f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, & {\bf \lambda} \geqslant {\bf 0}\\
@@ -168,7 +168,7 @@
 
 <p>对于原始问题 <script type="math/tex">(P)</script>，考虑函数 <script type="math/tex">F: \Re^{n+M} \to (-\infty, +\infty]</script>，使得对任意固定的 <script type="math/tex">{\bf x} \in \Re^n</script>，<script type="math/tex">F({\bf x}, \cdot): \Re^M \to (-\infty, +\infty]</script> 均为闭正常凸函数，并且满足</p>
 
-<p><script type="math/tex; mode=display"> F({\bf x}, {\bf 0}) = \theta({\bf x}) \text{,  } {\bf x} \in \Re^n </script></p>
+<p><script type="math/tex; mode=display"> F({\bf x}, {\bf 0}) = \theta({\bf x}) \text{, } {\bf x} \in \Re^n </script></p>
 
 <p><strong>例 4.7</strong> 设 <script type="math/tex">M = m</script>，考虑函数 <script type="math/tex">F_0: \Re^{n+m} \to (-\infty, +\infty]</script>，利用满足 <script type="math/tex">q({\bf 0}) = 0</script> 的闭正常凸函数 <script type="math/tex">q: \Re^m \to (-\infty, +\infty]</script> 定义函数 <script type="math/tex">F: \Re^{n+m} \to (-\infty, +\infty]</script> 如下：</p>
 
@@ -237,11 +237,11 @@
 
 <p><script type="math/tex; mode=display"> x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) </script></p>
 
-<p><script type="math/tex; mode=display"> t_k > 0 \text{is the step size, constant or determined by line search}</script></p>
+<p><script type="math/tex; mode=display"> t_k > 0 \text{ is the step size, constant or determined by line search}</script></p>
 
 <h4 id="interpretation">Interpretation</h4>
 
-<p><script type="math/tex; mode=display"> x^+ = {\bf prox}_th \left( x - t\nabla g(x) \right) </script></p>
+<p><script type="math/tex; mode=display"> x^+ = {\bf prox}_{th} \left( x - t\nabla g(x) \right) </script></p>
 
 <p>from definition of proximal operator:</p>
 
@@ -368,7 +368,7 @@ minimize \; \; f(x) + \sum^p_{i=1}\|B_ix\|_2 \text{   (with } f \text{ strongly 
 
 <p><script type="math/tex; mode=display"> \begin{eqnarray*}
 \hat{x} & = & \mathop{argmin}_x \left( f(x) + \left(\sum^p_{i=1}B^T_iz_i\right)^Tx \right) \\
-z^+_i   & = & P_{C_i}(z_i + tB_i\hat{x}) \text{,   } i=1, \cdots, p
+z^+_i   & = & P_{C_i}(z_i + tB_i\hat{x}) \text{, } \; \; i=1, \cdots, p
 \end{eqnarray*}</script></p>
 
 <p>here <script type="math/tex">C_i</script> is unit Euclidean norm ball in <script type="math/tex">\Re^{m_i}</script>, if <script type="math/tex">B_i \in \Re^{m_i \times n}</script></p>
@@ -388,7 +388,7 @@ subject to & & x \in C_i \cap \cdots \cap C_m
 
 <p><script type="math/tex; mode=display"> \begin{eqnarray*}
 \hat{x} & = & \mathop{argmin}_x \left( f(x) + (z_i + \cdots + z_m)^Tx \right) \\
-z^+_i   & = & z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{,   } i=1, \cdots, m
+z^+_i   & = & z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{, }\; \; i=1, \cdots, m
 \end{eqnarray*}</script></p>
 
 <script type="math/tex"></script>
