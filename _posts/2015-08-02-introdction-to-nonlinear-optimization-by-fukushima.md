@@ -267,11 +267,11 @@ because {%m%}\nabla f^2{%em%} is Lipschitz continuous with constant {%m%}\frac{1
 
 #### Dual proximal gradient update ####
 
-{% math %} z^+ = prox_{tg^\ast}\left( z+tA\nabla f^\ast\left( -A^Tz \right) \right) {% endmath %}
+{% math %} z^+ = prox_{tg\ast}\left( z+tA\nabla f^\ast\left( -A^Tz \right) \right) {% endmath %}
 
 equivalent expression in term of {%m%}f{%em%}:
 
-{% math %} z^+ = prox_{tg^\ast}(z+tA\hat{x}) \text{  where } \hat{x} = \mathop{argmin}_x \left( f(x) + z^TAx \right){% endmath %}
+{% math %} z^+ = prox_{tg\ast}(z+tA\hat{x}) \text{  where } \hat{x} = \mathop{argmin}_x \left( f(x) + z^TAx \right){% endmath %}
 
 **1.**  if {%m%}f{%em%} is separable, calculation of {%m%}\hat{x}{%em%} decomposes into independent problems
 
@@ -285,8 +285,78 @@ Moreau decomposition gives alternate expression for {%m%}z{%em%}-update
 
 where
 
-{% math %} {% endmath %}
+{% math %} \begin{eqnarray*}
+\hat{x} & & \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
+\hat{y} & & prox_{t^{-1}g}(\frac{z}{t} + A\hat{x})        \\
+        & & \mathop{argmin}_y \left(g(y) + z^T(A\hat{x} - y) + \frac{t}{2} \|A\hat{x} - y\|^2_2  \right)
+\end{eqnarray*}{% endmath %}
+
+in each iteration, an alternating minimization of:
+
+**1. Lagrangian** {%m%}f(x) + g(y) + z^T(Ax - y){%em%} over {%m%}x{%em%} 
+
+**2. augmented Lagrangian** {%m%}f(x) + g(y) + z^T(Ax - y) + \frac{t}{2} \|Ax - y\|^2_2{%em%} over {%m%}y{%em%}
+
+#### Regularized norm approximation ####
+
+{% math %} minimize f(x) + \|Ax - b\| \text{   (with } f \text{ strongly convex)   } {% endmath %}
+
+a special case with {%m%}g(y) = \|y - b\|{%em%}
+
+{% math %}
+g^\ast = \begin{cases}
+b^Tz    & & \|z\|_\ast \leq 1 \\
++\infty & & otherwise 
+\end{cases}
+{% endmath %}
+
+{% math %}
+prox_{tg\ast}(z) = P_C(z - tb)
+{% endmath %}
+
+C is unit norm ball for dual norm {%m%}\|\cdot\|_\ast{%em%}
+
+**dual gradient projection update**
+
+{% math %} \begin{eqnarray*}
+\hat{x} & = & \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
+z^+     & = & P_C(z + t(A\hat{x} - b))
+\end{eqnarray*}{% endmath %}
+
+#### Example ####
+
+{% math %}
+minimize \; \; f(x) + \sum^p_{i=1}\|B_ix\|_2 \text{   (with } f \text{ strongly convex)   }
+{% endmath %}
+
+**dual gradient projection update**
+
+{% math %} \begin{eqnarray*}
+\hat{x} & = & \mathop{argmin}_x \left( f(x) + \left(\sum^p_{i=1}B^T_iz_i\right)^Tx \right) \\
+z^+_i   & = & P_{C_i}(z_i + tB_i\hat{x}) \text{,   } i=1, \cdots, p
+\end{eqnarray*}{% endmath %}
+
+here {%m%}C_i{%em%} is unit Euclidean norm ball in {%m%}\Re^{m_i}{%em%}, if {%m%}B_i \in \Re^{m_i \times n}{%em%}
+
+#### Minimization over intersection of convex sets ####
+
+{% math %} \begin{eqnarray*}
+minimize   & & f(x) \\
+subject to & & x \in C_i \cap \cdots \cap C_m
+\end{eqnarray*}{% endmath %}
+
+here {%m%}f{%em%} strongly convex; e.g., {%m%}f(x) = \|x - a\|^2_2{%em%} for projecting {%m%}a{%em%} on intersection
+
+sets {%m%}C_i{%em%} are closed, convex, and easy to project onto
+
+**dual proximal gradient update**
+
+{% math %} \begin{eqnarray*}
+\hat{x} & = & \mathop{argmin}_x \left( f(x) + (z_i + \cdots + z_m)^Tx \right) \\
+z^+_i   & = & z_i + t\hat{x} - tP_{C_i}(\frac{z_i}{t} + \hat{x}) \text{,   } i=1, \cdots, m
+\end{eqnarray*}{% endmath %}
 
 {%m%}{%em%}
 
-{% math %} {% endmath %}
+{% math %}
+{% endmath %}
