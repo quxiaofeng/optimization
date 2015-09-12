@@ -358,6 +358,21 @@ sets {%m%}C_i{%em%} are closed, convex, and easy to project onto
 z^+_i   & = & z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{, }\; \; i=1, \cdots, m
 \end{eqnarray*}{% endmath %}
 
+#### Decomposition of separable problems ####
+
+{% math %}
+minimize \; \; \sum^n_{j=1}f_j(x_j) + \sum^m_{i=1}g_i(A_{i1}x_1 + \cdots + A_{in}x_n )
+{% endmath %}
+
+each {%m%}f_i{%em%} is strongly convex; {%m%}g_i{%em%} has inexpensive prox-operator
+
+**dual proximal gradient update**
+
+{% math %} \begin{eqnarray*}
+\hat{x}_j & = & \mathop{argmin}_{x_j} \left( f_j(x_j) + \sum^m_{i=1}z^T_iA_{ij}x_j \right) \text{, } \; \; j=1, \cdots, n \\
+z^+_i        & = & prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
+\end{eqnarray*}{% endmath %}
+
 {%m%}{%em%}
 
 {% math %}
