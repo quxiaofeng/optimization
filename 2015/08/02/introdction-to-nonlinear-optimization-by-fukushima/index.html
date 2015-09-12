@@ -197,7 +197,7 @@
 
 <h2 id="section-5">算法</h2>
 
-<h3 id="proximal-gradient-method">Proximal Gradient Method</h3>
+<h3 id="proximal-gradient-method">1. Proximal Gradient Method</h3>
 
 <p>参考 <a href="http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf">Algorithms for large-scale convex optimization - DTU 2010</a><sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> A Lecture note from “02930 Algorithms for Large-Scale Convex Optimization” taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe (<a href="http://www.seas.ucla.edu/~vandenbe/">http://www.seas.ucla.edu/~vandenbe/</a>) at Danmarks Tekniske Universitet (<a href="http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB">http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB</a>). The Download Link is found at the page of “EE227BT: Convex Optimization - Fall 2013” taught by Laurent El Ghaoui at Berkeley (<a href="http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf">http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf</a>). And both of the lectures mentioned the book “Convex Optimization” by Stephen Boyd and Lieven Vandenberghe (<a href="http://stanford.edu/~boyd/cvxbook/">http://stanford.edu/~boyd/cvxbook/</a>) and the software “CVX” - a MATLAB software for desciplined Convex Programming (<a href="http://cvxr.com/cvx/">http://cvxr.com/cvx/</a>). A similar lecture note on Proximal Gradient Method from “EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)” (<a href="http://www.seas.ucla.edu/~vandenbe/ee236c.html">http://www.seas.ucla.edu/~vandenbe/ee236c.html</a>) at UCLA</span></p>
 
@@ -281,7 +281,7 @@ u_i + t & & u_i \geq t
 
 <p><span class="marginnote"></span><img class="fullwidth" src="/assets/img/fukushima-softthresholding.jpg" /></p>
 
-<h3 id="dual-proximal-gradient-methods">Dual Proximal Gradient Methods</h3>
+<h3 id="dual-proximal-gradient-methods">2. Dual Proximal Gradient Methods</h3>
 
 <p>参考 L. Vandenberghe EE236C (Spring 2013-14)</p>
 
@@ -408,10 +408,108 @@ minimize \; \; \sum^n_{j=1}f_j(x_j) + \sum^m_{i=1}g_i(A_{i1}x_1 + \cdots + A_{in
 z^+_i        & = & prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
 \end{eqnarray*}</script></p>
 
-<script type="math/tex"></script>
+<h3 id="fast-proximal-gradient-methods">3. Fast proximal gradient methods</h3>
+
+<p>参考 L. Vandenberghe EE236C (Spring 2013-14)</p>
+
+<h4 id="fista-basic-version">FISTA (basic version)</h4>
 
 <p><script type="math/tex; mode=display">
+minimize \; \; f(x) = g(x) + h(x)
 </script></p>
+
+<p>here <script type="math/tex">g</script> convex, differentiable with <script type="math/tex">\mathop{dom} g=\Re^n</script></p>
+
+<p>and <script type="math/tex">h</script> closed, convex, with inexpensive <script type="math/tex">prox_{th}</script> operator</p>
+
+<p><strong>algorithm</strong>: choose any <script type="math/tex">x^{(0)} = x^{(-1)}</script>; for <script type="math/tex">k \geq 1</script>, repeat the steps</p>
+
+<p><script type="math/tex; mode=display"> \begin{eqnarray*}
+y             & = & x^{(k-1)} + \frac{k-2}{k+1} \left( x^{(k-1)} - x^{(k-2)} \right) \\
+x^{(k)} & = & prox_{t_kh} \left( y - t_k\nabla g(y) \right)
+\end{eqnarray*}</script></p>
+
+<p>step size <script type="math/tex">t_k</script> fixed or determined by line search</p>
+
+<p>acronym stands for ‘Fast Iterative Shrinkage-Thresholding Algorithm’</p>
+
+<h4 id="interpretation-1">Interpretation</h4>
+
+<p>first iteration (<script type="math/tex">k = 1</script>) is a proximal gradient step at <script type="math/tex">y = x^{(0)}</script></p>
+
+<p>next iterations are proximal gradient steps at extrapolated points <script type="math/tex">y</script></p>
+
+<p><span class="marginnote"></span><img class="fullwidth" src="/assets/img/fukushima-interpretation.png" /></p>
+
+<p>note: <script type="math/tex">x^{(k)}</script> is feasible (in <script type="math/tex">\mathop{dom} h</script>); <script type="math/tex">y</script> may be outside <script type="math/tex">\mathop{dom} h</script></p>
+
+<h4 id="reformulation-of-fista">Reformulation of FISTA</h4>
+
+<p>define <script type="math/tex">\theta_k = \frac{2}{k+1}</script> and introduce an intermediate variable <script type="math/tex">v^{(k)}</script></p>
+
+<p><strong>algorithm</strong>: choose <script type="math/tex">x^{(0)} = v^{(0)}</script>; for <script type="math/tex">k \geq 1</script>, repeat the steps</p>
+
+<p><script type="math/tex; mode=display"> \begin{eqnarray*}
+y             & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+x^{(k)} & = & prox_{t_kh}(y-t_k\nabla g(y))\\
+v^{(k)} & = & x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x^{(k-1)} \right)
+\end{eqnarray*}</script></p>
+
+<h4 id="nesterovs-second-method">Nesterov’s second method</h4>
+
+<p><strong>algorithm</strong>: choose <script type="math/tex">x^{(0)} = v^{(0)}</script>; for <script type="math/tex">k \geq 1</script>, repeat the steps</p>
+
+<p><script type="math/tex; mode=display"> \begin{eqnarray*}
+y             & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+v^{(k)} & = & prox_{\left(\frac{t_k}{\theta_k}\right)h} \left( v^{(k-1)} - \frac{t_k}{\theta_k}\nabla g(y) \right)\\
+x^{(k)} & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
+\end{eqnarray*}</script></p>
+
+<p>User<script type="math/tex">\theta_k = \frac{2}{k+1}</script> and <script type="math/tex">t_k = \frac{1}{L}</script>, or one of the line search methods</p>
+
+<p>identical to FISTA if <script type="math/tex">h(x) = 0</script></p>
+
+<p>unlike in FISTA, <script type="math/tex">y</script> is feasible (in <script type="math/tex">\mathop{dom} h</script>) if we take <script type="math/tex">x^{(0)} \in \mathop{dom} h</script></p>
+
+<h3 id="fast-dual-proximal-gradient-methods">4. Fast dual proximal gradient methods</h3>
+
+<p>参考 A Fast Dual Proximal Gradient Algorithm for Convex Minimization and Applications by Amir Beck and Marc Teboulle at October 10, 2013</p>
+
+<p><script type="math/tex; mode=display"> \begin{eqnarray*}
+(D)   & = & \max_y\left\{q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\},\\
+(D') & = & \min F(y) + G(y),\\
+(P') & = & \min \left{ f(x) + g(z): Ax - z = 0 \right}.
+\end{eqnarray*}</script></p>
+
+<p><script type="math/tex; mode=display">
+F(y) := f^\ast\left( A^Ty \right), \; \; G(y) :=g^\ast(-y)
+</script></p>
+
+<p>Initialization: <script type="math/tex">L \geq \frac{\|A\|^2}{\sigma}</script>, <script type="math/tex">w_1 = y_0 \in \mathbb{V}</script>, <script type="math/tex">t_1 = 1</script>.</p>
+
+<p>General Step <script type="math/tex">(k \geq 1)</script>:</p>
+
+<p><script type="math/tex; mode=display"> \begin{eqnarray*}
+y_k           & = & prox_{\frac{1}{L}G}\left( w_k - \frac{1}{L} \nabla F(w_k) \right)\\
+t_{k+1}   & = & \frac{1 + \sqrt{1 + 4t^2_k}}{2} \\
+w_{k+1} & = & y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}).
+\end{eqnarray*}</script></p>
+
+<h4 id="the-fast-dual-based-proximal-gradient-method-fdpg">The Fast Dual-Based Proximal Gradient Method (FDPG)</h4>
+
+<p>Input: <script type="math/tex">L \geq \frac{\|A\|^2}{\sigma} - \text{ an upper bound on the Lipschitz constant of } \nabla F</script></p>
+
+<p>Step <script type="math/tex">0</script>. Take <script type="math/tex">w_1 = y_0 \in \mathbb{V}</script>, <script type="math/tex">t_1 = 1</script>.</p>
+
+<p>Step <script type="math/tex">k</script>. (<script type="math/tex">k \geq 0</script>) Compute</p>
+
+<p><script type="math/tex; mode=display"> \begin{eqnarray*}
+u_k           & = & \argmax_x \left\lbrace <x, A^Tw_k> - f(x) \right\rbrace\\
+v_k           & = & prox_{Lg}(Au_k - Lw_k)\\
+y_k           & = & w_k - \frac{1}{L}(au_k - v_k)\\
+t_{k+1}   & = & \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
+w_{k+1} & = & y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}). \tag*{$\blacksquare$}
+\end{eqnarray*}</script></p>
 
 
 
