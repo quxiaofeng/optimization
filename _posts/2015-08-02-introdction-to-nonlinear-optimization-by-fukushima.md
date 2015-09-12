@@ -441,9 +441,9 @@ unlike in FISTA, {%m%}y{%em%} is feasible (in {%m%}\mathop{dom} h{%em%}) if we t
 参考 A Fast Dual Proximal Gradient Algorithm for Convex Minimization and Applications by Amir Beck and Marc Teboulle at October 10, 2013
 
 {% math %} \begin{eqnarray*}
-(D)   & = & \max_y\left\{q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\},\\
+(D)   & = & \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
 (D') & = & \min F(y) + G(y),\\
-(P') & = & \min \left{ f(x) + g(z): Ax - z = 0 \right}.
+(P') & = & \min \left\lbrace f(x) + g(z): Ax - z = 0 \right\rbrace.
 \end{eqnarray*}{% endmath %}
 
 {% math %}
@@ -469,7 +469,7 @@ Step {%m%}0{%em%}. Take {%m%}w_1 = y_0 \in \mathbb{V}{%em%}, {%m%}t_1 = 1{%em%}.
 Step {%m%}k{%em%}. ({%m%}k \geq 0{%em%}) Compute
 
 {% math %} \begin{eqnarray*}
-u_k           & = & \argmax_x \left\lbrace <x, A^Tw_k> - f(x) \right\rbrace\\
+u_k           & = & \mathop{argmax}_x \left\lbrace <x, A^Tw_k> - f(x) \right\rbrace\\
 v_k           & = & prox_{Lg}(Au_k - Lw_k)\\
 y_k           & = & w_k - \frac{1}{L}(au_k - v_k)\\
 t_{k+1}   & = & \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
