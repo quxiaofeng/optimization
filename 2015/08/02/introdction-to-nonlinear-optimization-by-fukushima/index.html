@@ -393,6 +393,21 @@ subject to & & x \in C_i \cap \cdots \cap C_m
 z^+_i   & = & z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{, }\; \; i=1, \cdots, m
 \end{eqnarray*}</script></p>
 
+<h4 id="decomposition-of-separable-problems">Decomposition of separable problems</h4>
+
+<p><script type="math/tex; mode=display">
+minimize \; \; \sum^n_{j=1}f_j(x_j) + \sum^m_{i=1}g_i(A_{i1}x_1 + \cdots + A_{in}x_n )
+</script></p>
+
+<p>each <script type="math/tex">f_i</script> is strongly convex; <script type="math/tex">g_i</script> has inexpensive prox-operator</p>
+
+<p><strong>dual proximal gradient update</strong></p>
+
+<p><script type="math/tex; mode=display"> \begin{eqnarray*}
+\hat{x}_j & = & \mathop{argmin}_{x_j} \left( f_j(x_j) + \sum^m_{i=1}z^T_iA_{ij}x_j \right) \text{, } \; \; j=1, \cdots, n \\
+z^+_i        & = & prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
+\end{eqnarray*}</script></p>
+
 <script type="math/tex"></script>
 
 <p><script type="math/tex; mode=display">

@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Sep 2015 11:49:11 +0800</pubDate>
-    <lastBuildDate>Thu, 03 Sep 2015 11:49:11 +0800</lastBuildDate>
+    <pubDate>Sat, 12 Sep 2015 11:18:08 +0800</pubDate>
+    <lastBuildDate>Sat, 12 Sep 2015 11:18:08 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -436,6 +436,21 @@ subject to &amp; &amp; x \in C_i \cap \cdots \cap C_m
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
 \hat{x} &amp; = &amp; \mathop{argmin}_x \left( f(x) + (z_i + \cdots + z_m)^Tx \right) \\
 z^+_i   &amp; = &amp; z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{, }\; \; i=1, \cdots, m
+\end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;decomposition-of-separable-problems&quot;&gt;Decomposition of separable problems&lt;/h4&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+minimize \; \; \sum^n_{j=1}f_j(x_j) + \sum^m_{i=1}g_i(A_{i1}x_1 + \cdots + A_{in}x_n )
+&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;each &lt;script type=&quot;math/tex&quot;&gt;f_i&lt;/script&gt; is strongly convex; &lt;script type=&quot;math/tex&quot;&gt;g_i&lt;/script&gt; has inexpensive prox-operator&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;dual proximal gradient update&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
+\hat{x}_j &amp; = &amp; \mathop{argmin}_{x_j} \left( f_j(x_j) + \sum^m_{i=1}z^T_iA_{ij}x_j \right) \text{, } \; \; j=1, \cdots, n \\
+z^+_i        &amp; = &amp; prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;
