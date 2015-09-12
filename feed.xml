@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 12 Sep 2015 14:50:44 +0800</pubDate>
-    <lastBuildDate>Sat, 12 Sep 2015 14:50:44 +0800</lastBuildDate>
+    <pubDate>Sat, 12 Sep 2015 14:55:55 +0800</pubDate>
+    <lastBuildDate>Sat, 12 Sep 2015 14:55:55 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -521,9 +521,9 @@ x^{(k)} &amp; = &amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
 &lt;p&gt;参考 A Fast Dual Proximal Gradient Algorithm for Convex Minimization and Applications by Amir Beck and Marc Teboulle at October 10, 2013&lt;/p&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
-(D)   &amp; = &amp; \max_y\left\{q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\},\\
+(D)   &amp; = &amp; \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
 (D&#39;) &amp; = &amp; \min F(y) + G(y),\\
-(P&#39;) &amp; = &amp; \min \left{ f(x) + g(z): Ax - z = 0 \right}.
+(P&#39;) &amp; = &amp; \min \left\lbrace f(x) + g(z): Ax - z = 0 \right\rbrace.
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
@@ -549,7 +549,7 @@ w_{k+1} &amp; = &amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1
 &lt;p&gt;Step &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;. (&lt;script type=&quot;math/tex&quot;&gt;k \geq 0&lt;/script&gt;) Compute&lt;/p&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
-u_k           &amp; = &amp; \argmax_x \left\lbrace &lt;x, A^Tw_k&gt; - f(x) \right\rbrace\\
+u_k           &amp; = &amp; \mathop{argmax}_x \left\lbrace &lt;x, A^Tw_k&gt; - f(x) \right\rbrace\\
 v_k           &amp; = &amp; prox_{Lg}(Au_k - Lw_k)\\
 y_k           &amp; = &amp; w_k - \frac{1}{L}(au_k - v_k)\\
 t_{k+1}   &amp; = &amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\

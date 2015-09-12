@@ -476,9 +476,9 @@ x^{(k)} & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
 <p>参考 A Fast Dual Proximal Gradient Algorithm for Convex Minimization and Applications by Amir Beck and Marc Teboulle at October 10, 2013</p>
 
 <p><script type="math/tex; mode=display"> \begin{eqnarray*}
-(D)   & = & \max_y\left\{q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\},\\
+(D)   & = & \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
 (D') & = & \min F(y) + G(y),\\
-(P') & = & \min \left{ f(x) + g(z): Ax - z = 0 \right}.
+(P') & = & \min \left\lbrace f(x) + g(z): Ax - z = 0 \right\rbrace.
 \end{eqnarray*}</script></p>
 
 <p><script type="math/tex; mode=display">
@@ -504,7 +504,7 @@ w_{k+1} & = & y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}).
 <p>Step <script type="math/tex">k</script>. (<script type="math/tex">k \geq 0</script>) Compute</p>
 
 <p><script type="math/tex; mode=display"> \begin{eqnarray*}
-u_k           & = & \argmax_x \left\lbrace <x, A^Tw_k> - f(x) \right\rbrace\\
+u_k           & = & \mathop{argmax}_x \left\lbrace <x, A^Tw_k> - f(x) \right\rbrace\\
 v_k           & = & prox_{Lg}(Au_k - Lw_k)\\
 y_k           & = & w_k - \frac{1}{L}(au_k - v_k)\\
 t_{k+1}   & = & \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
