@@ -161,7 +161,7 @@ Constrains relax
 
 ## 算法 ##
 
-### Proximal Gradient Method ###
+### 1. Proximal Gradient Method ###
 
 参考 [Algorithms for large-scale convex optimization - DTU 2010](http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf){% sidenote 3 'A Lecture note from "02930 Algorithms for Large-Scale Convex Optimization" taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe ([http://www.seas.ucla.edu/~vandenbe/](http://www.seas.ucla.edu/~vandenbe/)) at Danmarks Tekniske Universitet ([http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB](http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB)). The Download Link is found at the page of "EE227BT: Convex Optimization - Fall 2013" taught by Laurent El Ghaoui at Berkeley ([http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf](http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf)). And both of the lectures mentioned the book "Convex Optimization" by Stephen Boyd and Lieven Vandenberghe ([http://stanford.edu/~boyd/cvxbook/](http://stanford.edu/~boyd/cvxbook/)) and the software "CVX" - a MATLAB software for desciplined Convex Programming ([http://cvxr.com/cvx/](http://cvxr.com/cvx/)). A similar lecture note on Proximal Gradient Method from "EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)" ([http://www.seas.ucla.edu/~vandenbe/ee236c.html](http://www.seas.ucla.edu/~vandenbe/ee236c.html)) at UCLA' can be found at [http://www.seas.ucla.edu/~vandenbe/236C/lectures/proxgrad.pdf](http://www.seas.ucla.edu/~vandenbe/236C/lectures/proxgrad.pdf). %}
 
@@ -246,7 +246,7 @@ u_i + t & & u_i \geq t
 
 {% maincolumn /assets/img/fukushima-softthresholding.jpg '' %}
 
-### Dual Proximal Gradient Methods ###
+### 2. Dual Proximal Gradient Methods ###
 
 参考 L. Vandenberghe EE236C (Spring 2013-14)
 
@@ -373,7 +373,105 @@ each {%m%}f_i{%em%} is strongly convex; {%m%}g_i{%em%} has inexpensive prox-oper
 z^+_i        & = & prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
 \end{eqnarray*}{% endmath %}
 
-{%m%}{%em%}
+### 3. Fast proximal gradient methods ###
+
+参考 L. Vandenberghe EE236C (Spring 2013-14)
+
+#### FISTA (basic version) ####
 
 {% math %}
+minimize \; \; f(x) = g(x) + h(x)
 {% endmath %}
+
+here {%m%}g{%em%} convex, differentiable with {%m%}\mathop{dom} g=\Re^n{%em%}
+
+and {%m%}h{%em%} closed, convex, with inexpensive {%m%}prox_{th}{%em%} operator
+
+**algorithm**: choose any {%m%}x^{(0)} = x^{(-1)}{%em%}; for {%m%}k \geq 1{%em%}, repeat the steps
+
+{% math %} \begin{eqnarray*}
+y             & = & x^{(k-1)} + \frac{k-2}{k+1} \left( x^{(k-1)} - x^{(k-2)} \right) \\
+x^{(k)} & = & prox_{t_kh} \left( y - t_k\nabla g(y) \right)
+\end{eqnarray*}{% endmath %}
+
+step size {%m%}t_k{%em%} fixed or determined by line search
+
+acronym stands for 'Fast Iterative Shrinkage-Thresholding Algorithm'
+
+#### Interpretation ####
+
+first iteration ({%m%}k = 1{%em%}) is a proximal gradient step at {%m%}y = x^{(0)}{%em%}
+
+next iterations are proximal gradient steps at extrapolated points {%m%}y{%em%}
+
+{% maincolumn /assets/img/fukushima-interpretation.png '' %}
+
+note: {%m%}x^{(k)}{%em%} is feasible (in {%m%}\mathop{dom} h{%em%}); {%m%}y{%em%} may be outside {%m%}\mathop{dom} h{%em%}
+
+#### Reformulation of FISTA ####
+
+define {%m%}\theta_k = \frac{2}{k+1}{%em%} and introduce an intermediate variable {%m%}v^{(k)}{%em%}
+
+**algorithm**: choose {%m%}x^{(0)} = v^{(0)}{%em%}; for {%m%}k \geq 1{%em%}, repeat the steps
+
+{% math %} \begin{eqnarray*}
+y             & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+x^{(k)} & = & prox_{t_kh}(y-t_k\nabla g(y))\\
+v^{(k)} & = & x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x^{(k-1)} \right)
+\end{eqnarray*}{% endmath %}
+
+#### Nesterov's second method ####
+
+**algorithm**: choose {%m%}x^{(0)} = v^{(0)}{%em%}; for {%m%}k \geq 1{%em%}, repeat the steps
+
+{% math %} \begin{eqnarray*}
+y             & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+v^{(k)} & = & prox_{\left(\frac{t_k}{\theta_k}\right)h} \left( v^{(k-1)} - \frac{t_k}{\theta_k}\nabla g(y) \right)\\
+x^{(k)} & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
+\end{eqnarray*}{% endmath %}
+
+User{%m%}\theta_k = \frac{2}{k+1}{%em%} and {%m%}t_k = \frac{1}{L}{%em%}, or one of the line search methods
+
+identical to FISTA if {%m%}h(x) = 0{%em%}
+
+unlike in FISTA, {%m%}y{%em%} is feasible (in {%m%}\mathop{dom} h{%em%}) if we take {%m%}x^{(0)} \in \mathop{dom} h{%em%}
+
+### 4. Fast dual proximal gradient methods ###
+
+参考 A Fast Dual Proximal Gradient Algorithm for Convex Minimization and Applications by Amir Beck and Marc Teboulle at October 10, 2013
+
+{% math %} \begin{eqnarray*}
+(D)   & = & \max_y\left\{q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\},\\
+(D') & = & \min F(y) + G(y),\\
+(P') & = & \min \left{ f(x) + g(z): Ax - z = 0 \right}.
+\end{eqnarray*}{% endmath %}
+
+{% math %}
+F(y) := f^\ast\left( A^Ty \right), \; \; G(y) :=g^\ast(-y)
+{% endmath %}
+
+Initialization: {%m%}L \geq \frac{\|A\|^2}{\sigma}{%em%}, {%m%}w_1 = y_0 \in \mathbb{V}{%em%}, {%m%}t_1 = 1{%em%}.
+
+General Step {%m%}(k \geq 1){%em%}:
+
+{% math %} \begin{eqnarray*}
+y_k           & = & prox_{\frac{1}{L}G}\left( w_k - \frac{1}{L} \nabla F(w_k) \right)\\
+t_{k+1}   & = & \frac{1 + \sqrt{1 + 4t^2_k}}{2} \\
+w_{k+1} & = & y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}).
+\end{eqnarray*}{% endmath %}
+
+#### The Fast Dual-Based Proximal Gradient Method (FDPG) ####
+
+Input: {%m%}L \geq \frac{\|A\|^2}{\sigma} - \text{ an upper bound on the Lipschitz constant of } \nabla F{%em%}
+
+Step {%m%}0{%em%}. Take {%m%}w_1 = y_0 \in \mathbb{V}{%em%}, {%m%}t_1 = 1{%em%}.
+
+Step {%m%}k{%em%}. ({%m%}k \geq 0{%em%}) Compute
+
+{% math %} \begin{eqnarray*}
+u_k           & = & \argmax_x \left\lbrace <x, A^Tw_k> - f(x) \right\rbrace\\
+v_k           & = & prox_{Lg}(Au_k - Lw_k)\\
+y_k           & = & w_k - \frac{1}{L}(au_k - v_k)\\
+t_{k+1}   & = & \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
+w_{k+1} & = & y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}). \tag*{$\blacksquare$}
+\end{eqnarray*}{% endmath %}
