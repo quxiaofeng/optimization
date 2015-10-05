@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Oct 2015 10:26:16 +0800</pubDate>
-    <lastBuildDate>Mon, 05 Oct 2015 10:26:16 +0800</lastBuildDate>
+    <pubDate>Mon, 05 Oct 2015 10:34:22 +0800</pubDate>
+    <lastBuildDate>Mon, 05 Oct 2015 10:34:22 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -21,6 +21,8 @@
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\min_{\bf C, X} \left\{ \|{\bf Y} - {\bf CX}\|^2_F \right\} \text{ subject to } \forall i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k &lt;/script&gt;&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;p&gt;初始化： 设置编码本矩阵 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf C}^{(0)} \in \Re^{n \times K}&lt;/script&gt;. 设置 ​&lt;script type=&quot;math/tex&quot;&gt;J=1&lt;/script&gt;。&lt;/p&gt;
 
 &lt;p&gt;循环至收敛 （使用停止规则）&lt;/p&gt;
@@ -31,7 +33,7 @@
 
 &lt;p&gt;每个集合中存放与 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf c}^{J-1}_k&lt;/script&gt; 列最相似的样本的索引。&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 &amp;lt; \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 &amp;lt; \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 编码本更新阶段：​&lt;script type=&quot;math/tex&quot;&gt;{\bf C}^{(J-1)}&lt;/script&gt; 中的任一列 ​&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; 都根据如下公式更新。&lt;/p&gt;
 
