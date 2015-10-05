@@ -11,11 +11,11 @@ categories:
 
 {% newthought 'least entropy & error correction' %}
 
-Question 1: {% m %} \arg \min \|x\|_1 + \|e\|_1 {% em %} subj. to {% m %} y=Ax+e {% em %}
++ {% m %} \arg \min \|x\|_1 + \|e\|_1 {% em %} subj. to {% m %} y=Ax+e {% em %}
 
-标准 linear programming
++ 标准 linear programming
 
-鲁棒的 *SRC*{% sidenote 4  '参见 [http://research.microsoft.com/pubs/132810/PAMI-Face.pdf](http://research.microsoft.com/pubs/132810/PAMI-Face.pdf) and [Face Recognition via Sparse Representation](http://perception.csl.illinois.edu/recognition/Home.html)' %}。使用单位矩阵作为遮挡字典，用标准形式求解。
++ 鲁棒的 *SRC*{% sidenote 4  '参见 [http://research.microsoft.com/pubs/132810/PAMI-Face.pdf](http://research.microsoft.com/pubs/132810/PAMI-Face.pdf) and [Face Recognition via Sparse Representation](http://perception.csl.illinois.edu/recognition/Home.html)' %}。使用单位矩阵作为遮挡字典，用标准形式求解。
 
 <!--more-->
 
@@ -23,26 +23,26 @@ Question 1: {% m %} \arg \min \|x\|_1 + \|e\|_1 {% em %} subj. to {% m %} y=Ax+e
 
 {% newthought 'least energy & error correction'%}
 
-Question 2: {% m %} \arg\min \|x\|_2 + \|e\|_1 {% em %} subj. to {% m %} y=Ax+e {% em %}
++ {% m %} \arg\min \|x\|_2 + \|e\|_1 {% em %} subj. to {% m %} y=Ax+e {% em %}
 
-鲁棒的 CRC
++ 鲁棒的 CRC
 
 ### Question 3
 
 {% newthought 'sparse regression with noise - lasso'%}
 
-Question 3:  {% m %} \arg\min \|x\|_1 + \|e\|_2 {% em %} subj. to {% m %} y=Ax+e {% em %}
++ {% m %} \arg\min \|x\|_1 + \|e\|_2 {% em %} subj. to {% m %} y=Ax+e {% em %}
 
-标准 lasso 问题
++ 标准 lasso 问题
 
-标准的 SRC
++ 标准的 SRC
 
 ### Question 4
 
 {% newthought 'least energy with noise'%}
 
-Question 4: {% m %} \arg\min \|x\|_2 + \|e\|_2 {% em %} subj. to {% m %} y=Ax+e {% em %}
++ {% m %} \arg\min \|x\|_2 + \|e\|_2 {% em %} subj. to {% m %} y=Ax+e {% em %}
 
-极小最小二乘解，可求广义逆。
++ 极小最小二乘解，可求广义逆。
 
-CRC，用二范数约束表示系数，有解析解。
++ CRC，用二范数约束表示系数，有解析解。
