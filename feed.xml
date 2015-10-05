@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Oct 2015 10:54:49 +0800</pubDate>
-    <lastBuildDate>Mon, 05 Oct 2015 10:54:49 +0800</lastBuildDate>
+    <pubDate>Mon, 05 Oct 2015 11:01:03 +0800</pubDate>
+    <lastBuildDate>Mon, 05 Oct 2015 11:01:03 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -656,18 +656,19 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
         <title>Alternating Direction Method of Multipliers (ADMM)</title>
         <description>&lt;p&gt;Consider minimizing ​&lt;script type=&quot;math/tex&quot;&gt; f({\bf x}) + g({\bf y}) &lt;/script&gt; subject to affine constraints ​&lt;script type=&quot;math/tex&quot;&gt; {\bf Ax} + {\bf By} = {\bf c} &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;The augmented Lagrangian&lt;/strong&gt;&lt;br /&gt;
-​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The augmented Lagrangian&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 &lt;/script&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
 
 &lt;p&gt;&lt;strong&gt;Idea&lt;/strong&gt;: perform block descent on ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; and ​&lt;script type=&quot;math/tex&quot;&gt;{\bf y}&lt;/script&gt; and then update multiplier vector ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&amp;#8203;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 \begin{align}
-{\bf x}^{(t+1)}       &amp; \leftarrow \min_{\bf x} f({\bf x}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By}^{(t)} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By}^{(t)} - {\bf c} \|^2_2 \\
-{\bf y}^{(t+1)}       &amp; \leftarrow \min_{\bf y} g({\bf y}) + \langle {\bf \lambda}, {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \|^2_2 \\
-{\bf \lambda}^{(t+1)} &amp; \leftarrow {\bf \lambda}^{(t)} + \rho ({\bf Ax}^{(t+1)} + {\bf By}^{(t+1)} - {\bf c})
+{\bf x}^{(t+1)}       &amp;amp; \leftarrow \min_{\bf x} f({\bf x}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By}^{(t)} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By}^{(t)} - {\bf c} \|^2_2 \\
+{\bf y}^{(t+1)}       &amp;amp; \leftarrow \min_{\bf y} g({\bf y}) + \langle {\bf \lambda}, {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \|^2_2 \\
+{\bf \lambda}^{(t+1)} &amp;amp; \leftarrow {\bf \lambda}^{(t)} + \rho ({\bf Ax}^{(t+1)} + {\bf By}^{(t+1)} - {\bf c})
 \end{align}
 &lt;/script&gt;&lt;/p&gt;
 
@@ -678,11 +679,11 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
 
 &lt;p&gt;Define ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \gamma = D\beta}&lt;/script&gt;, where&lt;/p&gt;
 
-&lt;p&gt;&amp;#8203;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 D = \left(\begin{matrix}
-1 &amp; -1 &amp; &amp;      &amp;   &amp; \\
-  &amp;    &amp; \cdots &amp;   &amp; \\
-  &amp;    &amp;        &amp; 1 &amp; -1 
+1 &amp;amp; -1 &amp;amp; &amp;amp;      &amp;amp;   &amp;amp; \\
+  &amp;amp;    &amp;amp; \cdots &amp;amp;   &amp;amp; \\
+  &amp;amp;    &amp;amp;        &amp;amp; 1 &amp;amp; -1
 \end{matrix}
 \right)
 &lt;/script&gt;&lt;/p&gt;
@@ -695,11 +696,18 @@ D = \left(\begin{matrix}
 &lt;h2 id=&quot;admm&quot;&gt;ADMM&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Update ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \beta}&lt;/script&gt; is a smooth quadratic problem&lt;/li&gt;
-  &lt;li&gt;Update ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \gamma}&lt;/script&gt; is a separated lasso problem (elementwise thresholding)&lt;/li&gt;
-  &lt;li&gt;Update multipliers&lt;br /&gt;
-​&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)})&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Update ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \beta}&lt;/script&gt; is a smooth quadratic problem&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Update ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \gamma}&lt;/script&gt; is a separated lasso problem (elementwise thresholding)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Update multipliers&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)})&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Same algorithm applies to a general regularization matrix ​&lt;script type=&quot;math/tex&quot;&gt;{\bf D}&lt;/script&gt; (generalized lasso)&lt;/p&gt;
 
@@ -707,15 +715,23 @@ D = \left(\begin{matrix}
 
 &lt;p&gt;Related algorithms&lt;/p&gt;
 
-&lt;p&gt;Split Bregman iteration &lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Dykstra’s alternating projection algorithm &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Proximal point algorithm applied to the dual&lt;/p&gt;
-
-&lt;p&gt;Numerous applications in statistics and machine learning: lasso, gen. lasso, graphical lasso, (overlapping) group lasso, …&lt;/p&gt;
-
-&lt;p&gt;Embraces distributed computing for big data &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122.&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Split Bregman iteration &lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343.&lt;/span&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dykstra’s alternating projection algorithm &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842.&lt;/span&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Proximal point algorithm applied to the dual&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Numerous applications in statistics and machine learning: lasso, gen. lasso, graphical lasso, (overlapping) group lasso, …&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Embraces distributed computing for big data &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122.&lt;/span&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Sat, 18 Jul 2015 21:36:14 +0800</pubDate>
         <link>http://www.optimizations.ml/2015/07/18/alternating-direction-method-multipliers/</link>

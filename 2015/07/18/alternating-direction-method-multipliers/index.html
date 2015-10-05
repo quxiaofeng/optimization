@@ -41,18 +41,19 @@
 
 <p>Consider minimizing ​<script type="math/tex"> f({\bf x}) + g({\bf y}) </script> subject to affine constraints ​<script type="math/tex"> {\bf Ax} + {\bf By} = {\bf c} </script></p>
 
-<p><strong>The augmented Lagrangian</strong><br />
-​<script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 </script></p>
+<p><strong>The augmented Lagrangian</strong></p>
+
+<p>​<script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 </script></p>
 
 <!--more-->
 
 <p><strong>Idea</strong>: perform block descent on ​<script type="math/tex">{\bf x}</script> and ​<script type="math/tex">{\bf y}</script> and then update multiplier vector ​<script type="math/tex">{\bf \lambda}</script></p>
 
-<p>&#8203;<script type="math/tex; mode=display">
+<p>​<script type="math/tex; mode=display">
 \begin{align}
-{\bf x}^{(t+1)}       & \leftarrow \min_{\bf x} f({\bf x}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By}^{(t)} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By}^{(t)} - {\bf c} \|^2_2 \\
-{\bf y}^{(t+1)}       & \leftarrow \min_{\bf y} g({\bf y}) + \langle {\bf \lambda}, {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \|^2_2 \\
-{\bf \lambda}^{(t+1)} & \leftarrow {\bf \lambda}^{(t)} + \rho ({\bf Ax}^{(t+1)} + {\bf By}^{(t+1)} - {\bf c})
+{\bf x}^{(t+1)}       &amp; \leftarrow \min_{\bf x} f({\bf x}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By}^{(t)} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By}^{(t)} - {\bf c} \|^2_2 \\
+{\bf y}^{(t+1)}       &amp; \leftarrow \min_{\bf y} g({\bf y}) + \langle {\bf \lambda}, {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \|^2_2 \\
+{\bf \lambda}^{(t+1)} &amp; \leftarrow {\bf \lambda}^{(t)} + \rho ({\bf Ax}^{(t+1)} + {\bf By}^{(t+1)} - {\bf c})
 \end{align}
 </script></p>
 
@@ -63,11 +64,11 @@
 
 <p>Define ​<script type="math/tex">{\bf \gamma = D\beta}</script>, where</p>
 
-<p>&#8203;<script type="math/tex; mode=display">
+<p>​<script type="math/tex; mode=display">
 D = \left(\begin{matrix}
-1 & -1 & &      &   & \\
-  &    & \cdots &   & \\
-  &    &        & 1 & -1 
+1 &amp; -1 &amp; &amp;      &amp;   &amp; \\
+  &amp;    &amp; \cdots &amp;   &amp; \\
+  &amp;    &amp;        &amp; 1 &amp; -1
 \end{matrix}
 \right)
 </script></p>
@@ -80,11 +81,18 @@ D = \left(\begin{matrix}
 <h2 id="admm">ADMM</h2>
 
 <ul>
-  <li>Update ​<script type="math/tex">{\bf \beta}</script> is a smooth quadratic problem</li>
-  <li>Update ​<script type="math/tex">{\bf \gamma}</script> is a separated lasso problem (elementwise thresholding)</li>
-  <li>Update multipliers<br />
-​<script type="math/tex; mode=display">{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)})</script></li>
+  <li>
+    <p>Update ​<script type="math/tex">{\bf \beta}</script> is a smooth quadratic problem</p>
+  </li>
+  <li>
+    <p>Update ​<script type="math/tex">{\bf \gamma}</script> is a separated lasso problem (elementwise thresholding)</p>
+  </li>
+  <li>
+    <p>Update multipliers</p>
+  </li>
 </ul>
+
+<p>​<script type="math/tex; mode=display">{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)})</script></p>
 
 <p>Same algorithm applies to a general regularization matrix ​<script type="math/tex">{\bf D}</script> (generalized lasso)</p>
 
@@ -92,15 +100,23 @@ D = \left(\begin{matrix}
 
 <p>Related algorithms</p>
 
-<p>Split Bregman iteration <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343.</span></p>
-
-<p>Dykstra’s alternating projection algorithm <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842.</span></p>
-
-<p>Proximal point algorithm applied to the dual</p>
-
-<p>Numerous applications in statistics and machine learning: lasso, gen. lasso, graphical lasso, (overlapping) group lasso, …</p>
-
-<p>Embraces distributed computing for big data <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122.</span></p>
+<ul>
+  <li>
+    <p>Split Bregman iteration <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343.</span></p>
+  </li>
+  <li>
+    <p>Dykstra’s alternating projection algorithm <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842.</span></p>
+  </li>
+  <li>
+    <p>Proximal point algorithm applied to the dual</p>
+  </li>
+  <li>
+    <p>Numerous applications in statistics and machine learning: lasso, gen. lasso, graphical lasso, (overlapping) group lasso, …</p>
+  </li>
+  <li>
+    <p>Embraces distributed computing for big data <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122.</span></p>
+  </li>
+</ul>
 
 
 
