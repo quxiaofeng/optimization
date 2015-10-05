@@ -1,3 +1,7 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
 /*****************************************************************************/
 /*
 /* Tufte Jekyll blog theme
@@ -8,21 +12,17 @@
 
 // Imports to create final 
 
-@import "fonts";
-@import "settings";
-@import "syntax-highlighting";
+@import "../_sass/fonts";
+@import "../_sass/settings";
+@import "../_sass/syntax-highlighting";
 
 // Global Resets
-* {
-  margin: 0;
-  padding: 0;
-}
+// 
+* { margin: 0; padding: 0; }
 
 html, body { height: 100%; }
-a {
-  text-decoration: none;
 
-}
+a { text-decoration: none;}
 
 /* clearfix hack after Cederholm (group class name) */
 .group:after {
@@ -30,6 +30,12 @@ a {
   display: table;
   clear: both;
 }
+// Does not display a print-footer for screen
+  @media screen{
+    .print-footer{
+      display: none;
+    }
+  }
 //Base media queries - responsiveness is keyed to underlying font size
 html{
     text-align: baseline;
@@ -38,48 +44,24 @@ html{
     -moz-osx-font-smoothing: grayscale;
 
   }
-  @media screen{
-    .print-footer{
-      display: none;
-    }
-  }
-  @media screen and (min-width: 800px){
-    html{
-      font-size: 12px;
-    }
-    }
 
-  @media screen and (min-width: 900px){
-    html{
-      font-size: 13px;
-    }
-    }
-  @media screen and (min-width: 1000px){
-    html{
-      font-size: 14px;
-    }
-    }
-  @media screen and (min-width: 1100px){
-    html{
-      font-size: 15px;
-    }
-    }
-  @media screen and (min-width: 1200px){
-    html{
-      font-size: 16px;
-    }
-    }
-  @media screen and (min-width: 1300px){
-    html{
-      font-size: 17px;
-    }
-    }
+@media screen and (min-width: 800px){ html{ font-size: 12px;} }
+
+@media screen and (min-width: 900px){ html{ font-size: 13px;} }
+
+@media screen and (min-width: 1000px){ html{ font-size: 14px;} }
+
+@media screen and (min-width: 1100px){ html{ font-size: 15px; } }
+
+@media screen and (min-width: 1200px){ html{ font-size: 16px; } }
+
+@media screen and (min-width: 1300px){ html{ font-size: 17px; } }
 
 body { 
   width: 87.5%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 8.4%;
+  padding-left: 12.5%; //8.4%;
   font-family: $body-font;
   padding-bottom: 400px;
   background-color: $bg-color;
@@ -87,20 +69,16 @@ body {
   max-width: 1400px;
 
 }
-@media screen and (min-width: 800px){
-    body{
-      width:95%;
-    }
-}
+@media screen and (min-width: 800px){ body{ width:95%;} }
+
 body > header{
   padding-top: 1rem;
   border-bottom: 1px lighten($text-color,60%) solid;
   max-width: 90%;
   padding-bottom: 0.5rem;
 }
-header > nav.group {
-  height: 4.5rem;
-}
+
+header > nav.group { height: 4.5rem; }
 
 header > nav  a{
   font-size: 1.2rem;
@@ -187,9 +165,8 @@ li.listing h4.new {
   text-transform: uppercase;
   font-style: normal;
 }
-cite{
-  font-style: italic;
-}
+cite{ font-style: italic; }
+
 .sans { font-family: $sans-font; }
 
 pre code, pre code p, code  {
@@ -202,7 +179,7 @@ pre{
   margin-top: 1.4rem;
   margin-bottom: 1.4rem;
 }
-article { position: relative; }
+article { position: relative; display: inline-block;}
 
 p, li{ 
     font-size: 1.4rem;
@@ -217,35 +194,25 @@ p, li{
 // Necessary to specify that any list within an article is the same width as
 // the paragraphs
 
-p, article  ul li, pre code, pre code p, code{
-  width: 55%;
-}
+p, article  ul li, pre code, pre code p, code{ width: 55%; }
 
-@media screen and (max-width: 600px){
-    p{
-      width: 65%;
-    }
-}     
-@media screen and (max-width: 400px){
-    p{
-      width: 90%;
-    }
-}
+@media screen and (max-width: 600px){ p{ width: 65%;} }
 
+@media screen and (max-width: 400px){ p{ width: 90%;} }
 
-a, .marginnote a, .sidenote a{
-  color: $contrast-color;
-}
-ul.content{
-  list-style: none;
-}
+a, .marginnote a, .sidenote a{ color: $contrast-color; }
+
+ul.content{ list-style: none; }
+
 img { max-width: 100%; }
+
 sup, sub {
    font-size: 0.9rem;
    line-height: 0;    
    position: relative;
    top: -0.2rem;
 }
+
 sub { top: 0.2rem; }
 
 .fullwidth { max-width: 95%; } 
@@ -275,11 +242,8 @@ sub { top: 0.2rem; }
     margin-right: -35%;
   }
 }
-@media screen and (max-width: 400px){
-  .sidenote, .marginnote{
-  display:none;
-  }
-}
+
+@media screen and (max-width: 400px){ .sidenote, .marginnote{ display:none;} }
 
 h1 { font-style: italic;
       font-weight: 400;
@@ -288,9 +252,7 @@ h1 { font-style: italic;
       font-size: 2.5rem;
       line-height: 0.784; 
 }
-
-      
-
+     
 h2 {  font-style: italic;
       font-weight: 400;
       font-size: 2.1rem;
@@ -334,18 +296,13 @@ ol > [id^="fn:"]{
   }
 }
 
-h6 {
-      font-style: italic;
-}
-.contrast {
-      color: $contrast-color;
-}    
-div.footnotes{
-  margin-bottom: 1.4rem;
+h6 { font-style: italic; }
 
-}
+.contrast { color: $contrast-color; }    
 
-subtitle { font-style: italic;
+div.footnotes{ margin-bottom: 1.4rem; }
+
+.subtitle { font-style: italic;
            font-size: 1.8rem;
            margin-bottom: 1.088888888889rem;
            margin-top: 1.088888888889rem;
@@ -377,16 +334,9 @@ a.url, .sidenote a { text-decoration: none;
         word-break: break-all;
         font-family: $url-font; }
 
+sup.sidenote-number { color: lighten($contrast-color, 15%); }
 
-
-sup.sidenote-number {      
-  color: lighten($contrast-color, 15%);
-}
-
-span.newthought { 
-  font-variant: small-caps;
-  
-}
+span.newthought { font-variant: small-caps; }
 
 /* LaTeX-logo-specific styling */
 .latex sub, .latex sup { text-transform: uppercase; }
