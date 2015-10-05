@@ -193,9 +193,9 @@ The **proximal mapping** (or proximal operator) of a convex function {%m%}h{%em%
 
 {% math %} \mathop{argmin} f(x) = g(x) + h(x) {% endmath %}
 
-here, {%m%}g{%em%} convex, differentiable, with **dom** {%m%}g=\Re^n{%em%}
+{%m%}g{%em%} convex, differentiable, with **dom** {%m%}g=\Re^n{%em%}
 
-And {%m%}h{%em%} closed, convex, possibly nondifferentiable; {%m%}{\bf prox}_h{%em%} is inexpensive
+{%m%}h{%em%} closed, convex, possibly nondifferentiable; {%m%}{\bf prox}_h{%em%} is inexpensive
 
 **proximal gradient algorithm**
 
@@ -217,7 +217,7 @@ x^+ & = &  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + t\nabla 
     & = & \mathop{argmin}_u \left( h(u) + g(x) + \nabla g(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
 \end{eqnarray*}{% endmath %}
 
-here {%m%}x^+{%em%} minimizes {%m%}h(u){%em%} plus a simple quadratic local of {%m%}g(u){%em%} around {%m%}x{%em%}
+{%m%}x^+{%em%} minimizes {%m%}h(u){%em%} plus a simple quadratic local of {%m%}g(u){%em%} around {%m%}x{%em%}
 
 #### Examples ####
 
@@ -261,7 +261,7 @@ dual has the right structure for the proximal gradient method if
 
 prox-operator of {%m%}g{%em%} (or {%m%}g^\ast{%em%}) is cheap (closed form or simple algorithm)
 
-here {%m%}f{%em%} is strongly convex ({%m%}f(x)-(\frac{\mu}{2})x^T{%em%} is convex) implies {%m%}f^\ast\left(-A^Tz\right){%em%} has Lipschitz continuous gradient ({%m%}L=\frac{\|A\|^2_2}{\mu}{%em%}):
+{%m%}f{%em%} is strongly convex ({%m%}f(x)-(\frac{\mu}{2})x^T{%em%} is convex) implies {%m%}f^\ast\left(-A^Tz\right){%em%} has Lipschitz continuous gradient ({%m%}L=\frac{\|A\|^2_2}{\mu}{%em%}):
 
 {% math %} \left\| A\nabla f^\ast(-A^Tu)-A\nabla f^\ast(-A^Tv) \right\|_2 \leq \frac{\|A\|^2_2}{\mu}\|u-v\|_2 {% endmath %}
 
@@ -338,7 +338,7 @@ minimize \; \; f(x) + \sum^p_{i=1}\|B_ix\|_2 \text{   (with } f \text{ strongly 
 z^+_i   & = & P_{C_i}(z_i + tB_i\hat{x}) \text{, } \; \; i=1, \cdots, p
 \end{eqnarray*}{% endmath %}
 
-here {%m%}C_i{%em%} is unit Euclidean norm ball in {%m%}\Re^{m_i}{%em%}, if {%m%}B_i \in \Re^{m_i \times n}{%em%}
+{%m%}C_i{%em%} is unit Euclidean norm ball in {%m%}\Re^{m_i}{%em%}, if {%m%}B_i \in \Re^{m_i \times n}{%em%}
 
 #### Minimization over intersection of convex sets ####
 
@@ -347,7 +347,7 @@ minimize   & & f(x) \\
 subject to & & x \in C_i \cap \cdots \cap C_m
 \end{eqnarray*}{% endmath %}
 
-here {%m%}f{%em%} strongly convex; e.g., {%m%}f(x) = \|x - a\|^2_2{%em%} for projecting {%m%}a{%em%} on intersection
+{%m%}f{%em%} strongly convex; e.g., {%m%}f(x) = \|x - a\|^2_2{%em%} for projecting {%m%}a{%em%} on intersection
 
 sets {%m%}C_i{%em%} are closed, convex, and easy to project onto
 
@@ -383,9 +383,9 @@ z^+_i        & = & prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \rig
 minimize \; \; f(x) = g(x) + h(x)
 {% endmath %}
 
-here {%m%}g{%em%} convex, differentiable with {%m%}\mathop{dom} g=\Re^n{%em%}
+{%m%}g{%em%} convex, differentiable with {%m%}\mathop{dom} g=\Re^n{%em%}
 
-and {%m%}h{%em%} closed, convex, with inexpensive {%m%}prox_{th}{%em%} operator
+{%m%}h{%em%} closed, convex, with inexpensive {%m%}prox_{th}{%em%} operator
 
 **algorithm**: choose any {%m%}x^{(0)} = x^{(-1)}{%em%}; for {%m%}k \geq 1{%em%}, repeat the steps
 
