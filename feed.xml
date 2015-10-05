@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Oct 2015 10:53:47 +0800</pubDate>
-    <lastBuildDate>Mon, 05 Oct 2015 10:53:47 +0800</lastBuildDate>
+    <pubDate>Mon, 05 Oct 2015 10:54:49 +0800</pubDate>
+    <lastBuildDate>Mon, 05 Oct 2015 10:54:49 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -766,11 +766,7 @@ D = \left(\begin{matrix}
 
 &lt;h3 id=&quot;intuition-for-updating-8203script-typemathtexbf-lambdascript&quot;&gt;Intuition for updating ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;/h3&gt;
 
-&lt;p&gt;If ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}^{(t)}&lt;/script&gt; is the unconstrained minimum of ​&lt;script type=&quot;math/tex&quot;&gt;\mathcal{L}({\bf x},{\bf \lambda})&lt;/script&gt;, then the stationary condition says&lt;br /&gt;
-​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-\begin{align}
-\end{align}
-&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;If ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}^{(t)}&lt;/script&gt; is the unconstrained minimum of ​&lt;script type=&quot;math/tex&quot;&gt;\mathcal{L}({\bf x},{\bf \lambda})&lt;/script&gt;, then the stationary condition says&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
 {\bf 0} &amp;amp; = \nabla f({\bf x}^{(t)}) + \sum^q_{i=1} \lambda^{(t)}_i \nabla g_i({\bf x}^{(t)}) + \rho \sum^q_{i=1} g_i({\bf x}^{(t)}) \nabla g_i({\bf x}^{(t)}) \\
