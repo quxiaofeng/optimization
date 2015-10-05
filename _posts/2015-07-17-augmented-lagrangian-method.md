@@ -46,10 +46,6 @@ Update the multiplier vector {%m%}{\bf \lambda}{%em%}
 ### Intuition for updating {%m%}{\bf \lambda}{%em%}
 
 If {%m%}{\bf x}^{(t)}{%em%} is the unconstrained minimum of {%m%}\mathcal{L}({\bf x},{\bf \lambda}){%em%}, then the stationary condition says
-{%math%}
-\begin{align}
-\end{align}
-{%endmath%}
 
 {% math %} \begin{eqnarray*}
 {\bf 0} & = \nabla f({\bf x}^{(t)}) + \sum^q_{i=1} \lambda^{(t)}_i \nabla g_i({\bf x}^{(t)}) + \rho \sum^q_{i=1} g_i({\bf x}^{(t)}) \nabla g_i({\bf x}^{(t)}) \\
