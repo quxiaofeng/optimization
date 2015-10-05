@@ -82,10 +82,13 @@
 <p>If ​<script type="math/tex">{\bf x}^{(t)}</script> is the unconstrained minimum of ​<script type="math/tex">\mathcal{L}({\bf x},{\bf \lambda})</script>, then the stationary condition says<br />
 ​<script type="math/tex; mode=display">
 \begin{align}
-{\bf 0} &amp; = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \lambda^{(t)}_i \nabla g_i({\bf x}^{(t)}) + \rho \sum^q_{i=1} g_i({\bf x}^{(t)}) \nabla g_i({\bf x}^{(t)}) \\
-&amp; = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \left[ \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}) \right] \nabla g_i({\bf x}^{(t)})
 \end{align}
 </script></p>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+{\bf 0} &amp; = \nabla f({\bf x}^{(t)}) + \sum^q_{i=1} \lambda^{(t)}_i \nabla g_i({\bf x}^{(t)}) + \rho \sum^q_{i=1} g_i({\bf x}^{(t)}) \nabla g_i({\bf x}^{(t)}) \\
+        &amp; = \nabla f({\bf x}^{(t)}) + \sum^q_{i=1} \left[ \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}) \right] \nabla g_i({\bf x}^{(t)})
+\end{eqnarray*}</script></p>
 
 <h3 id="for-non-smooth-8203script-typemathtexfscript-replace-gradient-8203script-typemathtexnabla-fscript-by-sub-differential-8203script-typemathtexpartial-fscript">For non-smooth ​<script type="math/tex">f</script>, replace gradient ​<script type="math/tex">\nabla f</script> by sub-differential ​<script type="math/tex">\partial f</script></h3>
 
@@ -101,12 +104,10 @@
 
 <p>Take ​<script type="math/tex">\rho</script> initially large or gradually increase it; iterate according to</p>
 
-<p>​<script type="math/tex; mode=display">
-\begin{align}
-{\bf x}^{(t+1)}                 &amp; \leftarrow \min \|{\bf x}\| + \langle {\bf \lambda}^{(t)}, {\bf Ax} - {\bf b} \rangle + \frac{\rho}{2} \|{\bf Ax} - {\bf b}\|^2-2 \text{(lasso)} \\
-{\bf \lambda}^{(t+1)} &amp; \leftarrow {\bf \lambda}^{(t)} + \rho \left( {\bf Ax}^{(t+1)} - {\bf b} \right) 
-\end{align}
-</script></p>
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+{\bf x}^{(t+1)}       &amp; \leftarrow \min \|{\bf x}\| + \langle {\bf \lambda}^{(t)}, {\bf Ax} - {\bf b} \rangle + \frac{\rho}{2} \|{\bf Ax} - {\bf b}\|^2-2 \text{(lasso)} \\
+{\bf \lambda}^{(t+1)} &amp; \leftarrow {\bf \lambda}^{(t)} + \rho \left( {\bf Ax}^{(t+1)} - {\bf b} \right)
+\end{eqnarray*}</script></p>
 
 <ul>
   <li>Converges in a finite (small) number of steps <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l<sub>1</sub>-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: <a href="http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF">http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF</a></span></li>
