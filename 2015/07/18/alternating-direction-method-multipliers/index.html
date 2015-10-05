@@ -39,7 +39,7 @@
 <p>July 18, 2015</p>
 
 
-<p>Consider minimizing ​<script type="math/tex"> f({\bf x}) + g({\bf y}) </script> subject to affine constraints ​<script type="math/tex"> {\bf Ax} + {\bf By} = {\bf c} </script></p>
+<p>Consider minimizing ​<script> f({\bf x}) + g({\bf y}) </script> subject to affine constraints ​<script> {\bf Ax} + {\bf By} = {\bf c} </script></p>
 
 <p><strong>The augmented Lagrangian</strong></p>
 
@@ -47,7 +47,7 @@
 
 <!--more-->
 
-<p><strong>Idea</strong>: perform block descent on ​<script type="math/tex">{\bf x}</script> and ​<script type="math/tex">{\bf y}</script> and then update multiplier vector ​<script type="math/tex">{\bf \lambda}</script></p>
+<p><strong>Idea</strong>: perform block descent on ​<script>{\bf x}</script> and ​<script>{\bf y}</script> and then update multiplier vector ​<script>{\bf \lambda}</script></p>
 
 <p>​<script type="math/tex; mode=display">
 \begin{align}
@@ -62,7 +62,7 @@
 <p>Fused lasso problem minimizes<br />
 ​<script type="math/tex; mode=display"> \frac{1}{2} \| {\bf y - X\beta} \|^2_2 + \mu \sum^{p-1}_{j=1} |\beta_{j+1} - \beta_j |</script></p>
 
-<p>Define ​<script type="math/tex">{\bf \gamma = D\beta}</script>, where</p>
+<p>Define ​<script>{\bf \gamma = D\beta}</script>, where</p>
 
 <p>​<script type="math/tex; mode=display">
 D = \left(\begin{matrix}
@@ -73,7 +73,7 @@ D = \left(\begin{matrix}
 \right)
 </script></p>
 
-<p>Then we minimize ​<script type="math/tex"> \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \gamma \|_1 </script> subject to ​<script type="math/tex"> {\bf D\beta} = \gamma </script></p>
+<p>Then we minimize ​<script> \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \gamma \|_1 </script> subject to ​<script> {\bf D\beta} = \gamma </script></p>
 
 <p>Augmented Lagrangian is<br />
 ​<script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2 </script></p>
@@ -82,10 +82,10 @@ D = \left(\begin{matrix}
 
 <ul>
   <li>
-    <p>Update ​<script type="math/tex">{\bf \beta}</script> is a smooth quadratic problem</p>
+    <p>Update ​<script>{\bf \beta}</script> is a smooth quadratic problem</p>
   </li>
   <li>
-    <p>Update ​<script type="math/tex">{\bf \gamma}</script> is a separated lasso problem (elementwise thresholding)</p>
+    <p>Update ​<script>{\bf \gamma}</script> is a separated lasso problem (elementwise thresholding)</p>
   </li>
   <li>
     <p>Update multipliers</p>
@@ -94,7 +94,7 @@ D = \left(\begin{matrix}
 
 <p>​<script type="math/tex; mode=display">{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)})</script></p>
 
-<p>Same algorithm applies to a general regularization matrix ​<script type="math/tex">{\bf D}</script> (generalized lasso)</p>
+<p>Same algorithm applies to a general regularization matrix ​<script>{\bf D}</script> (generalized lasso)</p>
 
 <h2 id="remarks-on-admm">Remarks on ADMM</h2>
 
