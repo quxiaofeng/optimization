@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Oct 2015 10:39:24 +0800</pubDate>
-    <lastBuildDate>Mon, 05 Oct 2015 10:39:24 +0800</lastBuildDate>
+    <pubDate>Mon, 05 Oct 2015 10:49:15 +0800</pubDate>
+    <lastBuildDate>Mon, 05 Oct 2015 10:49:15 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -276,9 +276,9 @@
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \mathop{argmin} f(x) = g(x) + h(x) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;here, ​&lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; convex, differentiable, with &lt;strong&gt;dom&lt;/strong&gt; ​&lt;script type=&quot;math/tex&quot;&gt;g=\Re^n&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; convex, differentiable, with &lt;strong&gt;dom&lt;/strong&gt; ​&lt;script type=&quot;math/tex&quot;&gt;g=\Re^n&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;And ​&lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt; closed, convex, possibly nondifferentiable; ​&lt;script type=&quot;math/tex&quot;&gt;{\bf prox}_h&lt;/script&gt; is inexpensive&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt; closed, convex, possibly nondifferentiable; ​&lt;script type=&quot;math/tex&quot;&gt;{\bf prox}_h&lt;/script&gt; is inexpensive&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;proximal gradient algorithm&lt;/strong&gt;&lt;/p&gt;
 
@@ -299,7 +299,7 @@ x^+ &amp;amp; = &amp;amp;  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| 
     &amp;amp; = &amp;amp; \mathop{argmin}_u \left( h(u) + g(x) + \nabla g(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;here ​&lt;script type=&quot;math/tex&quot;&gt;x^+&lt;/script&gt; minimizes ​&lt;script type=&quot;math/tex&quot;&gt;h(u)&lt;/script&gt; plus a simple quadratic local of ​&lt;script type=&quot;math/tex&quot;&gt;g(u)&lt;/script&gt; around ​&lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;x^+&lt;/script&gt; minimizes ​&lt;script type=&quot;math/tex&quot;&gt;h(u)&lt;/script&gt; plus a simple quadratic local of ​&lt;script type=&quot;math/tex&quot;&gt;g(u)&lt;/script&gt; around ​&lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;examples&quot;&gt;Examples&lt;/h4&gt;
 
@@ -343,7 +343,7 @@ maximize &amp;amp; &amp;amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
 
 &lt;p&gt;prox-operator of ​&lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; (or ​&lt;script type=&quot;math/tex&quot;&gt;g^\ast&lt;/script&gt;) is cheap (closed form or simple algorithm)&lt;/p&gt;
 
-&lt;p&gt;here ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is strongly convex (​&lt;script type=&quot;math/tex&quot;&gt;f(x)-(\frac{\mu}{2})x^T&lt;/script&gt; is convex) implies ​&lt;script type=&quot;math/tex&quot;&gt;f^\ast\left(-A^Tz\right)&lt;/script&gt; has Lipschitz continuous gradient (​&lt;script type=&quot;math/tex&quot;&gt;L=\frac{\|A\|^2_2}{\mu}&lt;/script&gt;):&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is strongly convex (​&lt;script type=&quot;math/tex&quot;&gt;f(x)-(\frac{\mu}{2})x^T&lt;/script&gt; is convex) implies ​&lt;script type=&quot;math/tex&quot;&gt;f^\ast\left(-A^Tz\right)&lt;/script&gt; has Lipschitz continuous gradient (​&lt;script type=&quot;math/tex&quot;&gt;L=\frac{\|A\|^2_2}{\mu}&lt;/script&gt;):&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \left\| A\nabla f^\ast(-A^Tu)-A\nabla f^\ast(-A^Tv) \right\|_2 \leq \frac{\|A\|^2_2}{\mu}\|u-v\|_2 &lt;/script&gt;&lt;/p&gt;
 
@@ -420,7 +420,7 @@ minimize \; \; f(x) + \sum^p_{i=1}\|B_ix\|_2 \text{   (with } f \text{ strongly 
 z^+_i   &amp;amp; = &amp;amp; P_{C_i}(z_i + tB_i\hat{x}) \text{, } \; \; i=1, \cdots, p
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;here ​&lt;script type=&quot;math/tex&quot;&gt;C_i&lt;/script&gt; is unit Euclidean norm ball in ​&lt;script type=&quot;math/tex&quot;&gt;\Re^{m_i}&lt;/script&gt;, if ​&lt;script type=&quot;math/tex&quot;&gt;B_i \in \Re^{m_i \times n}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;C_i&lt;/script&gt; is unit Euclidean norm ball in ​&lt;script type=&quot;math/tex&quot;&gt;\Re^{m_i}&lt;/script&gt;, if ​&lt;script type=&quot;math/tex&quot;&gt;B_i \in \Re^{m_i \times n}&lt;/script&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;minimization-over-intersection-of-convex-sets&quot;&gt;Minimization over intersection of convex sets&lt;/h4&gt;
 
@@ -429,7 +429,7 @@ minimize   &amp;amp; &amp;amp; f(x) \\
 subject to &amp;amp; &amp;amp; x \in C_i \cap \cdots \cap C_m
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;here ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; strongly convex; e.g., ​&lt;script type=&quot;math/tex&quot;&gt;f(x) = \|x - a\|^2_2&lt;/script&gt; for projecting ​&lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; on intersection&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; strongly convex; e.g., ​&lt;script type=&quot;math/tex&quot;&gt;f(x) = \|x - a\|^2_2&lt;/script&gt; for projecting ​&lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; on intersection&lt;/p&gt;
 
 &lt;p&gt;sets ​&lt;script type=&quot;math/tex&quot;&gt;C_i&lt;/script&gt; are closed, convex, and easy to project onto&lt;/p&gt;
 
@@ -465,9 +465,9 @@ z^+_i        &amp;amp; = &amp;amp; prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{i
 minimize \; \; f(x) = g(x) + h(x)
 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;here ​&lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; convex, differentiable with ​&lt;script type=&quot;math/tex&quot;&gt;\mathop{dom} g=\Re^n&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; convex, differentiable with ​&lt;script type=&quot;math/tex&quot;&gt;\mathop{dom} g=\Re^n&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;and ​&lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt; closed, convex, with inexpensive ​&lt;script type=&quot;math/tex&quot;&gt;prox_{th}&lt;/script&gt; operator&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt; closed, convex, with inexpensive ​&lt;script type=&quot;math/tex&quot;&gt;prox_{th}&lt;/script&gt; operator&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;algorithm&lt;/strong&gt;: choose any ​&lt;script type=&quot;math/tex&quot;&gt;x^{(0)} = x^{(-1)}&lt;/script&gt;; for ​&lt;script type=&quot;math/tex&quot;&gt;k \geq 1&lt;/script&gt;, repeat the steps&lt;/p&gt;
 

@@ -229,9 +229,9 @@
 
 <p>​<script type="math/tex; mode=display"> \mathop{argmin} f(x) = g(x) + h(x) </script></p>
 
-<p>here, ​<script type="math/tex">g</script> convex, differentiable, with <strong>dom</strong> ​<script type="math/tex">g=\Re^n</script></p>
+<p>​<script type="math/tex">g</script> convex, differentiable, with <strong>dom</strong> ​<script type="math/tex">g=\Re^n</script></p>
 
-<p>And ​<script type="math/tex">h</script> closed, convex, possibly nondifferentiable; ​<script type="math/tex">{\bf prox}_h</script> is inexpensive</p>
+<p>​<script type="math/tex">h</script> closed, convex, possibly nondifferentiable; ​<script type="math/tex">{\bf prox}_h</script> is inexpensive</p>
 
 <p><strong>proximal gradient algorithm</strong></p>
 
@@ -252,7 +252,7 @@ x^+ &amp; = &amp;  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + 
     &amp; = &amp; \mathop{argmin}_u \left( h(u) + g(x) + \nabla g(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
 \end{eqnarray*}</script></p>
 
-<p>here ​<script type="math/tex">x^+</script> minimizes ​<script type="math/tex">h(u)</script> plus a simple quadratic local of ​<script type="math/tex">g(u)</script> around ​<script type="math/tex">x</script></p>
+<p>​<script type="math/tex">x^+</script> minimizes ​<script type="math/tex">h(u)</script> plus a simple quadratic local of ​<script type="math/tex">g(u)</script> around ​<script type="math/tex">x</script></p>
 
 <h4 id="examples">Examples</h4>
 
@@ -296,7 +296,7 @@ maximize &amp; &amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
 
 <p>prox-operator of ​<script type="math/tex">g</script> (or ​<script type="math/tex">g^\ast</script>) is cheap (closed form or simple algorithm)</p>
 
-<p>here ​<script type="math/tex">f</script> is strongly convex (​<script type="math/tex">f(x)-(\frac{\mu}{2})x^T</script> is convex) implies ​<script type="math/tex">f^\ast\left(-A^Tz\right)</script> has Lipschitz continuous gradient (​<script type="math/tex">L=\frac{\|A\|^2_2}{\mu}</script>):</p>
+<p>​<script type="math/tex">f</script> is strongly convex (​<script type="math/tex">f(x)-(\frac{\mu}{2})x^T</script> is convex) implies ​<script type="math/tex">f^\ast\left(-A^Tz\right)</script> has Lipschitz continuous gradient (​<script type="math/tex">L=\frac{\|A\|^2_2}{\mu}</script>):</p>
 
 <p>​<script type="math/tex; mode=display"> \left\| A\nabla f^\ast(-A^Tu)-A\nabla f^\ast(-A^Tv) \right\|_2 \leq \frac{\|A\|^2_2}{\mu}\|u-v\|_2 </script></p>
 
@@ -373,7 +373,7 @@ minimize \; \; f(x) + \sum^p_{i=1}\|B_ix\|_2 \text{   (with } f \text{ strongly 
 z^+_i   &amp; = &amp; P_{C_i}(z_i + tB_i\hat{x}) \text{, } \; \; i=1, \cdots, p
 \end{eqnarray*}</script></p>
 
-<p>here ​<script type="math/tex">C_i</script> is unit Euclidean norm ball in ​<script type="math/tex">\Re^{m_i}</script>, if ​<script type="math/tex">B_i \in \Re^{m_i \times n}</script></p>
+<p>​<script type="math/tex">C_i</script> is unit Euclidean norm ball in ​<script type="math/tex">\Re^{m_i}</script>, if ​<script type="math/tex">B_i \in \Re^{m_i \times n}</script></p>
 
 <h4 id="minimization-over-intersection-of-convex-sets">Minimization over intersection of convex sets</h4>
 
@@ -382,7 +382,7 @@ minimize   &amp; &amp; f(x) \\
 subject to &amp; &amp; x \in C_i \cap \cdots \cap C_m
 \end{eqnarray*}</script></p>
 
-<p>here ​<script type="math/tex">f</script> strongly convex; e.g., ​<script type="math/tex">f(x) = \|x - a\|^2_2</script> for projecting ​<script type="math/tex">a</script> on intersection</p>
+<p>​<script type="math/tex">f</script> strongly convex; e.g., ​<script type="math/tex">f(x) = \|x - a\|^2_2</script> for projecting ​<script type="math/tex">a</script> on intersection</p>
 
 <p>sets ​<script type="math/tex">C_i</script> are closed, convex, and easy to project onto</p>
 
@@ -418,9 +418,9 @@ z^+_i        &amp; = &amp; prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x
 minimize \; \; f(x) = g(x) + h(x)
 </script></p>
 
-<p>here ​<script type="math/tex">g</script> convex, differentiable with ​<script type="math/tex">\mathop{dom} g=\Re^n</script></p>
+<p>​<script type="math/tex">g</script> convex, differentiable with ​<script type="math/tex">\mathop{dom} g=\Re^n</script></p>
 
-<p>and ​<script type="math/tex">h</script> closed, convex, with inexpensive ​<script type="math/tex">prox_{th}</script> operator</p>
+<p>​<script type="math/tex">h</script> closed, convex, with inexpensive ​<script type="math/tex">prox_{th}</script> operator</p>
 
 <p><strong>algorithm</strong>: choose any ​<script type="math/tex">x^{(0)} = x^{(-1)}</script>; for ​<script type="math/tex">k \geq 1</script>, repeat the steps</p>
 
