@@ -6,7 +6,7 @@ module Jekyll
   end
   class MathJaxInlineTag < Liquid::Tag
     def render(context)
-      '&#8203;<script type="math/tex">'
+      '&#8203;<script>'
     end
   end
   class MathJaxEndBlockTag < Liquid::Tag
