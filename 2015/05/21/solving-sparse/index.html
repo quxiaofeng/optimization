@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>稀疏编码的优化问题 | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="稀疏编码问题：  ​用 alternating minimization (ADM)Primal-dual 算法Soft threshold">
+  <meta name="description" content="稀疏编码问题：  ​  用 alternating minimization (ADM)  Primal-dual 算法  Soft threshold">
 
 
   <link rel="stylesheet" href="//www.optimizations.ml/css/tufte.css">
@@ -41,37 +41,28 @@
 
 <p>稀疏编码问题：  ​<script type="math/tex"> \arg\min_x f(x)\left\|y-Ax\right\|^2+ \lambda\|x\|_1 </script></p>
 
-<p>用 alternating minimization (ADM)</p>
-
-<p>Primal-dual 算法</p>
-
-<p>Soft threshold</p>
+<ul>
+  <li>用 alternating minimization (ADM)</li>
+  <li>Primal-dual 算法</li>
+  <li>Soft threshold</li>
+</ul>
 
 <!--more-->
 
-<p>字典学习 K-SVD</p>
-
-<p>看完 K-SVD 之后，图像分类: Discriminative K-SVD for Dictionary Learning in Face Recognition (CVPR)，Label Consistent K-SVD Learning a Discriminative Dictionary for Recognition （TPAMI）；结构化稀疏: Robust Classiﬁcation using Structured Sparse Representation （CVPR）；低秩: Learning Structured Low-rank Representations for Image Classiﬁcation （CVPR）。</p>
-
-<p>关于稀疏表示的已有算法的分析: A survey of sparse representation: algorithms and applications</p>
-
-<p>参考林倞老师<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> <a href="http://ss.sysu.edu.cn/~ll/">林倞教授 中山大学计算机科学</a></span> NIPS, ACML 和 ML 一系列工作的报告。基本上 ADM 及其扩展都介绍到了。</p>
-
-<p><span class="newthought">迭代优化</span></p>
-
-<p>​<script type="math/tex">\sum_{i=1}^p\left\|y^{(i)}-A\cdot x^{(i)}\right\|_2^2 + \sum_{i=1}^p S\left(x^{(i)}\right) </script></p>
-
-<p>凸的稀疏模型求基于 proximal operator 的 alternating minimization。参考 boyd 的文章。</p>
-
-<p>An ADMM Solution to the Sparse Coding Problem: <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> <a href="http://stanford.edu/class/ee364b/projects/2011projects/reports/bhaskar_zou.pdf">http://stanford.edu/class/ee364b/projects/2011projects/reports/bhaskar_zou.pdf</a></span></p>
-
-<p><a href="http://www.eecs.berkeley.edu/~yang/software/l1benchmark/">http://www.eecs.berkeley.edu/~yang/software/l1benchmark/</a></p>
-
-<p>这篇文章 <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://web.stanford.edu/~boyd/papers/prox_algs.html">http://web.stanford.edu/~boyd/papers/prox_algs.html</a></span> 从 proximal operator 角度讲解，更加深入一点。</p>
-
-<p>南京大学何炳生老师的课程 <sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> <a href="http://math.nju.edu.cn/~hebma/">http://math.nju.edu.cn/~hebma/</a></span>，讲得比较深入。</p>
-
-<p>biconvex 问题，基本是个保证收敛的算法效果就还行。</p>
+<ul>
+  <li>字典学习 K-SVD</li>
+  <li>看完 K-SVD 之后，图像分类: Discriminative K-SVD for Dictionary Learning in Face Recognition (CVPR)，Label Consistent K-SVD Learning a Discriminative Dictionary for Recognition （TPAMI）；结构化稀疏: Robust Classiﬁcation using Structured Sparse Representation （CVPR）；低秩: Learning Structured Low-rank Representations for Image Classiﬁcation （CVPR）。</li>
+  <li>关于稀疏表示的已有算法的分析: A survey of sparse representation: algorithms and applications</li>
+  <li>参考林倞老师<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> <a href="http://ss.sysu.edu.cn/~ll/">林倞教授 中山大学计算机科学</a></span> NIPS, ACML 和 ML 一系列工作的报告。基本上 ADM 及其扩展都介绍到了。</li>
+  <li><span class="newthought">迭代优化</span></li>
+  <li>​<script type="math/tex">\sum_{i=1}^p\left\|y^{(i)}-A\cdot x^{(i)}\right\|_2^2 + \sum_{i=1}^p S\left(x^{(i)}\right) </script></li>
+  <li>凸的稀疏模型求基于 proximal operator 的 alternating minimization。参考 boyd 的文章。</li>
+  <li>An ADMM Solution to the Sparse Coding Problem: <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> <a href="http://stanford.edu/class/ee364b/projects/2011projects/reports/bhaskar_zou.pdf">http://stanford.edu/class/ee364b/projects/2011projects/reports/bhaskar_zou.pdf</a></span></li>
+  <li><a href="http://www.eecs.berkeley.edu/~yang/software/l1benchmark/">http://www.eecs.berkeley.edu/~yang/software/l1benchmark/</a></li>
+  <li>这篇文章 <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://web.stanford.edu/~boyd/papers/prox_algs.html">http://web.stanford.edu/~boyd/papers/prox_algs.html</a></span> 从 proximal operator 角度讲解，更加深入一点。</li>
+  <li>南京大学何炳生老师的课程 <sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> <a href="http://math.nju.edu.cn/~hebma/">http://math.nju.edu.cn/~hebma/</a></span>，讲得比较深入。</li>
+  <li>biconvex 问题，基本是个保证收敛的算法效果就还行。</li>
+</ul>
 
 
 
