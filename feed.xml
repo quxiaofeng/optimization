@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Oct 2015 11:03:09 +0800</pubDate>
-    <lastBuildDate>Mon, 05 Oct 2015 11:03:09 +0800</lastBuildDate>
+    <pubDate>Tue, 06 Oct 2015 11:42:48 +0800</pubDate>
+    <lastBuildDate>Tue, 06 Oct 2015 11:42:48 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -17,29 +17,29 @@
 
 &lt;p&gt;&lt;strong&gt;K-means 算法&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;任务：通过最近邻寻找能够表达数据样本 ​&lt;script&gt;\{ {\bf y}_i \}^N_{i=1} &lt;/script&gt; 的最优编码本（codebook，既字典参数），既求解如下问题&lt;/p&gt;
+&lt;p&gt;任务：通过最近邻寻找能够表达数据样本 ​&lt;script type=&quot;math/tex&quot;&gt;\{ {\bf y}_i \}^N_{i=1} &lt;/script&gt; 的最优编码本（codebook，既字典参数），既求解如下问题&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\min_{\bf C, X} \left\{ \|{\bf Y} - {\bf CX}\|^2_F \right\} \text{ subject to } \forall i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k &lt;/script&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;p&gt;初始化： 设置编码本矩阵 ​&lt;script&gt;{\bf C}^{(0)} \in \Re^{n \times K}&lt;/script&gt;. 设置 ​&lt;script&gt;J=1&lt;/script&gt;。&lt;/p&gt;
+&lt;p&gt;初始化： 设置编码本矩阵 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf C}^{(0)} \in \Re^{n \times K}&lt;/script&gt;. 设置 ​&lt;script type=&quot;math/tex&quot;&gt;J=1&lt;/script&gt;。&lt;/p&gt;
 
 &lt;p&gt;循环至收敛 （使用停止规则）&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 稀疏编码阶段：将训练样本 ​&lt;script&gt;{\bf Y}&lt;/script&gt; 分为如下 ​&lt;script&gt;K&lt;/script&gt; 个集合。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 稀疏编码阶段：将训练样本 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf Y}&lt;/script&gt; 分为如下 ​&lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; 个集合。&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\left( {\bf R}^{(J-1)}_1, {\bf R}^{(J-1)}_2, \cdots, {\bf R}^{(J-1)}_K \right)&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;每个集合中存放与 ​&lt;script&gt;{\bf c}^{J-1}_k&lt;/script&gt; 列最相似的样本的索引。&lt;/p&gt;
+&lt;p&gt;每个集合中存放与 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf c}^{J-1}_k&lt;/script&gt; 列最相似的样本的索引。&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 &amp;lt; \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\} &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 编码本更新阶段：​&lt;script&gt;{\bf C}^{(J-1)}&lt;/script&gt; 中的任一列 ​&lt;script&gt;k&lt;/script&gt; 都根据如下公式更新。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 编码本更新阶段：​&lt;script type=&quot;math/tex&quot;&gt;{\bf C}^{(J-1)}&lt;/script&gt; 中的任一列 ​&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; 都根据如下公式更新。&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf c}^{(J)}_k = \frac{1}{|{\bf R}_k|}\sum_{i \in {\bf R}^{(J-1)}_k}{\bf y}_i&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 令​&lt;script&gt; J = J + 1 &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 令​&lt;script type=&quot;math/tex&quot;&gt; J = J + 1 &lt;/script&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -73,7 +73,7 @@
     &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;​&lt;script&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 </description>
@@ -118,45 +118,45 @@
 
 &lt;h3 id=&quot;section-2&quot;&gt;凸函数、闭函数&lt;/h3&gt;
 
-&lt;p&gt;给定函数 ​&lt;script&gt;f : \Re^n \to [-\infty, +\infty] &lt;/script&gt;，称 ​&lt;script&gt;\Re^{n+1}&lt;/script&gt; 的子集&lt;/p&gt;
+&lt;p&gt;给定函数 ​&lt;script type=&quot;math/tex&quot;&gt;f : \Re^n \to [-\infty, +\infty] &lt;/script&gt;，称 ​&lt;script type=&quot;math/tex&quot;&gt;\Re^{n+1}&lt;/script&gt; 的子集&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; graph \; f = \left\{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \right\} , &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;为 ​&lt;script&gt;f&lt;/script&gt; 的&lt;strong&gt;图像&lt;/strong&gt;（graph），而称位于 ​&lt;script&gt;f&lt;/script&gt; 的图像上方的点的全体构成的集合&lt;/p&gt;
+&lt;p&gt;为 ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的&lt;strong&gt;图像&lt;/strong&gt;（graph），而称位于 ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的图像上方的点的全体构成的集合&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;epi \; f =\left\{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \geqslant f({\bf x}) \right\} &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;为 ​&lt;script&gt;f&lt;/script&gt; 的&lt;strong&gt;上图&lt;/strong&gt;（epigraph）。若上图 ​&lt;script&gt;epi \; f&lt;/script&gt; 为凸集，则称 ​&lt;script&gt;f&lt;/script&gt; 为&lt;strong&gt;凸函数&lt;/strong&gt;(convex function)。&lt;/p&gt;
+&lt;p&gt;为 ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的&lt;strong&gt;上图&lt;/strong&gt;（epigraph）。若上图 ​&lt;script type=&quot;math/tex&quot;&gt;epi \; f&lt;/script&gt; 为凸集，则称 ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 为&lt;strong&gt;凸函数&lt;/strong&gt;(convex function)。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;定理 2.27&lt;/strong&gt; 设 ​&lt;script&gt; \mathcal{I} &lt;/script&gt; 为任意非空指标集，而 ​&lt;script&gt;f_i : \Re^n \to [-\infty, +\infty] \; (i \in \mathcal{I})&lt;/script&gt; 均为凸函数，则由&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定理 2.27&lt;/strong&gt; 设 ​&lt;script type=&quot;math/tex&quot;&gt; \mathcal{I} &lt;/script&gt; 为任意非空指标集，而 ​&lt;script type=&quot;math/tex&quot;&gt;f_i : \Re^n \to [-\infty, +\infty] \; (i \in \mathcal{I})&lt;/script&gt; 均为凸函数，则由&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; f({\bf x}) = \sup \left\{ f_i({\bf x}) \mid i \in \mathcal{I} \right\} &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;定义的函数 ​&lt;script&gt;f : \Re^n \to [-\infty, +\infty] &lt;/script&gt; 为凸函数。进一步，若 ​&lt;script&gt;\mathcal{I}&lt;/script&gt; 为有限指标集，每个 ​&lt;script&gt;f_i&lt;/script&gt; 均为正常的凸函数，并且 ​&lt;script&gt;\cap_{i \in \mathcal{I}} \; dom \; f_i \neq \varnothing &lt;/script&gt;，则 ​&lt;script&gt;f&lt;/script&gt; 为正常凸函数。&lt;/p&gt;
+&lt;p&gt;定义的函数 ​&lt;script type=&quot;math/tex&quot;&gt;f : \Re^n \to [-\infty, +\infty] &lt;/script&gt; 为凸函数。进一步，若 ​&lt;script type=&quot;math/tex&quot;&gt;\mathcal{I}&lt;/script&gt; 为有限指标集，每个 ​&lt;script type=&quot;math/tex&quot;&gt;f_i&lt;/script&gt; 均为正常的凸函数，并且 ​&lt;script type=&quot;math/tex&quot;&gt;\cap_{i \in \mathcal{I}} \; dom \; f_i \neq \varnothing &lt;/script&gt;，则 ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 为正常凸函数。&lt;/p&gt;
 
-&lt;p&gt;若对任意收敛于 ​&lt;script&gt;{\bf x}&lt;/script&gt; 的点列 ​&lt;script&gt;\{ {\bf x}^k\} \subseteq \Re^n&lt;/script&gt; 均有&lt;/p&gt;
+&lt;p&gt;若对任意收敛于 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 的点列 ​&lt;script type=&quot;math/tex&quot;&gt;\{ {\bf x}^k\} \subseteq \Re^n&lt;/script&gt; 均有&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; f({\bf x}) \geqslant \limsup_{k \to \infty}f({\bf x}^k) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;成立，则称函数 ​&lt;script&gt;f:\Re^n\to[-\infty,+\infty]&lt;/script&gt; 在 ​&lt;script&gt;{\bf x}&lt;/script&gt; 处&lt;strong&gt;上半连续&lt;/strong&gt;（upper semicontinuous）；反之，当&lt;/p&gt;
+&lt;p&gt;成立，则称函数 ​&lt;script type=&quot;math/tex&quot;&gt;f:\Re^n\to[-\infty,+\infty]&lt;/script&gt; 在 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 处&lt;strong&gt;上半连续&lt;/strong&gt;（upper semicontinuous）；反之，当&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; f({\bf x}) \leqslant \liminf_{k \to \infty}f({\bf x}^k) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;成立时，称 ​&lt;script&gt;f&lt;/script&gt; 在 ​&lt;script&gt;{\bf x}&lt;/script&gt; 处&lt;strong&gt;下半连续&lt;/strong&gt;（lower semicontinuous）。若 ​&lt;script&gt;f&lt;/script&gt; 在 ​&lt;script&gt;{\bf x}&lt;/script&gt; 处既为上半连续又为下半连续，则称 ​&lt;script&gt;f&lt;/script&gt; 在 ​&lt;script&gt;{\bf x}&lt;/script&gt; 处&lt;strong&gt;连续&lt;/strong&gt;（continuous）。&lt;/p&gt;
+&lt;p&gt;成立时，称 ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 在 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 处&lt;strong&gt;下半连续&lt;/strong&gt;（lower semicontinuous）。若 ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 在 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 处既为上半连续又为下半连续，则称 ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 在 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 处&lt;strong&gt;连续&lt;/strong&gt;（continuous）。&lt;/p&gt;
 
 &lt;h3 id=&quot;section-3&quot;&gt;共轭函数&lt;/h3&gt;
 
-&lt;p&gt;给定正常凸函数 ​&lt;script&gt;f:\Re^n \to (-\infty,+\infty]&lt;/script&gt;，由&lt;/p&gt;
+&lt;p&gt;给定正常凸函数 ​&lt;script type=&quot;math/tex&quot;&gt;f:\Re^n \to (-\infty,+\infty]&lt;/script&gt;，由&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;f^\ast({\bf\xi}) = \sup \left\{ &amp;lt;{\bf x},{\bf\xi}&amp;gt;-f({\bf x}) \mid {\bf x}\in \Re^n \right\} &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;定义的函数 ​&lt;script&gt;f^\ast:\Re^n \to [-\infty,+\infty]&lt;/script&gt; 称为 ​&lt;script&gt;f&lt;/script&gt; 的&lt;strong&gt;共轭函数&lt;/strong&gt;（conjuagate function）。&lt;/p&gt;
+&lt;p&gt;定义的函数 ​&lt;script type=&quot;math/tex&quot;&gt;f^\ast:\Re^n \to [-\infty,+\infty]&lt;/script&gt; 称为 ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的&lt;strong&gt;共轭函数&lt;/strong&gt;（conjuagate function）。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;定理 2.36&lt;/strong&gt; 正常凸函数 ​&lt;script&gt;f:\Re^n \to (-\infty,+\infty]&lt;/script&gt; 的共轭函数 ​&lt;script&gt;f^\ast&lt;/script&gt; 必为闭正常凸函数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定理 2.36&lt;/strong&gt; 正常凸函数 ​&lt;script type=&quot;math/tex&quot;&gt;f:\Re^n \to (-\infty,+\infty]&lt;/script&gt; 的共轭函数 ​&lt;script type=&quot;math/tex&quot;&gt;f^\ast&lt;/script&gt; 必为闭正常凸函数。&lt;/p&gt;
 
 &lt;h3 id=&quot;section-4&quot;&gt;鞍点问题&lt;/h3&gt;
 
-&lt;p&gt;设 ​&lt;script&gt;Y&lt;/script&gt; 与 ​&lt;script&gt;Z&lt;/script&gt; 分别为 ​&lt;script&gt;\Re^n&lt;/script&gt; 与 ​&lt;script&gt;\Re^m&lt;/script&gt; 的非空子集，给定以 ​&lt;script&gt;Y\times Z&lt;/script&gt; 为定义域的函数 ​&lt;script&gt;K:Y\times Z\to[-\infty,+\infty]&lt;/script&gt;，定义两个函数 ​&lt;script&gt;\eta:Y\to[-\infty,+\infty]&lt;/script&gt; 与 ​&lt;script&gt;\zeta:Z\to[-\infty,+\infty]&lt;/script&gt; 如下：&lt;/p&gt;
+&lt;p&gt;设 ​&lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; 与 ​&lt;script type=&quot;math/tex&quot;&gt;Z&lt;/script&gt; 分别为 ​&lt;script type=&quot;math/tex&quot;&gt;\Re^n&lt;/script&gt; 与 ​&lt;script type=&quot;math/tex&quot;&gt;\Re^m&lt;/script&gt; 的非空子集，给定以 ​&lt;script type=&quot;math/tex&quot;&gt;Y\times Z&lt;/script&gt; 为定义域的函数 ​&lt;script type=&quot;math/tex&quot;&gt;K:Y\times Z\to[-\infty,+\infty]&lt;/script&gt;，定义两个函数 ​&lt;script type=&quot;math/tex&quot;&gt;\eta:Y\to[-\infty,+\infty]&lt;/script&gt; 与 ​&lt;script type=&quot;math/tex&quot;&gt;\zeta:Z\to[-\infty,+\infty]&lt;/script&gt; 如下：&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta({\bf y})=\sup\left\{ K({\bf y},{\bf z}) \mid {\bf z} \in Z\right\} &lt;/script&gt;&lt;/p&gt;
 
@@ -166,10 +166,10 @@
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\max \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;引理 4.1&lt;/strong&gt; 对任意 ​&lt;script&gt;{\bf y}\in Y&lt;/script&gt; 与 ​&lt;script&gt;{\bf z}\in Z&lt;/script&gt; 均有 ​&lt;script&gt;\zeta({\bf z}) \leqslant \eta({\bf y})&lt;/script&gt; 成立。进一步，还有&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;引理 4.1&lt;/strong&gt; 对任意 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf y}\in Y&lt;/script&gt; 与 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf z}\in Z&lt;/script&gt; 均有 ​&lt;script type=&quot;math/tex&quot;&gt;\zeta({\bf z}) \leqslant \eta({\bf y})&lt;/script&gt; 成立。进一步，还有&lt;br /&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sup\left\{ \zeta({\bf z})\mid {\bf z}\in Z\right\} \leqslant \inf\left\{ \eta({\bf y})\mid {\bf y} \in Y\right\} &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;定理 4.1&lt;/strong&gt; 点 ​&lt;script&gt;(\bar{\bf y},\bar{\bf z})\in Y\times Z&lt;/script&gt; 为函数 ​&lt;script&gt;K:Y\times Z\to[-\infty,+\infty]&lt;/script&gt; 的鞍点的充要条件是 ​&lt;script&gt;\bar{\bf y}\in Y&lt;/script&gt; 与 ​&lt;script&gt;\bar{\bf z}\in Z&lt;/script&gt; 满足&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定理 4.1&lt;/strong&gt; 点 ​&lt;script type=&quot;math/tex&quot;&gt;(\bar{\bf y},\bar{\bf z})\in Y\times Z&lt;/script&gt; 为函数 ​&lt;script type=&quot;math/tex&quot;&gt;K:Y\times Z\to[-\infty,+\infty]&lt;/script&gt; 的鞍点的充要条件是 ​&lt;script type=&quot;math/tex&quot;&gt;\bar{\bf y}\in Y&lt;/script&gt; 与 ​&lt;script type=&quot;math/tex&quot;&gt;\bar{\bf z}\in Z&lt;/script&gt; 满足&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta(\bar{\bf y})=\inf\left\{ \eta({\bf y})\mid {\bf y}\in Y\right\} =\sup\left\{ \zeta({\bf z})\mid {\bf z}\in Z\right\} =\zeta(\bar{\bf z})&lt;/script&gt;&lt;/p&gt;
 
@@ -179,7 +179,7 @@
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \min \; \; f({\bf x}) \\ s.t. \; \; g_i({\bf x}) \leqslant 0, \; \; i=1, \cdots, m&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;其中 ​&lt;script&gt;f: \Re^n \to \Re&lt;/script&gt;, ​&lt;script&gt;g_i: \Re^n \to \Re (i=1, \cdots, m)&lt;/script&gt;。&lt;/p&gt;
+&lt;p&gt;其中 ​&lt;script type=&quot;math/tex&quot;&gt;f: \Re^n \to \Re&lt;/script&gt;, ​&lt;script type=&quot;math/tex&quot;&gt;g_i: \Re^n \to \Re (i=1, \cdots, m)&lt;/script&gt;。&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}&lt;/script&gt;&lt;/p&gt;
 
@@ -205,7 +205,7 @@
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, \cdots, m \right\} &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;引理 4.5&lt;/strong&gt; Lagrange 函数 ​&lt;script&gt;L_0: \Re^{n+m} \to [-\infty, +\infty) &lt;/script&gt; 与函数 ​&lt;script&gt;F_0: \Re^{n+m} \to (-\infty,+\infty]&lt;/script&gt; 之间有如下关系成立：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;引理 4.5&lt;/strong&gt; Lagrange 函数 ​&lt;script type=&quot;math/tex&quot;&gt;L_0: \Re^{n+m} \to [-\infty, +\infty) &lt;/script&gt; 与函数 ​&lt;script type=&quot;math/tex&quot;&gt;F_0: \Re^{n+m} \to (-\infty,+\infty]&lt;/script&gt; 之间有如下关系成立：&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;L_0({\bf x}, {\bf \lambda}) = \inf \left\{ F_0({\bf x}, {\bf u}) + &amp;lt;{\bf \lambda}, {\bf u}&amp;gt; \mid {\bf u} \in \Re^m \right\}&lt;/script&gt;&lt;/p&gt;
 
@@ -213,11 +213,11 @@
 
 &lt;h3 id=&quot;lagrange--1&quot;&gt;Lagrange 对偶性的推广&lt;/h3&gt;
 
-&lt;p&gt;对于原始问题 ​&lt;script&gt;(P)&lt;/script&gt;，考虑函数 ​&lt;script&gt;F: \Re^{n+M} \to (-\infty, +\infty]&lt;/script&gt;，使得对任意固定的 ​&lt;script&gt;{\bf x} \in \Re^n&lt;/script&gt;，​&lt;script&gt;F({\bf x}, \cdot): \Re^M \to (-\infty, +\infty]&lt;/script&gt; 均为闭正常凸函数，并且满足&lt;/p&gt;
+&lt;p&gt;对于原始问题 ​&lt;script type=&quot;math/tex&quot;&gt;(P)&lt;/script&gt;，考虑函数 ​&lt;script type=&quot;math/tex&quot;&gt;F: \Re^{n+M} \to (-\infty, +\infty]&lt;/script&gt;，使得对任意固定的 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x} \in \Re^n&lt;/script&gt;，​&lt;script type=&quot;math/tex&quot;&gt;F({\bf x}, \cdot): \Re^M \to (-\infty, +\infty]&lt;/script&gt; 均为闭正常凸函数，并且满足&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; F({\bf x}, {\bf 0}) = \theta({\bf x}) \text{, } {\bf x} \in \Re^n &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;例 4.7&lt;/strong&gt; 设 ​&lt;script&gt;M = m&lt;/script&gt;，考虑函数 ​&lt;script&gt;F_0: \Re^{n+m} \to (-\infty, +\infty]&lt;/script&gt;，利用满足 ​&lt;script&gt;q({\bf 0}) = 0&lt;/script&gt; 的闭正常凸函数 ​&lt;script&gt;q: \Re^m \to (-\infty, +\infty]&lt;/script&gt; 定义函数 ​&lt;script&gt;F: \Re^{n+m} \to (-\infty, +\infty]&lt;/script&gt; 如下：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例 4.7&lt;/strong&gt; 设 ​&lt;script type=&quot;math/tex&quot;&gt;M = m&lt;/script&gt;，考虑函数 ​&lt;script type=&quot;math/tex&quot;&gt;F_0: \Re^{n+m} \to (-\infty, +\infty]&lt;/script&gt;，利用满足 ​&lt;script type=&quot;math/tex&quot;&gt;q({\bf 0}) = 0&lt;/script&gt; 的闭正常凸函数 ​&lt;script type=&quot;math/tex&quot;&gt;q: \Re^m \to (-\infty, +\infty]&lt;/script&gt; 定义函数 ​&lt;script type=&quot;math/tex&quot;&gt;F: \Re^{n+m} \to (-\infty, +\infty]&lt;/script&gt; 如下：&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; F({\bf x}, {\bf u}) = F_0({\bf x}, {\bf u}) + q({\bf u}) &lt;/script&gt;&lt;/p&gt;
 
@@ -250,19 +250,19 @@
 
 &lt;h4 id=&quot;proximal-mapping&quot;&gt;Proximal mapping&lt;/h4&gt;
 
-&lt;p&gt;The &lt;strong&gt;proximal mapping&lt;/strong&gt; (or proximal operator) of a convex function ​&lt;script&gt;h&lt;/script&gt; is&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;proximal mapping&lt;/strong&gt; (or proximal operator) of a convex function ​&lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt; is&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf prox}_h(x) = \mathop{argmin}_u \left( h(u) + \frac{1}{2} \|u - x\|^2_2 \right)&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;examples&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; ​&lt;script&gt;h(x) = 0: {\bf prox}_h(x) = x&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; ​&lt;script type=&quot;math/tex&quot;&gt;h(x) = 0: {\bf prox}_h(x) = x&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; ​&lt;script&gt;h(x) = I_C(x)&lt;/script&gt; (indicator function of ​&lt;script&gt;C&lt;/script&gt;): ​&lt;script&gt;{\bf prox}_h&lt;/script&gt; is projection on ​&lt;script&gt;C&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; ​&lt;script type=&quot;math/tex&quot;&gt;h(x) = I_C(x)&lt;/script&gt; (indicator function of ​&lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;): ​&lt;script type=&quot;math/tex&quot;&gt;{\bf prox}_h&lt;/script&gt; is projection on ​&lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf prox}_h(x) = P_C(x) = \mathop{argmin}_{u \in C} \|u - x\|^2_2 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; ​&lt;script&gt;h(x) = t \|x\|_1&lt;/script&gt;: ​&lt;script&gt;{\bf prox}_h&lt;/script&gt; is shinkage (soft threshold) operation&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; ​&lt;script type=&quot;math/tex&quot;&gt;h(x) = t \|x\|_1&lt;/script&gt;: ​&lt;script type=&quot;math/tex&quot;&gt;{\bf prox}_h&lt;/script&gt; is shinkage (soft threshold) operation&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf prox}_h = \begin{cases}
     x_i - t &amp;amp; x_i   \geqslant t \\
@@ -276,9 +276,9 @@
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \mathop{argmin} f(x) = g(x) + h(x) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script&gt;g&lt;/script&gt; convex, differentiable, with &lt;strong&gt;dom&lt;/strong&gt; ​&lt;script&gt;g=\Re^n&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; convex, differentiable, with &lt;strong&gt;dom&lt;/strong&gt; ​&lt;script type=&quot;math/tex&quot;&gt;g=\Re^n&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script&gt;h&lt;/script&gt; closed, convex, possibly nondifferentiable; ​&lt;script&gt;{\bf prox}_h&lt;/script&gt; is inexpensive&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt; closed, convex, possibly nondifferentiable; ​&lt;script type=&quot;math/tex&quot;&gt;{\bf prox}_h&lt;/script&gt; is inexpensive&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;proximal gradient algorithm&lt;/strong&gt;&lt;/p&gt;
 
@@ -299,21 +299,21 @@ x^+ &amp;amp; = &amp;amp;  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| 
     &amp;amp; = &amp;amp; \mathop{argmin}_u \left( h(u) + g(x) + \nabla g(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script&gt;x^+&lt;/script&gt; minimizes ​&lt;script&gt;h(u)&lt;/script&gt; plus a simple quadratic local of ​&lt;script&gt;g(u)&lt;/script&gt; around ​&lt;script&gt;x&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;x^+&lt;/script&gt; minimizes ​&lt;script type=&quot;math/tex&quot;&gt;h(u)&lt;/script&gt; plus a simple quadratic local of ​&lt;script type=&quot;math/tex&quot;&gt;g(u)&lt;/script&gt; around ​&lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;examples&quot;&gt;Examples&lt;/h4&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; minimize \; \; g(x) + h(x) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;gradient method&lt;/strong&gt;: ​&lt;script&gt;h(x) = 0&lt;/script&gt;, i.e., minimize g(x)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;gradient method&lt;/strong&gt;: ​&lt;script type=&quot;math/tex&quot;&gt;h(x) = 0&lt;/script&gt;, i.e., minimize g(x)&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^{(k)} = x^{(k-1)} - t_k\nabla g\left( x^{(k-1)} \right)&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;gradient projection method&lt;/strong&gt;: ​&lt;script&gt;h(x) = I_C(x)&lt;/script&gt;, i.e., minimize ​&lt;script&gt;g(x)&lt;/script&gt; over ​&lt;script&gt;C&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;gradient projection method&lt;/strong&gt;: ​&lt;script type=&quot;math/tex&quot;&gt;h(x) = I_C(x)&lt;/script&gt;, i.e., minimize ​&lt;script type=&quot;math/tex&quot;&gt;g(x)&lt;/script&gt; over ​&lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^{(k)} = P_C \left( x^{(k-1)} - t_k\nabla g \left(x^{(k-1)} \right) \right) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;iterative soft-thresholding&lt;/strong&gt;: ​&lt;script&gt;h(x) = \|x\|_1&lt;/script&gt;, i.e., ​&lt;script&gt; minimize \; \; g(x)+ \| x \|_1&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;iterative soft-thresholding&lt;/strong&gt;: ​&lt;script type=&quot;math/tex&quot;&gt;h(x) = \|x\|_1&lt;/script&gt;, i.e., ​&lt;script type=&quot;math/tex&quot;&gt; minimize \; \; g(x)+ \| x \|_1&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k\nabla g\left( x^{(k-1)} \right)  \right) &lt;/script&gt;&lt;/p&gt;
 
@@ -341,29 +341,29 @@ maximize &amp;amp; &amp;amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
 
 &lt;p&gt;dual has the right structure for the proximal gradient method if&lt;/p&gt;
 
-&lt;p&gt;prox-operator of ​&lt;script&gt;g&lt;/script&gt; (or ​&lt;script&gt;g^\ast&lt;/script&gt;) is cheap (closed form or simple algorithm)&lt;/p&gt;
+&lt;p&gt;prox-operator of ​&lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; (or ​&lt;script type=&quot;math/tex&quot;&gt;g^\ast&lt;/script&gt;) is cheap (closed form or simple algorithm)&lt;/p&gt;
 
-&lt;p&gt;​&lt;script&gt;f&lt;/script&gt; is strongly convex (​&lt;script&gt;f(x)-(\frac{\mu}{2})x^T&lt;/script&gt; is convex) implies ​&lt;script&gt;f^\ast\left(-A^Tz\right)&lt;/script&gt; has Lipschitz continuous gradient (​&lt;script&gt;L=\frac{\|A\|^2_2}{\mu}&lt;/script&gt;):&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is strongly convex (​&lt;script type=&quot;math/tex&quot;&gt;f(x)-(\frac{\mu}{2})x^T&lt;/script&gt; is convex) implies ​&lt;script type=&quot;math/tex&quot;&gt;f^\ast\left(-A^Tz\right)&lt;/script&gt; has Lipschitz continuous gradient (​&lt;script type=&quot;math/tex&quot;&gt;L=\frac{\|A\|^2_2}{\mu}&lt;/script&gt;):&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \left\| A\nabla f^\ast(-A^Tu)-A\nabla f^\ast(-A^Tv) \right\|_2 \leq \frac{\|A\|^2_2}{\mu}\|u-v\|_2 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;because ​&lt;script&gt;\nabla f^2&lt;/script&gt; is Lipschitz continuous with constant ​&lt;script&gt;\frac{1}{\mu}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;because ​&lt;script type=&quot;math/tex&quot;&gt;\nabla f^2&lt;/script&gt; is Lipschitz continuous with constant ​&lt;script type=&quot;math/tex&quot;&gt;\frac{1}{\mu}&lt;/script&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;dual-proximal-gradient-update&quot;&gt;Dual proximal gradient update&lt;/h4&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; z^+ = prox_{tg\ast}\left( z+tA\nabla f^\ast\left( -A^Tz \right) \right) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;equivalent expression in term of ​&lt;script&gt;f&lt;/script&gt;:&lt;/p&gt;
+&lt;p&gt;equivalent expression in term of ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;:&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; z^+ = prox_{tg\ast}(z+tA\hat{x}) \text{  where } \hat{x} = \mathop{argmin}_x \left( f(x) + z^TAx \right)&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt;  if ​&lt;script&gt;f&lt;/script&gt; is separable, calculation of ​&lt;script&gt;\hat{x}&lt;/script&gt; decomposes into independent problems&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt;  if ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is separable, calculation of ​&lt;script type=&quot;math/tex&quot;&gt;\hat{x}&lt;/script&gt; decomposes into independent problems&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt;  step size ​&lt;script&gt;t&lt;/script&gt; constant or from backtracking line search&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt;  step size ​&lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; constant or from backtracking line search&lt;/p&gt;
 
 &lt;h4 id=&quot;alternating-minimization-interpretation&quot;&gt;Alternating minimization interpretation&lt;/h4&gt;
 
-&lt;p&gt;Moreau decomposition gives alternate expression for ​&lt;script&gt;z&lt;/script&gt;-update&lt;/p&gt;
+&lt;p&gt;Moreau decomposition gives alternate expression for ​&lt;script type=&quot;math/tex&quot;&gt;z&lt;/script&gt;-update&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; z^+ = z + t(A\hat{x} - \hat{y}) &lt;/script&gt;&lt;/p&gt;
 
@@ -377,15 +377,15 @@ maximize &amp;amp; &amp;amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
 
 &lt;p&gt;in each iteration, an alternating minimization of:&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1. Lagrangian&lt;/strong&gt; ​&lt;script&gt;f(x) + g(y) + z^T(Ax - y)&lt;/script&gt; over ​&lt;script&gt;x&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Lagrangian&lt;/strong&gt; ​&lt;script type=&quot;math/tex&quot;&gt;f(x) + g(y) + z^T(Ax - y)&lt;/script&gt; over ​&lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2. augmented Lagrangian&lt;/strong&gt; ​&lt;script&gt;f(x) + g(y) + z^T(Ax - y) + \frac{t}{2} \|Ax - y\|^2_2&lt;/script&gt; over ​&lt;script&gt;y&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. augmented Lagrangian&lt;/strong&gt; ​&lt;script type=&quot;math/tex&quot;&gt;f(x) + g(y) + z^T(Ax - y) + \frac{t}{2} \|Ax - y\|^2_2&lt;/script&gt; over ​&lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;regularized-norm-approximation&quot;&gt;Regularized norm approximation&lt;/h4&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; minimize f(x) + \|Ax - b\| \text{   (with } f \text{ strongly convex)   } &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;a special case with ​&lt;script&gt;g(y) = \|y - b\|&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;a special case with ​&lt;script type=&quot;math/tex&quot;&gt;g(y) = \|y - b\|&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 g^\ast = \begin{cases}
@@ -398,7 +398,7 @@ b^Tz    &amp;amp; &amp;amp; \|z\|_\ast \leq 1 \\
 prox_{tg\ast}(z) = P_C(z - tb)
 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;C is unit norm ball for dual norm ​&lt;script&gt;\|\cdot\|_\ast&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;C is unit norm ball for dual norm ​&lt;script type=&quot;math/tex&quot;&gt;\|\cdot\|_\ast&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;dual gradient projection update&lt;/strong&gt;&lt;/p&gt;
 
@@ -420,7 +420,7 @@ minimize \; \; f(x) + \sum^p_{i=1}\|B_ix\|_2 \text{   (with } f \text{ strongly 
 z^+_i   &amp;amp; = &amp;amp; P_{C_i}(z_i + tB_i\hat{x}) \text{, } \; \; i=1, \cdots, p
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script&gt;C_i&lt;/script&gt; is unit Euclidean norm ball in ​&lt;script&gt;\Re^{m_i}&lt;/script&gt;, if ​&lt;script&gt;B_i \in \Re^{m_i \times n}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;C_i&lt;/script&gt; is unit Euclidean norm ball in ​&lt;script type=&quot;math/tex&quot;&gt;\Re^{m_i}&lt;/script&gt;, if ​&lt;script type=&quot;math/tex&quot;&gt;B_i \in \Re^{m_i \times n}&lt;/script&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;minimization-over-intersection-of-convex-sets&quot;&gt;Minimization over intersection of convex sets&lt;/h4&gt;
 
@@ -429,9 +429,9 @@ minimize   &amp;amp; &amp;amp; f(x) \\
 subject to &amp;amp; &amp;amp; x \in C_i \cap \cdots \cap C_m
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script&gt;f&lt;/script&gt; strongly convex; e.g., ​&lt;script&gt;f(x) = \|x - a\|^2_2&lt;/script&gt; for projecting ​&lt;script&gt;a&lt;/script&gt; on intersection&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; strongly convex; e.g., ​&lt;script type=&quot;math/tex&quot;&gt;f(x) = \|x - a\|^2_2&lt;/script&gt; for projecting ​&lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; on intersection&lt;/p&gt;
 
-&lt;p&gt;sets ​&lt;script&gt;C_i&lt;/script&gt; are closed, convex, and easy to project onto&lt;/p&gt;
+&lt;p&gt;sets ​&lt;script type=&quot;math/tex&quot;&gt;C_i&lt;/script&gt; are closed, convex, and easy to project onto&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;dual proximal gradient update&lt;/strong&gt;&lt;/p&gt;
 
@@ -446,7 +446,7 @@ z^+_i   &amp;amp; = &amp;amp; z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \ha
 minimize \; \; \sum^n_{j=1}f_j(x_j) + \sum^m_{i=1}g_i(A_{i1}x_1 + \cdots + A_{in}x_n )
 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;each ​&lt;script&gt;f_i&lt;/script&gt; is strongly convex; ​&lt;script&gt;g_i&lt;/script&gt; has inexpensive prox-operator&lt;/p&gt;
+&lt;p&gt;each ​&lt;script type=&quot;math/tex&quot;&gt;f_i&lt;/script&gt; is strongly convex; ​&lt;script type=&quot;math/tex&quot;&gt;g_i&lt;/script&gt; has inexpensive prox-operator&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;dual proximal gradient update&lt;/strong&gt;&lt;/p&gt;
 
@@ -465,36 +465,36 @@ z^+_i        &amp;amp; = &amp;amp; prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{i
 minimize \; \; f(x) = g(x) + h(x)
 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script&gt;g&lt;/script&gt; convex, differentiable with ​&lt;script&gt;\mathop{dom} g=\Re^n&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; convex, differentiable with ​&lt;script type=&quot;math/tex&quot;&gt;\mathop{dom} g=\Re^n&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script&gt;h&lt;/script&gt; closed, convex, with inexpensive ​&lt;script&gt;prox_{th}&lt;/script&gt; operator&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt; closed, convex, with inexpensive ​&lt;script type=&quot;math/tex&quot;&gt;prox_{th}&lt;/script&gt; operator&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;algorithm&lt;/strong&gt;: choose any ​&lt;script&gt;x^{(0)} = x^{(-1)}&lt;/script&gt;; for ​&lt;script&gt;k \geq 1&lt;/script&gt;, repeat the steps&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;algorithm&lt;/strong&gt;: choose any ​&lt;script type=&quot;math/tex&quot;&gt;x^{(0)} = x^{(-1)}&lt;/script&gt;; for ​&lt;script type=&quot;math/tex&quot;&gt;k \geq 1&lt;/script&gt;, repeat the steps&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
 y             &amp;amp; = &amp;amp; x^{(k-1)} + \frac{k-2}{k+1} \left( x^{(k-1)} - x^{(k-2)} \right) \\
 x^{(k)} &amp;amp; = &amp;amp; prox_{t_kh} \left( y - t_k\nabla g(y) \right)
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;step size ​&lt;script&gt;t_k&lt;/script&gt; fixed or determined by line search&lt;/p&gt;
+&lt;p&gt;step size ​&lt;script type=&quot;math/tex&quot;&gt;t_k&lt;/script&gt; fixed or determined by line search&lt;/p&gt;
 
 &lt;p&gt;acronym stands for ‘Fast Iterative Shrinkage-Thresholding Algorithm’&lt;/p&gt;
 
 &lt;h4 id=&quot;interpretation-1&quot;&gt;Interpretation&lt;/h4&gt;
 
-&lt;p&gt;first iteration (​&lt;script&gt;k = 1&lt;/script&gt;) is a proximal gradient step at ​&lt;script&gt;y = x^{(0)}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;first iteration (​&lt;script type=&quot;math/tex&quot;&gt;k = 1&lt;/script&gt;) is a proximal gradient step at ​&lt;script type=&quot;math/tex&quot;&gt;y = x^{(0)}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;next iterations are proximal gradient steps at extrapolated points ​&lt;script&gt;y&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;next iterations are proximal gradient steps at extrapolated points ​&lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;/span&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/fukushima-interpretation.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;note: ​&lt;script&gt;x^{(k)}&lt;/script&gt; is feasible (in ​&lt;script&gt;\mathop{dom} h&lt;/script&gt;); ​&lt;script&gt;y&lt;/script&gt; may be outside ​&lt;script&gt;\mathop{dom} h&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;note: ​&lt;script type=&quot;math/tex&quot;&gt;x^{(k)}&lt;/script&gt; is feasible (in ​&lt;script type=&quot;math/tex&quot;&gt;\mathop{dom} h&lt;/script&gt;); ​&lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt; may be outside ​&lt;script type=&quot;math/tex&quot;&gt;\mathop{dom} h&lt;/script&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;reformulation-of-fista&quot;&gt;Reformulation of FISTA&lt;/h4&gt;
 
-&lt;p&gt;define ​&lt;script&gt;\theta_k = \frac{2}{k+1}&lt;/script&gt; and introduce an intermediate variable ​&lt;script&gt;v^{(k)}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;define ​&lt;script type=&quot;math/tex&quot;&gt;\theta_k = \frac{2}{k+1}&lt;/script&gt; and introduce an intermediate variable ​&lt;script type=&quot;math/tex&quot;&gt;v^{(k)}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;algorithm&lt;/strong&gt;: choose ​&lt;script&gt;x^{(0)} = v^{(0)}&lt;/script&gt;; for ​&lt;script&gt;k \geq 1&lt;/script&gt;, repeat the steps&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;algorithm&lt;/strong&gt;: choose ​&lt;script type=&quot;math/tex&quot;&gt;x^{(0)} = v^{(0)}&lt;/script&gt;; for ​&lt;script type=&quot;math/tex&quot;&gt;k \geq 1&lt;/script&gt;, repeat the steps&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
 y             &amp;amp; = &amp;amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
@@ -504,7 +504,7 @@ v^{(k)} &amp;amp; = &amp;amp; x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x
 
 &lt;h4 id=&quot;nesterovs-second-method&quot;&gt;Nesterov’s second method&lt;/h4&gt;
 
-&lt;p&gt;&lt;strong&gt;algorithm&lt;/strong&gt;: choose ​&lt;script&gt;x^{(0)} = v^{(0)}&lt;/script&gt;; for ​&lt;script&gt;k \geq 1&lt;/script&gt;, repeat the steps&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;algorithm&lt;/strong&gt;: choose ​&lt;script type=&quot;math/tex&quot;&gt;x^{(0)} = v^{(0)}&lt;/script&gt;; for ​&lt;script type=&quot;math/tex&quot;&gt;k \geq 1&lt;/script&gt;, repeat the steps&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
 y             &amp;amp; = &amp;amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
@@ -512,11 +512,11 @@ v^{(k)} &amp;amp; = &amp;amp; prox_{\left(\frac{t_k}{\theta_k}\right)h} \left( v
 x^{(k)} &amp;amp; = &amp;amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;User​&lt;script&gt;\theta_k = \frac{2}{k+1}&lt;/script&gt; and ​&lt;script&gt;t_k = \frac{1}{L}&lt;/script&gt;, or one of the line search methods&lt;/p&gt;
+&lt;p&gt;User​&lt;script type=&quot;math/tex&quot;&gt;\theta_k = \frac{2}{k+1}&lt;/script&gt; and ​&lt;script type=&quot;math/tex&quot;&gt;t_k = \frac{1}{L}&lt;/script&gt;, or one of the line search methods&lt;/p&gt;
 
-&lt;p&gt;identical to FISTA if ​&lt;script&gt;h(x) = 0&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;identical to FISTA if ​&lt;script type=&quot;math/tex&quot;&gt;h(x) = 0&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;unlike in FISTA, ​&lt;script&gt;y&lt;/script&gt; is feasible (in ​&lt;script&gt;\mathop{dom} h&lt;/script&gt;) if we take ​&lt;script&gt;x^{(0)} \in \mathop{dom} h&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;unlike in FISTA, ​&lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt; is feasible (in ​&lt;script type=&quot;math/tex&quot;&gt;\mathop{dom} h&lt;/script&gt;) if we take ​&lt;script type=&quot;math/tex&quot;&gt;x^{(0)} \in \mathop{dom} h&lt;/script&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;fast-dual-proximal-gradient-methods&quot;&gt;4. Fast dual proximal gradient methods&lt;/h3&gt;
 
@@ -532,9 +532,9 @@ x^{(k)} &amp;amp; = &amp;amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
 F(y) := f^\ast\left( A^Ty \right), \; \; G(y) :=g^\ast(-y)
 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;Initialization: ​&lt;script&gt;L \geq \frac{\|A\|^2}{\sigma}&lt;/script&gt;, ​&lt;script&gt;w_1 = y_0 \in \mathbb{V}&lt;/script&gt;, ​&lt;script&gt;t_1 = 1&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;Initialization: ​&lt;script type=&quot;math/tex&quot;&gt;L \geq \frac{\|A\|^2}{\sigma}&lt;/script&gt;, ​&lt;script type=&quot;math/tex&quot;&gt;w_1 = y_0 \in \mathbb{V}&lt;/script&gt;, ​&lt;script type=&quot;math/tex&quot;&gt;t_1 = 1&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;General Step ​&lt;script&gt;(k \geq 1)&lt;/script&gt;:&lt;/p&gt;
+&lt;p&gt;General Step ​&lt;script type=&quot;math/tex&quot;&gt;(k \geq 1)&lt;/script&gt;:&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
 y_k           &amp;amp; = &amp;amp; prox_{\frac{1}{L}G}\left( w_k - \frac{1}{L} \nabla F(w_k) \right)\\
@@ -544,11 +544,11 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
 
 &lt;h4 id=&quot;the-fast-dual-based-proximal-gradient-method-fdpg&quot;&gt;The Fast Dual-Based Proximal Gradient Method (FDPG)&lt;/h4&gt;
 
-&lt;p&gt;Input: ​&lt;script&gt;L \geq \frac{\|A\|^2}{\sigma} - \text{ an upper bound on the Lipschitz constant of } \nabla F&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Input: ​&lt;script type=&quot;math/tex&quot;&gt;L \geq \frac{\|A\|^2}{\sigma} - \text{ an upper bound on the Lipschitz constant of } \nabla F&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;Step ​&lt;script&gt;0&lt;/script&gt;. Take ​&lt;script&gt;w_1 = y_0 \in \mathbb{V}&lt;/script&gt;, ​&lt;script&gt;t_1 = 1&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;Step ​&lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt;. Take ​&lt;script type=&quot;math/tex&quot;&gt;w_1 = y_0 \in \mathbb{V}&lt;/script&gt;, ​&lt;script type=&quot;math/tex&quot;&gt;t_1 = 1&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;Step ​&lt;script&gt;k&lt;/script&gt;. (​&lt;script&gt;k \geq 0&lt;/script&gt;) Compute&lt;/p&gt;
+&lt;p&gt;Step ​&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;. (​&lt;script type=&quot;math/tex&quot;&gt;k \geq 0&lt;/script&gt;) Compute&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
 u_k           &amp;amp; = &amp;amp; \mathop{argmax}_x \left\lbrace &amp;lt;x, A^Tw_k&amp;gt; - f(x) \right\rbrace\\
@@ -617,18 +617,18 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
 
 &lt;p&gt;再生核的定义&lt;/p&gt;
 
-&lt;p&gt;Definition. ​&lt;script&gt;k: \mathcal{X} \times \mathcal{X} \rightarrow \Re &lt;/script&gt; is a kernel if&lt;/p&gt;
+&lt;p&gt;Definition. ​&lt;script type=&quot;math/tex&quot;&gt;k: \mathcal{X} \times \mathcal{X} \rightarrow \Re &lt;/script&gt; is a kernel if&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;核函数 ​&lt;script&gt;k&lt;/script&gt;  对称 isymmetric: ​&lt;script&gt;k(x,y)=k(y,x)&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;核函数 ​&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;  对称 isymmetric: ​&lt;script type=&quot;math/tex&quot;&gt;k(x,y)=k(y,x)&lt;/script&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;核函数 ​&lt;script&gt;k&lt;/script&gt; 半正定 positive semi-definite&lt;/p&gt;
+    &lt;p&gt;核函数 ​&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; 半正定 positive semi-definite&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;i.e., ​&lt;script&gt;\forall x_1, x_2, \ldots , x_n \in \mathcal{X}&lt;/script&gt;, the “Gram Matrix” ​&lt;script&gt;K&lt;/script&gt; defined by ​&lt;script&gt;K_{ij} =  k(x_i,x_j)&lt;/script&gt; is positive semi-definite. (A matrix ​&lt;script&gt;M \in \Re^{n \times n}&lt;/script&gt; is positive semi-definite if ​&lt;script&gt;\forall a \in \Re^n&lt;/script&gt;, ​&lt;script&gt;a&#39; M a \ge 0&lt;/script&gt;.)&lt;/p&gt;
+&lt;p&gt;i.e., ​&lt;script type=&quot;math/tex&quot;&gt;\forall x_1, x_2, \ldots , x_n \in \mathcal{X}&lt;/script&gt;, the “Gram Matrix” ​&lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; defined by ​&lt;script type=&quot;math/tex&quot;&gt;K_{ij} =  k(x_i,x_j)&lt;/script&gt; is positive semi-definite. (A matrix ​&lt;script type=&quot;math/tex&quot;&gt;M \in \Re^{n \times n}&lt;/script&gt; is positive semi-definite if ​&lt;script type=&quot;math/tex&quot;&gt;\forall a \in \Re^n&lt;/script&gt;, ​&lt;script type=&quot;math/tex&quot;&gt;a&#39; M a \ge 0&lt;/script&gt;.)&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -641,7 +641,7 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
 &lt;p&gt;再生核特征映射&lt;br /&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Phi_x(\cdot) \triangleq k(\cdot,x) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;即对任意线性泛函​&lt;script&gt; \Phi(\cdot) &lt;/script&gt;, ​&lt;script&gt; \exists x_\Phi \in H &lt;/script&gt;, 使得 ​&lt;script&gt; \Phi(\cdot) = (\cdot, x_\Phi) &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;即对任意线性泛函​&lt;script type=&quot;math/tex&quot;&gt; \Phi(\cdot) &lt;/script&gt;, ​&lt;script type=&quot;math/tex&quot;&gt; \exists x_\Phi \in H &lt;/script&gt;, 使得 ​&lt;script type=&quot;math/tex&quot;&gt; \Phi(\cdot) = (\cdot, x_\Phi) &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;To be continued…&lt;/p&gt;
 </description>
@@ -654,7 +654,7 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
     
       <item>
         <title>Alternating Direction Method of Multipliers (ADMM)</title>
-        <description>&lt;p&gt;Consider minimizing ​&lt;script&gt; f({\bf x}) + g({\bf y}) &lt;/script&gt; subject to affine constraints ​&lt;script&gt; {\bf Ax} + {\bf By} = {\bf c} &lt;/script&gt;&lt;/p&gt;
+        <description>&lt;p&gt;Consider minimizing ​&lt;script type=&quot;math/tex&quot;&gt; f({\bf x}) + g({\bf y}) &lt;/script&gt; subject to affine constraints ​&lt;script type=&quot;math/tex&quot;&gt; {\bf Ax} + {\bf By} = {\bf c} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;The augmented Lagrangian&lt;/strong&gt;&lt;/p&gt;
 
@@ -662,7 +662,7 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
 
 &lt;!--more--&gt;
 
-&lt;p&gt;&lt;strong&gt;Idea&lt;/strong&gt;: perform block descent on ​&lt;script&gt;{\bf x}&lt;/script&gt; and ​&lt;script&gt;{\bf y}&lt;/script&gt; and then update multiplier vector ​&lt;script&gt;{\bf \lambda}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Idea&lt;/strong&gt;: perform block descent on ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; and ​&lt;script type=&quot;math/tex&quot;&gt;{\bf y}&lt;/script&gt; and then update multiplier vector ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 \begin{align}
@@ -677,7 +677,7 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
 &lt;p&gt;Fused lasso problem minimizes&lt;br /&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \frac{1}{2} \| {\bf y - X\beta} \|^2_2 + \mu \sum^{p-1}_{j=1} |\beta_{j+1} - \beta_j |&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;Define ​&lt;script&gt;{\bf \gamma = D\beta}&lt;/script&gt;, where&lt;/p&gt;
+&lt;p&gt;Define ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \gamma = D\beta}&lt;/script&gt;, where&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 D = \left(\begin{matrix}
@@ -688,49 +688,34 @@ D = \left(\begin{matrix}
 \right)
 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;Then we minimize ​&lt;script&gt; \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \gamma \|_1 &lt;/script&gt; subject to ​&lt;script&gt; {\bf D\beta} = \gamma &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Then we minimize ​&lt;script type=&quot;math/tex&quot;&gt; \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \gamma \|_1 &lt;/script&gt; subject to ​&lt;script type=&quot;math/tex&quot;&gt; {\bf D\beta} = \gamma &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;Augmented Lagrangian is&lt;br /&gt;
-​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2 &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Augmented Lagrangian is&lt;/p&gt;
+
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2 &lt;/script&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;admm&quot;&gt;ADMM&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Update ​&lt;script&gt;{\bf \beta}&lt;/script&gt; is a smooth quadratic problem&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Update ​&lt;script&gt;{\bf \gamma}&lt;/script&gt; is a separated lasso problem (elementwise thresholding)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Update multipliers&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;Update ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \beta}&lt;/script&gt; is a smooth quadratic problem&lt;/li&gt;
+  &lt;li&gt;Update ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \gamma}&lt;/script&gt; is a separated lasso problem (elementwise thresholding)&lt;/li&gt;
+  &lt;li&gt;Update multipliers&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)})&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;Same algorithm applies to a general regularization matrix ​&lt;script&gt;{\bf D}&lt;/script&gt; (generalized lasso)&lt;/p&gt;
+&lt;p&gt;Same algorithm applies to a general regularization matrix ​&lt;script type=&quot;math/tex&quot;&gt;{\bf D}&lt;/script&gt; (generalized lasso)&lt;/p&gt;
 
 &lt;h2 id=&quot;remarks-on-admm&quot;&gt;Remarks on ADMM&lt;/h2&gt;
 
 &lt;p&gt;Related algorithms&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Split Bregman iteration &lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343.&lt;/span&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Dykstra’s alternating projection algorithm &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842.&lt;/span&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Proximal point algorithm applied to the dual&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Numerous applications in statistics and machine learning: lasso, gen. lasso, graphical lasso, (overlapping) group lasso, …&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Embraces distributed computing for big data &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122.&lt;/span&gt;&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;Split Bregman iteration &lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;Dykstra’s alternating projection algorithm &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;Proximal point algorithm applied to the dual&lt;/li&gt;
+  &lt;li&gt;Numerous applications in statistics and machine learning: lasso, gen. lasso, graphical lasso, (overlapping) group lasso, …&lt;/li&gt;
+  &lt;li&gt;Embraces distributed computing for big data &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122.&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 18 Jul 2015 21:36:14 +0800</pubDate>
@@ -744,17 +729,17 @@ D = \left(\begin{matrix}
         <title>Augmented Lagrangian Method</title>
         <description>&lt;p&gt;Consider minimizing:&lt;/p&gt;
 
-&lt;p&gt;​&lt;script&gt; f({\bf x}) &lt;/script&gt; subject to equality constraints ​&lt;script&gt; g_i({\bf x}) = 0 &lt;/script&gt; for ​&lt;script&gt;i=1, \ldots ,q&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt; f({\bf x}) &lt;/script&gt; subject to equality constraints ​&lt;script type=&quot;math/tex&quot;&gt; g_i({\bf x}) = 0 &lt;/script&gt; for ​&lt;script type=&quot;math/tex&quot;&gt;i=1, \ldots ,q&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Inequality constraints are ignored for simplicity&lt;/p&gt;
 
-&lt;p&gt;Assume ​&lt;script&gt;f&lt;/script&gt; and ​&lt;script&gt;g_i&lt;/script&gt; are smooth for simplicity&lt;/p&gt;
+&lt;p&gt;Assume ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; and ​&lt;script type=&quot;math/tex&quot;&gt;g_i&lt;/script&gt; are smooth for simplicity&lt;/p&gt;
 
 &lt;p&gt;At a constrained minimum, the Lagrange multiplier condition&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;  {\bf 0}=\nabla f({\bf x})+\sum^q_{i=1}\lambda_i\nabla g_i({\bf x})  &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;holds provided ​&lt;script&gt;\nabla g_i({\bf x})&lt;/script&gt; are linearly independent&lt;/p&gt;
+&lt;p&gt;holds provided ​&lt;script type=&quot;math/tex&quot;&gt;\nabla g_i({\bf x})&lt;/script&gt; are linearly independent&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -762,34 +747,34 @@ D = \left(\begin{matrix}
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;The penalty term ​&lt;script&gt;\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt; punishes violations of the equality constraints ​&lt;script&gt;g_i({\bf \theta})&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;The penalty term ​&lt;script type=&quot;math/tex&quot;&gt;\frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt; punishes violations of the equality constraints ​&lt;script type=&quot;math/tex&quot;&gt;g_i({\bf \theta})&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;Optimize the Augmented Lagrangian and adjust ​&lt;script&gt;{\bf \lambda}&lt;/script&gt; in the hope of matching the true Lagrange multipliers&lt;/p&gt;
+&lt;p&gt;Optimize the Augmented Lagrangian and adjust ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt; in the hope of matching the true Lagrange multipliers&lt;/p&gt;
 
-&lt;p&gt;For ​&lt;script&gt;\rho&lt;/script&gt; large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem&lt;/p&gt;
+&lt;p&gt;For ​&lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt; large enough (finite), the unconstrained minimizer of the augmented lagrangian coincides with the constrained solution of the original problem&lt;/p&gt;
 
-&lt;p&gt;At convergence, the gradient ​&lt;script&gt;\rho g_i({\bf x})\nabla g_i({\bf x})&lt;/script&gt; vanishes and we recover the standard multiplier rule&lt;/p&gt;
+&lt;p&gt;At convergence, the gradient ​&lt;script type=&quot;math/tex&quot;&gt;\rho g_i({\bf x})\nabla g_i({\bf x})&lt;/script&gt; vanishes and we recover the standard multiplier rule&lt;/p&gt;
 
 &lt;h2 id=&quot;algorithm&quot;&gt;Algorithm&lt;/h2&gt;
 
-&lt;p&gt;Take ​&lt;script&gt;\rho&lt;/script&gt; initially large or gradually increase it; iterate&lt;/p&gt;
+&lt;p&gt;Take ​&lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt; initially large or gradually increase it; iterate&lt;/p&gt;
 
 &lt;p&gt;Find the unconstrained minimum&lt;br /&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf x}^{(t+1)}\leftarrow \min_x\mathcal{L}_\rho ({\bf x},{\bf \lambda}^{(t)})&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;Update the multiplier vector ​&lt;script&gt;{\bf \lambda}&lt;/script&gt;&lt;br /&gt;
+&lt;p&gt;Update the multiplier vector ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;br /&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\lambda^{(t+1)}_i \leftarrow \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}), \; i = 1, \ldots , q&lt;/script&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;intuition-for-updating-8203scriptbf-lambdascript&quot;&gt;Intuition for updating ​&lt;script&gt;{\bf \lambda}&lt;/script&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;intuition-for-updating-8203script-typemathtexbf-lambdascript&quot;&gt;Intuition for updating ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;/h3&gt;
 
-&lt;p&gt;If ​&lt;script&gt;{\bf x}^{(t)}&lt;/script&gt; is the unconstrained minimum of ​&lt;script&gt;\mathcal{L}({\bf x},{\bf \lambda})&lt;/script&gt;, then the stationary condition says&lt;/p&gt;
+&lt;p&gt;If ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}^{(t)}&lt;/script&gt; is the unconstrained minimum of ​&lt;script type=&quot;math/tex&quot;&gt;\mathcal{L}({\bf x},{\bf \lambda})&lt;/script&gt;, then the stationary condition says&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
 {\bf 0} &amp;amp; = \nabla f({\bf x}^{(t)}) + \sum^q_{i=1} \lambda^{(t)}_i \nabla g_i({\bf x}^{(t)}) + \rho \sum^q_{i=1} g_i({\bf x}^{(t)}) \nabla g_i({\bf x}^{(t)}) \\
         &amp;amp; = \nabla f({\bf x}^{(t)}) + \sum^q_{i=1} \left[ \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}) \right] \nabla g_i({\bf x}^{(t)})
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;for-non-smooth-8203scriptfscript-replace-gradient-8203scriptnabla-fscript-by-sub-differential-8203scriptpartial-fscript&quot;&gt;For non-smooth ​&lt;script&gt;f&lt;/script&gt;, replace gradient ​&lt;script&gt;\nabla f&lt;/script&gt; by sub-differential ​&lt;script&gt;\partial f&lt;/script&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;for-non-smooth-8203script-typemathtexfscript-replace-gradient-8203script-typemathtexnabla-fscript-by-sub-differential-8203script-typemathtexpartial-fscript&quot;&gt;For non-smooth ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;, replace gradient ​&lt;script type=&quot;math/tex&quot;&gt;\nabla f&lt;/script&gt; by sub-differential ​&lt;script type=&quot;math/tex&quot;&gt;\partial f&lt;/script&gt;&lt;/h3&gt;
 
 &lt;h2 id=&quot;example-basis-pursuit&quot;&gt;Example: basis pursuit&lt;/h2&gt;
 
@@ -801,7 +786,7 @@ D = \left(\begin{matrix}
 \end{align}
 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;Take ​&lt;script&gt;\rho&lt;/script&gt; initially large or gradually increase it; iterate according to&lt;/p&gt;
+&lt;p&gt;Take ​&lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt; initially large or gradually increase it; iterate according to&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
 {\bf x}^{(t+1)}       &amp;amp; \leftarrow \min \|{\bf x}\| + \langle {\bf \lambda}^{(t)}, {\bf Ax} - {\bf b} \rangle + \frac{\rho}{2} \|{\bf Ax} - {\bf b}\|^2-2 \text{(lasso)} \\
@@ -849,69 +834,69 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;h2 id=&quot;section&quot;&gt;第一章 数学基础&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Definition 1.1 内积&lt;/strong&gt; inner product ​&lt;script&gt;\langle\cdot,\cdot\rangle:=\Re^n \times \Re^n \to \Re&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 1.1 内积&lt;/strong&gt; inner product ​&lt;script type=&quot;math/tex&quot;&gt;\langle\cdot,\cdot\rangle:=\Re^n \times \Re^n \to \Re&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1. 对称性&lt;/strong&gt; symmetry ​&lt;script&gt;\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle&lt;/script&gt; 对于任何 ​&lt;script&gt;{\bf x},{\bf y} \in \Re^n &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 对称性&lt;/strong&gt; symmetry ​&lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle&lt;/script&gt; 对于任何 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y} \in \Re^n &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2. 可加性&lt;/strong&gt; additivity ​&lt;script&gt;\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle&lt;/script&gt; 对于任何 ​&lt;script&gt;{\bf x},{\bf y},{\bf z} \in \Re^n &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 可加性&lt;/strong&gt; additivity ​&lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle&lt;/script&gt; 对于任何 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y},{\bf z} \in \Re^n &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;3. 线性&lt;/strong&gt; homogeneity ​&lt;script&gt;\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle&lt;/script&gt; 对于任何 ​&lt;script&gt;\lambda\in \Re &lt;/script&gt; 及 ​&lt;script&gt;{\bf x},{\bf y} \in \Re^n&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 线性&lt;/strong&gt; homogeneity ​&lt;script type=&quot;math/tex&quot;&gt;\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle&lt;/script&gt; 对于任何 ​&lt;script type=&quot;math/tex&quot;&gt;\lambda\in \Re &lt;/script&gt; 及 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x},{\bf y} \in \Re^n&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;4. 正定性&lt;/strong&gt; positive definiteness 对于任意 ​&lt;script&gt;{\bf x}\in \Re^n&lt;/script&gt;， ​&lt;script&gt;\langle{\bf x},{\bf x}\rangle\ge0&lt;/script&gt;；当且仅当 ​&lt;script&gt;{\bf x}={\bf 0}&lt;/script&gt; 时，​&lt;script&gt;\langle{\bf x},{\bf x}\rangle=0&lt;/script&gt;。 ​&lt;script&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. 正定性&lt;/strong&gt; positive definiteness 对于任意 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}\in \Re^n&lt;/script&gt;， ​&lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle\ge0&lt;/script&gt;；当且仅当 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}={\bf 0}&lt;/script&gt; 时，​&lt;script type=&quot;math/tex&quot;&gt;\langle{\bf x},{\bf x}\rangle=0&lt;/script&gt;。 ​&lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Example 1.2 最常见的内积就是点积&lt;/strong&gt; dot product&lt;br /&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\langle{\bf x},{\bf y}\rangle={\bf x}^T{\bf y}=\sum^n_{i=1}x_iy_i \text{ for any } {\bf x},{\bf y} \in \Re^n &lt;/script&gt;&lt;br /&gt;
-点积是标准内积，当不明确说明时，默认内积就是点积。​&lt;script&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+点积是标准内积，当不明确说明时，默认内积就是点积。​&lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Example 1.3 加权点积&lt;/strong&gt; weighted dot norm 是 ​&lt;script&gt;\Re^n &lt;/script&gt; 空间中另一个内积的例子，其中权重 ​&lt;script&gt;{\bf w}\in \Re^n_{++} &lt;/script&gt;。&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Example 1.3 加权点积&lt;/strong&gt; weighted dot norm 是 ​&lt;script type=&quot;math/tex&quot;&gt;\Re^n &lt;/script&gt; 空间中另一个内积的例子，其中权重 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf w}\in \Re^n_{++} &lt;/script&gt;。&lt;br /&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \langle {\bf x},{\bf y} \rangle_{\bf w} = \sum^n_{i=1}w_ix_iy_i \; \tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Definition 1.4 范数&lt;/strong&gt; Norm 一个定义在实数向量集 ​&lt;script&gt;\Re^n &lt;/script&gt; 上的范数 ​&lt;script&gt;\|\cdot\| &lt;/script&gt; 是一个满足如下条件，形如 ​&lt;script&gt;\| \cdot \| : \Re^n \to \Re &lt;/script&gt; 的函数&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 1.4 范数&lt;/strong&gt; Norm 一个定义在实数向量集 ​&lt;script type=&quot;math/tex&quot;&gt;\Re^n &lt;/script&gt; 上的范数 ​&lt;script type=&quot;math/tex&quot;&gt;\|\cdot\| &lt;/script&gt; 是一个满足如下条件，形如 ​&lt;script type=&quot;math/tex&quot;&gt;\| \cdot \| : \Re^n \to \Re &lt;/script&gt; 的函数&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1. 非负性&lt;/strong&gt; nonnegativity ​&lt;script&gt; \|{\bf x}\| \ge 0 \text{ for any } {\bf x} \in \Re^n \text{ and } \|{\bf x}\| = 0 \text{ if and only if } {\bf x} = {\bf 0} &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 非负性&lt;/strong&gt; nonnegativity ​&lt;script type=&quot;math/tex&quot;&gt; \|{\bf x}\| \ge 0 \text{ for any } {\bf x} \in \Re^n \text{ and } \|{\bf x}\| = 0 \text{ if and only if } {\bf x} = {\bf 0} &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2. 正线性&lt;/strong&gt; positive homogeneity ​&lt;script&gt; |\lambda {\bf x}\| = |\lambda| \|{\bf x}\| \text{ for any } {\bf x} \in \Re^n \text{ and } \lambda \in \Re&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 正线性&lt;/strong&gt; positive homogeneity ​&lt;script type=&quot;math/tex&quot;&gt; |\lambda {\bf x}\| = |\lambda| \|{\bf x}\| \text{ for any } {\bf x} \in \Re^n \text{ and } \lambda \in \Re&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;3. 三角不等&lt;/strong&gt; triangle inequality  ​&lt;script&gt; \|{\bf x} + {\bf y}\| \le \|{\bf x}\| + \|{\bf y}\| \text{ for any } {\bf x},{\bf y} \in \Re^n&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 三角不等&lt;/strong&gt; triangle inequality  ​&lt;script type=&quot;math/tex&quot;&gt; \|{\bf x} + {\bf y}\| \le \|{\bf x}\| + \|{\bf y}\| \text{ for any } {\bf x},{\bf y} \in \Re^n&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;相应的，​&lt;script&gt; p &lt;/script&gt; 范数 p-norm 定位为&lt;br /&gt;
+&lt;p&gt;相应的，​&lt;script type=&quot;math/tex&quot;&gt; p &lt;/script&gt; 范数 p-norm 定位为&lt;br /&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \ell_p \equiv \|{\bf x}\|_p \equiv \sqrt[p]{\sum^n_{i=1}|x_i|^p} \text{ , for }  p \ge 1 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;类似的，无穷范数 ​&lt;script&gt;\infty &lt;/script&gt; 定义为&lt;br /&gt;
+&lt;p&gt;类似的，无穷范数 ​&lt;script type=&quot;math/tex&quot;&gt;\infty &lt;/script&gt; 定义为&lt;br /&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\cdots,n}|x_i|=\lim_{p \to \infty} \|{\bf x}\|_p \;&lt;/script&gt;&lt;br /&gt;
 即最大绝对值。&lt;/p&gt;
 
-&lt;p&gt;1-范数 1-norm ​&lt;script&gt;\|{\bf x}\|_1&lt;/script&gt; 即为绝对值之和 ​&lt;script&gt;\sum^n_{i=1}|x_i|&lt;/script&gt;。 ​&lt;script&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;1-范数 1-norm ​&lt;script type=&quot;math/tex&quot;&gt;\|{\bf x}\|_1&lt;/script&gt; 即为绝对值之和 ​&lt;script type=&quot;math/tex&quot;&gt;\sum^n_{i=1}|x_i|&lt;/script&gt;。 ​&lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Lemma 1.5 柯西 - 施瓦茨不等式&lt;/strong&gt; Cauchy-Schwarz inequality ​&lt;script&gt; \text{ For any } {\bf x}, {\bf y} \in \Re^n,&lt;/script&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 1.5 柯西 - 施瓦茨不等式&lt;/strong&gt; Cauchy-Schwarz inequality ​&lt;script type=&quot;math/tex&quot;&gt; \text{ For any } {\bf x}, {\bf y} \in \Re^n,&lt;/script&gt;&lt;br /&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt;|{\bf x}^T{\bf y}| \le \|{\bf x}\|_2 \cdot \|{\bf y}\|_2 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;等号在且仅在 ​&lt;script&gt;{\bf x}&lt;/script&gt; 和 ​&lt;script&gt;{\bf y}&lt;/script&gt; 线性相关时成立。 ​&lt;script&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;等号在且仅在 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 和 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf y}&lt;/script&gt; 线性相关时成立。 ​&lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Definition 1.6 矩阵的范数&lt;/strong&gt; matrix norms 一个定义在​&lt;script&gt;\Re^{m \times n}&lt;/script&gt; 空间上的范数 ​&lt;script&gt;\|\cdot\|&lt;/script&gt; 是一个形如 ​&lt;script&gt;\|\cdot\|:\Re^{m \times n} \to \Re&lt;/script&gt;，且满足如下性质的函数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 1.6 矩阵的范数&lt;/strong&gt; matrix norms 一个定义在​&lt;script type=&quot;math/tex&quot;&gt;\Re^{m \times n}&lt;/script&gt; 空间上的范数 ​&lt;script type=&quot;math/tex&quot;&gt;\|\cdot\|&lt;/script&gt; 是一个形如 ​&lt;script type=&quot;math/tex&quot;&gt;\|\cdot\|:\Re^{m \times n} \to \Re&lt;/script&gt;，且满足如下性质的函数。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1. 非负性&lt;/strong&gt; nonnegativity 对于任意 ​&lt;script&gt;{\bf A} \in \Re^{m \times n}&lt;/script&gt;, ​&lt;script&gt;\|{\bf A}\| \ge 0&lt;/script&gt;；同时，当且仅当 ​&lt;script&gt;{\bf A} = {\bf 0}&lt;/script&gt; 时，​&lt;script&gt;\|{\bf A}\| = 0&lt;/script&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 非负性&lt;/strong&gt; nonnegativity 对于任意 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf A} \in \Re^{m \times n}&lt;/script&gt;, ​&lt;script type=&quot;math/tex&quot;&gt;\|{\bf A}\| \ge 0&lt;/script&gt;；同时，当且仅当 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf A} = {\bf 0}&lt;/script&gt; 时，​&lt;script type=&quot;math/tex&quot;&gt;\|{\bf A}\| = 0&lt;/script&gt;。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2. 正线性&lt;/strong&gt; positive homogeneity 对于任意 ​&lt;script&gt;{\bf A} \in \Re^{m \times n}&lt;/script&gt; 和 ​&lt;script&gt;\lambda \in \Re&lt;/script&gt;，​&lt;script&gt;\|\lambda{\bf A}\| = |\lambda| \cdot \|{\bf A}\|&lt;/script&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 正线性&lt;/strong&gt; positive homogeneity 对于任意 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf A} \in \Re^{m \times n}&lt;/script&gt; 和 ​&lt;script type=&quot;math/tex&quot;&gt;\lambda \in \Re&lt;/script&gt;，​&lt;script type=&quot;math/tex&quot;&gt;\|\lambda{\bf A}\| = |\lambda| \cdot \|{\bf A}\|&lt;/script&gt;。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;3. 三角不等式&lt;/strong&gt; triangle inequality 对于任意 ​&lt;script&gt;{\bf A},{\bf B} \in \Re^{m \times n}&lt;/script&gt;，​&lt;script&gt;\|{\bf A} + {\bf B}\| \le \|{\bf A}\| + \|{\bf B}\|&lt;/script&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 三角不等式&lt;/strong&gt; triangle inequality 对于任意 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf A},{\bf B} \in \Re^{m \times n}&lt;/script&gt;，​&lt;script type=&quot;math/tex&quot;&gt;\|{\bf A} + {\bf B}\| \le \|{\bf A}\| + \|{\bf B}\|&lt;/script&gt;。&lt;/p&gt;
 
-&lt;p&gt;常见的 induced matrix norm ​&lt;script&gt;\| \cdot \|_{a,b}&lt;/script&gt; 定义如下。给定一个矩阵 ​&lt;script&gt;{\bf A} \in \Re^{m \times n}&lt;/script&gt; 和分别定义在 ​&lt;script&gt;\Re^n&lt;/script&gt; 及 ​&lt;script&gt;\Re^m&lt;/script&gt; 上的两个范数 ​&lt;script&gt;\| \cdot \|_a&lt;/script&gt; 和 ​&lt;script&gt;\| \cdot \|_b&lt;/script&gt;，​&lt;script&gt;\| {\bf A} \|_{a,b}&lt;/script&gt; 即为&lt;/p&gt;
+&lt;p&gt;常见的 induced matrix norm ​&lt;script type=&quot;math/tex&quot;&gt;\| \cdot \|_{a,b}&lt;/script&gt; 定义如下。给定一个矩阵 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf A} \in \Re^{m \times n}&lt;/script&gt; 和分别定义在 ​&lt;script type=&quot;math/tex&quot;&gt;\Re^n&lt;/script&gt; 及 ​&lt;script type=&quot;math/tex&quot;&gt;\Re^m&lt;/script&gt; 上的两个范数 ​&lt;script type=&quot;math/tex&quot;&gt;\| \cdot \|_a&lt;/script&gt; 和 ​&lt;script type=&quot;math/tex&quot;&gt;\| \cdot \|_b&lt;/script&gt;，​&lt;script type=&quot;math/tex&quot;&gt;\| {\bf A} \|_{a,b}&lt;/script&gt; 即为&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\| {\bf A} \|_{a,b} = \max_{\bf x}\{ \| {\bf Ax} \|_b : \| {\bf x} \|_a \le 1 \} &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;从定义可以看出，对于任意 ​&lt;script&gt;{\bf x} \in \Re^n&lt;/script&gt; 以下不等式均成立&lt;/p&gt;
+&lt;p&gt;从定义可以看出，对于任意 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x} \in \Re^n&lt;/script&gt; 以下不等式均成立&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\| {\bf Ax} \|_b = \| {\bf A} \|_{a,b}  \| {\bf x} \|_a \tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Example 1.7 谱范数&lt;/strong&gt; spectral norm&lt;br /&gt;
-​&lt;script&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+​&lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Example 1.8 1-范数&lt;/strong&gt; 1-norm 又称为最大列绝对值和范数&lt;br /&gt;
-​&lt;script&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+​&lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Example 1.9 无穷范数&lt;/strong&gt; ​&lt;script&gt;\inf&lt;/script&gt;-norm 又称为最大行绝对值和范数&lt;br /&gt;
-​&lt;script&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example 1.9 无穷范数&lt;/strong&gt; ​&lt;script type=&quot;math/tex&quot;&gt;\inf&lt;/script&gt;-norm 又称为最大行绝对值和范数&lt;br /&gt;
+​&lt;script type=&quot;math/tex&quot;&gt;\tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Frobenius 范数是一个非 induced 范数的矩阵范数的例子，定义如下。&lt;/p&gt;
 
@@ -926,7 +911,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
     
       <item>
         <title>稀疏编码的优化问题</title>
-        <description>&lt;p&gt;稀疏编码问题：  ​&lt;script&gt; \arg\min_x f(x)\left\|y-Ax\right\|^2+ \lambda\|x\|_1 &lt;/script&gt;&lt;/p&gt;
+        <description>&lt;p&gt;稀疏编码问题：  ​&lt;script type=&quot;math/tex&quot;&gt; \arg\min_x f(x)\left\|y-Ax\right\|^2+ \lambda\|x\|_1 &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;用 alternating minimization (ADM)&lt;/p&gt;
 
@@ -946,7 +931,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;迭代优化&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script&gt;\sum_{i=1}^p\left\|y^{(i)}-A\cdot x^{(i)}\right\|_2^2 + \sum_{i=1}^p S\left(x^{(i)}\right) &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;\sum_{i=1}^p\left\|y^{(i)}-A\cdot x^{(i)}\right\|_2^2 + \sum_{i=1}^p S\left(x^{(i)}\right) &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;凸的稀疏模型求基于 proximal operator 的 alternating minimization。参考 boyd 的文章。&lt;/p&gt;
 
@@ -977,7 +962,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;​&lt;script&gt; \arg \min \|x\|_1 + \|e\|_1 &lt;/script&gt; subj. to ​&lt;script&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
+    &lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt; \arg \min \|x\|_1 + \|e\|_1 &lt;/script&gt; subj. to ​&lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;标准 linear programming&lt;/p&gt;
@@ -995,7 +980,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;​&lt;script&gt; \arg\min \|x\|_2 + \|e\|_1 &lt;/script&gt; subj. to ​&lt;script&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
+    &lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt; \arg\min \|x\|_2 + \|e\|_1 &lt;/script&gt; subj. to ​&lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;鲁棒的 CRC&lt;/p&gt;
@@ -1008,7 +993,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;​&lt;script&gt; \arg\min \|x\|_1 + \|e\|_2 &lt;/script&gt; subj. to ​&lt;script&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
+    &lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt; \arg\min \|x\|_1 + \|e\|_2 &lt;/script&gt; subj. to ​&lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;标准 lasso 问题&lt;/p&gt;
@@ -1024,7 +1009,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;​&lt;script&gt; \arg\min \|x\|_2 + \|e\|_2 &lt;/script&gt; subj. to ​&lt;script&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
+    &lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt; \arg\min \|x\|_2 + \|e\|_2 &lt;/script&gt; subj. to ​&lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;极小最小二乘解，可求广义逆。&lt;/p&gt;

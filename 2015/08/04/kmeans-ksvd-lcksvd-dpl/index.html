@@ -9,15 +9,15 @@
   <meta name="description" content="从 K-means 到 K-SVD11 M. Aharon, M. Elad, and A.M. Bruckstein, “The K-SVD: An Algorithm for Designing of Overcomplete Dictionaries for Sparse Representation”, ...">
 
 
-  <link rel="stylesheet" href="//www.optimizations.ml/css/tufte.css">	
-  
+  <link rel="stylesheet" href="//www.optimizations.ml/css/tufte.css">
+
 
   <!-- Google Fonts loaded here -->
   <link href='//fonts.useso.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
 
   <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
   
-  <script type="text/javascript" src="//cdn.staticfile.org/mathjax/2.4.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
   <link rel="canonical" href="http://www.optimizations.ml/2015/08/04/kmeans-ksvd-lcksvd-dpl/">
@@ -45,29 +45,29 @@
 
 <p><strong>K-means 算法</strong></p>
 
-<p>任务：通过最近邻寻找能够表达数据样本 ​<script>\{ {\bf y}_i \}^N_{i=1} </script> 的最优编码本（codebook，既字典参数），既求解如下问题</p>
+<p>任务：通过最近邻寻找能够表达数据样本 ​<script type="math/tex">\{ {\bf y}_i \}^N_{i=1} </script> 的最优编码本（codebook，既字典参数），既求解如下问题</p>
 
 <p>​<script type="math/tex; mode=display">\min_{\bf C, X} \left\{ \|{\bf Y} - {\bf CX}\|^2_F \right\} \text{ subject to } \forall i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k </script></p>
 
 <!--more-->
 
-<p>初始化： 设置编码本矩阵 ​<script>{\bf C}^{(0)} \in \Re^{n \times K}</script>. 设置 ​<script>J=1</script>。</p>
+<p>初始化： 设置编码本矩阵 ​<script type="math/tex">{\bf C}^{(0)} \in \Re^{n \times K}</script>. 设置 ​<script type="math/tex">J=1</script>。</p>
 
 <p>循环至收敛 （使用停止规则）</p>
 
-<p><strong>1.</strong> 稀疏编码阶段：将训练样本 ​<script>{\bf Y}</script> 分为如下 ​<script>K</script> 个集合。</p>
+<p><strong>1.</strong> 稀疏编码阶段：将训练样本 ​<script type="math/tex">{\bf Y}</script> 分为如下 ​<script type="math/tex">K</script> 个集合。</p>
 
 <p>​<script type="math/tex; mode=display">\left( {\bf R}^{(J-1)}_1, {\bf R}^{(J-1)}_2, \cdots, {\bf R}^{(J-1)}_K \right)</script></p>
 
-<p>每个集合中存放与 ​<script>{\bf c}^{J-1}_k</script> 列最相似的样本的索引。</p>
+<p>每个集合中存放与 ​<script type="math/tex">{\bf c}^{J-1}_k</script> 列最相似的样本的索引。</p>
 
 <p>​<script type="math/tex; mode=display"> {\bf R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 &lt; \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\} </script></p>
 
-<p><strong>2.</strong> 编码本更新阶段：​<script>{\bf C}^{(J-1)}</script> 中的任一列 ​<script>k</script> 都根据如下公式更新。</p>
+<p><strong>2.</strong> 编码本更新阶段：​<script type="math/tex">{\bf C}^{(J-1)}</script> 中的任一列 ​<script type="math/tex">k</script> 都根据如下公式更新。</p>
 
 <p>​<script type="math/tex; mode=display">{\bf c}^{(J)}_k = \frac{1}{|{\bf R}_k|}\sum_{i \in {\bf R}^{(J-1)}_k}{\bf y}_i</script></p>
 
-<p><strong>3.</strong> 令​<script> J = J + 1 </script></p>
+<p><strong>3.</strong> 令​<script type="math/tex"> J = J + 1 </script></p>
 
 <hr />
 
@@ -101,7 +101,7 @@
     <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
-<p>​<script></script></p>
+<p>​<script type="math/tex"></script></p>
 
 <p>​<script type="math/tex; mode=display"> </script></p>
 
