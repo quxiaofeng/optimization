@@ -98,27 +98,38 @@ categories:
 
 {% math %} S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}{% endmath %}
 
-{% math %} L_0({\bf x}, {\bf \lambda}) = \begin{cases}
-        f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, & {\bf \lambda} \geqslant {\bf 0}\\
-        -\infty \; , & {\bf \lambda} \ngeqslant {\bf 0}
-    \end{cases}
+{% math %}
+L_0({\bf x}, {\bf \lambda}) =
+\begin{cases}
+    f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, & {\bf \lambda} \geqslant {\bf 0}\\
+    -\infty \; ,                                      & {\bf \lambda} \ngeqslant {\bf 0}
+\end{cases}
 {% endmath %}
 
-{% math %} \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x}){% endmath %}
+{% math %}
+\theta({\bf x}) = f({\bf x}) + \delta_S({\bf x})
+{% endmath %}
 
-{% math %} \theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}{% endmath %}
+{% math %}
+\theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}
+{% endmath %}
 
-{% math %} \omega_0({\bf \lambda}) = \inf \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} {% endmath %}
+{% math %}
+\omega_0({\bf \lambda}) = \inf \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\}
+{% endmath %}
 
 Constrains relax
 
-{% math %} F_0({\bf x}, {\bf u}) = \begin{cases}
-        f({\bf x}),  & {\bf x} \in        S({\bf u}) & \min  & f({\bf x}) & & \\
-        +\infty,      & {\bf x} \notin S({\bf u}) & s.t.      & g_i({\bf x}) & \leqslant u_i, & i = 1, \cdots, m
-    \end{cases}
+{% math %} F_0({\bf x}, {\bf u}) =
+\begin{cases}
+    f({\bf x}), & {\bf x} \in        S({\bf u}) & \min  & f({\bf x})   &                & \\
+    +\infty,    & {\bf x} \notin S({\bf u})     & s.t.  & g_i({\bf x}) & \leqslant u_i, & i = 1, \cdots, m
+\end{cases}
 {% endmath %}
 
-{% math %} S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, \cdots, m \right\} {% endmath %}
+{% math %}
+S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, \cdots, m \right\}
+{% endmath %}
 
 **引理 4.5** Lagrange 函数 {%m%}L_0: \Re^{n+m} \to [-\infty, +\infty) {%em%} 与函数 {%m%}F_0: \Re^{n+m} \to (-\infty,+\infty]{%em%} 之间有如下关系成立：
 
