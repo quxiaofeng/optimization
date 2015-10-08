@@ -7,18 +7,18 @@ nav_exclude: true
 /*
 /* Tufte Jekyll blog theme
 /* Based on Tufte CSS by Dave Liepmann ( https://github.com/edwardtufte/tufte-css )
-/* 
+/*
 /* The README.md will show you how to set up your site along with other goodies
 /*****************************************************************************/
 
-// Imports to create final 
+// Imports to create final
 
-@import "//www.quxiaofeng.me/optimization/_sass/fonts";
-@import "//www.quxiaofeng.me/optimization/_sass/settings";
-@import "//www.quxiaofeng.me/optimization/_sass/syntax-highlighting";
+@import "../_sass/fonts";
+@import "../_sass/settings";
+@import "../_sass/syntax-highlighting";
 
 // Global Resets
-// 
+//
 * { margin: 0; padding: 0; }
 
 /* clearfix hack after Cederholm (group class name) */
@@ -60,14 +60,14 @@ a { @if $link-style == underline
       color: $text-color;
       text-decoration: none;
       border-bottom: 1px solid #777;
-      padding-bottom: 1px; 
+      padding-bottom: 1px;
     }
     @else
     {
       color: $contrast-color;
       text-decoration: none;
     }
-  }  
+  }
 
 body { width: 87.5%;
        margin-left: auto;
