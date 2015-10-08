@@ -99,8 +99,8 @@ categories:
 {% math %} S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}{% endmath %}
 
 {% math %} L_0({\bf x}, {\bf \lambda}) = \begin{cases}
-        f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, \& {\bf \lambda} \geqslant {\bf 0}\\
-        -\infty \; , \& {\bf \lambda} \ngeqslant {\bf 0}
+        f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, & {\bf \lambda} \geqslant {\bf 0}\\
+        -\infty \; , & {\bf \lambda} \ngeqslant {\bf 0}
     \end{cases}
 {% endmath %}
 
@@ -113,8 +113,8 @@ categories:
 Constrains relax
 
 {% math %} F_0({\bf x}, {\bf u}) = \begin{cases}
-        f({\bf x}),  \& {\bf x} \in        S({\bf u}) \& \min  \& f({\bf x}) \& \& \\
-        +\infty,      \& {\bf x} \notin S({\bf u}) \& s.t.      \& g_i({\bf x}) \& \leqslant u_i, \& i = 1, \cdots, m
+        f({\bf x}),  & {\bf x} \in        S({\bf u}) & \min  & f({\bf x}) & & \\
+        +\infty,      & {\bf x} \notin S({\bf u}) & s.t.      & g_i({\bf x}) & \leqslant u_i, & i = 1, \cdots, m
     \end{cases}
 {% endmath %}
 
@@ -147,8 +147,8 @@ Constrains relax
 
 {% math %} \min_{\bf x} f({\bf x}) + g({\bf Ax}) {% endmath %}
 
-{% math %} \begin{cases} \& F({\bf x}, {\bf 0}) = \theta({\bf x}), \& x \in \Re^n \\
-\& \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) \& \end{cases} {% endmath %}
+{% math %} \begin{cases} & F({\bf x}, {\bf 0}) = \theta({\bf x}), & x \in \Re^n \\
+& \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) & \end{cases} {% endmath %}
 
 {% math %} \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) {% endmath %}
 {% math %} \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) & = & \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt {\bf \lambda}, {\bf u}> \mid {\bf u} \in \Re^m \right\} \\
@@ -182,9 +182,9 @@ The **proximal mapping** (or proximal operator) of a convex function {%m%}h{%em%
 **3.** {%m%}h(x) = t \|x\|_1{%em%}: {%m%}{\bf prox}_h{%em%} is shinkage (soft threshold) operation
 
 {% math %} {\bf prox}_h = \begin{cases}
-    x_i - t \& x_i   \geqslant t \\
-    0       \& |x_i| \leqslant t \\
-    x_i + t \& x_i   \leqslant -t
+    x_i - t & x_i   \geqslant t \\
+    0       & |x_i| \leqslant t \\
+    x_i + t & x_i   \leqslant -t
 \end{cases} {% endmath %}
 
 #### Proximal gradient method ####
@@ -213,8 +213,8 @@ constant or determined by line search
 from definition of proximal operator:
 
 {% math %} \begin{eqnarray*}
-x^+ \& = \&  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + t\nabla g(x) \right\|^2_2 \right) \\
-    \& = \& \mathop{argmin}_u \left( h(u) + g(x) + \nabla g(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
+x^+ & = &  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + t\nabla g(x) \right\|^2_2 \right) \\
+    & = & \mathop{argmin}_u \left( h(u) + g(x) + \nabla g(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
 \end{eqnarray*}{% endmath %}
 
 {%m%}x^+{%em%} minimizes {%m%}h(u){%em%} plus a simple quadratic local of {%m%}g(u){%em%} around {%m%}x{%em%}
@@ -239,9 +239,9 @@ and
 
 {% math %} {\bf prox}_{th}(u)_i = 
 \begin{cases}
-u_i - t \& \& u_i \geq t \\
-0       \& \& -t \leq u_i \leq t \\
-u_i + t \& \& u_i \geq t
+u_i - t & & u_i \geq t \\
+0       & & -t \leq u_i \leq t \\
+u_i + t & & u_i \geq t
 \end{cases}{% endmath %}
 
 {% maincolumn /assets/img/fukushima-softthresholding.jpg '' %}
@@ -253,8 +253,8 @@ u_i + t \& \& u_i \geq t
 #### Composite structure in the Dual ####
 
 {% math %} \begin{eqnarray*}
-minimize \& \& f(x)+g(Ax) \\
-maximize \& \& -f^\ast \left( -A^Tz \right) - g^\ast(z)
+minimize & & f(x)+g(Ax) \\
+maximize & & -f^\ast \left( -A^Tz \right) - g^\ast(z)
 \end{eqnarray*}{% endmath %}
 
 dual has the right structure for the proximal gradient method if
@@ -288,9 +288,9 @@ Moreau decomposition gives alternate expression for {%m%}z{%em%}-update
 where
 
 {% math %} \begin{eqnarray*}
-\hat{x} \& = \& \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
-\hat{y} \& = \& prox_{t^{-1}g} \left( \frac{z}{t} + A\hat{x} \right)        \\
-        \& = \& \mathop{argmin}_y \left(g(y) + z^T(A\hat{x} - y) + \frac{t}{2} \|A\hat{x} - y\|^2_2  \right)
+\hat{x} & = & \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
+\hat{y} & = & prox_{t^{-1}g} \left( \frac{z}{t} + A\hat{x} \right)        \\
+        & = & \mathop{argmin}_y \left(g(y) + z^T(A\hat{x} - y) + \frac{t}{2} \|A\hat{x} - y\|^2_2  \right)
 \end{eqnarray*}{% endmath %}
 
 in each iteration, an alternating minimization of:
@@ -307,8 +307,8 @@ a special case with {%m%}g(y) = \|y - b\|{%em%}
 
 {% math %}
 g^\ast = \begin{cases}
-b^Tz    \& \& \|z\|_\ast \leq 1 \\
-+\infty \& \& otherwise 
+b^Tz    & & \|z\|_\ast \leq 1 \\
++\infty & & otherwise 
 \end{cases}
 {% endmath %}
 
@@ -321,8 +321,8 @@ C is unit norm ball for dual norm {%m%}\|\cdot\|_\ast{%em%}
 **dual gradient projection update**
 
 {% math %} \begin{eqnarray*}
-\hat{x} \& = \& \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
-z^+     \& = \& P_C(z + t(A\hat{x} - b))
+\hat{x} & = & \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
+z^+     & = & P_C(z + t(A\hat{x} - b))
 \end{eqnarray*}{% endmath %}
 
 #### Example ####
@@ -334,8 +334,8 @@ minimize \; \; f(x) + \sum^p_{i=1}\|B_ix\|_2 \text{   (with } f \text{ strongly 
 **dual gradient projection update**
 
 {% math %} \begin{eqnarray*}
-\hat{x} \& = \& \mathop{argmin}_x \left( f(x) + \left(\sum^p_{i=1}B^T_iz_i\right)^Tx \right) \\
-z^+_i   \& = \& P_{C_i}(z_i + tB_i\hat{x}) \text{, } \; \; i=1, \cdots, p
+\hat{x} & = & \mathop{argmin}_x \left( f(x) + \left(\sum^p_{i=1}B^T_iz_i\right)^Tx \right) \\
+z^+_i   & = & P_{C_i}(z_i + tB_i\hat{x}) \text{, } \; \; i=1, \cdots, p
 \end{eqnarray*}{% endmath %}
 
 {%m%}C_i{%em%} is unit Euclidean norm ball in {%m%}\Re^{m_i}{%em%}, if {%m%}B_i \in \Re^{m_i \times n}{%em%}
@@ -343,8 +343,8 @@ z^+_i   \& = \& P_{C_i}(z_i + tB_i\hat{x}) \text{, } \; \; i=1, \cdots, p
 #### Minimization over intersection of convex sets ####
 
 {% math %} \begin{eqnarray*}
-minimize   \& \& f(x) \\
-subject to \& \& x \in C_i \cap \cdots \cap C_m
+minimize   & & f(x) \\
+subject to & & x \in C_i \cap \cdots \cap C_m
 \end{eqnarray*}{% endmath %}
 
 {%m%}f{%em%} strongly convex; e.g., {%m%}f(x) = \|x - a\|^2_2{%em%} for projecting {%m%}a{%em%} on intersection
@@ -354,8 +354,8 @@ sets {%m%}C_i{%em%} are closed, convex, and easy to project onto
 **dual proximal gradient update**
 
 {% math %} \begin{eqnarray*}
-\hat{x} \& = \& \mathop{argmin}_x \left( f(x) + (z_i + \cdots + z_m)^Tx \right) \\
-z^+_i   \& = \& z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{, }\; \; i=1, \cdots, m
+\hat{x} & = & \mathop{argmin}_x \left( f(x) + (z_i + \cdots + z_m)^Tx \right) \\
+z^+_i   & = & z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{, }\; \; i=1, \cdots, m
 \end{eqnarray*}{% endmath %}
 
 #### Decomposition of separable problems ####
@@ -369,8 +369,8 @@ each {%m%}f_i{%em%} is strongly convex; {%m%}g_i{%em%} has inexpensive prox-oper
 **dual proximal gradient update**
 
 {% math %} \begin{eqnarray*}
-\hat{x}_j \& = \& \mathop{argmin}_{x_j} \left( f_j(x_j) + \sum^m_{i=1}z^T_iA_{ij}x_j \right) \text{, } \; \; j=1, \cdots, n \\
-z^+_i        \& = \& prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
+\hat{x}_j & = & \mathop{argmin}_{x_j} \left( f_j(x_j) + \sum^m_{i=1}z^T_iA_{ij}x_j \right) \text{, } \; \; j=1, \cdots, n \\
+z^+_i        & = & prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
 \end{eqnarray*}{% endmath %}
 
 ### 3. Fast proximal gradient methods ###
@@ -390,8 +390,8 @@ minimize \; \; f(x) = g(x) + h(x)
 **algorithm**: choose any {%m%}x^{(0)} = x^{(-1)}{%em%}; for {%m%}k \geq 1{%em%}, repeat the steps
 
 {% math %} \begin{eqnarray*}
-y             \& = \& x^{(k-1)} + \frac{k-2}{k+1} \left( x^{(k-1)} - x^{(k-2)} \right) \\
-x^{(k)} \& = \& prox_{t_kh} \left( y - t_k\nabla g(y) \right)
+y             & = & x^{(k-1)} + \frac{k-2}{k+1} \left( x^{(k-1)} - x^{(k-2)} \right) \\
+x^{(k)} & = & prox_{t_kh} \left( y - t_k\nabla g(y) \right)
 \end{eqnarray*}{% endmath %}
 
 step size {%m%}t_k{%em%} fixed or determined by line search
@@ -415,9 +415,9 @@ define {%m%}\theta_k = \frac{2}{k+1}{%em%} and introduce an intermediate variabl
 **algorithm**: choose {%m%}x^{(0)} = v^{(0)}{%em%}; for {%m%}k \geq 1{%em%}, repeat the steps
 
 {% math %} \begin{eqnarray*}
-y             \& = \& (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
-x^{(k)} \& = \& prox_{t_kh}(y-t_k\nabla g(y))\\
-v^{(k)} \& = \& x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x^{(k-1)} \right)
+y             & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+x^{(k)} & = & prox_{t_kh}(y-t_k\nabla g(y))\\
+v^{(k)} & = & x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x^{(k-1)} \right)
 \end{eqnarray*}{% endmath %}
 
 #### Nesterov's second method ####
@@ -425,9 +425,9 @@ v^{(k)} \& = \& x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x^{(k-1)} \righ
 **algorithm**: choose {%m%}x^{(0)} = v^{(0)}{%em%}; for {%m%}k \geq 1{%em%}, repeat the steps
 
 {% math %} \begin{eqnarray*}
-y             \& = \& (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
-v^{(k)} \& = \& prox_{\left(\frac{t_k}{\theta_k}\right)h} \left( v^{(k-1)} - \frac{t_k}{\theta_k}\nabla g(y) \right)\\
-x^{(k)} \& = \& (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
+y             & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+v^{(k)} & = & prox_{\left(\frac{t_k}{\theta_k}\right)h} \left( v^{(k-1)} - \frac{t_k}{\theta_k}\nabla g(y) \right)\\
+x^{(k)} & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
 \end{eqnarray*}{% endmath %}
 
 User{%m%}\theta_k = \frac{2}{k+1}{%em%} and {%m%}t_k = \frac{1}{L}{%em%}, or one of the line search methods
@@ -441,9 +441,9 @@ unlike in FISTA, {%m%}y{%em%} is feasible (in {%m%}\mathop{dom} h{%em%}) if we t
 参考 A Fast Dual Proximal Gradient Algorithm for Convex Minimization and Applications by Amir Beck and Marc Teboulle at October 10, 2013
 
 {% math %} \begin{eqnarray*}
-(D)   \& = \& \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
-(D') \& = \& \min F(y) + G(y),\\
-(P') \& = \& \min \left\lbrace f(x) + g(z): Ax - z = 0 \right\rbrace.
+(D)   & = & \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
+(D') & = & \min F(y) + G(y),\\
+(P') & = & \min \left\lbrace f(x) + g(z): Ax - z = 0 \right\rbrace.
 \end{eqnarray*}{% endmath %}
 
 {% math %}
@@ -455,9 +455,9 @@ Initialization: {%m%}L \geq \frac{\|A\|^2}{\sigma}{%em%}, {%m%}w_1 = y_0 \in \ma
 General Step {%m%}(k \geq 1){%em%}:
 
 {% math %} \begin{eqnarray*}
-y_k           \& = \& prox_{\frac{1}{L}G}\left( w_k - \frac{1}{L} \nabla F(w_k) \right)\\
-t_{k+1}   \& = \& \frac{1 + \sqrt{1 + 4t^2_k}}{2} \\
-w_{k+1} \& = \& y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}).
+y_k           & = & prox_{\frac{1}{L}G}\left( w_k - \frac{1}{L} \nabla F(w_k) \right)\\
+t_{k+1}   & = & \frac{1 + \sqrt{1 + 4t^2_k}}{2} \\
+w_{k+1} & = & y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}).
 \end{eqnarray*}{% endmath %}
 
 #### The Fast Dual-Based Proximal Gradient Method (FDPG) ####
