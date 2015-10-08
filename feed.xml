@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 08 Oct 2015 13:14:47 +0800</pubDate>
-    <lastBuildDate>Thu, 08 Oct 2015 13:14:47 +0800</lastBuildDate>
+    <pubDate>Thu, 08 Oct 2015 13:18:29 +0800</pubDate>
+    <lastBuildDate>Thu, 08 Oct 2015 13:18:29 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -34,19 +34,8 @@
 &lt;p&gt;每个集合中存放与 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf c}^{J-1}_k&lt;/script&gt; 列最相似的样本的索引。&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-{\bf R}^{(J-1)}_k =
-&lt;/script&gt;&lt;br /&gt;
-​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-i \mid \forall_{l \neq k},
-&lt;/script&gt;&lt;br /&gt;
-​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-\|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2
-&lt;/script&gt;&lt;br /&gt;
-​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
- &amp;lt; \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2
-&lt;/script&gt;&lt;br /&gt;
-​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-\left\{   \right\} &lt;/script&gt;&lt;/p&gt;
+{\bf R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 \lt \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\}
+&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 编码本更新阶段：​&lt;script type=&quot;math/tex&quot;&gt;{\bf C}^{(J-1)}&lt;/script&gt; 中的任一列 ​&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; 都根据如下公式更新。&lt;/p&gt;
 
@@ -60,17 +49,15 @@ i \mid \forall_{l \neq k},
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\forall_{k \neq j} \; \left\|{\bf y}_i - {Ce}_j \right\|^2_2 \leqslant \left\|{\bf y}_i - {Ce}_k \right\|^2_2&lt;/script&gt;&lt;/p&gt;
 
-&lt;!--more--&gt;
-
-&lt;p&gt;Julia Code Highlight Test&lt;/p&gt;
+&lt;h2 id=&quot;julia-code-highlight-test&quot;&gt;Julia Code Highlight Test&lt;/h2&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;diagadd!.jl&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;updateA!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; 
-                  &lt;span class=&quot;no&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; 
-                  &lt;span class=&quot;no&quot;&gt;DataMat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; 
-                  &lt;span class=&quot;no&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; 
-                  &lt;span class=&quot;err&quot;&gt;τ&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;updateA!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+                  &lt;span class=&quot;no&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+                  &lt;span class=&quot;no&quot;&gt;DataMat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+                  &lt;span class=&quot;no&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+                  &lt;span class=&quot;err&quot;&gt;τ&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
                   &lt;span class=&quot;no&quot;&gt;DictSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Int64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;# Update tempDictCoef by Eq. (8)&lt;/span&gt;
 
@@ -86,9 +73,6 @@ i \mid \forall_{l \neq k},
     &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 04 Aug 2015 06:46:53 +0800</pubDate>
         <link>http://www.optimizations.ml/2015/08/04/kmeans-ksvd-lcksvd-dpl/</link>
