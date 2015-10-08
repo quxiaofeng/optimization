@@ -137,8 +137,8 @@
 <p>​<script type="math/tex; mode=display"> S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}</script></p>
 
 <p>​<script type="math/tex; mode=display"> L_0({\bf x}, {\bf \lambda}) = \begin{cases}
-        f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, &amp; {\bf \lambda} \geqslant {\bf 0}\\
-        -\infty \; , &amp; {\bf \lambda} \ngeqslant {\bf 0}
+        f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, \&amp; {\bf \lambda} \geqslant {\bf 0}\\
+        -\infty \; , \&amp; {\bf \lambda} \ngeqslant {\bf 0}
     \end{cases}
 </script></p>
 
@@ -151,8 +151,8 @@
 <p>Constrains relax</p>
 
 <p>​<script type="math/tex; mode=display"> F_0({\bf x}, {\bf u}) = \begin{cases}
-        f({\bf x}),  &amp; {\bf x} \in        S({\bf u}) &amp; \min  &amp; f({\bf x}) &amp; &amp; \\
-        +\infty,      &amp; {\bf x} \notin S({\bf u}) &amp; s.t.      &amp; g_i({\bf x}) &amp; \leqslant u_i, &amp; i = 1, \cdots, m
+        f({\bf x}),  \&amp; {\bf x} \in        S({\bf u}) \&amp; \min  \&amp; f({\bf x}) \&amp; \&amp; \\
+        +\infty,      \&amp; {\bf x} \notin S({\bf u}) \&amp; s.t.      \&amp; g_i({\bf x}) \&amp; \leqslant u_i, \&amp; i = 1, \cdots, m
     \end{cases}
 </script></p>
 
@@ -183,14 +183,14 @@
 
 <p>​<script type="math/tex; mode=display"> \min_{\bf x} f({\bf x}) + g({\bf Ax}) </script></p>
 
-<p>​<script type="math/tex; mode=display"> \begin{cases} &amp; F({\bf x}, {\bf 0}) = \theta({\bf x}), &amp; x \in \Re^n \\
-&amp; \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) &amp; \end{cases} </script></p>
+<p>​<script type="math/tex; mode=display"> \begin{cases} \&amp; F({\bf x}, {\bf 0}) = \theta({\bf x}), \&amp; x \in \Re^n \\
+\&amp; \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) \&amp; \end{cases} </script></p>
 
 <p>​<script type="math/tex; mode=display"> \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) </script><br />
-​<script type="math/tex; mode=display"> \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^m \right\} \\
-&amp; = &amp; f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \end{eqnarray*}</script><br />
-​<script type="math/tex; mode=display"> \begin{eqnarray*} \implies \omega({\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \mid {\bf x} \in \Re^n \right\} \\
-&amp; = &amp; -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}</script></p>
+​<script type="math/tex; mode=display"> \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) \&amp; = \&amp; \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^m \right\} \\
+\&amp; = \&amp; f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \end{eqnarray*}</script><br />
+​<script type="math/tex; mode=display"> \begin{eqnarray*} \implies \omega({\bf \lambda}) \&amp; = \&amp; \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \mid {\bf x} \in \Re^n \right\} \\
+\&amp; = \&amp; -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}</script></p>
 
 <p>​<script type="math/tex; mode=display"> \min_{\bf \lambda} f^\ast\left( {\bf A}^T{\bf \lambda} \right) + g^\ast(-{\bf \lambda})</script><br />
 ​<script type="math/tex; mode=display"> \max_{\bf \lambda} -f^\ast\left({\bf A}^T{\bf \lambda} \right) - g^\ast\left(-{\bf\lambda}\right)</script></p>
@@ -218,9 +218,9 @@
 <p><strong>3.</strong> ​<script type="math/tex">h(x) = t \|x\|_1</script>: ​<script type="math/tex">{\bf prox}_h</script> is shinkage (soft threshold) operation</p>
 
 <p>​<script type="math/tex; mode=display"> {\bf prox}_h = \begin{cases}
-    x_i - t &amp; x_i   \geqslant t \\
-    0       &amp; |x_i| \leqslant t \\
-    x_i + t &amp; x_i   \leqslant -t
+    x_i - t \&amp; x_i   \geqslant t \\
+    0       \&amp; |x_i| \leqslant t \\
+    x_i + t \&amp; x_i   \leqslant -t
 \end{cases} </script></p>
 
 <h4 id="proximal-gradient-method-1">Proximal gradient method</h4>
@@ -248,8 +248,8 @@
 <p>from definition of proximal operator:</p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-x^+ &amp; = &amp;  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + t\nabla g(x) \right\|^2_2 \right) \\
-    &amp; = &amp; \mathop{argmin}_u \left( h(u) + g(x) + \nabla g(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
+x^+ \&amp; = \&amp;  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + t\nabla g(x) \right\|^2_2 \right) \\
+    \&amp; = \&amp; \mathop{argmin}_u \left( h(u) + g(x) + \nabla g(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
 \end{eqnarray*}</script></p>
 
 <p>​<script type="math/tex">x^+</script> minimizes ​<script type="math/tex">h(u)</script> plus a simple quadratic local of ​<script type="math/tex">g(u)</script> around ​<script type="math/tex">x</script></p>
@@ -274,9 +274,9 @@ x^+ &amp; = &amp;  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + 
 
 <p>​<script type="math/tex; mode=display"> {\bf prox}_{th}(u)_i = 
 \begin{cases}
-u_i - t &amp; &amp; u_i \geq t \\
-0       &amp; &amp; -t \leq u_i \leq t \\
-u_i + t &amp; &amp; u_i \geq t
+u_i - t \&amp; \&amp; u_i \geq t \\
+0       \&amp; \&amp; -t \leq u_i \leq t \\
+u_i + t \&amp; \&amp; u_i \geq t
 \end{cases}</script></p>
 
 <p><span class="marginnote"></span><img class="fullwidth" src="/assets/img/fukushima-softthresholding.jpg" /></p>
@@ -288,8 +288,8 @@ u_i + t &amp; &amp; u_i \geq t
 <h4 id="composite-structure-in-the-dual">Composite structure in the Dual</h4>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-minimize &amp; &amp; f(x)+g(Ax) \\
-maximize &amp; &amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
+minimize \&amp; \&amp; f(x)+g(Ax) \\
+maximize \&amp; \&amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
 \end{eqnarray*}</script></p>
 
 <p>dual has the right structure for the proximal gradient method if</p>
@@ -323,9 +323,9 @@ maximize &amp; &amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
 <p>where</p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-\hat{x} &amp; = &amp; \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
-\hat{y} &amp; = &amp; prox_{t^{-1}g} \left( \frac{z}{t} + A\hat{x} \right)        \\
-        &amp; = &amp; \mathop{argmin}_y \left(g(y) + z^T(A\hat{x} - y) + \frac{t}{2} \|A\hat{x} - y\|^2_2  \right)
+\hat{x} \&amp; = \&amp; \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
+\hat{y} \&amp; = \&amp; prox_{t^{-1}g} \left( \frac{z}{t} + A\hat{x} \right)        \\
+        \&amp; = \&amp; \mathop{argmin}_y \left(g(y) + z^T(A\hat{x} - y) + \frac{t}{2} \|A\hat{x} - y\|^2_2  \right)
 \end{eqnarray*}</script></p>
 
 <p>in each iteration, an alternating minimization of:</p>
@@ -342,8 +342,8 @@ maximize &amp; &amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
 
 <p>​<script type="math/tex; mode=display">
 g^\ast = \begin{cases}
-b^Tz    &amp; &amp; \|z\|_\ast \leq 1 \\
-+\infty &amp; &amp; otherwise 
+b^Tz    \&amp; \&amp; \|z\|_\ast \leq 1 \\
++\infty \&amp; \&amp; otherwise 
 \end{cases}
 </script></p>
 
@@ -356,8 +356,8 @@ prox_{tg\ast}(z) = P_C(z - tb)
 <p><strong>dual gradient projection update</strong></p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-\hat{x} &amp; = &amp; \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
-z^+     &amp; = &amp; P_C(z + t(A\hat{x} - b))
+\hat{x} \&amp; = \&amp; \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
+z^+     \&amp; = \&amp; P_C(z + t(A\hat{x} - b))
 \end{eqnarray*}</script></p>
 
 <h4 id="example">Example</h4>
@@ -369,8 +369,8 @@ minimize \; \; f(x) + \sum^p_{i=1}\|B_ix\|_2 \text{   (with } f \text{ strongly 
 <p><strong>dual gradient projection update</strong></p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-\hat{x} &amp; = &amp; \mathop{argmin}_x \left( f(x) + \left(\sum^p_{i=1}B^T_iz_i\right)^Tx \right) \\
-z^+_i   &amp; = &amp; P_{C_i}(z_i + tB_i\hat{x}) \text{, } \; \; i=1, \cdots, p
+\hat{x} \&amp; = \&amp; \mathop{argmin}_x \left( f(x) + \left(\sum^p_{i=1}B^T_iz_i\right)^Tx \right) \\
+z^+_i   \&amp; = \&amp; P_{C_i}(z_i + tB_i\hat{x}) \text{, } \; \; i=1, \cdots, p
 \end{eqnarray*}</script></p>
 
 <p>​<script type="math/tex">C_i</script> is unit Euclidean norm ball in ​<script type="math/tex">\Re^{m_i}</script>, if ​<script type="math/tex">B_i \in \Re^{m_i \times n}</script></p>
@@ -378,8 +378,8 @@ z^+_i   &amp; = &amp; P_{C_i}(z_i + tB_i\hat{x}) \text{, } \; \; i=1, \cdots, p
 <h4 id="minimization-over-intersection-of-convex-sets">Minimization over intersection of convex sets</h4>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-minimize   &amp; &amp; f(x) \\
-subject to &amp; &amp; x \in C_i \cap \cdots \cap C_m
+minimize   \&amp; \&amp; f(x) \\
+subject to \&amp; \&amp; x \in C_i \cap \cdots \cap C_m
 \end{eqnarray*}</script></p>
 
 <p>​<script type="math/tex">f</script> strongly convex; e.g., ​<script type="math/tex">f(x) = \|x - a\|^2_2</script> for projecting ​<script type="math/tex">a</script> on intersection</p>
@@ -389,8 +389,8 @@ subject to &amp; &amp; x \in C_i \cap \cdots \cap C_m
 <p><strong>dual proximal gradient update</strong></p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-\hat{x} &amp; = &amp; \mathop{argmin}_x \left( f(x) + (z_i + \cdots + z_m)^Tx \right) \\
-z^+_i   &amp; = &amp; z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{, }\; \; i=1, \cdots, m
+\hat{x} \&amp; = \&amp; \mathop{argmin}_x \left( f(x) + (z_i + \cdots + z_m)^Tx \right) \\
+z^+_i   \&amp; = \&amp; z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{, }\; \; i=1, \cdots, m
 \end{eqnarray*}</script></p>
 
 <h4 id="decomposition-of-separable-problems">Decomposition of separable problems</h4>
@@ -404,8 +404,8 @@ minimize \; \; \sum^n_{j=1}f_j(x_j) + \sum^m_{i=1}g_i(A_{i1}x_1 + \cdots + A_{in
 <p><strong>dual proximal gradient update</strong></p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-\hat{x}_j &amp; = &amp; \mathop{argmin}_{x_j} \left( f_j(x_j) + \sum^m_{i=1}z^T_iA_{ij}x_j \right) \text{, } \; \; j=1, \cdots, n \\
-z^+_i        &amp; = &amp; prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
+\hat{x}_j \&amp; = \&amp; \mathop{argmin}_{x_j} \left( f_j(x_j) + \sum^m_{i=1}z^T_iA_{ij}x_j \right) \text{, } \; \; j=1, \cdots, n \\
+z^+_i        \&amp; = \&amp; prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
 \end{eqnarray*}</script></p>
 
 <h3 id="fast-proximal-gradient-methods">3. Fast proximal gradient methods</h3>
@@ -425,8 +425,8 @@ minimize \; \; f(x) = g(x) + h(x)
 <p><strong>algorithm</strong>: choose any ​<script type="math/tex">x^{(0)} = x^{(-1)}</script>; for ​<script type="math/tex">k \geq 1</script>, repeat the steps</p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-y             &amp; = &amp; x^{(k-1)} + \frac{k-2}{k+1} \left( x^{(k-1)} - x^{(k-2)} \right) \\
-x^{(k)} &amp; = &amp; prox_{t_kh} \left( y - t_k\nabla g(y) \right)
+y             \&amp; = \&amp; x^{(k-1)} + \frac{k-2}{k+1} \left( x^{(k-1)} - x^{(k-2)} \right) \\
+x^{(k)} \&amp; = \&amp; prox_{t_kh} \left( y - t_k\nabla g(y) \right)
 \end{eqnarray*}</script></p>
 
 <p>step size ​<script type="math/tex">t_k</script> fixed or determined by line search</p>
@@ -450,9 +450,9 @@ x^{(k)} &amp; = &amp; prox_{t_kh} \left( y - t_k\nabla g(y) \right)
 <p><strong>algorithm</strong>: choose ​<script type="math/tex">x^{(0)} = v^{(0)}</script>; for ​<script type="math/tex">k \geq 1</script>, repeat the steps</p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-y             &amp; = &amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
-x^{(k)} &amp; = &amp; prox_{t_kh}(y-t_k\nabla g(y))\\
-v^{(k)} &amp; = &amp; x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x^{(k-1)} \right)
+y             \&amp; = \&amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+x^{(k)} \&amp; = \&amp; prox_{t_kh}(y-t_k\nabla g(y))\\
+v^{(k)} \&amp; = \&amp; x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x^{(k-1)} \right)
 \end{eqnarray*}</script></p>
 
 <h4 id="nesterovs-second-method">Nesterov’s second method</h4>
@@ -460,9 +460,9 @@ v^{(k)} &amp; = &amp; x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x^{(k-1)}
 <p><strong>algorithm</strong>: choose ​<script type="math/tex">x^{(0)} = v^{(0)}</script>; for ​<script type="math/tex">k \geq 1</script>, repeat the steps</p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-y             &amp; = &amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
-v^{(k)} &amp; = &amp; prox_{\left(\frac{t_k}{\theta_k}\right)h} \left( v^{(k-1)} - \frac{t_k}{\theta_k}\nabla g(y) \right)\\
-x^{(k)} &amp; = &amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
+y             \&amp; = \&amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+v^{(k)} \&amp; = \&amp; prox_{\left(\frac{t_k}{\theta_k}\right)h} \left( v^{(k-1)} - \frac{t_k}{\theta_k}\nabla g(y) \right)\\
+x^{(k)} \&amp; = \&amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
 \end{eqnarray*}</script></p>
 
 <p>User​<script type="math/tex">\theta_k = \frac{2}{k+1}</script> and ​<script type="math/tex">t_k = \frac{1}{L}</script>, or one of the line search methods</p>
@@ -476,9 +476,9 @@ x^{(k)} &amp; = &amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
 <p>参考 A Fast Dual Proximal Gradient Algorithm for Convex Minimization and Applications by Amir Beck and Marc Teboulle at October 10, 2013</p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-(D)   &amp; = &amp; \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
-(D') &amp; = &amp; \min F(y) + G(y),\\
-(P') &amp; = &amp; \min \left\lbrace f(x) + g(z): Ax - z = 0 \right\rbrace.
+(D)   \&amp; = \&amp; \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
+(D') \&amp; = \&amp; \min F(y) + G(y),\\
+(P') \&amp; = \&amp; \min \left\lbrace f(x) + g(z): Ax - z = 0 \right\rbrace.
 \end{eqnarray*}</script></p>
 
 <p>​<script type="math/tex; mode=display">
@@ -490,9 +490,9 @@ F(y) := f^\ast\left( A^Ty \right), \; \; G(y) :=g^\ast(-y)
 <p>General Step ​<script type="math/tex">(k \geq 1)</script>:</p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-y_k           &amp; = &amp; prox_{\frac{1}{L}G}\left( w_k - \frac{1}{L} \nabla F(w_k) \right)\\
-t_{k+1}   &amp; = &amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2} \\
-w_{k+1} &amp; = &amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}).
+y_k           \&amp; = \&amp; prox_{\frac{1}{L}G}\left( w_k - \frac{1}{L} \nabla F(w_k) \right)\\
+t_{k+1}   \&amp; = \&amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2} \\
+w_{k+1} \&amp; = \&amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}).
 \end{eqnarray*}</script></p>
 
 <h4 id="the-fast-dual-based-proximal-gradient-method-fdpg">The Fast Dual-Based Proximal Gradient Method (FDPG)</h4>
@@ -504,11 +504,11 @@ w_{k+1} &amp; = &amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1
 <p>Step ​<script type="math/tex">k</script>. (​<script type="math/tex">k \geq 0</script>) Compute</p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-u_k           &amp; = &amp; \mathop{argmax}_x \left\lbrace \lt x, A^Tw_k\gt - f(x) \right\rbrace\\
-v_k           &amp; = &amp; prox_{Lg}(Au_k - Lw_k)\\
-y_k           &amp; = &amp; w_k - \frac{1}{L}(au_k - v_k)\\
-t_{k+1}   &amp; = &amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
-w_{k+1} &amp; = &amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}). \tag*{$\blacksquare$}
+u_k           \&amp; = \&amp; \mathop{argmax}_x \left\lbrace \lt x, A^Tw_k\gt - f(x) \right\rbrace\\
+v_k           \&amp; = \&amp; prox_{Lg}(Au_k - Lw_k)\\
+y_k           \&amp; = \&amp; w_k - \frac{1}{L}(au_k - v_k)\\
+t_{k+1}   \&amp; = \&amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
+w_{k+1} \&amp; = \&amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}). \tag*{$\blacksquare$}
 \end{eqnarray*}</script></p>
 
 
