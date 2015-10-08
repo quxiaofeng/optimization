@@ -34,10 +34,10 @@ categories:
 i \mid \forall_{l \neq k},
 {%endmath%}
 {%math%}
-\|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 <
+\|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2
 {%endmath%}
 {%math%}
-\|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2
+ < \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2
 {%endmath%}
 {%math%}
 \left\{   \right\} {%endmath%}
