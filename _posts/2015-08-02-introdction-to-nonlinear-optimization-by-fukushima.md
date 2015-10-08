@@ -92,17 +92,22 @@ categories:
 
 考虑如下非线性规划问题：
 
-{% math %} \min \; \; f({\bf x}) \\ s.t. \; \; g_i({\bf x}) \leqslant 0, \; \; i=1, \cdots, m{% endmath %}
+{% math %}
+\min \; \; f({\bf x}) \\
+s.t. \; \; g_i({\bf x}) \leqslant 0, \; \; i=1, \cdots, m
+{% endmath %}
 
 其中 {%m%}f: \Re^n \to \Re{%em%}, {%m%}g_i: \Re^n \to \Re (i=1, \cdots, m){%em%}。
 
-{% math %} S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}{% endmath %}
+{% math %}
+S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}
+{% endmath %}
 
 {% math %}
 L_0({\bf x}, {\bf \lambda}) =
 \begin{cases}
-    f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, &amp; {\bf \lambda} \geqslant {\bf 0}\\
-    -\infty \; ,                                      &amp; {\bf \lambda} \ngeqslant {\bf 0}
+    f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x}), &amp; {\bf \lambda} \geqslant {\bf 0}\\
+    -\infty,                                        &amp; {\bf \lambda} \ngeqslant {\bf 0}
 \end{cases}
 {% endmath %}
 
