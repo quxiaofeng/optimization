@@ -101,8 +101,8 @@ categories:
 {% math %}
 L_0({\bf x}, {\bf \lambda}) =
 \begin{cases}
-    f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, & {\bf \lambda} \geqslant {\bf 0}\\
-    -\infty \; ,                                      & {\bf \lambda} \ngeqslant {\bf 0}
+    f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, &amp; {\bf \lambda} \geqslant {\bf 0}\\
+    -\infty \; ,                                      &amp; {\bf \lambda} \ngeqslant {\bf 0}
 \end{cases}
 {% endmath %}
 
