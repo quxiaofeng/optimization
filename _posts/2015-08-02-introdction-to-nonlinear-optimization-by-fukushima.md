@@ -158,14 +158,19 @@ S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, 
 
 {% math %} \min_{\bf x} f({\bf x}) + g({\bf Ax}) {% endmath %}
 
-{% math %} \begin{cases} & F({\bf x}, {\bf 0}) = \theta({\bf x}), & x \in \Re^n \\
-& \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) & \end{cases} {% endmath %}
+{% math %} \begin{cases} & F({\bf x}, {\bf 0}) = \theta({\bf x}),     & x \in \Re^n \\
+                         & \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) & \end{cases} {% endmath %}
 
 {% math %} \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) {% endmath %}
-{% math %} \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) & = & \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^m \right\} \\
-& = & f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \end{eqnarray*}{% endmath %}
-{% math %} \begin{eqnarray*} \implies \omega({\bf \lambda}) & = & \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \mid {\bf x} \in \Re^n \right\} \\
-& = & -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}{% endmath %}
+{% math %} \begin{eqnarray*}
+\implies L({\bf x}, {\bf \lambda}) & = & \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^m \right\} \\
+                                   & = & f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt
+\end{eqnarray*}{% endmath %}
+
+{% math %} \begin{eqnarray*}
+\implies \omega({\bf \lambda}) & = & \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \mid {\bf x} \in \Re^n \right\} \\
+                               & = & -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda})
+\end{eqnarray*}{% endmath %}
 
 {% math %} \min_{\bf \lambda} f^\ast\left( {\bf A}^T{\bf \lambda} \right) + g^\ast(-{\bf \lambda}){% endmath %}
 {% math %} \max_{\bf \lambda} -f^\ast\left({\bf A}^T{\bf \lambda} \right) - g^\ast\left(-{\bf\lambda}\right){% endmath %}
@@ -192,7 +197,9 @@ The **proximal mapping** (or proximal operator) of a convex function {%m%}h{%em%
 
 **3.** {%m%}h(x) = t \|x\|_1{%em%}: {%m%}{\bf prox}_h{%em%} is shinkage (soft threshold) operation
 
-{% math %} {\bf prox}_h = \begin{cases}
+{% math %}
+{\bf prox}_h =
+\begin{cases}
     x_i - t & x_i   \geqslant t \\
     0       & |x_i| \leqslant t \\
     x_i + t & x_i   \leqslant -t
@@ -248,7 +255,8 @@ x^+ & = &  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + t\nabla 
 
 and
 
-{% math %} {\bf prox}_{th}(u)_i = 
+{% math %}
+{\bf prox}_{th}(u)_i =
 \begin{cases}
 u_i - t & & u_i \geq t \\
 0       & & -t \leq u_i \leq t \\
@@ -317,7 +325,8 @@ in each iteration, an alternating minimization of:
 a special case with {%m%}g(y) = \|y - b\|{%em%}
 
 {% math %}
-g^\ast = \begin{cases}
+g^\ast =
+\begin{cases}
 b^Tz    & & \|z\|_\ast \leq 1 \\
 +\infty & & otherwise 
 \end{cases}
@@ -381,7 +390,7 @@ each {%m%}f_i{%em%} is strongly convex; {%m%}g_i{%em%} has inexpensive prox-oper
 
 {% math %} \begin{eqnarray*}
 \hat{x}_j & = & \mathop{argmin}_{x_j} \left( f_j(x_j) + \sum^m_{i=1}z^T_iA_{ij}x_j \right) \text{, } \; \; j=1, \cdots, n \\
-z^+_i        & = & prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
+z^+_i     & = & prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
 \end{eqnarray*}{% endmath %}
 
 ### 3. Fast proximal gradient methods ###
@@ -401,7 +410,7 @@ minimize \; \; f(x) = g(x) + h(x)
 **algorithm**: choose any {%m%}x^{(0)} = x^{(-1)}{%em%}; for {%m%}k \geq 1{%em%}, repeat the steps
 
 {% math %} \begin{eqnarray*}
-y             & = & x^{(k-1)} + \frac{k-2}{k+1} \left( x^{(k-1)} - x^{(k-2)} \right) \\
+y       & = & x^{(k-1)} + \frac{k-2}{k+1} \left( x^{(k-1)} - x^{(k-2)} \right) \\
 x^{(k)} & = & prox_{t_kh} \left( y - t_k\nabla g(y) \right)
 \end{eqnarray*}{% endmath %}
 
@@ -426,7 +435,7 @@ define {%m%}\theta_k = \frac{2}{k+1}{%em%} and introduce an intermediate variabl
 **algorithm**: choose {%m%}x^{(0)} = v^{(0)}{%em%}; for {%m%}k \geq 1{%em%}, repeat the steps
 
 {% math %} \begin{eqnarray*}
-y             & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+y       & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
 x^{(k)} & = & prox_{t_kh}(y-t_k\nabla g(y))\\
 v^{(k)} & = & x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x^{(k-1)} \right)
 \end{eqnarray*}{% endmath %}
@@ -436,7 +445,7 @@ v^{(k)} & = & x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x^{(k-1)} \right)
 **algorithm**: choose {%m%}x^{(0)} = v^{(0)}{%em%}; for {%m%}k \geq 1{%em%}, repeat the steps
 
 {% math %} \begin{eqnarray*}
-y             & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+y       & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
 v^{(k)} & = & prox_{\left(\frac{t_k}{\theta_k}\right)h} \left( v^{(k-1)} - \frac{t_k}{\theta_k}\nabla g(y) \right)\\
 x^{(k)} & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
 \end{eqnarray*}{% endmath %}
@@ -452,7 +461,7 @@ unlike in FISTA, {%m%}y{%em%} is feasible (in {%m%}\mathop{dom} h{%em%}) if we t
 参考 A Fast Dual Proximal Gradient Algorithm for Convex Minimization and Applications by Amir Beck and Marc Teboulle at October 10, 2013
 
 {% math %} \begin{eqnarray*}
-(D)   & = & \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
+(D)  & = & \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
 (D') & = & \min F(y) + G(y),\\
 (P') & = & \min \left\lbrace f(x) + g(z): Ax - z = 0 \right\rbrace.
 \end{eqnarray*}{% endmath %}
@@ -466,8 +475,8 @@ Initialization: {%m%}L \geq \frac{\|A\|^2}{\sigma}{%em%}, {%m%}w_1 = y_0 \in \ma
 General Step {%m%}(k \geq 1){%em%}:
 
 {% math %} \begin{eqnarray*}
-y_k           & = & prox_{\frac{1}{L}G}\left( w_k - \frac{1}{L} \nabla F(w_k) \right)\\
-t_{k+1}   & = & \frac{1 + \sqrt{1 + 4t^2_k}}{2} \\
+y_k     & = & prox_{\frac{1}{L}G}\left( w_k - \frac{1}{L} \nabla F(w_k) \right)\\
+t_{k+1} & = & \frac{1 + \sqrt{1 + 4t^2_k}}{2} \\
 w_{k+1} & = & y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}).
 \end{eqnarray*}{% endmath %}
 
@@ -480,9 +489,9 @@ Step {%m%}0{%em%}. Take {%m%}w_1 = y_0 \in \mathbb{V}{%em%}, {%m%}t_1 = 1{%em%}.
 Step {%m%}k{%em%}. ({%m%}k \geq 0{%em%}) Compute
 
 {% math %} \begin{eqnarray*}
-u_k           & = & \mathop{argmax}_x \left\lbrace \lt x, A^Tw_k\gt - f(x) \right\rbrace\\
-v_k           & = & prox_{Lg}(Au_k - Lw_k)\\
-y_k           & = & w_k - \frac{1}{L}(au_k - v_k)\\
-t_{k+1}   & = & \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
+u_k     & = & \mathop{argmax}_x \left\lbrace \lt x, A^Tw_k\gt - f(x) \right\rbrace\\
+v_k     & = & prox_{Lg}(Au_k - Lw_k)\\
+y_k     & = & w_k - \frac{1}{L}(au_k - v_k)\\
+t_{k+1} & = & \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
 w_{k+1} & = & y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}). \tag*{$\blacksquare$}
 \end{eqnarray*}{% endmath %}
