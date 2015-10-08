@@ -13,11 +13,16 @@
 
 
   <!-- Google Fonts loaded here -->
-  <link href='//fonts.useso.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+    <link href='//fonts.useso.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
 
   <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
   
-  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
   <link rel="canonical" href="http://www.optimizations.ml/2015/07/18/alternating-direction-method-multipliers/">
@@ -28,16 +33,30 @@
     <!--- Header and nav template site-wide -->
 <header>
     <nav class="group">
-		<a href="//www.optimizations.ml/"><img class="badge" src="//www.optimizations.ml/assets/img/badge_op_ml.png" alt="OP"></a>
-		<a href="//www.optimizations.ml/">Home</a>
-		<a href="//www.optimizations.ml/about">About</a>
+	<a href="/"><img class="badge" src="/assets/img/badge_1.png" alt="OP"></a>
+	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+		    
+		      <a href="/">Home</a>
+		    
+	    
+  	
+		
+  	
 	</nav>
 </header>
 
-    <article>
+    <article class="group">
       <h1>Alternating Direction Method of Multipliers (ADMM)</h1>
-<p>July 18, 2015</p>
-
+<p class="subtitle">July 18, 2015</p>
 
 <p>Consider minimizing ​<script type="math/tex"> f({\bf x}) + g({\bf y}) </script> subject to affine constraints ​<script type="math/tex"> {\bf Ax} + {\bf By} = {\bf c} </script></p>
 
@@ -96,11 +115,11 @@ D = \left(\begin{matrix}
 <p>Related algorithms</p>
 
 <ul>
-  <li>Split Bregman iteration <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343.</span></li>
-  <li>Dykstra’s alternating projection algorithm <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842.</span></li>
+  <li>Split Bregman iteration <label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle" /><span class="sidenote">Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343. </span></li>
+  <li>Dykstra’s alternating projection algorithm <label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle" /><span class="sidenote">Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842. </span></li>
   <li>Proximal point algorithm applied to the dual</li>
   <li>Numerous applications in statistics and machine learning: lasso, gen. lasso, graphical lasso, (overlapping) group lasso, …</li>
-  <li>Embraces distributed computing for big data <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122.</span></li>
+  <li>Embraces distributed computing for big data <label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle" /><span class="sidenote">Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122. </span></li>
 </ul>
 
 
@@ -108,29 +127,30 @@ D = \left(\begin{matrix}
     </article>
     <span class="print-footer">Alternating Direction Method of Multipliers (ADMM) - July 18, 2015 - QU Xiaofeng</span>
     <footer>
-  <ul class="footer-links group">
+  <hr class="slender">
+  <ul class="footer-links">
     <li><a href="mailto:xiaofeng.qu.hk@ieee.org"><span class="icon-mail"></span></a></li>
     
-      <li>
-        <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
-      </li>
+    <li>
+      <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
+    </li>
     
-      <li>
-        <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
-      </li>
+    <li>
+      <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
+    </li>
     
-      <li>
-        <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
-      </li>
+    <li>
+      <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
+    </li>
     
-      <li>
-        <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
-      </li>
+    <li>
+      <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
+    </li>
     
   </ul>
 <div class="credits">
-<span>&copy; 2015 &nbsp;&nbsp;QU XIAOFENG</span></br>
-<span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
+  <span>&copy; 2015 &nbsp;&nbsp;QU XIAOFENG</span></br> <br>
+  <span>Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
 </div>
 </footer>
   </body>

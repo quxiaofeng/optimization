@@ -13,11 +13,16 @@
 
 
   <!-- Google Fonts loaded here -->
-  <link href='//fonts.useso.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+    <link href='//fonts.useso.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
 
   <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
   
-  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
   <link rel="canonical" href="http://www.optimizations.ml/2015/07/17/augmented-lagrangian-method/">
@@ -28,16 +33,30 @@
     <!--- Header and nav template site-wide -->
 <header>
     <nav class="group">
-		<a href="//www.optimizations.ml/"><img class="badge" src="//www.optimizations.ml/assets/img/badge_op_ml.png" alt="OP"></a>
-		<a href="//www.optimizations.ml/">Home</a>
-		<a href="//www.optimizations.ml/about">About</a>
+	<a href="/"><img class="badge" src="/assets/img/badge_1.png" alt="OP"></a>
+	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+		    
+		      <a href="/">Home</a>
+		    
+	    
+  	
+		
+  	
 	</nav>
 </header>
 
-    <article>
+    <article class="group">
       <h1>Augmented Lagrangian Method</h1>
-<p>July 17, 2015</p>
-
+<p class="subtitle">July 17, 2015</p>
 
 <p>Consider minimizing:</p>
 
@@ -55,7 +74,7 @@
 
 <!--more-->
 
-<p><strong>Augmented lagrangian</strong> <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> 参考<a href="http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf">http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf</a></span></p>
+<p><strong>Augmented lagrangian</strong> <label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle" /><span class="sidenote">参考<a href="http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf">http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf</a> </span></p>
 
 <p>​<script type="math/tex; mode=display">\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2</script></p>
 
@@ -106,13 +125,13 @@
 \end{eqnarray*}</script></p>
 
 <ul>
-  <li>Converges in a finite (small) number of steps <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l<sub>1</sub>-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: <a href="http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF">http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF</a></span></li>
+  <li>Converges in a finite (small) number of steps <label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle" /><span class="sidenote">Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l<sub>1</sub>-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: <a href="http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF">http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF</a> </span></li>
 </ul>
 
 <h2 id="remarks">Remarks</h2>
 
-<p>The augmented Lagrangian method dates back to 50s <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. <br /> Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London.</span><br />
-Monograph by Bertsekas<sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York.</span> provides a general treatment<br />
+<p>The augmented Lagrangian method dates back to 50s <label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle" /><span class="sidenote">Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. <br /> Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London. </span><br />
+Monograph by Bertsekas<label for="4" class="margin-toggle sidenote-number"></label><input type="checkbox" id="4" class="margin-toggle" /><span class="sidenote">Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York. </span> provides a general treatment<br />
 Same as the Bregman iteration (Yin etal., 2008) proposed for basis pursuit (compressive sensing)<br />
 Equivalent to proximal print algorithm applied to the dual; can be accelerated (Nesterov)</p>
 
@@ -121,29 +140,30 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
     </article>
     <span class="print-footer">Augmented Lagrangian Method - July 17, 2015 - QU Xiaofeng</span>
     <footer>
-  <ul class="footer-links group">
+  <hr class="slender">
+  <ul class="footer-links">
     <li><a href="mailto:xiaofeng.qu.hk@ieee.org"><span class="icon-mail"></span></a></li>
     
-      <li>
-        <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
-      </li>
+    <li>
+      <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
+    </li>
     
-      <li>
-        <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
-      </li>
+    <li>
+      <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
+    </li>
     
-      <li>
-        <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
-      </li>
+    <li>
+      <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
+    </li>
     
-      <li>
-        <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
-      </li>
+    <li>
+      <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
+    </li>
     
   </ul>
 <div class="credits">
-<span>&copy; 2015 &nbsp;&nbsp;QU XIAOFENG</span></br>
-<span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
+  <span>&copy; 2015 &nbsp;&nbsp;QU XIAOFENG</span></br> <br>
+  <span>Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
 </div>
 </footer>
   </body>

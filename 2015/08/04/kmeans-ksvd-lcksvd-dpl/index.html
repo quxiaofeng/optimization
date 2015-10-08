@@ -6,18 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>K-means, K-SVD, LC-KSVD and DPL | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="从 K-means 到 K-SVD11 M. Aharon, M. Elad, and A.M. Bruckstein, “The K-SVD: An Algorithm for Designing of Overcomplete Dictionaries for Sparse Representation”, ...">
+  <meta name="description" content="从 K-means 到 K-SVDM. Aharon, M. Elad, and A.M. Bruckstein, “The K-SVD: An Algorithm for Designing of Overcomplete Dictionaries for Sparse Representation”, the...">
 
 
   <link rel="stylesheet" href="//www.optimizations.ml/css/tufte.css">
 
 
   <!-- Google Fonts loaded here -->
-  <link href='//fonts.useso.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+    <link href='//fonts.useso.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
 
   <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
   
-  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
   <link rel="canonical" href="http://www.optimizations.ml/2015/08/04/kmeans-ksvd-lcksvd-dpl/">
@@ -28,18 +33,32 @@
     <!--- Header and nav template site-wide -->
 <header>
     <nav class="group">
-		<a href="//www.optimizations.ml/"><img class="badge" src="//www.optimizations.ml/assets/img/badge_op_ml.png" alt="OP"></a>
-		<a href="//www.optimizations.ml/">Home</a>
-		<a href="//www.optimizations.ml/about">About</a>
+	<a href="/"><img class="badge" src="/assets/img/badge_1.png" alt="OP"></a>
+	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+		    
+		      <a href="/">Home</a>
+		    
+	    
+  	
+		
+  	
 	</nav>
 </header>
 
-    <article>
+    <article class="group">
       <h1>K-means, K-SVD, LC-KSVD and DPL</h1>
-<p>August 4, 2015</p>
+<p class="subtitle">August 4, 2015</p>
 
-
-<p>从 K-means 到 <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf">K-SVD</a><sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> M. Aharon, M. Elad, and A.M. Bruckstein, “The K-SVD: An Algorithm for Designing of Overcomplete Dictionaries for Sparse Representation”, the IEEE Trans. On Signal Processing, Vol. 54, no. 11, pp. 4311-4322, November 2006. <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf">http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf</a></span><sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> O. Bryt and M. Elad, Compression of Facial Images Using the K-SVD Algorithm, Journal of Visual Communication and Image Representation, Vol. 19, No. 4, Pages 270-283, May 2008. <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf">http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf</a></span><sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> R. Rubinstein, T. Peleg and M. Elad, Analysis K-SVD: A Dictionary-Learning Algorithm for the Analysis Sparse Model, IEEE Trans. on Signal Processing, Vol. 61, No. 3, Pages 661-677, March 2013. <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf">http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf</a></span>，到 <a href="http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html">LC-KSVD</a><sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> Zhuolin Jiang, Zhe Lin, Larry S. Davis. “Label Consistent K-SVD: Learning A Discriminative Dictionary for Recognition”. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2013, 35(11): 2651-2664. <a href="http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html">http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html</a></span>，到 <a href="http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian">DPL</a><sup class="sidenote-number">5</sup><span class="sidenote"><sup class="sidenote-number">5</sup> Gu, S., Zhang, L., Zuo, W., &amp; Feng, X. (2014). Projective dictionary pair learning for pattern classification. In Z. Ghahramani, M. Welling, C. Cortes, N. D. Lawrence, &amp; K. Q. Weinberger (Eds.), Advances in Neural Information Processing Systems 27 (pp. 793–801). Curran Associates, Inc. <a href="http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian">http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian</a></span>。</p>
+<p>从 K-means 到 <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf">K-SVD</a><label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle" /><span class="sidenote">M. Aharon, M. Elad, and A.M. Bruckstein, “The K-SVD: An Algorithm for Designing of Overcomplete Dictionaries for Sparse Representation”, the IEEE Trans. On Signal Processing, Vol. 54, no. 11, pp. 4311-4322, November 2006. <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf">http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf</a> </span><label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle" /><span class="sidenote">O. Bryt and M. Elad, Compression of Facial Images Using the K-SVD Algorithm, Journal of Visual Communication and Image Representation, Vol. 19, No. 4, Pages 270-283, May 2008. <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf">http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf</a> </span><label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle" /><span class="sidenote">R. Rubinstein, T. Peleg and M. Elad, Analysis K-SVD: A Dictionary-Learning Algorithm for the Analysis Sparse Model, IEEE Trans. on Signal Processing, Vol. 61, No. 3, Pages 661-677, March 2013. <a href="http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf">http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf</a> </span>，到 <a href="http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html">LC-KSVD</a><label for="4" class="margin-toggle sidenote-number"></label><input type="checkbox" id="4" class="margin-toggle" /><span class="sidenote">Zhuolin Jiang, Zhe Lin, Larry S. Davis. “Label Consistent K-SVD: Learning A Discriminative Dictionary for Recognition”. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2013, 35(11): 2651-2664. <a href="http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html">http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html</a> </span>，到 <a href="http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian">DPL</a><label for="5" class="margin-toggle sidenote-number"></label><input type="checkbox" id="5" class="margin-toggle" /><span class="sidenote">Gu, S., Zhang, L., Zuo, W., &amp; Feng, X. (2014). Projective dictionary pair learning for pattern classification. In Z. Ghahramani, M. Welling, C. Cortes, N. D. Lawrence, &amp; K. Q. Weinberger (Eds.), Advances in Neural Information Processing Systems 27 (pp. 793–801). Curran Associates, Inc. <a href="http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian">http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian</a> </span>。</p>
 
 <hr />
 
@@ -107,29 +126,30 @@
     </article>
     <span class="print-footer">K-means, K-SVD, LC-KSVD and DPL - August 4, 2015 - QU Xiaofeng</span>
     <footer>
-  <ul class="footer-links group">
+  <hr class="slender">
+  <ul class="footer-links">
     <li><a href="mailto:xiaofeng.qu.hk@ieee.org"><span class="icon-mail"></span></a></li>
     
-      <li>
-        <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
-      </li>
+    <li>
+      <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
+    </li>
     
-      <li>
-        <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
-      </li>
+    <li>
+      <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
+    </li>
     
-      <li>
-        <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
-      </li>
+    <li>
+      <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
+    </li>
     
-      <li>
-        <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
-      </li>
+    <li>
+      <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
+    </li>
     
   </ul>
 <div class="credits">
-<span>&copy; 2015 &nbsp;&nbsp;QU XIAOFENG</span></br>
-<span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
+  <span>&copy; 2015 &nbsp;&nbsp;QU XIAOFENG</span></br> <br>
+  <span>Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
 </div>
 </footer>
   </body>
