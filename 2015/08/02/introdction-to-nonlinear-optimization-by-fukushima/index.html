@@ -101,7 +101,7 @@
 
 <p>给定正常凸函数 ​<script type="math/tex">f:\Re^n \to (-\infty,+\infty]</script>，由</p>
 
-<p>​<script type="math/tex; mode=display">f^\ast({\bf\xi}) = \sup \left\{ \lt {\bf x},{\bf\xi}&gt;-f({\bf x}) \mid {\bf x}\in \Re^n \right\} </script></p>
+<p>​<script type="math/tex; mode=display">f^\ast({\bf\xi}) = \sup \left\{ \lt {\bf x},{\bf\xi}\gt-f({\bf x}) \mid {\bf x}\in \Re^n \right\} </script></p>
 
 <p>定义的函数 ​<script type="math/tex">f^\ast:\Re^n \to [-\infty,+\infty]</script> 称为 ​<script type="math/tex">f</script> 的<strong>共轭函数</strong>（conjuagate function）。</p>
 
@@ -160,9 +160,9 @@
 
 <p><strong>引理 4.5</strong> Lagrange 函数 ​<script type="math/tex">L_0: \Re^{n+m} \to [-\infty, +\infty) </script> 与函数 ​<script type="math/tex">F_0: \Re^{n+m} \to (-\infty,+\infty]</script> 之间有如下关系成立：</p>
 
-<p>​<script type="math/tex; mode=display">L_0({\bf x}, {\bf \lambda}) = \inf \left\{ F_0({\bf x}, {\bf u}) + \lt {\bf \lambda}, {\bf u}&gt; \mid {\bf u} \in \Re^m \right\}</script></p>
+<p>​<script type="math/tex; mode=display">L_0({\bf x}, {\bf \lambda}) = \inf \left\{ F_0({\bf x}, {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^m \right\}</script></p>
 
-<p>​<script type="math/tex; mode=display">F_0({\bf x}, {\bf u}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) - \lt {\bf \lambda}, {\bf u}&gt; \mid {\bf \lambda} \in \Re^m \right\}</script></p>
+<p>​<script type="math/tex; mode=display">F_0({\bf x}, {\bf u}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) - \lt {\bf \lambda}, {\bf u}\gt \mid {\bf \lambda} \in \Re^m \right\}</script></p>
 
 <h3 id="lagrange--1">Lagrange 对偶性的推广</h3>
 
@@ -176,7 +176,7 @@
 
 <p>​<script type="math/tex; mode=display"> \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x}) </script><br />
 ​<script type="math/tex; mode=display"> \implies F({\bf x}, {\bf u}) \mid F({\bf x}, {\bf 0}) = \theta({\bf x}) </script><br />
-​<script type="math/tex; mode=display"> \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + \lt {\bf \lambda}, {\bf u}&gt; \mid {\bf u} \in \Re^M \right\} </script><br />
+​<script type="math/tex; mode=display"> \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^M \right\} </script><br />
 ​<script type="math/tex; mode=display"> \implies \omega({\bf \lambda}) = \inf \left\{ L({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} </script></p>
 
 <h3 id="fenchel-">Fenchel 对偶性</h3>
@@ -187,9 +187,9 @@
 &amp; \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) &amp; \end{cases} </script></p>
 
 <p>​<script type="math/tex; mode=display"> \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) </script><br />
-​<script type="math/tex; mode=display"> \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt {\bf \lambda}, {\bf u}&gt; \mid {\bf u} \in \Re^m \right\} \\
-&amp; = &amp; f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}&gt; \end{eqnarray*}</script><br />
-​<script type="math/tex; mode=display"> \begin{eqnarray*} \implies \omega({\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}&gt; \mid {\bf x} \in \Re^n \right\} \\
+​<script type="math/tex; mode=display"> \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^m \right\} \\
+&amp; = &amp; f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \end{eqnarray*}</script><br />
+​<script type="math/tex; mode=display"> \begin{eqnarray*} \implies \omega({\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \mid {\bf x} \in \Re^n \right\} \\
 &amp; = &amp; -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}</script></p>
 
 <p>​<script type="math/tex; mode=display"> \min_{\bf \lambda} f^\ast\left( {\bf A}^T{\bf \lambda} \right) + g^\ast(-{\bf \lambda})</script><br />
@@ -237,7 +237,7 @@
 
 <p>​<script type="math/tex; mode=display"> x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) </script></p>
 
-<p>​<script type="math/tex; mode=display"> t_k &gt; 0 \text{ is the step size,}</script></p>
+<p>​<script type="math/tex; mode=display"> t_k \gt 0 \text{ is the step size,}</script></p>
 
 <p>constant or determined by line search</p>
 
@@ -504,7 +504,7 @@ w_{k+1} &amp; = &amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1
 <p>Step ​<script type="math/tex">k</script>. (​<script type="math/tex">k \geq 0</script>) Compute</p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-u_k           &amp; = &amp; \mathop{argmax}_x \left\lbrace \lt x, A^Tw_k&gt; - f(x) \right\rbrace\\
+u_k           &amp; = &amp; \mathop{argmax}_x \left\lbrace \lt x, A^Tw_k\gt - f(x) \right\rbrace\\
 v_k           &amp; = &amp; prox_{Lg}(Au_k - Lw_k)\\
 y_k           &amp; = &amp; w_k - \frac{1}{L}(au_k - v_k)\\
 t_{k+1}   &amp; = &amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
