@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 08 Oct 2015 14:39:47 +0800</pubDate>
-    <lastBuildDate>Thu, 08 Oct 2015 14:39:47 +0800</lastBuildDate>
+    <pubDate>Thu, 08 Oct 2015 14:44:53 +0800</pubDate>
+    <lastBuildDate>Thu, 08 Oct 2015 14:44:53 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -174,17 +174,22 @@
 
 &lt;p&gt;考虑如下非线性规划问题：&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \min \; \; f({\bf x}) \\ s.t. \; \; g_i({\bf x}) \leqslant 0, \; \; i=1, \cdots, m&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\min \; \; f({\bf x}) \\
+s.t. \; \; g_i({\bf x}) \leqslant 0, \; \; i=1, \cdots, m
+&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;其中 ​&lt;script type=&quot;math/tex&quot;&gt;f: \Re^n \to \Re&lt;/script&gt;, ​&lt;script type=&quot;math/tex&quot;&gt;g_i: \Re^n \to \Re (i=1, \cdots, m)&lt;/script&gt;。&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}
+&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 L_0({\bf x}, {\bf \lambda}) =
 \begin{cases}
-    f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, &amp;amp; {\bf \lambda} \geqslant {\bf 0}\\
-    -\infty \; ,                                      &amp;amp; {\bf \lambda} \ngeqslant {\bf 0}
+    f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x}), &amp;amp; {\bf \lambda} \geqslant {\bf 0}\\
+    -\infty,                                        &amp;amp; {\bf \lambda} \ngeqslant {\bf 0}
 \end{cases}
 &lt;/script&gt;&lt;/p&gt;
 

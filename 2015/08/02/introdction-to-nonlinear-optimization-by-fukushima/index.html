@@ -130,17 +130,22 @@
 
 <p>考虑如下非线性规划问题：</p>
 
-<p>​<script type="math/tex; mode=display"> \min \; \; f({\bf x}) \\ s.t. \; \; g_i({\bf x}) \leqslant 0, \; \; i=1, \cdots, m</script></p>
+<p>​<script type="math/tex; mode=display">
+\min \; \; f({\bf x}) \\
+s.t. \; \; g_i({\bf x}) \leqslant 0, \; \; i=1, \cdots, m
+</script></p>
 
 <p>其中 ​<script type="math/tex">f: \Re^n \to \Re</script>, ​<script type="math/tex">g_i: \Re^n \to \Re (i=1, \cdots, m)</script>。</p>
 
-<p>​<script type="math/tex; mode=display"> S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}</script></p>
+<p>​<script type="math/tex; mode=display">
+S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}
+</script></p>
 
 <p>​<script type="math/tex; mode=display">
 L_0({\bf x}, {\bf \lambda}) =
 \begin{cases}
-    f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, &amp; {\bf \lambda} \geqslant {\bf 0}\\
-    -\infty \; ,                                      &amp; {\bf \lambda} \ngeqslant {\bf 0}
+    f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x}), &amp; {\bf \lambda} \geqslant {\bf 0}\\
+    -\infty,                                        &amp; {\bf \lambda} \ngeqslant {\bf 0}
 \end{cases}
 </script></p>
 
