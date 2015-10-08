@@ -2,14 +2,15 @@
 layout: default
 title: Home
 ---
-  <h1 class="content-listing-header sans">Articles</h1>
-  <ul class="content">
-    {% for post in site.posts %}
-      <li class="listing">
-      	<hr class="slender">
-      	<a href="{% if site.sourceurl %}{{ post.url | prepend: site.sourceurl }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}"><h4 class="contrast">{{ post.title }}</h4></a>
-      	<span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span>  <br/>
-		<div>{{ post.excerpt }}</div>
-      </li>
-    {% endfor %}
-  </ul>
+
+<h1 class="content-listing-header sans">Articles</h1>
+<ul class="content">
+  {% for post in site.posts %}
+  <li class="listing">
+  	<hr class="slender">
+  	<a href="{% if site.sourceurl %}{{ post.url | prepend: site.sourceurl }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}"><h4 class="contrast">{{ post.title }}</h4></a>
+  	<span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span>  <br/>
+    <div>{{ post.excerpt }}</div>
+  </li>
+  {% endfor %}
+</ul>
