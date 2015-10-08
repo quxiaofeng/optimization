@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 08 Oct 2015 15:33:28 +0800</pubDate>
-    <lastBuildDate>Thu, 08 Oct 2015 15:33:28 +0800</lastBuildDate>
+    <pubDate>Thu, 08 Oct 2015 15:35:37 +0800</pubDate>
+    <lastBuildDate>Thu, 08 Oct 2015 15:35:37 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -75,11 +75,9 @@
 
 </description>
         <pubDate>Tue, 04 Aug 2015 06:46:53 +0800</pubDate>
-        <link>http://www.optimizations.ml/post/2015/08/04/kmeans-ksvd-lcksvd-dpl/</link>
-        <guid isPermaLink="true">http://www.optimizations.ml/post/2015/08/04/kmeans-ksvd-lcksvd-dpl/</guid>
+        <link>http://www.optimizations.ml/2015/08/04/kmeans-ksvd-lcksvd-dpl/</link>
+        <guid isPermaLink="true">http://www.optimizations.ml/2015/08/04/kmeans-ksvd-lcksvd-dpl/</guid>
         
-        
-        <category>post</category>
         
       </item>
     
@@ -583,11 +581,9 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 02 Aug 2015 22:33:54 +0800</pubDate>
-        <link>http://www.optimizations.ml/post/2015/08/02/introdction-to-nonlinear-optimization-by-fukushima/</link>
-        <guid isPermaLink="true">http://www.optimizations.ml/post/2015/08/02/introdction-to-nonlinear-optimization-by-fukushima/</guid>
+        <link>http://www.optimizations.ml/2015/08/02/introdction-to-nonlinear-optimization-by-fukushima/</link>
+        <guid isPermaLink="true">http://www.optimizations.ml/2015/08/02/introdction-to-nonlinear-optimization-by-fukushima/</guid>
         
-        
-        <category>post</category>
         
       </item>
     
