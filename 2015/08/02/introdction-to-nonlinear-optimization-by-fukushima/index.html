@@ -194,14 +194,19 @@ S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, 
 
 <p>​<script type="math/tex; mode=display"> \min_{\bf x} f({\bf x}) + g({\bf Ax}) </script></p>
 
-<p>​<script type="math/tex; mode=display"> \begin{cases} &amp; F({\bf x}, {\bf 0}) = \theta({\bf x}), &amp; x \in \Re^n \\
-&amp; \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) &amp; \end{cases} </script></p>
+<p>​<script type="math/tex; mode=display"> \begin{cases} &amp; F({\bf x}, {\bf 0}) = \theta({\bf x}),     &amp; x \in \Re^n \\
+                         &amp; \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) &amp; \end{cases} </script></p>
 
 <p>​<script type="math/tex; mode=display"> \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) </script><br />
-​<script type="math/tex; mode=display"> \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^m \right\} \\
-&amp; = &amp; f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \end{eqnarray*}</script><br />
-​<script type="math/tex; mode=display"> \begin{eqnarray*} \implies \omega({\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \mid {\bf x} \in \Re^n \right\} \\
-&amp; = &amp; -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}</script></p>
+​<script type="math/tex; mode=display"> \begin{eqnarray*}
+\implies L({\bf x}, {\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^m \right\} \\
+                                   &amp; = &amp; f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt
+\end{eqnarray*}</script></p>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+\implies \omega({\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \mid {\bf x} \in \Re^n \right\} \\
+                               &amp; = &amp; -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda})
+\end{eqnarray*}</script></p>
 
 <p>​<script type="math/tex; mode=display"> \min_{\bf \lambda} f^\ast\left( {\bf A}^T{\bf \lambda} \right) + g^\ast(-{\bf \lambda})</script><br />
 ​<script type="math/tex; mode=display"> \max_{\bf \lambda} -f^\ast\left({\bf A}^T{\bf \lambda} \right) - g^\ast\left(-{\bf\lambda}\right)</script></p>
@@ -228,7 +233,9 @@ S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, 
 
 <p><strong>3.</strong> ​<script type="math/tex">h(x) = t \|x\|_1</script>: ​<script type="math/tex">{\bf prox}_h</script> is shinkage (soft threshold) operation</p>
 
-<p>​<script type="math/tex; mode=display"> {\bf prox}_h = \begin{cases}
+<p>​<script type="math/tex; mode=display">
+{\bf prox}_h =
+\begin{cases}
     x_i - t &amp; x_i   \geqslant t \\
     0       &amp; |x_i| \leqslant t \\
     x_i + t &amp; x_i   \leqslant -t
@@ -283,7 +290,8 @@ x^+ &amp; = &amp;  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + 
 
 <p>and</p>
 
-<p>​<script type="math/tex; mode=display"> {\bf prox}_{th}(u)_i = 
+<p>​<script type="math/tex; mode=display">
+{\bf prox}_{th}(u)_i =
 \begin{cases}
 u_i - t &amp; &amp; u_i \geq t \\
 0       &amp; &amp; -t \leq u_i \leq t \\
@@ -352,7 +360,8 @@ maximize &amp; &amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
 <p>a special case with ​<script type="math/tex">g(y) = \|y - b\|</script></p>
 
 <p>​<script type="math/tex; mode=display">
-g^\ast = \begin{cases}
+g^\ast =
+\begin{cases}
 b^Tz    &amp; &amp; \|z\|_\ast \leq 1 \\
 +\infty &amp; &amp; otherwise 
 \end{cases}
@@ -416,7 +425,7 @@ minimize \; \; \sum^n_{j=1}f_j(x_j) + \sum^m_{i=1}g_i(A_{i1}x_1 + \cdots + A_{in
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
 \hat{x}_j &amp; = &amp; \mathop{argmin}_{x_j} \left( f_j(x_j) + \sum^m_{i=1}z^T_iA_{ij}x_j \right) \text{, } \; \; j=1, \cdots, n \\
-z^+_i        &amp; = &amp; prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
+z^+_i     &amp; = &amp; prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
 \end{eqnarray*}</script></p>
 
 <h3 id="fast-proximal-gradient-methods">3. Fast proximal gradient methods</h3>
@@ -436,7 +445,7 @@ minimize \; \; f(x) = g(x) + h(x)
 <p><strong>algorithm</strong>: choose any ​<script type="math/tex">x^{(0)} = x^{(-1)}</script>; for ​<script type="math/tex">k \geq 1</script>, repeat the steps</p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-y             &amp; = &amp; x^{(k-1)} + \frac{k-2}{k+1} \left( x^{(k-1)} - x^{(k-2)} \right) \\
+y       &amp; = &amp; x^{(k-1)} + \frac{k-2}{k+1} \left( x^{(k-1)} - x^{(k-2)} \right) \\
 x^{(k)} &amp; = &amp; prox_{t_kh} \left( y - t_k\nabla g(y) \right)
 \end{eqnarray*}</script></p>
 
@@ -461,7 +470,7 @@ x^{(k)} &amp; = &amp; prox_{t_kh} \left( y - t_k\nabla g(y) \right)
 <p><strong>algorithm</strong>: choose ​<script type="math/tex">x^{(0)} = v^{(0)}</script>; for ​<script type="math/tex">k \geq 1</script>, repeat the steps</p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-y             &amp; = &amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+y       &amp; = &amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
 x^{(k)} &amp; = &amp; prox_{t_kh}(y-t_k\nabla g(y))\\
 v^{(k)} &amp; = &amp; x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x^{(k-1)} \right)
 \end{eqnarray*}</script></p>
@@ -471,7 +480,7 @@ v^{(k)} &amp; = &amp; x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x^{(k-1)}
 <p><strong>algorithm</strong>: choose ​<script type="math/tex">x^{(0)} = v^{(0)}</script>; for ​<script type="math/tex">k \geq 1</script>, repeat the steps</p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-y             &amp; = &amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+y       &amp; = &amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
 v^{(k)} &amp; = &amp; prox_{\left(\frac{t_k}{\theta_k}\right)h} \left( v^{(k-1)} - \frac{t_k}{\theta_k}\nabla g(y) \right)\\
 x^{(k)} &amp; = &amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
 \end{eqnarray*}</script></p>
@@ -487,7 +496,7 @@ x^{(k)} &amp; = &amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
 <p>参考 A Fast Dual Proximal Gradient Algorithm for Convex Minimization and Applications by Amir Beck and Marc Teboulle at October 10, 2013</p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-(D)   &amp; = &amp; \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
+(D)  &amp; = &amp; \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
 (D') &amp; = &amp; \min F(y) + G(y),\\
 (P') &amp; = &amp; \min \left\lbrace f(x) + g(z): Ax - z = 0 \right\rbrace.
 \end{eqnarray*}</script></p>
@@ -501,8 +510,8 @@ F(y) := f^\ast\left( A^Ty \right), \; \; G(y) :=g^\ast(-y)
 <p>General Step ​<script type="math/tex">(k \geq 1)</script>:</p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-y_k           &amp; = &amp; prox_{\frac{1}{L}G}\left( w_k - \frac{1}{L} \nabla F(w_k) \right)\\
-t_{k+1}   &amp; = &amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2} \\
+y_k     &amp; = &amp; prox_{\frac{1}{L}G}\left( w_k - \frac{1}{L} \nabla F(w_k) \right)\\
+t_{k+1} &amp; = &amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2} \\
 w_{k+1} &amp; = &amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}).
 \end{eqnarray*}</script></p>
 
@@ -515,10 +524,10 @@ w_{k+1} &amp; = &amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1
 <p>Step ​<script type="math/tex">k</script>. (​<script type="math/tex">k \geq 0</script>) Compute</p>
 
 <p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
-u_k           &amp; = &amp; \mathop{argmax}_x \left\lbrace \lt x, A^Tw_k\gt - f(x) \right\rbrace\\
-v_k           &amp; = &amp; prox_{Lg}(Au_k - Lw_k)\\
-y_k           &amp; = &amp; w_k - \frac{1}{L}(au_k - v_k)\\
-t_{k+1}   &amp; = &amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
+u_k     &amp; = &amp; \mathop{argmax}_x \left\lbrace \lt x, A^Tw_k\gt - f(x) \right\rbrace\\
+v_k     &amp; = &amp; prox_{Lg}(Au_k - Lw_k)\\
+y_k     &amp; = &amp; w_k - \frac{1}{L}(au_k - v_k)\\
+t_{k+1} &amp; = &amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
 w_{k+1} &amp; = &amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}). \tag*{$\blacksquare$}
 \end{eqnarray*}</script></p>
 
