@@ -13,9 +13,9 @@ nav_exclude: true
 
 // Imports to create final 
 
-@import "../_sass/fonts";
-@import "../_sass/settings";
-@import "../_sass/syntax-highlighting";
+@import "//www.quxiaofeng.me/optimization/_sass/fonts";
+@import "//www.quxiaofeng.me/optimization/_sass/settings";
+@import "//www.quxiaofeng.me/optimization/_sass/syntax-highlighting";
 
 // Global Resets
 // 
@@ -73,7 +73,7 @@ body { width: 87.5%;
        margin-left: auto;
        margin-right: auto;
        padding-left: 12.5%;
-       font-family: et-bembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+       font-family: et-bembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", serif;
        background-color: $bg-color;
        color: $text-color;
        max-width: 1400px;
