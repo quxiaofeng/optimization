@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 08 Oct 2015 13:23:11 +0800</pubDate>
-    <lastBuildDate>Thu, 08 Oct 2015 13:23:11 +0800</lastBuildDate>
+    <pubDate>Thu, 08 Oct 2015 13:25:40 +0800</pubDate>
+    <lastBuildDate>Thu, 08 Oct 2015 13:25:40 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -145,7 +145,7 @@
 
 &lt;p&gt;给定正常凸函数 ​&lt;script type=&quot;math/tex&quot;&gt;f:\Re^n \to (-\infty,+\infty]&lt;/script&gt;，由&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;f^\ast({\bf\xi}) = \sup \left\{ \lt {\bf x},{\bf\xi}&amp;gt;-f({\bf x}) \mid {\bf x}\in \Re^n \right\} &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;f^\ast({\bf\xi}) = \sup \left\{ \lt {\bf x},{\bf\xi}\gt{}-f({\bf x}) \mid {\bf x}\in \Re^n \right\} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;定义的函数 ​&lt;script type=&quot;math/tex&quot;&gt;f^\ast:\Re^n \to [-\infty,+\infty]&lt;/script&gt; 称为 ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的&lt;strong&gt;共轭函数&lt;/strong&gt;（conjuagate function）。&lt;/p&gt;
 
@@ -204,9 +204,9 @@
 
 &lt;p&gt;&lt;strong&gt;引理 4.5&lt;/strong&gt; Lagrange 函数 ​&lt;script type=&quot;math/tex&quot;&gt;L_0: \Re^{n+m} \to [-\infty, +\infty) &lt;/script&gt; 与函数 ​&lt;script type=&quot;math/tex&quot;&gt;F_0: \Re^{n+m} \to (-\infty,+\infty]&lt;/script&gt; 之间有如下关系成立：&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;L_0({\bf x}, {\bf \lambda}) = \inf \left\{ F_0({\bf x}, {\bf u}) + \lt {\bf \lambda}, {\bf u}&amp;gt; \mid {\bf u} \in \Re^m \right\}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;L_0({\bf x}, {\bf \lambda}) = \inf \left\{ F_0({\bf x}, {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^m \right\}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;F_0({\bf x}, {\bf u}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) - \lt {\bf \lambda}, {\bf u}&amp;gt; \mid {\bf \lambda} \in \Re^m \right\}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;F_0({\bf x}, {\bf u}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) - \lt {\bf \lambda}, {\bf u}\gt \mid {\bf \lambda} \in \Re^m \right\}&lt;/script&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;lagrange--1&quot;&gt;Lagrange 对偶性的推广&lt;/h3&gt;
 
@@ -220,7 +220,7 @@
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x}) &lt;/script&gt;&lt;br /&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies F({\bf x}, {\bf u}) \mid F({\bf x}, {\bf 0}) = \theta({\bf x}) &lt;/script&gt;&lt;br /&gt;
-​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + \lt {\bf \lambda}, {\bf u}&amp;gt; \mid {\bf u} \in \Re^M \right\} &lt;/script&gt;&lt;br /&gt;
+​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^M \right\} &lt;/script&gt;&lt;br /&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies \omega({\bf \lambda}) = \inf \left\{ L({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} &lt;/script&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;fenchel-&quot;&gt;Fenchel 对偶性&lt;/h3&gt;
@@ -231,9 +231,9 @@
 &amp;amp; \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) &amp;amp; \end{cases} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) &lt;/script&gt;&lt;br /&gt;
-​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) &amp;amp; = &amp;amp; \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt {\bf \lambda}, {\bf u}&amp;gt; \mid {\bf u} \in \Re^m \right\} \\
-&amp;amp; = &amp;amp; f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}&amp;gt; \end{eqnarray*}&lt;/script&gt;&lt;br /&gt;
-​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*} \implies \omega({\bf \lambda}) &amp;amp; = &amp;amp; \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}&amp;gt; \mid {\bf x} \in \Re^n \right\} \\
+​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) &amp;amp; = &amp;amp; \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^m \right\} \\
+&amp;amp; = &amp;amp; f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \end{eqnarray*}&lt;/script&gt;&lt;br /&gt;
+​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*} \implies \omega({\bf \lambda}) &amp;amp; = &amp;amp; \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \mid {\bf x} \in \Re^n \right\} \\
 &amp;amp; = &amp;amp; -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \min_{\bf \lambda} f^\ast\left( {\bf A}^T{\bf \lambda} \right) + g^\ast(-{\bf \lambda})&lt;/script&gt;&lt;br /&gt;
@@ -281,7 +281,7 @@
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; t_k &amp;gt; 0 \text{ is the step size,}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; t_k \gt 0 \text{ is the step size,}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;constant or determined by line search&lt;/p&gt;
 
@@ -548,7 +548,7 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
 &lt;p&gt;Step ​&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;. (​&lt;script type=&quot;math/tex&quot;&gt;k \geq 0&lt;/script&gt;) Compute&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
-u_k           &amp;amp; = &amp;amp; \mathop{argmax}_x \left\lbrace \lt x, A^Tw_k&amp;gt; - f(x) \right\rbrace\\
+u_k           &amp;amp; = &amp;amp; \mathop{argmax}_x \left\lbrace \lt x, A^Tw_k\gt - f(x) \right\rbrace\\
 v_k           &amp;amp; = &amp;amp; prox_{Lg}(Au_k - Lw_k)\\
 y_k           &amp;amp; = &amp;amp; w_k - \frac{1}{L}(au_k - v_k)\\
 t_{k+1}   &amp;amp; = &amp;amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
