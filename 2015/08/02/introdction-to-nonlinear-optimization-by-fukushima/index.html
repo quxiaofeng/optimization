@@ -136,27 +136,38 @@
 
 <p>​<script type="math/tex; mode=display"> S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}</script></p>
 
-<p>​<script type="math/tex; mode=display"> L_0({\bf x}, {\bf \lambda}) = \begin{cases}
-        f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, &amp; {\bf \lambda} \geqslant {\bf 0}\\
-        -\infty \; , &amp; {\bf \lambda} \ngeqslant {\bf 0}
-    \end{cases}
+<p>​<script type="math/tex; mode=display">
+L_0({\bf x}, {\bf \lambda}) =
+\begin{cases}
+    f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, &amp; {\bf \lambda} \geqslant {\bf 0}\\
+    -\infty \; ,                                      &amp; {\bf \lambda} \ngeqslant {\bf 0}
+\end{cases}
 </script></p>
 
-<p>​<script type="math/tex; mode=display"> \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x})</script></p>
+<p>​<script type="math/tex; mode=display">
+\theta({\bf x}) = f({\bf x}) + \delta_S({\bf x})
+</script></p>
 
-<p>​<script type="math/tex; mode=display"> \theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}</script></p>
+<p>​<script type="math/tex; mode=display">
+\theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}
+</script></p>
 
-<p>​<script type="math/tex; mode=display"> \omega_0({\bf \lambda}) = \inf \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} </script></p>
+<p>​<script type="math/tex; mode=display">
+\omega_0({\bf \lambda}) = \inf \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\}
+</script></p>
 
 <p>Constrains relax</p>
 
-<p>​<script type="math/tex; mode=display"> F_0({\bf x}, {\bf u}) = \begin{cases}
-        f({\bf x}),  &amp; {\bf x} \in        S({\bf u}) &amp; \min  &amp; f({\bf x}) &amp; &amp; \\
-        +\infty,      &amp; {\bf x} \notin S({\bf u}) &amp; s.t.      &amp; g_i({\bf x}) &amp; \leqslant u_i, &amp; i = 1, \cdots, m
-    \end{cases}
+<p>​<script type="math/tex; mode=display"> F_0({\bf x}, {\bf u}) =
+\begin{cases}
+    f({\bf x}), &amp; {\bf x} \in        S({\bf u}) &amp; \min  &amp; f({\bf x})   &amp;                &amp; \\
+    +\infty,    &amp; {\bf x} \notin S({\bf u})     &amp; s.t.  &amp; g_i({\bf x}) &amp; \leqslant u_i, &amp; i = 1, \cdots, m
+\end{cases}
 </script></p>
 
-<p>​<script type="math/tex; mode=display"> S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, \cdots, m \right\} </script></p>
+<p>​<script type="math/tex; mode=display">
+S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, \cdots, m \right\}
+</script></p>
 
 <p><strong>引理 4.5</strong> Lagrange 函数 ​<script type="math/tex">L_0: \Re^{n+m} \to [-\infty, +\infty) </script> 与函数 ​<script type="math/tex">F_0: \Re^{n+m} \to (-\infty,+\infty]</script> 之间有如下关系成立：</p>
 
