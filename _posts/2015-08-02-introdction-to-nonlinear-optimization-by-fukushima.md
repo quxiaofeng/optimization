@@ -63,7 +63,7 @@ categories:
 
 给定正常凸函数 {%m%}f:\Re^n \to (-\infty,+\infty]{%em%}，由
 
-{% math %}f^\ast({\bf\xi}) = \sup \left\{ \lt {\bf x},{\bf\xi}>-f({\bf x}) \mid {\bf x}\in \Re^n \right\} {% endmath %}
+{% math %}f^\ast({\bf\xi}) = \sup \left\{ \lt {\bf x},{\bf\xi}\gt-f({\bf x}) \mid {\bf x}\in \Re^n \right\} {% endmath %}
 
 定义的函数 {%m%}f^\ast:\Re^n \to [-\infty,+\infty]{%em%} 称为 {%m%}f{%em%} 的**共轭函数**（conjuagate function）。
 
@@ -122,9 +122,9 @@ Constrains relax
 
 **引理 4.5** Lagrange 函数 {%m%}L_0: \Re^{n+m} \to [-\infty, +\infty) {%em%} 与函数 {%m%}F_0: \Re^{n+m} \to (-\infty,+\infty]{%em%} 之间有如下关系成立：
 
-{% math %}L_0({\bf x}, {\bf \lambda}) = \inf \left\{ F_0({\bf x}, {\bf u}) + \lt {\bf \lambda}, {\bf u}> \mid {\bf u} \in \Re^m \right\}{% endmath %}
+{% math %}L_0({\bf x}, {\bf \lambda}) = \inf \left\{ F_0({\bf x}, {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^m \right\}{% endmath %}
 
-{% math %}F_0({\bf x}, {\bf u}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) - \lt {\bf \lambda}, {\bf u}> \mid {\bf \lambda} \in \Re^m \right\}{% endmath %}
+{% math %}F_0({\bf x}, {\bf u}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) - \lt {\bf \lambda}, {\bf u}\gt \mid {\bf \lambda} \in \Re^m \right\}{% endmath %}
 
 ### Lagrange 对偶性的推广 ###
 
@@ -139,7 +139,7 @@ Constrains relax
 
 {% math %} \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x}) {% endmath %}
 {% math %} \implies F({\bf x}, {\bf u}) \mid F({\bf x}, {\bf 0}) = \theta({\bf x}) {% endmath %}
-{% math %} \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + \lt {\bf \lambda}, {\bf u}> \mid {\bf u} \in \Re^M \right\} {% endmath %}
+{% math %} \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^M \right\} {% endmath %}
 {% math %} \implies \omega({\bf \lambda}) = \inf \left\{ L({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} {% endmath %}
 
 
@@ -151,9 +151,9 @@ Constrains relax
 & \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) & \end{cases} {% endmath %}
 
 {% math %} \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) {% endmath %}
-{% math %} \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) & = & \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt {\bf \lambda}, {\bf u}> \mid {\bf u} \in \Re^m \right\} \\
-& = & f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}> \end{eqnarray*}{% endmath %}
-{% math %} \begin{eqnarray*} \implies \omega({\bf \lambda}) & = & \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}> \mid {\bf x} \in \Re^n \right\} \\
+{% math %} \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) & = & \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^m \right\} \\
+& = & f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \end{eqnarray*}{% endmath %}
+{% math %} \begin{eqnarray*} \implies \omega({\bf \lambda}) & = & \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \mid {\bf x} \in \Re^n \right\} \\
 & = & -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}{% endmath %}
 
 {% math %} \min_{\bf \lambda} f^\ast\left( {\bf A}^T{\bf \lambda} \right) + g^\ast(-{\bf \lambda}){% endmath %}
@@ -201,7 +201,7 @@ The **proximal mapping** (or proximal operator) of a convex function {%m%}h{%em%
 
 {% math %} x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) {% endmath %}
 
-{% math %} t_k > 0 \text{ is the step size,}{% endmath %}
+{% math %} t_k \gt 0 \text{ is the step size,}{% endmath %}
 
 constant or determined by line search
 
@@ -469,7 +469,7 @@ Step {%m%}0{%em%}. Take {%m%}w_1 = y_0 \in \mathbb{V}{%em%}, {%m%}t_1 = 1{%em%}.
 Step {%m%}k{%em%}. ({%m%}k \geq 0{%em%}) Compute
 
 {% math %} \begin{eqnarray*}
-u_k           & = & \mathop{argmax}_x \left\lbrace \lt x, A^Tw_k> - f(x) \right\rbrace\\
+u_k           & = & \mathop{argmax}_x \left\lbrace \lt x, A^Tw_k\gt - f(x) \right\rbrace\\
 v_k           & = & prox_{Lg}(Au_k - Lw_k)\\
 y_k           & = & w_k - \frac{1}{L}(au_k - v_k)\\
 t_{k+1}   & = & \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
