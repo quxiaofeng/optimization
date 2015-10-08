@@ -27,7 +27,11 @@ categories:
 
 每个集合中存放与 {%m%}{\bf c}^{J-1}_k{%em%} 列最相似的样本的索引。
 
-{%math%} {\bf R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 < \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\} {%endmath%}
+{%math%}
+{\bf R}^{(J-1)}_k =
+{%endmath%}
+{%math%}
+\left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 < \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\} {%endmath%}
 
 **2.** 编码本更新阶段：{%m%}{\bf C}^{(J-1)}{%em%} 中的任一列 {%m%}k{%em%} 都根据如下公式更新。
 
