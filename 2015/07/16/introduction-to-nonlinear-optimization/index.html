@@ -6,23 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Introduction to Nonlinear Optimization | OPTIMIZATIONS for Machine Learning</title>
-  <meta name="description" content="昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》《Introduction to Nonlinear Optimization》 at 豆瓣: http://book.douban.com/subject/26551626/ and a...">
+  <meta name="description" content="昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》11 《Introduction to Nonlinear Optimization》 at 豆瓣: http://book.douban.com/subject/26551626/ an...">
 
 
-  <link rel="stylesheet" href="http://www.optimizations.ml/css/tufte.css">
+  <link rel="stylesheet" href="//www.optimizations.ml/css/tufte.css">
 
 
   <!-- Google Fonts loaded here -->
-  
-    <link href='//fonts.useso.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
-  
-
-  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
-  
+  <link href='//fonts.useso.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
 
   <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
   
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
   <link rel="canonical" href="http://www.optimizations.ml/2015/07/16/introduction-to-nonlinear-optimization/">
@@ -32,33 +27,19 @@
   <body>
     <!--- Header and nav template site-wide -->
 <header>
-  <nav class="group">
-		<a href="http://www.optimizations.ml/"><img class="badge" src="http://www.optimizations.ml/assets/img/badge_op_ml.png" alt="OP"></a>
-		
-			
-		    
-    <a href="http://www.optimizations.ml/about/">About</a>
-		    
-	    
-  	
-			
-  	
-			
-		    
-    <a href="http://www.optimizations.ml/">Home</a>
-		    
-	    
-  	
-			
-  	
+    <nav class="group">
+		<a href="//www.optimizations.ml/"><img class="badge" src="//www.optimizations.ml/assets/img/badge_op_ml.png" alt="OP"></a>
+		<a href="//www.optimizations.ml/">Home</a>
+		<a href="//www.optimizations.ml/about">About</a>
 	</nav>
 </header>
 
-    <article class="group">
+    <article>
       <h1>Introduction to Nonlinear Optimization</h1>
-<p class="subtitle">July 16, 2015</p>
+<p>July 16, 2015</p>
 
-<p>昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle" /><span class="sidenote">《Introduction to Nonlinear Optimization》 at 豆瓣: <a href="http://book.douban.com/subject/26551626/">http://book.douban.com/subject/26551626/</a> and at Amazon: <a href="http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/">http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/</a> </span> by Amir Beck <label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle" /><span class="sidenote">Amir Beck is an associate professor at The Technion—Israel Institute of Technology： <a href="http://iew3.technion.ac.il/Home/Users/becka.html">http://iew3.technion.ac.il/Home/Users/becka.html</a> </span>。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization<label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle" /><span class="sidenote">MOS-SIAM Series on Optimization: <a href="http://bookstore.siam.org/mos-siam-series-on-optimization/">http://bookstore.siam.org/mos-siam-series-on-optimization/</a> </span> 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉习题也都挺有用的。</p>
+
+<p>昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> 《Introduction to Nonlinear Optimization》 at 豆瓣: <a href="http://book.douban.com/subject/26551626/">http://book.douban.com/subject/26551626/</a> and at Amazon: <a href="http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/">http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/</a></span> by Amir Beck <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Amir Beck is an associate professor at The Technion—Israel Institute of Technology： <a href="http://iew3.technion.ac.il/Home/Users/becka.html">http://iew3.technion.ac.il/Home/Users/becka.html</a></span>。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization<sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> MOS-SIAM Series on Optimization: <a href="http://bookstore.siam.org/mos-siam-series-on-optimization/">http://bookstore.siam.org/mos-siam-series-on-optimization/</a></span> 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉习题也都挺有用的。</p>
 
 <!--more-->
 
@@ -152,30 +133,29 @@
     </article>
     <span class="print-footer">Introduction to Nonlinear Optimization - July 16, 2015 - QU Xiaofeng</span>
     <footer>
-  <hr class="slender">
-  <ul class="footer-links">
+  <ul class="footer-links group">
     <li><a href="mailto:xiaofeng.qu.hk@ieee.org"><span class="icon-mail"></span></a></li>
     
-    <li>
-      <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
-    </li>
+      <li>
+        <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
+      </li>
     
-    <li>
-      <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
-    </li>
+      <li>
+        <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
+      </li>
     
-    <li>
-      <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
-    </li>
+      <li>
+        <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
+      </li>
     
-    <li>
-      <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
-    </li>
+      <li>
+        <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
+      </li>
     
   </ul>
 <div class="credits">
-  <span>&copy; 2015 &nbsp;&nbsp;QU XIAOFENG</span></br> <br>
-  <span>Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
+<span>&copy; 2015 &nbsp;&nbsp;QU XIAOFENG</span></br>
+<span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
 </div>
 </footer>
   </body>

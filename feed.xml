@@ -5,13 +5,13 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 08 Oct 2015 16:55:57 +0800</pubDate>
-    <lastBuildDate>Thu, 08 Oct 2015 16:55:57 +0800</lastBuildDate>
+    <pubDate>Fri, 09 Oct 2015 11:55:54 +0800</pubDate>
+    <lastBuildDate>Fri, 09 Oct 2015 11:55:54 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>K-means, K-SVD, LC-KSVD and DPL</title>
-        <description>&lt;p&gt;从 K-means 到 &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf&quot;&gt;K-SVD&lt;/a&gt;&lt;label for=&quot;1&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;1&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;M. Aharon, M. Elad, and A.M. Bruckstein, “The K-SVD: An Algorithm for Designing of Overcomplete Dictionaries for Sparse Representation”, the IEEE Trans. On Signal Processing, Vol. 54, no. 11, pp. 4311-4322, November 2006. &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf&quot;&gt;http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf&lt;/a&gt; &lt;/span&gt;&lt;label for=&quot;2&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;2&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;O. Bryt and M. Elad, Compression of Facial Images Using the K-SVD Algorithm, Journal of Visual Communication and Image Representation, Vol. 19, No. 4, Pages 270-283, May 2008. &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf&quot;&gt;http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf&lt;/a&gt; &lt;/span&gt;&lt;label for=&quot;3&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;3&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;R. Rubinstein, T. Peleg and M. Elad, Analysis K-SVD: A Dictionary-Learning Algorithm for the Analysis Sparse Model, IEEE Trans. on Signal Processing, Vol. 61, No. 3, Pages 661-677, March 2013. &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf&quot;&gt;http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf&lt;/a&gt; &lt;/span&gt;，到 &lt;a href=&quot;http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html&quot;&gt;LC-KSVD&lt;/a&gt;&lt;label for=&quot;4&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;4&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Zhuolin Jiang, Zhe Lin, Larry S. Davis. “Label Consistent K-SVD: Learning A Discriminative Dictionary for Recognition”. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2013, 35(11): 2651-2664. &lt;a href=&quot;http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html&quot;&gt;http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html&lt;/a&gt; &lt;/span&gt;，到 &lt;a href=&quot;http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian&quot;&gt;DPL&lt;/a&gt;&lt;label for=&quot;5&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;5&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Gu, S., Zhang, L., Zuo, W., &amp;amp; Feng, X. (2014). Projective dictionary pair learning for pattern classification. In Z. Ghahramani, M. Welling, C. Cortes, N. D. Lawrence, &amp;amp; K. Q. Weinberger (Eds.), Advances in Neural Information Processing Systems 27 (pp. 793–801). Curran Associates, Inc. &lt;a href=&quot;http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian&quot;&gt;http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian&lt;/a&gt; &lt;/span&gt;。&lt;/p&gt;
+        <description>&lt;p&gt;从 K-means 到 &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf&quot;&gt;K-SVD&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; M. Aharon, M. Elad, and A.M. Bruckstein, “The K-SVD: An Algorithm for Designing of Overcomplete Dictionaries for Sparse Representation”, the IEEE Trans. On Signal Processing, Vol. 54, no. 11, pp. 4311-4322, November 2006. &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf&quot;&gt;http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf&lt;/a&gt;&lt;/span&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; O. Bryt and M. Elad, Compression of Facial Images Using the K-SVD Algorithm, Journal of Visual Communication and Image Representation, Vol. 19, No. 4, Pages 270-283, May 2008. &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf&quot;&gt;http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf&lt;/a&gt;&lt;/span&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; R. Rubinstein, T. Peleg and M. Elad, Analysis K-SVD: A Dictionary-Learning Algorithm for the Analysis Sparse Model, IEEE Trans. on Signal Processing, Vol. 61, No. 3, Pages 661-677, March 2013. &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf&quot;&gt;http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf&lt;/a&gt;&lt;/span&gt;，到 &lt;a href=&quot;http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html&quot;&gt;LC-KSVD&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt; Zhuolin Jiang, Zhe Lin, Larry S. Davis. “Label Consistent K-SVD: Learning A Discriminative Dictionary for Recognition”. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2013, 35(11): 2651-2664. &lt;a href=&quot;http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html&quot;&gt;http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html&lt;/a&gt;&lt;/span&gt;，到 &lt;a href=&quot;http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian&quot;&gt;DPL&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;5&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;5&lt;/sup&gt; Gu, S., Zhang, L., Zuo, W., &amp;amp; Feng, X. (2014). Projective dictionary pair learning for pattern classification. In Z. Ghahramani, M. Welling, C. Cortes, N. D. Lawrence, &amp;amp; K. Q. Weinberger (Eds.), Advances in Neural Information Processing Systems 27 (pp. 793–801). Curran Associates, Inc. &lt;a href=&quot;http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian&quot;&gt;http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian&lt;/a&gt;&lt;/span&gt;。&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -33,9 +33,7 @@
 
 &lt;p&gt;每个集合中存放与 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf c}^{J-1}_k&lt;/script&gt; 列最相似的样本的索引。&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-{\bf R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 \lt \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\}
-&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 &amp;lt; \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 编码本更新阶段：​&lt;script type=&quot;math/tex&quot;&gt;{\bf C}^{(J-1)}&lt;/script&gt; 中的任一列 ​&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; 都根据如下公式更新。&lt;/p&gt;
 
@@ -49,15 +47,17 @@
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\forall_{k \neq j} \; \left\|{\bf y}_i - {Ce}_j \right\|^2_2 \leqslant \left\|{\bf y}_i - {Ce}_k \right\|^2_2&lt;/script&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;julia-code-highlight-test&quot;&gt;Julia Code Highlight Test&lt;/h2&gt;
+&lt;!--more--&gt;
+
+&lt;p&gt;Julia Code Highlight Test&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;diagadd!.jl&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;updateA!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-                  &lt;span class=&quot;no&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-                  &lt;span class=&quot;no&quot;&gt;DataMat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-                  &lt;span class=&quot;no&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-                  &lt;span class=&quot;err&quot;&gt;τ&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;updateA!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; 
+                  &lt;span class=&quot;no&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; 
+                  &lt;span class=&quot;no&quot;&gt;DataMat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; 
+                  &lt;span class=&quot;no&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; 
+                  &lt;span class=&quot;err&quot;&gt;τ&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
                   &lt;span class=&quot;no&quot;&gt;DictSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Int64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;# Update tempDictCoef by Eq. (8)&lt;/span&gt;
 
@@ -73,6 +73,9 @@
     &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;​&lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 04 Aug 2015 06:46:53 +0800</pubDate>
         <link>http://www.optimizations.ml/2015/08/04/kmeans-ksvd-lcksvd-dpl/</link>
@@ -83,9 +86,9 @@
     
       <item>
         <title>《非线性最优化基础》学习笔记</title>
-        <description>&lt;p&gt;《&lt;a href=&quot;http://book.douban.com/subject/6510671/&quot;&gt;非线性最优化基础&lt;/a&gt;》 作者 &lt;a href=&quot;http://www.seto.nanzan-u.ac.jp/~fuku/index.html&quot;&gt;福嶋雅夫&lt;/a&gt; &lt;label for=&quot;1&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;1&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;《非线性最优化基础》（豆瓣链接：&lt;a href=&quot;http://book.douban.com/subject/6510671/&quot;&gt;http://book.douban.com/subject/6510671/&lt;/a&gt;）。福嶋雅夫（Masao Fukushima），教授，日本南山大学理工学院系统与数学科学系，日本京都大学名誉教授，加拿大滑铁卢大学/比利时那慕尔大学/澳大利亚新南威尔士大学客座教授。主页：&lt;a href=&quot;http://www.seto.nanzan-u.ac.jp/~fuku/index.html&quot;&gt;http://www.seto.nanzan-u.ac.jp/~fuku/index.html&lt;/a&gt;。 &lt;/span&gt;&lt;/p&gt;
+        <description>&lt;p&gt;《&lt;a href=&quot;http://book.douban.com/subject/6510671/&quot;&gt;非线性最优化基础&lt;/a&gt;》 作者 &lt;a href=&quot;http://www.seto.nanzan-u.ac.jp/~fuku/index.html&quot;&gt;福嶋雅夫&lt;/a&gt; &lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; 《非线性最优化基础》（豆瓣链接：&lt;a href=&quot;http://book.douban.com/subject/6510671/&quot;&gt;http://book.douban.com/subject/6510671/&lt;/a&gt;）。福嶋雅夫（Masao Fukushima），教授，日本南山大学理工学院系统与数学科学系，日本京都大学名誉教授，加拿大滑铁卢大学/比利时那慕尔大学/澳大利亚新南威尔士大学客座教授。主页：&lt;a href=&quot;http://www.seto.nanzan-u.ac.jp/~fuku/index.html&quot;&gt;http://www.seto.nanzan-u.ac.jp/~fuku/index.html&lt;/a&gt;。&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;该文为&lt;a href=&quot;http://web.xidian.edu.cn/xcfeng/&quot;&gt;冯象初教授&lt;/a&gt;&lt;label for=&quot;2&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;2&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;冯象初，教授，西安电子科技大学数学系。主页：&lt;a href=&quot;http://web.xidian.edu.cn/xcfeng/&quot;&gt;http://web.xidian.edu.cn/xcfeng/&lt;/a&gt; &lt;/span&gt;有关非线性最优化的讲座的笔记。&lt;/p&gt;
+&lt;p&gt;该文为&lt;a href=&quot;http://web.xidian.edu.cn/xcfeng/&quot;&gt;冯象初教授&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; 冯象初，教授，西安电子科技大学数学系。主页：&lt;a href=&quot;http://web.xidian.edu.cn/xcfeng/&quot;&gt;http://web.xidian.edu.cn/xcfeng/&lt;/a&gt;&lt;/span&gt;有关非线性最优化的讲座的笔记。&lt;/p&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;主要内容&lt;/h2&gt;
 
@@ -145,7 +148,7 @@
 
 &lt;p&gt;给定正常凸函数 ​&lt;script type=&quot;math/tex&quot;&gt;f:\Re^n \to (-\infty,+\infty]&lt;/script&gt;，由&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;f^\ast({\bf\xi}) = \sup \left\{ \lt {\bf x},{\bf\xi}\gt-f({\bf x}) \mid {\bf x}\in \Re^n \right\} &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;f^\ast({\bf\xi}) = \sup \left\{ &amp;lt;{\bf x},{\bf\xi}&amp;gt;-f({\bf x}) \mid {\bf x}\in \Re^n \right\} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;定义的函数 ​&lt;script type=&quot;math/tex&quot;&gt;f^\ast:\Re^n \to [-\infty,+\infty]&lt;/script&gt; 称为 ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 的&lt;strong&gt;共轭函数&lt;/strong&gt;（conjuagate function）。&lt;/p&gt;
 
@@ -174,55 +177,39 @@
 
 &lt;p&gt;考虑如下非线性规划问题：&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-\min \; \; f({\bf x}) \\
-s.t. \; \; g_i({\bf x}) \leqslant 0, \; \; i=1, \cdots, m
-&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \min \; \; f({\bf x}) \\ s.t. \; \; g_i({\bf x}) \leqslant 0, \; \; i=1, \cdots, m&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;其中 ​&lt;script type=&quot;math/tex&quot;&gt;f: \Re^n \to \Re&lt;/script&gt;, ​&lt;script type=&quot;math/tex&quot;&gt;g_i: \Re^n \to \Re (i=1, \cdots, m)&lt;/script&gt;。&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; L_0({\bf x}, {\bf \lambda}) = \begin{cases}
+        f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, &amp;amp; {\bf \lambda} \geqslant {\bf 0}\\
+        -\infty \; , &amp;amp; {\bf \lambda} \ngeqslant {\bf 0}
+    \end{cases}
 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-L_0({\bf x}, {\bf \lambda}) =
-\begin{cases}
-    f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x}), &amp;amp; {\bf \lambda} \geqslant {\bf 0}\\
-    -\infty,                                        &amp;amp; {\bf \lambda} \ngeqslant {\bf 0}
-\end{cases}
-&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x})&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-\theta({\bf x}) = f({\bf x}) + \delta_S({\bf x})
-&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-\theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}
-&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-\omega_0({\bf \lambda}) = \inf \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\}
-&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \omega_0({\bf \lambda}) = \inf \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Constrains relax&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; F_0({\bf x}, {\bf u}) =
-\begin{cases}
-    f({\bf x}), &amp;amp; {\bf x} \in        S({\bf u}) &amp;amp; \min  &amp;amp; f({\bf x})   &amp;amp;                &amp;amp; \\
-    +\infty,    &amp;amp; {\bf x} \notin S({\bf u})     &amp;amp; s.t.  &amp;amp; g_i({\bf x}) &amp;amp; \leqslant u_i, &amp;amp; i = 1, \cdots, m
-\end{cases}
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; F_0({\bf x}, {\bf u}) = \begin{cases}
+        f({\bf x}),  &amp;amp; {\bf x} \in        S({\bf u}) &amp;amp; \min  &amp;amp; f({\bf x}) &amp;amp; &amp;amp; \\
+        +\infty,      &amp;amp; {\bf x} \notin S({\bf u}) &amp;amp; s.t.      &amp;amp; g_i({\bf x}) &amp;amp; \leqslant u_i, &amp;amp; i = 1, \cdots, m 
+    \end{cases}
 &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, \cdots, m \right\}
-&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, \cdots, m \right\} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;引理 4.5&lt;/strong&gt; Lagrange 函数 ​&lt;script type=&quot;math/tex&quot;&gt;L_0: \Re^{n+m} \to [-\infty, +\infty) &lt;/script&gt; 与函数 ​&lt;script type=&quot;math/tex&quot;&gt;F_0: \Re^{n+m} \to (-\infty,+\infty]&lt;/script&gt; 之间有如下关系成立：&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;L_0({\bf x}, {\bf \lambda}) = \inf \left\{ F_0({\bf x}, {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^m \right\}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;L_0({\bf x}, {\bf \lambda}) = \inf \left\{ F_0({\bf x}, {\bf u}) + &amp;lt;{\bf \lambda}, {\bf u}&amp;gt; \mid {\bf u} \in \Re^m \right\}&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;F_0({\bf x}, {\bf u}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) - \lt {\bf \lambda}, {\bf u}\gt \mid {\bf \lambda} \in \Re^m \right\}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;F_0({\bf x}, {\bf u}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) - &amp;lt;{\bf \lambda}, {\bf u}&amp;gt; \mid {\bf \lambda} \in \Re^m \right\}&lt;/script&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;lagrange--1&quot;&gt;Lagrange 对偶性的推广&lt;/h3&gt;
 
@@ -236,26 +223,21 @@ S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, 
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x}) &lt;/script&gt;&lt;br /&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies F({\bf x}, {\bf u}) \mid F({\bf x}, {\bf 0}) = \theta({\bf x}) &lt;/script&gt;&lt;br /&gt;
-​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^M \right\} &lt;/script&gt;&lt;br /&gt;
+​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + &amp;lt;{\bf \lambda}, {\bf u}&amp;gt; \mid {\bf u} \in \Re^M \right\} &lt;/script&gt;&lt;br /&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies \omega({\bf \lambda}) = \inf \left\{ L({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} &lt;/script&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;fenchel-&quot;&gt;Fenchel 对偶性&lt;/h3&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \min_{\bf x} f({\bf x}) + g({\bf Ax}) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{cases} &amp;amp; F({\bf x}, {\bf 0}) = \theta({\bf x}),     &amp;amp; x \in \Re^n \\
-                         &amp;amp; \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) &amp;amp; \end{cases} &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{cases} &amp;amp; F({\bf x}, {\bf 0}) = \theta({\bf x}), &amp;amp; x \in \Re^n \\
+&amp;amp; \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) &amp;amp; \end{cases} &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) &lt;/script&gt;&lt;br /&gt;
-​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
-\implies L({\bf x}, {\bf \lambda}) &amp;amp; = &amp;amp; \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt {\bf \lambda}, {\bf u}\gt \mid {\bf u} \in \Re^m \right\} \\
-                                   &amp;amp; = &amp;amp; f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt
-\end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
-\implies \omega({\bf \lambda}) &amp;amp; = &amp;amp; \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt {\bf \lambda}, {\bf Ax}\gt \mid {\bf x} \in \Re^n \right\} \\
-                               &amp;amp; = &amp;amp; -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda})
-\end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
+​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) &amp;amp; = &amp;amp; \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + &amp;lt;{\bf \lambda}, {\bf u}&amp;gt; \mid {\bf u} \in \Re^m \right\} \\
+&amp;amp; = &amp;amp; f({\bf x}) - g^\ast(-{\bf \lambda}) - &amp;lt;{\bf \lambda}, {\bf Ax}&amp;gt; \end{eqnarray*}&lt;/script&gt;&lt;br /&gt;
+​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*} \implies \omega({\bf \lambda}) &amp;amp; = &amp;amp; \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - &amp;lt;{\bf \lambda}, {\bf Ax}&amp;gt; \mid {\bf x} \in \Re^n \right\} \\
+&amp;amp; = &amp;amp; -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \min_{\bf \lambda} f^\ast\left( {\bf A}^T{\bf \lambda} \right) + g^\ast(-{\bf \lambda})&lt;/script&gt;&lt;br /&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \max_{\bf \lambda} -f^\ast\left({\bf A}^T{\bf \lambda} \right) - g^\ast\left(-{\bf\lambda}\right)&lt;/script&gt;&lt;/p&gt;
@@ -264,7 +246,7 @@ S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, 
 
 &lt;h3 id=&quot;proximal-gradient-method&quot;&gt;1. Proximal Gradient Method&lt;/h3&gt;
 
-&lt;p&gt;参考 &lt;a href=&quot;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&quot;&gt;Algorithms for large-scale convex optimization - DTU 2010&lt;/a&gt;&lt;label for=&quot;3&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;3&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;A Lecture note from “02930 Algorithms for Large-Scale Convex Optimization” taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe (&lt;a href=&quot;http://www.seas.ucla.edu/~vandenbe/&quot;&gt;http://www.seas.ucla.edu/~vandenbe/&lt;/a&gt;) at Danmarks Tekniske Universitet (&lt;a href=&quot;http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB&quot;&gt;http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB&lt;/a&gt;). The Download Link is found at the page of “EE227BT: Convex Optimization - Fall 2013” taught by Laurent El Ghaoui at Berkeley (&lt;a href=&quot;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&quot;&gt;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&lt;/a&gt;). And both of the lectures mentioned the book “Convex Optimization” by Stephen Boyd and Lieven Vandenberghe (&lt;a href=&quot;http://stanford.edu/~boyd/cvxbook/&quot;&gt;http://stanford.edu/~boyd/cvxbook/&lt;/a&gt;) and the software “CVX” - a MATLAB software for desciplined Convex Programming (&lt;a href=&quot;http://cvxr.com/cvx/&quot;&gt;http://cvxr.com/cvx/&lt;/a&gt;). A similar lecture note on Proximal Gradient Method from “EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)” (&lt;a href=&quot;http://www.seas.ucla.edu/~vandenbe/ee236c.html&quot;&gt;http://www.seas.ucla.edu/~vandenbe/ee236c.html&lt;/a&gt;) at UCLA &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;参考 &lt;a href=&quot;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&quot;&gt;Algorithms for large-scale convex optimization - DTU 2010&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; A Lecture note from “02930 Algorithms for Large-Scale Convex Optimization” taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe (&lt;a href=&quot;http://www.seas.ucla.edu/~vandenbe/&quot;&gt;http://www.seas.ucla.edu/~vandenbe/&lt;/a&gt;) at Danmarks Tekniske Universitet (&lt;a href=&quot;http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB&quot;&gt;http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB&lt;/a&gt;). The Download Link is found at the page of “EE227BT: Convex Optimization - Fall 2013” taught by Laurent El Ghaoui at Berkeley (&lt;a href=&quot;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&quot;&gt;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&lt;/a&gt;). And both of the lectures mentioned the book “Convex Optimization” by Stephen Boyd and Lieven Vandenberghe (&lt;a href=&quot;http://stanford.edu/~boyd/cvxbook/&quot;&gt;http://stanford.edu/~boyd/cvxbook/&lt;/a&gt;) and the software “CVX” - a MATLAB software for desciplined Convex Programming (&lt;a href=&quot;http://cvxr.com/cvx/&quot;&gt;http://cvxr.com/cvx/&lt;/a&gt;). A similar lecture note on Proximal Gradient Method from “EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)” (&lt;a href=&quot;http://www.seas.ucla.edu/~vandenbe/ee236c.html&quot;&gt;http://www.seas.ucla.edu/~vandenbe/ee236c.html&lt;/a&gt;) at UCLA&lt;/span&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;proximal-mapping&quot;&gt;Proximal mapping&lt;/h4&gt;
 
@@ -282,9 +264,7 @@ S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, 
 
 &lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; ​&lt;script type=&quot;math/tex&quot;&gt;h(x) = t \|x\|_1&lt;/script&gt;: ​&lt;script type=&quot;math/tex&quot;&gt;{\bf prox}_h&lt;/script&gt; is shinkage (soft threshold) operation&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-{\bf prox}_h =
-\begin{cases}
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf prox}_h = \begin{cases}
     x_i - t &amp;amp; x_i   \geqslant t \\
     0       &amp;amp; |x_i| \leqslant t \\
     x_i + t &amp;amp; x_i   \leqslant -t
@@ -304,7 +284,7 @@ S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, 
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; t_k \gt 0 \text{ is the step size,}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; t_k &amp;gt; 0 \text{ is the step size,}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;constant or determined by line search&lt;/p&gt;
 
@@ -339,15 +319,14 @@ x^+ &amp;amp; = &amp;amp;  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| 
 
 &lt;p&gt;and&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-{\bf prox}_{th}(u)_i =
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf prox}_{th}(u)_i = 
 \begin{cases}
 u_i - t &amp;amp; &amp;amp; u_i \geq t \\
 0       &amp;amp; &amp;amp; -t \leq u_i \leq t \\
 u_i + t &amp;amp; &amp;amp; u_i \geq t
 \end{cases}&lt;/script&gt;&lt;/p&gt;
 
-&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/assets/img/fukushima-softthresholding.jpg&quot; /&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;/span&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/fukushima-softthresholding.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;dual-proximal-gradient-methods&quot;&gt;2. Dual Proximal Gradient Methods&lt;/h3&gt;
 
@@ -409,8 +388,7 @@ maximize &amp;amp; &amp;amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
 &lt;p&gt;a special case with ​&lt;script type=&quot;math/tex&quot;&gt;g(y) = \|y - b\|&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-g^\ast =
-\begin{cases}
+g^\ast = \begin{cases}
 b^Tz    &amp;amp; &amp;amp; \|z\|_\ast \leq 1 \\
 +\infty &amp;amp; &amp;amp; otherwise 
 \end{cases}
@@ -474,7 +452,7 @@ minimize \; \; \sum^n_{j=1}f_j(x_j) + \sum^m_{i=1}g_i(A_{i1}x_1 + \cdots + A_{in
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
 \hat{x}_j &amp;amp; = &amp;amp; \mathop{argmin}_{x_j} \left( f_j(x_j) + \sum^m_{i=1}z^T_iA_{ij}x_j \right) \text{, } \; \; j=1, \cdots, n \\
-z^+_i     &amp;amp; = &amp;amp; prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
+z^+_i        &amp;amp; = &amp;amp; prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;fast-proximal-gradient-methods&quot;&gt;3. Fast proximal gradient methods&lt;/h3&gt;
@@ -494,7 +472,7 @@ minimize \; \; f(x) = g(x) + h(x)
 &lt;p&gt;&lt;strong&gt;algorithm&lt;/strong&gt;: choose any ​&lt;script type=&quot;math/tex&quot;&gt;x^{(0)} = x^{(-1)}&lt;/script&gt;; for ​&lt;script type=&quot;math/tex&quot;&gt;k \geq 1&lt;/script&gt;, repeat the steps&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
-y       &amp;amp; = &amp;amp; x^{(k-1)} + \frac{k-2}{k+1} \left( x^{(k-1)} - x^{(k-2)} \right) \\
+y             &amp;amp; = &amp;amp; x^{(k-1)} + \frac{k-2}{k+1} \left( x^{(k-1)} - x^{(k-2)} \right) \\
 x^{(k)} &amp;amp; = &amp;amp; prox_{t_kh} \left( y - t_k\nabla g(y) \right)
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
@@ -508,7 +486,7 @@ x^{(k)} &amp;amp; = &amp;amp; prox_{t_kh} \left( y - t_k\nabla g(y) \right)
 
 &lt;p&gt;next iterations are proximal gradient steps at extrapolated points ​&lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;&lt;/p&gt;
 
-&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/assets/img/fukushima-interpretation.png&quot; /&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;/span&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/fukushima-interpretation.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;note: ​&lt;script type=&quot;math/tex&quot;&gt;x^{(k)}&lt;/script&gt; is feasible (in ​&lt;script type=&quot;math/tex&quot;&gt;\mathop{dom} h&lt;/script&gt;); ​&lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt; may be outside ​&lt;script type=&quot;math/tex&quot;&gt;\mathop{dom} h&lt;/script&gt;&lt;/p&gt;
 
@@ -519,7 +497,7 @@ x^{(k)} &amp;amp; = &amp;amp; prox_{t_kh} \left( y - t_k\nabla g(y) \right)
 &lt;p&gt;&lt;strong&gt;algorithm&lt;/strong&gt;: choose ​&lt;script type=&quot;math/tex&quot;&gt;x^{(0)} = v^{(0)}&lt;/script&gt;; for ​&lt;script type=&quot;math/tex&quot;&gt;k \geq 1&lt;/script&gt;, repeat the steps&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
-y       &amp;amp; = &amp;amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+y             &amp;amp; = &amp;amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
 x^{(k)} &amp;amp; = &amp;amp; prox_{t_kh}(y-t_k\nabla g(y))\\
 v^{(k)} &amp;amp; = &amp;amp; x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x^{(k-1)} \right)
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
@@ -529,7 +507,7 @@ v^{(k)} &amp;amp; = &amp;amp; x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x
 &lt;p&gt;&lt;strong&gt;algorithm&lt;/strong&gt;: choose ​&lt;script type=&quot;math/tex&quot;&gt;x^{(0)} = v^{(0)}&lt;/script&gt;; for ​&lt;script type=&quot;math/tex&quot;&gt;k \geq 1&lt;/script&gt;, repeat the steps&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
-y       &amp;amp; = &amp;amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+y             &amp;amp; = &amp;amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
 v^{(k)} &amp;amp; = &amp;amp; prox_{\left(\frac{t_k}{\theta_k}\right)h} \left( v^{(k-1)} - \frac{t_k}{\theta_k}\nabla g(y) \right)\\
 x^{(k)} &amp;amp; = &amp;amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
@@ -545,7 +523,7 @@ x^{(k)} &amp;amp; = &amp;amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
 &lt;p&gt;参考 A Fast Dual Proximal Gradient Algorithm for Convex Minimization and Applications by Amir Beck and Marc Teboulle at October 10, 2013&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
-(D)  &amp;amp; = &amp;amp; \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
+(D)   &amp;amp; = &amp;amp; \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
 (D&#39;) &amp;amp; = &amp;amp; \min F(y) + G(y),\\
 (P&#39;) &amp;amp; = &amp;amp; \min \left\lbrace f(x) + g(z): Ax - z = 0 \right\rbrace.
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
@@ -559,8 +537,8 @@ F(y) := f^\ast\left( A^Ty \right), \; \; G(y) :=g^\ast(-y)
 &lt;p&gt;General Step ​&lt;script type=&quot;math/tex&quot;&gt;(k \geq 1)&lt;/script&gt;:&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
-y_k     &amp;amp; = &amp;amp; prox_{\frac{1}{L}G}\left( w_k - \frac{1}{L} \nabla F(w_k) \right)\\
-t_{k+1} &amp;amp; = &amp;amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2} \\
+y_k           &amp;amp; = &amp;amp; prox_{\frac{1}{L}G}\left( w_k - \frac{1}{L} \nabla F(w_k) \right)\\
+t_{k+1}   &amp;amp; = &amp;amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2} \\
 w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}).
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
@@ -573,10 +551,10 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
 &lt;p&gt;Step ​&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;. (​&lt;script type=&quot;math/tex&quot;&gt;k \geq 0&lt;/script&gt;) Compute&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
-u_k     &amp;amp; = &amp;amp; \mathop{argmax}_x \left\lbrace \lt x, A^Tw_k\gt - f(x) \right\rbrace\\
-v_k     &amp;amp; = &amp;amp; prox_{Lg}(Au_k - Lw_k)\\
-y_k     &amp;amp; = &amp;amp; w_k - \frac{1}{L}(au_k - v_k)\\
-t_{k+1} &amp;amp; = &amp;amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
+u_k           &amp;amp; = &amp;amp; \mathop{argmax}_x \left\lbrace &amp;lt;x, A^Tw_k&amp;gt; - f(x) \right\rbrace\\
+v_k           &amp;amp; = &amp;amp; prox_{Lg}(Au_k - Lw_k)\\
+y_k           &amp;amp; = &amp;amp; w_k - \frac{1}{L}(au_k - v_k)\\
+t_{k+1}   &amp;amp; = &amp;amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
 w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}). \tag*{$\blacksquare$}
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 </description>
@@ -726,11 +704,11 @@ D = \left(\begin{matrix}
 &lt;p&gt;Related algorithms&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Split Bregman iteration &lt;label for=&quot;1&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;1&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343. &lt;/span&gt;&lt;/li&gt;
-  &lt;li&gt;Dykstra’s alternating projection algorithm &lt;label for=&quot;2&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;2&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842. &lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;Split Bregman iteration &lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;Dykstra’s alternating projection algorithm &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842.&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;Proximal point algorithm applied to the dual&lt;/li&gt;
   &lt;li&gt;Numerous applications in statistics and machine learning: lasso, gen. lasso, graphical lasso, (overlapping) group lasso, …&lt;/li&gt;
-  &lt;li&gt;Embraces distributed computing for big data &lt;label for=&quot;3&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;3&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122. &lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;Embraces distributed computing for big data &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122.&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 18 Jul 2015 21:36:14 +0800</pubDate>
@@ -758,7 +736,7 @@ D = \left(\begin{matrix}
 
 &lt;!--more--&gt;
 
-&lt;p&gt;&lt;strong&gt;Augmented lagrangian&lt;/strong&gt; &lt;label for=&quot;1&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;1&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;参考&lt;a href=&quot;http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf&quot;&gt;http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf&lt;/a&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Augmented lagrangian&lt;/strong&gt; &lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; 参考&lt;a href=&quot;http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf&quot;&gt;http://www.stat.ncsu.edu/people/zhou/courses/st810/notes/lect24final.pdf&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{L}_\rho ({\bf x},{\bf \lambda}) = f({\bf x}) + \sum^q_{i=1}\lambda_i g_i({\bf x}) + \frac{\rho}{2}\sum^q_{i=1}g_i({\bf x})^2&lt;/script&gt;&lt;/p&gt;
 
@@ -809,13 +787,13 @@ D = \left(\begin{matrix}
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Converges in a finite (small) number of steps &lt;label for=&quot;2&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;2&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l&lt;sub&gt;1&lt;/sub&gt;-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: &lt;a href=&quot;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&quot;&gt;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&lt;/a&gt; &lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;Converges in a finite (small) number of steps &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l&lt;sub&gt;1&lt;/sub&gt;-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: &lt;a href=&quot;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&quot;&gt;http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;remarks&quot;&gt;Remarks&lt;/h2&gt;
 
-&lt;p&gt;The augmented Lagrangian method dates back to 50s &lt;label for=&quot;3&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;3&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. &lt;br /&gt; Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London. &lt;/span&gt;&lt;br /&gt;
-Monograph by Bertsekas&lt;label for=&quot;4&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;4&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York. &lt;/span&gt; provides a general treatment&lt;br /&gt;
+&lt;p&gt;The augmented Lagrangian method dates back to 50s &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. &lt;br /&gt; Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London.&lt;/span&gt;&lt;br /&gt;
+Monograph by Bertsekas&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt; Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York.&lt;/span&gt; provides a general treatment&lt;br /&gt;
 Same as the Bregman iteration (Yin etal., 2008) proposed for basis pursuit (compressive sensing)&lt;br /&gt;
 Equivalent to proximal print algorithm applied to the dual; can be accelerated (Nesterov)&lt;/p&gt;
 </description>
@@ -828,7 +806,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
     
       <item>
         <title>Introduction to Nonlinear Optimization</title>
-        <description>&lt;p&gt;昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》&lt;label for=&quot;1&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;1&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;《Introduction to Nonlinear Optimization》 at 豆瓣: &lt;a href=&quot;http://book.douban.com/subject/26551626/&quot;&gt;http://book.douban.com/subject/26551626/&lt;/a&gt; and at Amazon: &lt;a href=&quot;http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/&quot;&gt;http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/&lt;/a&gt; &lt;/span&gt; by Amir Beck &lt;label for=&quot;2&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;2&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Amir Beck is an associate professor at The Technion—Israel Institute of Technology： &lt;a href=&quot;http://iew3.technion.ac.il/Home/Users/becka.html&quot;&gt;http://iew3.technion.ac.il/Home/Users/becka.html&lt;/a&gt; &lt;/span&gt;。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization&lt;label for=&quot;3&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;3&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;MOS-SIAM Series on Optimization: &lt;a href=&quot;http://bookstore.siam.org/mos-siam-series-on-optimization/&quot;&gt;http://bookstore.siam.org/mos-siam-series-on-optimization/&lt;/a&gt; &lt;/span&gt; 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉习题也都挺有用的。&lt;/p&gt;
+        <description>&lt;p&gt;昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; 《Introduction to Nonlinear Optimization》 at 豆瓣: &lt;a href=&quot;http://book.douban.com/subject/26551626/&quot;&gt;http://book.douban.com/subject/26551626/&lt;/a&gt; and at Amazon: &lt;a href=&quot;http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/&quot;&gt;http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/&lt;/a&gt;&lt;/span&gt; by Amir Beck &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Amir Beck is an associate professor at The Technion—Israel Institute of Technology： &lt;a href=&quot;http://iew3.technion.ac.il/Home/Users/becka.html&quot;&gt;http://iew3.technion.ac.il/Home/Users/becka.html&lt;/a&gt;&lt;/span&gt;。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; MOS-SIAM Series on Optimization: &lt;a href=&quot;http://bookstore.siam.org/mos-siam-series-on-optimization/&quot;&gt;http://bookstore.siam.org/mos-siam-series-on-optimization/&lt;/a&gt;&lt;/span&gt; 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉习题也都挺有用的。&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -940,14 +918,14 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
   &lt;li&gt;字典学习 K-SVD&lt;/li&gt;
   &lt;li&gt;看完 K-SVD 之后，图像分类: Discriminative K-SVD for Dictionary Learning in Face Recognition (CVPR)，Label Consistent K-SVD Learning a Discriminative Dictionary for Recognition （TPAMI）；结构化稀疏: Robust Classiﬁcation using Structured Sparse Representation （CVPR）；低秩: Learning Structured Low-rank Representations for Image Classiﬁcation （CVPR）。&lt;/li&gt;
   &lt;li&gt;关于稀疏表示的已有算法的分析: A survey of sparse representation: algorithms and applications&lt;/li&gt;
-  &lt;li&gt;参考林倞老师&lt;label for=&quot;1&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;1&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;a href=&quot;http://ss.sysu.edu.cn/~ll/&quot;&gt;林倞教授 中山大学计算机科学&lt;/a&gt; &lt;/span&gt; NIPS, ACML 和 ML 一系列工作的报告。基本上 ADM 及其扩展都介绍到了。&lt;/li&gt;
+  &lt;li&gt;参考林倞老师&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; &lt;a href=&quot;http://ss.sysu.edu.cn/~ll/&quot;&gt;林倞教授 中山大学计算机科学&lt;/a&gt;&lt;/span&gt; NIPS, ACML 和 ML 一系列工作的报告。基本上 ADM 及其扩展都介绍到了。&lt;/li&gt;
   &lt;li&gt;&lt;span class=&quot;newthought&quot;&gt;迭代优化&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;​&lt;script type=&quot;math/tex&quot;&gt;\sum_{i=1}^p\left\|y^{(i)}-A\cdot x^{(i)}\right\|_2^2 + \sum_{i=1}^p S\left(x^{(i)}\right) &lt;/script&gt;&lt;/li&gt;
   &lt;li&gt;凸的稀疏模型求基于 proximal operator 的 alternating minimization。参考 boyd 的文章。&lt;/li&gt;
-  &lt;li&gt;An ADMM Solution to the Sparse Coding Problem: &lt;label for=&quot;2&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;2&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;a href=&quot;http://stanford.edu/class/ee364b/projects/2011projects/reports/bhaskar_zou.pdf&quot;&gt;http://stanford.edu/class/ee364b/projects/2011projects/reports/bhaskar_zou.pdf&lt;/a&gt; &lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;An ADMM Solution to the Sparse Coding Problem: &lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; &lt;a href=&quot;http://stanford.edu/class/ee364b/projects/2011projects/reports/bhaskar_zou.pdf&quot;&gt;http://stanford.edu/class/ee364b/projects/2011projects/reports/bhaskar_zou.pdf&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.eecs.berkeley.edu/~yang/software/l1benchmark/&quot;&gt;http://www.eecs.berkeley.edu/~yang/software/l1benchmark/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;这篇文章 &lt;label for=&quot;3&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;3&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;a href=&quot;http://web.stanford.edu/~boyd/papers/prox_algs.html&quot;&gt;http://web.stanford.edu/~boyd/papers/prox_algs.html&lt;/a&gt; &lt;/span&gt; 从 proximal operator 角度讲解，更加深入一点。&lt;/li&gt;
-  &lt;li&gt;南京大学何炳生老师的课程 &lt;label for=&quot;4&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;4&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;a href=&quot;http://math.nju.edu.cn/~hebma/&quot;&gt;http://math.nju.edu.cn/~hebma/&lt;/a&gt; &lt;/span&gt;，讲得比较深入。&lt;/li&gt;
+  &lt;li&gt;这篇文章 &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; &lt;a href=&quot;http://web.stanford.edu/~boyd/papers/prox_algs.html&quot;&gt;http://web.stanford.edu/~boyd/papers/prox_algs.html&lt;/a&gt;&lt;/span&gt; 从 proximal operator 角度讲解，更加深入一点。&lt;/li&gt;
+  &lt;li&gt;南京大学何炳生老师的课程 &lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt; &lt;a href=&quot;http://math.nju.edu.cn/~hebma/&quot;&gt;http://math.nju.edu.cn/~hebma/&lt;/a&gt;&lt;/span&gt;，讲得比较深入。&lt;/li&gt;
   &lt;li&gt;biconvex 问题，基本是个保证收敛的算法效果就还行。&lt;/li&gt;
 &lt;/ul&gt;
 </description>
@@ -960,7 +938,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
     
       <item>
         <title>几个基本优化问题</title>
-        <description>&lt;p&gt;可以用 ALM&lt;label for=&quot;1&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;1&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Augmented Lagrange Multiplier 增广拉格朗日乘子法 &lt;/span&gt;, LP&lt;label for=&quot;2&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;2&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Linear Programming 线性规划 &lt;/span&gt; 和 IRLS &lt;label for=&quot;3&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;3&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;a href=&quot;http://www.robotics.stanford.edu/~ang/papers/aaai06-efficientL1logisticregression.pdf&quot;&gt;Iteratively Reweighted Least Squares&lt;/a&gt; &lt;/span&gt; 求解的四种基本优化问题&lt;/p&gt;
+        <description>&lt;p&gt;可以用 ALM&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; Augmented Lagrange Multiplier 增广拉格朗日乘子法&lt;/span&gt;, LP&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Linear Programming 线性规划&lt;/span&gt; 和 IRLS &lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; &lt;a href=&quot;http://www.robotics.stanford.edu/~ang/papers/aaai06-efficientL1logisticregression.pdf&quot;&gt;Iteratively Reweighted Least Squares&lt;/a&gt;&lt;/span&gt; 求解的四种基本优化问题&lt;/p&gt;
 
 &lt;h3 id=&quot;question-1&quot;&gt;Question 1&lt;/h3&gt;
 
@@ -971,7 +949,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 &lt;ul&gt;
   &lt;li&gt;​&lt;script type=&quot;math/tex&quot;&gt; \arg \min \|x\|_1 + \|e\|_1 &lt;/script&gt; subj. to ​&lt;script type=&quot;math/tex&quot;&gt; y=Ax+e &lt;/script&gt;&lt;/li&gt;
   &lt;li&gt;标准 linear programming&lt;/li&gt;
-  &lt;li&gt;鲁棒的 &lt;em&gt;SRC&lt;/em&gt;&lt;label for=&quot;4&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;4&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;参见 &lt;a href=&quot;http://research.microsoft.com/pubs/132810/PAMI-Face.pdf&quot;&gt;http://research.microsoft.com/pubs/132810/PAMI-Face.pdf&lt;/a&gt; and &lt;a href=&quot;http://perception.csl.illinois.edu/recognition/Home.html&quot;&gt;Face Recognition via Sparse Representation&lt;/a&gt; &lt;/span&gt;。使用单位矩阵作为遮挡字典，用标准形式求解。&lt;/li&gt;
+  &lt;li&gt;鲁棒的 &lt;em&gt;SRC&lt;/em&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt; 参见 &lt;a href=&quot;http://research.microsoft.com/pubs/132810/PAMI-Face.pdf&quot;&gt;http://research.microsoft.com/pubs/132810/PAMI-Face.pdf&lt;/a&gt; and &lt;a href=&quot;http://perception.csl.illinois.edu/recognition/Home.html&quot;&gt;Face Recognition via Sparse Representation&lt;/a&gt;&lt;/span&gt;。使用单位矩阵作为遮挡字典，用标准形式求解。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;question-2&quot;&gt;Question 2&lt;/h3&gt;
