@@ -1,6 +1,6 @@
 url: http://www.optimizations.ml
 sourceurl: //www.optimizations.ml
-baseurl:
+baseurl: 
 title: OPTIMIZATIONS for Machine Learning
 subtitle: Optimization Methods for Machine Learning
 logo: badge_op_ml.png
@@ -31,4 +31,4 @@ transfer:
   command: rsync
   settings: -av
   source: _site/
-  destination:
+  destination: 

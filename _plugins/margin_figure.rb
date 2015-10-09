@@ -13,10 +13,7 @@ module Jekyll
     end
 
     def render(context)
-            "<label for='#{@text[0]}' class='margin-toggle'>&#8853;</label>"+
-            "<input type='checkbox' id='#{@text[0]}' class='margin-toggle'/>"+
-            "<span class='marginnote'><img class='fullwidth' src='#{@text[1]}'/>#{@text[2]}</span>"
-
+      "<span class='marginnote'><img class='fullwidth' src='#{@text[0]}'/>#{@text[1]}</span>"
     end
   end
 end

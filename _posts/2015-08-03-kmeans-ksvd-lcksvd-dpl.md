@@ -27,9 +27,7 @@ categories:
 
 每个集合中存放与 {%m%}{\bf c}^{J-1}_k{%em%} 列最相似的样本的索引。
 
-{%math%}
-{\bf R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 \lt \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\}
-{%endmath%}
+{%math%} {\bf R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 < \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\} {%endmath%}
 
 **2.** 编码本更新阶段：{%m%}{\bf C}^{(J-1)}{%em%} 中的任一列 {%m%}k{%em%} 都根据如下公式更新。
 
@@ -43,16 +41,18 @@ K-means 相当于是只使用编码本矩阵中的一列的稀疏表达。又因
 
 {%math%}\forall_{k \neq j} \; \left\|{\bf y}_i - {Ce}_j \right\|^2_2 \leqslant \left\|{\bf y}_i - {Ce}_k \right\|^2_2{%endmath%}
 
-## Julia Code Highlight Test
+<!--more-->
+
+Julia Code Highlight Test
 
 {% highlight ruby %}
 include("diagadd!.jl")
 
-function updateA!(A::Array{Any,1},
-                  D::Array{Any,1},
-                  DataMat::Array{Any,1},
-                  P::Array{Any,1},
-                  τ::Float64,
+function updateA!(A::Array{Any,1}, 
+                  D::Array{Any,1}, 
+                  DataMat::Array{Any,1}, 
+                  P::Array{Any,1}, 
+                  τ::Float64, 
                   DictSize::Int64)
     # Update tempDictCoef by Eq. (8)
 
@@ -69,3 +69,8 @@ function updateA!(A::Array{Any,1},
 end
 {% endhighlight %}
 
+
+
+{%m%}{%em%}
+
+{% math %} {% endmath %}

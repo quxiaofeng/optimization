@@ -13,7 +13,7 @@ module Jekyll
     end
 
     def render(context)
-      "<figure><figcaption>#{@text[1]}</figcaption><img src='#{@text[0]}'/></figure>"
+      "<span class='marginnote'>#{@text[1]}</span><img class='fullwidth' src='#{@text[0]}'/>"
     end
   end
 end
