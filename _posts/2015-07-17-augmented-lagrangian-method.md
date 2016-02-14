@@ -5,7 +5,7 @@ date:   2015-07-17 11:04:01
 categories:
 ---
 
-Consider minimizing: 
+Consider minimizing:
 
 {%m%} f({\bf x}) {%em%} subject to equality constraints {%m%} g_i({\bf x}) = 0 {%em%} for {%m%}i=1, \ldots ,q{%em%}
 
@@ -46,12 +46,11 @@ Update the multiplier vector {%m%}{\bf \lambda}{%em%}
 ### Intuition for updating {%m%}{\bf \lambda}{%em%}
 
 If {%m%}{\bf x}^{(t)}{%em%} is the unconstrained minimum of {%m%}\mathcal{L}({\bf x},{\bf \lambda}){%em%}, then the stationary condition says
-{%math%}
-\begin{align}
-{\bf 0} & = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \lambda^{(t)}_i \nabla g_i({\bf x}^{(t)}) + \rho \sum^q_{i=1} g_i({\bf x}^{(t)}) \nabla g_i({\bf x}^{(t)}) \\
-& = \nabla f({\bf x}^{(t))} + \sum^q_{i=1} \left[ \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}) \right] \nabla g_i({\bf x}^{(t)})
-\end{align}
-{%endmath%}
+
+{% math %} \begin{eqnarray*}
+{\bf 0} & = \nabla f({\bf x}^{(t)}) + \sum^q_{i=1} \lambda^{(t)}_i \nabla g_i({\bf x}^{(t)}) + \rho \sum^q_{i=1} g_i({\bf x}^{(t)}) \nabla g_i({\bf x}^{(t)}) \\
+        & = \nabla f({\bf x}^{(t)}) + \sum^q_{i=1} \left[ \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}) \right] \nabla g_i({\bf x}^{(t)})
+\end{eqnarray*}{% endmath %}
 
 ### For non-smooth {%m%}f{%em%}, replace gradient {%m%}\nabla f{%em%} by sub-differential {%m%}\partial f{%em%}
 
@@ -67,12 +66,10 @@ Basis pursuit problem seeks the sparsest solution subject to linear constraints
 
 Take {%m%}\rho{%em%} initially large or gradually increase it; iterate according to
 
-{%math%}
-\begin{align}
-{\bf x}^{(t+1)}                 & \leftarrow \min \|{\bf x}\| + \langle {\bf \lambda}^{(t)}, {\bf Ax} - {\bf b} \rangle + \frac{\rho}{2} \|{\bf Ax} - {\bf b}\|^2-2 \text{(lasso)} \\
-{\bf \lambda}^{(t+1)} & \leftarrow {\bf \lambda}^{(t)} + \rho \left( {\bf Ax}^{(t+1)} - {\bf b} \right) 
-\end{align}
-{%endmath%}
+{% math %} \begin{eqnarray*}
+{\bf x}^{(t+1)}       & \leftarrow \min \|{\bf x}\| + \langle {\bf \lambda}^{(t)}, {\bf Ax} - {\bf b} \rangle + \frac{\rho}{2} \|{\bf Ax} - {\bf b}\|^2-2 \text{(lasso)} \\
+{\bf \lambda}^{(t+1)} & \leftarrow {\bf \lambda}^{(t)} + \rho \left( {\bf Ax}^{(t+1)} - {\bf b} \right)
+\end{eqnarray*}{% endmath %}
 
 + Converges in a finite (small) number of steps {% sidenote 2 'Yin, W., Osher, S., Goldfarb, D., and Darbon, J. (2008). Bregman iterative algorithms for l<sub>1</sub>-minimization with applications to compressed sensing. SIAM J. Imaging Sci., 1(1):143-168. Online: [http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF](http://www.caam.rice.edu/~wy1/paperfiles/Rice_CAAM_TR07-13.PDF)' %}
 

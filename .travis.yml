@@ -29,6 +29,7 @@ before_install:
 
 install:
 - gem install jekyll
+- bundle update
 
 # Notice: Replace 'YOUR NAME' and 'YOUR EMAIL'
 before_script:

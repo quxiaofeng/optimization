@@ -63,7 +63,7 @@ categories:
 
 给定正常凸函数 {%m%}f:\Re^n \to (-\infty,+\infty]{%em%}，由
 
-{% math %}f^\ast({\bf\xi}) = \sup \left\{ <{\bf x},{\bf\xi}>-f({\bf x}) \mid {\bf x}\in \Re^n \right\} {% endmath %}
+{% math %}f^\ast({\bf\xi}) = \sup \left\{ \lt{}{\bf x},{\bf\xi}\gt{}-f({\bf x}) \mid {\bf x}\in \Re^n \right\} {% endmath %}
 
 定义的函数 {%m%}f^\ast:\Re^n \to [-\infty,+\infty]{%em%} 称为 {%m%}f{%em%} 的**共轭函数**（conjuagate function）。
 
@@ -122,9 +122,9 @@ Constrains relax
 
 **引理 4.5** Lagrange 函数 {%m%}L_0: \Re^{n+m} \to [-\infty, +\infty) {%em%} 与函数 {%m%}F_0: \Re^{n+m} \to (-\infty,+\infty]{%em%} 之间有如下关系成立：
 
-{% math %}L_0({\bf x}, {\bf \lambda}) = \inf \left\{ F_0({\bf x}, {\bf u}) + <{\bf \lambda}, {\bf u}> \mid {\bf u} \in \Re^m \right\}{% endmath %}
+{% math %}L_0({\bf x}, {\bf \lambda}) = \inf \left\{ F_0({\bf x}, {\bf u}) + \lt{}{\bf \lambda}, {\bf u}\gt{} \mid {\bf u} \in \Re^m \right\}{% endmath %}
 
-{% math %}F_0({\bf x}, {\bf u}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) - <{\bf \lambda}, {\bf u}> \mid {\bf \lambda} \in \Re^m \right\}{% endmath %}
+{% math %}F_0({\bf x}, {\bf u}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) - \lt{}{\bf \lambda}, {\bf u}\gt{} \mid {\bf \lambda} \in \Re^m \right\}{% endmath %}
 
 ### Lagrange 对偶性的推广 ###
 
@@ -139,7 +139,7 @@ Constrains relax
 
 {% math %} \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x}) {% endmath %}
 {% math %} \implies F({\bf x}, {\bf u}) \mid F({\bf x}, {\bf 0}) = \theta({\bf x}) {% endmath %}
-{% math %} \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + <{\bf \lambda}, {\bf u}> \mid {\bf u} \in \Re^M \right\} {% endmath %}
+{% math %} \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + \lt{}{\bf \lambda}, {\bf u}\gt{} \mid {\bf u} \in \Re^M \right\} {% endmath %}
 {% math %} \implies \omega({\bf \lambda}) = \inf \left\{ L({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} {% endmath %}
 
 
@@ -151,9 +151,9 @@ Constrains relax
 & \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) & \end{cases} {% endmath %}
 
 {% math %} \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) {% endmath %}
-{% math %} \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) & = & \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + <{\bf \lambda}, {\bf u}> \mid {\bf u} \in \Re^m \right\} \\
-& = & f({\bf x}) - g^\ast(-{\bf \lambda}) - <{\bf \lambda}, {\bf Ax}> \end{eqnarray*}{% endmath %}
-{% math %} \begin{eqnarray*} \implies \omega({\bf \lambda}) & = & \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - <{\bf \lambda}, {\bf Ax}> \mid {\bf x} \in \Re^n \right\} \\
+{% math %} \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) & = & \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt{}{\bf \lambda}, {\bf u}\gt{} \mid {\bf u} \in \Re^m \right\} \\
+& = & f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt{}{\bf \lambda}, {\bf Ax}\gt{} \end{eqnarray*}{% endmath %}
+{% math %} \begin{eqnarray*} \implies \omega({\bf \lambda}) & = & \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt{}{\bf \lambda}, {\bf Ax}\gt{} \mid {\bf x} \in \Re^n \right\} \\
 & = & -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}{% endmath %}
 
 {% math %} \min_{\bf \lambda} f^\ast\left( {\bf A}^T{\bf \lambda} \right) + g^\ast(-{\bf \lambda}){% endmath %}
@@ -161,7 +161,7 @@ Constrains relax
 
 ## 算法 ##
 
-### Proximal Gradient Method ###
+### 1. Proximal Gradient Method ###
 
 参考 [Algorithms for large-scale convex optimization - DTU 2010](http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf){% sidenote 3 'A Lecture note from "02930 Algorithms for Large-Scale Convex Optimization" taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe ([http://www.seas.ucla.edu/~vandenbe/](http://www.seas.ucla.edu/~vandenbe/)) at Danmarks Tekniske Universitet ([http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB](http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB)). The Download Link is found at the page of "EE227BT: Convex Optimization - Fall 2013" taught by Laurent El Ghaoui at Berkeley ([http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf](http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf)). And both of the lectures mentioned the book "Convex Optimization" by Stephen Boyd and Lieven Vandenberghe ([http://stanford.edu/~boyd/cvxbook/](http://stanford.edu/~boyd/cvxbook/)) and the software "CVX" - a MATLAB software for desciplined Convex Programming ([http://cvxr.com/cvx/](http://cvxr.com/cvx/)). A similar lecture note on Proximal Gradient Method from "EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)" ([http://www.seas.ucla.edu/~vandenbe/ee236c.html](http://www.seas.ucla.edu/~vandenbe/ee236c.html)) at UCLA' can be found at [http://www.seas.ucla.edu/~vandenbe/236C/lectures/proxgrad.pdf](http://www.seas.ucla.edu/~vandenbe/236C/lectures/proxgrad.pdf). %}
 
@@ -193,15 +193,15 @@ The **proximal mapping** (or proximal operator) of a convex function {%m%}h{%em%
 
 {% math %} \mathop{argmin} f(x) = g(x) + h(x) {% endmath %}
 
-here, {%m%}g{%em%} convex, differentiable, with **dom** {%m%}g=\Re^n{%em%}
+{%m%}g{%em%} convex, differentiable, with **dom** {%m%}g=\Re^n{%em%}
 
-And {%m%}h{%em%} closed, convex, possibly nondifferentiable; {%m%}{\bf prox}_h{%em%} is inexpensive
+{%m%}h{%em%} closed, convex, possibly nondifferentiable; {%m%}{\bf prox}_h{%em%} is inexpensive
 
 **proximal gradient algorithm**
 
 {% math %} x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) {% endmath %}
 
-{% math %} t_k > 0 \text{ is the step size,}{% endmath %}
+{% math %} t_k \gt{} 0 \text{ is the step size,}{% endmath %}
 
 constant or determined by line search
 
@@ -217,7 +217,7 @@ x^+ & = &  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + t\nabla 
     & = & \mathop{argmin}_u \left( h(u) + g(x) + \nabla g(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
 \end{eqnarray*}{% endmath %}
 
-here {%m%}x^+{%em%} minimizes {%m%}h(u){%em%} plus a simple quadratic local of {%m%}g(u){%em%} around {%m%}x{%em%}
+{%m%}x^+{%em%} minimizes {%m%}h(u){%em%} plus a simple quadratic local of {%m%}g(u){%em%} around {%m%}x{%em%}
 
 #### Examples ####
 
@@ -246,7 +246,7 @@ u_i + t & & u_i \geq t
 
 {% maincolumn /assets/img/fukushima-softthresholding.jpg '' %}
 
-### Dual Proximal Gradient Methods ###
+### 2. Dual Proximal Gradient Methods ###
 
 参考 L. Vandenberghe EE236C (Spring 2013-14)
 
@@ -261,7 +261,7 @@ dual has the right structure for the proximal gradient method if
 
 prox-operator of {%m%}g{%em%} (or {%m%}g^\ast{%em%}) is cheap (closed form or simple algorithm)
 
-here {%m%}f{%em%} is strongly convex ({%m%}f(x)-(\frac{\mu}{2})x^T{%em%} is convex) implies {%m%}f^\ast\left(-A^Tz\right){%em%} has Lipschitz continuous gradient ({%m%}L=\frac{\|A\|^2_2}{\mu}{%em%}):
+{%m%}f{%em%} is strongly convex ({%m%}f(x)-(\frac{\mu}{2})x^T{%em%} is convex) implies {%m%}f^\ast\left(-A^Tz\right){%em%} has Lipschitz continuous gradient ({%m%}L=\frac{\|A\|^2_2}{\mu}{%em%}):
 
 {% math %} \left\| A\nabla f^\ast(-A^Tu)-A\nabla f^\ast(-A^Tv) \right\|_2 \leq \frac{\|A\|^2_2}{\mu}\|u-v\|_2 {% endmath %}
 
@@ -338,7 +338,7 @@ minimize \; \; f(x) + \sum^p_{i=1}\|B_ix\|_2 \text{   (with } f \text{ strongly 
 z^+_i   & = & P_{C_i}(z_i + tB_i\hat{x}) \text{, } \; \; i=1, \cdots, p
 \end{eqnarray*}{% endmath %}
 
-here {%m%}C_i{%em%} is unit Euclidean norm ball in {%m%}\Re^{m_i}{%em%}, if {%m%}B_i \in \Re^{m_i \times n}{%em%}
+{%m%}C_i{%em%} is unit Euclidean norm ball in {%m%}\Re^{m_i}{%em%}, if {%m%}B_i \in \Re^{m_i \times n}{%em%}
 
 #### Minimization over intersection of convex sets ####
 
@@ -347,7 +347,7 @@ minimize   & & f(x) \\
 subject to & & x \in C_i \cap \cdots \cap C_m
 \end{eqnarray*}{% endmath %}
 
-here {%m%}f{%em%} strongly convex; e.g., {%m%}f(x) = \|x - a\|^2_2{%em%} for projecting {%m%}a{%em%} on intersection
+{%m%}f{%em%} strongly convex; e.g., {%m%}f(x) = \|x - a\|^2_2{%em%} for projecting {%m%}a{%em%} on intersection
 
 sets {%m%}C_i{%em%} are closed, convex, and easy to project onto
 
@@ -358,7 +358,120 @@ sets {%m%}C_i{%em%} are closed, convex, and easy to project onto
 z^+_i   & = & z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{, }\; \; i=1, \cdots, m
 \end{eqnarray*}{% endmath %}
 
-{%m%}{%em%}
+#### Decomposition of separable problems ####
 
 {% math %}
+minimize \; \; \sum^n_{j=1}f_j(x_j) + \sum^m_{i=1}g_i(A_{i1}x_1 + \cdots + A_{in}x_n )
 {% endmath %}
+
+each {%m%}f_i{%em%} is strongly convex; {%m%}g_i{%em%} has inexpensive prox-operator
+
+**dual proximal gradient update**
+
+{% math %} \begin{eqnarray*}
+\hat{x}_j & = & \mathop{argmin}_{x_j} \left( f_j(x_j) + \sum^m_{i=1}z^T_iA_{ij}x_j \right) \text{, } \; \; j=1, \cdots, n \\
+z^+_i        & = & prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
+\end{eqnarray*}{% endmath %}
+
+### 3. Fast proximal gradient methods ###
+
+参考 L. Vandenberghe EE236C (Spring 2013-14)
+
+#### FISTA (basic version) ####
+
+{% math %}
+minimize \; \; f(x) = g(x) + h(x)
+{% endmath %}
+
+{%m%}g{%em%} convex, differentiable with {%m%}\mathop{dom} g=\Re^n{%em%}
+
+{%m%}h{%em%} closed, convex, with inexpensive {%m%}prox_{th}{%em%} operator
+
+**algorithm**: choose any {%m%}x^{(0)} = x^{(-1)}{%em%}; for {%m%}k \geq 1{%em%}, repeat the steps
+
+{% math %} \begin{eqnarray*}
+y             & = & x^{(k-1)} + \frac{k-2}{k+1} \left( x^{(k-1)} - x^{(k-2)} \right) \\
+x^{(k)} & = & prox_{t_kh} \left( y - t_k\nabla g(y) \right)
+\end{eqnarray*}{% endmath %}
+
+step size {%m%}t_k{%em%} fixed or determined by line search
+
+acronym stands for 'Fast Iterative Shrinkage-Thresholding Algorithm'
+
+#### Interpretation ####
+
+first iteration ({%m%}k = 1{%em%}) is a proximal gradient step at {%m%}y = x^{(0)}{%em%}
+
+next iterations are proximal gradient steps at extrapolated points {%m%}y{%em%}
+
+{% maincolumn /assets/img/fukushima-interpretation.png '' %}
+
+note: {%m%}x^{(k)}{%em%} is feasible (in {%m%}\mathop{dom} h{%em%}); {%m%}y{%em%} may be outside {%m%}\mathop{dom} h{%em%}
+
+#### Reformulation of FISTA ####
+
+define {%m%}\theta_k = \frac{2}{k+1}{%em%} and introduce an intermediate variable {%m%}v^{(k)}{%em%}
+
+**algorithm**: choose {%m%}x^{(0)} = v^{(0)}{%em%}; for {%m%}k \geq 1{%em%}, repeat the steps
+
+{% math %} \begin{eqnarray*}
+y             & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+x^{(k)} & = & prox_{t_kh}(y-t_k\nabla g(y))\\
+v^{(k)} & = & x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x^{(k-1)} \right)
+\end{eqnarray*}{% endmath %}
+
+#### Nesterov's second method ####
+
+**algorithm**: choose {%m%}x^{(0)} = v^{(0)}{%em%}; for {%m%}k \geq 1{%em%}, repeat the steps
+
+{% math %} \begin{eqnarray*}
+y             & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+v^{(k)} & = & prox_{\left(\frac{t_k}{\theta_k}\right)h} \left( v^{(k-1)} - \frac{t_k}{\theta_k}\nabla g(y) \right)\\
+x^{(k)} & = & (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
+\end{eqnarray*}{% endmath %}
+
+User{%m%}\theta_k = \frac{2}{k+1}{%em%} and {%m%}t_k = \frac{1}{L}{%em%}, or one of the line search methods
+
+identical to FISTA if {%m%}h(x) = 0{%em%}
+
+unlike in FISTA, {%m%}y{%em%} is feasible (in {%m%}\mathop{dom} h{%em%}) if we take {%m%}x^{(0)} \in \mathop{dom} h{%em%}
+
+### 4. Fast dual proximal gradient methods ###
+
+参考 A Fast Dual Proximal Gradient Algorithm for Convex Minimization and Applications by Amir Beck and Marc Teboulle at October 10, 2013
+
+{% math %} \begin{eqnarray*}
+(D)   & = & \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
+(D') & = & \min F(y) + G(y),\\
+(P') & = & \min \left\lbrace f(x) + g(z): Ax - z = 0 \right\rbrace.
+\end{eqnarray*}{% endmath %}
+
+{% math %}
+F(y) := f^\ast\left( A^Ty \right), \; \; G(y) :=g^\ast(-y)
+{% endmath %}
+
+Initialization: {%m%}L \geq \frac{\|A\|^2}{\sigma}{%em%}, {%m%}w_1 = y_0 \in \mathbb{V}{%em%}, {%m%}t_1 = 1{%em%}.
+
+General Step {%m%}(k \geq 1){%em%}:
+
+{% math %} \begin{eqnarray*}
+y_k           & = & prox_{\frac{1}{L}G}\left( w_k - \frac{1}{L} \nabla F(w_k) \right)\\
+t_{k+1}   & = & \frac{1 + \sqrt{1 + 4t^2_k}}{2} \\
+w_{k+1} & = & y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}).
+\end{eqnarray*}{% endmath %}
+
+#### The Fast Dual-Based Proximal Gradient Method (FDPG) ####
+
+Input: {%m%}L \geq \frac{\|A\|^2}{\sigma} - \text{ an upper bound on the Lipschitz constant of } \nabla F{%em%}
+
+Step {%m%}0{%em%}. Take {%m%}w_1 = y_0 \in \mathbb{V}{%em%}, {%m%}t_1 = 1{%em%}.
+
+Step {%m%}k{%em%}. ({%m%}k \geq 0{%em%}) Compute
+
+{% math %} \begin{eqnarray*}
+u_k           & = & \mathop{argmax}_x \left\lbrace \lt{}x, A^Tw_k\gt{} - f(x) \right\rbrace\\
+v_k           & = & prox_{Lg}(Au_k - Lw_k)\\
+y_k           & = & w_k - \frac{1}{L}(au_k - v_k)\\
+t_{k+1}   & = & \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
+w_{k+1} & = & y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}). \tag*{$\blacksquare$}
+\end{eqnarray*}{% endmath %}
