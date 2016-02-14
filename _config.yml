@@ -18,6 +18,19 @@ permalink: pretty
 timezone: Asia/Hong_Kong
 excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 exclude: ['.gitignore','UploadToGithub.Rakefile','LICENSE','Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
+data:
+  options:
+    mathjax: false
+    katex: true
+  social:
+    - link: //www.twitter.com/quxiaofeng
+      icon: icon-twitter
+    - link: //www.facebook.com/quxiaofeng
+      icon: icon-facebook
+    - link: //github.com/quxiaofeng
+      icon: icon-github
+    - link: //www.quxiaofeng.me/optimization/feed
+      icon: icon-feed
 post:
   template: _post.txt
   extension: md
