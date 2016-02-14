@@ -15,5 +15,5 @@
 
 <!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
 {% if site.data.options.katex %}
-<script async src="{% if site.sourceurl %}{{ "/assets/js/katex_render.min.js" | prepend: site.sourceurl }}{% else %}{{ "/assets/js/katex_render.min.js" | prepend: site.baseurl }}{% endif %}"></script>
+<script src="{% if site.sourceurl %}{{ "/assets/js/katex_render.min.js" | prepend: site.sourceurl }}{% else %}{{ "/assets/js/katex_render.min.js" | prepend: site.baseurl }}{% endif %}"></script>
 {% endif %}
