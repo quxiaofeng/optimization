@@ -5,81 +5,9 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 14 Feb 2016 13:17:55 +0800</pubDate>
-    <lastBuildDate>Sun, 14 Feb 2016 13:17:55 +0800</lastBuildDate>
+    <pubDate>Sun, 14 Feb 2016 19:38:27 +0800</pubDate>
+    <lastBuildDate>Sun, 14 Feb 2016 19:38:27 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
-    
-      <item>
-        <title>K-means, K-SVD, LC-KSVD and DPL</title>
-        <description>&lt;p&gt;从 K-means 到 &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf&quot;&gt;K-SVD&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; M. Aharon, M. Elad, and A.M. Bruckstein, “The K-SVD: An Algorithm for Designing of Overcomplete Dictionaries for Sparse Representation”, the IEEE Trans. On Signal Processing, Vol. 54, no. 11, pp. 4311-4322, November 2006. &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf&quot;&gt;http://www.cs.technion.ac.il/~elad/publications/journals/2004/32_KSVD_IEEE_TSP.pdf&lt;/a&gt;&lt;/span&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; O. Bryt and M. Elad, Compression of Facial Images Using the K-SVD Algorithm, Journal of Visual Communication and Image Representation, Vol. 19, No. 4, Pages 270-283, May 2008. &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf&quot;&gt;http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf&lt;/a&gt;&lt;/span&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; R. Rubinstein, T. Peleg and M. Elad, Analysis K-SVD: A Dictionary-Learning Algorithm for the Analysis Sparse Model, IEEE Trans. on Signal Processing, Vol. 61, No. 3, Pages 661-677, March 2013. &lt;a href=&quot;http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf&quot;&gt;http://www.cs.technion.ac.il/~elad/publications/journals/2011/Analysis-KSVD-IEEE-TSP.pdf&lt;/a&gt;&lt;/span&gt;，到 &lt;a href=&quot;http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html&quot;&gt;LC-KSVD&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;4&lt;/sup&gt; Zhuolin Jiang, Zhe Lin, Larry S. Davis. “Label Consistent K-SVD: Learning A Discriminative Dictionary for Recognition”. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2013, 35(11): 2651-2664. &lt;a href=&quot;http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html&quot;&gt;http://www.umiacs.umd.edu/~zhuolin/projectlcksvd.html&lt;/a&gt;&lt;/span&gt;，到 &lt;a href=&quot;http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian&quot;&gt;DPL&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;5&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;5&lt;/sup&gt; Gu, S., Zhang, L., Zuo, W., &amp;amp; Feng, X. (2014). Projective dictionary pair learning for pattern classification. In Z. Ghahramani, M. Welling, C. Cortes, N. D. Lawrence, &amp;amp; K. Q. Weinberger (Eds.), Advances in Neural Information Processing Systems 27 (pp. 793–801). Curran Associates, Inc. &lt;a href=&quot;http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian&quot;&gt;http://papers.nips.cc/paper/5600-spectral-clustering-of-graphs-with-the-bethe-hessian&lt;/a&gt;&lt;/span&gt;。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;K-means 算法&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;任务：通过最近邻寻找能够表达数据样本 ​&lt;script type=&quot;math/tex&quot;&gt;\{ {\bf y}_i \}^N_{i=1} &lt;/script&gt; 的最优编码本（codebook，既字典参数），既求解如下问题&lt;/p&gt;
-
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\min_{\bf C, X} \left\{ \|{\bf Y} - {\bf CX}\|^2_F \right\} \text{ subject to } \forall i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k &lt;/script&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;初始化： 设置编码本矩阵 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf C}^{(0)} \in \Re^{n \times K}&lt;/script&gt;. 设置 ​&lt;script type=&quot;math/tex&quot;&gt;J=1&lt;/script&gt;。&lt;/p&gt;
-
-&lt;p&gt;循环至收敛 （使用停止规则）&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 稀疏编码阶段：将训练样本 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf Y}&lt;/script&gt; 分为如下 ​&lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; 个集合。&lt;/p&gt;
-
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\left( {\bf R}^{(J-1)}_1, {\bf R}^{(J-1)}_2, \cdots, {\bf R}^{(J-1)}_K \right)&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;每个集合中存放与 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf c}^{J-1}_k&lt;/script&gt; 列最相似的样本的索引。&lt;/p&gt;
-
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; {\bf R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bf y}_i - {\bf c}^{(J-1)}_k\|_2 &amp;lt; \|{\bf y}_i - {\bf c}^{(J-1)}_l\|_2  \right\} &lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 编码本更新阶段：​&lt;script type=&quot;math/tex&quot;&gt;{\bf C}^{(J-1)}&lt;/script&gt; 中的任一列 ​&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; 都根据如下公式更新。&lt;/p&gt;
-
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf c}^{(J)}_k = \frac{1}{|{\bf R}_k|}\sum_{i \in {\bf R}^{(J-1)}_k}{\bf y}_i&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 令​&lt;script type=&quot;math/tex&quot;&gt; J = J + 1 &lt;/script&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;K-means 相当于是只使用编码本矩阵中的一列的稀疏表达。又因为只有一列，所以系数为1。其中该列由如下公式确定。&lt;/p&gt;
-
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\forall_{k \neq j} \; \left\|{\bf y}_i - {Ce}_j \right\|^2_2 \leqslant \left\|{\bf y}_i - {Ce}_k \right\|^2_2&lt;/script&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Julia Code Highlight Test&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;diagadd!.jl&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;updateA!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; 
-                  &lt;span class=&quot;no&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; 
-                  &lt;span class=&quot;no&quot;&gt;DataMat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; 
-                  &lt;span class=&quot;no&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; 
-                  &lt;span class=&quot;err&quot;&gt;τ&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-                  &lt;span class=&quot;no&quot;&gt;DictSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Int64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# Update tempDictCoef by Eq. (8)&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;vi&quot;&gt;@inbounds&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;TempDict&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;vi&quot;&gt;@inbounds&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;TempData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;DataMat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;tempDictCoef&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;TempDict&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39; * TempDict
-        tempDictDataCoef::Matrix{Float64}   = TempDict&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;TempData&lt;/span&gt;
-        &lt;span class=&quot;vi&quot;&gt;@inbounds&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;TempData&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;diagadd!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tempDictCoef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;τ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;fma!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tempDictDataCoef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;τ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;vi&quot;&gt;@inbounds&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;                      &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tempDictCoef&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;\&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tempDictDataCoef&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-</description>
-        <pubDate>Tue, 04 Aug 2015 06:46:53 +0800</pubDate>
-        <link>http://www.optimizations.ml/2015/08/04/kmeans-ksvd-lcksvd-dpl/</link>
-        <guid isPermaLink="true">http://www.optimizations.ml/2015/08/04/kmeans-ksvd-lcksvd-dpl/</guid>
-        
-        
-      </item>
     
       <item>
         <title>《非线性最优化基础》学习笔记</title>
