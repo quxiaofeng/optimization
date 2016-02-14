@@ -7,7 +7,7 @@ categories:
 
 最近在看 [《The Handbook of Cluster Analysis》](https://www.crcpress.com/Handbook-of-Cluster-Analysis/Hennig-Meila-Murtagh-Rocci/9781466551886)（聚类分析手册）这本书。这本书不愧为手册，各种聚类方法都很全，作者也都是领域内的专家。 
 
-----
+<!--more-->
 
 其中两章有作者公开版。
 
