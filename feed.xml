@@ -5,9 +5,37 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 14 Feb 2016 20:15:16 +0800</pubDate>
-    <lastBuildDate>Sun, 14 Feb 2016 20:15:16 +0800</lastBuildDate>
+    <pubDate>Sun, 14 Feb 2016 20:32:20 +0800</pubDate>
+    <lastBuildDate>Sun, 14 Feb 2016 20:32:20 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>The Handbook of Cluster Analysis</title>
+        <description>&lt;p&gt;最近在看 &lt;a href=&quot;https://www.crcpress.com/Handbook-of-Cluster-Analysis/Hennig-Meila-Murtagh-Rocci/9781466551886&quot;&gt;The Handbook of Cluster Analysis&lt;/a&gt;（聚类分析手册）这本书。这本书不愧为手册，各种聚类方法都很全，作者也都是业内人士。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;其中两章有作者公开的版本：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.stat.purdue.edu/~varao/pubs/dpclstr_bookch.pdf&quot;&gt;Dirichlet process mixtures and nonparametric Bayesian approaches to clustering&lt;/a&gt; by &lt;a href=&quot;http://www.stat.purdue.edu/~varao/&quot;&gt;Vinayak Rao&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://aacharya.github.io/pdfs/ghac13b.pdf&quot;&gt;A Survey of Consensus Clustering&lt;/a&gt; by &lt;a href=&quot;http://ideal.ece.utexas.edu/ghosh/&quot;&gt;Joydeep Ghosh&lt;/a&gt; and &lt;a href=&quot;http://aacharya.github.io/&quot;&gt;Ayan Acharya&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+G = \sum^\infty_{i=1} w_i \delta_{\theta_i}
+&lt;/script&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Feb 2016 20:21:46 +0800</pubDate>
+        <link>http://www.optimizations.ml/2016/02/14/cluster-analysis/</link>
+        <guid isPermaLink="true">http://www.optimizations.ml/2016/02/14/cluster-analysis/</guid>
+        
+        
+      </item>
     
   </channel>
 </rss>
