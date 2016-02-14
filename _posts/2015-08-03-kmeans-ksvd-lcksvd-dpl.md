@@ -17,7 +17,7 @@ categories:
 
 <!--more-->
 
-初始化： 设置编码本矩阵 {%m%}{\bf C}^{(0)} \in \Re^{n \times K}{%em%}. 设置 {%m%}J=1{%em%}。
+初始化： 设置编码本矩阵 {%m%}\mathbf{C}^{(0)} \in \Re^{n \times K}{%em%}. 设置 {%m%}J=1{%em%}。
 
 循环至收敛 （使用停止规则）
 
