@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Feb 2016 03:28:25 +0800</pubDate>
-    <lastBuildDate>Mon, 15 Feb 2016 03:28:25 +0800</lastBuildDate>
+    <pubDate>Mon, 15 Feb 2016 03:30:30 +0800</pubDate>
+    <lastBuildDate>Mon, 15 Feb 2016 03:30:30 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -51,7 +51,7 @@ G = \sum^\infty_{i=1} w_i \delta_{\theta_i}
 
 &lt;!--more--&gt;
 
-&lt;p&gt;初始化： 设置编码本矩阵 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf C}^{(0)} \in \Re^{n \times K}&lt;/script&gt;. 设置 ​&lt;script type=&quot;math/tex&quot;&gt;J=1&lt;/script&gt;。&lt;/p&gt;
+&lt;p&gt;初始化： 设置编码本矩阵 ​&lt;script type=&quot;math/tex&quot;&gt;\mathbf{C}^{(0)} \in \Re^{n \times K}&lt;/script&gt;. 设置 ​&lt;script type=&quot;math/tex&quot;&gt;J=1&lt;/script&gt;。&lt;/p&gt;
 
 &lt;p&gt;循环至收敛 （使用停止规则）&lt;/p&gt;
 
