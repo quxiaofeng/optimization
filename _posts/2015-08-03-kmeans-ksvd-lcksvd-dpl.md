@@ -68,9 +68,3 @@ function updateA!(A::Array{Any,1},
     end
 end
 {% endhighlight %}
-
-
-
-{%m%}{%em%}
-
-{% math %} {% endmath %}

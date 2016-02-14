@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "The Handbook of Cluster Analysis"
-date:   2016-02-14 12:21:46
+title: "The Handbook of Cluster Analysis"
+date: 2016-02-14 12:21:46
 categories:
 ---
 
@@ -9,9 +9,10 @@ categories:
 
 <!--more-->
 
-其中两章有作者公开版。
+其中两章有作者公开的版本：
 
 1. [Dirichlet process mixtures and nonparametric Bayesian approaches to clustering](http://www.stat.purdue.edu/~varao/pubs/dpclstr_bookch.pdf) by [Vinayak Rao](http://www.stat.purdue.edu/~varao/)
+
 2. [A Survey of Consensus Clustering](http://aacharya.github.io/pdfs/ghac13b.pdf) by [Joydeep Ghosh](http://ideal.ece.utexas.edu/ghosh/) and [Ayan Acharya](http://aacharya.github.io/)
 
 {%math%}
