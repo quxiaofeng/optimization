@@ -1,17 +1,3 @@
-<footer>
-  <ul class="footer-links group">
-    <li><a href="mailto:{{ site.email }}"><span class="icon-mail"></span></a></li>
-    {% for entry in site.data.social %}
-      <li>
-        <a href="{{ entry.link }}"><span class="{{ entry.icon }}"></span></a>
-      </li>
-    {% endfor %}
-  </ul>
-<div class="credits">
-<span>&copy; {{ site.time | date: '%Y' }} &nbsp;&nbsp;{{ site.author | upcase }}</span></br>
-<span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
-</div>
-
 <!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
 <script
 {% if site.data.options.katex %}
@@ -31,4 +17,17 @@ $("script[type='math/tex; mode=display']").replaceWith(
            "</div>";
 });
 {% endif %}
+<footer>
+  <ul class="footer-links group">
+    <li><a href="mailto:{{ site.email }}"><span class="icon-mail"></span></a></li>
+    {% for entry in site.data.social %}
+      <li>
+        <a href="{{ entry.link }}"><span class="{{ entry.icon }}"></span></a>
+      </li>
+    {% endfor %}
+  </ul>
+<div class="credits">
+<span>&copy; {{ site.time | date: '%Y' }} &nbsp;&nbsp;{{ site.author | upcase }}</span></br>
+<span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
+</div>
 </footer>
