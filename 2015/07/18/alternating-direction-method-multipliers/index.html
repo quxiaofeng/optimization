@@ -112,7 +112,26 @@ D = \left(\begin{matrix}
 
     </article>
     <span class="print-footer">Alternating Direction Method of Multipliers (ADMM) - July 18, 2015 - QU Xiaofeng</span>
-    <footer>
+    <!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
+<script
+
+$("script[type='math/tex']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<span class=\"inline-equation\">" + 
+           katex.renderToString(tex) +
+           "</span>";
+});
+
+$("script[type='math/tex; mode=display']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<div class=\"equation\">" + 
+           katex.renderToString("\\displaystyle "+tex) +
+           "</div>";
+});
+
+<footer>
   <ul class="footer-links group">
     <li><a href="mailto:xiaofeng.qu.hk@ieee.org"><span class="icon-mail"></span></a></li>
     
@@ -137,26 +156,6 @@ D = \left(\begin{matrix}
 <span>&copy; 2016 &nbsp;&nbsp;QU XIAOFENG</span></br>
 <span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
 </div>
-
-<!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
-<script
-
-$("script[type='math/tex']").replaceWith(
-  function(){
-    var tex = $(this).text();
-    return "<span class=\"inline-equation\">" + 
-           katex.renderToString(tex) +
-           "</span>";
-});
-
-$("script[type='math/tex; mode=display']").replaceWith(
-  function(){
-    var tex = $(this).text();
-    return "<div class=\"equation\">" + 
-           katex.renderToString("\\displaystyle "+tex) +
-           "</div>";
-});
-
 </footer>
   </body>
 </html>
