@@ -13,6 +13,8 @@ categories:
 
 任务：通过最近邻寻找能够表达数据样本 {%m%}\{\mathbf{y}_i\}^N_{i=1}{%em%} 的最优编码本（codebook，既字典参数），既求解如下问题
 
+{%math%}G = \sum^\infty_{i=1} w_i \delta_{\theta_i}{%endmath%}
+
 {%math%}\min_{\mathbf{C, X}} \left\{ \|\mathbf{Y} - \mathbf{CX}\|^2_F \right\} \text{ subject to } \forall i \text{, } \mathbf{x}_i = \mathbf{e}_k \text{ for some } k{%endmath%}
 
 <!--more-->
