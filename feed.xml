@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Feb 2016 03:12:50 +0800</pubDate>
-    <lastBuildDate>Mon, 15 Feb 2016 03:12:50 +0800</lastBuildDate>
+    <pubDate>Mon, 15 Feb 2016 03:26:11 +0800</pubDate>
+    <lastBuildDate>Mon, 15 Feb 2016 03:26:11 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -45,9 +45,9 @@ G = \sum^\infty_{i=1} w_i \delta_{\theta_i}
 
 &lt;p&gt;&lt;strong&gt;K-means 算法&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;任务：通过最近邻寻找能够表达数据样本 ​&lt;script type=&quot;math/tex&quot;&gt;\{ {\bf y}_i \}^N_{i=1} &lt;/script&gt; 的最优编码本（codebook，既字典参数），既求解如下问题&lt;/p&gt;
+&lt;p&gt;任务：通过最近邻寻找能够表达数据样本 ​&lt;script type=&quot;math/tex&quot;&gt;\{\mathbf{y}_i\}^N_{i=1}&lt;/script&gt; 的最优编码本（codebook，既字典参数），既求解如下问题&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\min_{\bf C, X} \left\{ \|{\bf Y} - {\bf CX}\|^2_F \right\} \text{ subject to } \forall i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\min_{\mathbf{C, X}} \left\{ \|{\bf Y} - {\bf CX}\|^2_F \right\} \text{ subject to } \forall i \text{, } {\bf x}_i = {\bf e}_k \text{ for some } k &lt;/script&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
 
