@@ -119,7 +119,7 @@
 
 <p>​<script type="math/tex; mode=display">\max \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z</script></p>
 
-<p><strong>引理 4.1</strong> 对任意 ​<script type="math/tex">{\bf y}\in Y</script> 与 ​<script type="math/tex">{\bf z}\in Z</script> 均有 ​<script type="math/tex">\zeta({\bf z}) \leqslant \eta({\bf y})</script> 成立。进一步，还有<br />
+<p><strong>引理 4.1</strong> 对任意 ​<script type="math/tex">{\bf y}\in Y</script> 与 ​<script type="math/tex">{\bf z}\in Z</script> 均有 ​<script type="math/tex">\zeta({\bf z}) \leqslant \eta({\bf y})</script> 成立。进一步，还有
 ​<script type="math/tex; mode=display">\sup\left\{ \zeta({\bf z})\mid {\bf z}\in Z\right\} \leqslant \inf\left\{ \eta({\bf y})\mid {\bf y} \in Y\right\} </script></p>
 
 <p><strong>定理 4.1</strong> 点 ​<script type="math/tex">(\bar{\bf y},\bar{\bf z})\in Y\times Z</script> 为函数 ​<script type="math/tex">K:Y\times Z\to[-\infty,+\infty]</script> 的鞍点的充要条件是 ​<script type="math/tex">\bar{\bf y}\in Y</script> 与 ​<script type="math/tex">\bar{\bf z}\in Z</script> 满足</p>
@@ -174,9 +174,9 @@
 
 <p>​<script type="math/tex; mode=display"> F({\bf x}, {\bf u}) = F_0({\bf x}, {\bf u}) + q({\bf u}) </script></p>
 
-<p>​<script type="math/tex; mode=display"> \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x}) </script><br />
-​<script type="math/tex; mode=display"> \implies F({\bf x}, {\bf u}) \mid F({\bf x}, {\bf 0}) = \theta({\bf x}) </script><br />
-​<script type="math/tex; mode=display"> \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + \lt{}{\bf \lambda}, {\bf u}\gt{} \mid {\bf u} \in \Re^M \right\} </script><br />
+<p>​<script type="math/tex; mode=display"> \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x}) </script>
+​<script type="math/tex; mode=display"> \implies F({\bf x}, {\bf u}) \mid F({\bf x}, {\bf 0}) = \theta({\bf x}) </script>
+​<script type="math/tex; mode=display"> \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + \lt{}{\bf \lambda}, {\bf u}\gt{} \mid {\bf u} \in \Re^M \right\} </script>
 ​<script type="math/tex; mode=display"> \implies \omega({\bf \lambda}) = \inf \left\{ L({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} </script></p>
 
 <h3 id="fenchel-">Fenchel 对偶性</h3>
@@ -186,13 +186,13 @@
 <p>​<script type="math/tex; mode=display"> \begin{cases} &amp; F({\bf x}, {\bf 0}) = \theta({\bf x}), &amp; x \in \Re^n \\
 &amp; \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) &amp; \end{cases} </script></p>
 
-<p>​<script type="math/tex; mode=display"> \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) </script><br />
+<p>​<script type="math/tex; mode=display"> \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) </script>
 ​<script type="math/tex; mode=display"> \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt{}{\bf \lambda}, {\bf u}\gt{} \mid {\bf u} \in \Re^m \right\} \\
-&amp; = &amp; f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt{}{\bf \lambda}, {\bf Ax}\gt{} \end{eqnarray*}</script><br />
+&amp; = &amp; f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt{}{\bf \lambda}, {\bf Ax}\gt{} \end{eqnarray*}</script>
 ​<script type="math/tex; mode=display"> \begin{eqnarray*} \implies \omega({\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt{}{\bf \lambda}, {\bf Ax}\gt{} \mid {\bf x} \in \Re^n \right\} \\
 &amp; = &amp; -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}</script></p>
 
-<p>​<script type="math/tex; mode=display"> \min_{\bf \lambda} f^\ast\left( {\bf A}^T{\bf \lambda} \right) + g^\ast(-{\bf \lambda})</script><br />
+<p>​<script type="math/tex; mode=display"> \min_{\bf \lambda} f^\ast\left( {\bf A}^T{\bf \lambda} \right) + g^\ast(-{\bf \lambda})</script>
 ​<script type="math/tex; mode=display"> \max_{\bf \lambda} -f^\ast\left({\bf A}^T{\bf \lambda} \right) - g^\ast\left(-{\bf\lambda}\right)</script></p>
 
 <h2 id="section-5">算法</h2>
@@ -537,7 +537,7 @@ w_{k+1} &amp; = &amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1
     
   </ul>
 <div class="credits">
-<span>&copy; 2015 &nbsp;&nbsp;QU XIAOFENG</span></br>
+<span>&copy; 2016 &nbsp;&nbsp;QU XIAOFENG</span></br>
 <span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
 </div>
 </footer>

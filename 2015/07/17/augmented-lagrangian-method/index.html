@@ -71,10 +71,10 @@
 
 <p>Take ​<script type="math/tex">\rho</script> initially large or gradually increase it; iterate</p>
 
-<p>Find the unconstrained minimum<br />
+<p>Find the unconstrained minimum
 ​<script type="math/tex; mode=display">{\bf x}^{(t+1)}\leftarrow \min_x\mathcal{L}_\rho ({\bf x},{\bf \lambda}^{(t)})</script></p>
 
-<p>Update the multiplier vector ​<script type="math/tex">{\bf \lambda}</script><br />
+<p>Update the multiplier vector ​<script type="math/tex">{\bf \lambda}</script>
 ​<script type="math/tex; mode=display">\lambda^{(t+1)}_i \leftarrow \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}), \; i = 1, \ldots , q</script></p>
 
 <h3 id="intuition-for-updating-8203script-typemathtexbf-lambdascript">Intuition for updating ​<script type="math/tex">{\bf \lambda}</script></h3>
@@ -90,7 +90,7 @@
 
 <h2 id="example-basis-pursuit">Example: basis pursuit</h2>
 
-<p>Basis pursuit problem seeks the sparsest solution subject to linear constraints<br />
+<p>Basis pursuit problem seeks the sparsest solution subject to linear constraints
 ​<script type="math/tex; mode=display">
 \begin{align}
 \text{minimize    } &amp; \|{\bf x}\|_1 \\
@@ -111,9 +111,9 @@
 
 <h2 id="remarks">Remarks</h2>
 
-<p>The augmented Lagrangian method dates back to 50s <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. <br /> Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London.</span><br />
-Monograph by Bertsekas<sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York.</span> provides a general treatment<br />
-Same as the Bregman iteration (Yin etal., 2008) proposed for basis pursuit (compressive sensing)<br />
+<p>The augmented Lagrangian method dates back to 50s <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> Hestenes, M.R. (1969). Multiplier and gradient methods. J. Optimization Theory Appl., 4:303-320. <br /> Powell, M. J. D. (1969). A method for nonlinear constraints in minimization problems. In Optimization (Sympos., Univ. Keele, Keele, 1968), pages 283-298. Academic Press, London.</span>
+Monograph by Bertsekas<sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> Bertsekas, D. P. (1982). Constrained Optimization and Lagrange Multiplier Methods. Computer Science and Applied Mathematics. Academic Press Inc. [Harcourt Brace Jovanovich Publishers], New York.</span> provides a general treatment
+Same as the Bregman iteration (Yin etal., 2008) proposed for basis pursuit (compressive sensing)
 Equivalent to proximal print algorithm applied to the dual; can be accelerated (Nesterov)</p>
 
 
@@ -142,7 +142,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
     
   </ul>
 <div class="credits">
-<span>&copy; 2015 &nbsp;&nbsp;QU XIAOFENG</span></br>
+<span>&copy; 2016 &nbsp;&nbsp;QU XIAOFENG</span></br>
 <span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
 </div>
 </footer>
