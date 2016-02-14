@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>稀疏编码的优化问题 | OPTIMIZATIONS for Machine Learning</title>
+  <meta name="description" content="稀疏编码问题：  ​  用 alternating minimization (ADM)  Primal-dual 算法  Soft threshold">
+
+
+  <link rel="stylesheet" href="//www.optimizations.ml/css/tufte.css">
+
+
+  <!-- Google Fonts loaded here -->
+  <link href='//fonts.useso.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+
+  <!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
+  
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  
+
+  <link rel="canonical" href="http://www.optimizations.ml/2015/05/21/solving-sparse/">
+  <link rel="alternate" type="application/rss+xml" title="OPTIMIZATIONS for Machine Learning" href="http://www.optimizations.ml/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="//www.optimizations.ml/"><img class="badge" src="//www.optimizations.ml/assets/img/badge_op_ml.png" alt="OP"></a>
+		<a href="//www.optimizations.ml/">Home</a>
+		<a href="//www.optimizations.ml/about">About</a>
+	</nav>
+</header>
+
+    <article>
+      <h1>稀疏编码的优化问题</h1>
+<p>May 21, 2015</p>
+
+
+<p>稀疏编码问题：  ​<script type="math/tex"> \arg\min_x f(x)\left\|y-Ax\right\|^2+ \lambda\|x\|_1 </script></p>
+
+<ul>
+  <li>用 alternating minimization (ADM)</li>
+  <li>Primal-dual 算法</li>
+  <li>Soft threshold</li>
+</ul>
+
+<!--more-->
+
+<ul>
+  <li>字典学习 K-SVD</li>
+  <li>看完 K-SVD 之后，图像分类: Discriminative K-SVD for Dictionary Learning in Face Recognition (CVPR)，Label Consistent K-SVD Learning a Discriminative Dictionary for Recognition （TPAMI）；结构化稀疏: Robust Classiﬁcation using Structured Sparse Representation （CVPR）；低秩: Learning Structured Low-rank Representations for Image Classiﬁcation （CVPR）。</li>
+  <li>关于稀疏表示的已有算法的分析: A survey of sparse representation: algorithms and applications</li>
+  <li>参考林倞老师<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> <a href="http://ss.sysu.edu.cn/~ll/">林倞教授 中山大学计算机科学</a></span> NIPS, ACML 和 ML 一系列工作的报告。基本上 ADM 及其扩展都介绍到了。</li>
+  <li><span class="newthought">迭代优化</span></li>
+  <li>​<script type="math/tex">\sum_{i=1}^p\left\|y^{(i)}-A\cdot x^{(i)}\right\|_2^2 + \sum_{i=1}^p S\left(x^{(i)}\right) </script></li>
+  <li>凸的稀疏模型求基于 proximal operator 的 alternating minimization。参考 boyd 的文章。</li>
+  <li>An ADMM Solution to the Sparse Coding Problem: <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> <a href="http://stanford.edu/class/ee364b/projects/2011projects/reports/bhaskar_zou.pdf">http://stanford.edu/class/ee364b/projects/2011projects/reports/bhaskar_zou.pdf</a></span></li>
+  <li><a href="http://www.eecs.berkeley.edu/~yang/software/l1benchmark/">http://www.eecs.berkeley.edu/~yang/software/l1benchmark/</a></li>
+  <li>这篇文章 <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://web.stanford.edu/~boyd/papers/prox_algs.html">http://web.stanford.edu/~boyd/papers/prox_algs.html</a></span> 从 proximal operator 角度讲解，更加深入一点。</li>
+  <li>南京大学何炳生老师的课程 <sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> <a href="http://math.nju.edu.cn/~hebma/">http://math.nju.edu.cn/~hebma/</a></span>，讲得比较深入。</li>
+  <li>biconvex 问题，基本是个保证收敛的算法效果就还行。</li>
+</ul>
+
+
+
+    </article>
+    <span class="print-footer">稀疏编码的优化问题 - May 21, 2015 - QU Xiaofeng</span>
+    <footer>
+  <ul class="footer-links group">
+    <li><a href="mailto:xiaofeng.qu.hk@ieee.org"><span class="icon-mail"></span></a></li>
+    
+      <li>
+        <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
+      </li>
+    
+  </ul>
+<div class="credits">
+<span>&copy; 2016 &nbsp;&nbsp;QU XIAOFENG</span></br>
+<span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
+</div>
+
+<!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
+<script
+
+$("script[type='math/tex']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<span class=\"inline-equation\">" + 
+           katex.renderToString(tex) +
+           "</span>";
+});
+
+$("script[type='math/tex; mode=display']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<div class=\"equation\">" + 
+           katex.renderToString("\\displaystyle "+tex) +
+           "</div>";
+});
+
+</footer>
+  </body>
+</html>

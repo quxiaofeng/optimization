@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>几个基本优化问题 | OPTIMIZATIONS for Machine Learning</title>
+  <meta name="description" content="可以用 ALM11 Augmented Lagrange Multiplier 增广拉格朗日乘子法, LP22 Linear Programming 线性规划 和 IRLS 33 Iteratively Reweighted Least Squares 求解的四种基本优化问题Question 1least ent...">
+
+
+  <link rel="stylesheet" href="//www.optimizations.ml/css/tufte.css">
+
+
+  <!-- Google Fonts loaded here -->
+  <link href='//fonts.useso.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+
+  <!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
+  
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  
+
+  <link rel="canonical" href="http://www.optimizations.ml/2015/05/21/optimization-problems/">
+  <link rel="alternate" type="application/rss+xml" title="OPTIMIZATIONS for Machine Learning" href="http://www.optimizations.ml/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="//www.optimizations.ml/"><img class="badge" src="//www.optimizations.ml/assets/img/badge_op_ml.png" alt="OP"></a>
+		<a href="//www.optimizations.ml/">Home</a>
+		<a href="//www.optimizations.ml/about">About</a>
+	</nav>
+</header>
+
+    <article>
+      <h1>几个基本优化问题</h1>
+<p>May 21, 2015</p>
+
+
+<p>可以用 ALM<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> Augmented Lagrange Multiplier 增广拉格朗日乘子法</span>, LP<sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Linear Programming 线性规划</span> 和 IRLS <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://www.robotics.stanford.edu/~ang/papers/aaai06-efficientL1logisticregression.pdf">Iteratively Reweighted Least Squares</a></span> 求解的四种基本优化问题</p>
+
+<h3 id="question-1">Question 1</h3>
+
+<p><span class="newthought">least entropy &amp; error correction</span></p>
+
+<!--more-->
+
+<ul>
+  <li>​<script type="math/tex"> \arg \min \|x\|_1 + \|e\|_1 </script> subj. to ​<script type="math/tex"> y=Ax+e </script></li>
+  <li>标准 linear programming</li>
+  <li>鲁棒的 <em>SRC</em><sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> 参见 <a href="http://research.microsoft.com/pubs/132810/PAMI-Face.pdf">http://research.microsoft.com/pubs/132810/PAMI-Face.pdf</a> and <a href="http://perception.csl.illinois.edu/recognition/Home.html">Face Recognition via Sparse Representation</a></span>。使用单位矩阵作为遮挡字典，用标准形式求解。</li>
+</ul>
+
+<h3 id="question-2">Question 2</h3>
+
+<p><span class="newthought">least energy &amp; error correction</span></p>
+
+<ul>
+  <li>​<script type="math/tex"> \arg\min \|x\|_2 + \|e\|_1 </script> subj. to ​<script type="math/tex"> y=Ax+e </script></li>
+  <li>鲁棒的 CRC</li>
+</ul>
+
+<h3 id="question-3">Question 3</h3>
+
+<p><span class="newthought">sparse regression with noise - lasso</span></p>
+
+<ul>
+  <li>​<script type="math/tex"> \arg\min \|x\|_1 + \|e\|_2 </script> subj. to ​<script type="math/tex"> y=Ax+e </script></li>
+  <li>标准 lasso 问题</li>
+  <li>标准的 SRC</li>
+</ul>
+
+<h3 id="question-4">Question 4</h3>
+
+<p><span class="newthought">least energy with noise</span></p>
+
+<ul>
+  <li>​<script type="math/tex"> \arg\min \|x\|_2 + \|e\|_2 </script> subj. to ​<script type="math/tex"> y=Ax+e </script></li>
+  <li>极小最小二乘解，可求广义逆。</li>
+  <li>CRC，用二范数约束表示系数，有解析解。</li>
+</ul>
+
+
+
+    </article>
+    <span class="print-footer">几个基本优化问题 - May 21, 2015 - QU Xiaofeng</span>
+    <footer>
+  <ul class="footer-links group">
+    <li><a href="mailto:xiaofeng.qu.hk@ieee.org"><span class="icon-mail"></span></a></li>
+    
+      <li>
+        <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
+      </li>
+    
+  </ul>
+<div class="credits">
+<span>&copy; 2016 &nbsp;&nbsp;QU XIAOFENG</span></br>
+<span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
+</div>
+
+<!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
+<script
+
+$("script[type='math/tex']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<span class=\"inline-equation\">" + 
+           katex.renderToString(tex) +
+           "</span>";
+});
+
+$("script[type='math/tex; mode=display']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<div class=\"equation\">" + 
+           katex.renderToString("\\displaystyle "+tex) +
+           "</div>";
+});
+
+</footer>
+  </body>
+</html>

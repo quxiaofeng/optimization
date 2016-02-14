@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>《非线性最优化基础》学习笔记 | OPTIMIZATIONS for Machine Learning</title>
+  <meta name="description" content="《非线性最优化基础》 作者 福嶋雅夫 11 《非线性最优化基础》（豆瓣链接：http://book.douban.com/subject/6510671/）。福嶋雅夫（Masao Fukushima），教授，日本南山大学理工学院系统与数学科学系，日本京都大学名誉教授，加拿大滑铁卢大学/比利时那慕尔大学/澳大利亚新...">
+
+
+  <link rel="stylesheet" href="//www.optimizations.ml/css/tufte.css">
+
+
+  <!-- Google Fonts loaded here -->
+  <link href='//fonts.useso.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+
+  <!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
+  
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  
+
+  <link rel="canonical" href="http://www.optimizations.ml/2015/08/02/introdction-to-nonlinear-optimization-by-fukushima/">
+  <link rel="alternate" type="application/rss+xml" title="OPTIMIZATIONS for Machine Learning" href="http://www.optimizations.ml/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="//www.optimizations.ml/"><img class="badge" src="//www.optimizations.ml/assets/img/badge_op_ml.png" alt="OP"></a>
+		<a href="//www.optimizations.ml/">Home</a>
+		<a href="//www.optimizations.ml/about">About</a>
+	</nav>
+</header>
+
+    <article>
+      <h1>《非线性最优化基础》学习笔记</h1>
+<p>August 2, 2015</p>
+
+
+<p>《<a href="http://book.douban.com/subject/6510671/">非线性最优化基础</a>》 作者 <a href="http://www.seto.nanzan-u.ac.jp/~fuku/index.html">福嶋雅夫</a> <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> 《非线性最优化基础》（豆瓣链接：<a href="http://book.douban.com/subject/6510671/">http://book.douban.com/subject/6510671/</a>）。福嶋雅夫（Masao Fukushima），教授，日本南山大学理工学院系统与数学科学系，日本京都大学名誉教授，加拿大滑铁卢大学/比利时那慕尔大学/澳大利亚新南威尔士大学客座教授。主页：<a href="http://www.seto.nanzan-u.ac.jp/~fuku/index.html">http://www.seto.nanzan-u.ac.jp/~fuku/index.html</a>。</span></p>
+
+<p>该文为<a href="http://web.xidian.edu.cn/xcfeng/">冯象初教授</a><sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> 冯象初，教授，西安电子科技大学数学系。主页：<a href="http://web.xidian.edu.cn/xcfeng/">http://web.xidian.edu.cn/xcfeng/</a></span>有关非线性最优化的讲座的笔记。</p>
+
+<h2 id="section">主要内容</h2>
+
+<p><strong>理论基础</strong></p>
+
+<ol>
+  <li>凸函数、闭函数</li>
+  <li>共轭函数</li>
+  <li>鞍点问题</li>
+  <li>Lagrange 对偶问题</li>
+  <li>Lagrange 对偶性的推广</li>
+  <li>Fenchel 对偶性</li>
+</ol>
+
+<p><strong>算法</strong></p>
+
+<ol>
+  <li>Proximal gradient methods</li>
+  <li>Dual proximal gradient methods</li>
+  <li>Fast proximal gradient methods</li>
+  <li>Fast dual proximal gradient methods</li>
+</ol>
+
+<!--more-->
+
+<h2 id="section-1">理论基础</h2>
+
+<h3 id="section-2">凸函数、闭函数</h3>
+
+<p>给定函数 ​<script type="math/tex">f : \Re^n \to [-\infty, +\infty] </script>，称 ​<script type="math/tex">\Re^{n+1}</script> 的子集</p>
+
+<p>​<script type="math/tex; mode=display"> graph \; f = \left\{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta = f({\bf x}) \right\} , </script></p>
+
+<p>为 ​<script type="math/tex">f</script> 的<strong>图像</strong>（graph），而称位于 ​<script type="math/tex">f</script> 的图像上方的点的全体构成的集合</p>
+
+<p>​<script type="math/tex; mode=display">epi \; f =\left\{ ({\bf x}, \beta)^T \in \Re^{n+1} \mid \beta \geqslant f({\bf x}) \right\} </script></p>
+
+<p>为 ​<script type="math/tex">f</script> 的<strong>上图</strong>（epigraph）。若上图 ​<script type="math/tex">epi \; f</script> 为凸集，则称 ​<script type="math/tex">f</script> 为<strong>凸函数</strong>(convex function)。</p>
+
+<p><strong>定理 2.27</strong> 设 ​<script type="math/tex"> \mathcal{I} </script> 为任意非空指标集，而 ​<script type="math/tex">f_i : \Re^n \to [-\infty, +\infty] \; (i \in \mathcal{I})</script> 均为凸函数，则由</p>
+
+<p>​<script type="math/tex; mode=display"> f({\bf x}) = \sup \left\{ f_i({\bf x}) \mid i \in \mathcal{I} \right\} </script></p>
+
+<p>定义的函数 ​<script type="math/tex">f : \Re^n \to [-\infty, +\infty] </script> 为凸函数。进一步，若 ​<script type="math/tex">\mathcal{I}</script> 为有限指标集，每个 ​<script type="math/tex">f_i</script> 均为正常的凸函数，并且 ​<script type="math/tex">\cap_{i \in \mathcal{I}} \; dom \; f_i \neq \varnothing </script>，则 ​<script type="math/tex">f</script> 为正常凸函数。</p>
+
+<p>若对任意收敛于 ​<script type="math/tex">{\bf x}</script> 的点列 ​<script type="math/tex">\{ {\bf x}^k\} \subseteq \Re^n</script> 均有</p>
+
+<p>​<script type="math/tex; mode=display"> f({\bf x}) \geqslant \limsup_{k \to \infty}f({\bf x}^k) </script></p>
+
+<p>成立，则称函数 ​<script type="math/tex">f:\Re^n\to[-\infty,+\infty]</script> 在 ​<script type="math/tex">{\bf x}</script> 处<strong>上半连续</strong>（upper semicontinuous）；反之，当</p>
+
+<p>​<script type="math/tex; mode=display"> f({\bf x}) \leqslant \liminf_{k \to \infty}f({\bf x}^k) </script></p>
+
+<p>成立时，称 ​<script type="math/tex">f</script> 在 ​<script type="math/tex">{\bf x}</script> 处<strong>下半连续</strong>（lower semicontinuous）。若 ​<script type="math/tex">f</script> 在 ​<script type="math/tex">{\bf x}</script> 处既为上半连续又为下半连续，则称 ​<script type="math/tex">f</script> 在 ​<script type="math/tex">{\bf x}</script> 处<strong>连续</strong>（continuous）。</p>
+
+<h3 id="section-3">共轭函数</h3>
+
+<p>给定正常凸函数 ​<script type="math/tex">f:\Re^n \to (-\infty,+\infty]</script>，由</p>
+
+<p>​<script type="math/tex; mode=display">f^\ast({\bf\xi}) = \sup \left\{ \lt{}{\bf x},{\bf\xi}\gt{}-f({\bf x}) \mid {\bf x}\in \Re^n \right\} </script></p>
+
+<p>定义的函数 ​<script type="math/tex">f^\ast:\Re^n \to [-\infty,+\infty]</script> 称为 ​<script type="math/tex">f</script> 的<strong>共轭函数</strong>（conjuagate function）。</p>
+
+<p><strong>定理 2.36</strong> 正常凸函数 ​<script type="math/tex">f:\Re^n \to (-\infty,+\infty]</script> 的共轭函数 ​<script type="math/tex">f^\ast</script> 必为闭正常凸函数。</p>
+
+<h3 id="section-4">鞍点问题</h3>
+
+<p>设 ​<script type="math/tex">Y</script> 与 ​<script type="math/tex">Z</script> 分别为 ​<script type="math/tex">\Re^n</script> 与 ​<script type="math/tex">\Re^m</script> 的非空子集，给定以 ​<script type="math/tex">Y\times Z</script> 为定义域的函数 ​<script type="math/tex">K:Y\times Z\to[-\infty,+\infty]</script>，定义两个函数 ​<script type="math/tex">\eta:Y\to[-\infty,+\infty]</script> 与 ​<script type="math/tex">\zeta:Z\to[-\infty,+\infty]</script> 如下：</p>
+
+<p>​<script type="math/tex; mode=display">\eta({\bf y})=\sup\left\{ K({\bf y},{\bf z}) \mid {\bf z} \in Z\right\} </script></p>
+
+<p>​<script type="math/tex; mode=display">\zeta({\bf z})=\inf\left\{ K({\bf y},{\bf z}) \mid {\bf y} \in Y\right\} </script></p>
+
+<p>​<script type="math/tex; mode=display">\min \; \; \eta({\bf y})\\s.t. \; \; \; {\bf y} \in Y</script></p>
+
+<p>​<script type="math/tex; mode=display">\max \; \; \zeta({\bf z})\\s.t. \; \; \; {\bf z} \in Z</script></p>
+
+<p><strong>引理 4.1</strong> 对任意 ​<script type="math/tex">{\bf y}\in Y</script> 与 ​<script type="math/tex">{\bf z}\in Z</script> 均有 ​<script type="math/tex">\zeta({\bf z}) \leqslant \eta({\bf y})</script> 成立。进一步，还有
+​<script type="math/tex; mode=display">\sup\left\{ \zeta({\bf z})\mid {\bf z}\in Z\right\} \leqslant \inf\left\{ \eta({\bf y})\mid {\bf y} \in Y\right\} </script></p>
+
+<p><strong>定理 4.1</strong> 点 ​<script type="math/tex">(\bar{\bf y},\bar{\bf z})\in Y\times Z</script> 为函数 ​<script type="math/tex">K:Y\times Z\to[-\infty,+\infty]</script> 的鞍点的充要条件是 ​<script type="math/tex">\bar{\bf y}\in Y</script> 与 ​<script type="math/tex">\bar{\bf z}\in Z</script> 满足</p>
+
+<p>​<script type="math/tex; mode=display">\eta(\bar{\bf y})=\inf\left\{ \eta({\bf y})\mid {\bf y}\in Y\right\} =\sup\left\{ \zeta({\bf z})\mid {\bf z}\in Z\right\} =\zeta(\bar{\bf z})</script></p>
+
+<h3 id="lagrange-">Lagrange 对偶问题</h3>
+
+<p>考虑如下非线性规划问题：</p>
+
+<p>​<script type="math/tex; mode=display"> \min \; \; f({\bf x}) \\ s.t. \; \; g_i({\bf x}) \leqslant 0, \; \; i=1, \cdots, m</script></p>
+
+<p>其中 ​<script type="math/tex">f: \Re^n \to \Re</script>, ​<script type="math/tex">g_i: \Re^n \to \Re (i=1, \cdots, m)</script>。</p>
+
+<p>​<script type="math/tex; mode=display"> S = \left\{ x \in \Re^n \mid g_i({\bf x}) \leqslant 0 \text{, } \; \; i=1, \cdots, m\right \}</script></p>
+
+<p>​<script type="math/tex; mode=display"> L_0({\bf x}, {\bf \lambda}) = \begin{cases}
+        f({\bf x}) + \sum^m_{i=1}\lambda_ig_i({\bf x})\;, &amp; {\bf \lambda} \geqslant {\bf 0}\\
+        -\infty \; , &amp; {\bf \lambda} \ngeqslant {\bf 0}
+    \end{cases}
+</script></p>
+
+<p>​<script type="math/tex; mode=display"> \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x})</script></p>
+
+<p>​<script type="math/tex; mode=display"> \theta({\bf x}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf \lambda} \in \Re^m \right\}</script></p>
+
+<p>​<script type="math/tex; mode=display"> \omega_0({\bf \lambda}) = \inf \left\{ L_0({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} </script></p>
+
+<p>Constrains relax</p>
+
+<p>​<script type="math/tex; mode=display"> F_0({\bf x}, {\bf u}) = \begin{cases}
+        f({\bf x}),  &amp; {\bf x} \in        S({\bf u}) &amp; \min  &amp; f({\bf x}) &amp; &amp; \\
+        +\infty,      &amp; {\bf x} \notin S({\bf u}) &amp; s.t.      &amp; g_i({\bf x}) &amp; \leqslant u_i, &amp; i = 1, \cdots, m 
+    \end{cases}
+</script></p>
+
+<p>​<script type="math/tex; mode=display"> S({\bf u}) = \left\{ {\bf x} \in \Re^n \mid g_i({\bf x}) \leqslant u_i, \; i=1, \cdots, m \right\} </script></p>
+
+<p><strong>引理 4.5</strong> Lagrange 函数 ​<script type="math/tex">L_0: \Re^{n+m} \to [-\infty, +\infty) </script> 与函数 ​<script type="math/tex">F_0: \Re^{n+m} \to (-\infty,+\infty]</script> 之间有如下关系成立：</p>
+
+<p>​<script type="math/tex; mode=display">L_0({\bf x}, {\bf \lambda}) = \inf \left\{ F_0({\bf x}, {\bf u}) + \lt{}{\bf \lambda}, {\bf u}\gt{} \mid {\bf u} \in \Re^m \right\}</script></p>
+
+<p>​<script type="math/tex; mode=display">F_0({\bf x}, {\bf u}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) - \lt{}{\bf \lambda}, {\bf u}\gt{} \mid {\bf \lambda} \in \Re^m \right\}</script></p>
+
+<h3 id="lagrange--1">Lagrange 对偶性的推广</h3>
+
+<p>对于原始问题 ​<script type="math/tex">(P)</script>，考虑函数 ​<script type="math/tex">F: \Re^{n+M} \to (-\infty, +\infty]</script>，使得对任意固定的 ​<script type="math/tex">{\bf x} \in \Re^n</script>，​<script type="math/tex">F({\bf x}, \cdot): \Re^M \to (-\infty, +\infty]</script> 均为闭正常凸函数，并且满足</p>
+
+<p>​<script type="math/tex; mode=display"> F({\bf x}, {\bf 0}) = \theta({\bf x}) \text{, } {\bf x} \in \Re^n </script></p>
+
+<p><strong>例 4.7</strong> 设 ​<script type="math/tex">M = m</script>，考虑函数 ​<script type="math/tex">F_0: \Re^{n+m} \to (-\infty, +\infty]</script>，利用满足 ​<script type="math/tex">q({\bf 0}) = 0</script> 的闭正常凸函数 ​<script type="math/tex">q: \Re^m \to (-\infty, +\infty]</script> 定义函数 ​<script type="math/tex">F: \Re^{n+m} \to (-\infty, +\infty]</script> 如下：</p>
+
+<p>​<script type="math/tex; mode=display"> F({\bf x}, {\bf u}) = F_0({\bf x}, {\bf u}) + q({\bf u}) </script></p>
+
+<p>​<script type="math/tex; mode=display"> \theta({\bf x}) = f({\bf x}) + \delta_S({\bf x}) </script>
+​<script type="math/tex; mode=display"> \implies F({\bf x}, {\bf u}) \mid F({\bf x}, {\bf 0}) = \theta({\bf x}) </script>
+​<script type="math/tex; mode=display"> \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + \lt{}{\bf \lambda}, {\bf u}\gt{} \mid {\bf u} \in \Re^M \right\} </script>
+​<script type="math/tex; mode=display"> \implies \omega({\bf \lambda}) = \inf \left\{ L({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} </script></p>
+
+<h3 id="fenchel-">Fenchel 对偶性</h3>
+
+<p>​<script type="math/tex; mode=display"> \min_{\bf x} f({\bf x}) + g({\bf Ax}) </script></p>
+
+<p>​<script type="math/tex; mode=display"> \begin{cases} &amp; F({\bf x}, {\bf 0}) = \theta({\bf x}), &amp; x \in \Re^n \\
+&amp; \theta({\bf x}) = f({\bf x}) + g({\bf Ax}) &amp; \end{cases} </script></p>
+
+<p>​<script type="math/tex; mode=display"> \implies F({\bf x}, {\bf u}) = f({\bf x}) + g({\bf Ax} + {\bf u}) </script>
+​<script type="math/tex; mode=display"> \begin{eqnarray*} \implies L({\bf x}, {\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x}) + g({\bf Ax} + {\bf u}) + \lt{}{\bf \lambda}, {\bf u}\gt{} \mid {\bf u} \in \Re^m \right\} \\
+&amp; = &amp; f({\bf x}) - g^\ast(-{\bf \lambda}) - \lt{}{\bf \lambda}, {\bf Ax}\gt{} \end{eqnarray*}</script>
+​<script type="math/tex; mode=display"> \begin{eqnarray*} \implies \omega({\bf \lambda}) &amp; = &amp; \inf \left\{ f({\bf x} - g^\ast(-{\bf \lambda}) - \lt{}{\bf \lambda}, {\bf Ax}\gt{} \mid {\bf x} \in \Re^n \right\} \\
+&amp; = &amp; -f^\ast({\bf A}^T{\bf \lambda}) - g^\ast(-{\bf \lambda}) \end{eqnarray*}</script></p>
+
+<p>​<script type="math/tex; mode=display"> \min_{\bf \lambda} f^\ast\left( {\bf A}^T{\bf \lambda} \right) + g^\ast(-{\bf \lambda})</script>
+​<script type="math/tex; mode=display"> \max_{\bf \lambda} -f^\ast\left({\bf A}^T{\bf \lambda} \right) - g^\ast\left(-{\bf\lambda}\right)</script></p>
+
+<h2 id="section-5">算法</h2>
+
+<h3 id="proximal-gradient-method">1. Proximal Gradient Method</h3>
+
+<p>参考 <a href="http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf">Algorithms for large-scale convex optimization - DTU 2010</a><sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> A Lecture note from “02930 Algorithms for Large-Scale Convex Optimization” taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe (<a href="http://www.seas.ucla.edu/~vandenbe/">http://www.seas.ucla.edu/~vandenbe/</a>) at Danmarks Tekniske Universitet (<a href="http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB">http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB</a>). The Download Link is found at the page of “EE227BT: Convex Optimization - Fall 2013” taught by Laurent El Ghaoui at Berkeley (<a href="http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf">http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf</a>). And both of the lectures mentioned the book “Convex Optimization” by Stephen Boyd and Lieven Vandenberghe (<a href="http://stanford.edu/~boyd/cvxbook/">http://stanford.edu/~boyd/cvxbook/</a>) and the software “CVX” - a MATLAB software for desciplined Convex Programming (<a href="http://cvxr.com/cvx/">http://cvxr.com/cvx/</a>). A similar lecture note on Proximal Gradient Method from “EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)” (<a href="http://www.seas.ucla.edu/~vandenbe/ee236c.html">http://www.seas.ucla.edu/~vandenbe/ee236c.html</a>) at UCLA</span></p>
+
+<h4 id="proximal-mapping">Proximal mapping</h4>
+
+<p>The <strong>proximal mapping</strong> (or proximal operator) of a convex function ​<script type="math/tex">h</script> is</p>
+
+<p>​<script type="math/tex; mode=display"> {\bf prox}_h(x) = \mathop{argmin}_u \left( h(u) + \frac{1}{2} \|u - x\|^2_2 \right)</script></p>
+
+<p><strong>examples</strong></p>
+
+<p><strong>1.</strong> ​<script type="math/tex">h(x) = 0: {\bf prox}_h(x) = x</script></p>
+
+<p><strong>2.</strong> ​<script type="math/tex">h(x) = I_C(x)</script> (indicator function of ​<script type="math/tex">C</script>): ​<script type="math/tex">{\bf prox}_h</script> is projection on ​<script type="math/tex">C</script></p>
+
+<p>​<script type="math/tex; mode=display"> {\bf prox}_h(x) = P_C(x) = \mathop{argmin}_{u \in C} \|u - x\|^2_2 </script></p>
+
+<p><strong>3.</strong> ​<script type="math/tex">h(x) = t \|x\|_1</script>: ​<script type="math/tex">{\bf prox}_h</script> is shinkage (soft threshold) operation</p>
+
+<p>​<script type="math/tex; mode=display"> {\bf prox}_h = \begin{cases}
+    x_i - t &amp; x_i   \geqslant t \\
+    0       &amp; |x_i| \leqslant t \\
+    x_i + t &amp; x_i   \leqslant -t
+\end{cases} </script></p>
+
+<h4 id="proximal-gradient-method-1">Proximal gradient method</h4>
+
+<p><strong>unconstrained problem</strong> with cost function split in two components</p>
+
+<p>​<script type="math/tex; mode=display"> \mathop{argmin} f(x) = g(x) + h(x) </script></p>
+
+<p>​<script type="math/tex">g</script> convex, differentiable, with <strong>dom</strong> ​<script type="math/tex">g=\Re^n</script></p>
+
+<p>​<script type="math/tex">h</script> closed, convex, possibly nondifferentiable; ​<script type="math/tex">{\bf prox}_h</script> is inexpensive</p>
+
+<p><strong>proximal gradient algorithm</strong></p>
+
+<p>​<script type="math/tex; mode=display"> x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k \nabla g \left( x^{(k-1)} \right) \right) </script></p>
+
+<p>​<script type="math/tex; mode=display"> t_k \gt{} 0 \text{ is the step size,}</script></p>
+
+<p>constant or determined by line search</p>
+
+<h4 id="interpretation">Interpretation</h4>
+
+<p>​<script type="math/tex; mode=display"> x^+ = {\bf prox}_{th} \left( x - t\nabla g(x) \right) </script></p>
+
+<p>from definition of proximal operator:</p>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+x^+ &amp; = &amp;  \mathop{argmin}_u \left( h(u) + \frac{1}{2t} \left\| u - x + t\nabla g(x) \right\|^2_2 \right) \\
+    &amp; = &amp; \mathop{argmin}_u \left( h(u) + g(x) + \nabla g(x)^T(u-x) + \frac{1}{2t} \left\| u - x \right\|^2_2 \right)
+\end{eqnarray*}</script></p>
+
+<p>​<script type="math/tex">x^+</script> minimizes ​<script type="math/tex">h(u)</script> plus a simple quadratic local of ​<script type="math/tex">g(u)</script> around ​<script type="math/tex">x</script></p>
+
+<h4 id="examples">Examples</h4>
+
+<p>​<script type="math/tex; mode=display"> minimize \; \; g(x) + h(x) </script></p>
+
+<p><strong>gradient method</strong>: ​<script type="math/tex">h(x) = 0</script>, i.e., minimize g(x)</p>
+
+<p>​<script type="math/tex; mode=display"> x^{(k)} = x^{(k-1)} - t_k\nabla g\left( x^{(k-1)} \right)</script></p>
+
+<p><strong>gradient projection method</strong>: ​<script type="math/tex">h(x) = I_C(x)</script>, i.e., minimize ​<script type="math/tex">g(x)</script> over ​<script type="math/tex">C</script></p>
+
+<p>​<script type="math/tex; mode=display"> x^{(k)} = P_C \left( x^{(k-1)} - t_k\nabla g \left(x^{(k-1)} \right) \right) </script></p>
+
+<p><strong>iterative soft-thresholding</strong>: ​<script type="math/tex">h(x) = \|x\|_1</script>, i.e., ​<script type="math/tex"> minimize \; \; g(x)+ \| x \|_1</script></p>
+
+<p>​<script type="math/tex; mode=display"> x^{(k)} = {\bf prox}_{t_kh} \left( x^{(k-1)} - t_k\nabla g\left( x^{(k-1)} \right)  \right) </script></p>
+
+<p>and</p>
+
+<p>​<script type="math/tex; mode=display"> {\bf prox}_{th}(u)_i = 
+\begin{cases}
+u_i - t &amp; &amp; u_i \geq t \\
+0       &amp; &amp; -t \leq u_i \leq t \\
+u_i + t &amp; &amp; u_i \geq t
+\end{cases}</script></p>
+
+<p><span class="marginnote"></span><img class="fullwidth" src="/assets/img/fukushima-softthresholding.jpg" /></p>
+
+<h3 id="dual-proximal-gradient-methods">2. Dual Proximal Gradient Methods</h3>
+
+<p>参考 L. Vandenberghe EE236C (Spring 2013-14)</p>
+
+<h4 id="composite-structure-in-the-dual">Composite structure in the Dual</h4>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+minimize &amp; &amp; f(x)+g(Ax) \\
+maximize &amp; &amp; -f^\ast \left( -A^Tz \right) - g^\ast(z)
+\end{eqnarray*}</script></p>
+
+<p>dual has the right structure for the proximal gradient method if</p>
+
+<p>prox-operator of ​<script type="math/tex">g</script> (or ​<script type="math/tex">g^\ast</script>) is cheap (closed form or simple algorithm)</p>
+
+<p>​<script type="math/tex">f</script> is strongly convex (​<script type="math/tex">f(x)-(\frac{\mu}{2})x^T</script> is convex) implies ​<script type="math/tex">f^\ast\left(-A^Tz\right)</script> has Lipschitz continuous gradient (​<script type="math/tex">L=\frac{\|A\|^2_2}{\mu}</script>):</p>
+
+<p>​<script type="math/tex; mode=display"> \left\| A\nabla f^\ast(-A^Tu)-A\nabla f^\ast(-A^Tv) \right\|_2 \leq \frac{\|A\|^2_2}{\mu}\|u-v\|_2 </script></p>
+
+<p>because ​<script type="math/tex">\nabla f^2</script> is Lipschitz continuous with constant ​<script type="math/tex">\frac{1}{\mu}</script></p>
+
+<h4 id="dual-proximal-gradient-update">Dual proximal gradient update</h4>
+
+<p>​<script type="math/tex; mode=display"> z^+ = prox_{tg\ast}\left( z+tA\nabla f^\ast\left( -A^Tz \right) \right) </script></p>
+
+<p>equivalent expression in term of ​<script type="math/tex">f</script>:</p>
+
+<p>​<script type="math/tex; mode=display"> z^+ = prox_{tg\ast}(z+tA\hat{x}) \text{  where } \hat{x} = \mathop{argmin}_x \left( f(x) + z^TAx \right)</script></p>
+
+<p><strong>1.</strong>  if ​<script type="math/tex">f</script> is separable, calculation of ​<script type="math/tex">\hat{x}</script> decomposes into independent problems</p>
+
+<p><strong>2.</strong>  step size ​<script type="math/tex">t</script> constant or from backtracking line search</p>
+
+<h4 id="alternating-minimization-interpretation">Alternating minimization interpretation</h4>
+
+<p>Moreau decomposition gives alternate expression for ​<script type="math/tex">z</script>-update</p>
+
+<p>​<script type="math/tex; mode=display"> z^+ = z + t(A\hat{x} - \hat{y}) </script></p>
+
+<p>where</p>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+\hat{x} &amp; = &amp; \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
+\hat{y} &amp; = &amp; prox_{t^{-1}g} \left( \frac{z}{t} + A\hat{x} \right)        \\
+        &amp; = &amp; \mathop{argmin}_y \left(g(y) + z^T(A\hat{x} - y) + \frac{t}{2} \|A\hat{x} - y\|^2_2  \right)
+\end{eqnarray*}</script></p>
+
+<p>in each iteration, an alternating minimization of:</p>
+
+<p><strong>1. Lagrangian</strong> ​<script type="math/tex">f(x) + g(y) + z^T(Ax - y)</script> over ​<script type="math/tex">x</script></p>
+
+<p><strong>2. augmented Lagrangian</strong> ​<script type="math/tex">f(x) + g(y) + z^T(Ax - y) + \frac{t}{2} \|Ax - y\|^2_2</script> over ​<script type="math/tex">y</script></p>
+
+<h4 id="regularized-norm-approximation">Regularized norm approximation</h4>
+
+<p>​<script type="math/tex; mode=display"> minimize f(x) + \|Ax - b\| \text{   (with } f \text{ strongly convex)   } </script></p>
+
+<p>a special case with ​<script type="math/tex">g(y) = \|y - b\|</script></p>
+
+<p>​<script type="math/tex; mode=display">
+g^\ast = \begin{cases}
+b^Tz    &amp; &amp; \|z\|_\ast \leq 1 \\
++\infty &amp; &amp; otherwise 
+\end{cases}
+</script></p>
+
+<p>​<script type="math/tex; mode=display">
+prox_{tg\ast}(z) = P_C(z - tb)
+</script></p>
+
+<p>C is unit norm ball for dual norm ​<script type="math/tex">\|\cdot\|_\ast</script></p>
+
+<p><strong>dual gradient projection update</strong></p>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+\hat{x} &amp; = &amp; \mathop{argmin}_x \left( f(x) + z^TAx \right) \\
+z^+     &amp; = &amp; P_C(z + t(A\hat{x} - b))
+\end{eqnarray*}</script></p>
+
+<h4 id="example">Example</h4>
+
+<p>​<script type="math/tex; mode=display">
+minimize \; \; f(x) + \sum^p_{i=1}\|B_ix\|_2 \text{   (with } f \text{ strongly convex)   }
+</script></p>
+
+<p><strong>dual gradient projection update</strong></p>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+\hat{x} &amp; = &amp; \mathop{argmin}_x \left( f(x) + \left(\sum^p_{i=1}B^T_iz_i\right)^Tx \right) \\
+z^+_i   &amp; = &amp; P_{C_i}(z_i + tB_i\hat{x}) \text{, } \; \; i=1, \cdots, p
+\end{eqnarray*}</script></p>
+
+<p>​<script type="math/tex">C_i</script> is unit Euclidean norm ball in ​<script type="math/tex">\Re^{m_i}</script>, if ​<script type="math/tex">B_i \in \Re^{m_i \times n}</script></p>
+
+<h4 id="minimization-over-intersection-of-convex-sets">Minimization over intersection of convex sets</h4>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+minimize   &amp; &amp; f(x) \\
+subject to &amp; &amp; x \in C_i \cap \cdots \cap C_m
+\end{eqnarray*}</script></p>
+
+<p>​<script type="math/tex">f</script> strongly convex; e.g., ​<script type="math/tex">f(x) = \|x - a\|^2_2</script> for projecting ​<script type="math/tex">a</script> on intersection</p>
+
+<p>sets ​<script type="math/tex">C_i</script> are closed, convex, and easy to project onto</p>
+
+<p><strong>dual proximal gradient update</strong></p>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+\hat{x} &amp; = &amp; \mathop{argmin}_x \left( f(x) + (z_i + \cdots + z_m)^Tx \right) \\
+z^+_i   &amp; = &amp; z_i + t\hat{x} - tP_{C_i}\left(\frac{z_i}{t} + \hat{x}\right) \text{, }\; \; i=1, \cdots, m
+\end{eqnarray*}</script></p>
+
+<h4 id="decomposition-of-separable-problems">Decomposition of separable problems</h4>
+
+<p>​<script type="math/tex; mode=display">
+minimize \; \; \sum^n_{j=1}f_j(x_j) + \sum^m_{i=1}g_i(A_{i1}x_1 + \cdots + A_{in}x_n )
+</script></p>
+
+<p>each ​<script type="math/tex">f_i</script> is strongly convex; ​<script type="math/tex">g_i</script> has inexpensive prox-operator</p>
+
+<p><strong>dual proximal gradient update</strong></p>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+\hat{x}_j &amp; = &amp; \mathop{argmin}_{x_j} \left( f_j(x_j) + \sum^m_{i=1}z^T_iA_{ij}x_j \right) \text{, } \; \; j=1, \cdots, n \\
+z^+_i        &amp; = &amp; prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
+\end{eqnarray*}</script></p>
+
+<h3 id="fast-proximal-gradient-methods">3. Fast proximal gradient methods</h3>
+
+<p>参考 L. Vandenberghe EE236C (Spring 2013-14)</p>
+
+<h4 id="fista-basic-version">FISTA (basic version)</h4>
+
+<p>​<script type="math/tex; mode=display">
+minimize \; \; f(x) = g(x) + h(x)
+</script></p>
+
+<p>​<script type="math/tex">g</script> convex, differentiable with ​<script type="math/tex">\mathop{dom} g=\Re^n</script></p>
+
+<p>​<script type="math/tex">h</script> closed, convex, with inexpensive ​<script type="math/tex">prox_{th}</script> operator</p>
+
+<p><strong>algorithm</strong>: choose any ​<script type="math/tex">x^{(0)} = x^{(-1)}</script>; for ​<script type="math/tex">k \geq 1</script>, repeat the steps</p>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+y             &amp; = &amp; x^{(k-1)} + \frac{k-2}{k+1} \left( x^{(k-1)} - x^{(k-2)} \right) \\
+x^{(k)} &amp; = &amp; prox_{t_kh} \left( y - t_k\nabla g(y) \right)
+\end{eqnarray*}</script></p>
+
+<p>step size ​<script type="math/tex">t_k</script> fixed or determined by line search</p>
+
+<p>acronym stands for ‘Fast Iterative Shrinkage-Thresholding Algorithm’</p>
+
+<h4 id="interpretation-1">Interpretation</h4>
+
+<p>first iteration (​<script type="math/tex">k = 1</script>) is a proximal gradient step at ​<script type="math/tex">y = x^{(0)}</script></p>
+
+<p>next iterations are proximal gradient steps at extrapolated points ​<script type="math/tex">y</script></p>
+
+<p><span class="marginnote"></span><img class="fullwidth" src="/assets/img/fukushima-interpretation.png" /></p>
+
+<p>note: ​<script type="math/tex">x^{(k)}</script> is feasible (in ​<script type="math/tex">\mathop{dom} h</script>); ​<script type="math/tex">y</script> may be outside ​<script type="math/tex">\mathop{dom} h</script></p>
+
+<h4 id="reformulation-of-fista">Reformulation of FISTA</h4>
+
+<p>define ​<script type="math/tex">\theta_k = \frac{2}{k+1}</script> and introduce an intermediate variable ​<script type="math/tex">v^{(k)}</script></p>
+
+<p><strong>algorithm</strong>: choose ​<script type="math/tex">x^{(0)} = v^{(0)}</script>; for ​<script type="math/tex">k \geq 1</script>, repeat the steps</p>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+y             &amp; = &amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+x^{(k)} &amp; = &amp; prox_{t_kh}(y-t_k\nabla g(y))\\
+v^{(k)} &amp; = &amp; x^{(k - 1)} + \frac{1}{\theta_k}\left( x^{(k)} - x^{(k-1)} \right)
+\end{eqnarray*}</script></p>
+
+<h4 id="nesterovs-second-method">Nesterov’s second method</h4>
+
+<p><strong>algorithm</strong>: choose ​<script type="math/tex">x^{(0)} = v^{(0)}</script>; for ​<script type="math/tex">k \geq 1</script>, repeat the steps</p>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+y             &amp; = &amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k-1)} \\
+v^{(k)} &amp; = &amp; prox_{\left(\frac{t_k}{\theta_k}\right)h} \left( v^{(k-1)} - \frac{t_k}{\theta_k}\nabla g(y) \right)\\
+x^{(k)} &amp; = &amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
+\end{eqnarray*}</script></p>
+
+<p>User​<script type="math/tex">\theta_k = \frac{2}{k+1}</script> and ​<script type="math/tex">t_k = \frac{1}{L}</script>, or one of the line search methods</p>
+
+<p>identical to FISTA if ​<script type="math/tex">h(x) = 0</script></p>
+
+<p>unlike in FISTA, ​<script type="math/tex">y</script> is feasible (in ​<script type="math/tex">\mathop{dom} h</script>) if we take ​<script type="math/tex">x^{(0)} \in \mathop{dom} h</script></p>
+
+<h3 id="fast-dual-proximal-gradient-methods">4. Fast dual proximal gradient methods</h3>
+
+<p>参考 A Fast Dual Proximal Gradient Algorithm for Convex Minimization and Applications by Amir Beck and Marc Teboulle at October 10, 2013</p>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+(D)   &amp; = &amp; \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
+(D') &amp; = &amp; \min F(y) + G(y),\\
+(P') &amp; = &amp; \min \left\lbrace f(x) + g(z): Ax - z = 0 \right\rbrace.
+\end{eqnarray*}</script></p>
+
+<p>​<script type="math/tex; mode=display">
+F(y) := f^\ast\left( A^Ty \right), \; \; G(y) :=g^\ast(-y)
+</script></p>
+
+<p>Initialization: ​<script type="math/tex">L \geq \frac{\|A\|^2}{\sigma}</script>, ​<script type="math/tex">w_1 = y_0 \in \mathbb{V}</script>, ​<script type="math/tex">t_1 = 1</script>.</p>
+
+<p>General Step ​<script type="math/tex">(k \geq 1)</script>:</p>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+y_k           &amp; = &amp; prox_{\frac{1}{L}G}\left( w_k - \frac{1}{L} \nabla F(w_k) \right)\\
+t_{k+1}   &amp; = &amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2} \\
+w_{k+1} &amp; = &amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}).
+\end{eqnarray*}</script></p>
+
+<h4 id="the-fast-dual-based-proximal-gradient-method-fdpg">The Fast Dual-Based Proximal Gradient Method (FDPG)</h4>
+
+<p>Input: ​<script type="math/tex">L \geq \frac{\|A\|^2}{\sigma} - \text{ an upper bound on the Lipschitz constant of } \nabla F</script></p>
+
+<p>Step ​<script type="math/tex">0</script>. Take ​<script type="math/tex">w_1 = y_0 \in \mathbb{V}</script>, ​<script type="math/tex">t_1 = 1</script>.</p>
+
+<p>Step ​<script type="math/tex">k</script>. (​<script type="math/tex">k \geq 0</script>) Compute</p>
+
+<p>​<script type="math/tex; mode=display"> \begin{eqnarray*}
+u_k           &amp; = &amp; \mathop{argmax}_x \left\lbrace \lt{}x, A^Tw_k\gt{} - f(x) \right\rbrace\\
+v_k           &amp; = &amp; prox_{Lg}(Au_k - Lw_k)\\
+y_k           &amp; = &amp; w_k - \frac{1}{L}(au_k - v_k)\\
+t_{k+1}   &amp; = &amp; \frac{1 + \sqrt{1 + 4t^2_k}}{2}\\
+w_{k+1} &amp; = &amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k - y_{k-1}). \tag*{$\blacksquare$}
+\end{eqnarray*}</script></p>
+
+
+
+    </article>
+    <span class="print-footer">《非线性最优化基础》学习笔记 - August 2, 2015 - QU Xiaofeng</span>
+    <footer>
+  <ul class="footer-links group">
+    <li><a href="mailto:xiaofeng.qu.hk@ieee.org"><span class="icon-mail"></span></a></li>
+    
+      <li>
+        <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
+      </li>
+    
+  </ul>
+<div class="credits">
+<span>&copy; 2016 &nbsp;&nbsp;QU XIAOFENG</span></br>
+<span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
+</div>
+
+<!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
+<script
+
+$("script[type='math/tex']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<span class=\"inline-equation\">" + 
+           katex.renderToString(tex) +
+           "</span>";
+});
+
+$("script[type='math/tex; mode=display']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<div class=\"equation\">" + 
+           katex.renderToString("\\displaystyle "+tex) +
+           "</div>";
+});
+
+</footer>
+  </body>
+</html>

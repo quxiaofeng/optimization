@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Introduction to Nonlinear Optimization | OPTIMIZATIONS for Machine Learning</title>
+  <meta name="description" content="昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》11 《Introduction to Nonlinear Optimization》 at 豆瓣: http://book.douban.com/subject/26551626/ an...">
+
+
+  <link rel="stylesheet" href="//www.optimizations.ml/css/tufte.css">
+
+
+  <!-- Google Fonts loaded here -->
+  <link href='//fonts.useso.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+
+  <!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
+  
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  
+
+  <link rel="canonical" href="http://www.optimizations.ml/2015/07/16/introduction-to-nonlinear-optimization/">
+  <link rel="alternate" type="application/rss+xml" title="OPTIMIZATIONS for Machine Learning" href="http://www.optimizations.ml/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="//www.optimizations.ml/"><img class="badge" src="//www.optimizations.ml/assets/img/badge_op_ml.png" alt="OP"></a>
+		<a href="//www.optimizations.ml/">Home</a>
+		<a href="//www.optimizations.ml/about">About</a>
+	</nav>
+</header>
+
+    <article>
+      <h1>Introduction to Nonlinear Optimization</h1>
+<p>July 16, 2015</p>
+
+
+<p>昨天晚上到今天，看完了一本之前一直看不完的书 《Introduction to Nonlinear Optimization》<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> 《Introduction to Nonlinear Optimization》 at 豆瓣: <a href="http://book.douban.com/subject/26551626/">http://book.douban.com/subject/26551626/</a> and at Amazon: <a href="http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/">http://www.amazon.com/Introduction-Nonlinear-Optimization-Algorithms-Applications/dp/1611973643/</a></span> by Amir Beck <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Amir Beck is an associate professor at The Technion—Israel Institute of Technology： <a href="http://iew3.technion.ac.il/Home/Users/becka.html">http://iew3.technion.ac.il/Home/Users/becka.html</a></span>。澄清了一些过去曾经误解的概念。MOS-SIAM Series on Optimization<sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> MOS-SIAM Series on Optimization: <a href="http://bookstore.siam.org/mos-siam-series-on-optimization/">http://bookstore.siam.org/mos-siam-series-on-optimization/</a></span> 一系列优化的书都不错。连着借了三本，希望以后都能好好读完。现在这本非线性优化暂时只是翻完了，习题都没做，感觉习题也都挺有用的。</p>
+
+<!--more-->
+
+<h2 id="table-of-content-">Table of Content 目录</h2>
+
+<p><strong>1.</strong> Mathematical Preliminaries 数学基础
+<strong>2.</strong> Optimality Conditions for Unconstrained Optimization 无约束优化问题的优化条件
+<strong>3.</strong> Least Squares 最小二乘问题
+<strong>4.</strong> The Gradient Method 梯度下降法
+<strong>5.</strong> Newton’s Method 牛顿法
+<strong>6.</strong> Convex Sets 凸集
+<strong>7.</strong> Convex Functions 凸函数
+<strong>8.</strong> Convex Optimization 凸优化
+<strong>9.</strong> Optimization over a Convex Set 凸集上的优化问题
+<strong>10.</strong> Optimality Conditions for Linearly Constrained Problems 线性约束问题的优化条件
+<strong>11.</strong> The KKT Conditions 库恩塔克条件
+<strong>12.</strong> Duality 对偶问题</p>
+
+<h2 id="section">第一章 数学基础</h2>
+
+<p><strong>Definition 1.1 内积</strong> inner product ​<script type="math/tex">\langle\cdot,\cdot\rangle:=\Re^n \times \Re^n \to \Re</script></p>
+
+<p><strong>1. 对称性</strong> symmetry ​<script type="math/tex">\langle{\bf x},{\bf y}\rangle=\langle{\bf y},{\bf x}\rangle</script> 对于任何 ​<script type="math/tex">{\bf x},{\bf y} \in \Re^n </script></p>
+
+<p><strong>2. 可加性</strong> additivity ​<script type="math/tex">\langle{\bf x},{\bf y}+{\bf z}\rangle=\langle{\bf x},{\bf y}\rangle+\langle{\bf x},{\bf z}\rangle</script> 对于任何 ​<script type="math/tex">{\bf x},{\bf y},{\bf z} \in \Re^n </script></p>
+
+<p><strong>3. 线性</strong> homogeneity ​<script type="math/tex">\langle\lambda{\bf x},{\bf y}\rangle=\lambda\langle{\bf x},{\bf y}\rangle</script> 对于任何 ​<script type="math/tex">\lambda\in \Re </script> 及 ​<script type="math/tex">{\bf x},{\bf y} \in \Re^n</script></p>
+
+<p><strong>4. 正定性</strong> positive definiteness 对于任意 ​<script type="math/tex">{\bf x}\in \Re^n</script>， ​<script type="math/tex">\langle{\bf x},{\bf x}\rangle\ge0</script>；当且仅当 ​<script type="math/tex">{\bf x}={\bf 0}</script> 时，​<script type="math/tex">\langle{\bf x},{\bf x}\rangle=0</script>。 ​<script type="math/tex">\tag*{$\blacksquare$}</script></p>
+
+<p><strong>Example 1.2 最常见的内积就是点积</strong> dot product
+​<script type="math/tex; mode=display">\langle{\bf x},{\bf y}\rangle={\bf x}^T{\bf y}=\sum^n_{i=1}x_iy_i \text{ for any } {\bf x},{\bf y} \in \Re^n </script>
+点积是标准内积，当不明确说明时，默认内积就是点积。​<script type="math/tex">\tag*{$\blacksquare$}</script></p>
+
+<p><strong>Example 1.3 加权点积</strong> weighted dot norm 是 ​<script type="math/tex">\Re^n </script> 空间中另一个内积的例子，其中权重 ​<script type="math/tex">{\bf w}\in \Re^n_{++} </script>。
+​<script type="math/tex; mode=display"> \langle {\bf x},{\bf y} \rangle_{\bf w} = \sum^n_{i=1}w_ix_iy_i \; \tag*{$\blacksquare$}</script></p>
+
+<p><strong>Definition 1.4 范数</strong> Norm 一个定义在实数向量集 ​<script type="math/tex">\Re^n </script> 上的范数 ​<script type="math/tex">\|\cdot\| </script> 是一个满足如下条件，形如 ​<script type="math/tex">\| \cdot \| : \Re^n \to \Re </script> 的函数</p>
+
+<p><strong>1. 非负性</strong> nonnegativity ​<script type="math/tex"> \|{\bf x}\| \ge 0 \text{ for any } {\bf x} \in \Re^n \text{ and } \|{\bf x}\| = 0 \text{ if and only if } {\bf x} = {\bf 0} </script></p>
+
+<p><strong>2. 正线性</strong> positive homogeneity ​<script type="math/tex"> |\lambda {\bf x}\| = |\lambda| \|{\bf x}\| \text{ for any } {\bf x} \in \Re^n \text{ and } \lambda \in \Re</script></p>
+
+<p><strong>3. 三角不等</strong> triangle inequality  ​<script type="math/tex"> \|{\bf x} + {\bf y}\| \le \|{\bf x}\| + \|{\bf y}\| \text{ for any } {\bf x},{\bf y} \in \Re^n</script></p>
+
+<p>相应的，​<script type="math/tex"> p </script> 范数 p-norm 定位为
+​<script type="math/tex; mode=display"> \ell_p \equiv \|{\bf x}\|_p \equiv \sqrt[p]{\sum^n_{i=1}|x_i|^p} \text{ , for }  p \ge 1 </script></p>
+
+<p>类似的，无穷范数 ​<script type="math/tex">\infty </script> 定义为
+​<script type="math/tex; mode=display"> \|{\bf x}\|_{\infty} \equiv \max_{i=1,2,\cdots,n}|x_i|=\lim_{p \to \infty} \|{\bf x}\|_p \;</script>
+即最大绝对值。</p>
+
+<p>1-范数 1-norm ​<script type="math/tex">\|{\bf x}\|_1</script> 即为绝对值之和 ​<script type="math/tex">\sum^n_{i=1}|x_i|</script>。 ​<script type="math/tex">\tag*{$\blacksquare$}</script></p>
+
+<p><strong>Lemma 1.5 柯西 - 施瓦茨不等式</strong> Cauchy-Schwarz inequality ​<script type="math/tex"> \text{ For any } {\bf x}, {\bf y} \in \Re^n,</script>
+​<script type="math/tex; mode=display">|{\bf x}^T{\bf y}| \le \|{\bf x}\|_2 \cdot \|{\bf y}\|_2 </script></p>
+
+<p>等号在且仅在 ​<script type="math/tex">{\bf x}</script> 和 ​<script type="math/tex">{\bf y}</script> 线性相关时成立。 ​<script type="math/tex">\tag*{$\blacksquare$}</script></p>
+
+<p><strong>Definition 1.6 矩阵的范数</strong> matrix norms 一个定义在​<script type="math/tex">\Re^{m \times n}</script> 空间上的范数 ​<script type="math/tex">\|\cdot\|</script> 是一个形如 ​<script type="math/tex">\|\cdot\|:\Re^{m \times n} \to \Re</script>，且满足如下性质的函数。</p>
+
+<p><strong>1. 非负性</strong> nonnegativity 对于任意 ​<script type="math/tex">{\bf A} \in \Re^{m \times n}</script>, ​<script type="math/tex">\|{\bf A}\| \ge 0</script>；同时，当且仅当 ​<script type="math/tex">{\bf A} = {\bf 0}</script> 时，​<script type="math/tex">\|{\bf A}\| = 0</script>。</p>
+
+<p><strong>2. 正线性</strong> positive homogeneity 对于任意 ​<script type="math/tex">{\bf A} \in \Re^{m \times n}</script> 和 ​<script type="math/tex">\lambda \in \Re</script>，​<script type="math/tex">\|\lambda{\bf A}\| = |\lambda| \cdot \|{\bf A}\|</script>。</p>
+
+<p><strong>3. 三角不等式</strong> triangle inequality 对于任意 ​<script type="math/tex">{\bf A},{\bf B} \in \Re^{m \times n}</script>，​<script type="math/tex">\|{\bf A} + {\bf B}\| \le \|{\bf A}\| + \|{\bf B}\|</script>。</p>
+
+<p>常见的 induced matrix norm ​<script type="math/tex">\| \cdot \|_{a,b}</script> 定义如下。给定一个矩阵 ​<script type="math/tex">{\bf A} \in \Re^{m \times n}</script> 和分别定义在 ​<script type="math/tex">\Re^n</script> 及 ​<script type="math/tex">\Re^m</script> 上的两个范数 ​<script type="math/tex">\| \cdot \|_a</script> 和 ​<script type="math/tex">\| \cdot \|_b</script>，​<script type="math/tex">\| {\bf A} \|_{a,b}</script> 即为</p>
+
+<p>​<script type="math/tex; mode=display">\| {\bf A} \|_{a,b} = \max_{\bf x}\{ \| {\bf Ax} \|_b : \| {\bf x} \|_a \le 1 \} </script></p>
+
+<p>从定义可以看出，对于任意 ​<script type="math/tex">{\bf x} \in \Re^n</script> 以下不等式均成立</p>
+
+<p>​<script type="math/tex; mode=display">\| {\bf Ax} \|_b = \| {\bf A} \|_{a,b}  \| {\bf x} \|_a \tag*{$\blacksquare$}</script></p>
+
+<p><strong>Example 1.7 谱范数</strong> spectral norm
+​<script type="math/tex">\tag*{$\blacksquare$}</script></p>
+
+<p><strong>Example 1.8 1-范数</strong> 1-norm 又称为最大列绝对值和范数
+​<script type="math/tex">\tag*{$\blacksquare$}</script></p>
+
+<p><strong>Example 1.9 无穷范数</strong> ​<script type="math/tex">\inf</script>-norm 又称为最大行绝对值和范数
+​<script type="math/tex">\tag*{$\blacksquare$}</script></p>
+
+<p>Frobenius 范数是一个非 induced 范数的矩阵范数的例子，定义如下。</p>
+
+<p>​<script type="math/tex; mode=display">\| {\bf A} \|_F = \sqrt{\sum^m_{i=1} \sum^n_{j=1}A^2_{ij}}, \; {\bf A} \in \Re^{m \times n} \tag*{$\blacksquare$}</script></p>
+
+
+
+    </article>
+    <span class="print-footer">Introduction to Nonlinear Optimization - July 16, 2015 - QU Xiaofeng</span>
+    <footer>
+  <ul class="footer-links group">
+    <li><a href="mailto:xiaofeng.qu.hk@ieee.org"><span class="icon-mail"></span></a></li>
+    
+      <li>
+        <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
+      </li>
+    
+  </ul>
+<div class="credits">
+<span>&copy; 2016 &nbsp;&nbsp;QU XIAOFENG</span></br>
+<span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
+</div>
+
+<!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
+<script
+
+$("script[type='math/tex']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<span class=\"inline-equation\">" + 
+           katex.renderToString(tex) +
+           "</span>";
+});
+
+$("script[type='math/tex; mode=display']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<div class=\"equation\">" + 
+           katex.renderToString("\\displaystyle "+tex) +
+           "</div>";
+});
+
+</footer>
+  </body>
+</html>

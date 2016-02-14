@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Alternating Direction Method of Multipliers (ADMM) | OPTIMIZATIONS for Machine Learning</title>
+  <meta name="description" content="Consider minimizing ​ subject to affine constraints ​The augmented Lagrangian​">
+
+
+  <link rel="stylesheet" href="//www.optimizations.ml/css/tufte.css">
+
+
+  <!-- Google Fonts loaded here -->
+  <link href='//fonts.useso.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+
+  <!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
+  
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  
+
+  <link rel="canonical" href="http://www.optimizations.ml/2015/07/18/alternating-direction-method-multipliers/">
+  <link rel="alternate" type="application/rss+xml" title="OPTIMIZATIONS for Machine Learning" href="http://www.optimizations.ml/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="//www.optimizations.ml/"><img class="badge" src="//www.optimizations.ml/assets/img/badge_op_ml.png" alt="OP"></a>
+		<a href="//www.optimizations.ml/">Home</a>
+		<a href="//www.optimizations.ml/about">About</a>
+	</nav>
+</header>
+
+    <article>
+      <h1>Alternating Direction Method of Multipliers (ADMM)</h1>
+<p>July 18, 2015</p>
+
+
+<p>Consider minimizing ​<script type="math/tex"> f({\bf x}) + g({\bf y}) </script> subject to affine constraints ​<script type="math/tex"> {\bf Ax} + {\bf By} = {\bf c} </script></p>
+
+<p><strong>The augmented Lagrangian</strong></p>
+
+<p>​<script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf x}, {\bf y}, {\bf \lambda}) = f({\bf x}) + g({\bf y}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By} - {\bf c} \|^2_2 </script></p>
+
+<!--more-->
+
+<p><strong>Idea</strong>: perform block descent on ​<script type="math/tex">{\bf x}</script> and ​<script type="math/tex">{\bf y}</script> and then update multiplier vector ​<script type="math/tex">{\bf \lambda}</script></p>
+
+<p>​<script type="math/tex; mode=display">
+\begin{align}
+{\bf x}^{(t+1)}       &amp; \leftarrow \min_{\bf x} f({\bf x}) + \langle {\bf \lambda}, {\bf Ax} + {\bf By}^{(t)} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax} + {\bf By}^{(t)} - {\bf c} \|^2_2 \\
+{\bf y}^{(t+1)}       &amp; \leftarrow \min_{\bf y} g({\bf y}) + \langle {\bf \lambda}, {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \rangle + \frac{\rho}{2} \| {\bf Ax}^{(t+1)} + {\bf By} - {\bf c} \|^2_2 \\
+{\bf \lambda}^{(t+1)} &amp; \leftarrow {\bf \lambda}^{(t)} + \rho ({\bf Ax}^{(t+1)} + {\bf By}^{(t+1)} - {\bf c})
+\end{align}
+</script></p>
+
+<h2 id="example-fused-lasso">Example: fused lasso</h2>
+
+<p>Fused lasso problem minimizes
+​<script type="math/tex; mode=display"> \frac{1}{2} \| {\bf y - X\beta} \|^2_2 + \mu \sum^{p-1}_{j=1} |\beta_{j+1} - \beta_j |</script></p>
+
+<p>Define ​<script type="math/tex">{\bf \gamma = D\beta}</script>, where</p>
+
+<p>​<script type="math/tex; mode=display">
+D = \left(\begin{matrix}
+1 &amp; -1 &amp; &amp;      &amp;   &amp; \\
+  &amp;    &amp; \cdots &amp;   &amp; \\
+  &amp;    &amp;        &amp; 1 &amp; -1
+\end{matrix}
+\right)
+</script></p>
+
+<p>Then we minimize ​<script type="math/tex"> \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| \gamma \|_1 </script> subject to ​<script type="math/tex"> {\bf D\beta} = \gamma </script></p>
+
+<p>Augmented Lagrangian is</p>
+
+<p>​<script type="math/tex; mode=display"> \mathcal{L}_\rho({\bf \beta}, {\bf \gamma}, {\bf \lambda}) = \frac{1}{2} \| {\bf y} - {\bf X\beta} \|^2_2 + \mu \| {\bf \gamma} \|_1 + {\bf \lambda}^T({\bf D\beta} - {\bf \gamma}) + \frac{\rho}{2} \| {\bf D\beta} - {\bf \gamma} \|^2_2 </script></p>
+
+<h2 id="admm">ADMM</h2>
+
+<ul>
+  <li>Update ​<script type="math/tex">{\bf \beta}</script> is a smooth quadratic problem</li>
+  <li>Update ​<script type="math/tex">{\bf \gamma}</script> is a separated lasso problem (elementwise thresholding)</li>
+  <li>Update multipliers</li>
+</ul>
+
+<p>​<script type="math/tex; mode=display">{\bf \lambda}^{(t+1)} \leftarrow {\bf \lambda}^{(t)} + \rho({\bf D\beta}^{(t)} - {\bf \gamma}^{(t)})</script></p>
+
+<p>Same algorithm applies to a general regularization matrix ​<script type="math/tex">{\bf D}</script> (generalized lasso)</p>
+
+<h2 id="remarks-on-admm">Remarks on ADMM</h2>
+
+<p>Related algorithms</p>
+
+<ul>
+  <li>Split Bregman iteration <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343.</span></li>
+  <li>Dykstra’s alternating projection algorithm <sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842.</span></li>
+  <li>Proximal point algorithm applied to the dual</li>
+  <li>Numerous applications in statistics and machine learning: lasso, gen. lasso, graphical lasso, (overlapping) group lasso, …</li>
+  <li>Embraces distributed computing for big data <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122.</span></li>
+</ul>
+
+
+
+    </article>
+    <span class="print-footer">Alternating Direction Method of Multipliers (ADMM) - July 18, 2015 - QU Xiaofeng</span>
+    <footer>
+  <ul class="footer-links group">
+    <li><a href="mailto:xiaofeng.qu.hk@ieee.org"><span class="icon-mail"></span></a></li>
+    
+      <li>
+        <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
+      </li>
+    
+  </ul>
+<div class="credits">
+<span>&copy; 2016 &nbsp;&nbsp;QU XIAOFENG</span></br>
+<span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
+</div>
+
+<!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
+<script
+
+$("script[type='math/tex']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<span class=\"inline-equation\">" + 
+           katex.renderToString(tex) +
+           "</span>";
+});
+
+$("script[type='math/tex; mode=display']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<div class=\"equation\">" + 
+           katex.renderToString("\\displaystyle "+tex) +
+           "</div>";
+});
+
+</footer>
+  </body>
+</html>

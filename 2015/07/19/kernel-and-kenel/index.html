@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Kernel and Kernel: Reproducing Kernel Hilbert Space and Kernel Method | OPTIMIZATIONS for Machine Learning</title>
+  <meta name="description" content="Kernel再生核的定义Definition. ​ is a kernel if      核函数 ​  对称 isymmetric: ​.        核函数 ​ 半正定 positive semi-definite  i.e., ​, the “Gram Matrix” ​ defined by ​ is ...">
+
+
+  <link rel="stylesheet" href="//www.optimizations.ml/css/tufte.css">
+
+
+  <!-- Google Fonts loaded here -->
+  <link href='//fonts.useso.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+
+  <!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
+  
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  
+
+  <link rel="canonical" href="http://www.optimizations.ml/2015/07/19/kernel-and-kenel/">
+  <link rel="alternate" type="application/rss+xml" title="OPTIMIZATIONS for Machine Learning" href="http://www.optimizations.ml/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="//www.optimizations.ml/"><img class="badge" src="//www.optimizations.ml/assets/img/badge_op_ml.png" alt="OP"></a>
+		<a href="//www.optimizations.ml/">Home</a>
+		<a href="//www.optimizations.ml/about">About</a>
+	</nav>
+</header>
+
+    <article>
+      <h1>Kernel and Kernel: Reproducing Kernel Hilbert Space and Kernel Method</h1>
+<p>July 19, 2015</p>
+
+
+<h2 id="kernel">Kernel</h2>
+
+<p>再生核的定义</p>
+
+<p>Definition. ​<script type="math/tex">k: \mathcal{X} \times \mathcal{X} \rightarrow \Re </script> is a kernel if</p>
+
+<ol>
+  <li>
+    <p>核函数 ​<script type="math/tex">k</script>  对称 isymmetric: ​<script type="math/tex">k(x,y)=k(y,x)</script>.</p>
+  </li>
+  <li>
+    <p>核函数 ​<script type="math/tex">k</script> 半正定 positive semi-definite</p>
+  </li>
+</ol>
+
+<p>i.e., ​<script type="math/tex">\forall x_1, x_2, \ldots , x_n \in \mathcal{X}</script>, the “Gram Matrix” ​<script type="math/tex">K</script> defined by ​<script type="math/tex">K_{ij} =  k(x_i,x_j)</script> is positive semi-definite. (A matrix ​<script type="math/tex">M \in \Re^{n \times n}</script> is positive semi-definite if ​<script type="math/tex">\forall a \in \Re^n</script>, ​<script type="math/tex">a' M a \ge 0</script>.)</p>
+
+<!--more-->
+
+<p>再生核希尔伯特空间是从低维数据到函数泛函映射。Hilbert 空间“Frechet-Riesz”表现定理。</p>
+
+<p>希尔伯特空间是定义了内积的空间；相对应的 Banach 是定义了范数的空间。</p>
+
+<h2 id="reproducing-kernel-feature-map">Reproducing Kernel Feature Map</h2>
+
+<p>再生核特征映射
+​<script type="math/tex; mode=display">\Phi_x(\cdot) \triangleq k(\cdot,x) </script></p>
+
+<p>即对任意线性泛函​<script type="math/tex"> \Phi(\cdot) </script>, ​<script type="math/tex"> \exists x_\Phi \in H </script>, 使得 ​<script type="math/tex"> \Phi(\cdot) = (\cdot, x_\Phi) </script></p>
+
+<p>To be continued…</p>
+
+
+
+    </article>
+    <span class="print-footer">Kernel and Kernel: Reproducing Kernel Hilbert Space and Kernel Method - July 19, 2015 - QU Xiaofeng</span>
+    <footer>
+  <ul class="footer-links group">
+    <li><a href="mailto:xiaofeng.qu.hk@ieee.org"><span class="icon-mail"></span></a></li>
+    
+      <li>
+        <a href="//www.twitter.com/quxiaofeng"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.facebook.com/quxiaofeng"><span class="icon-facebook"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/quxiaofeng"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.quxiaofeng.me/optimization/feed"><span class="icon-feed"></span></a>
+      </li>
+    
+  </ul>
+<div class="credits">
+<span>&copy; 2016 &nbsp;&nbsp;QU XIAOFENG</span></br>
+<span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
+</div>
+
+<!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
+<script
+
+$("script[type='math/tex']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<span class=\"inline-equation\">" + 
+           katex.renderToString(tex) +
+           "</span>";
+});
+
+$("script[type='math/tex; mode=display']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<div class=\"equation\">" + 
+           katex.renderToString("\\displaystyle "+tex) +
+           "</div>";
+});
+
+</footer>
+  </body>
+</html>
