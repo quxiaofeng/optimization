@@ -21,17 +21,17 @@ categories:
 
 循环至收敛 （使用停止规则）
 
-**1.** 稀疏编码阶段：将训练样本 {%m%}{\bold Y}{%em%} 分为如下 {%m%}K{%em%} 个集合。
+**1.** 稀疏编码阶段：将训练样本 {%m%}{\bf Y}{%em%} 分为如下 {%m%}K{%em%} 个集合。
 
 {%math%}\left( \mathbf{R}^{(J-1)}_1, \mathbf{R}^{(J-1)}_2, \cdots, \mathbf{R}^{(J-1)}_K \right){%endmath%}
 
-每个集合中存放与 {%m%}{\bold c}^{J-1}_k{%em%} 列最相似的样本的索引。
+每个集合中存放与 {%m%}{\bf c}^{J-1}_k{%em%} 列最相似的样本的索引。
 
 {%math%} \mathbf{R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|\mathbf{y}_i - \mathbf{c}^{(J-1)}_k\|_2 \< \|\mathbf{y}_i - \mathbf{c}^{(J-1)}_l\|_2  \right\} {%endmath%}
 
-**2.** 编码本更新阶段：{%m%}{\bold C}^{(J-1)}{%em%} 中的任一列 {%m%}k{%em%} 都根据如下公式更新。
+**2.** 编码本更新阶段：{%m%}{\bf C}^{(J-1)}{%em%} 中的任一列 {%m%}k{%em%} 都根据如下公式更新。
 
-{%math%}{\bold c}^{(J)}_k = \frac{1}{|{\bold R}_k|}\sum_{i \in {\bold R}^{(J-1)}_k}{\bold y}_i{%endmath%}
+{%math%}{\bf c}^{(J)}_k = \frac{1}{|{\bf R}_k|}\sum_{i \in {\bf R}^{(J-1)}_k}{\bf y}_i{%endmath%}
 
 **3.** 令{%m%} J = J + 1 {%em%}
 
@@ -39,7 +39,7 @@ categories:
 
 K-means 相当于是只使用编码本矩阵中的一列的稀疏表达。又因为只有一列，所以系数为1。其中该列由如下公式确定。
 
-{%math%}\forall_{k \neq j} \; \left\|{\bold y}_i - {Ce}_j \right\|^2_2 \leqslant \left\|{\bold y}_i - {Ce}_k \right\|^2_2{%endmath%}
+{%math%}\forall_{k \neq j} \; \left\|{\bf y}_i - {Ce}_j \right\|^2_2 \leqslant \left\|{\bf y}_i - {Ce}_k \right\|^2_2{%endmath%}
 
 <!--more-->
 
