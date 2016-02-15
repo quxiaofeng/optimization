@@ -21,7 +21,7 @@ exclude: ['.gitignore','UploadToGithub.Rakefile','LICENSE','Gemfile', 'Gemfile.l
 data:
   options:
     mathjax: true
-    katex: false
+    katex: true
   social:
     - link: //www.twitter.com/quxiaofeng
       icon: icon-twitter
