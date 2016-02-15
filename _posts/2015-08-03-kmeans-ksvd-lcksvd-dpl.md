@@ -13,8 +13,6 @@ categories:
 
 任务：通过最近邻寻找能够表达数据样本 {%m%}\{\mathbf{y}_i\}^N_{i=1}{%em%} 的最优编码本（codebook，既字典参数），既求解如下问题
 
-{%math%}G = \sum^\infty_{i=1} w_i \delta_{\theta_i}{%endmath%}
-
 {%math%}\min_{\mathbf{C, X}} \left\{ \|\mathbf{Y} - \mathbf{CX}\|^2_F \right\} \text{ subject to } \forall i \text{, } \mathbf{x}_i = \mathbf{e}_k \text{ for some } k{%endmath%}
 
 <!--more-->
@@ -25,11 +23,11 @@ categories:
 
 **1.** 稀疏编码阶段：将训练样本 {%m%}{\bold Y}{%em%} 分为如下 {%m%}K{%em%} 个集合。
 
-{%math%}\left( {\bold R}^{(J-1)}_1, {\bold R}^{(J-1)}_2, \cdots, {\bold R}^{(J-1)}_K \right){%endmath%}
+{%math%}\left( \mathbf{R}^{(J-1)}_1, \mathbf{R}^{(J-1)}_2, \cdots, \mathbf{R}^{(J-1)}_K \right){%endmath%}
 
 每个集合中存放与 {%m%}{\bold c}^{J-1}_k{%em%} 列最相似的样本的索引。
 
-{%math%} {\bold R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|{\bold y}_i - {\bold c}^{(J-1)}_k\|_2 < \|{\bold y}_i - {\bold c}^{(J-1)}_l\|_2  \right\} {%endmath%}
+{%math%} \mathbf{R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|\mathbf{y}_i - \mathbf{c}^{(J-1)}_k\|_2 < \|\mathbf{y}_i - \mathbf{c}^{(J-1)}_l\|_2  \right\} {%endmath%}
 
 **2.** 编码本更新阶段：{%m%}{\bold C}^{(J-1)}{%em%} 中的任一列 {%m%}k{%em%} 都根据如下公式更新。
 
