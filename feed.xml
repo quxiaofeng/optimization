@@ -5,8 +5,8 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Feb 2016 10:58:44 +0800</pubDate>
-    <lastBuildDate>Mon, 15 Feb 2016 10:58:44 +0800</lastBuildDate>
+    <pubDate>Mon, 15 Feb 2016 11:03:11 +0800</pubDate>
+    <lastBuildDate>Mon, 15 Feb 2016 11:03:11 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -53,17 +53,17 @@
 
 &lt;p&gt;循环至收敛 （使用停止规则）&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 稀疏编码阶段：将训练样本 ​&lt;script type=&quot;math/tex&quot;&gt;{\bold Y}&lt;/script&gt; 分为如下 ​&lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; 个集合。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 稀疏编码阶段：将训练样本 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf Y}&lt;/script&gt; 分为如下 ​&lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; 个集合。&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\left( \mathbf{R}^{(J-1)}_1, \mathbf{R}^{(J-1)}_2, \cdots, \mathbf{R}^{(J-1)}_K \right)&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;每个集合中存放与 ​&lt;script type=&quot;math/tex&quot;&gt;{\bold c}^{J-1}_k&lt;/script&gt; 列最相似的样本的索引。&lt;/p&gt;
+&lt;p&gt;每个集合中存放与 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf c}^{J-1}_k&lt;/script&gt; 列最相似的样本的索引。&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \mathbf{R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|\mathbf{y}_i - \mathbf{c}^{(J-1)}_k\|_2 \&amp;lt; \|\mathbf{y}_i - \mathbf{c}^{(J-1)}_l\|_2  \right\} &lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 编码本更新阶段：​&lt;script type=&quot;math/tex&quot;&gt;{\bold C}^{(J-1)}&lt;/script&gt; 中的任一列 ​&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; 都根据如下公式更新。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 编码本更新阶段：​&lt;script type=&quot;math/tex&quot;&gt;{\bf C}^{(J-1)}&lt;/script&gt; 中的任一列 ​&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; 都根据如下公式更新。&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bold c}^{(J)}_k = \frac{1}{|{\bold R}_k|}\sum_{i \in {\bold R}^{(J-1)}_k}{\bold y}_i&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\bf c}^{(J)}_k = \frac{1}{|{\bf R}_k|}\sum_{i \in {\bf R}^{(J-1)}_k}{\bf y}_i&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 令​&lt;script type=&quot;math/tex&quot;&gt; J = J + 1 &lt;/script&gt;&lt;/p&gt;
 
@@ -71,7 +71,7 @@
 
 &lt;p&gt;K-means 相当于是只使用编码本矩阵中的一列的稀疏表达。又因为只有一列，所以系数为1。其中该列由如下公式确定。&lt;/p&gt;
 
-&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\forall_{k \neq j} \; \left\|{\bold y}_i - {Ce}_j \right\|^2_2 \leqslant \left\|{\bold y}_i - {Ce}_k \right\|^2_2&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\forall_{k \neq j} \; \left\|{\bf y}_i - {Ce}_j \right\|^2_2 \leqslant \left\|{\bf y}_i - {Ce}_k \right\|^2_2&lt;/script&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
 

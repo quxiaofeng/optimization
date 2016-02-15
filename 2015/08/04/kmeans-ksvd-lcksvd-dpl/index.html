@@ -60,17 +60,17 @@
 
 <p>循环至收敛 （使用停止规则）</p>
 
-<p><strong>1.</strong> 稀疏编码阶段：将训练样本 ​<script type="math/tex">{\bold Y}</script> 分为如下 ​<script type="math/tex">K</script> 个集合。</p>
+<p><strong>1.</strong> 稀疏编码阶段：将训练样本 ​<script type="math/tex">{\bf Y}</script> 分为如下 ​<script type="math/tex">K</script> 个集合。</p>
 
 <p>​<script type="math/tex; mode=display">\left( \mathbf{R}^{(J-1)}_1, \mathbf{R}^{(J-1)}_2, \cdots, \mathbf{R}^{(J-1)}_K \right)</script></p>
 
-<p>每个集合中存放与 ​<script type="math/tex">{\bold c}^{J-1}_k</script> 列最相似的样本的索引。</p>
+<p>每个集合中存放与 ​<script type="math/tex">{\bf c}^{J-1}_k</script> 列最相似的样本的索引。</p>
 
 <p>​<script type="math/tex; mode=display"> \mathbf{R}^{(J-1)}_k = \left\{ i \mid \forall_{l \neq k}, \|\mathbf{y}_i - \mathbf{c}^{(J-1)}_k\|_2 \&lt; \|\mathbf{y}_i - \mathbf{c}^{(J-1)}_l\|_2  \right\} </script></p>
 
-<p><strong>2.</strong> 编码本更新阶段：​<script type="math/tex">{\bold C}^{(J-1)}</script> 中的任一列 ​<script type="math/tex">k</script> 都根据如下公式更新。</p>
+<p><strong>2.</strong> 编码本更新阶段：​<script type="math/tex">{\bf C}^{(J-1)}</script> 中的任一列 ​<script type="math/tex">k</script> 都根据如下公式更新。</p>
 
-<p>​<script type="math/tex; mode=display">{\bold c}^{(J)}_k = \frac{1}{|{\bold R}_k|}\sum_{i \in {\bold R}^{(J-1)}_k}{\bold y}_i</script></p>
+<p>​<script type="math/tex; mode=display">{\bf c}^{(J)}_k = \frac{1}{|{\bf R}_k|}\sum_{i \in {\bf R}^{(J-1)}_k}{\bf y}_i</script></p>
 
 <p><strong>3.</strong> 令​<script type="math/tex"> J = J + 1 </script></p>
 
@@ -78,7 +78,7 @@
 
 <p>K-means 相当于是只使用编码本矩阵中的一列的稀疏表达。又因为只有一列，所以系数为1。其中该列由如下公式确定。</p>
 
-<p>​<script type="math/tex; mode=display">\forall_{k \neq j} \; \left\|{\bold y}_i - {Ce}_j \right\|^2_2 \leqslant \left\|{\bold y}_i - {Ce}_k \right\|^2_2</script></p>
+<p>​<script type="math/tex; mode=display">\forall_{k \neq j} \; \left\|{\bf y}_i - {Ce}_j \right\|^2_2 \leqslant \left\|{\bf y}_i - {Ce}_k \right\|^2_2</script></p>
 
 <!--more-->
 
