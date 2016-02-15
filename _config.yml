@@ -20,7 +20,7 @@ excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 exclude: ['.gitignore','UploadToGithub.Rakefile','LICENSE','Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
 data:
   options:
-    mathjax: false
+    mathjax: true
     katex: true
   social:
     - link: //www.twitter.com/quxiaofeng
