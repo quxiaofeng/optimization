@@ -5,9 +5,9 @@
     <description>A little blog collecting optimization methods in machine learning field</description>
     <link>http://www.optimizations.ml/</link>
     <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Feb 2016 11:35:20 +0800</pubDate>
-    <lastBuildDate>Mon, 15 Feb 2016 11:35:20 +0800</lastBuildDate>
-    <generator>Jekyll v3.1.1</generator>
+    <pubDate>Thu, 25 Feb 2016 16:23:06 +0800</pubDate>
+    <lastBuildDate>Thu, 25 Feb 2016 16:23:06 +0800</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
     
       <item>
         <title>The Handbook of Cluster Analysis</title>
@@ -1003,6 +1003,12 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
   &lt;li&gt;极小最小二乘解，可求广义逆。&lt;/li&gt;
   &lt;li&gt;CRC，用二范数约束表示系数，有解析解。&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h3 id=&quot;frobenius-norm&quot;&gt;弗罗贝尼乌斯范数 Frobenius norm&lt;/h3&gt;
+
+&lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\| \mathbf{A} \|_F = \sqrt{\sum^m_{i=1} \sum^n_{j=1} \mid a_{ij} \mid^2} = \sqrt{trace(\mathbf{A}^* \mathbf{A})} = \sqrt{\sum^{\min\{m,n\}}_{i=1}\sigma^2_i}
+&lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 May 2015 06:53:20 +0800</pubDate>
         <link>http://www.optimizations.ml/2015/05/21/optimization-problems/</link>
