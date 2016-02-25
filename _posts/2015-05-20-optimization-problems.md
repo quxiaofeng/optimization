@@ -39,3 +39,11 @@ categories:
 + {% m %} \arg\min \|x\|_2 + \|e\|_2 {% em %} subj. to {% m %} y=Ax+e {% em %}
 + 极小最小二乘解，可求广义逆。
 + CRC，用二范数约束表示系数，有解析解。
+
+
+
+### 弗罗贝尼乌斯范数 Frobenius norm ###
+
+{% math %}
+\| \mathbf{A} \|_F = \sqrt{\sum^m_{i=1} \sum^n_{j=1} \mid a_{ij} \mid^2} = \sqrt{trace(\mathbf{A}^* \mathbf{A})} = \sqrt{\sum^{\min\{m,n\}}_{i=1}\sigma^2_i}
+{% endmath %}
