@@ -12,3 +12,8 @@
 <span> Themed by <a href="//github.com/clayh53/tufte-jekyll">Tufte</a> &nbsp;&nbsp; Hosted in <a href="//www.github.com">GitHub</a> &nbsp;&nbsp; Powered by <a href="//jekyllrb.com">Jekyll</a></span>
 </div>
 </footer>
+
+<!-- Load up KaTeX script if needed ... specify in /_data/options.yml file-->
+{% if site.data.options.katex %}
+<script src="{% if site.sourceurl %}{{ "/assets/js/katex_render.min.js" | prepend: site.sourceurl }}{% else %}{{ "/assets/js/katex_render.min.js" | prepend: site.baseurl }}{% endif %}"></script>
+{% endif %}
