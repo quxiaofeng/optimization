@@ -18,7 +18,7 @@ notifications:
 language: ruby
 
 rvm:
-- stable
+- 2.4
 
 branches:
   only:
