@@ -3,11 +3,11 @@
   <channel>
     <title>OPTIMIZATIONS for Machine Learning</title>
     <description>A little blog collecting optimization methods in machine learning field</description>
-    <link>http://www.optimizations.ml/</link>
-    <atom:link href="http://www.optimizations.ml/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 25 Feb 2016 16:23:06 +0800</pubDate>
-    <lastBuildDate>Thu, 25 Feb 2016 16:23:06 +0800</lastBuildDate>
-    <generator>Jekyll v3.1.2</generator>
+    <link>http://www.quxiaofeng.me/optimization/optimization/</link>
+    <atom:link href="http://www.quxiaofeng.me/optimization/optimization/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 20 Apr 2018 09:33:04 +0800</pubDate>
+    <lastBuildDate>Fri, 20 Apr 2018 09:33:04 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.0</generator>
     
       <item>
         <title>The Handbook of Cluster Analysis</title>
@@ -29,8 +29,8 @@
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;G = \sum^\infty_{i=1} w_i \delta_{\theta_i}&lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 14 Feb 2016 20:21:46 +0800</pubDate>
-        <link>http://www.optimizations.ml/2016/02/14/cluster-analysis/</link>
-        <guid isPermaLink="true">http://www.optimizations.ml/2016/02/14/cluster-analysis/</guid>
+        <link>http://www.quxiaofeng.me/optimization/optimization/2016/02/14/cluster-analysis/</link>
+        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/optimization/2016/02/14/cluster-analysis/</guid>
         
         
       </item>
@@ -90,8 +90,8 @@
     &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;vi&quot;&gt;@inbounds&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;TempDict&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
         &lt;span class=&quot;vi&quot;&gt;@inbounds&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;TempData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;DataMat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;tempDictCoef&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;TempDict&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39; * TempDict
-        tempDictDataCoef::Matrix{Float64}   = TempDict&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;TempData&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;tempDictCoef&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;TempDict&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;' * TempDict
+        tempDictDataCoef::Matrix{Float64}   = TempDict'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;TempData&lt;/span&gt;
         &lt;span class=&quot;vi&quot;&gt;@inbounds&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Float64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;TempData&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;diagadd!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tempDictCoef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;τ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;fma!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tempDictDataCoef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;τ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -101,8 +101,8 @@
 
 </description>
         <pubDate>Tue, 04 Aug 2015 06:46:53 +0800</pubDate>
-        <link>http://www.optimizations.ml/2015/08/04/kmeans-ksvd-lcksvd-dpl/</link>
-        <guid isPermaLink="true">http://www.optimizations.ml/2015/08/04/kmeans-ksvd-lcksvd-dpl/</guid>
+        <link>http://www.quxiaofeng.me/optimization/optimization/2015/08/04/kmeans-ksvd-lcksvd-dpl/</link>
+        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/optimization/2015/08/04/kmeans-ksvd-lcksvd-dpl/</guid>
         
         
       </item>
@@ -113,7 +113,7 @@
 
 &lt;p&gt;该文为&lt;a href=&quot;http://web.xidian.edu.cn/xcfeng/&quot;&gt;冯象初教授&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; 冯象初，教授，西安电子科技大学数学系。主页：&lt;a href=&quot;http://web.xidian.edu.cn/xcfeng/&quot;&gt;http://web.xidian.edu.cn/xcfeng/&lt;/a&gt;&lt;/span&gt;有关非线性最优化的讲座的笔记。&lt;/p&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;主要内容&lt;/h2&gt;
+&lt;h2 id=&quot;主要内容&quot;&gt;主要内容&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;理论基础&lt;/strong&gt;&lt;/p&gt;
 
@@ -137,9 +137,9 @@
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;理论基础&lt;/h2&gt;
+&lt;h2 id=&quot;理论基础&quot;&gt;理论基础&lt;/h2&gt;
 
-&lt;h3 id=&quot;section-2&quot;&gt;凸函数、闭函数&lt;/h3&gt;
+&lt;h3 id=&quot;凸函数闭函数&quot;&gt;凸函数、闭函数&lt;/h3&gt;
 
 &lt;p&gt;给定函数 ​&lt;script type=&quot;math/tex&quot;&gt;f : \Re^n \to [-\infty, +\infty] &lt;/script&gt;，称 ​&lt;script type=&quot;math/tex&quot;&gt;\Re^{n+1}&lt;/script&gt; 的子集&lt;/p&gt;
 
@@ -167,7 +167,7 @@
 
 &lt;p&gt;成立时，称 ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 在 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 处&lt;strong&gt;下半连续&lt;/strong&gt;（lower semicontinuous）。若 ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 在 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 处既为上半连续又为下半连续，则称 ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; 在 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}&lt;/script&gt; 处&lt;strong&gt;连续&lt;/strong&gt;（continuous）。&lt;/p&gt;
 
-&lt;h3 id=&quot;section-3&quot;&gt;共轭函数&lt;/h3&gt;
+&lt;h3 id=&quot;共轭函数&quot;&gt;共轭函数&lt;/h3&gt;
 
 &lt;p&gt;给定正常凸函数 ​&lt;script type=&quot;math/tex&quot;&gt;f:\Re^n \to (-\infty,+\infty]&lt;/script&gt;，由&lt;/p&gt;
 
@@ -177,7 +177,7 @@
 
 &lt;p&gt;&lt;strong&gt;定理 2.36&lt;/strong&gt; 正常凸函数 ​&lt;script type=&quot;math/tex&quot;&gt;f:\Re^n \to (-\infty,+\infty]&lt;/script&gt; 的共轭函数 ​&lt;script type=&quot;math/tex&quot;&gt;f^\ast&lt;/script&gt; 必为闭正常凸函数。&lt;/p&gt;
 
-&lt;h3 id=&quot;section-4&quot;&gt;鞍点问题&lt;/h3&gt;
+&lt;h3 id=&quot;鞍点问题&quot;&gt;鞍点问题&lt;/h3&gt;
 
 &lt;p&gt;设 ​&lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; 与 ​&lt;script type=&quot;math/tex&quot;&gt;Z&lt;/script&gt; 分别为 ​&lt;script type=&quot;math/tex&quot;&gt;\Re^n&lt;/script&gt; 与 ​&lt;script type=&quot;math/tex&quot;&gt;\Re^m&lt;/script&gt; 的非空子集，给定以 ​&lt;script type=&quot;math/tex&quot;&gt;Y\times Z&lt;/script&gt; 为定义域的函数 ​&lt;script type=&quot;math/tex&quot;&gt;K:Y\times Z\to[-\infty,+\infty]&lt;/script&gt;，定义两个函数 ​&lt;script type=&quot;math/tex&quot;&gt;\eta:Y\to[-\infty,+\infty]&lt;/script&gt; 与 ​&lt;script type=&quot;math/tex&quot;&gt;\zeta:Z\to[-\infty,+\infty]&lt;/script&gt; 如下：&lt;/p&gt;
 
@@ -196,7 +196,7 @@
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta(\bar{\bf y})=\inf\left\{ \eta({\bf y})\mid {\bf y}\in Y\right\} =\sup\left\{ \zeta({\bf z})\mid {\bf z}\in Z\right\} =\zeta(\bar{\bf z})&lt;/script&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;lagrange-&quot;&gt;Lagrange 对偶问题&lt;/h3&gt;
+&lt;h3 id=&quot;lagrange-对偶问题&quot;&gt;Lagrange 对偶问题&lt;/h3&gt;
 
 &lt;p&gt;考虑如下非线性规划问题：&lt;/p&gt;
 
@@ -234,7 +234,7 @@
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;F_0({\bf x}, {\bf u}) = \sup \left\{ L_0({\bf x}, {\bf \lambda}) - \lt{}{\bf \lambda}, {\bf u}\gt{} \mid {\bf \lambda} \in \Re^m \right\}&lt;/script&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;lagrange--1&quot;&gt;Lagrange 对偶性的推广&lt;/h3&gt;
+&lt;h3 id=&quot;lagrange-对偶性的推广&quot;&gt;Lagrange 对偶性的推广&lt;/h3&gt;
 
 &lt;p&gt;对于原始问题 ​&lt;script type=&quot;math/tex&quot;&gt;(P)&lt;/script&gt;，考虑函数 ​&lt;script type=&quot;math/tex&quot;&gt;F: \Re^{n+M} \to (-\infty, +\infty]&lt;/script&gt;，使得对任意固定的 ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x} \in \Re^n&lt;/script&gt;，​&lt;script type=&quot;math/tex&quot;&gt;F({\bf x}, \cdot): \Re^M \to (-\infty, +\infty]&lt;/script&gt; 均为闭正常凸函数，并且满足&lt;/p&gt;
 
@@ -249,7 +249,7 @@
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies L({\bf x}, {\bf \lambda}) = \inf \left\{ F({\bf x}, {\bf u}) + \lt{}{\bf \lambda}, {\bf u}\gt{} \mid {\bf u} \in \Re^M \right\} &lt;/script&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \implies \omega({\bf \lambda}) = \inf \left\{ L({\bf x}, {\bf \lambda}) \mid {\bf x} \in \Re^n \right\} &lt;/script&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;fenchel-&quot;&gt;Fenchel 对偶性&lt;/h3&gt;
+&lt;h3 id=&quot;fenchel-对偶性&quot;&gt;Fenchel 对偶性&lt;/h3&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \min_{\bf x} f({\bf x}) + g({\bf Ax}) &lt;/script&gt;&lt;/p&gt;
 
@@ -265,9 +265,9 @@
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \min_{\bf \lambda} f^\ast\left( {\bf A}^T{\bf \lambda} \right) + g^\ast(-{\bf \lambda})&lt;/script&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \max_{\bf \lambda} -f^\ast\left({\bf A}^T{\bf \lambda} \right) - g^\ast\left(-{\bf\lambda}\right)&lt;/script&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;section-5&quot;&gt;算法&lt;/h2&gt;
+&lt;h2 id=&quot;算法&quot;&gt;算法&lt;/h2&gt;
 
-&lt;h3 id=&quot;proximal-gradient-method&quot;&gt;1. Proximal Gradient Method&lt;/h3&gt;
+&lt;h3 id=&quot;1-proximal-gradient-method&quot;&gt;1. Proximal Gradient Method&lt;/h3&gt;
 
 &lt;p&gt;参考 &lt;a href=&quot;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&quot;&gt;Algorithms for large-scale convex optimization - DTU 2010&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;3&lt;/sup&gt; A Lecture note from “02930 Algorithms for Large-Scale Convex Optimization” taught by Per Christian Hansen (pch@imm.dtu.dk) and Professor Lieven Vandenberghe (&lt;a href=&quot;http://www.seas.ucla.edu/~vandenbe/&quot;&gt;http://www.seas.ucla.edu/~vandenbe/&lt;/a&gt;) at Danmarks Tekniske Universitet (&lt;a href=&quot;http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB&quot;&gt;http://www.kurser.dtu.dk/2010-2011/02930.aspx?menulanguage=en-GB&lt;/a&gt;). The Download Link is found at the page of “EE227BT: Convex Optimization - Fall 2013” taught by Laurent El Ghaoui at Berkeley (&lt;a href=&quot;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&quot;&gt;http://www.eecs.berkeley.edu/~elghaoui/Teaching/EE227A/lecture18.pdf&lt;/a&gt;). And both of the lectures mentioned the book “Convex Optimization” by Stephen Boyd and Lieven Vandenberghe (&lt;a href=&quot;http://stanford.edu/~boyd/cvxbook/&quot;&gt;http://stanford.edu/~boyd/cvxbook/&lt;/a&gt;) and the software “CVX” - a MATLAB software for desciplined Convex Programming (&lt;a href=&quot;http://cvxr.com/cvx/&quot;&gt;http://cvxr.com/cvx/&lt;/a&gt;). A similar lecture note on Proximal Gradient Method from “EE236C - Optimization Methods for Large-Scale Systems (Spring 2013-14)” (&lt;a href=&quot;http://www.seas.ucla.edu/~vandenbe/ee236c.html&quot;&gt;http://www.seas.ucla.edu/~vandenbe/ee236c.html&lt;/a&gt;) at UCLA&lt;/span&gt;&lt;/p&gt;
 
@@ -293,7 +293,7 @@
     x_i + t &amp;amp; x_i   \leqslant -t
 \end{cases} &lt;/script&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;proximal-gradient-method-1&quot;&gt;Proximal gradient method&lt;/h4&gt;
+&lt;h4 id=&quot;proximal-gradient-method&quot;&gt;Proximal gradient method&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;unconstrained problem&lt;/strong&gt; with cost function split in two components&lt;/p&gt;
 
@@ -351,7 +351,7 @@ u_i + t &amp;amp; &amp;amp; u_i \geq t
 
 &lt;p&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;/span&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/fukushima-softthresholding.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;dual-proximal-gradient-methods&quot;&gt;2. Dual Proximal Gradient Methods&lt;/h3&gt;
+&lt;h3 id=&quot;2-dual-proximal-gradient-methods&quot;&gt;2. Dual Proximal Gradient Methods&lt;/h3&gt;
 
 &lt;p&gt;参考 L. Vandenberghe EE236C (Spring 2013-14)&lt;/p&gt;
 
@@ -478,7 +478,7 @@ minimize \; \; \sum^n_{j=1}f_j(x_j) + \sum^m_{i=1}g_i(A_{i1}x_1 + \cdots + A_{in
 z^+_i        &amp;amp; = &amp;amp; prox_{tg^\ast_i}\left(z_i + t\sum^n_{j=1}A_{ij}\hat{x}_j \right) \text{, } \; \; i=1, \cdots, m
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;fast-proximal-gradient-methods&quot;&gt;3. Fast proximal gradient methods&lt;/h3&gt;
+&lt;h3 id=&quot;3-fast-proximal-gradient-methods&quot;&gt;3. Fast proximal gradient methods&lt;/h3&gt;
 
 &lt;p&gt;参考 L. Vandenberghe EE236C (Spring 2013-14)&lt;/p&gt;
 
@@ -541,14 +541,14 @@ x^{(k)} &amp;amp; = &amp;amp; (1 - \theta_k)x^{(k-1)} + \theta_kv^{(k)}
 
 &lt;p&gt;unlike in FISTA, ​&lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt; is feasible (in ​&lt;script type=&quot;math/tex&quot;&gt;\mathop{dom} h&lt;/script&gt;) if we take ​&lt;script type=&quot;math/tex&quot;&gt;x^{(0)} \in \mathop{dom} h&lt;/script&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;fast-dual-proximal-gradient-methods&quot;&gt;4. Fast dual proximal gradient methods&lt;/h3&gt;
+&lt;h3 id=&quot;4-fast-dual-proximal-gradient-methods&quot;&gt;4. Fast dual proximal gradient methods&lt;/h3&gt;
 
 &lt;p&gt;参考 A Fast Dual Proximal Gradient Algorithm for Convex Minimization and Applications by Amir Beck and Marc Teboulle at October 10, 2013&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt; \begin{eqnarray*}
 (D)   &amp;amp; = &amp;amp; \max_y\left\lbrace q(y) \equiv -f^\ast\left(A^Ty\right)-g^\ast(-y)\right\rbrace,\\
-(D&#39;) &amp;amp; = &amp;amp; \min F(y) + G(y),\\
-(P&#39;) &amp;amp; = &amp;amp; \min \left\lbrace f(x) + g(z): Ax - z = 0 \right\rbrace.
+(D') &amp;amp; = &amp;amp; \min F(y) + G(y),\\
+(P') &amp;amp; = &amp;amp; \min \left\lbrace f(x) + g(z): Ax - z = 0 \right\rbrace.
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
@@ -582,8 +582,8 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 02 Aug 2015 22:33:54 +0800</pubDate>
-        <link>http://www.optimizations.ml/2015/08/02/introdction-to-nonlinear-optimization-by-fukushima/</link>
-        <guid isPermaLink="true">http://www.optimizations.ml/2015/08/02/introdction-to-nonlinear-optimization-by-fukushima/</guid>
+        <link>http://www.quxiaofeng.me/optimization/optimization/2015/08/02/introdction-to-nonlinear-optimization-by-fukushima/</link>
+        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/optimization/2015/08/02/introdction-to-nonlinear-optimization-by-fukushima/</guid>
         
         
       </item>
@@ -596,7 +596,7 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;prof-geoffrey-john-mclachlanhttpwwwmathsuqeduaugjm-&quot;&gt;&lt;a href=&quot;http://www.maths.uq.edu.au/~gjm/&quot;&gt;Prof. Geoffrey John McLachlan&lt;/a&gt; 近期相关论文&lt;/h2&gt;
+&lt;h2 id=&quot;prof-geoffrey-john-mclachlan-近期相关论文&quot;&gt;&lt;a href=&quot;http://www.maths.uq.edu.au/~gjm/&quot;&gt;Prof. Geoffrey John McLachlan&lt;/a&gt; 近期相关论文&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;McLachlan, G.J. and Ng, S.K. (2009). &lt;a href=&quot;http://www.maths.uq.edu.au/~gjm/mn_em.pdf&quot;&gt;The EM Algorithm&lt;/a&gt;. In The Top-Ten Algorithms in Data Mining, X. Wu and V. Kumar (Eds.). Boca Raton, Florida: Chapman &amp;amp; Hall/CRC, pp. 93-115.&lt;/li&gt;
@@ -611,7 +611,7 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
   &lt;li&gt;Lee, S.X., McLachlan, G.J., and Pyne, S. (2014). &lt;a href=&quot;http://arxiv.org/abs/1411.2820&quot;&gt;Supervised classification of flow cytometric samples via the joint clustering and matching (JCM) procedure&lt;/a&gt;. Preprint arXiv:1411.0685.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;高斯混合模型&lt;/h2&gt;
+&lt;h2 id=&quot;高斯混合模型&quot;&gt;高斯混合模型&lt;/h2&gt;
 
 &lt;p&gt;在应用领域，更多提及的是高斯混合模型 (GMM, Gaussian Mixture Model)。最简单的是单高斯模型。在单高斯模型中，假设多维变量符合高斯分布。高斯分布从空间上观察，在二维情况，近似于椭圆；在三维情况，近似于椭球。当单高斯分布不足以表达高维随机变量的分布时，用多个高斯分布的合成来近似该高维随机变量的分布。可以类比小波分解，使用足够多的高斯分布，可以拟合任意高维数据分布。特别考虑到，独立同分布 (i.i.d., independent identically distributed) 随机变量，当数据足够多时，近似服从高斯分布。&lt;/p&gt;
 
@@ -621,8 +621,8 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
 
 </description>
         <pubDate>Fri, 24 Jul 2015 03:52:47 +0800</pubDate>
-        <link>http://www.optimizations.ml/2015/07/24/em-method/</link>
-        <guid isPermaLink="true">http://www.optimizations.ml/2015/07/24/em-method/</guid>
+        <link>http://www.quxiaofeng.me/optimization/optimization/2015/07/24/em-method/</link>
+        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/optimization/2015/07/24/em-method/</guid>
         
         
       </item>
@@ -644,7 +644,7 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;i.e., ​&lt;script type=&quot;math/tex&quot;&gt;\forall x_1, x_2, \ldots , x_n \in \mathcal{X}&lt;/script&gt;, the “Gram Matrix” ​&lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; defined by ​&lt;script type=&quot;math/tex&quot;&gt;K_{ij} =  k(x_i,x_j)&lt;/script&gt; is positive semi-definite. (A matrix ​&lt;script type=&quot;math/tex&quot;&gt;M \in \Re^{n \times n}&lt;/script&gt; is positive semi-definite if ​&lt;script type=&quot;math/tex&quot;&gt;\forall a \in \Re^n&lt;/script&gt;, ​&lt;script type=&quot;math/tex&quot;&gt;a&#39; M a \ge 0&lt;/script&gt;.)&lt;/p&gt;
+&lt;p&gt;i.e., ​&lt;script type=&quot;math/tex&quot;&gt;\forall x_1, x_2, \ldots , x_n \in \mathcal{X}&lt;/script&gt;, the “Gram Matrix” ​&lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; defined by ​&lt;script type=&quot;math/tex&quot;&gt;K_{ij} =  k(x_i,x_j)&lt;/script&gt; is positive semi-definite. (A matrix ​&lt;script type=&quot;math/tex&quot;&gt;M \in \Re^{n \times n}&lt;/script&gt; is positive semi-definite if ​&lt;script type=&quot;math/tex&quot;&gt;\forall a \in \Re^n&lt;/script&gt;, ​&lt;script type=&quot;math/tex&quot;&gt;a' M a \ge 0&lt;/script&gt;.)&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -662,8 +662,8 @@ w_{k+1} &amp;amp; = &amp;amp; y_k + \left( \frac{t_k - 1}{t_{k+1}} \right) (y_k 
 &lt;p&gt;To be continued…&lt;/p&gt;
 </description>
         <pubDate>Sun, 19 Jul 2015 17:22:53 +0800</pubDate>
-        <link>http://www.optimizations.ml/2015/07/19/kernel-and-kenel/</link>
-        <guid isPermaLink="true">http://www.optimizations.ml/2015/07/19/kernel-and-kenel/</guid>
+        <link>http://www.quxiaofeng.me/optimization/optimization/2015/07/19/kernel-and-kenel/</link>
+        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/optimization/2015/07/19/kernel-and-kenel/</guid>
         
         
       </item>
@@ -735,8 +735,8 @@ D = \left(\begin{matrix}
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 18 Jul 2015 21:36:14 +0800</pubDate>
-        <link>http://www.optimizations.ml/2015/07/18/alternating-direction-method-multipliers/</link>
-        <guid isPermaLink="true">http://www.optimizations.ml/2015/07/18/alternating-direction-method-multipliers/</guid>
+        <link>http://www.quxiaofeng.me/optimization/optimization/2015/07/18/alternating-direction-method-multipliers/</link>
+        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/optimization/2015/07/18/alternating-direction-method-multipliers/</guid>
         
         
       </item>
@@ -781,7 +781,7 @@ D = \left(\begin{matrix}
 &lt;p&gt;Update the multiplier vector ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;
 ​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\lambda^{(t+1)}_i \leftarrow \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}), \; i = 1, \ldots , q&lt;/script&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;intuition-for-updating-8203script-typemathtexbf-lambdascript&quot;&gt;Intuition for updating ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;intuition-for-updating-bf-lambda&quot;&gt;Intuition for updating ​&lt;script type=&quot;math/tex&quot;&gt;{\bf \lambda}&lt;/script&gt;&lt;/h3&gt;
 
 &lt;p&gt;If ​&lt;script type=&quot;math/tex&quot;&gt;{\bf x}^{(t)}&lt;/script&gt; is the unconstrained minimum of ​&lt;script type=&quot;math/tex&quot;&gt;\mathcal{L}({\bf x},{\bf \lambda})&lt;/script&gt;, then the stationary condition says&lt;/p&gt;
 
@@ -790,7 +790,7 @@ D = \left(\begin{matrix}
         &amp;amp; = \nabla f({\bf x}^{(t)}) + \sum^q_{i=1} \left[ \lambda^{(t)}_i + \rho g_i({\bf x}^{(t)}) \right] \nabla g_i({\bf x}^{(t)})
 \end{eqnarray*}&lt;/script&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;for-non-smooth-8203script-typemathtexfscript-replace-gradient-8203script-typemathtexnabla-fscript-by-sub-differential-8203script-typemathtexpartial-fscript&quot;&gt;For non-smooth ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;, replace gradient ​&lt;script type=&quot;math/tex&quot;&gt;\nabla f&lt;/script&gt; by sub-differential ​&lt;script type=&quot;math/tex&quot;&gt;\partial f&lt;/script&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;for-non-smooth-f-replace-gradient-nabla-f-by-sub-differential-partial-f&quot;&gt;For non-smooth ​&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;, replace gradient ​&lt;script type=&quot;math/tex&quot;&gt;\nabla f&lt;/script&gt; by sub-differential ​&lt;script type=&quot;math/tex&quot;&gt;\partial f&lt;/script&gt;&lt;/h3&gt;
 
 &lt;h2 id=&quot;example-basis-pursuit&quot;&gt;Example: basis pursuit&lt;/h2&gt;
 
@@ -821,8 +821,8 @@ Same as the Bregman iteration (Yin etal., 2008) proposed for basis pursuit (comp
 Equivalent to proximal print algorithm applied to the dual; can be accelerated (Nesterov)&lt;/p&gt;
 </description>
         <pubDate>Fri, 17 Jul 2015 19:04:01 +0800</pubDate>
-        <link>http://www.optimizations.ml/2015/07/17/augmented-lagrangian-method/</link>
-        <guid isPermaLink="true">http://www.optimizations.ml/2015/07/17/augmented-lagrangian-method/</guid>
+        <link>http://www.quxiaofeng.me/optimization/optimization/2015/07/17/augmented-lagrangian-method/</link>
+        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/optimization/2015/07/17/augmented-lagrangian-method/</guid>
         
         
       </item>
@@ -833,7 +833,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;table-of-content-&quot;&gt;Table of Content 目录&lt;/h2&gt;
+&lt;h2 id=&quot;table-of-content-目录&quot;&gt;Table of Content 目录&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Mathematical Preliminaries 数学基础
 &lt;strong&gt;2.&lt;/strong&gt; Optimality Conditions for Unconstrained Optimization 无约束优化问题的优化条件
@@ -848,7 +848,7 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 &lt;strong&gt;11.&lt;/strong&gt; The KKT Conditions 库恩塔克条件
 &lt;strong&gt;12.&lt;/strong&gt; Duality 对偶问题&lt;/p&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;第一章 数学基础&lt;/h2&gt;
+&lt;h2 id=&quot;第一章-数学基础&quot;&gt;第一章 数学基础&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Definition 1.1 内积&lt;/strong&gt; inner product ​&lt;script type=&quot;math/tex&quot;&gt;\langle\cdot,\cdot\rangle:=\Re^n \times \Re^n \to \Re&lt;/script&gt;&lt;/p&gt;
 
@@ -919,8 +919,8 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;\| {\bf A} \|_F = \sqrt{\sum^m_{i=1} \sum^n_{j=1}A^2_{ij}}, \; {\bf A} \in \Re^{m \times n} \tag*{$\blacksquare$}&lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 16 Jul 2015 05:22:17 +0800</pubDate>
-        <link>http://www.optimizations.ml/2015/07/16/introduction-to-nonlinear-optimization/</link>
-        <guid isPermaLink="true">http://www.optimizations.ml/2015/07/16/introduction-to-nonlinear-optimization/</guid>
+        <link>http://www.quxiaofeng.me/optimization/optimization/2015/07/16/introduction-to-nonlinear-optimization/</link>
+        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/optimization/2015/07/16/introduction-to-nonlinear-optimization/</guid>
         
         
       </item>
@@ -953,8 +953,8 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 21 May 2015 08:33:45 +0800</pubDate>
-        <link>http://www.optimizations.ml/2015/05/21/solving-sparse/</link>
-        <guid isPermaLink="true">http://www.optimizations.ml/2015/05/21/solving-sparse/</guid>
+        <link>http://www.quxiaofeng.me/optimization/optimization/2015/05/21/solving-sparse/</link>
+        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/optimization/2015/05/21/solving-sparse/</guid>
         
         
       </item>
@@ -1004,15 +1004,15 @@ Equivalent to proximal print algorithm applied to the dual; can be accelerated (
   &lt;li&gt;CRC，用二范数约束表示系数，有解析解。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;frobenius-norm&quot;&gt;弗罗贝尼乌斯范数 Frobenius norm&lt;/h3&gt;
+&lt;h3 id=&quot;弗罗贝尼乌斯范数-frobenius-norm&quot;&gt;弗罗贝尼乌斯范数 Frobenius norm&lt;/h3&gt;
 
 &lt;p&gt;​&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 \| \mathbf{A} \|_F = \sqrt{\sum^m_{i=1} \sum^n_{j=1} \mid a_{ij} \mid^2} = \sqrt{trace(\mathbf{A}^* \mathbf{A})} = \sqrt{\sum^{\min\{m,n\}}_{i=1}\sigma^2_i}
 &lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 May 2015 06:53:20 +0800</pubDate>
-        <link>http://www.optimizations.ml/2015/05/21/optimization-problems/</link>
-        <guid isPermaLink="true">http://www.optimizations.ml/2015/05/21/optimization-problems/</guid>
+        <link>http://www.quxiaofeng.me/optimization/optimization/2015/05/21/optimization-problems/</link>
+        <guid isPermaLink="true">http://www.quxiaofeng.me/optimization/optimization/2015/05/21/optimization-problems/</guid>
         
         
       </item>
